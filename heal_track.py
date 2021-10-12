@@ -630,78 +630,80 @@ class MenuBar(tk.Frame):
         cmd_agenda.pack(side=tk.LEFT, padx=3)
         me3 = Menu(cmd_agenda)
         # Wrapped menu agenda
+        a=1
+        b=2
         me3.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda)
+            command=lambda: boss.patientAgenda(a=1))
         me3.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda2)
+            command=lambda: boss.patientAgenda(a=2))
         me3.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda3)
+            command=lambda: boss.patientAgenda(a=3))
         me3.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda4)
+            command=lambda: boss.patientAgenda(a=4))
         me3.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda5)
+            command=lambda: boss.patientAgenda(a=5))
         me3.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda6)
+            command=lambda: boss.patientAgenda(a=6))
         me3.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda7)
+            command=lambda: boss.patientAgenda(a=7))
         me3.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda8)
+            command=lambda: boss.patientAgenda(a=8))
         me3.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda9)
+            command=lambda: boss.patientAgenda(a=9))
         me3.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda10)
+            command=lambda: boss.patientAgenda(a=10))
         me3.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda11)
+            command=lambda: boss.patientAgenda(a=11))
         me3.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda12)
+            command=lambda: boss.patientAgenda(a=12))
         me3.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda13)
+            command=lambda: boss.patientAgenda(a=13))
         me3.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda14)
+            command=lambda: boss.patientAgenda(a=14))
         me3.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda15)
+            command=lambda: boss.patientAgenda(a=15))
         me3.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda16)
+            command=lambda: boss.patientAgenda(a=16))
         me3.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda17)
+            command=lambda: boss.patientAgenda(a=17))
         me3.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda18)
+            command=lambda: boss.patientAgenda(a=18))
         me3.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda19)
+            command=lambda: boss.patientAgenda(a=19))
         me3.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda20)
+            command=lambda: boss.patientAgenda(a=20))
         me3.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda21)
+            command=lambda: boss.patientAgenda(a=21))
         me3.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda22)
+            command=lambda: boss.patientAgenda(a=22))
         me3.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda23)
+            command=lambda: boss.patientAgenda(a=23))
         me3.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.patientAgenda24)
+            command=lambda: boss.patientAgenda(a=24))
         # Integration of agenda menu
         cmd_agenda.configure(activeforeground='black', activebackground='cyan',
             menu=me3)
@@ -1105,99 +1107,99 @@ class MenuBar(tk.Frame):
         me4 = Menu(cmd_Besoins)
         me4.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoinsCoche)
+            command=lambda: boss.besoinsCoche(b=1))
         #me4.add_separator()
         me4.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins2Coche)
+            command=lambda: boss.besoinsCoche(b=2))
         #me4.add_separator()
         me4.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins3Coche)
+            command=lambda: boss.besoinsCoche(b=3))
         #me4.add_separator()
         me4.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins4Coche)
+            command=lambda: boss.besoinsCoche(b=4))
         #me4.add_separator()
         me4.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins5Coche)
+            command=lambda: boss.besoinsCoche(b=5))
         #me4.add_separator()
         me4.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins6Coche)
+            command=lambda: boss.besoinsCoche(b=6))
         #me4.add_separator()
         me4.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins7Coche)
+            command=lambda: boss.besoinsCoche(b=7))
         #me4.add_separator()
         me4.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins8Coche)
+            command=lambda: boss.besoinsCoche(b=8))
         #me4.add_separator()
         me4.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins9Coche)
+            command=lambda: boss.besoinsCoche(b=9))
         #me4.add_separator()
         me4.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins10Coche)
+            command=lambda: boss.besoinsCoche(b=10))
         #me4.add_separator()
         me4.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins11Coche)
+            command=lambda: boss.besoinsCoche(b=11))
         #me4.add_separator()
         me4.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins12Coche)
+            command=lambda: boss.besoinsCoche(b=12))
         #me4.add_separator()
         me4.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins13Coche)
+            command=lambda: boss.besoinsCoche(b=13))
         #me4.add_separator()
         me4.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins14Coche)
+            command=lambda: boss.besoinsCoche(b=14))
         #me4.add_separator()
         me4.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins15Coche)
+            command=lambda: boss.besoinsCoche(b=15))
         #me4.add_separator()
         me4.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins16Coche)
+            command=lambda: boss.besoinsCoche(b=16))
         #me4.add_separator()
         me4.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins17Coche)
+            command=lambda: boss.besoinsCoche(b=17))
         #me4.add_separator()
         me4.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins18Coche)
+            command=lambda: boss.besoinsCoche(b=18))
         #me4.add_separator()
         me4.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins19Coche)
+            command=lambda: boss.besoinsCoche(b=19))
         #me4.add_separator()
         me4.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins20Coche)
+            command=lambda: boss.besoinsCoche(b=20))
         #me4.add_separator()
         me4.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins21Coche)
+            command=lambda: boss.besoinsCoche(b=21))
         #me4.add_separator()
         me4.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins22Coche)
+            command=lambda: boss.besoinsCoche(b=22))
         #me4.add_separator()
         me4.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins23Coche)
+            command=lambda: boss.besoinsCoche(b=23))
         #me4.add_separator()
         me4.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.besoins24Coche)
+            command=lambda: boss.besoinsCoche(b=24))
         # Integration of 14b menu
         cmd_Besoins.configure(activeforeground='black', activebackground='cyan',
             menu=me4)
@@ -2240,8 +2242,7 @@ class Application(tk.Frame):
         """
         subprocess.Popen('./newpatient/torecord.py', shell=True)
 
-    # Agenda
-    def patientAgenda(self):
+    def patientAgenda(self, a):
         """
             Multiples possibilities with next cmd :
             self.master.withdraw()
@@ -2250,124 +2251,135 @@ class Application(tk.Frame):
             self.master.lift()
             self.master.focus_force()
         """
-        #self.master.withdraw()
-        #subprocess.run('./patient_agenda/origin_agenda.py', check=True)
-        #self.master.deiconify()
-
-    def patientAgenda2(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda2.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda3(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda3.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda4(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda4.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda5(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda5.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda6(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda6.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda7(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda7.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda8(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda8.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda9(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda9.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda10(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda10.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda11(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda11.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda12(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda12.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda13(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda13.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda14(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda14.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda15(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda15.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda16(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda16.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda17(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda17.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda18(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda18.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda19(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda19.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda20(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda20.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda21(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda21.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda22(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda22.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda23(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda23.py', check=True)
-        self.master.deiconify()
-
-    def patientAgenda24(self):
-        self.master.withdraw()
-        subprocess.run('./patient_agenda/origin_agenda24.py', check=True)
-        self.master.deiconify()
+        if a == 1 :
+            print("Patient n° 1")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda.py', check=True)
+            self.master.deiconify()
+        elif a == 2:
+            print("Patient n° 2")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda2.py', check=True)
+            self.master.deiconify()
+        elif a == 3:
+            print("Patient n° 3")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda3.py', check=True)
+            self.master.deiconify()
+        elif a == 4:
+            print("Patient n° 4")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda4.py', check=True)
+            self.master.deiconify()
+        elif a == 5:
+            print("Patient n° 5")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda5.py', check=True)
+            self.master.deiconify()
+        elif a == 6:
+            print("Patient n° 6")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda6.py', check=True)
+            self.master.deiconify()
+        elif a == 7:
+            print("Patient n° 7")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda7.py', check=True)
+            self.master.deiconify()
+        elif a == 8:
+            print("Patient n° 8")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda8.py', check=True)
+            self.master.deiconify()
+        elif a == 9:
+            print("Patient n° 9")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda9.py', check=True)
+            self.master.deiconify()
+        elif a == 10:
+            print("Patient n° 10")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda10.py', check=True)
+            self.master.deiconify()
+        elif a == 11:
+            print("Patient n° 11")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda11.py', check=True)
+            self.master.deiconify()
+        elif a == 12:
+            print("Patient n° 12")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda12.py', check=True)
+            self.master.deiconify()
+        elif a == 13:
+            print("Patient n° 13")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda13.py', check=True)
+            self.master.deiconify()
+        elif a == 14:
+            print("Patient n° 14")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda14.py', check=True)
+            self.master.deiconify()
+        elif a == 15:
+            print("Patient n° 15")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda15.py', check=True)
+            self.master.deiconify()
+        elif a == 16:
+            print("Patient n° 16")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda16.py', check=True)
+            self.master.deiconify()
+        elif a == 17:
+            print("Patient n° 17")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda17.py', check=True)
+            self.master.deiconify()
+        elif a == 18:
+            print("Patient n° 18")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda18.py', check=True)
+            self.master.deiconify()
+        elif a == 18:
+            print("Patient n° 18")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda18.py', check=True)
+            self.master.deiconify()
+        elif a == 19:
+            print("Patient n° 19")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda19.py', check=True)
+            self.master.deiconify()
+        elif a == 20:
+            print("Patient n° 20")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda20.py', check=True)
+            self.master.deiconify()
+        elif a == 21:
+            print("Patient n° 21")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda21.py', check=True)
+            self.master.deiconify()
+        elif a == 22:
+            print("Patient n° 22")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda22.py', check=True)
+            self.master.deiconify()
+        elif a == 23:
+            print("Patient n° 23")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda23.py', check=True)
+            self.master.deiconify()
+        elif a == 24:
+            print("Patient n° 24")
+            self.master.withdraw()
+            subprocess.run('./patient_agenda/origin_agenda24.py', check=True)
+            self.master.deiconify()
+        else:
+            print("Nothing happened")
+            tk.messagebox.showerror('Error', 'Something went wrong with : '\
+            './patient_agenda/origin_agenda23.py ')
 
     # Contact patientX functions
     def contact_num1(self):
@@ -2685,81 +2697,59 @@ class Application(tk.Frame):
         homecsWind24(self)
 
     # CheckBox 14 needs (functions)
-    def besoinsCoche(self):
+    def besoinsCoche(self, b):
         """
             New window is open with
             subprocess.Popen()
         """
-        subprocess.Popen('./need/checkb.py', shell=True)
-
-    def besoins2Coche(self):
-        subprocess.Popen('./need/checkb2.py', shell=True)
-
-    def besoins3Coche(self):
-        subprocess.Popen('./need/checkb3.py', shell=True)
-
-    def besoins4Coche(self):
-        subprocess.Popen('./need/checkb4.py', shell=True)
-
-    def besoins5Coche(self):
-        subprocess.Popen('./need/checkb5.py', shell=True)
-
-    def besoins6Coche(self):
-        subprocess.Popen('./need/checkb6.py', shell=True)
-
-    def besoins7Coche(self):
-        subprocess.Popen('./need/checkb7.py', shell=True)
-
-    def besoins8Coche(self):
-        subprocess.Popen('./need/checkb8.py', shell=True)
-
-    def besoins9Coche(self):
-        subprocess.Popen('./need/checkb9.py', shell=True)
-
-    def besoins10Coche(self):
-        subprocess.Popen('./need/checkb10.py', shell=True)
-
-    def besoins11Coche(self):
-        subprocess.Popen('./need/checkb11.py', shell=True)
-
-    def besoins12Coche(self):
-        subprocess.Popen('./need/checkb12.py', shell=True)
-
-    def besoins13Coche(self):
-        subprocess.Popen('./need/checkb13.py', shell=True)
-
-    def besoins14Coche(self):
-        subprocess.Popen('./need/checkb14.py', shell=True)
-
-    def besoins15Coche(self):
-        subprocess.Popen('./need/checkb15.py', shell=True)
-
-    def besoins16Coche(self):
-        subprocess.Popen('./need/checkb16.py', shell=True)
-
-    def besoins17Coche(self):
-        subprocess.Popen('./need/checkb17.py', shell=True)
-
-    def besoins18Coche(self):
-        subprocess.Popen('./need/checkb18.py', shell=True)
-
-    def besoins19Coche(self):
-        subprocess.Popen('./need/checkb19.py', shell=True)
-
-    def besoins20Coche(self):
-        subprocess.Popen('./need/checkb20.py', shell=True)
-
-    def besoins21Coche(self):
-        subprocess.Popen('./need/checkb21.py', shell=True)
-
-    def besoins22Coche(self):
-        subprocess.Popen('./need/checkb22.py', shell=True)
-
-    def besoins23Coche(self):
-        subprocess.Popen('./need/checkb23.py', shell=True)
-
-    def besoins24Coche(self):
-        subprocess.Popen('./need/checkb24.py', shell=True)
+        if b == 1:
+            subprocess.Popen('./need/checkb.py', shell=True)
+        elif b == 2:
+            subprocess.Popen('./need/checkb2.py', shell=True)
+        elif b == 3:
+            subprocess.Popen('./need/checkb3.py', shell=True)
+        elif b == 4:
+            subprocess.Popen('./need/checkb4.py', shell=True)
+        elif b == 5:
+            subprocess.Popen('./need/checkb5.py', shell=True)
+        elif b == 6:
+            subprocess.Popen('./need/checkb6.py', shell=True)
+        elif b == 7:
+            subprocess.Popen('./need/checkb7.py', shell=True)
+        elif b == 8:
+            subprocess.Popen('./need/checkb8.py', shell=True)
+        elif b == 9:
+            subprocess.Popen('./need/checkb9.py', shell=True)
+        elif b == 10:
+            subprocess.Popen('./need/checkb10.py', shell=True)
+        elif b == 11:
+            subprocess.Popen('./need/checkb11.py', shell=True)
+        elif b == 12:
+            subprocess.Popen('./need/checkb12.py', shell=True)
+        elif b == 13:
+            subprocess.Popen('./need/checkb13.py', shell=True)
+        elif b == 14:
+            subprocess.Popen('./need/checkb14.py', shell=True)
+        elif b == 15:
+            subprocess.Popen('./need/checkb15.py', shell=True)
+        elif b == 16:
+            subprocess.Popen('./need/checkb16.py', shell=True)
+        elif b == 17:
+            subprocess.Popen('./need/checkb17.py', shell=True)
+        elif b == 18:
+            subprocess.Popen('./need/checkb18.py', shell=True)
+        elif b == 19:
+            subprocess.Popen('./need/checkb19.py', shell=True)
+        elif b == 20:
+            subprocess.Popen('./need/checkb20.py', shell=True)
+        elif b == 21:
+            subprocess.Popen('./need/checkb21.py', shell=True)
+        elif b == 22:
+            subprocess.Popen('./need/checkb22.py', shell=True)
+        elif b == 23:
+            subprocess.Popen('./need/checkb23.py', shell=True)
+        elif b == 24:
+            subprocess.Popen('./need/checkb24.py', shell=True)
 
     # 14 needs functions
     def suiviSoins1(self):
