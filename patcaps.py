@@ -4,12 +4,15 @@
 
 import tkinter as tk
 import time
+
 from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
-from labo.callabo import *
+
+from diag.call_diag import *
 from ttt.call_medic import *
+from labo.callabo import *
 
 
 def callResident(self):
@@ -128,7 +131,7 @@ def callResident(self):
     self.buttdiag = tk.Button(self.can, text="Diagnostic + ATCD",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag1)
+        command=lambda: diagstic(self, d=1))
     self.fbuttdiag_window = self.can.create_window(self.x12,
         self.y12, window=self.buttdiag)
 
@@ -207,7 +210,7 @@ def callResident(self):
     self.butt2diag = tk.Button(self.can, text="Diagnostic + ATCD 2",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag2)
+        command=lambda: diagstic(self, d=2))
     self.fbutt2diag_window = self.can.create_window(self.x22,
         self.y22, window=self.butt2diag)
 
@@ -286,7 +289,7 @@ def callResident(self):
     self.butt3diag = tk.Button(self.can, text="Diagnostic + ATCD 3",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag3)
+        command=lambda: diagstic(self, d=3))
     self.fbutt3diag_window = self.can.create_window(self.x32,
         self.y32, window=self.butt3diag)
 
@@ -366,7 +369,7 @@ def callResident(self):
     self.butt4diag = tk.Button(self.can, text="Diagnostic + ATCD 4",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag4)
+        command=lambda: diagstic(self, d=4))
     self.fbutt4diag_window = self.can.create_window(self.x42,
         self.y42, window=self.butt4diag)
 
@@ -446,7 +449,7 @@ def callResident(self):
     self.butt5diag = tk.Button(self.can, text="Diagnostic + ATCD 5", font=16,
         width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag5)
+        command=lambda: diagstic(self, d=5))
     self.fbutt5diag_window = self.can.create_window(self.x52,
         self.y52, window=self.butt5diag)
 
@@ -525,7 +528,7 @@ def callResident(self):
     self.butt6diag = tk.Button(self.can, text="Diagnostic + ATCD 6",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag6)
+        command=lambda: diagstic(self, d=6))
     self.fbutt6diag_window = self.can.create_window(self.x62,
         self.y62, window=self.butt6diag)
 
@@ -604,7 +607,7 @@ def callResident(self):
     self.butt7diag = tk.Button(self.can, text="Diagnostic + ATCD 7",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag7)
+        command=lambda: diagstic(self, d=7))
     self.fbutt7diag_window = self.can.create_window(self.x72,
         self.y72, window=self.butt7diag)
 
@@ -683,7 +686,7 @@ def callResident(self):
     self.butt8diag = tk.Button(self.can, text="Diagnostic + ATCD 8",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag8)
+        command=lambda: diagstic(self, d=8))
     self.fbutt8diag_window = self.can.create_window(self.x82,
         self.y82, window=self.butt8diag)
 
@@ -762,7 +765,7 @@ def callResident(self):
     self.butt9diag = tk.Button(self.can, text="Diagnostic + ATCD 9",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag9)
+        command=lambda: diagstic(self, d=9))
     self.fbutt9diag_window = self.can.create_window(self.x92,
         self.y92, window=self.butt9diag)
 
@@ -841,7 +844,7 @@ def callResident(self):
     self.butt10diag = tk.Button(self.can, text="Diagnostic + ATCD 10",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag10)
+        command=lambda: diagstic(self, d=10))
     self.fbutt10diag_window = self.can.create_window(self.x102,
         self.y102, window=self.butt10diag)
 
@@ -920,7 +923,7 @@ def callResident(self):
     self.butt11diag = tk.Button(self.can, text="Diagnostic + ATCD 11",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag11)
+        command=lambda: diagstic(self, d=11))
     self.fbutt11diag_window = self.can.create_window(self.x112,
         self.y112, window=self.butt11diag)
 
@@ -999,7 +1002,7 @@ def callResident(self):
     self.butt12diag = tk.Button(self.can, text="Diagnostic + ATCD 12",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag12)
+        command=lambda: diagstic(self, d=12))
     self.fbutt12diag_window = self.can.create_window(self.x122,
         self.y122, window=self.butt12diag)
 
@@ -1078,7 +1081,7 @@ def callResident(self):
     self.butt13diag = tk.Button(self.can, text="Diagnostic + ATCD 13",
         font=16, width=18, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.diag13)
+        command=lambda: diagstic(self, d=13))
     self.fbutt13diag_window = self.can.create_window(self.x132,
         self.y132, window=self.butt13diag)
 
@@ -1157,7 +1160,7 @@ def callResident(self):
     self.butt14diag = tk.Button(self.can, text="Diagnostic + ATCD 14",
         font=16, width=18, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.diag14)
+        command=lambda: diagstic(self, d=14))
     self.fbutt14diag_window = self.can.create_window(self.x142,
         self.y142, window=self.butt14diag)
 
@@ -1236,7 +1239,7 @@ def callResident(self):
     self.butt15diag = tk.Button(self.can, width=18, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Diagnostic + ATCD 15",
-        command=self.diag15)
+        command=lambda: diagstic(self, d=15))
     self.fbutt15diag_window = self.can.create_window(self.x152,
         self.y152, window=self.butt15diag)
 
@@ -1315,7 +1318,7 @@ def callResident(self):
     self.butt16diag = tk.Button(self.can, width=18, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD 16",
-        command=self.diag16)
+        command=lambda: diagstic(self, d=16))
     self.fbutt16diag_window = self.can.create_window(self.x162,
         self.y162, window=self.butt16diag)
 
@@ -1394,7 +1397,7 @@ def callResident(self):
     self.butt17diag = tk.Button(self.can, width=18, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Diagnostic + ATCD 17",
-        command=self.diag17)
+        command=lambda: diagstic(self, d=17))
     self.fbutt17diag_window = self.can.create_window(self.x172,
         self.y172, window=self.butt17diag)
 
@@ -1473,7 +1476,7 @@ def callResident(self):
     self.butt18diag = tk.Button(self.can, width=18, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD 18",
-        command=self.diag18)
+        command=lambda: diagstic(self, d=18))
     self.fbutt18diag_window = self.can.create_window(self.x182,
         self.y182, window=self.butt18diag)
 
@@ -1552,7 +1555,7 @@ def callResident(self):
     self.butt19diag = tk.Button(self.can, width=18, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Diagnostic + ATCD 19",
-        command=self.diag19)
+        command=lambda: diagstic(self, d=19))
     self.fbutt19diag_window = self.can.create_window(self.x192,
         self.y192, window=self.butt19diag)
 
@@ -1631,7 +1634,7 @@ def callResident(self):
     self.but20diag = tk.Button(self.can, width=18, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD 20",
-        command=self.diag20)
+        command=lambda: diagstic(self, d=20))
     self.fbut20diag_window = self.can.create_window(self.x202,
         self.y202, window=self.but20diag)
 
@@ -1710,7 +1713,7 @@ def callResident(self):
     self.butt21diag = tk.Button(self.can, width=18, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Diagnostic + ATCD 21",
-        command=self.diag21)
+        command=lambda: diagstic(self, d=21))
     self.fbutt21diag_window = self.can.create_window(self.x212,
         self.y212, window=self.butt21diag)
 
@@ -1789,7 +1792,7 @@ def callResident(self):
     self.butt22diag = tk.Button(self.can, width=18, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD 22",
-        command=self.diag22)
+        command=lambda: diagstic(self, d=22))
     self.fbutt22diag_window = self.can.create_window(self.x222,
         self.y222, window=self.butt22diag)
 
@@ -1868,7 +1871,7 @@ def callResident(self):
     self.butt23diag = tk.Button(self.can, width=18, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Diagnostic + ATCD 23",
-        command=self.diag23)
+        command=lambda: diagstic(self, d=23))
     self.fbutt23diag_window = self.can.create_window(self.x232,
         self.y232, window=self.butt23diag)
 
@@ -1947,7 +1950,7 @@ def callResident(self):
     self.butt24diag = tk.Button(self.can, width=18, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD 24",
-        command=self.diag24)
+        command=lambda: diagstic(self, d=24))
     self.fbutt24diag_window = self.can.create_window(self.x242,
         self.y242, window=self.butt24diag)
 

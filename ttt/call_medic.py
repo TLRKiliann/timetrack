@@ -3,7 +3,7 @@
 
 
 """
-    call resultlabox.py script from patcaps.py
+    call patientttX.py script from patcaps.py
 """
 
 

@@ -37,7 +37,6 @@ from Backup.backupfile import dataBackToSave
 from need.needownload.download import *
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
-from diag.diagdownload import *
 from vmed.medload import *
 
 from contact.conpact.pat_contact1 import Window
@@ -587,8 +586,6 @@ class MenuBar(tk.Frame):
         cmd_agenda.pack(side=tk.LEFT, padx=3)
         me3 = Menu(cmd_agenda)
         # Wrapped menu agenda
-        a=1
-        b=2
         me3.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=1))
@@ -1634,7 +1631,7 @@ class MenuBar(tk.Frame):
         cmd_backup = tk.Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
             bg='grey30', relief=tk.GROOVE)
         cmd_backup.pack(side=tk.LEFT, padx=3)
-        # drop-down portion of Graphics menu
+        # drop-down portion of menu
         me1 = Menu(cmd_backup)
         me2 = Menu(me1)
         me2.add_command(label='All Files.txt', underline=0, font=('Times 14'),
@@ -2729,155 +2726,6 @@ class Application(tk.Frame):
             self.master.withdraw()
             subprocess.run("./need/suivi_patient_24.py", check=True)
             self.master.deiconify()
-
-    # Diagnostic functions
-    def diag1(self):
-        """
-            Hide background window and
-            call script with subprocess.run()
-        """
-        diagloading1()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient1.py", check=True)
-        self.master.deiconify()
-
-    def diag2(self):
-        diagloading2()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient2.py", check=True)
-        self.master.deiconify()
-
-    def diag3(self):
-        diagloading3()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient3.py", check=True)
-        self.master.deiconify()
-
-    def diag4(self):
-        diagloading4()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient4.py", check=True)
-        self.master.deiconify()
-
-    def diag5(self):
-        diagloading5()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient5.py", check=True)
-        self.master.deiconify()
-
-    def diag6(self):
-        diagloading6()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient6.py", check=True)
-        self.master.deiconify()
-
-    def diag7(self):
-        diagloading7()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient7.py", check=True)
-        self.master.deiconify()
-
-    def diag8(self):
-        diagloading8()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient8.py", check=True)
-        self.master.deiconify()
-
-    def diag9(self):
-        diagloading9()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient9.py", check=True)
-        self.master.deiconify()
-
-    def diag10(self):
-        diagloading10()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient10.py", check=True)
-        self.master.deiconify()
-
-    def diag11(self):
-        diagloading11()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient11.py", check=True)
-        self.master.deiconify()
-
-    def diag12(self):
-        diagloading12()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient12.py", check=True)
-        self.master.deiconify()
-
-    def diag13(self):
-        diagloading13()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient13.py", check=True)
-        self.master.deiconify()
-
-    def diag14(self):
-        diagloading14()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient14.py", check=True)
-        self.master.deiconify()
-
-    def diag15(self):
-        diagloading15()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient15.py", check=True)
-        self.master.deiconify()
-
-    def diag16(self):
-        diagloading16()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient16.py", check=True)
-        self.master.deiconify()
-
-    def diag17(self):
-        diagloading17()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient17.py", check=True)
-        self.master.deiconify()
-
-    def diag18(self):
-        diagloading18()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient18.py", check=True)
-        self.master.deiconify()
-
-    def diag19(self):
-        diagloading19()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient19.py", check=True)
-        self.master.deiconify()
-
-    def diag20(self):
-        diagloading20()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient20.py", check=True)
-        self.master.deiconify()
-
-    def diag21(self):
-        diagloading21()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient21.py", check=True)
-        self.master.deiconify()
-
-    def diag22(self):
-        diagloading22()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient22.py", check=True)
-        self.master.deiconify()
-
-    def diag23(self):
-        diagloading23()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient23.py", check=True)
-        self.master.deiconify()
-
-    def diag24(self):
-        diagloading24()
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient24.py", check=True)
-        self.master.deiconify()
 
     def showParam1(self):
         """
