@@ -699,3 +699,5 @@ def callLabo1(self):
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)

@@ -8,6 +8,8 @@ from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
+from labo.callabo import *
+from ttt.call_medic import *
 
 
 def callResident(self):
@@ -134,7 +136,7 @@ def callResident(self):
     self.buttt = tk.Button(self.can, text="Treatments",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed1)
+        command=lambda: tttMed1(self))
     self.fbuttt_window = self.can.create_window(self.x13,
         self.y13, window=self.buttt)
 
@@ -142,7 +144,7 @@ def callResident(self):
     self.buttlabo = tk.Button(self.can, text="Laboratory",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult)
+        command=lambda: laboResult(self))
     self.fbuttlabo_window = self.can.create_window(self.x14,
         self.y14, window=self.buttlabo)
 
@@ -213,7 +215,7 @@ def callResident(self):
     self.buttt2med = tk.Button(self.can, text="Treatments 2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed2)
+        command=lambda: tttMed2(self))
     self.fbuttt2med_window = self.can.create_window(self.x23,
         self.y23, window=self.buttt2med)
 
@@ -221,7 +223,7 @@ def callResident(self):
     self.butt2labo = tk.Button(self.can, text="Laboratory 2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult2)
+        command=lambda: laboResult2(self))
     self.fbutt2labo_window = self.can.create_window(self.x24,
         self.y24, window=self.butt2labo)
 
@@ -292,7 +294,7 @@ def callResident(self):
     self.butt3med = tk.Button(self.can, text="Treatments 3",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed3)
+        command=lambda: tttMed3(self))
     self.fbutt3med_window = self.can.create_window(self.x33,
         self.y33, window=self.butt3med)
 
@@ -300,7 +302,7 @@ def callResident(self):
     self.butt3labo = tk.Button(self.can, text="Laboratory 3",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult3)
+        command=lambda: laboResult3(self))
     self.fbutt3labo_window = self.can.create_window(self.x34,
         self.y34, window=self.butt3labo)
 
@@ -372,7 +374,7 @@ def callResident(self):
     self.butt4med = tk.Button(self.can, text="Treatments 4",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed4)
+        command=lambda: tttMed4(self))
     self.fbutt4med_window = self.can.create_window(self.x43,
         self.y43, window=self.butt4med)
 
@@ -380,7 +382,7 @@ def callResident(self):
     self.butt4labo = tk.Button(self.can, text="Laboratory 4",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult4)
+        command=lambda: laboResult4(self))
     self.fbutt4labo_window = self.can.create_window(self.x44,
         self.y44, window=self.butt4labo)
 
@@ -452,7 +454,7 @@ def callResident(self):
     self.butt5med = tk.Button(self.can, text="Treatments 5", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed5)
+        command=lambda: tttMed5(self))
     self.fbutt5med_window = self.can.create_window(self.x53,
         self.y53, window=self.butt5med)
 
@@ -460,7 +462,7 @@ def callResident(self):
     self.butt5labo = tk.Button(self.can, text="Laboratory 5", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult5)
+        command=lambda: laboResult5(self))
     self.fbutt5labo_window = self.can.create_window(self.x54,
         self.y54, window=self.butt5labo)
 
@@ -531,7 +533,7 @@ def callResident(self):
     self.butt6med = tk.Button(self.can, text="Treatments 6", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed6)
+        command=lambda: tttMed6(self))
     self.fbutt6med_window = self.can.create_window(self.x64,
         self.y64, window=self.butt6med)
 
@@ -539,7 +541,7 @@ def callResident(self):
     self.butt6labo = tk.Button(self.can, text="Laboratory 6", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult6)
+        command=lambda: laboResult6(self))
     self.fbutt6labo_window = self.can.create_window(self.x65,
         self.y65, window=self.butt6labo)
 
@@ -610,7 +612,7 @@ def callResident(self):
     self.butt7med = tk.Button(self.can, text="Treatments 7",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed7)
+        command=lambda: tttMed7(self))
     self.fbutt7med_window = self.can.create_window(self.x73,
         self.y73, window=self.butt7med)
 
@@ -618,7 +620,7 @@ def callResident(self):
     self.butt7labo = tk.Button(self.can, text="Laboratory 7",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult7)
+        command=lambda: laboResult7(self))
     self.fbutt7labo_window = self.can.create_window(self.x74,
         self.y74, window=self.butt7labo)
 
@@ -689,7 +691,7 @@ def callResident(self):
     self.butt8med = tk.Button(self.can, text="Treatments 8", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed8)
+        command=lambda: tttMed8(self))
     self.fbutt8med_window = self.can.create_window(self.x83,
         self.y83, window=self.butt8med)
 
@@ -697,7 +699,7 @@ def callResident(self):
     self.butt8labo = tk.Button(self.can, text="Laboratory 8", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult8)
+        command=lambda: laboResult8(self))
     self.fbutt8labo_window = self.can.create_window(self.x84,
         self.y84, window=self.butt8labo)
 
@@ -768,7 +770,7 @@ def callResident(self):
     self.butt9med = tk.Button(self.can, text="Treatments 9",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed9)
+        command=lambda: tttMed9(self))
     self.fbutt9med_window = self.can.create_window(self.x93,
         self.y93, window=self.butt9med)
 
@@ -776,7 +778,7 @@ def callResident(self):
     self.butt9labo = tk.Button(self.can, text="Laboratory 9",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult9)
+        command=lambda: laboResult9(self))
     self.fbutt9labo_window = self.can.create_window(self.x94,
         self.y94, window=self.butt9labo)
 
@@ -847,7 +849,7 @@ def callResident(self):
     self.butt10med = tk.Button(self.can, text="Treatments 10", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed10)
+        command=lambda: tttMed10(self))
     self.fbutt10med_window = self.can.create_window(self.x103,
         self.y103, window=self.butt10med)
 
@@ -855,7 +857,7 @@ def callResident(self):
     self.butt10labo = tk.Button(self.can, text="Laboratory 10", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult10)
+        command=lambda: laboResult10(self))
     self.fbutt10labo_window = self.can.create_window(self.x104,
         self.y104, window=self.butt10labo)
 
@@ -926,7 +928,7 @@ def callResident(self):
     self.butt11med = tk.Button(self.can, text="Treatments 11", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed11)
+        command=lambda: tttMed11(self))
     self.fbutt11med_window = self.can.create_window(self.x113,
         self.y113, window=self.butt11med)
 
@@ -934,7 +936,7 @@ def callResident(self):
     self.butt11labo = tk.Button(self.can, text="Laboratory 11", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult11)
+        command=lambda: laboResult11(self))
     self.fbutt11labo_window = self.can.create_window(self.x114,
         self.y114, window=self.butt11labo)
 
@@ -1005,7 +1007,7 @@ def callResident(self):
     self.butt12med = tk.Button(self.can, text="Treatments 12",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed12)
+        command=lambda: tttMed12(self))
     self.fbutt12med_window = self.can.create_window(self.x123,
         self.y123, window=self.butt12med)
 
@@ -1013,7 +1015,7 @@ def callResident(self):
     self.butt12labo = tk.Button(self.can, text="Laboratory 12", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult12)
+        command=lambda: laboResult12(self))
     self.fbutt12labo_window = self.can.create_window(self.x124,
         self.y124, window=self.butt12labo)
 
@@ -1084,7 +1086,7 @@ def callResident(self):
     self.butt13med = tk.Button(self.can, text="Treatments 13",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.tttMed13)
+        command=lambda: tttMed13(self))
     self.fbutt13med_window = self.can.create_window(self.x133,
         self.y133, window=self.butt13med)
 
@@ -1092,7 +1094,7 @@ def callResident(self):
     self.butt13labo = tk.Button(self.can, text="Laboratory 13",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.laboResult13)
+        command=lambda: laboResult13(self))
     self.fbutt13labo_window = self.can.create_window(self.x134,
         self.y134, window=self.butt13labo)
 
@@ -1163,7 +1165,7 @@ def callResident(self):
     self.butt14med = tk.Button(self.can, text="Treatments 14", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.tttMed14)
+        command=lambda: tttMed14(self))
     self.fbutt14med_window = self.can.create_window(self.x143,
         self.y143, window=self.butt14med)
 
@@ -1171,7 +1173,7 @@ def callResident(self):
     self.butt14labo = tk.Button(self.can, text="Laboratory 14", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.laboResult14)
+        command=lambda: laboResult14(self))
     self.fbutt14labo_window = self.can.create_window(self.x144,
         self.y144, window=self.butt14labo)
 
@@ -1242,7 +1244,7 @@ def callResident(self):
     self.butt15med = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Treatments 15",
-        command=self.tttMed15)
+        command=lambda: tttMed15(self))
     self.fbutt15med_window = self.can.create_window(self.x153,
         self.y153, window=self.butt15med)
 
@@ -1250,7 +1252,7 @@ def callResident(self):
     self.butt15labo = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Laboratory 15",
-        command=self.laboResult15)
+        command=lambda: laboResult15(self))
     self.fbutt15labo_window = self.can.create_window(self.x154,
         self.y154, window=self.butt15labo)
 
@@ -1321,7 +1323,7 @@ def callResident(self):
     self.butt16med = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments 16",
-        command=self.tttMed16)
+        command=lambda: tttMed16(self))
     self.fbutt16med_window = self.can.create_window(self.x163,
         self.y163, window=self.butt16med)
 
@@ -1329,7 +1331,7 @@ def callResident(self):
     self.butt16labo = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory 16",
-        command=self.laboResult16)
+        command=lambda: laboResult16(self))
     self.fbutt16labo_window = self.can.create_window(self.x164,
         self.y164, window=self.butt16labo)
 
@@ -1400,7 +1402,7 @@ def callResident(self):
     self.butt17med = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Treatments 17",
-        command=self.tttMed17)
+        command=lambda: tttMed17(self))
     self.fbutt17med_window = self.can.create_window(self.x173,
         self.y173, window=self.butt17med)
 
@@ -1408,7 +1410,7 @@ def callResident(self):
     self.butt17labo = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Laboratory 17",
-        command=self.laboResult17)
+        command=lambda: laboResult17(self))
     self.fbutt17labo_window = self.can.create_window(self.x174,
         self.y174, window=self.butt17labo)
 
@@ -1479,7 +1481,7 @@ def callResident(self):
     self.butt18med = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments 18",
-        command=self.tttMed18)
+        command=lambda: tttMed18(self))
     self.fbutt18med_window = self.can.create_window(self.x183,
         self.y183, window=self.butt18med)
 
@@ -1487,7 +1489,7 @@ def callResident(self):
     self.butt18labo = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory 18",
-        command=self.laboResult18)
+        command=lambda: laboResult18(self))
     self.fbutt18labo_window = self.can.create_window(self.x184,
         self.y184, window=self.butt18labo)
 
@@ -1558,7 +1560,7 @@ def callResident(self):
     self.butt19med = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Treatments 19",
-        command=self.tttMed19)
+        command=lambda: tttMed19(self))
     self.fbutt19med_window = self.can.create_window(self.x193,
         self.y193, window=self.butt19med)
 
@@ -1566,7 +1568,7 @@ def callResident(self):
     self.butt19labo = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Laboratory 19",
-        command=self.laboResult19)
+        command=lambda: laboResult19(self))
     self.fbutt19labo_window = self.can.create_window(self.x194,
         self.y194, window=self.butt19labo)
 
@@ -1637,7 +1639,7 @@ def callResident(self):
     self.but20med = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments 20",
-        command=self.tttMed20)
+        command=lambda: tttMed20(self))
     self.fbut20med_window = self.can.create_window(self.x203,
         self.y203, window=self.but20med)
 
@@ -1645,7 +1647,7 @@ def callResident(self):
     self.but20labo = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory 20",
-        command=self.laboResult20)
+        command=lambda: laboResult20(self))
     self.fbut20labo_window = self.can.create_window(self.x204,
         self.y204, window=self.but20labo)
 
@@ -1716,7 +1718,7 @@ def callResident(self):
     self.butt21med = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Treatments 21",
-        command=self.tttMed21)
+        command=lambda: tttMed21(self))
     self.fbutt21med_window = self.can.create_window(self.x213,
         self.y213, window=self.butt21med)
 
@@ -1724,7 +1726,7 @@ def callResident(self):
     self.butt21labo = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Laboratory 21",
-        command=self.laboResult21)
+        command=lambda: laboResult21(self))
     self.fbutt21labo_window = self.can.create_window(self.x214,
         self.y214, window=self.butt21labo)
 
@@ -1795,7 +1797,7 @@ def callResident(self):
     self.butt22med = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments 22",
-        command=self.tttMed22)
+        command=lambda: tttMed22(self))
     self.fbutt22med_window = self.can.create_window(self.x223,
         self.y223, window=self.butt22med)
 
@@ -1803,7 +1805,7 @@ def callResident(self):
     self.butt22labo = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory 22",
-        command=self.laboResult22)
+        command=lambda: laboResult22(self))
     self.fbutt22labo_window = self.can.create_window(self.x224,
         self.y224, window=self.butt22labo)
 
@@ -1874,7 +1876,7 @@ def callResident(self):
     self.butt23med = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Treatments 23",
-        command=self.tttMed23)
+        command=lambda: tttMed23(self))
     self.fbutt23med_window = self.can.create_window(self.x233,
         self.y233, window=self.butt23med)
 
@@ -1882,7 +1884,7 @@ def callResident(self):
     self.butt23labo = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Laboratory 23",
-        command=self.laboResult23)
+        command=lambda: laboResult23(self))
     self.fbutt23labo_window = self.can.create_window(self.x234,
         self.y234, window=self.butt23labo)
 
@@ -1953,7 +1955,7 @@ def callResident(self):
     self.butt24med = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments 24",
-        command=self.tttMed24)
+        command=lambda: tttMed24(self))
     self.fbutt24med_window = self.can.create_window(self.x243,
         self.y243, window=self.butt24med)
 
@@ -1961,7 +1963,7 @@ def callResident(self):
     self.butt24labo = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory 24",
-        command=self.laboResult24)
+        command=lambda: laboResult24(self))
     self.fbutt24labo_window = self.can.create_window(self.x244,
         self.y244, window=self.butt24labo)
 

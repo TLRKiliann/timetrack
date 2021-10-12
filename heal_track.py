@@ -2,6 +2,15 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    Main script to start.
+    It call directly passw.py to validate access
+    privileges.
+    One script with multiple functions can be called
+    by import *, but multiples scripts cannot be called.
+"""
+
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -128,6 +137,7 @@ from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
 
+"""
 from ttt.tttdownload import *
 from ttt.patienttt1 import callTreatment1
 from ttt.patienttt2 import callTreatment2
@@ -153,8 +163,11 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
+"""
 
-from labo.labodownload import *
+#from labo.labodownload import *
+
+"""
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3
@@ -179,7 +192,7 @@ from labo.resultlabo21 import callLabo21
 from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
-
+"""
 from auxequip.aux1 import auxi_equip1
 from auxequip.aux2 import auxi_equip2
 from auxequip.aux3 import auxi_equip3
@@ -3150,111 +3163,110 @@ class Application(tk.Frame):
     def tttMed24(self):
         downloadttt24()
         callTreatment24(self)
-
-    # LABO functions
+    """
     def laboResult(self):
-        labodownload1()
-        callLabo1(self)
+
+        #Labo launchers
 
     def laboResult2(self):
         labodownload2()
-        callLabo2(self)
+        #callLabo2(self)
 
     def laboResult3(self):
         labodownload3()
-        callLabo3(self)
+        #callLabo3(self)
 
     def laboResult4(self):
         labodownload4()
-        callLabo4(self)
+        #callLabo4(self)
 
     def laboResult5(self):
         labodownload5()
-        callLabo5(self)
+        #callLabo5(self)
 
     def laboResult6(self):
         labodownload6()
-        callLabo6(self)
+        #callLabo6(self)
 
     def laboResult7(self):
         labodownload7()
-        callLabo7(self)
+        #callLabo7(self)
 
     def laboResult8(self):
         labodownload8()
-        callLabo8(self)
+        #callLabo8(self)
 
     def laboResult9(self):
         labodownload9()
-        callLabo9(self)
+        #callLabo9(self)
 
     def laboResult10(self):
         labodownload10()
-        callLabo10(self)
+        #callLabo10(self)
 
     def laboResult11(self):
         labodownload11()
-        callLabo11(self)
+        #callLabo11(self)
 
     def laboResult12(self):
         labodownload12()
-        callLabo12(self)
+        #callLabo12(self)
 
     def laboResult13(self):
         labodownload13()
-        callLabo13(self)
+        #callLabo13(self)
 
     def laboResult14(self):
         labodownload14()
-        callLabo14(self)
+        #callLabo14(self)
 
     def laboResult15(self):
         labodownload15()
-        callLabo15(self)
+        #callLabo15(self)
 
     def laboResult16(self):
         labodownload16()
-        callLabo16(self)
+        #callLabo16(self)
 
     def laboResult17(self):
         labodownload17()
-        callLabo17(self)
+        #callLabo17(self)
 
     def laboResult18(self):
         labodownload18()
-        callLabo18(self)
+        #callLabo18(self)
 
     def laboResult19(self):
         labodownload19()
-        callLabo19(self)
+        #callLabo19(self)
 
     def laboResult20(self):
         labodownload20()
-        callLabo20(self)
+        #callLabo20(self)
 
     def laboResult21(self):
         labodownload21()
-        callLabo21(self)
+        #callLabo21(self)
 
     def laboResult22(self):
         labodownload22()
-        callLabo22(self)
+        #callLabo22(self)
 
     def laboResult23(self):
         labodownload23()
-        callLabo23(self)
+        #callLabo23(self)
 
     def laboResult24(self):
         labodownload24()
-        callLabo24(self)
+        #callLabo24(self)
+    """
 
-    # Func Vital Parameters
     def showParam1(self):
         """
             Decreases the opacity of
             the background window
             and run subprocess.run()
-            to call script.
+            to call Vital Parameters.
         """
         self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
