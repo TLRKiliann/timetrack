@@ -6,7 +6,6 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 import os
-from timetrack.heal_track.Application import suiviSoins1
 
 
 class ScrollCanvas(tk.Frame):
@@ -61,7 +60,7 @@ class Application(tk.Frame):
             bg='RoyalBlue3', fg='gold',
             activebackground='pale turquoise',
             highlightbackground='light sky blue',
-            text="Add", command=lambda: self.lienDirect(a)) #self.lienDirect)
+            text="Add", command = self.lienDirect) #self.lienDirect)
         self.fb2 = self.can.create_window(self.x2, self.y2, window=self.b2)
 
         self.x3, self.y3 = 400, 250
@@ -69,7 +68,7 @@ class Application(tk.Frame):
             bg='RoyalBlue3', fg='gold',
             activebackground='pale turquoise',
             highlightbackground='light sky blue',
-            text="Read", command= self.lectureFic)
+            text="Read", command = self.lectureFic)
         self.fb3 = self.can.create_window(self.x3, self.y3, window=self.b3)
         #self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.pack()
@@ -84,30 +83,6 @@ class Application(tk.Frame):
             <Add> button check
             if files exist.
         """
-        mainapp = Application()
-        print(mainapp.suiviSoins1(a))
-        """
-        self.a = aval
-        b = self.b
-        self.b = bval
-        c = self.c
-        self.c = cval
-
-        itemslist=[a, b]
-
-        for x in itemslist:
-            if x == aval:
-                print(a)
-            elif x == bval:
-                print(b)
-            elif x == cval:
-                print(c)
-            else:
-                print("Value doesn't work !")
-
-        callapp = Application()
-        callapp.lienDirect(itemslist)
-        
         try:
             if os.path.getsize('./need/doc_suivi/patient1_14b.txt'):
                 print("[+] File '14 needs' exist (add)!")
@@ -116,7 +91,7 @@ class Application(tk.Frame):
             print("[!] Sorry, file '14 needs' not exist !")
             print(outmsg)
             self.commentFileRecNeeds()
-        """
+
 
     def lectureFic(self):
         """

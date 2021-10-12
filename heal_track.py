@@ -15,8 +15,6 @@ from playsound import playsound
 
 #import passw
 
-import need.suivi_patient_1
-
 from boxapp import callBox
 from cpfoldtrans import loaderfile
 
@@ -2769,13 +2767,10 @@ class Application(tk.Frame):
             Hide background window and
             call script with subprocess.run()
         """
-        a = 10
-        return a
-
-        #needload1()
-        #self.master.withdraw()
-        #subprocess.run("./need/suivi_patient_1.py", check=True)
-        #self.master.deiconify()
+        needload1()
+        self.master.withdraw()
+        subprocess.run("./need/suivi_patient_1.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins2(self):
         needload2()
