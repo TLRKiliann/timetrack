@@ -137,62 +137,6 @@ from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
 
-"""
-from ttt.tttdownload import *
-from ttt.patienttt1 import callTreatment1
-from ttt.patienttt2 import callTreatment2
-from ttt.patienttt3 import callTreatment3
-from ttt.patienttt4 import callTreatment4
-from ttt.patienttt5 import callTreatment5
-from ttt.patienttt6 import callTreatment6
-from ttt.patienttt7 import callTreatment7
-from ttt.patienttt8 import callTreatment8
-from ttt.patienttt9 import callTreatment9
-from ttt.patienttt10 import callTreatment10
-from ttt.patienttt11 import callTreatment11
-from ttt.patienttt12 import callTreatment12
-from ttt.patienttt13 import callTreatment13
-from ttt.patienttt14 import callTreatment14
-from ttt.patienttt15 import callTreatment15
-from ttt.patienttt16 import callTreatment16
-from ttt.patienttt17 import callTreatment17
-from ttt.patienttt18 import callTreatment18
-from ttt.patienttt19 import callTreatment19
-from ttt.patienttt20 import callTreatment20
-from ttt.patienttt21 import callTreatment21
-from ttt.patienttt22 import callTreatment22
-from ttt.patienttt23 import callTreatment23
-from ttt.patienttt24 import callTreatment24
-"""
-
-#from labo.labodownload import *
-
-"""
-from labo.resultlabo1 import callLabo1
-from labo.resultlabo2 import callLabo2
-from labo.resultlabo3 import callLabo3
-from labo.resultlabo4 import callLabo4
-from labo.resultlabo5 import callLabo5
-from labo.resultlabo6 import callLabo6
-from labo.resultlabo7 import callLabo7
-from labo.resultlabo8 import callLabo8
-from labo.resultlabo9 import callLabo9
-from labo.resultlabo10 import callLabo10
-from labo.resultlabo11 import callLabo11
-from labo.resultlabo12 import callLabo12
-from labo.resultlabo13 import callLabo13
-from labo.resultlabo14 import callLabo14
-from labo.resultlabo15 import callLabo15
-from labo.resultlabo16 import callLabo16
-from labo.resultlabo17 import callLabo17
-from labo.resultlabo18 import callLabo18
-from labo.resultlabo19 import callLabo19
-from labo.resultlabo20 import callLabo20
-from labo.resultlabo21 import callLabo21
-from labo.resultlabo22 import callLabo22
-from labo.resultlabo23 import callLabo23
-from labo.resultlabo24 import callLabo24
-"""
 from auxequip.aux1 import auxi_equip1
 from auxequip.aux2 import auxi_equip2
 from auxequip.aux3 import auxi_equip3
@@ -1225,207 +1169,102 @@ class MenuBar(tk.Frame):
         meSoins = Menu(cmd_Soins)
         meSoins.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins1)
+            command=lambda: boss.suiviSoins(s=1))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins2)
+            command=lambda: boss.suiviSoins(s=2))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins3)
+            command=lambda: boss.suiviSoins(s=3))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins4)
+            command=lambda: boss.suiviSoins(s=4))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins5)
+            command=lambda: boss.suiviSoins(s=5))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins6)
+            command=lambda: boss.suiviSoins(s=6))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins7)
+            command=lambda: boss.suiviSoins(s=7))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins8)
+            command=lambda: boss.suiviSoins(s=8))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins9)
+            command=lambda: boss.suiviSoins(s=9))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins10)
+            command=lambda: boss.suiviSoins(s=10))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins11)
+            command=lambda: boss.suiviSoins(s=11))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins12)
+            command=lambda: boss.suiviSoins(s=12))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins13)
+            command=lambda: boss.suiviSoins(s=13))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins14)
+            command=lambda: boss.suiviSoins(s=14))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins15)
+            command=lambda: boss.suiviSoins(s=15))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins16)
+            command=lambda: boss.suiviSoins(s=16))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins17)
+            command=lambda: boss.suiviSoins(s=17))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins18)
+            command=lambda: boss.suiviSoins(s=18))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins19)
+            command=lambda: boss.suiviSoins(s=19))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins20)
+            command=lambda: boss.suiviSoins(s=20))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins21)
+            command=lambda: boss.suiviSoins(s=21))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins22)
+            command=lambda: boss.suiviSoins(s=22))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins23)
+            command=lambda: boss.suiviSoins(s=23))
         #meSoins.add_separator()
         meSoins.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.suiviSoins24)
+            command=lambda: boss.suiviSoins(s=24))
         # Integration of health and care menu
         cmd_Soins.configure(activeforeground='black', activebackground='cyan',
             menu=meSoins)
-
-        # Treatments
-        cmd_ttt = tk.Menubutton(self, text='Treatments', font=("Times 14"),
-            fg='cyan', bg='grey30', relief=tk.GROOVE)
-        cmd_ttt.pack(side=tk.LEFT, padx=3)
-        # Partie déroulante du menu health and care
-        meTtt = Menu(cmd_ttt)
-        meTtt.add_command(label=new_text, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed1)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text2, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed2)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text3, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed3)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text4, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed4)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text5, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed5)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text6, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed6)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text7, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed7)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text8, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed8)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text9, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed9)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text10, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed10)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text11, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed11)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text12, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed12)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text13, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed13)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text14, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed14)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text15, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed15)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text16, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed16)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text17, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed17)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text18, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed18)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text19, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed19)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text20, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed20)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text21, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed21)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text22, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed22)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text23, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed23)
-        #meTtt.add_separator()
-        meTtt.add_command(label=new_text24, font=('Times 14'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.tttMed24)
-        # Integration of health and care menu
-        cmd_ttt.configure(activeforeground='black', activebackground='cyan',
-            menu=meTtt)
 
         # Vital parameters menu
         self.cmd_Param = tk.Menubutton(self, text='Vital Parameters', font=("Times 14"),
@@ -2764,154 +2603,132 @@ class Application(tk.Frame):
         elif b == 24:
             subprocess.Popen('./need/checkb24.py', shell=True)
 
-    # 14 needs functions
-    def suiviSoins1(self):
+    def suiviSoins(self, s):
         """
+            Call need's function.
             Hide background window and
             call script with subprocess.run()
         """
-        needload1()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_1.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins2(self):
-        needload2()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_2.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins3(self):
-        needload3()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_3.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins4(self):
-        needload4()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_4.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins5(self):
-        needload5()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_5.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins6(self):
-        needload6()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_6.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins7(self):
-        needload7()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_7.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins8(self):
-        needload8()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_8.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins9(self):
-        needload9()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_9.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins10(self):
-        needload10()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_10.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins11(self):
-        needload11()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_11.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins12(self):
-        needload12()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_12.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins13(self):
-        needload13()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_13.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins14(self):
-        needload14()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_14.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins15(self):
-        needload15()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_15.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins16(self):
-        needload16()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_16.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins17(self):
-        needload17()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_17.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins18(self):
-        needload18()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_18.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins19(self):
-        needload19()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_19.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins20(self):
-        needload20()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_20.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins21(self):
-        needload21()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_21.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins22(self):
-        needload22()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_22.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins23(self):
-        needload23()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_23.py", check=True)
-        self.master.deiconify()
-
-    def suiviSoins24(self):
-        needload24()
-        self.master.withdraw()
-        subprocess.run("./need/suivi_patient_24.py", check=True)
-        self.master.deiconify()
+        if s == 1:        
+            needload1()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_1.py", check=True)
+            self.master.deiconify()
+        elif s == 2:
+            needload2()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_2.py", check=True)
+            self.master.deiconify()
+        elif s == 3:
+            needload3()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_3.py", check=True)
+            self.master.deiconify()
+        elif s == 4:
+            needload4()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_4.py", check=True)
+            self.master.deiconify()
+        elif s == 5:
+            needload5()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_5.py", check=True)
+            self.master.deiconify()
+        elif s == 6:
+            needload6()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_6.py", check=True)
+            self.master.deiconify()
+        elif s == 7:
+            needload7()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_7.py", check=True)
+            self.master.deiconify()
+        elif s == 8:
+            needload8()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_8.py", check=True)
+            self.master.deiconify()
+        elif s == 9:
+            needload9()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_9.py", check=True)
+            self.master.deiconify()
+        elif s == 10:
+            needload10()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_10.py", check=True)
+            self.master.deiconify()
+        elif s == 11:
+            needload11()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_11.py", check=True)
+            self.master.deiconify()
+        elif s == 12:
+            needload12()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_12.py", check=True)
+            self.master.deiconify()
+        elif s == 13:
+            needload13()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_13.py", check=True)
+            self.master.deiconify()
+        elif s == 14:
+            needload14()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_14.py", check=True)
+            self.master.deiconify()
+        elif s == 15:
+            needload15()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_15.py", check=True)
+            self.master.deiconify()
+        elif s == 16:
+            needload16()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_16.py", check=True)
+            self.master.deiconify()
+        elif s == 17:
+            needload17()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_17.py", check=True)
+            self.master.deiconify()
+        elif s == 18:
+            needload18()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_18.py", check=True)
+            self.master.deiconify()
+        elif s == 19:
+            needload19()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_19.py", check=True)
+            self.master.deiconify()
+        elif s == 20:
+            needload20()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_20.py", check=True)
+            self.master.deiconify()
+        elif s == 21:
+            needload21()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_21.py", check=True)
+            self.master.deiconify()
+        elif s == 22:
+            needload22()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_22.py", check=True)
+            self.master.deiconify()
+        elif s == 23:
+            needload23()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_23.py", check=True)
+            self.master.deiconify()
+        elif s == 24:
+            needload24()
+            self.master.withdraw()
+            subprocess.run("./need/suivi_patient_24.py", check=True)
+            self.master.deiconify()
 
     # Diagnostic functions
     def diag1(self):
@@ -3061,205 +2878,6 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run("./diag/diag_patient24.py", check=True)
         self.master.deiconify()
-
-    # TTT functions
-    def tttMed1(self):
-        """
-            To download data from server
-            and call callTreatmentX(self)
-            from ttt/ttt.patientttx.py
-        """
-        downloadttt1()
-        callTreatment1(self)
-
-    def tttMed2(self):
-        downloadttt2()
-        callTreatment2(self)
-
-    def tttMed3(self):
-        downloadttt3()
-        callTreatment3(self)
-
-    def tttMed4(self):
-        downloadttt4()
-        callTreatment4(self)
-
-    def tttMed5(self):
-        downloadttt5()
-        callTreatment5(self)
-
-    def tttMed6(self):
-        downloadttt6()
-        callTreatment6(self)
-
-    def tttMed7(self):
-        downloadttt7()
-        callTreatment7(self)
-
-    def tttMed8(self):
-        downloadttt8()
-        callTreatment8(self)
-
-    def tttMed9(self):
-        downloadttt9()
-        callTreatment9(self)
-
-    def tttMed10(self):
-        downloadttt10()
-        callTreatment10(self)
-
-    def tttMed11(self):
-        downloadttt11()
-        callTreatment11(self)
-
-    def tttMed12(self):
-        downloadttt12()
-        callTreatment12(self)
-
-    def tttMed13(self):
-        downloadttt13()
-        callTreatment13(self)
-
-    def tttMed14(self):
-        downloadttt14()
-        callTreatment14(self)
-
-    def tttMed15(self):
-        downloadttt15()
-        callTreatment15(self)
-
-    def tttMed16(self):
-        downloadttt16()
-        callTreatment16(self)
-
-    def tttMed17(self):
-        downloadttt17()
-        callTreatment17(self)
-
-    def tttMed18(self):
-        downloadttt18()
-        callTreatment18(self)
-
-    def tttMed19(self):
-        downloadttt19()
-        callTreatment19(self)
-
-    def tttMed20(self):
-        downloadttt20()
-        callTreatment20(self)
-
-    def tttMed21(self):
-        downloadttt21()
-        callTreatment21(self)
-
-    def tttMed22(self):
-        downloadttt22()
-        callTreatment22(self)
-
-    def tttMed23(self):
-        downloadttt23()
-        callTreatment23(self)
-
-    def tttMed24(self):
-        downloadttt24()
-        callTreatment24(self)
-    """
-    def laboResult(self):
-
-        #Labo launchers
-
-    def laboResult2(self):
-        labodownload2()
-        #callLabo2(self)
-
-    def laboResult3(self):
-        labodownload3()
-        #callLabo3(self)
-
-    def laboResult4(self):
-        labodownload4()
-        #callLabo4(self)
-
-    def laboResult5(self):
-        labodownload5()
-        #callLabo5(self)
-
-    def laboResult6(self):
-        labodownload6()
-        #callLabo6(self)
-
-    def laboResult7(self):
-        labodownload7()
-        #callLabo7(self)
-
-    def laboResult8(self):
-        labodownload8()
-        #callLabo8(self)
-
-    def laboResult9(self):
-        labodownload9()
-        #callLabo9(self)
-
-    def laboResult10(self):
-        labodownload10()
-        #callLabo10(self)
-
-    def laboResult11(self):
-        labodownload11()
-        #callLabo11(self)
-
-    def laboResult12(self):
-        labodownload12()
-        #callLabo12(self)
-
-    def laboResult13(self):
-        labodownload13()
-        #callLabo13(self)
-
-    def laboResult14(self):
-        labodownload14()
-        #callLabo14(self)
-
-    def laboResult15(self):
-        labodownload15()
-        #callLabo15(self)
-
-    def laboResult16(self):
-        labodownload16()
-        #callLabo16(self)
-
-    def laboResult17(self):
-        labodownload17()
-        #callLabo17(self)
-
-    def laboResult18(self):
-        labodownload18()
-        #callLabo18(self)
-
-    def laboResult19(self):
-        labodownload19()
-        #callLabo19(self)
-
-    def laboResult20(self):
-        labodownload20()
-        #callLabo20(self)
-
-    def laboResult21(self):
-        labodownload21()
-        #callLabo21(self)
-
-    def laboResult22(self):
-        labodownload22()
-        #callLabo22(self)
-
-    def laboResult23(self):
-        labodownload23()
-        #callLabo23(self)
-
-    def laboResult24(self):
-        labodownload24()
-        #callLabo24(self)
-    """
 
     def showParam1(self):
         """
