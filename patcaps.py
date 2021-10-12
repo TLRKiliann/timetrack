@@ -5,7 +5,7 @@
 import tkinter as tk
 import time
 
-from backapp import *
+#from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
@@ -13,6 +13,7 @@ from resapp import dispResBox
 from diag.call_diag import *
 from ttt.call_medic import *
 from labo.callabo import *
+from auxequip.call_aux import *
 
 
 def callResident(self):
@@ -163,7 +164,7 @@ def callResident(self):
     self.buttaux = tk.Button(self.can, text="Aux. Equip.",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux1)
+        command=lambda: aux1(self))
     self.fbuttaux_window = self.can.create_window(self.x16,
         self.y16, window=self.buttaux)
 
@@ -242,7 +243,7 @@ def callResident(self):
     self.butt2aux = tk.Button(self.can, text="Aux. Equip.2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux2)
+        command=lambda: aux2(self))
     self.fbutt2aux_window = self.can.create_window(self.x26,
         self.y26, window=self.butt2aux)
 
@@ -321,7 +322,7 @@ def callResident(self):
     self.butt3aux = tk.Button(self.can, text="Aux. Equip.3",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux3)
+        command=lambda: aux3(self))
     self.fbutt3aux_window = self.can.create_window(self.x36,
         self.y36, window=self.butt3aux)
 
@@ -401,7 +402,7 @@ def callResident(self):
     self.butt4aux = tk.Button(self.can, text="Aux. Equip.4",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux4)
+        command=lambda: aux4(self))
     self.fbutt4aux_window = self.can.create_window(self.x46,
         self.y46, window=self.butt4aux)
 
@@ -481,7 +482,7 @@ def callResident(self):
     self.butt5aux = tk.Button(self.can, text="Aux. Equip.5", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux5)
+        command=lambda: aux5(self))
     self.fbutt5aux_window = self.can.create_window(self.x56,
         self.y56, window=self.butt5aux)
 
@@ -560,7 +561,7 @@ def callResident(self):
     self.butt6aux = tk.Button(self.can, text="Aux. Equip.6", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux6)
+        command=lambda: aux6(self))
     self.fbutt6aux_window = self.can.create_window(self.x67,
         self.y67, window=self.butt6aux)
 
@@ -639,7 +640,7 @@ def callResident(self):
     self.butt7aux = tk.Button(self.can, text="Aux. Equip.7",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux7)
+        command=lambda: aux7(self))
     self.fbutt7aux_window = self.can.create_window(self.x76,
         self.y76, window=self.butt7aux)
 
@@ -718,7 +719,7 @@ def callResident(self):
     self.butt8aux = tk.Button(self.can, text="Aux. Equip.8", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux8)
+        command=lambda: aux8(self))
     self.fbutt8aux_window = self.can.create_window(self.x86,
         self.y86, window=self.butt8aux)
 
@@ -797,7 +798,7 @@ def callResident(self):
     self.butt9aux = tk.Button(self.can, text="Aux. Equip.9",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux9)
+        command=lambda: aux9(self))
     self.fbutt9aux_window = self.can.create_window(self.x96,
         self.y96, window=self.butt9aux)
 
@@ -876,7 +877,7 @@ def callResident(self):
     self.butt10aux = tk.Button(self.can, text="Aux. Equip.10", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux10)
+        command=lambda: aux10(self))
     self.fbutt10aux_window = self.can.create_window(self.x106,
         self.y106, window=self.butt10aux)
 
@@ -955,7 +956,7 @@ def callResident(self):
     self.butt11aux = tk.Button(self.can, text="Aux. Equip.11",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux11)
+        command=lambda: aux11(self))
     self.fbutt11aux_window = self.can.create_window(self.x116,
         self.y116, window=self.butt11aux)
 
@@ -1034,7 +1035,7 @@ def callResident(self):
     self.butt12aux = tk.Button(self.can, text="Aux. Equip.12", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux12)
+        command=lambda: aux12(self))
     self.fbutt12aux_window = self.can.create_window(self.x126,
         self.y126, window=self.butt12aux)
 
@@ -1113,7 +1114,7 @@ def callResident(self):
     self.butt13aux = tk.Button(self.can, text="Aux. Equip.13",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.aux13)
+        command=lambda: aux13(self))
     self.fbutt13aux_window = self.can.create_window(self.x136,
         self.y136, window=self.butt13aux)
 
@@ -1192,7 +1193,7 @@ def callResident(self):
     self.butt14aux = tk.Button(self.can, text="Aux. Equip.14", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.aux14)
+        command=lambda: aux14(self))
     self.fbutt14aux_window = self.can.create_window(self.x146,
         self.y146, window=self.butt14aux)
 
@@ -1271,7 +1272,7 @@ def callResident(self):
     self.butt15aux = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Aux. Equip.15",
-        command=self.aux15)
+        command=lambda: aux15(self))
     self.fbutt15aux_window = self.can.create_window(self.x156,
         self.y156, window=self.butt15aux)
 
@@ -1350,7 +1351,7 @@ def callResident(self):
     self.butt16aux = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Aux. Equip.16",
-        command=self.aux16)
+        command=lambda: aux16(self))
     self.fbutt16aux_window = self.can.create_window(self.x166,
         self.y166, window=self.butt16aux)
 
@@ -1429,7 +1430,7 @@ def callResident(self):
     self.butt17aux = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Aux. Equip.17",
-        command=self.aux17)
+        command=lambda: aux17(self))
     self.fbutt17aux_window = self.can.create_window(self.x176,
         self.y176, window=self.butt17aux)
 
@@ -1508,7 +1509,7 @@ def callResident(self):
     self.butt18aux = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Aux. Equip.18",
-        command=self.aux18)
+        command=lambda: aux18(self))
     self.fbutt18aux_window = self.can.create_window(self.x186,
         self.y186, window=self.butt18aux)
 
@@ -1587,7 +1588,7 @@ def callResident(self):
     self.butt19aux = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Aux. Equip.19",
-        command=self.aux19)
+        command=lambda: aux19(self))
     self.fbutt19aux_window = self.can.create_window(self.x196,
         self.y196, window=self.butt19aux)
 
@@ -1666,7 +1667,7 @@ def callResident(self):
     self.but20aux = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Aux. Equip.20",
-        command=self.aux20)
+        command=lambda: aux20(self))
     self.fbut20aux_window = self.can.create_window(self.x206,
         self.y206, window=self.but20aux)
 
@@ -1745,7 +1746,7 @@ def callResident(self):
     self.butt21aux = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Aux. Equip.21",
-        command=self.aux21)
+        command=lambda: aux21(self))
     self.fbutt21aux_window = self.can.create_window(self.x216,
         self.y216, window=self.butt21aux)
 
@@ -1824,7 +1825,7 @@ def callResident(self):
     self.butt22aux = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Aux. Equip.22",
-        command=self.aux22)
+        command=lambda: aux22(self))
     self.fbutt22aux_window = self.can.create_window(self.x226,
         self.y226, window=self.butt22aux)
 
@@ -1903,7 +1904,7 @@ def callResident(self):
     self.butt23aux = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Aux. Equip.23",
-        command=self.aux23)
+        command=lambda: aux23(self))
     self.fbutt23aux_window = self.can.create_window(self.x236,
         self.y236, window=self.butt23aux)
 
@@ -1982,7 +1983,7 @@ def callResident(self):
     self.butt24aux = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Aux. Equip.24",
-        command=self.aux24)
+        command=lambda: aux24(self))
     self.fbutt24aux_window = self.can.create_window(self.x246,
         self.y246, window=self.butt24aux)
 
@@ -1995,7 +1996,7 @@ def callResident(self):
         self.y247, window=self.butt24dmst)
 
     self.x248, self.y248 = 144, 1000
-    self.lbl_ghost = tk.Label(self.can, text="",
+    self.lbl_ghost = tk.Label(self.can,
         width=20, height=1, bg='DodgerBlue2')
     self.wlbl_ghost = self.can.create_window(self.x248, self.y248,
         window = self.lbl_ghost)
