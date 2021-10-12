@@ -1,4 +1,4 @@
-# con-heal (Connection Heal)
+# TIME-TRACK (Connection Heal)
 
 A medical application (time-track - future version) to connect PyMySQL with MySQL (MariaDB) on raspberry. Below, I explain how to use this application with the MariaDB table in localhost, LAN and WAN connection).
 I chose a LAN infrastructure for security reasons. It is possible to extend the connection to the internet with a forwarding on the server (described below).

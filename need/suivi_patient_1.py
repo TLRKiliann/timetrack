@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import messagebox
 import subprocess
 import os
-#from con-heal.heal_track.Application import suiviSoins1
+from timetrack.heal_track.Application import suiviSoins1
 
 
 class ScrollCanvas(tk.Frame):
