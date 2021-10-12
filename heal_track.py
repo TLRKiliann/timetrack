@@ -136,31 +136,6 @@ from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
 
-from dmst_doc.dmst1 import doc_medical1
-from dmst_doc.dmst2 import doc_medical2
-from dmst_doc.dmst3 import doc_medical3
-from dmst_doc.dmst4 import doc_medical4
-from dmst_doc.dmst5 import doc_medical5
-from dmst_doc.dmst6 import doc_medical6
-from dmst_doc.dmst7 import doc_medical7
-from dmst_doc.dmst8 import doc_medical8
-from dmst_doc.dmst9 import doc_medical9
-from dmst_doc.dmst10 import doc_medical10
-from dmst_doc.dmst11 import doc_medical11
-from dmst_doc.dmst12 import doc_medical12
-from dmst_doc.dmst13 import doc_medical13
-from dmst_doc.dmst14 import doc_medical14
-from dmst_doc.dmst15 import doc_medical15
-from dmst_doc.dmst16 import doc_medical16
-from dmst_doc.dmst17 import doc_medical17
-from dmst_doc.dmst18 import doc_medical18
-from dmst_doc.dmst19 import doc_medical19
-from dmst_doc.dmst20 import doc_medical20
-from dmst_doc.dmst21 import doc_medical21
-from dmst_doc.dmst22 import doc_medical22
-from dmst_doc.dmst23 import doc_medical23
-from dmst_doc.dmst24 import doc_medical24
-
 
 def tocopyfiles():
     """
@@ -1246,99 +1221,99 @@ class MenuBar(tk.Frame):
         menuParam = Menu(self.cmd_Param)
         menuParam.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam1)
+            command=lambda: boss.showParam(self, p=1))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam2)
+            command=lambda: boss.showParam(self, p=2))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam3)
+            command=lambda: boss.showParam(self, p=3))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam4)
+            command=lambda: boss.showParam(self, p=4))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam5)
+            command=lambda: boss.showParam(self, p=5))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam6)
+            command=lambda: boss.showParam(self, p=6))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam7)
+            command=lambda: boss.showParam(self, p=7))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam8)
+            command=lambda: boss.showParam(self, p=8))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam9)
+            command=lambda: boss.showParam(self, p=9))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam10)
+            command=lambda: boss.showParam(self, p=10))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam11)
+            command=lambda: boss.showParam(self, p=11))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam12)
+            command=lambda: boss.showParam(self, p=12))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam13)
+            command=lambda: boss.showParam(self, p=13))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam14)
+            command=lambda: boss.showParam(self, p=14))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam15)
+            command=lambda: boss.showParam(self, p=15))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam16)
+            command=lambda: boss.showParam(self, p=16))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam17)
+            command=lambda: boss.showParam(self, p=17))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam18)
+            command=lambda: boss.showParam(self, p=18))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam19)
+            command=lambda: boss.showParam(self, p=19))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam20)
+            command=lambda: boss.showParam(self, p=20))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam21)
+            command=lambda: boss.showParam(self, p=21))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam22)
+            command=lambda: boss.showParam(self, p=22))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam23)
+            command=lambda: boss.showParam(self, p=23))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam24)
+            command=lambda: boss.showParam(self, p=24))
         # Integration of Vital parameters menu
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
@@ -1351,76 +1326,76 @@ class MenuBar(tk.Frame):
         meBmi = Menu(cmd_BMI)
         meBmi.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB)
+            command=lambda: boss.calculB(self, u=1))
         meBmi.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB2)
+            command=lambda: boss.calculB(self, u=2))
         meBmi.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB3)
+            command=lambda: boss.calculB(self, u=3))
         meBmi.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB4)
+            command=lambda: boss.calculB(self, u=4))
         meBmi.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB5)
+            command=lambda: boss.calculB(self, u=5))
         meBmi.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB6)
+            command=lambda: boss.calculB(self, u=6))
         meBmi.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB7)
+            command=lambda: boss.calculB(self, u=7))
         meBmi.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB8)
+            command=lambda: boss.calculB(self, u=8))
         meBmi.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB9)
+            command=lambda: boss.calculB(self, u=9))
         meBmi.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB10)
+            command=lambda: boss.calculB(self, u=10))
         meBmi.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB11)
+            command=lambda: boss.calculB(self, u=11))
         meBmi.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB12)
+            command=lambda: boss.calculB(self, u=12))
         meBmi.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB13)
+            command=lambda: boss.calculB(self, u=13))
         meBmi.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB14)
+            command=lambda: boss.calculB(self, u=14))
         meBmi.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB15)
+            command=lambda: boss.calculB(self, u=15))
         meBmi.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB16)
+            command=lambda: boss.calculB(self, u=16))
         meBmi.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB17)
+            command=lambda: boss.calculB(self, u=17))
         meBmi.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB18)
+            command=lambda: boss.calculB(self, u=18))
         meBmi.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB19)
+            command=lambda: boss.calculB(self, u=19))
         meBmi.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB20)
+            command=lambda: boss.calculB(self, u=20))
         meBmi.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB21)
+            command=lambda: boss.calculB(self, u=21))
         meBmi.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB22)
+            command=lambda: boss.calculB(self, u=22))
         meBmi.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB23)
+            command=lambda: boss.calculB(self, u=23))
         meBmi.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.calculB24)
+            command=lambda: boss.calculB(self, u=24))
         # Integration of 3rd menu
         cmd_BMI.configure(activeforeground='black', activebackground='cyan',
             menu=meBmi)
@@ -1515,76 +1490,76 @@ class MenuBar(tk.Frame):
         mePrint = Menu(cmd_Print)
         mePrint.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu)
+            command=lambda: boss.nutritionMenu(self, n=1))
         mePrint.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu2)
+            command=lambda: boss.nutritionMenu(self, n=2))
         mePrint.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu3)
+            command=lambda: boss.nutritionMenu(self, n=3))
         mePrint.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu4)
+            command=lambda: boss.nutritionMenu(self, n=4))
         mePrint.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu5)
+            command=lambda: boss.nutritionMenu(self, n=5))
         mePrint.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu6)
+            command=lambda: boss.nutritionMenu(self, n=6))
         mePrint.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu7)
+            command=lambda: boss.nutritionMenu(self, n=7))
         mePrint.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu8)
+            command=lambda: boss.nutritionMenu(self, n=8))
         mePrint.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu9)
+            command=lambda: boss.nutritionMenu(self, n=9))
         mePrint.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu10)
+            command=lambda: boss.nutritionMenu(self, n=10))
         mePrint.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu11)
+            command=lambda: boss.nutritionMenu(self, n=11))
         mePrint.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu12)
+            command=lambda: boss.nutritionMenu(self, n=12))
         mePrint.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu13)
+            command=lambda: boss.nutritionMenu(self, n=13))
         mePrint.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu14)
+            command=lambda: boss.nutritionMenu(self, n=14))
         mePrint.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu15)
+            command=lambda: boss.nutritionMenu(self, n=15))
         mePrint.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu16)
+            command=lambda: boss.nutritionMenu(self, n=16))
         mePrint.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu17)
+            command=lambda: boss.nutritionMenu(self, n=17))
         mePrint.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu18)
+            command=lambda: boss.nutritionMenu(self, n=18))
         mePrint.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu19)
+            command=lambda: boss.nutritionMenu(self, n=19))
         mePrint.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu20)
+            command=lambda: boss.nutritionMenu(self, n=20))
         mePrint.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu21)
+            command=lambda: boss.nutritionMenu(self, n=21))
         mePrint.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu22)
+            command=lambda: boss.nutritionMenu(self, n=22))
         mePrint.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu23)
+            command=lambda: boss.nutritionMenu(self, n=23))
         mePrint.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.nutritionMenu24)
+            command=lambda: boss.nutritionMenu(self, n=24))
         # Integration of nutrition menu
         cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
@@ -2701,355 +2676,316 @@ class Application(tk.Frame):
             self.master.withdraw()
             subprocess.run("./need/suivi_patient_24.py", check=True)
             self.master.deiconify()
+        else:
+            print("Error, to call ./need/suivi_patient_X.py with subprocess")
 
-    def showParam1(self):
+    def showParam(self, p):
         """
             Decreases the opacity of
             the background window
             and run subprocess.run()
             to call Vital Parameters.
         """
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        if p == 1:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap2.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 3:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap3.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 4:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap4.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 5:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap5.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 6:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap6.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 7:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap7.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 8:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap8.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 9:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap9.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 10:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap10.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 11:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap11.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 12:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap12.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 13:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap13.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 14:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap14.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 15:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap15.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 16:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap16.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 17:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap17.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 18:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap18.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 19:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap19.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 20:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap20.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 21:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap21.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 22:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap22.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 23:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap23.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif p == 24:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.call("./param/fencap24.py")
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        else:
+            print("Errro, to call ./param/fencapX.py with subprocess")
 
-    def showParam2(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap2.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam3(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap3.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam4(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap4.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam5(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap5.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam6(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap6.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam7(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap7.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam8(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap8.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam9(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap9.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam10(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap10.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam11(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap11.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam12(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap12.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam13(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap13.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam14(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap14.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam15(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap15.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam16(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap16.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam17(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap17.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam18(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap18.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam19(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap19.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam20(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap20.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam21(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap21.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam22(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap22.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam23(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap23.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def showParam24(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.call("./param/fencap24.py")
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    # BMI functions
-    def calculB(self):
+    def calculB(self, u):
         """
             Decreases opacity of background window
-            during script CalculBmiX.py is running
+            during script CalculBmiX.py is running.
+            Call a BMI frame.
         """
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        if u == 1:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 2:        elif u == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi2.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 3:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi3.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 4:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi4.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 5:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi5.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 6:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi6.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 7:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi7.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 8:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi8.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 9:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi9.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 10:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi10.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 11:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi11.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 12:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi12.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 13:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi13.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 14:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi14.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 15:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi15.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 16:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi16.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 17:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi17.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 18:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi18.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 19:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi19.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 20:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi20.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 21:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi21.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 22:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi22.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 23:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi23.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif u == 24:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            subprocess.run("./calBmi/CalculBmi24.py", check=True)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        else:
+            print("Error, to call ./calBmi/CalculBmiX.py with subprocess.")
 
-    def calculB2(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi2.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB3(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi3.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB4(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi4.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB5(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi5.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB6(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi6.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB7(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi7.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB8(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi8.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB9(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi9.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB10(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi10.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB11(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi11.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB12(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi12.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB13(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi13.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB14(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi14.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB15(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi15.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB16(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi16.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB17(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi17.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB18(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi18.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB19(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi19.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB20(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi20.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB21(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi21.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB22(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi22.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB23(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi23.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def calculB24(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run("./calBmi/CalculBmi24.py", check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    # Visit MED functions
     def visitMed(self):
         """
             Hide the background window
@@ -3201,8 +3137,10 @@ class Application(tk.Frame):
 
     def updateLink(self):
         """
-            To update data for patient
-            in txt entryfile and for DB.
+            !!! Security : I'm not sure if that's good to let :
+            shell=True
+            because it could be a vulnerability !!!
+            To update data for patient in txt entryfile and for DB.
         """
         subprocess.Popen('./update/updatepatient1.py', shell=True)
 
@@ -3275,131 +3213,110 @@ class Application(tk.Frame):
     def updateLink24(self):
         subprocess.Popen('./update/updatepatient24.py', shell=True)
 
-    # Menu nutrition
-    def nutritionMenu(self):
+    def nutritionMenu(self, n):
         """
             Hide the background window
             during nutrit_patient script
             is running
         """
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient1.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu2(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient2.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu3(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient3.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu4(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient4.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu5(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient5.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu6(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient6.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu7(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient7.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu8(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient8.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu9(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient9.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu10(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient10.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu11(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient11.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu12(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient12.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu13(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient13.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu14(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient14.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu15(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient15.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu16(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient16.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu17(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient17.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu18(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient18.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu19(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient19.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu20(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient20.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu21(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient21.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu22(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient22.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu23(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient23.py', check=True)
-        self.master.deiconify()
-
-    def nutritionMenu24(self):
-        self.master.withdraw()
-        subprocess.run('./nutrition/nutrit_patient24.py', check=True)
-        self.master.deiconify()
+        if n == 1:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient1.py', check=True)
+            self.master.deiconify()
+        elif n == 2:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient2.py', check=True)
+            self.master.deiconify()
+        elif n == 3:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient3.py', check=True)
+            self.master.deiconify()
+        elif n == 4:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient4.py', check=True)
+            self.master.deiconify()
+        elif n == 5:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient5.py', check=True)
+            self.master.deiconify()
+        elif n == 6:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient6.py', check=True)
+            self.master.deiconify()
+        elif n == 7:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient7.py', check=True)
+            self.master.deiconify()
+        elif n == 8:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient8.py', check=True)
+            self.master.deiconify()
+        elif n == 9:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient9.py', check=True)
+            self.master.deiconify()
+        elif n == 10:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient10.py', check=True)
+            self.master.deiconify()
+        elif n == 11:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient11.py', check=True)
+            self.master.deiconify()
+        elif n == 12:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient12.py', check=True)
+            self.master.deiconify()
+        elif n == 13:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient13.py', check=True)
+            self.master.deiconify()
+        elif n == 14:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient14.py', check=True)
+            self.master.deiconify()
+        elif n == 15:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient15.py', check=True)
+            self.master.deiconify()
+        elif n == 16:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient16.py', check=True)
+            self.master.deiconify()
+        elif n == 17:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient17.py', check=True)
+            self.master.deiconify()
+        elif n == 18:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient18.py', check=True)
+            self.master.deiconify()
+        elif n == 19:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient19.py', check=True)
+            self.master.deiconify()
+        elif n == 20:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient20.py', check=True)
+            self.master.deiconify()
+        elif n == 21:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient21.py', check=True)
+            self.master.deiconify()
+        elif n == 22:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient22.py', check=True)
+            self.master.deiconify()
+        elif n == 23:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient23.py', check=True)
+            self.master.deiconify()
+        elif n == 24:
+            self.master.withdraw()
+            subprocess.run('./nutrition/nutrit_patient24.py', check=True)
+            self.master.deiconify()
+        else:
+            print("Error, to call ./nutrition/nutrit_patient24.py with subprocess.")
 
     # Manual nurse
     def manualFile(self):
@@ -3584,84 +3501,6 @@ class Application(tk.Frame):
         backupFuncPatient24(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
-
-    # DMST
-    def dmst1(self):
-        """
-            Nursing Medical
-            Transmission
-            Documents
-        """
-        doc_medical1(self)
-
-    def dmst2(self):
-        doc_medical2(self)
-
-    def dmst3(self):
-        doc_medical3(self)
-
-    def dmst4(self):
-        doc_medical4(self)
-
-    def dmst5(self):
-        doc_medical5(self)
-
-    def dmst6(self):
-        doc_medical6(self)
-
-    def dmst7(self):
-        doc_medical7(self)
-
-    def dmst8(self):
-        doc_medical8(self)
-
-    def dmst9(self):
-        doc_medical9(self)
-
-    def dmst10(self):
-        doc_medical10(self)
-
-    def dmst11(self):
-        doc_medical11(self)
-
-    def dmst12(self):
-        doc_medical2(self)
-
-    def dmst13(self):
-        doc_medical3(self)
-
-    def dmst14(self):
-        doc_medical4(self)
-
-    def dmst15(self):
-        doc_medical5(self)
-
-    def dmst16(self):
-        doc_medical6(self)
-
-    def dmst17(self):
-        doc_medical7(self)
-
-    def dmst18(self):
-        doc_medical8(self)
-
-    def dmst19(self):
-        doc_medical9(self)
-
-    def dmst20(self):
-        doc_medical20(self)
-
-    def dmst21(self):
-        doc_medical21(self)
-
-    def dmst22(self):
-        doc_medical22(self)
-
-    def dmst23(self):
-        doc_medical23(self)
-
-    def dmst24(self):
-        doc_medical24(self)
 
     def updateFiletxt(self):
         """

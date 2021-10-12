@@ -14,6 +14,7 @@ from diag.call_diag import *
 from ttt.call_medic import *
 from labo.callabo import *
 from auxequip.call_aux import *
+from dmst_doc.call_dmst import *
 
 
 def callResident(self):
@@ -172,7 +173,7 @@ def callResident(self):
     self.buttdmst = tk.Button(self.can, text="DMST",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst1)
+        command=lambda: dmst1(self))
     self.fbuttdmst_window = self.can.create_window(self.x17,
         self.y17, window=self.buttdmst)
 
@@ -251,7 +252,7 @@ def callResident(self):
     self.butt2dmst = tk.Button(self.can, text="DMST 2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst2)
+        command=lambda: dmst2(self))
     self.fbutt2dmst_window = self.can.create_window(self.x27,
         self.y27, window=self.butt2dmst)
 
@@ -330,7 +331,7 @@ def callResident(self):
     self.butt3dmst = tk.Button(self.can, text="DMST 3",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst3)
+        command=lambda: dmst3(self))
     self.fbutt3dmst_window = self.can.create_window(self.x37,
         self.y37, window=self.butt3dmst)
 
@@ -410,7 +411,7 @@ def callResident(self):
     self.butt4dmst = tk.Button(self.can, text="DMST 4",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst4)
+        command=lambda: dmst4(self))
     self.fbutt4dmst_window = self.can.create_window(self.x47,
         self.y47, window=self.butt4dmst)
 
@@ -490,7 +491,7 @@ def callResident(self):
     self.butt5dmst = tk.Button(self.can, text="DMST 5", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst5)
+        command=lambda: dmst5(self))
     self.fbutt5dmst_window = self.can.create_window(self.x57,
         self.y57, window=self.butt5dmst)
 
@@ -569,7 +570,7 @@ def callResident(self):
     self.butt6dmst = tk.Button(self.can, text="DMST 6", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst6)
+        command=lambda: dmst6(self))
     self.fbutt6dmst_window = self.can.create_window(self.x68,
         self.y68, window=self.butt6dmst)
 
@@ -648,7 +649,7 @@ def callResident(self):
     self.butt7dmst = tk.Button(self.can, text="DMST 7", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst7)
+        command=lambda: dmst7(self))
     self.fbutt7dmst_window = self.can.create_window(self.x77,
         self.y77, window=self.butt7dmst)
 
@@ -727,7 +728,7 @@ def callResident(self):
     self.butt8dmst = tk.Button(self.can, text="DMST 8", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst8)
+        command=lambda: dmst8(self))
     self.fbutt8dmst_window = self.can.create_window(self.x87,
         self.y87, window=self.butt8dmst)
 
@@ -806,7 +807,7 @@ def callResident(self):
     self.butt9dmst = tk.Button(self.can, text="DMST 9",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst9)
+        command=lambda: dmst9(self))
     self.fbutt9dmst_window = self.can.create_window(self.x97,
         self.y97, window=self.butt9dmst)
 
@@ -885,7 +886,7 @@ def callResident(self):
     self.butt10dmst = tk.Button(self.can, text="DMST 10", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst10)
+        command=lambda: dmst10(self))
     self.fbutt10dmst_window = self.can.create_window(self.x107,
         self.y107, window=self.butt10dmst)
 
@@ -964,7 +965,7 @@ def callResident(self):
     self.butt11dmst = tk.Button(self.can, text="DMST 11", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst11)
+        command=lambda: dmst11(self))
     self.fbutt11dmst_window = self.can.create_window(self.x117,
         self.y117, window=self.butt11dmst)
 
@@ -1043,7 +1044,7 @@ def callResident(self):
     self.butt12dmst = tk.Button(self.can, text="DMST 12", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst12)
+        command=lambda: dmst12(self))
     self.fbutt12dmst_window = self.can.create_window(self.x127,
         self.y127, window=self.butt12dmst)
 
@@ -1122,7 +1123,7 @@ def callResident(self):
     self.butt13dmst = tk.Button(self.can, text="DMST 13", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.dmst13)
+        command=lambda: dmst13(self))
     self.fbutt13dmst_window = self.can.create_window(self.x137,
         self.y137, window=self.butt13dmst)
 
@@ -1201,7 +1202,7 @@ def callResident(self):
     self.butt14dmst = tk.Button(self.can, text="DMST 14", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.dmst14)
+        command=lambda: dmst14(self))
     self.fbutt14dmst_window = self.can.create_window(self.x147,
         self.y147, window=self.butt14dmst)
 
@@ -1280,7 +1281,7 @@ def callResident(self):
     self.butt15dmst = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 15",
-        command=self.dmst15)
+        command=lambda: dmst15(self))
     self.fbutt15dmst_window = self.can.create_window(self.x157,
         self.y157, window=self.butt15dmst)
 
@@ -1359,7 +1360,7 @@ def callResident(self):
     self.butt16dmst = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 16",
-        command=self.dmst16)
+        command=lambda: dmst16(self))
     self.fbutt16dmst_window = self.can.create_window(self.x167,
         self.y167, window=self.butt16dmst)
 
@@ -1438,7 +1439,7 @@ def callResident(self):
     self.butt17dmst = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 17",
-        command=self.dmst17)
+        command=lambda: dmst17(self))
     self.fbutt17dmst_window = self.can.create_window(self.x177,
         self.y177, window=self.butt17dmst)
 
@@ -1517,7 +1518,7 @@ def callResident(self):
     self.butt18dmst = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 18",
-        command=self.dmst18)
+        command=lambda: dmst18(self))
     self.fbutt18dmst_window = self.can.create_window(self.x187,
         self.y187, window=self.butt18dmst)
 
@@ -1596,7 +1597,7 @@ def callResident(self):
     self.butt19dmst = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 19",
-        command=self.dmst19)
+        command=lambda: dmst19(self))
     self.fbutt19dmst_window = self.can.create_window(self.x197,
         self.y197, window=self.butt19dmst)
 
@@ -1675,7 +1676,7 @@ def callResident(self):
     self.but20dmst = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 20",
-        command=self.dmst20)
+        command=lambda: dmst20(self))
     self.fbut20dmst_window = self.can.create_window(self.x207,
         self.y207, window=self.but20dmst)
 
@@ -1754,7 +1755,7 @@ def callResident(self):
     self.butt21dmst = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 21",
-        command=self.dmst21)
+        command=lambda: dmst21(self))
     self.fbutt21dmst_window = self.can.create_window(self.x217,
         self.y217, window=self.butt21dmst)
 
@@ -1833,7 +1834,7 @@ def callResident(self):
     self.butt22dmst = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 22",
-        command=self.dmst22)
+        command=lambda: dmst22(self))
     self.fbutt22dmst_window = self.can.create_window(self.x227,
         self.y227, window=self.butt22dmst)
 
@@ -1912,7 +1913,7 @@ def callResident(self):
     self.butt23dmst = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 23",
-        command=self.dmst23)
+        command=lambda: dmst23(self))
     self.fbutt23dmst_window = self.can.create_window(self.x237,
         self.y237, window=self.butt23dmst)
 
@@ -1991,7 +1992,7 @@ def callResident(self):
     self.butt24dmst = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 24",
-        command=self.dmst24)
+        command=lambda: dmst24(self))
     self.fbutt24dmst_window = self.can.create_window(self.x247,
         self.y247, window=self.butt24dmst)
 
