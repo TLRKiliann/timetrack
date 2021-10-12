@@ -1,0 +1,98 @@
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:26:46
+Name : Taro Yoko
+Date of introduction : 23 June 2015
+Name of ttt : Nexium
+Dosage : 40 mg
+Morning : 1
+Midday : ---
+Evening : ---
+Night : ---
+Date of end : 03/10/2021
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 13 January 2003
+Name of ttt : Olanzapine
+Dosage : 10 mg
+Morning : 1
+Midday : ---
+Evening : 1
+Night : ---
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 13 January 2003
+Name of ttt : Temesta Expidet
+Dosage : 2.5 mg
+Morning : 1
+Midday : 1
+Evening : 1
+Night : 1
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 11 April 2003
+Name of ttt : Amentadine
+Dosage : 50 mcg
+Morning : ---
+Midday : ---
+Evening : 1
+Night : ---
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 11 April 2003
+Name of ttt : Duloxetine
+Dosage : 20 mg
+Morning : ---
+Midday : 1
+Evening : ---
+Night : 1
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 27 October 2016
+Name of ttt : Zolpidem
+Dosage : 10 mg
+Morning : ---
+Midday : ---
+Evening : ---
+Night : 1
+Date of end : 02/10/2021
+Signature : NieR
+
+- Register : TREATMENTS -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 25 March 2005
+Name of ttt : Xanax
+Dosage : 10 mg
+Morning : 1
+Midday : ---
+Evening : 1
+Night : 1
+Date of end : 04/10/2021
+Signature : NieR
+

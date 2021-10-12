@@ -1,0 +1,3 @@
+> TREATMENT stopped by date :
+-------------------------------------------
+Name of ttt : Drug 10 mg - stopped on : 26/09/2021

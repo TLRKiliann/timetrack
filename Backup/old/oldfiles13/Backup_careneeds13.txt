@@ -1,0 +1,18 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 08/01/2021 à 23:29:33 :
+Patient name : Ian Curtis
++ Surveillance pour éviter les dangers requise
+Prévenir les tentamen par overdose.
++ Accompagnement ou aide dans l'apprentissage requis
+Accompagner Mr aux thérapies de groupe.
+---
+
+
+En date du : 02/01/2021 à 23:30:32 :
+Mr est arrivé très souriant. Il nous a fait part de ses objectifs. Il nous a 
+demandé à quelles heures sont les repas.
+
+En date du : 07/01/2021 à 23:31:37 :
+Très calme sur la journée.
+

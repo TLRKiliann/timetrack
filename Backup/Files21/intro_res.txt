@@ -1,0 +1,60 @@
+- Register : RESERVES -
+Date : 02/10/2021
+Hour : 14:26:46
+Name : Taro Yoko
+Date of introduction : 23 June 2015
+Name of Reserve : Nexium
+Dosage : 40 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : abdo pain
+Date of end : 03/10/2021
+Signature : etc
+
+- Register : RESERVES -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 13 January 2003
+Name of Reserve : Olanzapine
+Dosage : 10 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : anxiety
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : RESERVES -
+Date : 02/10/2021
+Hour : 14:30:12
+Name : Taro Yoko
+Date of introduction : 13 January 2003
+Name of Reserve : Temesta Expidet
+Dosage : 2.5 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 3
+Reason : anxiety
+Date of end : 03/10/2021
+Signature : NieR
+
+- Register : RESERVES -
+Date : 02/10/2021
+Hour : 17:44:28
+Name : Taro Yoko
+Date of introduction : 
+Name of Reserve : DrugRG45
+Dosage : 45 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : fever
+Date of end : 02/10/2021
+Signature : NieR
+

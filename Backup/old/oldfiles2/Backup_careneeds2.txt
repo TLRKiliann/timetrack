@@ -1,0 +1,118 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 22/12/2020 à 16:56:18 :
+Patient name : Edward Snowden
++ Surveillance de la température requise
+1
++ Surveillance du sommeil requise
+2
++ Surveillance propreté et/ou téguments requise
+3
++ Stimulation ou aide pour la communication requise
+4
++ Accompagnement ou aide dans se recréer requis
+5
+---
+
+
+
+En date du : 21/12/2020 à 16:56:43 :
+Un truc pour voir
+
+En date du : 22/12/2020 à 16:57:14 :
+
+----------------------------------------------------------
+Date : 23/12/2020
+Patient name : Edward Snowden# Nozinan : (add result of dosage here)
+# Prazine : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 23/12/2020
+Patient name : Edward Snowden# Phenytoine : (add result of dosage here)
+# Sabril : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 23/12/2020
+Patient name : Edward Snowden# Serdolect : (add result of dosage here)
+# Solian : (add result of dosage here)
+# Tiapridal : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 23/12/2020
+Patient name : Edward Snowden# Phenobarbital : (add result of dosage here)
+# Phenytoine : (add result of dosage here)
+# Sabril : (add result of dosage here)
+# Taloxa : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 23/12/2020
+Patient name : Edward Snowden
+# Phenobarbital : (add result of dosage here)
+# Phenytoine : (add result of dosage here)
+# Sabril : (add result of dosage here)
+# Taloxa : (add result of dosage here)
+---------------------------------------------------------
+
+----------------------------------------------------------
+Date : 09/01/2021
+Patient name : Edward Snowden
+# Keppra : 09/01/2021 checked
+# Lamictal : 09/01/2021 checked
+# Neurontin : 09/01/2021 checked
+---------------------------------------------------------
+
+
+
+En date du : 09/01/2021 à 10:36:43 :
+----------------------------------------------------------
+Date : 09/01/2021
+Patient name : Edward Snowden
+# Taloxa : 09/01/2021 checked
+---------------------------------------------------------
+
+
+
+En date du : 09/01/2021 à 10:38:20 :
+
+
+***************************************************************************
+Date : 09/01/2021
+Patient name : Edward SnowdenpH : 5 Leuco : +2 Nit : + Pro : +1 Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+----------------------------------------------------------
+Date : 09/01/2021
+Patient name : Edward Snowden
+# Gabitril : 09/01/2021 checked
+# Myzoline : 09/01/2021 checked
+---------------------------------------------------------
+
+
+
+En date du : 09/01/2021 à 10:48:58 :
+----------------------------------------------------------
+Date : 09/01/2021
+Patient name : Edward Snowden
+# Deroxat : 09/01/2021 checked
+# Effexor : 09/01/2021 checked
+---------------------------------------------------------
+
+
+
+En date du : 09/01/2021 à 10:49:24 :
+
+***************************************************************************
+Date : 09/01/2021
+Patient name : Edward SnowdenpH : 9 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : +4
+***************************************************************************
+
+
+

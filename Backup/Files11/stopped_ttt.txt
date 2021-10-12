@@ -1,0 +1,4 @@
+TREATMENT stopped by date :
+Name of ttt : Distraneurin - stopped on : 12/09/2021
+Name of ttt : Nexium - stopped on : 12/09/2021
+Name of ttt : Olanzapine - stopped on : 12/09/2021

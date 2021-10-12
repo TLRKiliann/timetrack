@@ -1,0 +1,42 @@
+Date : 14/09/2020
+Heure : 11:15:34
+Name : Julian Assange
+
+Date of introduction : 02 April 2020
+Nom du ttt : Clopin
+Dosage du ttt : 10 mg
+Matin : 1
+
+Soir : 1
+
+Date of end : //
+Signature : cku
+
+Date : 14/09/2020
+Heure : 11:15:34
+Name : Julian Assange
+
+Date of introduction : 02 April 2020
+Nom du ttt : Risperdal
+Dosage du ttt : 10 mg
+Matin : 1
+Midi : 2
+Soir : 1
+
+Date of end : 15/09/2020
+Signature : cku
+
+Date : 16/09/2020
+Heure : 20:48:10
+Name : Julian Assange
+
+Date of introduction : 04 June 2002
+Nom du ttt : Clopin
+Dosage du ttt : 10 mg
+Matin : 1
+
+Soir : 1
+
+Date of end : 17/09/2020
+Signature : cku
+

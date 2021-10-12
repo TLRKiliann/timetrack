@@ -1,0 +1,36 @@
+Risque(s) auto-agressif :
+------------------------
+
+Nom et prénom du patient :
+
+Date de naissance :
+
+Date de l'évaluation :
+
+--------------------------------------------------------------------------------------
+
+ATCD :
+
+Stresseurs / facteurs de risques :
+
+Psychopathologie :
+
+Hallucinations (auditives ou visuelles):
+
+Fréquence des agressions :
+
+Environnement favorisant :
+
+Abus de substances :
+
+Risque suicidaire :
+
+Facultés adaptatives :
+
+Spiritualité (valeurs et croyances) :
+
+Soutien psycho-social :
+
+Ressources :
+
+--------------------------------------------------------------------------------------

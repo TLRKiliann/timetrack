@@ -1,0 +1,53 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:16:20 :
+Patient name : Aaron Schwartz
++ Surveillance du sommeil requise
+3x/N
+---
+
+
+
+En date du : 06/11/2020 à 21:16:35 :
+
+----------------------------------------------------------
+Date : 30/11/2020
+Patient name : Aaron Schwartz
+# Tiapridal : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 30/11/2020
+Patient name : Aaron Schwartz
+# Phenytoine : (add result of dosage here)
+# Topamax : (add result of dosage here)
+# Trileptal : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 30/11/2020
+Patient name : Aaron Schwartz
+# Remeron : (add result of dosage here)
+# Sertraline : (add result of dosage here)
+---------------------------------------------------------
+
+
+----------------------------------------------------------
+Date : 30/11/2020
+Patient name : Aaron Schwartz
+---------------------------------------------------------
+
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 12/12/2020 à 08:50:52 :
+Patient name : Aaron Schwartz+ Surveillance urinaire et/ou fécale requise requise
++ Surveillance propreté et/ou téguments requise
+truc1
++ Agir pour aider la personne dans ses valeurs et croyances
+truc2
+---
+
+
+

@@ -1,0 +1,10 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:24:30 :
+Patient name : Kevin Mitnick
++ Surveillance alimentaire et/ou hydratation requise
+Quantifier l'alimentation 3x/j
+---
+
+
+

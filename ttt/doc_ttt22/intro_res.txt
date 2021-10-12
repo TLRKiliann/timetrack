@@ -1,0 +1,15 @@
+- Register : RESERVES -
+Date : 26/09/2021
+Hour : 01:41:50
+Name : Monica Bellucci
+Date of introduction : 03 July 2017
+Name of Reserve : Drug
+Dosage : 100 ml
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : fornication
+Date of end : //
+Signature : etc
+

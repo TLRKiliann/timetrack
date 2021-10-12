@@ -1,0 +1,50 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 08/01/2021 à 18:34:05 :
+Patient name : David Copperfield
++ Surveillance urinaire et/ou fécale requise
+Faire truc1
++ Surveillance propreté et/ou téguments requise
+Faire truc2
++ Surveillance ou aide pour l'habillage/déshabillage requise
+Faire truc3
+---
+
+
+En date du : 07/01/2021 à 18:34:43 :
+Surveiller les algies de Mr sur 24h.
+
+En date du : 08/01/2021 à 18:35:13 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 08/01/2021 à 18:35:37 :
+Patient name : David Copperfield
++ Surveillance du sommeil requise
+Passage aux 3 heures.
+---
+
+
+En date du : 08/01/2021 à 18:36:00 :
+
+----------------------------------------------------------
+Date : 08/01/2021
+Patient name : David Copperfield
+# Tiapridal : 08/01/2021 checked
+# Phenobarbital : 08/01/2021 checked
+# Phenytoine : 08/01/2021 checked
+Agendé pour le 24/01/2021
+---------------------------------------------------------
+
+
+
+En date du : 07/01/2021 à 18:37:47 :
+
+----------------------------------------------------------
+Date : 08/01/2021
+Patient name : David Copperfield
+# Remeron : 08/01/2021 : 3,4mmol/L
+# Saroten : 08/01/2021 5.5 mg/umg
+---------------------------------------------------------
+
+
+

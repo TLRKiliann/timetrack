@@ -1,0 +1,14 @@
+Date : 01-08-2020
+Heure : 21:31:45
+Prenom et Nom : Kim Bassinger
+Poids : 89
+Taille : 1.86
+BMI : 25.725517400855587
+
+Date : 15-08-2020
+Heure : 21:31:45
+Prenom et Nom : Kim Bassinger
+Poids : 86
+Taille : 1.86
+BMI : 24.858365128916635
+

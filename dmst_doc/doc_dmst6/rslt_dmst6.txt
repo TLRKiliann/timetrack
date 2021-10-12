@@ -1,0 +1,201 @@
+----------------------------------------------------------
+Date : 23.03.2021
+Hour : 00:27:47
+Patient name : Bruce Willis
+Birthday : 03/09/1967
+Allergy : Sesame, Soya, amantidine
+Transmissible disease : VIH
+----------------------------------------------------------
+
+--- DIAGNOSTICS ---
+Trb pers. narcissique
+
+--- Treatments ---
+Date : 23/03/2021
+Heure : 00:22:37
+Name : Bruce Willis
+Date of introduction : 08 June 2005
+Nom du ttt : Drug 1
+Dosage du ttt : 40 gttes
+Matin : 3
+
+Soir : 3
+
+Date of end : 04/10/2021
+Signature : etc
+
+--- Reserves ---
+Date : 23/03/2021
+Heure : 00:22:37
+Name : Bruce Willis
+Date of introduction : 08 June 2005
+Nom du ttt : Drug 1
+Dosage du ttt : 40 gttes
+Réserve : Oui
+1ère intention : Oui
+Date of end : 04/10/2021
+Signature : etc
+
+--- Vitals Parameters ---
+Date : 01/01/2021
+Hour : 18:02:02
+Name and Surname : Bruce Willis
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.6°C
+Glycemie : 4.5 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 05/01/2021
+Hour : 18:02:02
+Name and Surname : Bruce Willis
+TA : 138/86mmHg
+Puls : 83/min
+SaO2 : 96%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 6.3 mmol/l
+Douleurs (Pain) : 4/10
+
+Date : 23/03/2021
+Hour : 00:24:55
+Name and Surname : Bruce Willis
+TA : 123/67mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 1/10
+
+--- BMI ---
+Date : 23-03-2021
+Heure : 00:25:44
+Prenom et Nom : Bruce Willis
+Poids : 57
+Taille : 1.67
+BMI : 20.438
+
+
+--- Patient data ---
+Patient name : Bruce Willis
+Birthdate : 03/09/1967
+Native : USA
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@gmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ
+
+--- Docotor1 data ---
+Doctor : Lynnett Pick
+Specialization : Dentiste
+Phone : 082389047
+Mobile : 0762834264
+Street : WesleyAlley
+City : Fairewiev
+e-mail : denta@gmail.com
+Fax : 23942321
+
+--- Docotor2 data ---
+Doctor : For Fun
+Specialization : ORL
+Phone : 044781817
+Mobile : 812678321
+Street : Blue-Rain 4
+City : Wellness
+e-mail : dr.artzt@gmail.com
+Fax : 021736871
+
+--- Docotor3 data ---
+Doctor : Allan Kuppfer
+Specialization : endo
+Phone : 82367432
+Mobile : 081276378
+Street : Evil-dead 666
+City : Hell
+e-mail : diabolo@gmail.com
+Fax : 781263871
+
+--- Family data ---
+Name : SisterName
+Phone : 099678233233
+Phone : 290839233433
+Street : Bvd. Av. Sun-Street 27
+City : FaireWiev
+e-mail : fake@mail.com
+
+--- Home Care System1 ---
+Name : Elophysio
+Phone : 92378489237
+Phone : 237864333
+Street : Ch. des Flors 77
+City : 1999- Arkania
+e-mail : physio@mail.cc
+
+--- Home Care System2 ---
+Name : Ergotherapia
+Phone : 747839
+Phone : 283746782
+Street : Av. Bld Vagalalma
+City : 256 - octets
+e-mail : ergo@mail.cc
+
+--- Home Care System3 ---
+Name : 
+Phone : 
+Phone : 
+Street : 
+City : 
+e-mail : 
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Bruce Willis
+---------------------------------------------------------
+# Canne : 18/03/2021 checked
+# Tintebin (ttb) : 18/03/2021 checked
+# Rollator : 18/03/2021 checked
+# Fauteuil Roulant (FR) : 18/03/2021 checked
+----------------------------------------------------------
+Date : 23/03/2021
+Patient name : Bruce Willis
+---------------------------------------------------------
+----------------------------------------------------------
+Date : 23/03/2021
+Patient name : Bruce Willis
+---------------------------------------------------------
+# Tintebin (ttb) : 23/03/2021 checked
+# Rollator : 23/03/2021 checked
+# Drain de Redon : 23/03/2021 checked
+
+
+--- AGGIR grid : ---
++ Orientation = 1
++ Cohérence = 1
++ Toilette = 1
++ Habillage = 1
++ Alimentation = 1
++ Elimination = 1
++ Déplacement = 1
++ Communication = 1
+
++ PLAFA = Non
++ Directives anticipées = Non
+
+
+Parcours :
+ok1
+
+Problématique :
+ok2
+
+Projet :
+ok3
+

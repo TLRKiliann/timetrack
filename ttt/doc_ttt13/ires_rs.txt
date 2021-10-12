@@ -1,0 +1,13 @@
+Stopped R :{
+    "Date": "26/09/2021",
+    "Date of introduction": "27 August 2015",
+    "Date of end": "26/09/2021",
+    "Treatment": "Drug",
+    "Dosage": "10 mg",
+    "Reserve": 1,
+    "First-line": 0,
+    "Second-line": 1,
+    "Number/24h": "1",
+    "Reason": "agitation",
+    "Signature": "etc"
+}

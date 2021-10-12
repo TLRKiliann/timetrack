@@ -1,0 +1,99 @@
+Date : 08/01/2021
+Heure : 16:14:30
+Name : Bruce Willis
+Date of introduction : 08 January 2021
+Nom du ttt : Clopixol
+Dosage du ttt : 10 gttes (1mg/ml)
+Réserve : Oui
+1ère intention : Oui
+Date of end : 08/08/2021
+Signature : etc
+
+Date : 08/01/2021
+Heure : 16:14:30
+Name : Bruce Willis
+Date of introduction : 08 April 2004
+Nom du ttt : Temesta expidet
+Dosage du ttt : 1 mg
+Réserve : Oui
+2ème intention : Oui
+Date of end : 08/01/2021
+Signature : etc
+
+Date : 08/01/2021
+Heure : 16:20:47
+Name : Bruce Willis
+Date of introduction : 03 March 2004
+Nom du ttt : Truxal
+Dosage du ttt : 10 mg1
+Réserve : Oui
+2ème intention : Oui
+Date of end : 09/01/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:05:04
+Name : Bruce Willis
+Date of introduction : 03 April 2004
+Nom du ttt : Depakine chrono
+Dosage du ttt : 500 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : 19/01/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:05:04
+Name : Bruce Willis
+Date of introduction : 06 March 2006
+Nom du ttt : Clopixol
+Dosage du ttt : 60 mg
+Réserve : Oui
+2ème intention : Oui
+Date of end : 18/04/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:08:47
+Name : Bruce Willis
+Date of introduction : 26 May 2020
+Nom du ttt : Lexotanil
+Dosage du ttt : 10 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : 15/01/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:08:47
+Name : Bruce Willis
+Date of introduction : 22 March 2018
+Nom du ttt : Temesta
+Dosage du ttt : 2,5 mg
+Réserve : Oui
+2ème intention : Oui
+Date of end : 16/02/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:12:35
+Name : Bruce Willis
+Date of introduction : 02 May 2003
+Nom du ttt : Truxal
+Dosage du ttt : 15 mg
+Réserve : Oui
+2ème intention : Oui
+Date of end : 15/01/2021
+Signature : etc
+
+Date : 14/01/2021
+Heure : 19:18:22
+Name : Bruce Willis
+Date of introduction : 14 January 2021
+Nom du ttt : Effexor
+Dosage du ttt : 75 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : 26/08/2030
+Signature : etc
+

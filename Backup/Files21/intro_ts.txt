@@ -1,0 +1,67 @@
+Stopped ttt :{
+    "Date": "02/10/2021",
+    "Date of introduction": "27 October 2016",
+    "Date of end": "02/10/2021",
+    "Treatment": "Zolpidem",
+    "Dosage": "10 mg",
+    "Morning": "---",
+    "Midday": "---",
+    "Evening": "---",
+    "Night": "1",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "13 January 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Olanzapine",
+    "Dosage": "10 mg",
+    "Morning": "1",
+    "Midday": "---",
+    "Evening": "1",
+    "Night": "---",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "23 June 2015",
+    "Date of end": "03/10/2021",
+    "Treatment": "Nexium",
+    "Dosage": "40 mg",
+    "Morning": "1",
+    "Midday": "---",
+    "Evening": "---",
+    "Night": "---",
+    "Signature": "etc"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "13 January 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Temesta Expidet",
+    "Dosage": "2.5 mg",
+    "Morning": "1",
+    "Midday": "1",
+    "Evening": "1",
+    "Night": "1",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "11 April 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Amentadine",
+    "Dosage": "50 mcg",
+    "Morning": "---",
+    "Midday": "---",
+    "Evening": "1",
+    "Night": "---",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "11 April 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Duloxetine",
+    "Dosage": "20 mg",
+    "Morning": "---",
+    "Midday": "1",
+    "Evening": "---",
+    "Night": "1",
+    "Signature": "NieR"
+}

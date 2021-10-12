@@ -1,0 +1,17 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 02/10/2021 à 01:06:51 :
+Patient name : Aaron Schwartz
++ Surveillance pour éviter les dangers requise
+---
+
+
+En date du : 02/10/2021 à 01:07:06 :
+Méchage :
+Changement de venflon :
+Stix (combo) :
+Chamgement de sonde :
+Stix (combo) :
+Réfection de PSMT :
+
+

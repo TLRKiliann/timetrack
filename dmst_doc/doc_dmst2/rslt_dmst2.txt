@@ -1,0 +1,193 @@
+----------------------------------------------------------
+Date : 24.09.2021
+Hour : 21:37:55
+Patient name : Njin Nier
+Birthday : 00/00/0000
+Allergy : None
+Transmissible disease : None
+----------------------------------------------------------
+
+
+--- Treatments ---
+- Register : TREATMENTS -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 28 October 2019
+Name of ttt : Drug
+Dosage : 10 mg
+Morning : 1
+Midday : --
+Evening : 2
+Night : 1
+Date of end : //
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 13 April 2008
+Name of ttt : Olanzapine
+Dosage : 25 mg
+Morning : 1
+Midday : --
+Evening : --
+Night : --
+Date of end : //
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 19 April 2008
+Name of ttt : Nexium
+Dosage : 40 mg
+Morning : --
+Midday : 1
+Evening : --
+Night : --
+Date of end : //
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 19 April 2008
+Name of ttt : Zolpidem
+Dosage : 10 mg
+Morning : --
+Midday : --
+Evening : --
+Night : 1
+Date of end : 23/09/2021
+Signature : etc
+
+--- Reserves ---
+- Register : RESERVES -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 28 October 2019
+Name of Reserve : Drug
+Dosage : 10 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : relax
+Date of end : //
+Signature : etc
+
+- Register : RESERVES -
+Date : 23/09/2021
+Hour : 20:34:57
+Name : Njin Nier
+Date of introduction : 13 April 2008
+Name of Reserve : Olanzapine
+Dosage : 25 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : anxiety
+Date of end : //
+Signature : etc
+
+--- Vitals Parameters ---
+Date : 24/09/2021
+Hour : 21:27:34
+Name and Surname : Njin Nier
+TA : 120/80mmHg
+Puls : 82/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.0°C
+Glycemie : 4.5 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 22/09/2021
+Hour : 21:27:34
+Name and Surname : Njin Nier
+TA : 130/77mmHg
+Puls : 79/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.3°C
+Glycemie : 5.3 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 10/09/2021
+Hour : 21:27:34
+Name and Surname : Njin Nier
+TA : 121/81mmHg
+Puls : 71/min
+SaO2 : 91%
+FR : 11/min
+Temperature : 36.1°C
+Glycemie : 5.1 mmol/l
+Douleurs (Pain) : 1/10
+
+--- BMI ---
+Date : 24-09-2021
+Heure : 21:33:26
+Prenom et Nom : Njin Nier
+Poids : 82
+Taille : 1.86
+BMI : 23.702
+
+Date : 22-09-2021
+Heure : 21:33:26
+Prenom et Nom : Njin Nier
+Poids : 81.5
+Taille : 1.86
+BMI : 23.558
+
+Date : 10-08-2021
+Heure : 21:33:26
+Prenom et Nom : Njin Nier
+Poids : 81.2
+Taille : 1.86
+BMI : 23.471
+
+
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 17/03/2021
+Patient name : Amber Screen
+---------------------------------------------------------
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Amber Screen
+---------------------------------------------------------
+# Mèche : 18/03/2021 checked
+# Drain de Blake : 18/03/2021 checked
+# Drain de Mikulicz : 18/03/2021 checked
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Amber Screen
+---------------------------------------------------------
+
+
+--- AGGIR grid : ---
++ Orientation = 0
++ Cohérence = 0
++ Toilette = 0
++ Habillage = 0
++ Alimentation = 0
++ Elimination = 0
++ Déplacement = 0
++ Communication = 0
+
+Parcours :
+
+
+Problématique :
+
+
+Projet :
+
+

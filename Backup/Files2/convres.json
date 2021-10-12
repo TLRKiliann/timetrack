@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "Date": "30/09/2021",
+            "Date of introduction": "06 April 2006",
+            "Date of end": "//",
+            "Treatment": "R_test",
+            "Dosage": "2077 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "1",
+            "Reason": "anxiété",
+            "Signature": ""
+        },
+        {
+            "Date": "30/09/2021",
+            "Date of introduction": "03 May 2004",
+            "Date of end": "//",
+            "Treatment": "testR2",
+            "Dosage": "202 mg",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "1",
+            "Reason": "anxiété",
+            "Signature": ""
+        },
+        {
+            "Date": "04/10/2021",
+            "Date of introduction": "",
+            "Date of end": "//",
+            "Treatment": "play",
+            "Dosage": "mus",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "1",
+            "Reason": "to test",
+            "Signature": "music"
+        }
+    ]
+}

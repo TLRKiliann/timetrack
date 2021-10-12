@@ -1,0 +1,56 @@
+- Register : TREATMENTS -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of ttt : Nexium
+Dosage : 40 mg
+Morning : 1
+Midday : --
+Evening : --
+Night : --
+Date of end : 12/09/2021
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of ttt : Olanzapine
+Dosage : 20 mg
+Morning : --
+Midday : --
+Evening : 1
+Night : --
+Date of end : 03/05/2022
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of ttt : Temesta expidet
+Dosage : 2,5 mg
+Morning : 1
+Midday : 1
+Evening : --
+Night : 1
+Date of end : 03/05/2022
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of ttt : Distraneurin
+Dosage : 192 mg
+Morning : --
+Midday : 1
+Evening : --
+Night : --
+Date of end : 12/09/2021
+Signature : etc
+

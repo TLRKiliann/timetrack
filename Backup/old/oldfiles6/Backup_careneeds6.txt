@@ -1,0 +1,53 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 14/01/2021 à 19:21:47 :
+Patient name : Bruce Willis
++ Surveillance alimentaire et/ou hydratation requise
+Faire truc 1
++ Surveillance pour éviter les dangers requise
+Faire truc 2
++ Stimulation ou aide pour la communication requise
+Faire truc 3
++ Accompagnement ou aide dans se recréer requis
+Faire truc 4
+---
+
+
+En date du : 14/01/2021 à 19:22:20 :
+Mr a fait sa crise. Il a foutu la merde à la salle à manger. Recadré +++ Fait injection de clopixol 150 mg dans la fesse D.
+
+En date du : 13/01/2021 à 19:23:22 :
+Mr est calme, il dit qu'il va manger chez un ami.
+
+En date du : 14/01/2021 à 19:23:51 :
+
+***************************************************************************
+Date : 14/01/2021
+Patient name : Bruce Willis
+pH : 6
+Leuco : +3
+Nit : +
+Pro : +2
+Glu : +1
+Ket : neg
+Ery : +3
+Hb : +1
+
+***************************************************************************
+
+Appelé Dr Truc pour lui annoncer les rslts. Indiqué de donner ATB
+ciprofloxacine 500 mg 3x/j pdt 7 j.
+
+----------------------------------------------------------
+Date : 14/01/2021
+Patient name : Bruce Willis
+# Depakine : 14/01/2021 checked
+# Neurontin : 14/01/2021 checked
+# Phenobarbital : 14/01/2021 checked
+# Zonegran : 14/01/2021 checked
+# Saroten : 14/01/2021 checked
+---------------------------------------------------------
+
+Prochain dosage agendé !
+
+

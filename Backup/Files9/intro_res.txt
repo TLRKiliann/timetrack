@@ -1,0 +1,15 @@
+- Register : RESERVES -
+Date : 26/09/2021
+Hour : 00:42:53
+Name : Heligan Stead
+Date of introduction : 08 November 2005
+Name of Reserve : Drug
+Dosage : 10 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : Parce qu'il en faut !
+Date of end : //
+Signature : etc
+

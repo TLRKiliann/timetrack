@@ -1,0 +1,7 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 11/10/2021 à 09:32:09 :
+Patient name : Kayney Nier
++ Surveillance pour éviter les dangers requise
++ Surveillance propreté et/ou téguments requise
+---

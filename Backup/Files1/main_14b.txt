@@ -1,0 +1,15 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 10/10/2021 à 17:22:57 :
+Patient name : Two B
++ Surveillance respiratoire requise
+---
+
+
+Implemented as : 10/10/2021 at 17:25:24 :
+Pansement (PSMT) :
+Changement de venflon :
+Bilan hydrique :
+PCA (pompe antalgie) :
+
+

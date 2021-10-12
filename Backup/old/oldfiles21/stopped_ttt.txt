@@ -1,0 +1,8 @@
+> TREATMENT stopped by date :
+-------------------------------------------
+Name of ttt : Zolpidem 10 mg - stopped on : 02/10/2021
+Name of ttt : Olanzapine 10 mg - stopped on : 03/10/2021
+Name of ttt : Nexium 40 mg - stopped on : 03/10/2021
+Name of ttt : Temesta Expidet 2.5 mg - stopped on : 03/10/2021
+Name of ttt : Amentadine 50 mcg - stopped on : 03/10/2021
+Name of ttt : Duloxetine 20 mg - stopped on : 03/10/2021

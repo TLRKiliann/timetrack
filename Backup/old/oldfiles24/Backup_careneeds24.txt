@@ -1,0 +1,41 @@
+En date du : 30/10/2020 à 23:00:13 :
+Patient name : example example2
++ Surveillance du sommeil requise
++ Surveillance posturale et/ou des déplacements requise
++ Surveillance propreté et/ou téguments requise
++ Surveillance ou aide pour l'habillage/déshabillage requise
+---
+
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 30/10/2020 à 23:00:13 :
+Patient name : example example2
++ Surveillance du sommeil requise
+test1
++ Surveillance posturale et/ou des déplacements requise
+test2
++ Surveillance propreté et/ou téguments requise
+test3
++ Surveillance ou aide pour l'habillage/déshabillage requise
+test4
+---
+
+
+
+En date du : 30/10/2020 à 23:01:00 :
+ok today something new
+
+En date du : 30/10/2020 à 23:01:29 :
+day 2 other thing
+
+En date du : 29/10/2020 à 23:02:53 :
+Something to display !
+
+En date du : 29/10/2020 à 23:03:59 :
+Something to display test1
+Something to display test2
+Something to display test3
+Something to display test4
+Something to display test5
+Something to display test6
+

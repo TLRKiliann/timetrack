@@ -1,0 +1,25 @@
+Evaluation de la santé mentale :
+--------------------------------
+
+    Apparence : habillement, hygiène, expression faciale, contact visuel,
+    		apparence physique, attitude, posture;
+    
+    Comportement moteur et activité: activité motrice, mouvements, gestes;
+    
+    Langage qualité, débit, particularités;
+    
+    Humeur et affect: émotions, expression;
+    
+    Opérations de la pensées: cours/processus, contenu, idées délirantes;
+    
+    Perception: hallucinations, troubles perceptuels;
+    
+    Orientation: espace, temps, personnes;
+    
+    Mémoire: ancienne, récente, immédiate;
+    
+    Attention et concentration;
+    
+    Jugement;
+    
+    Autocritique.

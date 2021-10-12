@@ -1,0 +1,25 @@
+----------------------------------------------------------
+Date : 01/10/2021
+Patient name : Njin Nier
+# Abilify : 01/10/2021 checked
+# Invega : 01/10/2021 checked
+# Zyprexa : 01/10/2021 checked
+---------------------------------------------------------
+
+
+
+En date du : 01/10/2021 à 23:05:41 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 01/10/2021 à 23:06:01 :
+Patient name : Njin Nier
++ Surveillance urinaire et/ou fécale requise
+...
++ Surveillance pour éviter les dangers requise
+.
+..
++ Surveillance ou aide pour l'habillage/déshabillage requise
+...
+---
+
+

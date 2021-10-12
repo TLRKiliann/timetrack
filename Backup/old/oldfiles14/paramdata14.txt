@@ -1,0 +1,11 @@
+Date : 06/10/2021
+Hour : 14:09:22
+Name and Surname : Sophia Lorren
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.5°C
+Glycemie : 5.3 mmol/l
+Douleurs (Pain) : 0/10
+

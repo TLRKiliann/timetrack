@@ -1,0 +1,33 @@
+Date : 05/10/2021
+Hour : 13:01:26
+Name and Surname : Njin Nier
+TA : 122/33mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 05/10/2021
+Hour : 13:01:26
+Name and Surname : Njin Nier
+TA : 122/33mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 10/10/2021
+Hour : 16:53:23
+Name and Surname : Njin Nier
+TA : 122/72mmHg
+Puls : 82/min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

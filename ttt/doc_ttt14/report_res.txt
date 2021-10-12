@@ -1,0 +1,15 @@
+Reserves :[
+    {
+        "Date": "24/09/2021",
+        "Date of introduction": "02 May 2003",
+        "Date of end": "30/09/2021",
+        "Treatment": "Temesta",
+        "Dosage": "2.5 mg",
+        "Reserve": 1,
+        "First-line": 0,
+        "Second-line": 1,
+        "Number/24h": "2",
+        "Reason": "agitation",
+        "Signature": "etc"
+    }
+]

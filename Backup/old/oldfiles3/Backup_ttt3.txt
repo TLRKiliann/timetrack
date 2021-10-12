@@ -1,0 +1,28 @@
+Date : 28/10/2020
+Heure : 23:43:43
+Name : Aaron Schwartz
+
+Date of introduction : 03 February 2001
+Nom du ttt : Drug1
+Dosage du ttt : 20 mg
+Matin : 1
+
+Soir : 1
+
+Date of end : 05/11/2020
+Signature : edta
+
+Date : Date : Date : Date : 03/12/2020
+Heure : 20:12:29
+Name : Aaron Schwartz
+
+Date of introduction : 02 February 2001
+Nom du ttt : Drug101
+Dosage du ttt : 100 mg
+Matin : 1
+
+Soir : 1
+
+Date of end : 02/05/2024
+Signature : ec
+

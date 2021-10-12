@@ -1,0 +1,12 @@
+Stopped ttt :{
+    "Date": "24/09/2021",
+    "Date of introduction": "02 May 2003",
+    "Date of end": "24/09/2021",
+    "Treatment": "Zyprexa",
+    "Dosage": "20 mg",
+    "Morning": "1",
+    "Midday": "",
+    "Evening": "1",
+    "Night": "",
+    "Signature": "etc"
+}

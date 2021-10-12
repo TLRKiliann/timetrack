@@ -1,0 +1,13 @@
+Date : 08/12/2020
+Heure : 18:19:09
+Name : Terry McGuire
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+Matin : 1
+
+Soir : 1
+
+Date of end : //
+Signature : etc
+

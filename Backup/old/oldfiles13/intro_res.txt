@@ -1,0 +1,15 @@
+- Register : RESERVES -
+Date : 26/09/2021
+Hour : 00:50:25
+Name : Ian Curtis
+Date of introduction : 27 August 2015
+Name of Reserve : Drug
+Dosage : 10 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : agitation
+Date of end : //
+Signature : etc
+

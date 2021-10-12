@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "Date": "24/09/2021",
+            "Date of introduction": "02 May 2003",
+            "Date of end": "23/04/2022",
+            "Treatment": "Nexium",
+            "Dosage": "40 mg",
+            "Morning": "1",
+            "Midday": "",
+            "Evening": "",
+            "Night": "",
+            "Signature": "etc"
+        },
+        {
+            "Date": "24/09/2021",
+            "Date of introduction": "02 May 2003",
+            "Date of end": "30/09/2021",
+            "Treatment": "Temesta",
+            "Dosage": "2.5 mg",
+            "Morning": "1",
+            "Midday": "1",
+            "Evening": "1",
+            "Night": "",
+            "Signature": "etc"
+        }
+    ]
+}

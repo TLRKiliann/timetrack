@@ -1,0 +1,30 @@
+- Register : RESERVES -
+Date : 24/09/2021
+Hour : 20:57:01
+Name : Sophia Lorren
+Date of introduction : 02 May 2003
+Name of Reserve : Zyprexa
+Dosage : 20 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : agitation
+Date of end : 24/09/2021
+Signature : etc
+
+- Register : RESERVES -
+Date : 24/09/2021
+Hour : 20:57:01
+Name : Sophia Lorren
+Date of introduction : 02 May 2003
+Name of Reserve : Temesta
+Dosage : 2.5 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 2
+Reason : agitation
+Date of end : 30/09/2021
+Signature : etc
+

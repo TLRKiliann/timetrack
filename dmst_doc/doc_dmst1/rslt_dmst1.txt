@@ -1,0 +1,113 @@
+----------------------------------------------------------
+Date : 11.09.2021
+Hour : 10:35:56
+Patient name : Ker Moren
+Birthday : Format: 00/00/0000
+Allergy : None
+Transmissible disease : None
+----------------------------------------------------------
+
+--- DIAGNOSTICS ---
+Diagnostic (main)
+
+--- Treatments ---
+- Register : TREATMENTS -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of ttt : Drug1
+Dosage : 10 mg
+Morning : 1
+Midday : --
+Evening : 1
+Night : --
+Date of end : 11/09/2021
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of ttt : Drug2
+Dosage : 20 ml
+Morning : 1
+Midday : --
+Evening : 1
+Night : --
+Date of end : 11/09/2021
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of ttt : Drug3
+Dosage : 30 mcg
+Morning : 1
+Midday : 1
+Evening : 1
+Night : --
+Date of end : 12/09/2021
+Signature : etc
+
+--- Reserves ---
+- Register : RESERVES -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of Reserve : Drug1
+Dosage : 10 mg
+Reserve : yes
+First-line : yes
+Date of end : 11/09/2021
+Signature : etc
+
+- Register : RESERVES -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of Reserve : Drug2
+Dosage : 20 ml
+Reserve : yes
+First-line : yes
+Date of end : 11/09/2021
+Signature : etc
+
+- Register : RESERVES -
+Date : 11/09/2021
+Hour : 10:12:09
+Name : Ker Moren
+Date of introduction : 05 September 2021
+Name of Reserve : Drug3
+Dosage : 30 mcg
+Reserve : yes
+First-line : yes
+Date of end : 12/09/2021
+Signature : etc
+
+
+
+--- AGGIR grid : ---
++ Orientation = 0
++ Cohérence = 0
++ Toilette = 0
++ Habillage = 0
++ Alimentation = 0
++ Elimination = 0
++ Déplacement = 0
++ Communication = 0
+
+Parcours :
+
+
+Problématique :
+
+
+Projet :
+
+

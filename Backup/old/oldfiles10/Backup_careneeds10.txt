@@ -1,0 +1,21 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:25:34 :
+Patient name : Robert Stanford
++ Accompagnement ou aide dans l'apprentissage requis
+Donner des claques....
+---
+
+
+
+En date du : 06/11/2020 à 21:25:53 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:26:11 :
+Patient name : Robert Stanford
++ Surveillance respiratoire requise
+O2 3x/j
+---
+
+
+

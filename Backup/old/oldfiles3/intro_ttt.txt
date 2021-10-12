@@ -1,0 +1,14 @@
+- Register : TREATMENTS -
+Date : 21/09/2021
+Hour : 13:32:05
+Name : Kayney Nier
+Date of introduction : 02 August 2001
+Name of ttt : Nier
+Dosage : 10 ml
+Morning : 1
+Midday : 1
+Evening : 1
+Night : 1
+Date of end : //
+Signature : etc
+

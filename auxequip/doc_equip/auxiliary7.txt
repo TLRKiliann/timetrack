@@ -1,0 +1,12 @@
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Julian Assange
+---------------------------------------------------------
+# Veine-flon : 18/03/2021 checked
+# Pace-maker : 18/03/2021 checked
+# Pompe à insuline : 18/03/2021 checked
+# PCA (antalgie) : 18/03/2021 checked
+# VAC (escarre) : 18/03/2021 checked
+# Lunettes à O² : 18/03/2021 checked
+# Lunettes : 18/03/2021 checked
+# Appareils auditifs : 18/03/2021 checked

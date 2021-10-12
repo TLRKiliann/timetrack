@@ -1,0 +1,49 @@
+Stopped R :{
+    "Date": "02/10/2021",
+    "Date of introduction": "",
+    "Date of end": "02/10/2021",
+    "Treatment": "DrugRG45",
+    "Dosage": "45 mg",
+    "Reserve": 1,
+    "First-line": 1,
+    "Second-line": 0,
+    "Number/24h": "1",
+    "Reason": "fever",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "13 January 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Olanzapine",
+    "Dosage": "10 mg",
+    "Reserve": 1,
+    "First-line": 1,
+    "Second-line": 0,
+    "Number/24h": "1",
+    "Reason": "anxiety",
+    "Signature": "NieR"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "23 June 2015",
+    "Date of end": "03/10/2021",
+    "Treatment": "Nexium",
+    "Dosage": "40 mg",
+    "Reserve": 1,
+    "First-line": 1,
+    "Second-line": 0,
+    "Number/24h": "1",
+    "Reason": "abdo pain",
+    "Signature": "etc"
+}{
+    "Date": "02/10/2021",
+    "Date of introduction": "13 January 2003",
+    "Date of end": "03/10/2021",
+    "Treatment": "Temesta Expidet",
+    "Dosage": "2.5 mg",
+    "Reserve": 1,
+    "First-line": 0,
+    "Second-line": 1,
+    "Number/24h": "3",
+    "Reason": "anxiety",
+    "Signature": "NieR"
+}

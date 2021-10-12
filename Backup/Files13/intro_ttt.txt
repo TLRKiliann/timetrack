@@ -1,0 +1,14 @@
+- Register : TREATMENTS -
+Date : 26/09/2021
+Hour : 00:50:25
+Name : Ian Curtis
+Date of introduction : 27 August 2015
+Name of ttt : Drug
+Dosage : 10 mg
+Morning : 1
+Midday : 2
+Evening : 1
+Night : --
+Date of end : //
+Signature : etc
+

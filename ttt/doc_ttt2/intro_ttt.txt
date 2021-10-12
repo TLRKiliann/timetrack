@@ -1,0 +1,56 @@
+- Register : TREATMENTS -
+Date : 30/09/2021
+Hour : 04:45:05
+Name : Njin Nier
+Date of introduction : 01 January 2001
+Name of ttt : Nexium
+Dosage : 40 mg
+Morning : 1
+Midday : --
+Evening : --
+Night : --
+Date of end : //
+Signature : next
+
+- Register : TREATMENTS -
+Date : 30/09/2021
+Hour : 04:45:05
+Name : Njin Nier
+Date of introduction : 01 January 2001
+Name of ttt : Olanzapine
+Dosage : 10 mg
+Morning : 1
+Midday : --
+Evening : 1
+Night : --
+Date of end : //
+Signature : next
+
+- Register : TREATMENTS -
+Date : 30/09/2021
+Hour : 05:09:22
+Name : Njin Nier
+Date of introduction : 07 May 2007
+Name of ttt : Clopixol
+Dosage : 10 ml
+Morning : 1
+Midday : 1
+Evening : 1
+Night : ---
+Date of end : 06/11/2021
+Signature : clop
+
+- Register : TREATMENTS -
+Date : 04/10/2021
+Hour : 11:31:15
+Name : Njin Nier
+Date of introduction : 
+Name of ttt : play
+Dosage : mus
+Morning : 1
+Midday : ---
+Evening : ---
+Night : ---
+Date of end : //
+Signature : music
+

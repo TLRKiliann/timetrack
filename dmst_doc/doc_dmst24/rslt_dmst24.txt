@@ -1,0 +1,233 @@
+----------------------------------------------------------
+Date : 25.03.2021
+Hour : 22:48:38
+Patient name : Vincent La Paz
+Birthday : 02/07/1981
+Allergy : Shellfish, Latex, ATB24
+Transmissible disease : 24
+----------------------------------------------------------
+
+--- DIAGNOSTICS ---
+Phobie sociale
+
+
+--- Treatments ---
+Date : 09/02/2021
+Heure : 22:52:38
+Name : Vincent La Paz
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+
+
+
+Date of end : //
+Signature : 
+
+Date : 25/03/2021
+Heure : 22:43:25
+Name : Vincent La Paz
+Date of introduction : 
+Nom du ttt : Drug 24
+Dosage du ttt : 24 mg
+Matin : 1
+
+Soir : 2
+
+Date of end : 08/04/2021
+Signature : etc
+
+--- Reserves ---
+Date : 09/02/2021
+Heure : 22:52:38
+Name : Vincent La Paz
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+Date of end : //
+Signature : 
+
+Date : 25/03/2021
+Heure : 22:43:25
+Name : Vincent La Paz
+Date of introduction : 
+Nom du ttt : Drug 24
+Dosage du ttt : 24 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : 08/04/2021
+Signature : etc
+
+--- Vitals Parameters ---
+Date : 27/01/2021
+Hour : 23:35:35
+Name and Surname : Vincent La Paz
+TA : 120/90mmHg
+Puls : 90/min
+SaO2 : 90%
+FR : 18/min
+Temperature : 37°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 10/03/2021
+Hour : 19:40:52
+Name and Surname : Vincent La Paz
+TA : 122/88mmHg
+Puls : 89/min
+SaO2 : 87%
+FR : 17/min
+Temperature : 36.8°C
+Glycemie : 7.3 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 25/03/2021
+Hour : 22:45:05
+Name and Surname : Vincent La Paz
+TA : 162/88mmHg
+Puls : 98/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.4°C
+Glycemie : 5.3 mmol/l
+Douleurs (Pain) : 1/10
+
+--- BMI ---
+Date : 10-02-2021
+Heure : 23:36:23
+Prenom et Nom : Vincent La Paz
+Poids : 76
+Taille : 1.79
+BMI : 23.72
+
+Date : 10-02-2021
+Heure : 23:43:39
+Prenom et Nom : Vincent La Paz
+Poids : 78
+Taille : 1.77
+BMI : 24.897
+
+Date : 25-03-2021
+Heure : 22:46:36
+Prenom et Nom : Vincent La Paz
+Poids : 69
+Taille : 1.82
+BMI : 20.831
+
+
+--- Patient data ---
+Patient name : Vincent La Paz
+Birthdate : 02/07/1981
+Native : Berlin
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@gmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ
+
+--- Docotor1 data ---
+Doctor : Lynnett Pick
+Specialization : Dentiste
+Phone : 082389047
+Mobile : 0762834264
+Street : WesleyAlley
+City : Fairewiev
+e-mail : denta@gmail.com
+Fax : 23942321
+
+--- Docotor2 data ---
+Doctor : For Fun
+Specialization : ORL
+Phone : 044781817
+Mobile : 812678321
+Street : Blue-Rain 4
+City : Wellness
+e-mail : dr.artzt@gmail.com
+Fax : 021736871
+
+--- Docotor3 data ---
+Doctor : Allan Kuppfer
+Specialization : endo
+Phone : 82367432
+Mobile : 081276378
+Street : Evil-dead 666
+City : Hell
+e-mail : diabolo@gmail.com
+Fax : 781263871
+
+--- Family data ---
+Name : SisterName
+Phone : 099678233233
+Phone : 290839233433
+Street : Bvd. Av. Sun-Street 27
+City : FaireWiev
+e-mail : fake@mail.com
+
+--- Home Care System1 ---
+Name : Elophysio
+Phone : 92378489237
+Phone : 237864333
+Street : Ch. des Flors 77
+City : 1999- Arkania
+e-mail : physio@mail.cc
+
+--- Home Care System2 ---
+Name : Ergotherapia
+Phone : 747839
+Phone : 283746782
+Street : Av. Bld Vagalalma
+City : 256 - octets
+e-mail : ergo@mail.cc
+
+--- Home Care System3 ---
+Name : Eulalie
+Phone : 8939012389
+Phone : 1823908912
+Street : Roadmap 43
+City : Zolerturn
+e-mail : ieu@zert.com
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Vincent La Paz
+---------------------------------------------------------
+# Canne : 18/03/2021 checked
+# Pompe à insuline : 18/03/2021 checked
+# Drain de Redon : 18/03/2021 checked
+----------------------------------------------------------
+Date : 25/03/2021
+Patient name : Vincent La Paz
+---------------------------------------------------------
+# Tintebin (ttb) : 25/03/2021 checked
+# Pace-maker : 25/03/2021 checked
+
+
+--- AGGIR grid : ---
++ Orientation = 2
++ Cohérence = 2
++ Toilette = 2
++ Habillage = 2
++ Alimentation = 2
++ Elimination = 2
++ Déplacement = 2
++ Communication = 2
+
++ PLAFA = Non
++ Directives anticipées = Non
+
+
+Parcours :
+24 1
+
+Problématique :
+24 2
+
+Projet :
+24 3
+

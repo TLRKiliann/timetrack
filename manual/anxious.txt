@@ -1,0 +1,24 @@
+Echelle de l'anxiété :
+----------------------
+
+!!! Don't change anything in this file, it's only for printing !!!
+
+En date du ../../.... :
+
+1.Vous êtes-vous souvent senti anxieux ? (0, 1, 2)
+
+
+2.Avez-vous souvent soufert de symptômes somatiques de tension,
+comme céphalées, palpitations, sueurs profuses ? (0, 1, 2)
+
+
+3.Avez-vous beaucoup été parturbé par des peurs irrationnelles
+(sans raisons apparente) ou des phobies ? (0, 1, 2)
+
+
+4.Avez-vous fait des attaques de panique (anxiété
+massive ou paralysante) (0, 1, 2)
+
+
+5.Le patient s\'est senti très anxieux de façon chronique
+ou a souvent souffert de symptômes somatiques d\'anxiété. (0, 1, 2)

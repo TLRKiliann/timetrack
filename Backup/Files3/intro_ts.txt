@@ -1,0 +1,12 @@
+{
+    "Date": "21/09/2021",
+    "Date of introduction": "02 August 2001",
+    "Date of end": "21/09/2021",
+    "Treatment": "Nier",
+    "Dosage": "10 ml",
+    "Morning": "1",
+    "Midday": "1",
+    "Evening": "1",
+    "Night": "1",
+    "Signature": "etc"
+}

@@ -1,0 +1,191 @@
+----------------------------------------------------------
+Date : 23.03.2021
+Hour : 00:06:24
+Patient name : Michael Jordan
+Birthday : 23/02/1976
+Allergy : Fraises, Eggs 
+Transmissible disease : None
+----------------------------------------------------------
+
+--- DIAGNOSTICS ---
+TPB
+
+
+
+--- Treatments ---
+Date : 23/03/2021
+Heure : 00:00:05
+Name : Michael Jordan
+Date of introduction : 02 May 2005
+Nom du ttt : Drug 1
+Dosage du ttt : 100 mg
+Matin : 1
+Midi : 2
+Soir : 1
+Nuit : 2
+Date of end : //
+Signature : etc
+
+--- Reserves ---
+Date : 23/03/2021
+Heure : 00:00:05
+Name : Michael Jordan
+Date of introduction : 02 May 2005
+Nom du ttt : Drug 1
+Dosage du ttt : 100 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : //
+Signature : etc
+
+--- Vitals Parameters ---
+Date : 27/01/2021
+Hour : 13:03:29
+Name and Surname : Michael Jordan
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 94%
+FR : 16/min
+Temperature : 36.7°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 23/03/2021
+Hour : 00:01:10
+Name and Surname : Michael Jordan
+TA : 119/87mmHg
+Puls : 86/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.4°C
+Glycemie : 6.1 mmol/l
+Douleurs (Pain) : 2/10
+
+--- BMI ---
+Date : 04-02-2021
+Heure : 01:03:05
+Prenom et Nom : Michael Jordan
+Poids : 76
+Taille : 1.86
+BMI : 21.968
+
+
+--- Patient data ---
+Patient name : Michael Jordan
+Birthdate : 23/02/1976
+Native : Chicago
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Chicago
+e-mail : zut@gmail.com
+Insurance : Basket-ball
+Policy : 9767897583
+Civil status : homeless
+Confession : None
+
+--- Docotor1 data ---
+Doctor : Lynnett Pick
+Specialization : Dentiste
+Phone : 082389047
+Mobile : 0762834264
+Street : WesleyAlley
+City : Fairewiev
+e-mail : denta@gmail.com
+Fax : 23942321
+
+--- Docotor2 data ---
+Doctor : For Fun
+Specialization : ORL
+Phone : 044781817
+Mobile : 812678321
+Street : Blue-Rain 4
+City : Wellness
+e-mail : dr.artzt@gmail.com
+Fax : 021736871
+
+--- Docotor3 data ---
+Doctor : Allan Kuppfer
+Specialization : endo
+Phone : 82367432
+Mobile : 081276378
+Street : Evil-dead 666
+City : Hell
+e-mail : diabolo@gmail.com
+Fax : 781263871
+
+--- Family data ---
+Name : SisterName
+Phone : 099678233233
+Phone : 290839233433
+Street : Bvd. Av. Sun-Street 27
+City : FaireWiev
+e-mail : fake@mail.com
+
+--- Home Care System1 ---
+Name : Elophysio
+Phone : 92378489237
+Phone : 237864333
+Street : Ch. des Flors 77
+City : 1999- Arkania
+e-mail : physio@mail.cc
+
+--- Home Care System2 ---
+Name : Ergotherapia
+Phone : 747839
+Phone : 283746782
+Street : Av. Bld Vagalalma
+City : 256 - octets
+e-mail : ergo@mail.cc
+
+--- Home Care System3 ---
+Name : Curateur
+Phone : 987489722
+Phone : 346293784
+Street : St-Imier les huitres 18
+City : Billykit
+e-mail : anon@gafam.com
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Michael Jordan
+---------------------------------------------------------
+# Mèche : 18/03/2021 checked
+# Drain thoracique : 18/03/2021 checked
+# Drain de Redon : 18/03/2021 checked
+# Drain de Kher : 18/03/2021 checked
+# Drain de Blake : 18/03/2021 checked
+# Drain de Penrose : 18/03/2021 checked
+# Drain de Mikulicz : 18/03/2021 checked
+----------------------------------------------------------
+Date : 23/03/2021
+Patient name : Michael Jordan
+---------------------------------------------------------
+# Drain thoracique : 23/03/2021 checked
+# Drain de Blake : 23/03/2021 checked
+# DVP (Dérivation ventriculo-péritonéale) : 23/03/2021 checked
+
+
+--- AGGIR grid : ---
++ Orientation = 4
++ Cohérence = 4
++ Toilette = 4
++ Habillage = 4
++ Alimentation = 4
++ Elimination = 4
++ Déplacement = 4
++ Communication = 4
+
++ PLAFA = Non
++ Directives anticipées = Non
+
+
+Parcours :
+ok1
+
+Problématique :
+ok2
+
+Projet :
+ok3
+

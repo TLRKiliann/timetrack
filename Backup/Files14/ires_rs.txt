@@ -1,0 +1,13 @@
+Stopped R :{
+    "Date": "24/09/2021",
+    "Date of introduction": "02 May 2003",
+    "Date of end": "24/09/2021",
+    "Treatment": "Zyprexa",
+    "Dosage": "20 mg",
+    "Reserve": 1,
+    "First-line": 1,
+    "Second-line": 0,
+    "Number/24h": "1",
+    "Reason": "agitation",
+    "Signature": "etc"
+}

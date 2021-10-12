@@ -1,0 +1,8 @@
+
+
+> RESERVE stopped by date :
+---------------------------------------
+Name of Reserve : DrugRG45 45 mg - stopped on : 02/10/2021
+Name of Reserve : Olanzapine 10 mg - stopped on : 03/10/2021
+Name of Reserve : Nexium 40 mg - stopped on : 03/10/2021
+Name of Reserve : Temesta Expidet 2.5 mg - stopped on : 03/10/2021

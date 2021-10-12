@@ -1,0 +1,24 @@
+- Register : RESERVES -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of Reserve : Temesta expidet
+Dosage : 2,5 mg
+Reserve : yes
+First-line : yes
+Date of end : 03/05/2022
+Signature : etc
+
+- Register : RESERVES -
+Date : 12/09/2021
+Hour : 11:17:37
+Name : 3x3c t3ch
+Date of introduction : 02 October 2002
+Name of Reserve : Distraneurin
+Dosage : 192 mg
+Reserve : yes
+Second-line : yes
+Date of end : 12/09/2021
+Signature : etc
+

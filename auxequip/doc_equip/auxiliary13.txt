@@ -1,0 +1,16 @@
+----------------------------------------------------------
+Date : 18/03/2021
+Patient name : Ian Curtis
+---------------------------------------------------------
+# Canne : 18/03/2021 checked
+# Tintebin (ttb) : 18/03/2021 checked
+# Rollator : 18/03/2021 checked
+# Fauteuil Roulant (FR) : 18/03/2021 checked
+# Veine-flon : 18/03/2021 checked
+# Pace-maker : 18/03/2021 checked
+# Lunettes à O² : 18/03/2021 checked
+# Lunettes : 18/03/2021 checked
+# Drain de Redon : 18/03/2021 checked
+# Drain de Blake : 18/03/2021 checked
+# PTG D : 18/03/2021 checked
+# PTC D : 18/03/2021 checked

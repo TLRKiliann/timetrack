@@ -1,0 +1,4 @@
+Fixed on : 11/01/2021, 18:17:06 :
+07/06/2021 : 12:00 <--- RDV --- fixed !
+Prendre le repas du jour avant l'intervention (j-1).
+

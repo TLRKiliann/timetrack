@@ -1,0 +1,42 @@
+- Register : TREATMENTS -
+Date : 24/09/2021
+Hour : 20:57:01
+Name : Sophia Lorren
+Date of introduction : 02 May 2003
+Name of ttt : Nexium
+Dosage : 40 mg
+Morning : 1
+Midday : --
+Evening : --
+Night : --
+Date of end : 23/04/2022
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 24/09/2021
+Hour : 20:57:01
+Name : Sophia Lorren
+Date of introduction : 02 May 2003
+Name of ttt : Zyprexa
+Dosage : 20 mg
+Morning : 1
+Midday : --
+Evening : 1
+Night : --
+Date of end : 24/09/2021
+Signature : etc
+
+- Register : TREATMENTS -
+Date : 24/09/2021
+Hour : 20:57:01
+Name : Sophia Lorren
+Date of introduction : 02 May 2003
+Name of ttt : Temesta
+Dosage : 2.5 mg
+Morning : 1
+Midday : 1
+Evening : 1
+Night : --
+Date of end : 30/09/2021
+Signature : etc
+

@@ -1,0 +1,44 @@
+Date : 02/08/2021
+Hour : 14:21:35
+Name and Surname : Taro Yoko
+TA : 100/90mmHg
+Puls : 70/min
+SaO2 : 97%
+FR : 16/min
+Temperature : 36°C
+Glycemie : 3.4 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 10/08/2021
+Hour : 14:21:35
+Name and Surname : Taro Yoko
+TA : 120/80mmHg
+Puls : 78/min
+SaO2 : 99%
+FR : 18/min
+Temperature : 36.3°C
+Glycemie : 5.2 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 20/08/2021
+Hour : 14:21:35
+Name and Surname : Taro Yoko
+TA : 115/85mmHg
+Puls : 77/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.1°C
+Glycemie : 4.9 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 10/09/2021
+Hour : 14:21:35
+Name and Surname : Taro Yoko
+TA : 133/93mmHg
+Puls : 79/min
+SaO2 : 99%
+FR : 19/min
+Temperature : 35.9°C
+Glycemie : 5.7 mmol/l
+Douleurs (Pain) : 2/10
+

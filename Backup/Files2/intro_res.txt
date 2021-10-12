@@ -1,0 +1,45 @@
+- Register : RESERVES -
+Date : 30/09/2021
+Hour : 19:52:10
+Name : Njin Nier
+Date of introduction : 06 April 2006
+Name of Reserve : R_test
+Dosage : 2077 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : anxiété
+Date of end : //
+Signature : 
+
+- Register : RESERVES -
+Date : 30/09/2021
+Hour : 19:56:00
+Name : Njin Nier
+Date of introduction : 03 May 2004
+Name of Reserve : testR2
+Dosage : 202 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : anxiété
+Date of end : //
+Signature : 
+
+- Register : RESERVES -
+Date : 04/10/2021
+Hour : 11:31:15
+Name : Njin Nier
+Date of introduction : 
+Name of Reserve : play
+Dosage : mus
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : to test
+Date of end : //
+Signature : music
+
