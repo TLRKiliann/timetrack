@@ -6,11 +6,9 @@
     Main script to start.
     It call directly passw.py to validate access
     privileges.
-    One script with multiple functions can be called
-    by import *, but multiples scripts cannot be called.
 """
 
-#from tkinter import *
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -1587,7 +1585,7 @@ class MenuBar(tk.Frame):
         me2.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup)
+            command=lambda: boss.allFilesBackup(f=1))
         me1.add_cascade(label=new_text, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me2)
@@ -1595,7 +1593,7 @@ class MenuBar(tk.Frame):
         me3.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup2)
+            command=lambda: boss.allFilesBackup(f=2))
         me1.add_cascade(label=new_text2, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
@@ -1603,7 +1601,7 @@ class MenuBar(tk.Frame):
         me4.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup3)
+            command=lambda: boss.allFilesBackup(f=3))
         me1.add_cascade(label=new_text3, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me4)
@@ -1611,7 +1609,7 @@ class MenuBar(tk.Frame):
         me5.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup4)
+            command=lambda: boss.allFilesBackup(f=4))
         me1.add_cascade(label=new_text4, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me5)
@@ -1619,7 +1617,7 @@ class MenuBar(tk.Frame):
         me6.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup5)
+            command=lambda: boss.allFilesBackup(f=5))
         me1.add_cascade(label=new_text5, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me6)
@@ -1627,7 +1625,7 @@ class MenuBar(tk.Frame):
         me7.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup6)
+            command=lambda: boss.allFilesBackup(f=6))
         me1.add_cascade(label=new_text6, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me7)
@@ -1635,8 +1633,7 @@ class MenuBar(tk.Frame):
         me8.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup7)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=7))
         me1.add_cascade(label=new_text7, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me8)
@@ -1644,8 +1641,7 @@ class MenuBar(tk.Frame):
         me9.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup8)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=8))
         me1.add_cascade(label=new_text8, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me9)
@@ -1653,8 +1649,7 @@ class MenuBar(tk.Frame):
         me10.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup9)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=9))
         me1.add_cascade(label=new_text9, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me10)
@@ -1662,8 +1657,7 @@ class MenuBar(tk.Frame):
         me11.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup10)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=10))
         me1.add_cascade(label=new_text10, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me11)
@@ -1671,8 +1665,7 @@ class MenuBar(tk.Frame):
         me12.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup11)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=11))
         me1.add_cascade(label=new_text11, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me12)
@@ -1680,8 +1673,7 @@ class MenuBar(tk.Frame):
         me13.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup12)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=12))
         me1.add_cascade(label=new_text12, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me13)
@@ -1689,8 +1681,7 @@ class MenuBar(tk.Frame):
         me14.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup13)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=13))
         me1.add_cascade(label=new_text13, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me14)
@@ -1698,8 +1689,7 @@ class MenuBar(tk.Frame):
         me15.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup14)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=14))
         me1.add_cascade(label=new_text14, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me15)
@@ -1707,8 +1697,7 @@ class MenuBar(tk.Frame):
         me16.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup15)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=15))
         me1.add_cascade(label=new_text15, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me16)
@@ -1716,8 +1705,7 @@ class MenuBar(tk.Frame):
         me17.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup16)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=16))
         me1.add_cascade(label=new_text16, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me17)
@@ -1725,8 +1713,7 @@ class MenuBar(tk.Frame):
         me18.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup17)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=17))
         me1.add_cascade(label=new_text17, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me18)
@@ -1734,8 +1721,7 @@ class MenuBar(tk.Frame):
         me19.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup18)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=18))
         me1.add_cascade(label=new_text18, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me19)
@@ -1743,8 +1729,7 @@ class MenuBar(tk.Frame):
         me20.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup19)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=19))
         me1.add_cascade(label=new_text19, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me20)
@@ -1752,8 +1737,7 @@ class MenuBar(tk.Frame):
         me21.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup20)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=20))
         me1.add_cascade(label=new_text20, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me21)
@@ -1761,8 +1745,7 @@ class MenuBar(tk.Frame):
         me22.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup21)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=21))
         me1.add_cascade(label=new_text21, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me22)
@@ -1770,8 +1753,7 @@ class MenuBar(tk.Frame):
         me23.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup22)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=22))
         me1.add_cascade(label=new_text22, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me23)
@@ -1779,8 +1761,7 @@ class MenuBar(tk.Frame):
         me24.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup23)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=23))
         me1.add_cascade(label=new_text23, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me24)
@@ -1788,8 +1769,7 @@ class MenuBar(tk.Frame):
         me25.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
-            command=boss.allFilesBackup24)
-        # Integration of sub-menu
+            command=lambda: boss.allFilesBackup(f=24))
         me1.add_cascade(label=new_text24, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me25)
@@ -2701,7 +2681,7 @@ class Application(tk.Frame):
             subprocess.run("./need/suivi_patient_24.py", check=True)
             self.master.deiconify()
         else:
-            print("Error, to call ./need/suivi_patient_X.py with subprocess")
+            print("[!] Error, to call ./need/suivi_patient_X.py with subprocess")
 
     def showParam(self, p):
         """
@@ -3008,7 +2988,7 @@ class Application(tk.Frame):
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         else:
-            print("Error, to call ./calBmi/CalculBmiX.py with subprocess.")
+            print("[!] Error, to call ./calBmi/CalculBmiX.py with subprocess.")
 
     def visitMed(self):
         """
@@ -3262,7 +3242,7 @@ class Application(tk.Frame):
             subprocess.run('./nutrition/nutrit_patient24.py', check=True)
             self.master.deiconify()
         else:
-            print("Error, to call ./nutrition/nutrit_patient24.py with subprocess.")
+            print("[!] Error to call ./nutrition/nutrit_patient24.py with subprocess.")
 
     # Manual nurse
     def manualFile(self):
@@ -3277,176 +3257,156 @@ class Application(tk.Frame):
         self.master.update()
 
     # Backup functions
-    def allFilesBackup(self):
+    def allFilesBackup(self, f):
         """
             To acces files into Backup folder
         """
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup2(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient2(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup3(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient3(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup4(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient4(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup5(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient5(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup6(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient6(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup7(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient7(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup8(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient8(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup9(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient9(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup10(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient10(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup11(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient11(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup12(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient12(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup13(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient13(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup14(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient14(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup15(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient15(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup16(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient16(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup17(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient17(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup18(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient18(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup19(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient19(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup20(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient20(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup21(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient21(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup22(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient22(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup23(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient23(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
-
-    def allFilesBackup24(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        backupFuncPatient24(self)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        if f == 1:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient2(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient3(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient4(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient5(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient6(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient7(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient8(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient9(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient10(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient11(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient12(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient13(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient14(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient15(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient16(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient17(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient18(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient19(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient20(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient21(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient22(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient23(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        elif f == 2:
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            backupFuncPatient24(self)
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
+        else:
+            print("[!] Error - some troubles with backupfile !")
 
     def updateFiletxt(self):
         """
@@ -3476,7 +3436,7 @@ class Application(tk.Frame):
                 Application.__init__(self)
                 self.showPatients()
         except (OSError, ValueError) as p_out:
-            print("Error with refresh...", p_out)
+            print("[!] Error with refresh...", p_out)
 
 if __name__=='__main__':
     root = tk.Tk()
