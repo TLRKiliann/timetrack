@@ -15,7 +15,7 @@ def auxi_equip20(self):
         equipement.
     """
     self.can.delete(tk.ALL)
-    self.can.configure(    self.can.unbind_all("<Button-4>")background='DodgerBlue2')
+    self.can.configure(background='DodgerBlue2')
 
     self.x1, self.y1 = 530, 45
     self.labl_name = tk.Label(self.can, text="Auxiliary Equipement",
@@ -320,7 +320,7 @@ def auxi_equip20(self):
     def wayout():
         try:
             self.can.delete(tk.ALL)
-            self.showPatients()    self.can.unbind_all("<Button-5>")
+            self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
 
