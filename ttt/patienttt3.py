@@ -11,7 +11,6 @@
 """
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -753,3 +752,5 @@ def callTreatment3(self):
         window=self.buttQuit)
     
     self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
