@@ -22,7 +22,7 @@ def backupFuncPatient(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -51,7 +51,7 @@ def backupFuncPatient2(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -80,7 +80,7 @@ def backupFuncPatient3(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -109,7 +109,7 @@ def backupFuncPatient4(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -138,7 +138,7 @@ def backupFuncPatient5(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -167,7 +167,7 @@ def backupFuncPatient6(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -196,7 +196,7 @@ def backupFuncPatient7(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -225,7 +225,7 @@ def backupFuncPatient8(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -254,7 +254,7 @@ def backupFuncPatient9(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -283,7 +283,7 @@ def backupFuncPatient10(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -312,7 +312,7 @@ def backupFuncPatient11(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -341,7 +341,7 @@ def backupFuncPatient12(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -370,7 +370,7 @@ def backupFuncPatient13(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -399,7 +399,7 @@ def backupFuncPatient14(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -428,7 +428,7 @@ def backupFuncPatient15(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -457,7 +457,7 @@ def backupFuncPatient16(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -486,7 +486,7 @@ def backupFuncPatient17(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -515,7 +515,7 @@ def backupFuncPatient18(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -544,7 +544,7 @@ def backupFuncPatient19(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -573,7 +573,7 @@ def backupFuncPatient20(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -602,7 +602,7 @@ def backupFuncPatient21(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -631,7 +631,7 @@ def backupFuncPatient22(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -660,7 +660,7 @@ def backupFuncPatient23(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:
@@ -689,7 +689,7 @@ def backupFuncPatient24(self):
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
 
-    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=SUNKEN)
+    self.textBox=tk.Text(self.fen, height=30, width=60, font=18, relief=tk.SUNKEN)
     self.textBox.pack(padx=30, pady=30)
 
     try:

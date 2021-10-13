@@ -2,7 +2,7 @@
 # -*-encoding:Utf-8-*-
 
 
-from tkinter import *
+#from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import os
@@ -18,10 +18,10 @@ class ScrollCanvas(tk.Frame):
             relief=relief)
         self.frame = tk.Frame(self.can)
 
-        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=can.yview)
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=can.yview)
         self.can.configure(yscrollcommand=vsb.set)
 
-        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill='both', expand=True)
         self.can.create_window((4, 4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
@@ -31,7 +31,7 @@ class MenuBar(tk.Frame):
     '''Barre menu déroulant'''
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
-        But2 = tk.Button(self, text ="Close", fg='cyan', bg='navy', relief=GROOVE,
+        But2 = tk.Button(self, text ="Close", fg='cyan', bg='navy', relief=tk.GROOVE,
             activebackground='cyan', command=boss.quit).pack(side=tk.LEFT, padx=3)
 
 class Manualmain(tk.Frame):
@@ -40,13 +40,13 @@ class Manualmain(tk.Frame):
         tk.Frame.__init__(self)
         self.master.title('PDF MANUALS')
         mBar = MenuBar(self)
-        mBar.pack(side=TOP, fill=X, expand=1)
+        mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = tk.Canvas(self, width=900, height=750, bg='DodgerBlue2')
         self.frame = tk.Frame(self.can)
-        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill='both', expand=True)
         self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
@@ -115,7 +115,7 @@ class Manualmain(tk.Frame):
         self.x2, self.y2 = 100, 150
         self.monobutt = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openMonov)
+            highlightbackground='DodgerBlue2', command=self.openMonov)
         self.fmonobutt_window=self.can.create_window(self.x2, self.y2, window=self.monobutt)
         self.pack()
 
@@ -123,7 +123,7 @@ class Manualmain(tk.Frame):
         self.x4, self.y4 = 100, 200
         self.urinaone = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openUrinalOne)
+            highlightbackground='DodgerBlue2', command=self.openUrinalOne)
         self.furinaone_window=self.can.create_window(self.x4, self.y4, window=self.urinaone)
         self.pack()
 
@@ -131,7 +131,7 @@ class Manualmain(tk.Frame):
         self.x6, self.y6 = 100, 250
         self.urinasec = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openUrinalSecond)
+            highlightbackground='DodgerBlue2', command=self.openUrinalSecond)
         self.furinasec_window=self.can.create_window(self.x6, self.y6, window=self.urinasec)
         self.pack()
 
@@ -139,7 +139,7 @@ class Manualmain(tk.Frame):
         self.x8, self.y8 = 100, 300
         self.openubutt = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openUrin24h)
+            highlightbackground='DodgerBlue2', command=self.openUrin24h)
         self.fopenubutt_window=self.can.create_window(self.x8, self.y8, window=self.openubutt)
         self.pack()
 
@@ -147,7 +147,7 @@ class Manualmain(tk.Frame):
         self.x10, self.y10 = 100, 350
         self.babybutt = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openUrineBb)
+            highlightbackground='DodgerBlue2', command=self.openUrineBb)
         self.fbabybutt_window=self.can.create_window(self.x10, self.y10, window=self.babybutt)
         self.pack()
 
@@ -155,7 +155,7 @@ class Manualmain(tk.Frame):
         self.x12, self.y12 = 100, 400
         self.buttpic = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openUrinPicOv)
+            highlightbackground='DodgerBlue2', command=self.openUrinPicOv)
         self.fbuttpic_window=self.can.create_window(self.x12, self.y12, window=self.buttpic)
         self.pack()
 
@@ -163,7 +163,7 @@ class Manualmain(tk.Frame):
         self.x12, self.y12 = 100, 450
         self.butthemoc = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openHemoc)
+            highlightbackground='DodgerBlue2', command=self.openHemoc)
         self.fbutthemoc_window=self.can.create_window(self.x12, self.y12, window=self.butthemoc)
         self.pack()
 
@@ -171,7 +171,7 @@ class Manualmain(tk.Frame):
         self.x14, self.y14 = 100, 500
         self.buttfrott = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openFrottis)
+            highlightbackground='DodgerBlue2', command=self.openFrottis)
         self.fbuttfrott_window=self.can.create_window(self.x14, self.y14, window=self.buttfrott)
         self.pack()
 
@@ -179,7 +179,7 @@ class Manualmain(tk.Frame):
         self.x16, self.y16 = 100, 550
         self.butteli = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openHelico)
+            highlightbackground='DodgerBlue2', command=self.openHelico)
         self.fbutteli_window=self.can.create_window(self.x16, self.y16, window=self.butteli)
         self.pack()
 
@@ -187,7 +187,7 @@ class Manualmain(tk.Frame):
         self.x17, self.y17 = 100, 600
         self.buttexpect = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openExpecto)
+            highlightbackground='DodgerBlue2', command=self.openExpecto)
         self.fbuttexpect_window=self.can.create_window(self.x17, self.y17, window=self.buttexpect)
         self.pack()
 
@@ -195,7 +195,7 @@ class Manualmain(tk.Frame):
         self.x18, self.y18 = 100, 650
         self.buttcup = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openCopro)
+            highlightbackground='DodgerBlue2', command=self.openCopro)
         self.fbuttcup_window=self.can.create_window(self.x18, self.y18, window=self.buttcup)
         self.pack()
 
@@ -203,14 +203,14 @@ class Manualmain(tk.Frame):
         self.x19, self.y19 = 100, 700
         self.buttscotch = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=openScotchTest)
+            highlightbackground='DodgerBlue2', command=self.openScotchTest)
         self.fbuttscotch_window=self.can.create_window(self.x19, self.y19, window=self.buttscotch)
 
         # Eva mental
         self.x20, self.y20 = 500, 150
         self.buttexam = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=examental)
+            highlightbackground='DodgerBlue2', command=self.examental)
         self.fbuttexam_window=self.can.create_window(self.x20, self.y20, window=self.buttexam)
         self.pack()
 
@@ -218,7 +218,7 @@ class Manualmain(tk.Frame):
         self.x21, self.y21 = 500, 200
         self.buttanx = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=anxious)
+            highlightbackground='DodgerBlue2', command=self.anxious)
         self.fbuttanx_window=self.can.create_window(self.x21, self.y21, window=self.buttanx)
         self.pack()
 
@@ -226,7 +226,7 @@ class Manualmain(tk.Frame):
         self.x22, self.y22 = 500, 250
         self.butty = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=thymia)
+            highlightbackground='DodgerBlue2', command=self.thymia)
         self.fbutty_window=self.can.create_window(self.x22, self.y22, window=self.butty)
         self.pack()
 
@@ -234,7 +234,7 @@ class Manualmain(tk.Frame):
         self.x23, self.y23 = 500, 300
         self.buttdem = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=demence)
+            highlightbackground='DodgerBlue2', command=self.demence)
         self.fbuttdem_window=self.can.create_window(self.x23, self.y23, window=self.buttdem)
         self.pack()
 
@@ -242,7 +242,7 @@ class Manualmain(tk.Frame):
         self.x24, self.y24 = 500, 350
         self.buttconf = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=confusion)
+            highlightbackground='DodgerBlue2', command=self.confusion)
         self.fbuttconf_window=self.can.create_window(self.x24, self.y24, window=self.buttconf)
         self.pack()
 
@@ -250,7 +250,7 @@ class Manualmain(tk.Frame):
         self.x25, self.y25 = 500, 400
         self.buttview = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=visual)
+            highlightbackground='DodgerBlue2', command=self.visual)
         self.fbuttview_window=self.can.create_window(self.x25, self.y25, window=self.buttview)
         self.pack()
 
@@ -258,7 +258,7 @@ class Manualmain(tk.Frame):
         self.x26, self.y26 = 500, 450
         self.buttaudit = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=auditive)
+            highlightbackground='DodgerBlue2', command=self.auditive)
         self.fbuttaudit_window=self.can.create_window(self.x26, self.y26, window=self.buttaudit)
         self.pack()
 
@@ -266,7 +266,7 @@ class Manualmain(tk.Frame):
         self.x27, self.y27 = 500, 500
         self.buttsi = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=suicid)
+            highlightbackground='DodgerBlue2', command=self.suicid)
         self.fbuttsi_window=self.can.create_window(self.x27, self.y27, window=self.buttsi)
         self.pack()
 
@@ -274,7 +274,7 @@ class Manualmain(tk.Frame):
         self.x28, self.y28 = 500, 550
         self.buttautoa = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=autoagress)
+            highlightbackground='DodgerBlue2', command=self.autoagress)
         self.fbuttautoa=self.can.create_window(self.x28, self.y28, window=self.buttautoa)
         self.pack()
 
@@ -282,7 +282,7 @@ class Manualmain(tk.Frame):
         self.x29, self.y29 = 500, 600
         self.butthetero = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=heteroagress)
+            highlightbackground='DodgerBlue2', command=self.heteroagress)
         self.fbutthetero_window=self.can.create_window(self.x29, self.y29, window=self.butthetero)
         self.pack()
 
@@ -290,7 +290,7 @@ class Manualmain(tk.Frame):
         self.x30, self.y30 = 500, 650
         self.buttsyn = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=syndrome)
+            highlightbackground='DodgerBlue2', command=self.syndrome)
         self.fbuttsyn_window=self.can.create_window(self.x30, self.y30, window=self.buttsyn)
         self.pack()
 
@@ -298,7 +298,7 @@ class Manualmain(tk.Frame):
         self.x31, self.y31 = 500, 700
         self.buttepi = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=epilepsia)
+            highlightbackground='DodgerBlue2', command=self.epilepsia)
         self.fbuttepi_window=self.can.create_window(self.x31, self.y31, window=self.buttepi)
         self.pack()
 
@@ -318,7 +318,7 @@ class Manualmain(tk.Frame):
         except OSError as err_exit:
             print("[!] Error 2 : time to quit !!!", err_exit)
 
-    def openMonov():
+    def openMonov(self):
         ''' Open monovet.pdf '''
         proc_mono = platform.system()
         print(proc_mono)        
@@ -333,7 +333,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/monovet.pdf') # Windows
 
-    def openUrinalOne():
+    def openUrinalOne(self):
         ''' Open premierjet.pdf '''
         proc_urione = platform.system()
         print(proc_urione)
@@ -348,7 +348,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/premierjet.pdf') # Windows
 
-    def openUrinalSecond():
+    def openUrinalSecond(self):
         ''' Open secondjet.pdf '''
         proc_urisec = platform.system()
         print(proc_urisec)
@@ -363,7 +363,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/secondjet.pdf') # Windows
 
-    def openUrin24h():
+    def openUrin24h(self):
         ''' Open urine24h.pdf '''
         proc_urinh = platform.system()
         print(proc_urinh)
@@ -378,7 +378,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/urine24h.pdf') # Windows
 
-    def openUrineBb():
+    def openUrineBb(self):
         ''' Open urinebaby.pdf '''
         proc_ubb = platform.system()
         print(platform.system())
@@ -393,7 +393,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/urinebaby.pdf') # Windows
 
-    def openUrinPicOv():
+    def openUrinPicOv(self):
         ''' Open urinepicovulr.pdf '''
         proc_ou = platform.system()
         print(proc_ou)
@@ -408,7 +408,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/urinepicovulr.pdf') # Windows
 
-    def openHemoc():
+    def openHemoc(self):
         ''' Open hemoc.pdf '''
         proc_hemoc = platform.system()
         print(proc_hemoc)
@@ -423,7 +423,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/hemoc.pdf') # Windows
 
-    def openFrottis():
+    def openFrottis(self):
         ''' Open frottis.pdf '''
         proc_frott = platform.system()
         print(proc_frott)
@@ -438,7 +438,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/frottis.pdf') # Windows
 
-    def openHelico():
+    def openHelico(self):
         ''' Open helicobacter.pdf '''
         proc_helico = platform.system()
         print(proc_helico)
@@ -453,7 +453,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/helicobacter.pdf') # Windows
 
-    def openExpecto():
+    def openExpecto(self):
         ''' Open expecto.pdf '''
         proc_expect = platform.system()
         print(proc_expect)
@@ -468,7 +468,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/expecto.pdf') # Windows
 
-    def openCopro():
+    def openCopro(self):
         ''' Open copro.pdf '''
         proc_cop = platform.system()
         print(proc_cop)
@@ -483,7 +483,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/copro.pdf') # Windows
 
-    def openScotchTest():
+    def openScotchTest(self):
         ''' Open scotchtest.pdf '''
         proc_scotch = platform.system()
         print(proc_scotch)
@@ -498,13 +498,13 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/scotchtest.pdf') # Windows
 
-    def examental():
+    def examental(self):
         ''' Open examental.txt '''
         proc_extal = platform.system()
         print(proc_extal)
         if proc_extal == 'Linux':
             if os.path.exists('./manual/examental.txt'):
-            print("[+] File 'examental.txt' exist (read)!")
+                print("[+] File 'examental.txt' exist (read)!")
                 os.system('gio open "./manual/examental.txt"') # Linux
             else:
                 raise Exception("[!] Sorry, file 'examental.txt' not found !")
@@ -513,7 +513,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/examental.txt') # Windows
 
-    def anxious():
+    def anxious(self):
         ''' Open anxious.txt '''
         proc_anx = platform.system()
         print(proc_anx)
@@ -528,7 +528,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/anxious.txt') # Windows
 
-    def thymia():
+    def thymia(self):
         ''' Open humeur.png '''
         proc_thym = platform.system()
         print(proc_thym)
@@ -543,10 +543,10 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/humeur.png') # Windows
 
-    def demence():
+    def demence(self):
         pass
 
-    def confusion():
+    def confusion(self):
         ''' Open orientation.txt '''
         proc_conf = platform.system()
         print(proc_conf)
@@ -561,7 +561,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/orientation.txt') # Windows
 
-    def visual():
+    def visual(self):
         ''' Open hallu_visual.txt '''
         proc_view = platform.system()
         print(proc_view)
@@ -576,7 +576,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/hallu_visual.txt') # Windows
 
-    def auditive():
+    def auditive(self):
         '''Open hallu_audit.txt'''
         proc_audit = platform.system()
         print(proc_audit)
@@ -591,7 +591,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/hallu_audit.txt') # Windows
 
-    def suicid():
+    def suicid(self):
         '''Open suicid.txt'''
         proc_is = platform.system()
         print(proc_is)
@@ -606,7 +606,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/suicid.txt') # Windows
 
-    def heteroagress():
+    def heteroagress(self):
         '''Open hetero_agress.txt'''
         proc_heteroa = platform.system()
         print(proc_heteroa)
@@ -621,7 +621,7 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/hetero_agress.txt') # Windows
 
-    def autoagress():
+    def autoagress(self):
         '''Open auto_agress.txt'''
         proc_autoa = platform.system()
         print(proc_autoa)
@@ -636,10 +636,10 @@ class Manualmain(tk.Frame):
         else:
             os.startfile('./manual/auto_agress.txt') # Windows
 
-    def syndrome():
+    def syndrome(self):
         pass
 
-    def epilepsia():
+    def epilepsia(self):
         '''Open epilepsia.pdf'''
         proc_epi = platform.system()
         print(proc_epi)

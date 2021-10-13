@@ -10,7 +10,7 @@
     by import *, but multiples scripts cannot be called.
 """
 
-
+#from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -497,7 +497,7 @@ class MenuBar(tk.Frame):
 
         fileMenu.pack(side=tk.LEFT, padx=3)
         # Menubar
-        me1 = tk.Menu(fileMenu, tearoff=0)
+        me1 = Menu(fileMenu, tearoff=0)
         me1.add_command(label='Alarm', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='coral', activeforeground='black',
@@ -616,7 +616,7 @@ class MenuBar(tk.Frame):
         contact = tk.Menubutton(self, text='Contact', font=("Times 14"),
             fg='cyan', bg='grey30', relief=tk.GROOVE)
         contact.pack(side=tk.LEFT, padx=3)
-        contchck = tk.Menu(contact)
+        contchck = Menu(contact)
         me1 = Menu(contchck)
         me1.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
@@ -1221,99 +1221,99 @@ class MenuBar(tk.Frame):
         menuParam = Menu(self.cmd_Param)
         menuParam.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=1))
+            command=lambda: boss.showParam(p=1))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=2))
+            command=lambda: boss.showParam(p=2))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=3))
+            command=lambda: boss.showParam(p=3))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=4))
+            command=lambda: boss.showParam(p=4))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=5))
+            command=lambda: boss.showParam(p=5))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=6))
+            command=lambda: boss.showParam(p=6))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=7))
+            command=lambda: boss.showParam(p=7))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=8))
+            command=lambda: boss.showParam(p=8))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=9))
+            command=lambda: boss.showParam(p=9))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=10))
+            command=lambda: boss.showParam(p=10))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=11))
+            command=lambda: boss.showParam(p=11))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=12))
+            command=lambda: boss.showParam(p=12))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=13))
+            command=lambda: boss.showParam(p=13))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=14))
+            command=lambda: boss.showParam(p=14))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=15))
+            command=lambda: boss.showParam(p=15))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=16))
+            command=lambda: boss.showParam(p=16))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=17))
+            command=lambda: boss.showParam(p=17))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=18))
+            command=lambda: boss.showParam(p=18))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=19))
+            command=lambda: boss.showParam(p=19))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=20))
+            command=lambda: boss.showParam(p=20))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=21))
+            command=lambda: boss.showParam(p=21))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=22))
+            command=lambda: boss.showParam(p=22))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=23))
+            command=lambda: boss.showParam(p=23))
         #menuParam.add_separator()
         menuParam.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.showParam(self, p=24))
+            command=lambda: boss.showParam(p=24))
         # Integration of Vital parameters menu
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
@@ -1326,76 +1326,76 @@ class MenuBar(tk.Frame):
         meBmi = Menu(cmd_BMI)
         meBmi.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=1))
+            command=lambda: boss.calculB(u=1))
         meBmi.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=2))
+            command=lambda: boss.calculB(u=2))
         meBmi.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=3))
+            command=lambda: boss.calculB(u=3))
         meBmi.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=4))
+            command=lambda: boss.calculB(u=4))
         meBmi.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=5))
+            command=lambda: boss.calculB(u=5))
         meBmi.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=6))
+            command=lambda: boss.calculB(u=6))
         meBmi.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=7))
+            command=lambda: boss.calculB(u=7))
         meBmi.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=8))
+            command=lambda: boss.calculB(u=8))
         meBmi.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=9))
+            command=lambda: boss.calculB(u=9))
         meBmi.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=10))
+            command=lambda: boss.calculB(u=10))
         meBmi.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=11))
+            command=lambda: boss.calculB(u=11))
         meBmi.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=12))
+            command=lambda: boss.calculB(u=12))
         meBmi.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=13))
+            command=lambda: boss.calculB(u=13))
         meBmi.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=14))
+            command=lambda: boss.calculB(u=14))
         meBmi.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=15))
+            command=lambda: boss.calculB(u=15))
         meBmi.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=16))
+            command=lambda: boss.calculB(u=16))
         meBmi.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=17))
+            command=lambda: boss.calculB(u=17))
         meBmi.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=18))
+            command=lambda: boss.calculB(u=18))
         meBmi.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=19))
+            command=lambda: boss.calculB(u=19))
         meBmi.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=20))
+            command=lambda: boss.calculB(u=20))
         meBmi.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=21))
+            command=lambda: boss.calculB(u=21))
         meBmi.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=22))
+            command=lambda: boss.calculB(u=22))
         meBmi.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=23))
+            command=lambda: boss.calculB(u=23))
         meBmi.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(self, u=24))
+            command=lambda: boss.calculB(u=24))
         # Integration of 3rd menu
         cmd_BMI.configure(activeforeground='black', activebackground='cyan',
             menu=meBmi)
@@ -1490,76 +1490,76 @@ class MenuBar(tk.Frame):
         mePrint = Menu(cmd_Print)
         mePrint.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=1))
+            command=lambda: boss.nutritionMenu(n=1))
         mePrint.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=2))
+            command=lambda: boss.nutritionMenu(n=2))
         mePrint.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=3))
+            command=lambda: boss.nutritionMenu(n=3))
         mePrint.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=4))
+            command=lambda: boss.nutritionMenu(n=4))
         mePrint.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=5))
+            command=lambda: boss.nutritionMenu(n=5))
         mePrint.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=6))
+            command=lambda: boss.nutritionMenu(n=6))
         mePrint.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=7))
+            command=lambda: boss.nutritionMenu(n=7))
         mePrint.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=8))
+            command=lambda: boss.nutritionMenu(n=8))
         mePrint.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=9))
+            command=lambda: boss.nutritionMenu(n=9))
         mePrint.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=10))
+            command=lambda: boss.nutritionMenu(n=10))
         mePrint.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=11))
+            command=lambda: boss.nutritionMenu(n=11))
         mePrint.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=12))
+            command=lambda: boss.nutritionMenu(n=12))
         mePrint.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=13))
+            command=lambda: boss.nutritionMenu(n=13))
         mePrint.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=14))
+            command=lambda: boss.nutritionMenu(n=14))
         mePrint.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=15))
+            command=lambda: boss.nutritionMenu(n=15))
         mePrint.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=16))
+            command=lambda: boss.nutritionMenu(n=16))
         mePrint.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=17))
+            command=lambda: boss.nutritionMenu(n=17))
         mePrint.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=18))
+            command=lambda: boss.nutritionMenu(n=18))
         mePrint.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=19))
+            command=lambda: boss.nutritionMenu(n=19))
         mePrint.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=20))
+            command=lambda: boss.nutritionMenu(n=20))
         mePrint.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=21))
+            command=lambda: boss.nutritionMenu(n=21))
         mePrint.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=22))
+            command=lambda: boss.nutritionMenu(n=22))
         mePrint.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=23))
+            command=lambda: boss.nutritionMenu(n=23))
         mePrint.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.nutritionMenu(self, n=24))
+            command=lambda: boss.nutritionMenu(n=24))
         # Integration of nutrition menu
         cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
@@ -1586,49 +1586,56 @@ class MenuBar(tk.Frame):
         me2 = Menu(me1)
         me2.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup)
         me1.add_cascade(label=new_text, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me2)
         me3=Menu(me1)
         me3.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup2)
         me1.add_cascade(label=new_text2, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
         me4=Menu(me1)
         me4.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup3)
         me1.add_cascade(label=new_text3, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me4)
         me5=Menu(me1)
         me5.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup4)
         me1.add_cascade(label=new_text4, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me5)
         me6=Menu(me1)
         me6.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup5)
         me1.add_cascade(label=new_text5, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me6)
         me7=Menu(me1)
         me7.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup6)
         me1.add_cascade(label=new_text6, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me7)
         me8=Menu(me1)
         me8.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup7)
         # Integration of sub-menu
         me1.add_cascade(label=new_text7, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1636,7 +1643,8 @@ class MenuBar(tk.Frame):
         me9=Menu(me1)
         me9.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup8)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup8)
         # Integration of sub-menu
         me1.add_cascade(label=new_text8, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1644,7 +1652,8 @@ class MenuBar(tk.Frame):
         me10=Menu(me1)
         me10.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup9)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup9)
         # Integration of sub-menu
         me1.add_cascade(label=new_text9, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1652,7 +1661,8 @@ class MenuBar(tk.Frame):
         me11=Menu(me1)
         me11.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup10)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup10)
         # Integration of sub-menu
         me1.add_cascade(label=new_text10, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1660,7 +1670,8 @@ class MenuBar(tk.Frame):
         me12=Menu(me1)
         me12.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup11)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup11)
         # Integration of sub-menu
         me1.add_cascade(label=new_text11, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1668,7 +1679,8 @@ class MenuBar(tk.Frame):
         me13=Menu(me1)
         me13.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup12)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup12)
         # Integration of sub-menu
         me1.add_cascade(label=new_text12, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1676,7 +1688,8 @@ class MenuBar(tk.Frame):
         me14=Menu(me1)
         me14.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup13)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup13)
         # Integration of sub-menu
         me1.add_cascade(label=new_text13, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1684,7 +1697,8 @@ class MenuBar(tk.Frame):
         me15=Menu(me1)
         me15.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup14)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup14)
         # Integration of sub-menu
         me1.add_cascade(label=new_text14, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1692,7 +1706,8 @@ class MenuBar(tk.Frame):
         me16=Menu(me1)
         me16.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup15)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup15)
         # Integration of sub-menu
         me1.add_cascade(label=new_text15, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1700,7 +1715,8 @@ class MenuBar(tk.Frame):
         me17=Menu(me1)
         me17.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup16)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup16)
         # Integration of sub-menu
         me1.add_cascade(label=new_text16, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1708,7 +1724,8 @@ class MenuBar(tk.Frame):
         me18=Menu(me1)
         me18.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup17)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup17)
         # Integration of sub-menu
         me1.add_cascade(label=new_text17, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1716,7 +1733,8 @@ class MenuBar(tk.Frame):
         me19=Menu(me1)
         me19.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup18)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup18)
         # Integration of sub-menu
         me1.add_cascade(label=new_text18, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1724,7 +1742,8 @@ class MenuBar(tk.Frame):
         me20=Menu(me1)
         me20.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup19)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup19)
         # Integration of sub-menu
         me1.add_cascade(label=new_text19, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1732,7 +1751,8 @@ class MenuBar(tk.Frame):
         me21=Menu(me1)
         me21.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup20)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup20)
         # Integration of sub-menu
         me1.add_cascade(label=new_text20, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1740,7 +1760,8 @@ class MenuBar(tk.Frame):
         me22=Menu(me1)
         me22.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup21)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup21)
         # Integration of sub-menu
         me1.add_cascade(label=new_text21, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1748,7 +1769,8 @@ class MenuBar(tk.Frame):
         me23=Menu(me1)
         me23.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup22)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup22)
         # Integration of sub-menu
         me1.add_cascade(label=new_text22, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1756,7 +1778,8 @@ class MenuBar(tk.Frame):
         me24=Menu(me1)
         me24.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup23)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup23)
         # Integration of sub-menu
         me1.add_cascade(label=new_text23, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -1764,7 +1787,8 @@ class MenuBar(tk.Frame):
         me25=Menu(me1)
         me25.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.allFilesBackup24)
+            foreground='cyan', activeforeground='black',
+            command=boss.allFilesBackup24)
         # Integration of sub-menu
         me1.add_cascade(label=new_text24, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
@@ -2051,7 +2075,7 @@ class Application(tk.Frame):
             self.master.focus_force()
         """
         if a == 1 :
-            print("Patient n° 1")
+            print("Patient n°", a)
             self.master.withdraw()
             subprocess.run('./patient_agenda/origin_agenda.py', check=True)
             self.master.deiconify()
@@ -2689,145 +2713,145 @@ class Application(tk.Frame):
         if p == 1:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap.py")
+            subprocess.run("./param/fencap.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 2:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap2.py")
+            subprocess.run("./param/fencap2.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 3:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap3.py")
+            subprocess.run("./param/fencap3.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 4:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap4.py")
+            subprocess.run("./param/fencap4.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 5:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap5.py")
+            subprocess.run("./param/fencap5.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 6:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap6.py")
+            subprocess.run("./param/fencap6.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 7:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap7.py")
+            subprocess.run("./param/fencap7.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 8:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap8.py")
+            subprocess.run("./param/fencap8.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 9:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap9.py")
+            subprocess.run("./param/fencap9.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 10:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap10.py")
+            subprocess.run("./param/fencap10.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 11:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap11.py")
+            subprocess.run("./param/fencap11.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 12:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap12.py")
+            subprocess.run("./param/fencap12.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 13:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap13.py")
+            subprocess.run("./param/fencap13.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 14:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap14.py")
+            subprocess.run("./param/fencap14.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 15:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap15.py")
+            subprocess.run("./param/fencap15.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 16:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap16.py")
+            subprocess.run("./param/fencap16.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 17:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap17.py")
+            subprocess.run("./param/fencap17.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 18:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap18.py")
+            subprocess.run("./param/fencap18.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 19:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap19.py")
+            subprocess.run("./param/fencap19.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 20:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap20.py")
+            subprocess.run("./param/fencap20.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 21:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap21.py")
+            subprocess.run("./param/fencap21.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 22:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap22.py")
+            subprocess.run("./param/fencap22.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 23:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap23.py")
+            subprocess.run("./param/fencap23.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         elif p == 24:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
-            subprocess.call("./param/fencap24.py")
+            subprocess.run("./param/fencap24.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         else:
@@ -2845,7 +2869,7 @@ class Application(tk.Frame):
             subprocess.run("./calBmi/CalculBmi.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif u == 2:        elif u == 2:
+        elif u == 2:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./calBmi/CalculBmi2.py", check=True)
@@ -3134,84 +3158,6 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient24.py", check=True)
         self.master.deiconify()
-
-    def updateLink(self):
-        """
-            !!! Security : I'm not sure if that's good to let :
-            shell=True
-            because it could be a vulnerability !!!
-            To update data for patient in txt entryfile and for DB.
-        """
-        subprocess.Popen('./update/updatepatient1.py', shell=True)
-
-    def updateLink2(self):
-        subprocess.Popen('./update/updatepatient2.py', shell=True)
-
-    def updateLink3(self):
-        subprocess.Popen('./update/updatepatient3.py', shell=True)
-
-    def updateLink4(self):
-        subprocess.Popen('./update/updatepatient4.py', shell=True)
-
-    def updateLink5(self):
-        subprocess.Popen('./update/updatepatient5.py', shell=True)
-
-    def updateLink6(self):
-        subprocess.Popen('./update/updatepatient6.py', shell=True)
-
-    def updateLink7(self):
-        subprocess.Popen('./update/updatepatient7.py', shell=True)
-
-    def updateLink8(self):
-        subprocess.Popen('./update/updatepatient8.py', shell=True)
-
-    def updateLink9(self):
-        subprocess.Popen('./update/updatepatient9.py', shell=True)
-
-    def updateLink10(self):
-        subprocess.Popen('./update/updatepatient10.py', shell=True)
-
-    def updateLink11(self):
-        subprocess.Popen('./update/updatepatient11.py', shell=True)
-
-    def updateLink12(self):
-        subprocess.Popen('./update/updatepatient12.py', shell=True)
-
-    def updateLink13(self):
-        subprocess.Popen('./update/updatepatient13.py', shell=True)
-
-    def updateLink14(self):
-        subprocess.Popen('./update/updatepatient14.py', shell=True)
-
-    def updateLink15(self):
-        subprocess.Popen('./update/updatepatient15.py', shell=True)
-
-    def updateLink16(self):
-        subprocess.Popen('./update/updatepatient16.py', shell=True)
-
-    def updateLink17(self):
-        subprocess.Popen('./update/updatepatient17.py', shell=True)
-
-    def updateLink18(self):
-        subprocess.Popen('./update/updatepatient18.py', shell=True)
-
-    def updateLink19(self):
-        subprocess.Popen('./update/updatepatient19.py', shell=True)
-
-    def updateLink20(self):
-        subprocess.Popen('./update/updatepatient20.py', shell=True)
-
-    def updateLink21(self):
-        subprocess.Popen('./update/updatepatient21.py', shell=True)
-
-    def updateLink22(self):
-        subprocess.Popen('./update/updatepatient22.py', shell=True)
-
-    def updateLink23(self):
-        subprocess.Popen('./update/updatepatient23.py', shell=True)
-
-    def updateLink24(self):
-        subprocess.Popen('./update/updatepatient24.py', shell=True)
 
     def nutritionMenu(self, n):
         """

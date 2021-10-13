@@ -15,6 +15,7 @@ from ttt.call_medic import *
 from labo.callabo import *
 from auxequip.call_aux import *
 from dmst_doc.call_dmst import *
+from update.call_update import *
 
 
 def callResident(self):
@@ -125,7 +126,7 @@ def callResident(self):
     self.buttpatup = tk.Button(self.can, text="Update", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink)
+        command=lambda: updateLink(self, g=1))
     self.fbuttpatup_window = self.can.create_window(self.x11,
         self.y11, window=self.buttpatup)
 
@@ -204,7 +205,7 @@ def callResident(self):
     self.buttpatup2 = tk.Button(self.can, text="Update 2", font=16,
         width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink2)
+        command=lambda: updateLink(self, g=2))
     self.fbuttpatup2_window = self.can.create_window(self.x21,
         self.y21, window=self.buttpatup2)
 
@@ -283,7 +284,7 @@ def callResident(self):
     self.buttpat3up = tk.Button(self.can, text="Update 3", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink3)
+        command=lambda: updateLink(self, g=3))
     self.fbuttpat3up_window = self.can.create_window(self.x31,
         self.y31, window=self.buttpat3up)
 
@@ -363,7 +364,7 @@ def callResident(self):
     self.buttpat4up = tk.Button(self.can, text="Update 4",
         font=16, width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink4)
+        command=lambda: updateLink(self, g=4))
     self.fbuttpat4up_window = self.can.create_window(self.x41,
         self.y41, window=self.buttpat4up)
 
@@ -443,7 +444,7 @@ def callResident(self):
     self.buttpat5up = tk.Button(self.can, text="Update 5", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink5)
+        command=lambda: updateLink(self, g=5))
     self.fbuttpat5up_window = self.can.create_window(self.x51,
         self.y51, window=self.buttpat5up)
 
@@ -522,7 +523,7 @@ def callResident(self):
     self.buttpat6up = tk.Button(self.can, text="Update 6", font=16,
         width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink6)
+        command=lambda: updateLink(self, g=6))
     self.fbuttpat6up_window = self.can.create_window(self.x61,
         self.y61, window=self.buttpat6up)
 
@@ -601,7 +602,7 @@ def callResident(self):
     self.buttpat7up = tk.Button(self.can, text="Update 7", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink7)
+        command=lambda: updateLink(self, g=7))
     self.fbuttpat7up_window = self.can.create_window(self.x71,
         self.y71, window=self.buttpat7up)
 
@@ -680,7 +681,7 @@ def callResident(self):
     self.buttpat8up = tk.Button(self.can, text="Update 8", font=16,
         width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink8)
+        command=lambda: updateLink(self, g=8))
     self.fbuttpat8up_window = self.can.create_window(self.x81,
         self.y81, window=self.buttpat8up)
 
@@ -759,7 +760,7 @@ def callResident(self):
     self.buttpat9up = tk.Button(self.can, text="Update 9",
         font=16, width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink9)
+        command=lambda: updateLink(self, g=9))
     self.fbuttpat9up_window = self.can.create_window(self.x91,
         self.y91, window=self.buttpat9up)
 
@@ -838,7 +839,7 @@ def callResident(self):
     self.buttpat10up = tk.Button(self.can, text="Update 10", font=16, width=8,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink10)
+        command=lambda: updateLink(self, g=10))
     self.fbuttpat10up_window = self.can.create_window(self.x101,
         self.y101, window=self.buttpat10up)
 
@@ -917,7 +918,7 @@ def callResident(self):
     self.buttpat11up = tk.Button(self.can, text="Update 11", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink11)
+        command=lambda: updateLink(self, g=11))
     self.fbuttpat11up_window = self.can.create_window(self.x111,
         self.y111, window=self.buttpat11up)
 
@@ -996,7 +997,7 @@ def callResident(self):
     self.buttpat12up = tk.Button(self.can, text="Update 12", font=16,
         width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink12)
+        command=lambda: updateLink(self, g=12))
     self.fbuttpat12up_window = self.can.create_window(self.x121,
         self.y121, window=self.buttpat12up)
 
@@ -1075,7 +1076,7 @@ def callResident(self):
     self.buttpat13up = tk.Button(self.can, text="Update 13", font=16,
         width=8, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.updateLink13)
+        command=lambda: updateLink(self, g=13))
     self.fbuttpat13up_window = self.can.create_window(self.x131,
         self.y131, window=self.buttpat13up)
 
@@ -1154,7 +1155,7 @@ def callResident(self):
     self.buttpat14up = tk.Button(self.can, text="Update 14", font=16,
         width=8, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=self.updateLink14)
+        command=lambda: updateLink(self, g=14))
     self.fbuttpat14up_window = self.can.create_window(self.x141,
         self.y141, window=self.buttpat14up)
 
@@ -1233,7 +1234,7 @@ def callResident(self):
     self.buttpat15up = tk.Button(self.can, width=8, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Update 15",
-        command=self.updateLink15)
+        command=lambda: updateLink(self, g=15))
     self.fbuttpat15up_window = self.can.create_window(self.x151,
         self.y151, window=self.buttpat15up)
 
@@ -1312,7 +1313,7 @@ def callResident(self):
     self.buttpat16up = tk.Button(self.can, width=8, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update 16",
-        command=self.updateLink16)
+        command=lambda: updateLink(self, g=16))
     self.fbuttpat16up_window = self.can.create_window(self.x161,
         self.y161, window=self.buttpat16up)
 
@@ -1391,7 +1392,7 @@ def callResident(self):
     self.buttpat17up = tk.Button(self.can, width=8, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Update 17",
-        command=self.updateLink17)
+        command=lambda: updateLink(self, g=17))
     self.fbuttpat17up_window = self.can.create_window(self.x171,
         self.y171, window=self.buttpat17up)
 
@@ -1470,7 +1471,7 @@ def callResident(self):
     self.buttpat18up = tk.Button(self.can, width=8, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update 18",
-        command=self.updateLink18)
+        command=lambda: updateLink(self, g=18))
     self.fbuttpat18up_window = self.can.create_window(self.x181,
         self.y181, window=self.buttpat18up)
 
@@ -1549,7 +1550,7 @@ def callResident(self):
     self.buttpat19up = tk.Button(self.can, width=8, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Update 19",
-        command=self.updateLink19)
+        command=lambda: updateLink(self, g=19))
     self.fbuttpat19up_window = self.can.create_window(self.x191,
         self.y191, window=self.buttpat19up)
 
@@ -1628,7 +1629,7 @@ def callResident(self):
     self.butpat20up = tk.Button(self.can, width=8, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update 20",
-        command=self.updateLink20)
+        command=lambda: updateLink(self, g=20))
     self.fbutpat20up_window = self.can.create_window(self.x201,
         self.y201, window=self.butpat20up)
 
@@ -1707,7 +1708,7 @@ def callResident(self):
     self.butpat21up = tk.Button(self.can, width=8, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Update 21",
-        command=self.updateLink21)
+        command=lambda: updateLink(self, g=21))
     self.fbutpat21up_window = self.can.create_window(self.x211,
         self.y211, window=self.butpat21up)
 
@@ -1786,7 +1787,7 @@ def callResident(self):
     self.buttpat22up = tk.Button(self.can, width=8, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update 22",
-        command=self.updateLink22)
+        command=lambda: updateLink(self, g=22))
     self.fbuttpat22up_window = self.can.create_window(self.x221,
         self.y221, window=self.buttpat22up)
 
@@ -1865,7 +1866,7 @@ def callResident(self):
     self.buttpat23up = tk.Button(self.can, width=8, font=16,
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="Update 23",
-        command=self.updateLink23)
+        command=lambda: updateLink(self, g=23))
     self.fbuttpat23up_window = self.can.create_window(self.x231,
         self.y231, window=self.buttpat23up)
 
@@ -1944,7 +1945,7 @@ def callResident(self):
     self.buttpat24up = tk.Button(self.can, width=8, font=16,
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update 24",
-        command=self.updateLink24)
+        command=lambda: updateLink(self, g=24))
     self.fbuttpat24up_window = self.can.create_window(self.x241,
         self.y241, window=self.buttpat24up)
 
