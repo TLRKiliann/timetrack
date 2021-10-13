@@ -752,3 +752,5 @@ def callTreatment1(self):
         window=self.buttQuit)
     
     self.can.configure(scrollregion=self.can.bbox('all'))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")

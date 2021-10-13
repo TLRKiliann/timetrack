@@ -8,7 +8,6 @@
 
 
 import tkinter as tk
-
 from ttt.tttdownload import *
 
 from ttt.patienttt1 import callTreatment1

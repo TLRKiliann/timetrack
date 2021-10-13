@@ -1563,7 +1563,7 @@ class MenuBar(tk.Frame):
             menu=mePrint)
 
         # Manuals Nurse
-        self.cmd_manu=Menubutton(self, text='Manuals', font=('Times 14'), fg='cyan',
+        self.cmd_manu=tk.Menubutton(self, text='Manuals', font=('Times 14'), fg='cyan',
             bg='grey30', relief=tk.GROOVE)
         self.cmd_manu.pack(side=tk.LEFT, padx=3)
         # drop-down portion of Manuals Nurse

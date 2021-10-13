@@ -22,7 +22,7 @@ class ScrollCanvas(tk.Frame):
         self.can.configure(yscrollcommand=vsb.set)
 
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill='both', expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.can.create_window((4, 4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -304,7 +304,7 @@ class Manualmain(tk.Frame):
 
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
-        self.can.configure(scrollregion=self.can.bbox(ALL))
+        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
 
     def msgQuitapp(self, arg):
         """

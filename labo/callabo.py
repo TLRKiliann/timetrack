@@ -8,7 +8,6 @@
 
 
 import tkinter as tk
-
 from labo.labodownload import *
 
 from labo.resultlabo1 import callLabo1
