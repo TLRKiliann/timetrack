@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
@@ -15,7 +14,7 @@ def auxi_equip22(self):
         heal_track.py for displaying auxiliary
         equipement.
     """
-    self.can.delete(ALL)
+    self.can.delete(tk.ALL)
     self.can.configure(background='DodgerBlue2')
 
     self.x1, self.y1 = 530, 45
@@ -320,7 +319,7 @@ def auxi_equip22(self):
 
     def wayout():
         try:
-            self.can.delete(ALL)
+            self.can.delete(tk.ALL)
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
@@ -337,7 +336,7 @@ def auxi_equip22(self):
     self.C1 = tk.Checkbutton(self.can, text="Canne", fg='navy',
         bg='cyan', variable=CheckVar1,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C1 = self.can.create_window(self.x4, self.y4,
         window = self.C1)
 
@@ -346,7 +345,7 @@ def auxi_equip22(self):
     self.C2 = tk.Checkbutton(self.can, text="Tintebin", fg='navy',
         bg='cyan', variable=CheckVar2,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C2 = self.can.create_window(self.x5, self.y5,
         window = self.C2)
 
@@ -355,7 +354,7 @@ def auxi_equip22(self):
     self.C3 = tk.Checkbutton(self.can, text="Rollator", fg='navy',
         bg='cyan', variable=CheckVar3,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C3 = self.can.create_window(self.x6, self.y6,
         window = self.C3)
 
@@ -364,7 +363,7 @@ def auxi_equip22(self):
     self.C4 = tk.Checkbutton(self.can, text="Fauteuil Roulant", fg='navy',
         bg='cyan', variable=CheckVar4,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C4 = self.can.create_window(self.x7, self.y7,
         window = self.C4)
 
@@ -380,7 +379,7 @@ def auxi_equip22(self):
     self.C5 = tk.Checkbutton(self.can, text="Veine-flon", fg='navy',
         bg='cyan', variable=CheckVar5,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C5 = self.can.create_window(self.x11, self.y11,
         window = self.C5)
 
@@ -389,7 +388,7 @@ def auxi_equip22(self):
     self.C6 = tk.Checkbutton(self.can, text="Pace-maker", fg='navy',
         bg='cyan', variable=CheckVar6,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C6 = self.can.create_window(self.x12, self.y12,
         window = self.C6)
 
@@ -398,7 +397,7 @@ def auxi_equip22(self):
     self.C7 = tk.Checkbutton(self.can, text="Pompe à insuline", fg='navy',
         bg='cyan', variable=CheckVar7,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C7 = self.can.create_window(self.x13, self.y13,
         window = self.C7)
 
@@ -407,7 +406,7 @@ def auxi_equip22(self):
     self.C8 = tk.Checkbutton(self.can, text="PCA (antalgie)", fg='navy',
         bg='cyan', variable=CheckVar8,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C8 = self.can.create_window(self.x14, self.y14,
         window = self.C8)
 
@@ -416,7 +415,7 @@ def auxi_equip22(self):
     self.C9 = tk.Checkbutton(self.can, text="VAC (escarre)", fg='navy',
         bg='cyan', variable=CheckVar9,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C9 = self.can.create_window(self.x15, self.y15,
         window = self.C9)
 
@@ -425,7 +424,7 @@ def auxi_equip22(self):
     self.C10 = tk.Checkbutton(self.can, text="Lunettes à O²", fg='navy',
         bg='cyan', variable=CheckVar10,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C10 = self.can.create_window(self.x16, self.y16,
         window = self.C10)
 
@@ -434,7 +433,7 @@ def auxi_equip22(self):
     self.C11 = tk.Checkbutton(self.can, text="Lunettes", fg='navy',
         bg='cyan', variable=CheckVar11,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C11 = self.can.create_window(self.x17, self.y17,
         window = self.C11)
 
@@ -443,7 +442,7 @@ def auxi_equip22(self):
     self.C12 = tk.Checkbutton(self.can, text="Appareils auditifs", fg='navy',
         bg='cyan', variable=CheckVar12,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C12 = self.can.create_window(self.x18, self.y18,
         window = self.C12)
 
@@ -459,7 +458,7 @@ def auxi_equip22(self):
     self.C13 = tk.Checkbutton(self.can, text="Mèche", fg='navy',
         bg='cyan', variable=CheckVar13,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C13 = self.can.create_window(self.x31, self.y31,
         window = self.C13)
 
@@ -468,7 +467,7 @@ def auxi_equip22(self):
     self.C14 = tk.Checkbutton(self.can, text="Drain thoracique", fg='navy',
         bg='cyan', variable=CheckVar14,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C14 = self.can.create_window(self.x32, self.y32,
         window = self.C14)
 
@@ -477,7 +476,7 @@ def auxi_equip22(self):
     self.C15 = tk.Checkbutton(self.can, text="Drain de Redon", fg='navy',
         bg='cyan', variable=CheckVar15,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C15 = self.can.create_window(self.x33, self.y33,
         window = self.C15)
 
@@ -486,7 +485,7 @@ def auxi_equip22(self):
     self.C16 = tk.Checkbutton(self.can, text="Drain de Kher", fg='navy',
         bg='cyan', variable=CheckVar16,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C16 = self.can.create_window(self.x34, self.y34,
         window = self.C16)
 
@@ -495,7 +494,7 @@ def auxi_equip22(self):
     self.C17 = tk.Checkbutton(self.can, text="Drain de Blake", fg='navy',
         bg='cyan', variable=CheckVar17,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C17 = self.can.create_window(self.x35, self.y35,
         window = self.C17)
 
@@ -504,7 +503,7 @@ def auxi_equip22(self):
     self.C18 = tk.Checkbutton(self.can, text="Drain de Penrose", fg='navy',
         bg='cyan', variable=CheckVar18,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C18 = self.can.create_window(self.x36, self.y36,
         window = self.C18)
 
@@ -513,7 +512,7 @@ def auxi_equip22(self):
     self.C19 = tk.Checkbutton(self.can, text="Drain de Mikulicz", fg='navy',
         bg='cyan', variable=CheckVar19,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C19 = self.can.create_window(self.x37, self.y37,
         window = self.C19)
 
@@ -522,7 +521,7 @@ def auxi_equip22(self):
     self.C20 = tk.Checkbutton(self.can, text="DVP (ventri.-peri.)", fg='navy',
         bg='cyan', variable=CheckVar20,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C20 = self.can.create_window(self.x38, self.y38,
         window = self.C20)
 
@@ -531,7 +530,7 @@ def auxi_equip22(self):
     self.C21 = tk.Checkbutton(self.can, text="DVA (ventri.-atriale)", fg='navy',
         bg='cyan', variable=CheckVar21,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C21 = self.can.create_window(self.x39, self.y39,
         window = self.C21)
 
@@ -547,7 +546,7 @@ def auxi_equip22(self):
     self.C22 = tk.Checkbutton(self.can, text="PTH G", fg='navy',
         bg='cyan', variable=CheckVar22,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C22 = self.can.create_window(self.x51, self.y51,
         window = self.C22)
 
@@ -556,7 +555,7 @@ def auxi_equip22(self):
     self.C23 = tk.Checkbutton(self.can, text="PTH D", fg='navy',
         bg='cyan', variable=CheckVar23,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C23 = self.can.create_window(self.x52, self.y52,
         window = self.C23)
 
@@ -565,7 +564,7 @@ def auxi_equip22(self):
     self.C24 = tk.Checkbutton(self.can, text="PTG G", fg='navy',
         bg='cyan', variable=CheckVar24,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C24 = self.can.create_window(self.x53, self.y53,
         window = self.C24)
 
@@ -574,7 +573,7 @@ def auxi_equip22(self):
     self.C25 = tk.Checkbutton(self.can, text="PTG D", fg='navy',
         bg='cyan', variable=CheckVar25,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C25 = self.can.create_window(self.x54, self.y54,
         window = self.C25)
 
@@ -583,7 +582,7 @@ def auxi_equip22(self):
     self.C26 = tk.Checkbutton(self.can, text="PTE(I) G", fg='navy',
         bg='cyan', variable=CheckVar26,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C26 = self.can.create_window(self.x55, self.y55,
         window = self.C26)
 
@@ -592,7 +591,7 @@ def auxi_equip22(self):
     self.C27 = tk.Checkbutton(self.can, text="PTE(I) D", fg='navy',
         bg='cyan', variable=CheckVar27,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C27 = self.can.create_window(self.x56, self.y56,
         window = self.C27)
 
@@ -601,7 +600,7 @@ def auxi_equip22(self):
     self.C28 = tk.Checkbutton(self.can, text="PTC G", fg='navy',
         bg='cyan', variable=CheckVar28,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C28 = self.can.create_window(self.x57, self.y57,
         window = self.C28)
 
@@ -610,7 +609,7 @@ def auxi_equip22(self):
     self.C29 = tk.Checkbutton(self.can, text="PTC D", fg='navy',
         bg='cyan', variable=CheckVar29,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C29 = self.can.create_window(self.x58, self.y58,
         window = self.C29)
 
@@ -619,7 +618,7 @@ def auxi_equip22(self):
     self.C30 = tk.Checkbutton(self.can, text="Prothèse pieds G", fg='navy',
         bg='cyan', variable=CheckVar30,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C30 = self.can.create_window(self.x59, self.y59,
         window = self.C30)
 
@@ -628,7 +627,7 @@ def auxi_equip22(self):
     self.C31 = tk.Checkbutton(self.can, text="Prothèse pieds D", fg='navy',
         bg='cyan', variable=CheckVar31,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C31 = self.can.create_window(self.x60, self.y60,
         window = self.C31)
 
@@ -637,7 +636,7 @@ def auxi_equip22(self):
     self.C32 = tk.Checkbutton(self.can, text="Prothèse MIG", fg='navy',
         bg='cyan', variable=CheckVar32,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C32 = self.can.create_window(self.x61, self.y61,
         window = self.C32)
 
@@ -646,7 +645,7 @@ def auxi_equip22(self):
     self.C33 = tk.Checkbutton(self.can, text="Prothèse MID", fg='navy',
         bg='cyan', variable=CheckVar33,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C33 = self.can.create_window(self.x62, self.y62,
         window = self.C33)
 
@@ -655,7 +654,7 @@ def auxi_equip22(self):
     self.C34 = tk.Checkbutton(self.can, text="Prothèse main G", fg='navy',
         bg='cyan', variable=CheckVar34,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C34 = self.can.create_window(self.x63, self.y63,
         window = self.C34)
 
@@ -664,7 +663,7 @@ def auxi_equip22(self):
     self.C35 = tk.Checkbutton(self.can, text="Prothèse main D", fg='navy',
         bg='cyan', variable=CheckVar35,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C35 = self.can.create_window(self.x64, self.y64,
         window = self.C35)
 
@@ -673,7 +672,7 @@ def auxi_equip22(self):
     self.C36 = tk.Checkbutton(self.can, text="Prothèse MSG", fg='navy',
         bg='cyan', variable=CheckVar36,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C36 = self.can.create_window(self.x65, self.y65,
         window = self.C36)
 
@@ -682,7 +681,7 @@ def auxi_equip22(self):
     self.C37 = tk.Checkbutton(self.can, text="Prothèse MSD", fg='navy',
         bg='cyan', variable=CheckVar37,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C37 = self.can.create_window(self.x66, self.y66,
         window = self.C37)
 
@@ -691,7 +690,7 @@ def auxi_equip22(self):
     self.C38 = tk.Checkbutton(self.can, text="Prothèse oculaire G", fg='navy',
         bg='cyan', variable=CheckVar38,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C38 = self.can.create_window(self.x67, self.y67,
         window = self.C38)
 
@@ -700,7 +699,7 @@ def auxi_equip22(self):
     self.C39 = tk.Checkbutton(self.can, text="Prothèse oculaire D", fg='navy',
         bg='cyan', variable=CheckVar39,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C39 = self.can.create_window(self.x68, self.y68,
         window = self.C39)
 
@@ -709,7 +708,7 @@ def auxi_equip22(self):
     self.C40 = tk.Checkbutton(self.can, text="Prothèse semelle G", fg='navy',
         bg='cyan', variable=CheckVar40,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C40 = self.can.create_window(self.x69, self.y69,
         window = self.C40)
 
@@ -718,7 +717,7 @@ def auxi_equip22(self):
     self.C41 = tk.Checkbutton(self.can, text="Prothèse semelle D", fg='navy',
         bg='cyan', variable=CheckVar41,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C41 = self.can.create_window(self.x70, self.y70,
         window = self.C41)
 
@@ -727,7 +726,7 @@ def auxi_equip22(self):
     self.C42 = tk.Checkbutton(self.can, text="Prothèse dentaire UP", fg='navy',
         bg='cyan', variable=CheckVar42,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C42 = self.can.create_window(self.x71, self.y71,
         window = self.C42)
 
@@ -736,7 +735,7 @@ def auxi_equip22(self):
     self.C43 = tk.Checkbutton(self.can, text="Prothèse dentaire Down", fg='navy',
         bg='cyan', variable=CheckVar43,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C43 = self.can.create_window(self.x72, self.y72,
         window = self.C43)
 
@@ -745,7 +744,7 @@ def auxi_equip22(self):
     self.C44 = tk.Checkbutton(self.can, text="Proth. maxillo-faciale", fg='navy',
         bg='cyan', variable=CheckVar44,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C44 = self.can.create_window(self.x73, self.y73,
         window = self.C44)
 
@@ -754,7 +753,7 @@ def auxi_equip22(self):
     self.C45 = tk.Checkbutton(self.can, text="Prothèse nasale", fg='navy',
         bg='cyan', variable=CheckVar45,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
+        width=20, anchor=tk.W)
     self.C45 = self.can.create_window(self.x74, self.y74,
         window = self.C45)
 
@@ -773,4 +772,6 @@ def auxi_equip22(self):
     self.buttonquit = self.can.create_window(self.x101, self.y101,
         window = self.buttonquit)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
