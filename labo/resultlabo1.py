@@ -10,7 +10,6 @@
 """
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import os
@@ -30,7 +29,7 @@ def callLabo1(self):
     """
         To display labo into Canvas
     """
-    self.can.delete(ALL)
+    self.can.delete(tk.ALL)
     self.can.configure(bg='DodgerBlue2')
 
     self.x1, self.y1 = 540, 45
@@ -685,7 +684,7 @@ def callLabo1(self):
 
     def awayOut():
         try:
-            self.can.delete(ALL)
+            self.can.delete(tk.ALL)
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("[!] Error from labo to way out", p_out)
@@ -698,6 +697,6 @@ def callLabo1(self):
     self.fbuttonquit_window = self.can.create_window(self.x140, self.y140,
         window = self.buttonquit)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.unbind_all("<Button-4>")
     self.can.unbind_all("<Button-5>")
