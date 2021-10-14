@@ -5,11 +5,11 @@
 from tkinter import *
 from tkinter import messagebox
 import os
-import time
 import subprocess
-import json
 import datetime
-import matplotlib
+#import time
+import json
+#import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
@@ -118,24 +118,24 @@ except FileNotFoundError as callfile1:
 # to read into file the dates entered.
 try:
     with open('./calBmi/doc_BMI/custom_kg.txt', 'r') as namefile:
-        line_1=namefile.readline()
+        line_1 = namefile.readline()
         print(line_1)
-        line_2=namefile.readline()
+        line_2 = namefile.readline()
         print(line_2)
 except FileNotFoundError as callfile2:
     print("+ File custom_kg.txt doesn't exist !", callfile2)
 
 # to delete '\n' at the end of line_1
 try:
-    printmonth=len(line_1)
-    convert_line=line_1[0:-1]
+    printmonth = len(line_1)
+    convert_line = line_1[0:-1]
     print(convert_line)
 except NameError as err_nam:
     print("None value was checked", err_nam)
 
 # or seaborn-darkgrid
 try:
-    show_grid = True
+    toshow_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
 
@@ -152,7 +152,7 @@ try:
         plt.xlabel('Dates', fontsize=14)
         plt.title('Kg by Date customised', fontsize=16)
         plt.legend(['kg/date'])
-        plt.grid(show_grid)
+        plt.grid(toshow_grid)
         plt.gcf().autofmt_xdate(rotation=45)
         plt.show()
 except NameError as data_err:

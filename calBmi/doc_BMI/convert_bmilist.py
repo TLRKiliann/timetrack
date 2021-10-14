@@ -2,17 +2,17 @@
 # -*- coding: utf-8 -*-
 
 
-import os
-import subprocess
+#import os
+#import subprocess
+import datetime
+#import time
 import json
-import matplotlib
+#import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
 from matplotlib.dates import AutoDateLocator
-from matplotlib.dates import AutoDateFormatter
-import datetime
-import time
+#from matplotlib.dates import AutoDateFormatter
 
 
 file = open('./calBmi/doc_BMI/file_bmi.json')
@@ -64,7 +64,7 @@ list2 = []
 for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
-    
+
 print("\nList of dates :")
 print("----------------------------------")
 print(list1)

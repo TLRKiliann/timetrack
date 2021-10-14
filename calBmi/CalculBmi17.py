@@ -248,7 +248,7 @@ entryNum2 = tk.Entry(gui, textvariable=number2,
 number2.set('1.00')
 entryNum2.grid(sticky=tk.W, row=5, column=2, padx=10)
 
-textBox = tk.Text(gui, height=2, width=25, font=12, relief=SUNKEN)
+textBox = tk.Text(gui, height=2, width=25, font=12, relief=tk.SUNKEN)
 textBox.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 
 call_result = partial(call_result, textBox, number1, number2)
