@@ -2496,53 +2496,55 @@ class Application(tk.Frame):
             subprocess.Popen()
         """
         if b == 1:
-            subprocess.Popen('./need/checkb.py', shell=True)
+            subprocess.Popen('./need/checkb.py', shell=False)
         elif b == 2:
-            subprocess.Popen('./need/checkb2.py', shell=True)
+            subprocess.Popen('./need/checkb2.py', shell=False)
         elif b == 3:
-            subprocess.Popen('./need/checkb3.py', shell=True)
+            subprocess.Popen('./need/checkb3.py', shell=False)
         elif b == 4:
-            subprocess.Popen('./need/checkb4.py', shell=True)
+            subprocess.Popen('./need/checkb4.py', shell=False)
         elif b == 5:
-            subprocess.Popen('./need/checkb5.py', shell=True)
+            subprocess.Popen('./need/checkb5.py', shell=False)
         elif b == 6:
-            subprocess.Popen('./need/checkb6.py', shell=True)
+            subprocess.Popen('./need/checkb6.py', shell=False)
         elif b == 7:
-            subprocess.Popen('./need/checkb7.py', shell=True)
+            subprocess.Popen('./need/checkb7.py', shell=False)
         elif b == 8:
-            subprocess.Popen('./need/checkb8.py', shell=True)
+            subprocess.Popen('./need/checkb8.py', shell=False)
         elif b == 9:
-            subprocess.Popen('./need/checkb9.py', shell=True)
+            subprocess.Popen('./need/checkb9.py', shell=False)
         elif b == 10:
-            subprocess.Popen('./need/checkb10.py', shell=True)
+            subprocess.Popen('./need/checkb10.py', shell=False)
         elif b == 11:
-            subprocess.Popen('./need/checkb11.py', shell=True)
+            subprocess.Popen('./need/checkb11.py', shell=False)
         elif b == 12:
-            subprocess.Popen('./need/checkb12.py', shell=True)
+            subprocess.Popen('./need/checkb12.py', shell=False)
         elif b == 13:
-            subprocess.Popen('./need/checkb13.py', shell=True)
+            subprocess.Popen('./need/checkb13.py', shell=False)
         elif b == 14:
-            subprocess.Popen('./need/checkb14.py', shell=True)
+            subprocess.Popen('./need/checkb14.py', shell=False)
         elif b == 15:
-            subprocess.Popen('./need/checkb15.py', shell=True)
+            subprocess.Popen('./need/checkb15.py', shell=False)
         elif b == 16:
-            subprocess.Popen('./need/checkb16.py', shell=True)
+            subprocess.Popen('./need/checkb16.py', shell=False)
         elif b == 17:
-            subprocess.Popen('./need/checkb17.py', shell=True)
+            subprocess.Popen('./need/checkb17.py', shell=False)
         elif b == 18:
-            subprocess.Popen('./need/checkb18.py', shell=True)
+            subprocess.Popen('./need/checkb18.py', shell=False)
         elif b == 19:
-            subprocess.Popen('./need/checkb19.py', shell=True)
+            subprocess.Popen('./need/checkb19.py', shell=False)
         elif b == 20:
-            subprocess.Popen('./need/checkb20.py', shell=True)
+            subprocess.Popen('./need/checkb20.py', shell=False)
         elif b == 21:
-            subprocess.Popen('./need/checkb21.py', shell=True)
+            subprocess.Popen('./need/checkb21.py', shell=False)
         elif b == 22:
-            subprocess.Popen('./need/checkb22.py', shell=True)
+            subprocess.Popen('./need/checkb22.py', shell=False)
         elif b == 23:
-            subprocess.Popen('./need/checkb23.py', shell=True)
+            subprocess.Popen('./need/checkb23.py', shell=False)
         elif b == 24:
-            subprocess.Popen('./need/checkb24.py', shell=True)
+            subprocess.Popen('./need/checkb24.py', shell=False)
+        else:
+            print("[!] Error, No checkbox has been found !")
 
     def suiviSoins(self, s):
         """
@@ -2679,175 +2681,60 @@ class Application(tk.Frame):
             the background window
             and run subprocess.run()
             to call Vital Parameters.
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            cmd()
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
         """
         if p == 1:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap.py", shell=False)
         elif p == 2:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap2.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap2.py", shell=False)
         elif p == 3:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap3.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap3.py", shell=False)
         elif p == 4:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap4.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap4.py", shell=False)
         elif p == 5:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap5.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap5.py", shell=False)
         elif p == 6:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap6.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap6.py", shell=False)
         elif p == 7:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap7.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap7.py", shell=False)
         elif p == 8:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap8.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap8.py", shell=False)
         elif p == 9:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap9.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap9.py", shell=False)
         elif p == 10:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap10.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap10.py", shell=False)
         elif p == 11:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap11.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap11.py", shell=False)
         elif p == 12:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap12.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap12.py", shell=False)
         elif p == 13:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap13.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap13.py", shell=False)
         elif p == 14:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap14.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap14.py", shell=False)
         elif p == 15:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap15.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap15.py", shell=False)
         elif p == 16:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap16.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap16.py", shell=False)
         elif p == 17:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap17.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap17.py", shell=False)
         elif p == 18:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap18.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap18.py", shell=False)
         elif p == 19:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap19.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap19.py", shell=False)
         elif p == 20:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap20.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap20.py", shell=False)
         elif p == 21:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap21.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap21.py", shell=False)
         elif p == 22:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap22.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap22.py", shell=False)
         elif p == 23:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap23.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap23.py", shell=False)
         elif p == 24:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./param/fencap24.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
-
+            subprocess.Popen("./param/fencap24.py", shell=False)
         else:
             print("Errro, to call ./param/fencapX.py with subprocess")
 
@@ -2856,151 +2743,59 @@ class Application(tk.Frame):
             Decreases opacity of background window
             during script CalculBmiX.py is running.
             Call a BMI frame.
+            self.master.wm_attributes('-alpha', 0.8)
+            self.master.update()
+            self.master.wm_attributes('-alpha', 1.0)
+            self.master.update()
         """
         if u == 1:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi.py", shell=False)
         elif u == 2:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi2.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi2.py", shell=False)
         elif u == 3:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi3.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi3.py", shell=False)
         elif u == 4:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi4.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi4.py", shell=False)
         elif u == 5:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi5.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi5.py", shell=False)
         elif u == 6:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi6.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi6.py", shell=False)
         elif u == 7:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi7.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi7.py", shell=False)
         elif u == 8:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi8.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi8.py", shell=False)
         elif u == 9:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi9.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi9.py", shell=False)
         elif u == 10:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi10.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi10.py", shell=False)
         elif u == 11:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi11.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi11.py", shell=False)
         elif u == 12:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi12.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi12.py", shell=False)
         elif u == 13:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi13.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi13.py", shell=False)
         elif u == 14:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi14.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi14.py", shell=False)
         elif u == 15:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi15.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi15.py", shell=False)
         elif u == 16:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi16.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi16.py", shell=False)
         elif u == 17:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi17.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi17.py", shell=False)
         elif u == 18:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi18.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi18.py", shell=False)
         elif u == 19:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi19.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi19.py", shell=False)
         elif u == 20:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi20.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi20.py", shell=False)
         elif u == 21:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi21.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi21.py", shell=False)
         elif u == 22:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi22.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi22.py", shell=False)
         elif u == 23:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi23.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi23.py", shell=False)
         elif u == 24:
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            subprocess.run("./calBmi/CalculBmi24.py", check=True)
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            subprocess.Popen("./calBmi/CalculBmi24.py", shell=False)
         else:
             print("[!] Error, to call ./calBmi/CalculBmiX.py with subprocess.")
 
@@ -3014,139 +2809,116 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
         self.master.deiconify()
-
     def visitMed2(self):
         medownload2()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient2.py", check=True)
         self.master.deiconify()
-
     def visitMed3(self):
         medownload3()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient3.py", check=True)
         self.master.deiconify()
-
     def visitMed4(self):
         medownload4()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient4.py", check=True)
         self.master.deiconify()
-
     def visitMed5(self):
         medownload5()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient5.py", check=True)
         self.master.deiconify()
-
     def visitMed6(self):
         medownload6()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient6.py", check=True)
         self.master.deiconify()
-
     def visitMed7(self):
         medownload7()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient7.py", check=True)
         self.master.deiconify()
-
     def visitMed8(self):
         medownload8()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient8.py", check=True)
         self.master.deiconify()
-
     def visitMed9(self):
         medownload9()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient9.py", check=True)
         self.master.deiconify()
-
     def visitMed10(self):
         medownload10()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient10.py", check=True)
         self.master.deiconify()
-
     def visitMed11(self):
         medownload11()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient11.py", check=True)
         self.master.deiconify()
-
     def visitMed12(self):
         medownload12()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient12.py", check=True)
         self.master.deiconify()
-
     def visitMed13(self):
         medownload13()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient13.py", check=True)
         self.master.deiconify()
-
     def visitMed14(self):
         medownload14()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient14.py", check=True)
         self.master.deiconify()
-
     def visitMed15(self):
         medownload15()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient15.py", check=True)
         self.master.deiconify()
-
     def visitMed16(self):
         medownload16()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient16.py", check=True)
         self.master.deiconify()
-
     def visitMed17(self):
         medownload17()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient17.py", check=True)
         self.master.deiconify()
-
     def visitMed18(self):
         medownload18()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient18.py", check=True)
         self.master.deiconify()
-
     def visitMed19(self):
         medownload19()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient19.py", check=True)
         self.master.deiconify()
-
     def visitMed20(self):
         medownload20()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient20.py", check=True)
         self.master.deiconify()
-
     def visitMed21(self):
         medownload21()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient21.py", check=True)
         self.master.deiconify()
-
     def visitMed22(self):
         medownload22()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient22.py", check=True)
         self.master.deiconify()
-
     def visitMed23(self):
         medownload23()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient23.py", check=True)
         self.master.deiconify()
-
     def visitMed24(self):
         medownload24()
         self.master.withdraw()
@@ -3258,19 +3030,15 @@ class Application(tk.Frame):
         else:
             print("[!] Error to call ./nutrition/nutrit_patient24.py with subprocess.")
 
-    # Manual nurse
     def manualFile(self):
         """
             To consult TXT and PDF
             files (manual)
         """
-        self.master.wm_attributes('-alpha', 0.4)
-        self.master.update()
+        self.master.withdraw()
         subprocess.run('./manual/pdfopenmanual.py', check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        self.master.deiconify()
 
-    # Backup functions
     def allFilesBackup(self, f):
         """
             To acces files into Backup folder
@@ -3420,7 +3188,7 @@ class Application(tk.Frame):
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
         else:
-            print("[!] Error - some troubles with backupfile !")
+            print("[!] Error - maybe no backup maide !")
 
     def updateFiletxt(self):
         """

@@ -116,5 +116,5 @@ class Application(tk.Frame):
 if __name__=='__main__':
     root = tk.Tk()
     root.resizable(False, False)
-    app = Application()
-    app.mainloop()
+    Application(root).pack()
+    root.mainloop()

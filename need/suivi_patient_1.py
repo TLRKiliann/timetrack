@@ -78,7 +78,7 @@ class Application(tk.Frame):
         '''Reset the scroll region to encompass the inner frame'''
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
 
-    def lienDirect(self, a):
+    def lienDirect(self):
         """
             <Add> button check
             if files exist.
