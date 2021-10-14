@@ -8,9 +8,9 @@
 """
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 import threading
 import time
 import subprocess
@@ -36,6 +36,7 @@ def task(root):
         mode = 'indeterminate')
     pb_hD.pack()
     pb_hD.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
 def process_of_unknown_duration(root):
@@ -49,31 +50,31 @@ def process_of_unknown_duration(root):
         "./calBmi/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ File bmi22.txt downloaded !")
-        #messagebox.showinfo("INFO", "bmi22.txt downloaded")
+        print("[Download] File bmi22.txt downloaded !")
+        #tk.messagebox.showinfo("INFO", "bmi22.txt downloaded")
     else:
-        print("+ No file to download !")
-        messagebox.showerror("Error", "No bmi22.txt to download")
+        print("[!] No file to download !")
+        tk.messagebox.showerror("Error", "No bmi22.txt to download")
 
     secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/file_kg.json",
         "./calBmi/doc_BMI22/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
-        print("+ File file_kg.json downloaded !")
-        #messagebox.showinfo("INFO", "file_kg.json downloaded")
+        print("[Download] File file_kg.json downloaded !")
+        #tk.messagebox.showinfo("INFO", "file_kg.json downloaded")
     else:
-        print("+ No file to download !")
-        messagebox.showerror("Error", "No file_kg.json to download")
+        print("[!] No file to download !")
+        tk.messagebox.showerror("Error", "No file_kg.json to download")
 
     thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/file_bmi.json",
         "./calBmi/doc_BMI22/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
-        print("+ File file_bmi.json downloaded !")
-        #messagebox.showinfo("INFO", "file_bmi.json downloaded")
+        print("[Download] File file_bmi.json downloaded !")
+        #tk.messagebox.showinfo("INFO", "file_bmi.json downloaded")
     else:
-        print("+ No file to download !")
-        messagebox.showerror("Error", "No file_bmi.json to download...")
+        print("[!] No file to download !")
+        tk.messagebox.showerror("Error", "No file_bmi.json to download...")
 
     print('Done')
     # linux, mac
@@ -86,9 +87,8 @@ def downloadata():
     """
     root = tk.Tk()
     t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
-    #print(t1)
     t1.start()
     print("Download...")
-    task(root) # This will block while the mainloop runs
+    task(root)
     t1.join()
-    root.destroy() # To destroy completely window
+    root.destroy()
