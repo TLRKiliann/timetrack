@@ -122,7 +122,8 @@ def buttRecord():
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
-            dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : bypass})
+            dataBmi['data'].append({'Date' : textDate.get(),
+                'BMI' : bypass})
             with open('./calBmi/doc_BMI/file_bmi.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
@@ -131,7 +132,8 @@ def buttRecord():
         print("[+] File file_bmi.json created !")
         dataBmi = {}
         dataBmi['data'] = []
-        dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : bypass})
+        dataBmi['data'].append({'Date' : textDate.get(),
+            'BMI' : bypass})
         with open('./calBmi/doc_BMI/file_bmi.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
@@ -142,7 +144,8 @@ def buttRecord():
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
-            dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
+            dataBmi['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Kg' : entryNum1.get()})
             with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
@@ -151,7 +154,8 @@ def buttRecord():
         print("[+] File file_kg.json created !")
         dataBmi = {}
         dataBmi['data'] = []
-        dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
+        dataBmi['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Kg' : entryNum1.get()})
         with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
@@ -218,7 +222,7 @@ def buttdel():
 time_string = tk.IntVar() 
 textDate = tk.Entry(gui, textvariable=time_string,
     highlightbackground='gray', bd=4)
-time_string.set(time.strftime("%d-%m-%Y"))
+time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2, padx=10)
 
 time_Htring = tk.IntVar()

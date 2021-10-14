@@ -49,7 +49,7 @@ labelName.pack(pady=10)
 monthVal = tk.StringVar()
 month_start = tk.Entry(gui, textvariable=monthVal,
     highlightbackground='light sky blue', bd=4)
-monthVal.set("00-00-2021")
+monthVal.set("01/01/2021")
 month_start.pack()
 
 labelName = tk.Label(gui, text='Enter date of end : ',
@@ -60,7 +60,7 @@ labelName.pack(pady=10)
 monthEnd = tk.StringVar()
 month_end = tk.Entry(gui, textvariable=monthEnd,
     highlightbackground='light sky blue', bd=4)
-monthEnd.set("00-00-2021")
+monthEnd.set("31/12/2021")
 month_end.pack()
 
 bouton1 = tk.Button(gui, text="Enter", width=8, bd=3,
