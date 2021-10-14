@@ -2550,7 +2550,7 @@ class Application(tk.Frame):
             Hide background window and
             call script with subprocess.run()
         """
-        if s == 1:        
+        if s == 1:
             needload1()
             self.master.withdraw()
             subprocess.run("./need/suivi_patient_1.py", check=True)
@@ -2686,144 +2686,168 @@ class Application(tk.Frame):
             subprocess.run("./param/fencap.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 2:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap2.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 3:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap3.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 4:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap4.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 5:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap5.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 6:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap6.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 7:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap7.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 8:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap8.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 9:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap9.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 10:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap10.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 11:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap11.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 12:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap12.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 13:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap13.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 14:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap14.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 15:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap15.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 16:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap16.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 17:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap17.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 18:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap18.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 19:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap19.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 20:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap20.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 21:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap21.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 22:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap22.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 23:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap23.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         elif p == 24:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             subprocess.run("./param/fencap24.py", check=True)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
+
         else:
             print("Errro, to call ./param/fencapX.py with subprocess")
 
