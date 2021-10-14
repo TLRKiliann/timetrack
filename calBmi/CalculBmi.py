@@ -11,7 +11,6 @@
 """
 
 
-from tkinter import *
 import tkinter as tk
 from functools import partial
 from tkinter import messagebox
@@ -85,7 +84,7 @@ def call_result(textBox, number1, number2):
             return
     except ValueError as val_err:
         print("[!] An error has occured !", val_err)
-        messagebox.showwarning("Warning", "Please, enter a valid number !")
+        tk.messagebox.showwarning("Warning", "Please, enter a valid number !")
 
 def uploadfunc():
     uploadata()
@@ -155,7 +154,7 @@ def buttRecord():
         with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
-    messagebox.showinfo('Record', 'Data saved !')
+    tk.messagebox.showinfo('Record', 'Data saved !')
     uploadfunc()
 
 def viewGraphicBmi():
@@ -164,7 +163,7 @@ def viewGraphicBmi():
             subprocess.run('./calBmi/doc_BMI/convert_bmilist.py', check=True)
     except FileNotFoundError as no_file:
         print("[!] No BMI file exist !", no_file)
-        messagebox.showinfo('INFO', 'BMI file not found !')
+        tk.messagebox.showinfo('INFO', 'BMI file not found !')
 
 def viewGraphicKilo():
     try:
@@ -172,7 +171,7 @@ def viewGraphicKilo():
             subprocess.run('./calBmi/doc_BMI/convert_kg.py', check=True)
     except FileNotFoundError as no_file:
         print("[!] No kg file exist !", no_file)
-        messagebox.showinfo('INFO', 'Kg file not found !')
+        tk.messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
     subprocess.run('./calBmi/bmi_read.py', check=True)
@@ -181,8 +180,8 @@ def buttdel():
     """
         To earase last data if the usr would to delete it.
     """
-    messagebox.showwarning("Warning", "Are you sure to delete last record !")
-    MSB_War = messagebox.askyesno('Warning', '!!! Warning !!! If you' \
+    tk.messagebox.showwarning("Warning", "Are you sure to delete last record !")
+    MSB_War = tk.messagebox.askyesno('Warning', '!!! Warning !!! If you' \
         'continue, last result will be delete !!!')
     if MSB_War == 1:
         try:
@@ -213,7 +212,7 @@ def buttdel():
         except FileNotFoundError:
             print('[!] Sorry, file asked not exist !')
     else:
-        messagebox.showinfo('Info', 'Ok, no data was deleted.')
+        tk.messagebox.showinfo('Info', 'Ok, no data was deleted.')
 
 time_string = tk.IntVar() 
 textDate = tk.Entry(gui, textvariable=time_string,
