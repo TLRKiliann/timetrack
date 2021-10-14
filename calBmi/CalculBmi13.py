@@ -33,6 +33,7 @@ tocallprogressbar()
 gui = tk.Tk()
 gui.title('Time-Track')
 gui.configure(background='DodgerBlue2')
+gui.resizable(False, False)
 
 labelTitle = tk.Label(gui, text="BMI calculator", font=('Times', 18, 'bold'),
     fg='white', bg='DodgerBlue2')
