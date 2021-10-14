@@ -1922,8 +1922,6 @@ class Application(tk.Frame):
         """
             Usr set an alarm to remind him something.
         """
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
         alarmThread(self)
 
     def showSynopsis(self):
@@ -1931,8 +1929,6 @@ class Application(tk.Frame):
             Call synopsis boxapp.py for
             reading data one day before.
         """
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
         callBox(self)
 
     def showPatients(self):
@@ -1940,16 +1936,12 @@ class Application(tk.Frame):
             Call functions in patcaps.py.
             Main frame with all patients.
         """
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
         callResident(self)
 
     def funcPyCon(self):
         """
             Display data from mysql database.
         """
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
         self.master.withdraw()
         subprocess.run('./accessDB.py', check=True)
         self.master.deiconify()
@@ -1958,8 +1950,6 @@ class Application(tk.Frame):
         """
             Explanations about application.
         """
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
         instalpy(self)
 
     def effacer(self):

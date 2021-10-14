@@ -35,11 +35,11 @@ class ScrollCanvas(tk.Frame):
         self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.frame = tk.Frame(self.can)
-        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=tk.RIGHT, fill=Y)
-        self.can.pack(side=tk.LEFT, fill='both', expand=True)
-        self.can.create_window((4,4), window=self.frame, anchor=NW,
+        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
@@ -50,19 +50,19 @@ class TrackDB(tk.Frame):
     """
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue4',
-            padx=20, pady=20, relief=GROOVE)
+            padx=20, pady=20, relief=tk.GROOVE)
         self.master.title('Times-Track DataBase Viewer')
         # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = tk.Canvas(self, width=1250, height=800, bg='white')
         self.frame = tk.Frame(self.can)
-        self.vsb = tk.Scrollbar(self, orient=VERTICAL,
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL,
             command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.create_window((4,4), window=self.frame,
-            anchor=NW, tags="self.frame")
+            anchor=tk.NW, tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
-        self.can.pack(side=tk.LEFT, fill='both', expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
         ID = tk.StringVar()
         Firstname = tk.StringVar()
@@ -94,7 +94,7 @@ class TrackDB(tk.Frame):
                 if len(result) != 0:
                     self.datatt_records.delete(*self.datatt_records.get_children())
                     for row in result:
-                        self.datatt_records.insert('', END, values = row)
+                        self.datatt_records.insert('', tk.END, values = row)
                     sqlCon.commit()
                 sqlCon.close()
                 print("[AccessDB] Step 5 : Sounds good ! Everything works with SQL DB !\n")
@@ -124,7 +124,7 @@ class TrackDB(tk.Frame):
         self.datatt_records.column("disease", width=200)
         self.datatt_records.column("maindiagnostic", width=200)
 
-        self.datatt_records.pack(fill='both', expand=True)
+        self.datatt_records.pack(fill=tk.BOTH, expand=True)
 
         # Button refresh
         #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
@@ -145,9 +145,16 @@ class TrackDB(tk.Frame):
         searchDB()
 
     def onFrameConfigure(self, event):
-        '''Reset the scroll region to encompass the inner frame'''
+        """
+            Reset the scroll region to encompass the inner frame
+            and configure canvas for MouseWheel.
+        """
         self.can.configure(scrollregion=self.can.bbox(ALL))
+        self.can.unbind_all("<Button-4>")
+        self.can.unbind_all("<Button-5>")
 
 if __name__=='__main__':
-    gui = TrackDB()
+    gui = tk.Tk()
+    gui.resizable(False, False)
+    TrackDB(gui).pack()
     gui.mainloop()

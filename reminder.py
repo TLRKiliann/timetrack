@@ -114,3 +114,5 @@ def alarmThread(self):
         window=self.buttsave)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")

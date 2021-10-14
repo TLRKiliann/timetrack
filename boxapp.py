@@ -796,3 +796,5 @@ def callBox(self):
         print("[Err_3] Error unknow boxapp.py 24")
         
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
