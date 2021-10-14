@@ -3,19 +3,12 @@
 
 
 """
-    This main app introduce weight
-    and send back graphical matplotlib
-    representations of BMI and weight.
+    To read data recorded.
 """
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
-import json
-import os
-import subprocess
-import time
 
 
 fen = tk.Tk()
@@ -26,11 +19,11 @@ fen.configure(background='DodgerBlue2')
 top = tk.Frame(fen, bg='DodgerBlue2')
 bottom = tk.Frame(fen, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
 
 labelo = tk.Label(fen, text="BMI results : ", width=15,
     font='Times 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, pady=20)
 
 labelallergy = tk.Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
