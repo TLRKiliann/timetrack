@@ -2,26 +2,29 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
+"""
+    To read data recorded.
+"""
+
+
 import tkinter as tk
 from tkinter import messagebox
 
 
-fen = Tk()
+fen = tk.Tk()
 fen.title("Reader BMI")
 fen.configure(background='DodgerBlue2')
 
-# To place side by side labelo + entrylab
-top = Frame(fen, bg='DodgerBlue2')
-bottom = Frame(fen, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(fen, bg='DodgerBlue2')
+bottom = tk.Frame(fen, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
 
-labelo = Label(fen, text="BMI results : ", width=15,
+labelo = tk.Label(fen, text="BMI results : ", width=15,
     font='Times 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, pady=20)
 
-labelallergy = Label(fen, text="Allergy",
+labelallergy = tk.Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
@@ -49,7 +52,7 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(tk.END, li)
 
 def msgBox():
-    messagebox.showinfo('Info', 'File bmi22.txt does not exist')
+    tk.messagebox.showinfo('Info', 'File bmi22.txt does not exist')
 
 textBox = tk.Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
