@@ -53,7 +53,7 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(tk.END, li)
 
 def msgBox():
-    messagebox.showinfo('Info', 'File bmi8.txt does not exist')
+    tk.messagebox.showinfo('Info', 'File bmi8.txt does not exist')
 
 textBox = tk.Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
