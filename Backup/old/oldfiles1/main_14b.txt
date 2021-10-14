@@ -1,50 +1,15 @@
-----------------------------------------------------------
-Date : 28/09/2021
-Patient name : Ker Moren
----------------------------------------------------------
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 10/10/2021 à 17:22:57 :
+Patient name : Two B
++ Surveillance respiratoire requise
+---
 
 
-***************************************************************************
-Date : 28/09/2021
-Patient name : Ker Moren
-pH : 5
-Leuco : 0
-Nit : -
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : neg
-Hb : neg
-***************************************************************************
-
-----------------------------------------------------------
-Date : 28/09/2021
-Patient name : Ker Moren
----------------------------------------------------------
-
-----------------------------------------------------------
-Date : 28/09/2021
-Patient name : Ker Moren
-# Fluanxol : 28/09/2021 checked
-# Haldol : 28/09/2021 checked
-# Invega : 28/09/2021 checked
-# Nozinan : 28/09/2021 checked
-# Prazine : 28/09/2021 checked
----------------------------------------------------------
-
-
-***************************************************************************
-Date : 28/09/2021
-Patient name : Ker Moren
-pH : 5
-Leuco : 0
-Nit : -
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : neg
-Hb : neg
-***************************************************************************
-
+Implemented as : 10/10/2021 at 17:25:24 :
+Pansement (PSMT) :
+Changement de venflon :
+Bilan hydrique :
+PCA (pompe antalgie) :
 
 

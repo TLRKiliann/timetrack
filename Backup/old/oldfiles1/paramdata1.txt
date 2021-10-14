@@ -75,3 +75,25 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 10/10/2021
+Hour : 16:52:40
+Name and Surname : Two B
+TA : 120/80mmHg
+Puls : 88/min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 14/10/2021
+Hour : 20:50:19
+Name and Surname : Two B
+TA : 123/77mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 35.9°C
+Glycemie : 4.5 mmol/l
+Douleurs (Pain) : 0/10
+

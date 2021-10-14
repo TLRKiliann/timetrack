@@ -2,17 +2,13 @@
 # -*- coding: utf-8 -*-
 
 
-#import os
-#import subprocess
 import datetime
-#import time
 import json
-#import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
 from matplotlib.dates import AutoDateLocator
-#from matplotlib.dates import AutoDateFormatter
+from matplotlib.dates import AutoDateFormatter
 
 
 file = open('./calBmi/doc_BMI/file_bmi.json')

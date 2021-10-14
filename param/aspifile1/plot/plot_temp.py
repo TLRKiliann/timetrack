@@ -101,8 +101,8 @@ try:
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('navy')
 
-        plt.plot(x_axis, y_axis, 'o', color='teal')
-        plt.plot(x_axis, y_axis, '--', color='teal')
+        plt.plot(x_axis, y_axis, 'o', color='red')
+        plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",

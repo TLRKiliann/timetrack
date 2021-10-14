@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-#from tkinter import *
-#from tkinter import messagebox
 import os
 import subprocess
 import datetime
@@ -82,7 +80,7 @@ except ValueError as dat_err:
     print("+ Invalid number (no: . or , !)", dat_err)
 
 try:
-    list2 = list(map(int, list2))
+    list2 = list(map(float, list2))
 except ValueError as base_err:
     print("+ Invalid number (no: . or , !)", base_err)
     list2 = []
@@ -97,10 +95,9 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Kg by Day',
+        fig.set_facecolor("lightsteelblue")
+        lab = fig.suptitle('Kilo (Kg) day after day',
             fontsize=18)
-        lab.set_color('navy')
         lab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
@@ -109,25 +106,24 @@ try:
         labelc.set_color('navy')
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('navy')
+
         plt.plot(x_axis, y_axis, 'o', color='teal')
         plt.plot(x_axis, y_axis, '--', color='teal')
-        
+
         for x,y in zip(x_axis, y_axis):
-            label = "{}".format(y)
+            label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Kg', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        #plt.title('Relevé des kilos par date', fontsize=16)
-        #plt.xticks(rotation=25)
+        plt.ylabel('Kg', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
         plt.legend(['Kg'])
-        plt.gcf().autofmt_xdate(rotation=25)
+        plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
-except ValueError as graph_err:
-    print("Invalid number", graph_err)
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
 
 # to verify if file exist.
 try:
@@ -163,16 +159,22 @@ try:
         locator = AutoDateLocator()
         axes.xaxis.set_major_locator(locator)
         ax = plt.gcf().axes[0]
+
         ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         min_date = date2num(datetime.datetime.strptime(convert_line, "%d/%m/%Y"))
         max_date = date2num(datetime.datetime.strptime(line_2, "%d/%m/%Y"))
         axes.set_xlim([min_date, max_date])
 
+        for x,y in zip(x_axis, y_axis):
+            label = "{:.1f}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+
         plt.plot(x_axis, y_axis, 'o--', color='purple')
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Kg by Date customised', fontsize=16)
-        plt.legend(['kg/date'])
+        plt.title('Kilo by Year', fontsize=16)
+        plt.legend(['kg/year'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(toshow_grid)
         plt.show()
