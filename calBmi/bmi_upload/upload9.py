@@ -2,7 +2,6 @@
 # -*- coding : utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -27,6 +26,7 @@ def managetask(root):
         mode = 'indeterminate')
     pb.pack()
     pb.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
 def process_unknown_duration(root):
@@ -36,33 +36,33 @@ def process_unknown_duration(root):
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("[+] File bmi9.txt uploaded !")
-        #messagebox.showinfo("INFO", "bmi9.txt uploaded...")
+        print("[Upload] File bmi9.txt uploaded !")
+        #tk.messagebox.showinfo("INFO", "bmi9.txt uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No bmi9.txt to upload...")
+        tk.messagebox.showerror("Error", "No bmi9.txt to upload...")
 
     secproc = subprocess.run(["scp", "./calBmi/doc_BMI9/file_kg.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/file_kg.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
-        print("[+] File file_kg.json uploaded !")
-        #messagebox.showinfo("INFO", "file_kg.json uploaded...")
+        print("[Upload] File file_kg.json uploaded !")
+        #tk.messagebox.showinfo("INFO", "file_kg.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No file_kg.json to upload...")
+        tk.messagebox.showerror("Error", "No file_kg.json to upload...")
 
     thirdproc = subprocess.run(["scp", "./calBmi/doc_BMI9/file_bmi.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/file_bmi.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
-        print("[+] File file_bmi.json uploaded !")
-        #messagebox.showinfo("INFO", "file_bmi.json uploaded...")
+        print("[Upload] File file_bmi.json uploaded !")
+        #tk.messagebox.showinfo("INFO", "file_bmi.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No file_bmi.json to upload...")
+        tk.messagebox.showerror("Error", "No file_bmi.json to upload...")
 
     print('Upload done !')
     root.quit()

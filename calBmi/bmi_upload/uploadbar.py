@@ -2,7 +2,11 @@
 # -*- coding : utf-8 -*-
 
 
-from tkinter import *
+"""
+    Uploadbar for calcul BMI.
+"""
+
+
 import tkinter as tk
 from tkinter import ttk
 import time
@@ -25,6 +29,7 @@ def task(root):
         mode = 'determinate')
     pb.pack()
     pb.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
 def process_of_unknown_duration(root):
@@ -36,6 +41,6 @@ def uploadmain():
     root = tk.Tk()
     thrd=threading.Thread(target=process_of_unknown_duration, args=(root,))
     thrd.start()
-    task(root)  # This will block while the mainloop runs
+    task(root)
     thrd.join()
     root.destroy()
