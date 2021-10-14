@@ -203,5 +203,6 @@ if __name__=='__main__':
                 print(note_change)
 
     root = tk.Tk()
+    root.resizable(False, False)
     app = Control(root)
     root.mainloop()
