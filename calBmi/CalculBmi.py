@@ -22,13 +22,14 @@ from bmi_download.progresstask1 import downloadata
 from bmi_upload.uploadbar import uploadmain
 from bmi_upload.upload1 import uploadata
 
-
+"""
 def tocallprogressbar():
-    """
+
         To display progress bar with current download
-    """
+
     downloadata()
 tocallprogressbar()
+"""
 
 gui = tk.Tk()
 gui.title('Time-Track')

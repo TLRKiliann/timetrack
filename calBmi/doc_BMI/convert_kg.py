@@ -6,6 +6,7 @@ import os
 import subprocess
 import datetime
 import json
+import random
 import matplotlib.pyplot as plt
 from matplotlib import dates
 import matplotlib.dates as mdates
@@ -68,7 +69,7 @@ for key, value in dicolist.items():
 
 print("\nList of dates :")
 print("----------------------------------")
-print(list1)
+print("Voici les valeurs list1 : ", list1)
 
 print("\nList of weight :")
 print("------------------------")
@@ -85,15 +86,11 @@ except ValueError as base_err:
     print("[!] Invalid number (no: . or , !)", base_err)
     list2 = []
 
-xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in realist1]
-print(xdates)
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print("xdates values : ", xdates)
 
-x_axis = (xdates)
+x_axis = xdates
 y_axis = list2
-
-# ceci est superflu, puisque l'autoscaler devrait le faire correctement, mais
-# utilisez date2num et num2date pour convertir entre les dates et les flottants si
-# si vous le souhaitez ; date2num et num2date convertissent tous deux une instance ou une séquence.
 
 try:
     show_grid = True
@@ -106,21 +103,21 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labely = plt.ylabel("y-label")
-        labely.set_color('navy')
-        labelx = plt.xlabel("x-label")
-        labelx.set_color('navy')
+        labelcol_x = plt.ylabel("y-label")
+        labelcol_x.set_color('navy')
+        labelcol_y = plt.xlabel("x-label")
+        labelcol_y.set_color('navy')
 
         for x, y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
-                xytext=(0,10), ha='center')
-
-        plt.plot(x_axis, y_axis, 'o', color='teal')
-        plt.plot(x_axis, y_axis, '--', color='teal')
+                xytext=(0, 10), ha='center')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-
+        
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='teal')
+        plt.plot(reo_x, reo_y, '--', color='teal')
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.legend(['Kg'])
@@ -175,7 +172,10 @@ try:
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
-        plt.plot(x_axis, y_axis, 'o--', color='purple')
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='purple')
+        plt.plot(reo_x, reo_y, '--', color='purple')
+
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Kilo by Year', fontsize=16)
