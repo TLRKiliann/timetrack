@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 
-import datetime
 import json
+import datetime
 import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
@@ -77,11 +77,9 @@ x_axis = converted_dates
 formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
-
-
 # or seaborn-darkgrid
 show_grid = True
-with plt.style.context(('dark_background')):
+with plt.style.context('dark_background'):
     figure, axes = plt.subplots()
     locator = AutoDateLocator()
     axes.xaxis.set_major_locator(locator)

@@ -2,19 +2,19 @@
     "data": [
         {
             "Date": "15/10/2021 : 10:21:24",
-            "Diastol": "88"
+            "Temperature": "36.7"
         },
         {
             "Date": "07/04/2021 : 10:21:24",
-            "Diastol": "88"
+            "Temperature": "36.7"
         },
         {
             "Date": "07/04/2021 : 10:21:24",
-            "Diastol": "77"
+            "Temperature": "36.3"
         },
         {
             "Date": "25/08/2021 : 10:21:24",
-            "Diastol": "84"
+            "Temperature": "36.4"
         }
     ]
 }

@@ -20,7 +20,7 @@ import time
 import json
 from playsound import playsound
 
-#import passw
+import passw
 
 from boxapp import callBox
 from cpfoldtrans import loaderfile

@@ -7,7 +7,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import subprocess
 from playsound import playsound
-#from tt_download import launchdownload
+from tt_download import launchdownload
 
 
 window = tk.Tk()
@@ -47,7 +47,7 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-    #launchdownload()
+    launchdownload()
 
 def validentry():
     """

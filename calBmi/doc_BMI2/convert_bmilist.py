@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
 from matplotlib.dates import AutoDateLocator
-#from matplotlib.dates import AutoDateFormatter
+from matplotlib.dates import AutoDateFormatter
 
 
 file = open('./calBmi/doc_BMI2/file_bmi.json')
@@ -71,14 +71,14 @@ print(list2)
 list2 = list(map(float, list2))
 list1 = list(map(str, list1))
 
-converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d-%m-%Y']))
+converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
 x_axis = converted_dates
 formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
 # or seaborn-darkgrid
 show_grid = True
-with plt.style.context('dark_background'):
+with plt.style.context('seaborn-darkgrid'):
     figure, axes = plt.subplots()
     locator = AutoDateLocator()
     axes.xaxis.set_major_locator(locator)
@@ -88,11 +88,11 @@ with plt.style.context('dark_background'):
     max_date = date2num(datetime.datetime.strptime("31/12/2021", "%d/%m/%Y"))
     axes.set_xlim([min_date, max_date])
 
-    plt.bar(x_axis, y_axis, width=1, color='yellow')
+    plt.bar(x_axis, y_axis, width=1, color='blue')
     plt.ylabel('BMI', fontsize=14)
     plt.xlabel('Dates', fontsize=14)
     plt.title('BMI by Date', fontsize=16)
     plt.legend(['BMI/date'])
-    plt.gcf().autofmt_xdate(rotation=45)
     plt.grid(show_grid)
+    plt.gcf().autofmt_xdate(rotation=45)
     plt.show()

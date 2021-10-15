@@ -77,12 +77,12 @@ print(list2)
 try:
     list1 = list(map(str, list1))
 except ValueError as dat_err:
-    print("+ Invalid number (no: . or , !)", dat_err)
+    print("[!] Invalid number (no: . or , !)", dat_err)
 
 try:
     list2 = list(map(float, list2))
 except ValueError as base_err:
-    print("+ Invalid number (no: . or , !)", base_err)
+    print("[!] Invalid number (no: . or , !)", base_err)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -102,18 +102,18 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
-
-        plt.plot(x_axis, y_axis, 'o', color='teal')
-        plt.plot(x_axis, y_axis, '--', color='teal')
+        labely = plt.ylabel("y-label")
+        labely.set_color('navy')
+        labelx = plt.xlabel("x-label")
+        labelx.set_color('navy')
 
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
+
+        plt.plot(x_axis, y_axis, 'o', color='teal')
+        plt.plot(x_axis, y_axis, '--', color='teal')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Kg', fontsize=14)
@@ -178,6 +178,6 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(toshow_grid)
         plt.show()
-except NameError as data_err:
-    print("Data BMI error", data_err)
+except NameError as err_kgyear:
+    print("Data BMI error", err_kgyear)
     messagebox.showwarning("Warning", "None value was entered !")

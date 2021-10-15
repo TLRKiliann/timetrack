@@ -2,16 +2,13 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
-from tkinter import messagebox
 import os
-import time
 import subprocess
-import json
 import datetime
-import matplotlib
+import json
 import matplotlib.pyplot as plt
 from matplotlib import dates
+import matplotlib.dates as mdates
 from matplotlib.dates import date2num
 from matplotlib.dates import AutoDateLocator
 from matplotlib.dates import AutoDateFormatter
@@ -77,36 +74,56 @@ print("\nList of weight :")
 print("------------------------")
 print(list2)
 
-list2 = list(map(float, list2))
-list1 = list(map(str, list1))
+try:
+    list1 = list(map(str, list1))
+except ValueError as dat_err:
+    print("[!] Invalid number (no: . or , !)", dat_err)
 
-converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d-%m-%Y']))
-x_axis = converted_dates
-formatter = dates.DateFormatter('%d/%m/%Y')
+try:
+    list2 = list(map(float, list2))
+except ValueError as base_err:
+    print("[!] Invalid number (no: . or , !)", base_err)
+    list2 = []
+
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
 y_axis = list2
 
-show_grid = True
-with plt.style.context('dark_background'):
-    figure, axes = plt.subplots()
-    # apply autoformatter for displaying of dates 
-    locator = AutoDateLocator()
-    axes.xaxis.set_major_locator(locator)
-    ax = plt.gcf().axes[0]
-    ax.xaxis.set_major_formatter(formatter)
-    #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
-    min_date = date2num(datetime.datetime.strptime('01/01/2021', "%d/%m/%Y"))
-    max_date = date2num(datetime.datetime.strptime('31/12/2021', "%d/%m/%Y"))
-    axes.set_xlim([min_date, max_date])
-    #figure.autofmt_xdate()
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        fig = plt.figure()
+        fig.set_facecolor("lightsteelblue")
+        lab = fig.suptitle('Kilo (Kg) day after day',
+            fontsize=18)
+        lab.set_color('navy')
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='navy')
+        ax.tick_params(axis='y', colors='navy')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('navy')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('navy')
 
-    plt.plot(x_axis, y_axis, 'o--', color='cyan')
-    plt.ylabel('Kg', fontsize=14)
-    plt.xlabel('Dates', fontsize=14)
-    plt.title('Kg by Date', fontsize=16)
-    plt.legend(['kg/date'])
-    plt.grid(show_grid)
-    plt.gcf().autofmt_xdate(rotation=45)
-    plt.show()
+        plt.plot(x_axis, y_axis, 'o', color='teal')
+        plt.plot(x_axis, y_axis, '--', color='teal')
+
+        for x,y in zip(x_axis, y_axis):
+            label = "{:.1f}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        plt.ylabel('Kg', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.legend(['Kg'])
+        plt.gcf().autofmt_xdate(rotation=45)
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
 
 # to verify if file exist.
 try:
@@ -133,27 +150,34 @@ try:
 except NameError as err_nam:
     print("None value was checked", err_nam)
 
+# or seaborn-darkgrid
 try:
-    show_grid = True
+    toshow_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
 
         locator = AutoDateLocator()
         axes.xaxis.set_major_locator(locator)
         ax = plt.gcf().axes[0]
-        ax.xaxis.set_major_formatter(formatter)
-        min_date = date2num(datetime.datetime.strptime(convert_line, "%d-%m-%Y"))
-        max_date = date2num(datetime.datetime.strptime(line_2, "%d-%m-%Y"))
+
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        min_date = date2num(datetime.datetime.strptime(convert_line, "%d/%m/%Y"))
+        max_date = date2num(datetime.datetime.strptime(line_2, "%d/%m/%Y"))
         axes.set_xlim([min_date, max_date])
+
+        for x,y in zip(x_axis, y_axis):
+            label = "{:.1f}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
 
         plt.plot(x_axis, y_axis, 'o--', color='purple')
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Kg by Date customised', fontsize=16)
-        plt.legend(['kg/date'])
+        plt.title('Kilo by Year', fontsize=16)
+        plt.legend(['kg/year'])
         plt.gcf().autofmt_xdate(rotation=45)
-        plt.grid(show_grid)
+        plt.grid(toshow_grid)
         plt.show()
-except NameError as data_err:
-    print("Data BMI error", data_err)
+except NameError as err_kgyear:
+    print("Data BMI error", err_kgyear)
     messagebox.showwarning("Warning", "None value was entered !")
