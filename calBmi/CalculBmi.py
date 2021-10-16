@@ -90,6 +90,17 @@ def buttRecord():
     """
         To enter BMI in an text zone entry
     """
+    msg_quest = tk.messagebox.askyesno('Record', 'Do you want to save ?')
+    if msg_quest == 1:
+        launchSaver()
+        tk.messagebox.showinfo("Info", "Data saved !")
+    else:
+        tk.messagebox.showinfo("Info", "Nothing has changed !")
+
+def launchSaver():
+    """
+        To enter BMI in an text zone entry
+    """
     num1 = float((entryNum1.get()))
     num2 = float((entryNum2.get()))
     result = (num1)/(num2*num2)
@@ -154,28 +165,31 @@ def buttRecord():
             'Kg' : entryNum1.get()})
         with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
-
-    tk.messagebox.showinfo('Record', 'Data saved !')
     uploadfunc()
 
 def viewGraphicBmi():
     try:
         if os.path.getsize('./calBmi/doc_BMI/file_bmi.json'):
             subprocess.run('./calBmi/doc_BMI/convert_bmilist.py', check=True)
-    except FileNotFoundError as no_file:
-        print("[!] No BMI file exist !", no_file)
+    except FileNotFoundError as err_fnfbmi:
+        print("[!] No BMI file exist !", err_fnfbmi)
         tk.messagebox.showinfo('INFO', 'BMI file not found !')
 
 def viewGraphicKilo():
     try:
         if os.path.getsize('./calBmi/doc_BMI/file_kg.json'):
             subprocess.run('./calBmi/doc_BMI/convert_kg.py', check=True)
-    except FileNotFoundError as no_file:
-        print("[!] No kg file exist !", no_file)
+    except FileNotFoundError as err_fnfkg:
+        print("[!] No kg file exist !", err_fnfkg)
         tk.messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
-    subprocess.run('./calBmi/bmi_read.py', check=True)
+    try:
+        if os.path.getsize('./calBmi/bmi_read.py'):
+            subprocess.run('./calBmi/bmi_read.py', check=True)
+    except FileNotFoundError as err_fnfread:
+        print("[!] bmi_read.py file doesn't exist !", err_fnfread)
+        tk.messagebox.showinfo('INFO', 'File bmi_read.py not found !')
 
 def buttdel():
     """
