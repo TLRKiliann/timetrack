@@ -161,8 +161,6 @@ def launchSaver():
         dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
         with open('./calBmi/doc_BMI10/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
-
-    tk.messagebox.showinfo('Record', 'Data saved !')
     uploadfunc()
 
 def viewGraphicBmi():
