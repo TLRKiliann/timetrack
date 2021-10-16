@@ -12,15 +12,15 @@
 
 
 import tkinter as tk
-from functools import partial
 from tkinter import messagebox
 import time
 import os
 import subprocess
 import json
-from bmi_download.progresstask4 import downloadata
+from functools import partial
+from bmi_download.progresstask1 import downloadata
 from bmi_upload.uploadbar import uploadmain
-from bmi_upload.upload4 import uploadata
+from bmi_upload.upload1 import uploadata
 
 
 def tocallprogressbar():
@@ -70,19 +70,15 @@ def call_result(textBox, number1, number2):
         if result < 18.5:
             textBox.insert(tk.INSERT, "!!! Underweight !!!\n"
                 "Your BMI (IMC) is : %s" % round(result, 3))
-            return
         elif result >= 18.5 and result <= 24.9:
             textBox.insert(tk.INSERT, "BMI is in the standards.\n"
                 "BMI (IMC) is : %s" % round(result, 3))
-            return
         elif result >= 25 and result <= 29.9:
             textBox.insert(tk.INSERT, "! Overweight !\n"
                 "BMI (IMC) is : %s" % round(result, 3))
-            return
         else:
             textBox.insert(tk.INSERT, "!!! Obesity !!!\n"
                 "BMI (IMC) is : %s" % round(result, 3))
-            return
     except ValueError as val_err:
         print("[!] An error has occured !", val_err)
         tk.messagebox.showwarning("Warning", "Please, enter a valid number !")
@@ -218,7 +214,7 @@ def buttdel():
 time_string = tk.IntVar()
 textDate = tk.Entry(gui, textvariable=time_string,
     highlightbackground='gray', bd=4)
-time_string.set(time.strftime("%d-%m-%Y"))
+time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2, padx=10)
 
 time_Htring = tk.IntVar()
@@ -240,13 +236,13 @@ textName.grid(row=3, column=2, padx=10)
 number1 = tk.StringVar()
 entryNum1 = tk.Entry(gui, textvariable=number1,
     width=6, bd=3, highlightbackground='gray')
-number1.set('ex : 75')
+number1.set('ex:75.4')
 entryNum1.grid(sticky=tk.W, row=4, column=2, padx=10)
 
 number2 = tk.StringVar()
 entryNum2 = tk.Entry(gui, textvariable=number2,
     width=6, bd=3, highlightbackground='gray')
-number2.set('1.00')
+number2.set('ex:1.72')
 entryNum2.grid(sticky=tk.W, row=5, column=2, padx=10)
 
 textBox = tk.Text(gui, height=2, width=25, font=12, relief=tk.SUNKEN)
