@@ -2,12 +2,11 @@
 # -*- coding : utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import os
 import subprocess
-import time
 import threading
 
 
@@ -27,20 +26,24 @@ def managetask(root):
         mode = 'indeterminate')
     pb.pack()
     pb.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
 def process_unknown_duration(root):
-    time.sleep(1)
+    """
+        To upload vital parameters files
+    """
+    #time.sleep(1)
     proc = subprocess.run(["scp", "./param/paramdata22.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/paramdata22.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("[+] File paramdata22.txt uploaded !")
-        #messagebox.showinfo("INFO", "paramdata22.txt uploaded...")
+        #tk.messagebox.showinfo("INFO", "paramdata22.txt uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No paramdata22.txt to upload...")
+        tk.messagebox.showerror("Error", "No paramdata22.txt to upload...")
 
     secproc = subprocess.run(["scp", "./param/aspifile22/diastol.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/diastol.json"],
@@ -48,10 +51,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("[+] File diastol.json uploaded !")
-        #messagebox.showinfo("INFO", "diastol.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "diastol.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No diastol.json to upload...")
+        tk.messagebox.showerror("Error", "No diastol.json to upload...")
 
     thirdproc = subprocess.run(["scp", "./param/aspifile22/systol.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/systol.json"],
@@ -59,10 +62,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
         print("[+] File systol.json uploaded !")
-        #messagebox.showinfo("INFO", "systol.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "systol.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No systol.json to upload...")
+        tk.messagebox.showerror("Error", "No systol.json to upload...")
 
     fourproc = subprocess.run(["scp", "./param/aspifile22/dlr.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/dlr.json"],
@@ -70,10 +73,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(fourproc.stderr))
     if fourproc.stderr == b'':
         print("[+] File dlr.json uploaded !")
-        #messagebox.showinfo("INFO", "dlr.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "dlr.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No dlr.json to upload...")
+        tk.messagebox.showerror("Error", "No dlr.json to upload...")
 
     fiveproc = subprocess.run(["scp", "./param/aspifile22/freq.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/freq.json"],
@@ -81,10 +84,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(fiveproc.stderr))
     if fiveproc.stderr == b'':
         print("[+] File freq.json uploaded !")
-        #messagebox.showinfo("INFO", "freq.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "freq.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No freq.json to upload...")
+        tk.messagebox.showerror("Error", "No freq.json to upload...")
 
     sixproc = subprocess.run(["scp", "./param/aspifile22/gly.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/gly.json"],
@@ -92,10 +95,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(sixproc.stderr))
     if sixproc.stderr == b'':
         print("[+] File gly.json uploaded !")
-        #messagebox.showinfo("INFO", "gly.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "gly.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No gly.json to upload...")
+        tk.messagebox.showerror("Error", "No gly.json to upload...")
 
     sevenproc = subprocess.run(["scp", "./param/aspifile22/puls.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/puls.json"],
@@ -103,10 +106,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(sevenproc.stderr))
     if sevenproc.stderr == b'':
         print("[+] File puls.json uploaded !")
-        #messagebox.showinfo("INFO", "puls.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "puls.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No puls.json to upload...")
+        tk.messagebox.showerror("Error", "No puls.json to upload...")
 
     eightproc = subprocess.run(["scp", "./param/aspifile22/sat.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/sat.json"],
@@ -114,10 +117,10 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(eightproc.stderr))
     if eightproc.stderr == b'':
         print("[+] File sat.json uploaded !")
-        #messagebox.showinfo("INFO", "sat.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "sat.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No sat.json to upload...")
+        tk.messagebox.showerror("Error", "No sat.json to upload...")
 
     nineproc = subprocess.run(["scp", "./param/aspifile22/temp.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/temp.json"],
@@ -125,17 +128,19 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(nineproc.stderr))
     if nineproc.stderr == b'':
         print("[+] File temp.json uploaded !")
-        #messagebox.showinfo("INFO", "temp.json uploaded...")
+        #tk.messagebox.showinfo("INFO", "temp.json uploaded...")
     else:
         print("[!] No file to upload !")
-        messagebox.showerror("Error", "No temp.json to upload...")
-    print('Upload done')
+        tk.messagebox.showerror("Error", "No temp.json to upload...")
+    print('[PID] My pid is', os.getpid())
+    print("\n[ - Upload complete - ]")
     root.quit()
 
 def uploadata():
     root = tk.Tk()
     treat = threading.Thread(target=process_unknown_duration, args=(root,))
     treat.start()
-    managetask(root)  # This will block while the mainloop runs
+    print("\n[ Uploading vital parameters... ]\n")
+    managetask(root)
     treat.join()
     root.destroy()
