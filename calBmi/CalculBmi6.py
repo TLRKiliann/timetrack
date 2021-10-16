@@ -18,9 +18,9 @@ import os
 import subprocess
 import json
 from functools import partial
-from bmi_download.progresstask1 import downloadata
+from bmi_download.progresstask6 import downloadata
 from bmi_upload.uploadbar import uploadmain
-from bmi_upload.upload1 import uploadata
+from bmi_upload.upload6 import uploadata
 
 
 def tocallprogressbar():
