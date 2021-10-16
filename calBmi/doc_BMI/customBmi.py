@@ -3,7 +3,6 @@
 
 
 import tkinter as tk
-#from tkinter import messagebox
 import os
 
 
@@ -66,10 +65,5 @@ bouton1 = tk.Button(gui, text="Enter", width=8, bd=3,
     activebackground='pale turquoise',
     command = lambda: get(monthVal, month_start, monthEnd, month_end))
 bouton1.pack(side=tk.LEFT, padx=50, pady=20)
-"""
-buttQuit = tk.Button(gui, text="Quit", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='pale turquoise', command=quit)
-buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
-"""
+
 gui.mainloop()
