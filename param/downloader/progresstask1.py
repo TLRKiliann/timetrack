@@ -8,7 +8,6 @@
 """
 
 
-#from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -37,6 +36,7 @@ def task(root):
         mode = 'indeterminate')
     pb_hD.pack()
     pb_hD.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
 def process_of_unknown_duration(root):
