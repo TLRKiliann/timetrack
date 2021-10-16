@@ -159,7 +159,7 @@ except NameError as err_nam:
 # Matplotlib seaborn-darkgrid
 try:
     toshow_grid = True
-    with plt.style.context('seaborn-dark'):
+    with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
 
         for x,y in zip(x_axis, y_axis):

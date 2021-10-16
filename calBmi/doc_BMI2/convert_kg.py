@@ -131,7 +131,7 @@ try:
     if os.path.getsize('./calBmi/doc_BMI2/customBmi.py'):
         subprocess.run('./calBmi/doc_BMI2/customBmi.py', check=True)
 except FileNotFoundError as callfile1:
-    print("+ File customBmi.py doesn't exist !", callfile1)
+    print("[!] File customBmi.py doesn't exist !", callfile1)
 
 # to read into file the dates entered.
 try:
@@ -141,7 +141,7 @@ try:
         line_2=namefile.readline()
         print(line_2)
 except FileNotFoundError as callfile2:
-    print("+ File custom_kg.txt doesn't exist !", callfile2)
+    print("[!] File custom_kg.txt doesn't exist !", callfile2)
 
 # to delete '\n' at the end of line_1
 try:
