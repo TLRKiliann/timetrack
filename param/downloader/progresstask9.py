@@ -8,12 +8,10 @@
 """
 
 
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import threading
-import time
 import subprocess
 import os
 
@@ -46,7 +44,7 @@ def process_of_unknown_duration(root):
         with root as one of the input And once
         done, add root.quit() at the end.
     """
-    time.sleep(1)
+    #time.sleep(1)
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/paramdata9.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
