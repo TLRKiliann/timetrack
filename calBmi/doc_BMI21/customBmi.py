@@ -3,7 +3,6 @@
 
 
 import tkinter as tk
-from tkinter import messagebox
 import os
 
 
@@ -12,27 +11,25 @@ def get(monthVal, month_start, monthEnd, month_end):
         Entry at first time
         a patient with entry button
     """
-    MsgBox = tk.messagebox.askyesno('Enter dates', 'Do you want to enter these dates ?')
-    if MsgBox == 1:
-        monthVal = month_start.get()
-        monthEnd = month_end.get()
-        print(monthVal)
-        print(monthEnd)
-        try:
-            if os.path.getsize('./calBmi/doc_BMI21/custom_kg.txt'):
-                print("+ File 'custom_kg.txt' exist !")
-                with open('./calBmi/doc_BMI21/custom_kg.txt', 'w+') as namefile:
-                    namefile.write(monthVal)
-                    namefile.write('\n')
-                    namefile.write(monthEnd)
-        except FileNotFoundError as outcom1:
-            print("+ Sorry, file 'custom_kg.txt' not exist !")
-            print(str(outcom1))
-            print("+ File 'custom_kg.txt' created !")
+    monthVal = month_start.get()
+    monthEnd = month_end.get()
+    print(monthVal)
+    print(monthEnd)
+    try:
+        if os.path.getsize('./calBmi/doc_BMI21/custom_kg.txt'):
+            print("+ File 'custom_kg.txt' exist !")
             with open('./calBmi/doc_BMI21/custom_kg.txt', 'w+') as namefile:
                 namefile.write(monthVal)
                 namefile.write('\n')
                 namefile.write(monthEnd)
+    except FileNotFoundError as outcom1:
+        print("+ Sorry, file 'custom_kg.txt' not exist !")
+        print(str(outcom1))
+        print("+ File 'custom_kg.txt' created !")
+        with open('./calBmi/doc_BMI21/custom_kg.txt', 'w+') as namefile:
+            namefile.write(monthVal)
+            namefile.write('\n')
+            namefile.write(monthEnd)
 
     gui.destroy()
 
@@ -67,11 +64,6 @@ bouton1 = tk.Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='pale turquoise',
     command = lambda: get(monthVal, month_start, monthEnd, month_end))
-bouton1.pack(side=tk.LEFT, padx=10, pady=20)
-
-buttQuit = tk.Button(gui, text="Quit", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='pale turquoise', command=quit)
-buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
+bouton1.pack(side=tk.LEFT, padx=50, pady=20)
 
 gui.mainloop()
