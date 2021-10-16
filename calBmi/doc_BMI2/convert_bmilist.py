@@ -76,10 +76,10 @@ x_axis = converted_dates
 formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
-# or seaborn-darkgrid
 show_grid = True
 with plt.style.context('seaborn-darkgrid'):
     figure, axes = plt.subplots()
+
     locator = AutoDateLocator()
     axes.xaxis.set_major_locator(locator)
     ax = plt.gcf().axes[0]
@@ -88,11 +88,11 @@ with plt.style.context('seaborn-darkgrid'):
     max_date = date2num(datetime.datetime.strptime("31/12/2021", "%d/%m/%Y"))
     axes.set_xlim([min_date, max_date])
 
-    plt.bar(x_axis, y_axis, width=1, color='blue')
+    plt.bar(x_axis, y_axis, width=1, color='orange')
     plt.ylabel('BMI', fontsize=14)
     plt.xlabel('Dates', fontsize=14)
-    plt.title('BMI by Date', fontsize=16)
-    plt.legend(['BMI/date'])
+    plt.title('BMI per date', fontsize=18)
+    plt.legend(['bmi/date'])
     plt.grid(show_grid)
     plt.gcf().autofmt_xdate(rotation=45)
     plt.show()
