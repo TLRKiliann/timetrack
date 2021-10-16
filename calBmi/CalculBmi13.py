@@ -90,6 +90,17 @@ def buttRecord():
     """
         To enter BMI in an text zone entry
     """
+    msg_quest = tk.messagebox.askyesno('Record', 'Do you want to save ?')
+    if msg_quest == 1:
+        launchSaver()
+        tk.messagebox.showinfo("Info", "Data saved !")
+    else:
+        tk.messagebox.showinfo("Info", "Nothing has changed !")
+
+def launchSaver():
+    """
+        To enter BMI in an text zone entry
+    """
     num1 = float((entryNum1.get()))
     num2 = float((entryNum2.get()))
     result = (num1)/(num2*num2)
@@ -171,7 +182,12 @@ def viewGraphicKilo():
         tk.messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
-    subprocess.run('./calBmi/bmi_read13.py', check=True)
+    try:
+        if os.path.getsize('./calBmi/bmi_read13.py'):
+            subprocess.run('./calBmi/bmi_read13.py', check=True)
+    except FileNotFoundError as err_fnfread:
+        print("[!] bmi_read13.py file doesn't exist !", err_fnfread)
+        tk.messagebox.showinfo('INFO', 'File bmi_read13.py not found !')
 
 def buttdel():
     """
