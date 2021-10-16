@@ -44,8 +44,6 @@ for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList of weight\n")
-
 data_list2 = []
 for value in zip(value):
     data_list2.append(value[0]['Kg'])
