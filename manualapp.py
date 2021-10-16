@@ -67,6 +67,14 @@ def instalpy(self):
         "Good point of view over all files :\n"
         "----------------------------------------\n"
         "+ Click on 'Global' button and search file you're interested by.\n"
+        "You can put all files you want in this folder, but it will not be uploaded to server.\n"
+        "For that it's better to upload it with scp command, such as : \n"
+        "(with python3 command :)\n"
+        "subprocess.run(['scp', './Backup/FilesX/yourfile.xyz', 'pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.xyz]',\n"
+        "stderr=subprocess.PIPE)\n"
+        "(or with shell command :)\n"
+        "$ scp ./Backup/FilesX/yourfile.xyz pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.xyz\n"
+
         "+ Click on 'EventBox' for seeing previously about yesterday news and backup will"\
         "be launched every 5 days.\n"
 

@@ -6,7 +6,6 @@ import os
 import subprocess
 import datetime
 import json
-import random
 import matplotlib.pyplot as plt
 from matplotlib import dates
 import matplotlib.dates as mdates
@@ -45,8 +44,6 @@ for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList of weight\n")
-
 data_list2 = []
 for value in zip(value):
     data_list2.append(value[0]['Kg'])
@@ -57,7 +54,7 @@ for data_list1, data_list2 in zip(data_list1, data_list2):
     dicolist[data_list1] = data_list2
 
 print("\nDisplay dictionary :")
-print("---------------------------")
+print("--------------------")
 print(dicolist)
 
 list1 = []
@@ -68,11 +65,11 @@ for key, value in dicolist.items():
     list2.append(value)
 
 print("\nList of dates :")
-print("----------------------------------")
+print("---------------")
 print("Voici les valeurs list1 : ", list1)
 
-print("\nList of weight :")
-print("------------------------")
+print("\nList of kilo :")
+print("--------------")
 print(list2)
 
 try:
@@ -92,14 +89,21 @@ print("xdates values : ", xdates)
 x_axis = xdates
 y_axis = list2
 
+#print(plt.style.available):
+#['Solarize_Light2', '_classic_test_patch', 'bmh', 'classic', 'dark_background', 'fast',
+#'fivethirtyeight', 'ggplot', 'grayscale', 'seaborn', 'seaborn-bright', 'seaborn-colorblind',
+#'seaborn-dark', 'seaborn-dark-palette', 'seaborn-darkgrid', 'seaborn-deep', 'seaborn-muted',
+#'seaborn-notebook', 'seaborn-paper', 'seaborn-pastel', 'seaborn-poster', 'seaborn-talk',
+#'seaborn-ticks', 'seaborn-white', 'seaborn-whitegrid', 'tableau-colorblind10']
+
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Kilo (Kg) day after day',
+        titlab = fig.suptitle('kilograms per date',
             fontsize=18)
-        lab.set_color('navy')
+        titlab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
@@ -113,14 +117,14 @@ try:
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0, 10), ha='center')
 
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        
         reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
         plt.plot(reo_x, reo_y, 'o', color='teal')
         plt.plot(reo_x, reo_y, '--', color='teal')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.legend(['Kg'])
+        plt.legend(['Kg/Date'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
@@ -132,9 +136,9 @@ try:
     if os.path.getsize('./calBmi/doc_BMI/customBmi.py'):
         subprocess.run('./calBmi/doc_BMI/customBmi.py', check=True)
 except FileNotFoundError as callfile1:
-    print("+ File customBmi.py doesn't exist !", callfile1)
+    print("[!] File customBmi.py doesn't exist !", callfile1)
 
-# to read into file the dates entered.
+# to read date into file.
 try:
     with open('./calBmi/doc_BMI/custom_kg.txt', 'r') as namefile:
         line_1 = namefile.readline()
@@ -142,7 +146,7 @@ try:
         line_2 = namefile.readline()
         print(line_2)
 except FileNotFoundError as callfile2:
-    print("+ File custom_kg.txt doesn't exist !", callfile2)
+    print("[!] File custom_kg.txt doesn't exist !", callfile2)
 
 # to delete last string ('\n') at the end of line_1
 try:
@@ -152,20 +156,11 @@ try:
 except NameError as err_nam:
     print("None value was checked", err_nam)
 
-# or seaborn-darkgrid
+# Matplotlib seaborn-darkgrid
 try:
     toshow_grid = True
-    with plt.style.context('seaborn-darkgrid'):
+    with plt.style.context('seaborn-dark'):
         figure, axes = plt.subplots()
-
-        locator = AutoDateLocator()
-        axes.xaxis.set_major_locator(locator)
-        ax = plt.gcf().axes[0]
-
-        ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        min_date = date2num(datetime.datetime.strptime(convert_line, "%d/%m/%Y"))
-        max_date = date2num(datetime.datetime.strptime(line_2, "%d/%m/%Y"))
-        axes.set_xlim([min_date, max_date])
 
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
@@ -176,13 +171,22 @@ try:
         plt.plot(reo_x, reo_y, 'o', color='purple')
         plt.plot(reo_x, reo_y, '--', color='purple')
 
+        locator = AutoDateLocator()
+        axes.xaxis.set_major_locator(locator)
+        ax = plt.gcf().axes[0]
+
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        min_date = date2num(datetime.datetime.strptime(convert_line, "%d/%m/%Y"))
+        max_date = date2num(datetime.datetime.strptime(line_2, "%d/%m/%Y"))
+        axes.set_xlim([min_date, max_date])
+
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Kilo by Year', fontsize=16)
-        plt.legend(['kg/year'])
+        plt.suptitle('kilograms per year', fontsize=18)
+        plt.legend(['Kg/Date'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(toshow_grid)
         plt.show()
 except NameError as err_kgyear:
     print("Data BMI error", err_kgyear)
-    messagebox.showwarning("Warning", "None value was entered !")
+    messagebox.showwarning("Warning", "No value entered !")

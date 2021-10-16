@@ -56,7 +56,7 @@ for data_list1, data_list2 in zip(data_list1, data_list2):
     dicolist[data_list1] = data_list2
 
 print("\nDisplay dictionary :")
-print("---------------------------")
+print("--------------------")
 print(dicolist)
 
 list1 = []
@@ -65,13 +65,13 @@ list2 = []
 for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
-    
-print("\nList of dates :")
-print("----------------------------------")
-print(list1)
 
-print("\nList of weight :")
-print("------------------------")
+print("\nList of dates :")
+print("---------------")
+print("Voici les valeurs list1 : ", list1)
+
+print("\nList of kilo :")
+print("--------------")
 print(list2)
 
 try:
@@ -96,29 +96,30 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Kilo (Kg) day after day',
+        titlab = fig.suptitle('kilograms per date',
             fontsize=18)
-        lab.set_color('navy')
+        titlab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
+        labelcol_x = plt.ylabel("y-label")
+        labelcol_x.set_color('navy')
+        labelcol_y = plt.xlabel("x-label")
+        labelcol_y.set_color('navy')
 
-        plt.plot(x_axis, y_axis, 'o', color='teal')
-        plt.plot(x_axis, y_axis, '--', color='teal')
-
-        for x,y in zip(x_axis, y_axis):
+        for x, y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
-                xytext=(0,10), ha='center')
+                xytext=(0, 10), ha='center')
+
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='teal')
+        plt.plot(reo_x, reo_y, '--', color='teal')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.legend(['Kg'])
+        plt.legend(['Kg/Date'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
@@ -150,11 +151,19 @@ try:
 except NameError as err_nam:
     print("None value was checked", err_nam)
 
-# or seaborn-darkgrid
 try:
     toshow_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
+
+        for x,y in zip(x_axis, y_axis):
+            label = "{:.1f}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='purple')
+        plt.plot(reo_x, reo_y, '--', color='purple')
 
         locator = AutoDateLocator()
         axes.xaxis.set_major_locator(locator)
@@ -165,19 +174,13 @@ try:
         max_date = date2num(datetime.datetime.strptime(line_2, "%d/%m/%Y"))
         axes.set_xlim([min_date, max_date])
 
-        for x,y in zip(x_axis, y_axis):
-            label = "{:.1f}".format(y)
-            plt.annotate(label, (x,y), textcoords="offset points",
-                xytext=(0,10), ha='center')
-
-        plt.plot(x_axis, y_axis, 'o--', color='purple')
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Kilo by Year', fontsize=16)
-        plt.legend(['kg/year'])
+        plt.suptitle('kilograms per year', fontsize=18)
+        plt.legend(['Kg/Date'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(toshow_grid)
         plt.show()
 except NameError as err_kgyear:
     print("Data BMI error", err_kgyear)
-    messagebox.showwarning("Warning", "None value was entered !")
+    messagebox.showwarning("Warning", "No value entered !")

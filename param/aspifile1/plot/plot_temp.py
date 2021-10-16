@@ -87,7 +87,6 @@ y_axis = list2
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
         lab = fig.suptitle('Temperature (C°) by Day',
@@ -101,18 +100,17 @@ try:
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('navy')
 
-        plt.plot(x_axis, y_axis, 'o', color='red')
-        plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='teal')
+        plt.plot(reo_x, reo_y, '--', color='teal')
         plt.ylabel('T°C', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.title('Temperature by Date', fontsize=16)
-        #plt.xticks(rotation=25)
         plt.legend(['Temperatures C°'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
