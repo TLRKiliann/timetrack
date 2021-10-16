@@ -122,7 +122,7 @@ try:
         plt.grid(show_grid)
         plt.show()
 except Exception:
-    print("Invalid number")
+    print("[!] Error from graph kg/date (matplotlib)")
 
 # to verify if file exist.
 try:

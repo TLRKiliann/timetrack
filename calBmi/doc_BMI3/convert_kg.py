@@ -113,8 +113,8 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception:
+    print("[!] Error from graph kg/date (matplotlib)")
 
 # to verify if file exist.
 try:
@@ -172,6 +172,5 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(toshow_grid)
         plt.show()
-except NameError as err_kgyear:
-    print("Data BMI error", err_kgyear)
-    messagebox.showwarning("Warning", "No value entered !")
+except Exception:
+    print("[!] Error from graph kg/year (matplotlib)")
