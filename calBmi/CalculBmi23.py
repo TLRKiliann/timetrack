@@ -90,6 +90,17 @@ def buttRecord():
     """
         To enter BMI in an text zone entry
     """
+    msg_quest = tk.messagebox.askyesno('Record', 'Do you want to save ?')
+    if msg_quest == 1:
+        launchSaver()
+        tk.messagebox.showinfo("Info", "Data saved !")
+    else:
+        tk.messagebox.showinfo("Info", "Nothing has changed !")
+
+def launchSaver():
+    """
+        To enter BMI in an text zone entry
+    """
     num1 = float((entryNum1.get()))
     num2 = float((entryNum2.get()))
     result = (num1)/(num2*num2)
@@ -150,8 +161,6 @@ def buttRecord():
         dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
         with open('./calBmi/doc_BMI23/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
-
-    tk.messagebox.showinfo('Record', 'Data saved !')
     uploadfunc()
 
 def viewGraphicBmi():
@@ -171,7 +180,12 @@ def viewGraphicKilo():
         tk.messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
-    subprocess.run('./calBmi/bmi_read23.py', check=True)
+    try:
+        if os.path.getsize('./calBmi/bmi_read23.py'):
+            subprocess.run('./calBmi/bmi_read23.py', check=True)
+    except FileNotFoundError as err_fnfread:
+        print("[!] bmi_read23.py file doesn't exist !", err_fnfread)
+        tk.messagebox.showinfo('INFO', 'File bmi_read23.py not found !')
 
 def buttdel():
     """
