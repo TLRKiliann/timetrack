@@ -128,8 +128,8 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
-except Exception:
-    print("[!] Error from graph kg/date (matplotlib)")
+except Exception as err_val:
+    print("[!] Error from graph kg/date (matplotlib)", err_val)
 
 # to verify if file exist.
 try:
