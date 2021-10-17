@@ -97,7 +97,7 @@ try:
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except Exception err_val:
+except Exception as err_val:
     print("[!] Value Error !!! :", err_val)
 
 try:

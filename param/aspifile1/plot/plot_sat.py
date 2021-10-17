@@ -72,7 +72,7 @@ try:
         #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('SaO2 (%) by Day',
+        lab = fig.suptitle('SaO2% per Day',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -93,13 +93,15 @@ try:
         plt.plot(reo_x, reo_y, '--', color='teal')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('SaO2', fontsize=14)
+        plt.ylabel('Oxygen Saturation', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.legend(['SaO2 %'])
+        #plt.title('SaO2 per Date', fontsize=16)
+        #plt.xticks(rotation=25)
+        plt.legend(['SaO2%'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except Exception err_val:
+except Exception as err_val:
     print("[!] Value Error !!! :", err_val)
 
 try:

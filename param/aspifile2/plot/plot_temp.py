@@ -69,13 +69,13 @@ try:
     list1 = list(map(str, list1))
     print(list1)
 except ValueError as err_vlist1:
-    print("+ False value (no: string or int value)", err_vlist1)
+    print("[!] False value (no: string or int value)", err_vlist1)
 
 #list3 = [int(list2) for list2 in list2]
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
-    print("+ False value (no: string or int value)", err_val)
+    print("[!] False value (no: string or int value)", err_val)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -96,17 +96,19 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
 
-        plt.plot(x_axis, y_axis, 'o', color='teal')
-        plt.plot(x_axis, y_axis, '--', color='teal')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
+
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='red')
+        plt.plot(reo_x, reo_y, '--', color='red')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('T°C', fontsize=14)
@@ -117,13 +119,13 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception as err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile2/data_datetemp.json')
-    print("+ File data_datetemp.json removed !")
+    print("[+] File data_datetemp.json removed !")
     os.remove('./param/aspifile2/data_temp.json')
-    print("+ File data_temp.json removed !\n")
+    print("[+] File data_temp.json removed !\n")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)
