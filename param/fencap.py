@@ -18,7 +18,6 @@ import time
 from downloader.progresstask1 import downloadata
 from uploader.uploadbar import uploadmain
 from uploader.upload1 import uploadata
-import pygame
 
 
 def tocallprogressbar():
@@ -28,13 +27,6 @@ def tocallprogressbar():
     downloadata()
 tocallprogressbar()
 
-def play_rec():
-    """
-        pygame play sounds when usr click on <save> button.
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/ok_butt2.wav')
-    pygame.mixer.music.play()
 
 def writeData(textDate, textHour, textName, textTa, textDia,
         textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
@@ -42,7 +34,6 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         To export data in a json file
         and launching aspiFile1.py
     """
-    play_rec()
     try:
         if os.path.getsize('./param/paramdata1.txt'):
             print("[+] File 'paramdata1.txt' exist !")
@@ -331,28 +322,11 @@ def uploadfunc():
 def mainRead():
     subprocess.run('./param/main_read.py', check=True)
 
-def play():
-    """
-        pygame play sounds when usr click on graphs
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/ok_butt.wav')
-    pygame.mixer.music.play()
-
-def play_error():
-    """
-        pygame play sounds for error, when file doesn't exist.
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/flute_error.wav')
-    pygame.mixer.music.play()
-
 def appelTens(textDate, textName, textTa, textDia):
     """
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/systol.json'):
             uploadcall()
@@ -363,14 +337,12 @@ def appelTens(textDate, textName, textTa, textDia):
     except FileNotFoundError as errorgraph1:
         print('[!] Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelPuls(textDate, textName, textPuls):
     """
         to call aspipuls.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/puls.json'):
             uploadcall()
@@ -381,14 +353,12 @@ def appelPuls(textDate, textName, textPuls):
     except FileNotFoundError as errorgraph2:
         print('[!] Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelSat(textDate, textName, textSa):
     """
         to call aspisat.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/sat.json'):
             uploadcall()
@@ -399,14 +369,12 @@ def appelSat(textDate, textName, textSa):
     except FileNotFoundError as errorgraph3:
         print('[!] Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelFreq(textDate, textName, textFr):
     """
         to call aspifreq.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/freq.json'):
             uploadcall()
@@ -417,14 +385,12 @@ def appelFreq(textDate, textName, textFr):
     except FileNotFoundError as errorgraph4:
         print('[!] Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelTemp(textDate, textName, textTemp):
     """
         to call aspitemp.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/temp.json'):
             uploadcall()
@@ -435,14 +401,12 @@ def appelTemp(textDate, textName, textTemp):
     except FileNotFoundError as errorgraph5:
         print('[!] Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelGly(textDate, textName, textHgt):
     """
         to call aspigly.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/gly.json'):
             uploadcall()
@@ -453,14 +417,12 @@ def appelGly(textDate, textName, textHgt):
     except FileNotFoundError as errorgraph6:
         print('[!] Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelDlr(textDate, textName, textDlrs):
     """
         to call aspidlr.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile1/dlr.json'):
             uploadcall()
@@ -471,7 +433,6 @@ def appelDlr(textDate, textName, textDlrs):
     except FileNotFoundError as errorgraph7:
         print('[!] Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)
         label['text'] = "Sorry the Dlrs plot doesn\'t work ! Data missing !"
-        play_error()
 
 def uploadcall():
     uploadmain()
@@ -495,20 +456,12 @@ def delMain():
         print("[!] Nothing has changed !")
         label['text'] = "Nothing has changed !"
 
-def play_del():
-    """
-        pygame play sounds when usr click on graphs
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/win_vg.wav')
-    pygame.mixer.music.play()
-
 def delSystolDia():
     """
         To erase last line
         of systol.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/systol.json'):
             with open('./param/aspifile1/systol.json', 'r') as filesys:
@@ -524,7 +477,6 @@ def delSystolDia():
     except (FileNotFoundError, IndexError) as out_ta:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_ta)
-        play_error()
     """
         To erase last line
         of diastol.json
@@ -544,14 +496,13 @@ def delSystolDia():
     except (FileNotFoundError, IndexError) as out_dia:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_dia)
-        play_error()
 
 def delPuls():
     """
         To erase last line
         of puls.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/puls.json'):
             with open('./param/aspifile1/puls.json', 'r') as file:
@@ -567,14 +518,13 @@ def delPuls():
     except (FileNotFoundError, IndexError) as out_puls:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, asked not exist !', out_puls)
-        play_error()
 
 def delSat():
     """
         To erase last line
         of sat.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/sat.json'):
             with open('./param/aspifile1/sat.json', 'r') as file:
@@ -590,14 +540,13 @@ def delSat():
     except (FileNotFoundError, IndexError) as out_sat:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_sat)
-        play_error()
 
 def delFreq():
     """
         To erase last line
         of freq.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/freq.json'):
             with open('./param/aspifile1/freq.json', 'r') as file:
@@ -613,14 +562,13 @@ def delFreq():
     except (FileNotFoundError, IndexError) as out_freq:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_freq)
-        play_error()
 
 def delTemp():
     """
         To erase last line
         of temp.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/temp.json'):
             with open('./param/aspifile1/temp.json', 'r') as file:
@@ -636,14 +584,13 @@ def delTemp():
     except (FileNotFoundError, IndexError) as out_temp:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_temp)
-        play_error()
 
 def delGly():
     """
         To erase last line
         of gly.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/gly.json'):
             with open('./param/aspifile1/gly.json', 'r') as file:
@@ -659,14 +606,13 @@ def delGly():
     except (FileNotFoundError, IndexError) as out_gly:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_gly)
-        play_error()
 
 def delDlr():
     """
         To erase last line
         of dlr.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile1/dlr.json'):
             with open('./param/aspifile1/dlr.json', 'r') as file:
@@ -682,7 +628,6 @@ def delDlr():
     except (FileNotFoundError, IndexError) as out_dlr:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_dlr)
-        play_error()
 
 def delEvery():
     """
@@ -691,7 +636,6 @@ def delEvery():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will delete all files with all data !!!")
     if MsgBox == 'yes':
-        play_del()
         delSystolDia()
         delPuls()
         delSat()
@@ -704,7 +648,6 @@ def delEvery():
     else:
         label['text'] = "Nothing has been deleted !"
         print("[!] Nothing has been deleted !")
-        play_error()
 
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
