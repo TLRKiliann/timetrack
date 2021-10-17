@@ -14,7 +14,7 @@
 """
 
 
-from tkinter import *
+#from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
@@ -149,7 +149,7 @@ class TrackDB(tk.Frame):
             Reset the scroll region to encompass the inner frame
             and configure canvas for MouseWheel.
         """
-        self.can.configure(scrollregion=self.can.bbox(ALL))
+        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
         self.can.unbind_all("<Button-4>")
         self.can.unbind_all("<Button-5>")
 
