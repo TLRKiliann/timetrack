@@ -95,20 +95,21 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
 
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
-        plt.plot(reo_x, reo_y, 'o', color='teal')
-        plt.plot(reo_x, reo_y, '--', color='teal')
+        plt.plot(reo_x, reo_y, 'o', color='red')
+        plt.plot(reo_x, reo_y, '--', color='red')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('T°C', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.legend(['Temperatures C°'])

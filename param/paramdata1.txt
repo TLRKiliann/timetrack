@@ -86,3 +86,58 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 17/10/2021
+Hour : 12:42:40
+Name and Surname : Two B
+TA : /mmHg
+Puls : /min
+SaO2 : %
+FR : 18/min
+Temperature : 36.7°C
+Glycemie : 6.2 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 17/10/2021
+Hour : 13:16:33
+Name and Surname : Two B
+TA : xx/xmmHg
+Puls : xx/min
+SaO2 : x%
+FR : x/min
+Temperature : x°C
+Glycemie : x mmol/l
+Douleurs (Pain) : x/10
+
+Date : 17/10/2021
+Hour : 13:16:33
+Name and Surname : Two B
+TA : xx/xmmHg
+Puls : xx/min
+SaO2 : x%
+FR : x/min
+Temperature : x°C
+Glycemie : x mmol/l
+Douleurs (Pain) : x/10
+
+Date : 17/10/2021
+Hour : 13:16:33
+Name and Surname : Two B
+TA : xx/xmmHg
+Puls : xx/min
+SaO2 : x%
+FR : x/min
+Temperature : x°C
+Glycemie : x mmol/l
+Douleurs (Pain) : x/10
+
+Date : 17/10/2021
+Hour : 13:23:36
+Name and Surname : Two B
+TA : xx/xxmmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

@@ -78,23 +78,23 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
-        plt.plot(x_axis, y_axis, 'o', color='blue')
-        plt.plot(x_axis, y_axis, '--', color='blue')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
         
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='teal')
+        plt.plot(reo_x, reo_y, '--', color='teal')
+
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('SaO2', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.title('Relevé des SaO2 en % par date', fontsize=16)
-        #plt.xticks(rotation=25)
         plt.legend(['SaO2 %'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)

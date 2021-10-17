@@ -186,11 +186,6 @@ try:
         labelc.set_color("navy")
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color("navy")
-        plt.plot(x_axis, y_axis, 'o', color='red')
-        plt.plot(x_axis, z_axis, 'o', color='red')
-        plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
-           colors = 'blue',
-           label = 'vline_multiple - full height')
 
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
@@ -202,6 +197,12 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
+        plt.plot(x_axis, y_axis, 'o', color='teal')
+        plt.plot(x_axis, z_axis, 'o', color='teal')
+        plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
+           colors = 'blue',
+           label = 'vline_multiple - full height')
+
         #plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('TA (blood pressure)', fontsize=14)
@@ -211,17 +212,17 @@ try:
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as val:
-    print("+ False entry value, ", val)
+except Exception err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile1/data_date.json')
     os.remove('./param/aspifile1/data_Systol.json')
-    print("+ File data_date.json removed !")
-    print("+ File data_Systol.json removed !")
+    print("[+] File data_date.json removed !")
+    print("[+] File data_Systol.json removed !")
     os.remove('./param/aspifile1/data_dia.json')
     os.remove('./param/aspifile1/data_Diastol.json')
-    print("+ File data_dia.json removed !")
-    print("+ File data_Diastol.json removed !")
+    print("[+] File data_dia.json removed !")
+    print("[+] File data_Diastol.json removed !")
 except OSError as os_err:
     print("+ OS error ! ...", os_err)
