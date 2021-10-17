@@ -182,10 +182,10 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color("navy")
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color("navy")
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
 
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)

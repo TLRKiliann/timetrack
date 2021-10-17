@@ -149,18 +149,18 @@ try:
     list1 = list(map(str, list1))
     print(list1)
 except ValueError as err_vlist1:
-    print("+ False value (no: string or int value)", err_vlist1)
+    print("[!] False value (no: string or int value)", err_vlist1)
 
 try:
     list2 = list(map(int, list2))
 except ValueError as err_vallist2:
-    print("+ False value (no: string or float value)", err_vallist2)
+    print("[!] False value (no: string or float value)", err_vallist2)
     list2 = []
 
 try:
     list4 = list(map(int, list4))
 except ValueError as err_vallist4:
-    print("+ False value (no: string or float value)", err_vallist4)
+    print("[!] False value (no: string or float value)", err_vallist4)
     list4 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -182,16 +182,10 @@ try:
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color("navy")
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color("navy")
-        
-        plt.plot(x_axis, y_axis, 'o', color='red')
-        plt.plot(x_axis, z_axis, 'o', color='red')
-        plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
-           colors = 'blue',
-           label = 'vline_multiple - full height')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
 
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
@@ -203,6 +197,12 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
+        plt.plot(x_axis, y_axis, 'o', color='teal')
+        plt.plot(x_axis, z_axis, 'o', color='teal')
+        plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
+           colors = 'blue',
+           label = 'vline_multiple - full height')
+
         #plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('TA (blood pressure)', fontsize=14)
@@ -212,17 +212,17 @@ try:
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as val:
-    print("+ False entry value, ", val)
+except Exception as err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile3/data_date.json')
     os.remove('./param/aspifile3/data_Systol.json')
-    print("+ File data_date.json removed !")
-    print("+ File data_Systol.json removed !")
+    print("[+] File data_date.json removed !")
+    print("[+] File data_Systol.json removed !")
     os.remove('./param/aspifile3/data_dia.json')
     os.remove('./param/aspifile3/data_Diastol.json')
-    print("+ File data_dia.json removed !")
-    print("+ File data_Diastol.json removed !")
+    print("[+] File data_dia.json removed !")
+    print("[+] File data_Diastol.json removed !")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)

@@ -71,9 +71,8 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Puls/min by Day',
+        lab = fig.suptitle('Pulsations/minute',
             fontsize=18)
-        lab.set_color('navy')
         lab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
@@ -93,9 +92,9 @@ try:
         plt.plot(reo_x, reo_y, '--', color='blue')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Puls/min', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        plt.legend(['Pulsations/min'])
+        plt.ylabel('Pulsations/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.legend(['puls/min'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
