@@ -69,13 +69,13 @@ try:
     list1 = list(map(str, list1))
     print(list1)
 except ValueError as err_vlist1:
-    print("+ False value (no: string or int value)", err_vlist1)
+    print("[!] False value (no: string or int value)", err_vlist1)
 
 #list3 = [int(list2) for list2 in list2]
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
-    print("+ False value (no: string or int value)", err_val)
+    print("[!] False value (no: string or int value)", err_val)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -116,13 +116,13 @@ try:
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile1/data_datetemp.json')
-    print("+ File data_datetemp.json removed !")
+    print("[+] File data_datetemp.json removed !")
     os.remove('./param/aspifile1/data_temp.json')
-    print("+ File data_temp.json removed !\n")
+    print("[+] File data_temp.json removed !\n")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)

@@ -320,7 +320,12 @@ def uploadfunc():
     uploadata()
 
 def mainRead():
-    subprocess.run('./param/main_read.py', check=True)
+    try:
+        os.path.getsize('./param/main_read.py'):
+        subprocess.run('./param/main_read.py', check=True)
+    except FileNotFoundError as fnfe_read:
+        print("[!] Sorry, file main_read.py not found !")
+        label['text'] = "Sorry, file main_read.py not found !"
 
 def appelTens(textDate, textName, textTa, textDia):
     """
@@ -436,25 +441,6 @@ def appelDlr(textDate, textName, textDlrs):
 
 def uploadcall():
     uploadmain()
-
-def delMain():
-    """
-        To erase paramdata1.txt
-    """
-    Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
-        "It will delete paramdata1.txt with all data !!!")
-    if Main_MsgBox == 'yes':
-        try:
-            if os.path.getsize('./param/paramdata1.txt'):
-                os.remove('./param/paramdata1.txt')
-                label['text'] = "File paramdata1.txt has been deleted !"
-                print("[del] File paramdata1.txt has been deleted !")
-        except FileNotFoundError:
-            label['text'] = "Sorry, file asked not exist !"
-            print('[!] Sorry, file asked not exist !')
-    else:
-        print("[!] Nothing has changed !")
-        label['text'] = "Nothing has changed !"
 
 def delSystolDia():
     """
@@ -629,12 +615,12 @@ def delDlr():
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_dlr)
 
-def delEvery():
+def delLastVal():
     """
         To delete all json files
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
-        "It will delete all files with all data !!!")
+        "All the last recorded values will be erased !")
     if MsgBox == 'yes':
         delSystolDia()
         delPuls()
@@ -768,9 +754,9 @@ button2Write.config(text='Quit', width=15,
 button2Write.grid(row=1, column=3)
 
 buttonDel = tk.Button(gui)
-buttonDel.config(text='Erase Last Values', width=15,
+buttonDel.config(text='Cancel ALL LAST', width=15,
     bg='coral', fg='yellow', activebackground='red',
-    activeforeground='white', command=delEvery)
+    activeforeground='white', command=delLastVal)
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = tk.Button(gui)
@@ -783,16 +769,10 @@ buttonWrite.config(text='CAPTURE DATA', width=33,
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = tk.Button(gui)
-buttonMainlec.config(text='Read All Data', width=15,
+buttonMainlec.config(text='Read All Data', width=33,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
-buttonMainlec.grid(row=3, column=3)
-
-buttonDel = tk.Button(gui)
-buttonDel.config(text='Delete File of Data', width=15,
-    bg='coral', fg='yellow', activebackground='red',
-    activeforeground='white', command=delMain)
-buttonDel.grid(row=3, column=4)
+buttonMainlec.grid(row=3, column=3, columnspan=4)
 
 button3Write = tk.Button(gui)
 button3Write.config(text='Graph TA', width=15,

@@ -149,18 +149,18 @@ try:
     list1 = list(map(str, list1))
     print(list1)
 except ValueError as err_vlist1:
-    print("+ False value (no: string or int value)", err_vlist1)
+    print("[!] False value (no: string or int value)", err_vlist1)
 
 try:
     list2 = list(map(int, list2))
 except ValueError as err_vallist2:
-    print("+ False value (no: string or float value)", err_vallist2)
+    print("[!] False value (no: string or float value)", err_vallist2)
     list2 = []
 
 try:
     list4 = list(map(int, list4))
 except ValueError as err_vallist4:
-    print("+ False value (no: string or float value)", err_vallist4)
+    print("[!] False value (no: string or float value)", err_vallist4)
     list4 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -225,4 +225,4 @@ try:
     print("[+] File data_dia.json removed !")
     print("[+] File data_Diastol.json removed !")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)

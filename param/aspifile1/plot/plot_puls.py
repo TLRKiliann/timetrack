@@ -52,12 +52,12 @@ print(list2)
 try:
     list1 = list(map(str, list1))
 except ValueError as dat_err:
-    print("+ Invalid number (no: . or , !)", dat_err)
+    print("[!] Invalid number (no: . or , !)", dat_err)
 
 try:
     list2 = list(map(int, list2))
 except ValueError as base_err:
-    print("+ Invalid number (no: . or , !)", base_err)
+    print("[!] Invalid number (no: . or , !)", base_err)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -71,7 +71,7 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Puls/min by Day',
+        lab = fig.suptitle('Pulsations/minute',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -92,19 +92,19 @@ try:
         plt.plot(reo_x, reo_y, '--', color='blue')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Puls/min', fontsize=12)
+        plt.ylabel('Pulsations/min', fontsize=12)
         plt.xlabel('Dates', fontsize=12)
-        plt.legend(['Pulsations/min'])
+        plt.legend(['puls/min'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile1/data_datepuls.json')
-    print("+ File data_datepuls.json removed !")
+    print("[+] File data_datepuls.json removed !")
     os.remove('./param/aspifile1/data_puls.json')
-    print("+ File data_puls.json removed !\n")
+    print("[+] File data_puls.json removed !\n")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)
