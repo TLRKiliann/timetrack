@@ -92,8 +92,8 @@ try:
         plt.plot(reo_x, reo_y, '--', color='blue')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Pulsations/min', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
+        plt.ylabel('Pulsations/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
         plt.legend(['puls/min'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)

@@ -72,7 +72,7 @@ try:
         #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('SaO2% per Day',
+        lab = fig.suptitle('Oxygen Saturation (SaO2%)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()

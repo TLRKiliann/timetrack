@@ -89,7 +89,7 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Temperature (C°) by Day',
+        lab = fig.suptitle('Temperature (C°)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()

@@ -72,7 +72,7 @@ try:
         #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('FR/min by Day',
+        lab = fig.suptitle('Respiratory Frequency',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -93,9 +93,9 @@ try:
         plt.plot(reo_x, reo_y, '-', color='cyan')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('FR/min', fontsize=14)
+        plt.ylabel('Resp/min', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.legend(['Respiratory Frequency'])
+        plt.legend(['Resp/min'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()

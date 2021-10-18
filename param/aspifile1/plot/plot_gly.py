@@ -70,7 +70,7 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Hgt(mmol/l) by Day',
+        lab = fig.suptitle('Glycemia (mmol/l)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
