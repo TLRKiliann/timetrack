@@ -27,7 +27,6 @@ def tocallprogressbar():
     downloadata()
 tocallprogressbar()
 
-
 def writeData(textDate, textHour, textName, textTa, textDia,
         textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """
@@ -447,7 +446,6 @@ def delSystolDia():
         To erase last line
         of systol.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/systol.json'):
             with open('./param/aspifile1/systol.json', 'r') as filesys:
@@ -488,7 +486,6 @@ def delPuls():
         To erase last line
         of puls.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/puls.json'):
             with open('./param/aspifile1/puls.json', 'r') as file:
@@ -510,7 +507,6 @@ def delSat():
         To erase last line
         of sat.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/sat.json'):
             with open('./param/aspifile1/sat.json', 'r') as file:
@@ -532,7 +528,6 @@ def delFreq():
         To erase last line
         of freq.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/freq.json'):
             with open('./param/aspifile1/freq.json', 'r') as file:
@@ -554,7 +549,6 @@ def delTemp():
         To erase last line
         of temp.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/temp.json'):
             with open('./param/aspifile1/temp.json', 'r') as file:
@@ -576,7 +570,6 @@ def delGly():
         To erase last line
         of gly.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/gly.json'):
             with open('./param/aspifile1/gly.json', 'r') as file:
@@ -598,7 +591,6 @@ def delDlr():
         To erase last line
         of dlr.json
     """
-
     try:
         if os.path.getsize('./param/aspifile1/dlr.json'):
             with open('./param/aspifile1/dlr.json', 'r') as file:
@@ -621,7 +613,7 @@ def delLastVal():
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "All the last recorded values will be erased !")
-    if MsgBox == 'yes':
+    if MsgBox == 1:
         delSystolDia()
         delPuls()
         delSat()
@@ -663,7 +655,7 @@ label1.grid(row=3, column=1)
 
 label2 = tk.Label(gui, text='Enter Systolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
-label2.grid(sticky='e', row=4, column=1)
+label2.grid(sticky=tk.E, row=4, column=1)
 
 labelDia = tk.Label(gui, text='Diastolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=10, anchor=tk.E)
