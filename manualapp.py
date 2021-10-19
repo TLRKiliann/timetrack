@@ -11,10 +11,11 @@ def instalpy(self):
         and how to use app
     """
     self.can.delete(tk.ALL)
-    #self.can.configure(background='black')
+    self.can.configure(background='black')
     self.photo = tk.PhotoImage(file='./syno_gif/pyt2.gif')
-    self.item = self.can.create_image(625, 350, image=self.photo)
-    self.can.create_text(400, 20, anchor=tk.NW,
+    self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
+    
+    self.can.create_text((400,20), anchor=tk.NW,
         text="- MAPAPP -\n\n"
 
         "Usefull functionalities :\n"
@@ -81,7 +82,7 @@ def instalpy(self):
         "otherwise all files and data will be losted...\n"
 
         "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
-        font=('Times New Roman', 14), fill='cyan')
+        font=('Times New Roman', 14), fill='aquamarine')
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.bind_all("<Button-4>", self.onMouseWheel)

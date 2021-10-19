@@ -151,7 +151,6 @@ class ScrollCanvas(tk.Frame):
 
         self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
-        #self.frame = tk.Frame(self.can)
         # New viewPort
         self.viewPort = tk.Frame(self.can)
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
@@ -159,8 +158,8 @@ class ScrollCanvas(tk.Frame):
 
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        self.canvas_window=self.can.create_window((4,4), window=self.viewPort, anchor=tk.NW,
-                                  tags="self.viewPort")
+        self.canvas_window=self.can.create_window((4,4), window=self.viewPort,
+            anchor=tk.NW, tags="self.viewPort")
 
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
@@ -1950,6 +1949,7 @@ class Application(tk.Frame):
         """
             Explanations about application.
         """
+
         instalpy(self)
 
     def effacer(self):
@@ -1998,22 +1998,22 @@ class Application(tk.Frame):
             font=("Arial 12"),fg='cyan', bg='grey22')
         self.labFra.pack(padx=5, pady=5)
         self.separator = tk.Frame(self.labFra, height=2, bd=1,
-            relief='sunken')
+            relief=tk.SUNKEN)
 
         self.lab4 = tk.Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
-        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief='sunken')
+        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=tk.SUNKEN)
         self.separator.pack(fill=tk.X, padx=100, pady=3)
 
-        self.lab5 = tk.Label(self.labFra, justify='left', fg='cyan',
+        self.lab5 = tk.Label(self.labFra, justify=tk.LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
             "to perform onto this app ! If you need help, you can go to MapApp to\n"
             "access map of this app and understand how the app is used ;)\n\n"
             "Enjoy it !\n").pack(padx=10)
-        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief='sunken')
+        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=tk.SUNKEN)
         self.separator.pack(fill=tk.X, padx=30, pady=3)
-        self.lab6 = tk.Label(self.labFra, justify='left', fg='cyan',
+        self.lab6 = tk.Label(self.labFra, justify=tk.LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 
