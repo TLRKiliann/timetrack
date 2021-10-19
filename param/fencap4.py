@@ -611,7 +611,7 @@ def delEvery():
     """
         To delete all json files
     """
-    MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
+    MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
         "All the last recorded values will be erased !")
     if MsgBox == 1:
         delSystolDia()
