@@ -18,7 +18,6 @@ import time
 from downloader.progresstask11 import downloadata
 from uploader.uploadbar import uploadmain
 from uploader.upload11 import uploadata
-import pygame
 
 
 def tocallprogressbar():
@@ -28,21 +27,12 @@ def tocallprogressbar():
     downloadata()
 tocallprogressbar()
 
-def play_rec():
-    """
-        pygame play sounds when usr click on graphs
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/ok_butt2.wav')
-    pygame.mixer.music.play()
-
 def writeData(textDate, textHour, textName, textTa, textDia,
         textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """
         To export data in a json file
         and launching aspiFile11.py
     """
-    play_rec()
     try:
         if os.path.getsize('./param/paramdata11.txt'):
             print("[+] File 'paramdata11.txt' exist !")
@@ -329,30 +319,18 @@ def uploadfunc():
     uploadata()
 
 def mainRead():
-    subprocess.run('./param/main_read11.py', check=True)
-
-def play():
-    """
-        pygame play sounds when usr click on graphs
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/ok_butt.wav')
-    pygame.mixer.music.play()
-
-def play_error():
-    """
-        pygame play sounds for error, when file doesn't exist.
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/flute_error.wav')
-    pygame.mixer.music.play()
+    try:
+        os.path.getsize('./param/main_read11.py'):
+        subprocess.run('./param/main_read11.py', check=True)
+    except FileNotFoundError as fnfe_read:
+        print("[!] Sorry, file main_read11.py not found !")
+        label['text'] = "Sorry, file main_read11.py not found !"
 
 def appelTens(textDate, textName, textTa, textDia):
     """
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/systol.json'):
             uploadcall()
@@ -363,14 +341,12 @@ def appelTens(textDate, textName, textTa, textDia):
     except FileNotFoundError as errorgraph1:
         print('[!] Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelPuls(textDate, textName, textPuls):
     """
         to call aspipuls.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/puls.json'):
             uploadcall()
@@ -381,14 +357,12 @@ def appelPuls(textDate, textName, textPuls):
     except FileNotFoundError as errorgraph2:
         print('[!] Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelSat(textDate, textName, textSa):
     """
         to call aspisat.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/sat.json'):
             uploadcall()
@@ -399,14 +373,12 @@ def appelSat(textDate, textName, textSa):
     except FileNotFoundError as errorgraph3:
         print('[!] Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelFreq(textDate, textName, textFr):
     """
         to call aspifreq.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/freq.json'):
             uploadcall()
@@ -417,14 +389,12 @@ def appelFreq(textDate, textName, textFr):
     except FileNotFoundError as errorgraph4:
         print('[!] Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelTemp(textDate, textName, textTemp):
     """
         to call aspitemp.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/temp.json'):
             uploadcall()
@@ -435,14 +405,12 @@ def appelTemp(textDate, textName, textTemp):
     except FileNotFoundError as errorgraph5:
         print('[!] Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelGly(textDate, textName, textHgt):
     """
         to call aspigly.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/gly.json'):
             uploadcall()
@@ -453,14 +421,12 @@ def appelGly(textDate, textName, textHgt):
     except FileNotFoundError as errorgraph6:
         print('[!] Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
-        play_error()
 
 def appelDlr(textDate, textName, textDlrs):
     """
         to call aspidlr.py for recapt data
         and launching matplotlib graph
     """
-    play()
     try:
         if os.path.getsize('./param/aspifile11/dlr.json'):
             uploadcall()
@@ -471,44 +437,16 @@ def appelDlr(textDate, textName, textDlrs):
     except FileNotFoundError as errorgraph7:
         print('[!] Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)
         label['text'] = "Sorry the Dlrs plot doesn\'t work ! Data missing !"
-        play_error()
 
 def uploadcall():
     uploadmain()
-
-def delMain():
-    """
-        To erase paramdata11.txt
-    """
-    Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
-        "It will delete paramdata11.txt with all data !!!")
-    if Main_MsgBox == 'yes':
-        try:
-            if os.path.getsize('./param/paramdata11.txt'):
-                os.remove('./param/paramdata11.txt')
-                label['text'] = "File paramdata11.txt has been deleted !"
-                print("[del] File paramdata11.txt has been deleted !")
-        except FileNotFoundError:
-            label['text'] = "Sorry, file asked not exist !"
-            print('[!] Sorry, file asked not exist !')
-    else:
-        print("[!] Nothing has changed !")
-        label['text'] = "Nothing has changed !"
-
-def play_del():
-    """
-        pygame play sounds when usr click on graphs
-    """
-    pygame.init()
-    pygame.mixer.music.load('./beep_sounds/win_vg.wav')
-    pygame.mixer.music.play()
 
 def delSystolDia():
     """
         To erase last line
         of systol.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/systol.json'):
             with open('./param/aspifile11/systol.json', 'r') as filesys:
@@ -524,7 +462,6 @@ def delSystolDia():
     except (FileNotFoundError, IndexError) as out_ta:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_ta)
-        play_error()
     """
         To erase last line
         of diastol.json
@@ -544,14 +481,13 @@ def delSystolDia():
     except (FileNotFoundError, IndexError) as out_dia:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_dia)
-        play_error()
 
 def delPuls():
     """
         To erase last line
         of puls.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/puls.json'):
             with open('./param/aspifile11/puls.json', 'r') as file:
@@ -567,14 +503,13 @@ def delPuls():
     except (FileNotFoundError, IndexError) as out_puls:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, asked not exist !', out_puls)
-        play_error()
 
 def delSat():
     """
         To erase last line
         of sat.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/sat.json'):
             with open('./param/aspifile11/sat.json', 'r') as file:
@@ -590,14 +525,13 @@ def delSat():
     except (FileNotFoundError, IndexError) as out_sat:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_sat)
-        play_error()
 
 def delFreq():
     """
         To erase last line
         of freq.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/freq.json'):
             with open('./param/aspifile11/freq.json', 'r') as file:
@@ -613,14 +547,13 @@ def delFreq():
     except (FileNotFoundError, IndexError) as out_freq:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_freq)
-        play_error()
 
 def delTemp():
     """
         To erase last line
         of temp.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/temp.json'):
             with open('./param/aspifile11/temp.json', 'r') as file:
@@ -636,14 +569,13 @@ def delTemp():
     except (FileNotFoundError, IndexError) as out_temp:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_temp)
-        play_error()
 
 def delGly():
     """
         To erase last line
         of gly.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/gly.json'):
             with open('./param/aspifile11/gly.json', 'r') as file:
@@ -659,14 +591,13 @@ def delGly():
     except (FileNotFoundError, IndexError) as out_gly:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_gly)
-        play_error()
 
 def delDlr():
     """
         To erase last line
         of dlr.json
     """
-    play_del()
+
     try:
         if os.path.getsize('./param/aspifile11/dlr.json'):
             with open('./param/aspifile11/dlr.json', 'r') as file:
@@ -682,16 +613,14 @@ def delDlr():
     except (FileNotFoundError, IndexError) as out_dlr:
         label['text'] = "Sorry, file asked not exist !"
         print('[!] Sorry, file asked not exist !', out_dlr)
-        play_error()
 
 def delEvery():
     """
         To delete all json files
     """
-    MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
-        "It will delete all files with all data !!!")
-    if MsgBox == 'yes':
-        play_del()
+    MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
+        "All the last recorded values will be erased !")
+    if MsgBox == 1:
         delSystolDia()
         delPuls()
         delSat()
@@ -704,7 +633,6 @@ def delEvery():
     else:
         label['text'] = "Nothing has been deleted !"
         print("[!] Nothing has been deleted !")
-        play_error()
 
 # To read name of patient for entry widget
 with open('./newpatient/entryfile11.txt', 'r') as filename:
@@ -721,47 +649,47 @@ labelTitle = tk.Label(gui, text="Vital Parameters",
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
 label = tk.Label(gui, text='Date : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label.grid(row=1, column=1)
 
 label = tk.Label(gui, text='Hour : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label.grid(row=2, column=1)
 
 label1 = tk.Label(gui, text='Enter Name : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label1.grid(row=3, column=1)
 
 label2 = tk.Label(gui, text='Enter Systolic : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
-label2.grid(sticky='e', row=4, column=1)
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
+label2.grid(sticky=tk.E, row=4, column=1)
 
 labelDia = tk.Label(gui, text='Diastolic : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=10, anchor='e')
+    fg='white', bg='DodgerBlue2', width=10, anchor=tk.E)
 labelDia.grid(row=4, column=2)
 
 label3 = tk.Label(gui, text='Enter Puls : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label3.grid(row=5, column=1)
 
 label4 = tk.Label(gui, text='Enter SaO2 : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label4.grid(row=6, column=1)
 
 label5 = tk.Label(gui, text='Enter FR : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label5.grid(row=7, column=1)
 
 label6 = tk.Label(gui, text='Enter T°C : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label6.grid(row=8, column=1)
 
 label7 = tk.Label(gui, text='Enter Hgt : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label7.grid(row=9, column=1)
 
 label8 = tk.Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
-    fg='white', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
 label8.grid(row=10, column=1)
 
 time_string = tk.IntVar()
@@ -785,12 +713,12 @@ textName.grid(row=3, column=2)
 textsvta = tk.StringVar()
 textTa = tk.Entry(gui, textvariable=textsvta, highlightbackground='gray',
     width=4, bd=4)
-textTa.grid(sticky='w', row=4, column=2)
+textTa.grid(sticky=tk.W, row=4, column=2)
 
 textsvdia = tk.StringVar()
 textDia = tk.Entry(gui, textvariable=textsvdia, highlightbackground='gray',
     width=4, bd=4)
-textDia.grid(sticky='e', row=4, column=2)
+textDia.grid(sticky=tk.E, row=4, column=2)
 
 textsvpuls = tk.StringVar()
 textPuls = tk.Entry(gui, textvariable=textsvpuls, highlightbackground='gray', bd=4)
@@ -825,7 +753,7 @@ button2Write.config(text='Quit', width=15,
 button2Write.grid(row=1, column=3)
 
 buttonDel = tk.Button(gui)
-buttonDel.config(text='Erase Last Values', width=15,
+buttonDel.config(text='Cancel ALL LAST', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
@@ -840,16 +768,10 @@ buttonWrite.config(text='CAPTURE DATA', width=33,
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = tk.Button(gui)
-buttonMainlec.config(text='Read All Data', width=15,
+buttonMainlec.config(text='Read All Data', width=33,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
-buttonMainlec.grid(row=3, column=3)
-
-buttonDel = tk.Button(gui)
-buttonDel.config(text='Delete File of Data', width=15,
-    bg='coral', fg='yellow', activebackground='red',
-    activeforeground='white', command=delMain)
-buttonDel.grid(row=3, column=4)
+buttonMainlec.grid(row=3, column=3, columnspan=4)
 
 button3Write = tk.Button(gui)
 button3Write.config(text='Graph TA', width=15,
@@ -938,10 +860,10 @@ button7Del.grid(row=10, column=4)
 
 lower_frame = tk.Frame(gui, bg='DodgerBlue2', bd=10, relief='groove')
 lower_frame.place(relx=0.5, rely=0.66, relwidth=0.9,
-    relheight=0.3, anchor='n')
+    relheight=0.3, anchor=tk.N)
 
 label = tk.Label(lower_frame, text=" ", font=('Arial', 12),
-    bg='white', anchor='nw', justify='left')
+    bg='white', anchor=tk.NW, justify=tk.LEFT)
 label.place(relwidth=1, relheight=1)
 
 gui.mainloop()
