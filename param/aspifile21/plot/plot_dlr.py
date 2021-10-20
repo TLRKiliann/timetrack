@@ -53,12 +53,12 @@ print(list2)
 try:
     list1 = list(map(str, list1))
 except ValueError as fmt_err:
-    print("+ Invalid number (no: . or , !)", fmt_err)
+    print("[!] Invalid number (no: . or , !)", fmt_err)
 
 try:
     list2 = list(map(int, list2))
 except ValueError as base_err:
-    print("+ Invalid number (no: . or , !)", base_err)
+    print("[!] Invalid number (no: . or , !)", base_err)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -72,40 +72,40 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Pain Scale (dlr/10) by Day',
+        lab = fig.suptitle('Pain Scale (1-10)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
-        #figure, axes = plt.subplots()
-        plt.plot(x_axis, y_axis, 'o', color='purple')
-        plt.plot(x_axis, y_axis, '--', color='purple')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
+
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='purple')
+        plt.plot(reo_x, reo_y, '-', color='purple')
+
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Dlrs', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.title('Pain scale (dlr/10) by date', fontsize=16)
-        #plt.xticks(rotation=25)
-        plt.legend(['Douleurs (Pain)'])
+        plt.legend(['Pain (Dlrs)'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception as err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile21/data_datedlr.json')
-    print("+ File data_datedlr.json removed !")
+    print("[+] File data_datedlr.json removed !")
     os.remove('./param/aspifile21/data_dlr.json')
-    print("+ File data_dlr.json removed !\n")
+    print("[+] File data_dlr.json removed !\n")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)
