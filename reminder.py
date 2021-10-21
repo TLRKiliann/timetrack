@@ -21,7 +21,8 @@ def alarmThread(self):
     """
         Function called from main app (./heal_track.py)
     """
-    self.can.delete(tk.ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(bg='DodgerBlue2')
     self.photo = tk.PhotoImage(file='./syno_gif/fontalarmbg2.png')
     self.item = self.can.create_image(625, 350, image=self.photo)

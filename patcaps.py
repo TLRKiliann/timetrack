@@ -24,8 +24,11 @@ def callResident(self):
         heal_track.py for displaying patients
         with theirs names and more.
     """
-    self.can.delete(tk.ALL)
+    #self.can.delete(tk.ALL)
+    self.effacer()
+    self.addScroll()
     self.can.configure(background='DodgerBlue2')
+
     self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image(625, 85, image=self.photo)
 

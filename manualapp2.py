@@ -3,7 +3,6 @@
 
 
 import tkinter as tk
-from tkinter import scrolledtext
 
 
 def instalpy(self):
@@ -11,19 +10,14 @@ def instalpy(self):
         Explanation about skills
         and how to use app
     """
-    self.effacer()
-    self.delScroll()
+    self.can.delete(tk.ALL)
+    self.can.configure(background='black')
 
     self.photo = tk.PhotoImage(file='./syno_gif/minipy3.png')
+    self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
-    self.item = tk.Label(self.can, image=self.photo)
-    self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-    self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='aquamarine',
-        width=92, height=30, font=("Times New Roman", 14), bd=0)
-
-    self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-    self.text_area.insert(tk.END," - MAPAPP -\n\n"
+    self.can.create_text((400,20), anchor=tk.NW,
+    text=" - MAPAPP -\n\n"
 
         " Usefull functionalities :\n"
         " ----------------------------\n"
@@ -88,8 +82,9 @@ def instalpy(self):
         "\n !!! WARNING !!! : Don't press 'delete patient' before informing administrator, \n"\
         " otherwise all files and data will be losted...\n"
 
-        "\n Developped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n")
-
-    self.text_area.configure(state ='disable', background="black")
+        "\n Developped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
+        font=('Times New Roman', 14), fill='aquamarine')
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)

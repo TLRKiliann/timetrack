@@ -12,6 +12,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter import scrolledtext
 
 import os
 import sys
@@ -153,9 +154,9 @@ class ScrollCanvas(tk.Frame):
             bg=bg, relief=relief)
         # New viewPort
         self.viewPort = tk.Frame(self.can)
+
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.canvas_window=self.can.create_window((4,4), window=self.viewPort,
@@ -1795,7 +1796,6 @@ class Application(tk.Frame):
 
         self.can = tk.Canvas(self, width=1250, height=700, bg='black')
         self.viewPort = tk.Frame(self.can)
-        #self.scrollCanvas = ScrollCanvas(self)
 
         # ScrollCanvas limited by area of ScrollBar 1250 - 700
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
@@ -1824,9 +1824,10 @@ class Application(tk.Frame):
             First page when you start app.
         """
         # Insert picture
-        self.can.delete(tk.ALL)
+        self.effacer()
+        self.delScroll()
         self.photo = tk.PhotoImage(file='./syno_gif/fondcolorbg4.png')
-        self.item = self.can.create_image(625, 350, image=self.photo)
+        self.itemfirst = self.can.create_image(625, 350, image=self.photo)
 
         # Insert text
         self.can.create_text(625, 350, anchor=tk.CENTER,
@@ -1949,12 +1950,41 @@ class Application(tk.Frame):
         """
             Explanations about application.
         """
-
         instalpy(self)
 
     def effacer(self):
         '''Reinitialize canvas when we pass through another'''
         self.can.delete(tk.ALL)
+
+        try:
+            exists = self.item.winfo_exists()
+            if exists == 1:
+                self.item.pack_forget()
+        except Exception as err_tk:
+            print("item doesn't exist", err_tk)
+
+        try:
+            existext = self.text_area.winfo_exists()
+            if existext == 1:
+                self.text_area.pack_forget()
+        except Exception as err_ex:
+            print("text_area doesn't exist", err_ex)
+
+    def delScroll(self):
+        """ To delete ScrollBar """
+        self.vsb.pack_forget()
+
+
+    def addScroll(self):
+        """ To add ScrollBar """
+        try:
+            exists = self.vsb.winfo_exists()
+            if exists == 1:
+                self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+                print("Ok, ScrollBar exist")
+        except Exception as err_scrl:
+            print("Scrollbar doesn't exist", err_scrl)
+            self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
     def msgQuitapp(self, arg):
         """

@@ -19,8 +19,10 @@ def callBox(self):
     """
         Everything that is current and to update.
     """
-    self.can.delete(tk.ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(background='DodgerBlue2')
+
     self.photo = tk.PhotoImage(file='./syno_gif/fontalarmbg2.png')
     self.item = self.can.create_image(625, 350, image=self.photo)
     # To backup (main file)
