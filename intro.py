@@ -73,7 +73,7 @@ def validentry():
     passentry = getpass.get()
     MSGBOX = tk.messagebox.askyesno("Ask", "Validate password ?")
     if MSGBOX == 1:
-        with open('./txtpass.txt', 'r') as read_file:
+        with open('./filenter.txt', 'r') as read_file:
             line1 = read_file.readline()
             line2 = read_file.readline()
             line3 = read_file.readline()
