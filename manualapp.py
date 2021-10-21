@@ -16,16 +16,16 @@ def instalpy(self):
 
     self.photo = tk.PhotoImage(file='./syno_gif/minipy3.png')
 
-    self.item = tk.Label(self.can, image=self.photo)
+    self.item = tk.Label(self.can, image=self.photo, bg='black')
     self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
     self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='aquamarine',
-        width=92, height=30, font=("Times New Roman", 14), bd=0)
+        highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
 
     self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
     self.text_area.insert(tk.END," - MAPAPP -\n\n"
 
-        " Usefull functionalities :\n"
+        "\n Usefull functionalities :\n"
         " ----------------------------\n"
         " ---> Backup is scheduled every 5 days and each month for Vital Parameters and BMI\n"
         " ---> Display if a treatment or reserve ends the next day and print a stop into tabs\n"
