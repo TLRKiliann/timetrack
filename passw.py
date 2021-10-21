@@ -6,10 +6,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import subprocess
-from playsound import playsound
-from tt_download import launchDownload
 from threading import Thread
 from playsound import playsound
+#from tt_download import launchDownload
 
 
 window = tk.Tk()
@@ -47,7 +46,7 @@ def playNieR():
     playsound('./beep_sounds/NieR_sound.wav')
 
 def closeWindow():
-    """    
+    """
         Class call from
         heal_track.py !
     """
@@ -62,7 +61,7 @@ def closeWindow():
         myt.start()
     launchMusic()
 
-    launchDownload()
+    #launchDownload()
 
 def validentry():
     """
@@ -72,24 +71,33 @@ def validentry():
     playButt()
     namenter = entryname.get()
     passentry = getpass.get()
-    MSGBox = tk.messagebox.askyesno("Ask", "Validate password ?")
-    if MSGBox == 1:
-        with open('./txtpass.json', 'r') as read_file:
-            line1=read_file.readline()
-            line2=read_file.readline()
-            print(line1)
-            print(line2)
-            if entryname.get() == line1 and getpass.get() == line2:
+    MSGBOX = tk.messagebox.askyesno("Ask", "Validate password ?")
+    if MSGBOX == 1:
+        with open('./txtpass.txt', 'r') as read_file:
+            line1 = read_file.readline()
+            line2 = read_file.readline()
+            line3 = read_file.readline()
+            line4 = read_file.readline()
+            line5 = read_file.readline()
+            line6 = read_file.readline()
+            line7 = read_file.readline()
+            line8 = read_file.readline()
+            if entryname.get() == line1[:-1] and getpass.get() == line2[:-1]:
                 playOne()
                 tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
                 playTwo()
                 closeWindow()
-            elif entryname.get() == "koala" and getpass.get() == "tree":
+            elif entryname.get() == line3[:-1] and getpass.get() == line4[:-1]:
                 playOne()
                 tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
                 playTwo()
                 closeWindow()
-            elif entryname.get() == "me" and getpass.get() == "me":
+            elif entryname.get() == line5[:-1] and getpass.get() == line6[:-1]:
+                playOne()
+                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+                playTwo()
+                closeWindow()
+            elif entryname.get() == line7[:-1] and getpass.get() == line8[:-1]:
                 playOne()
                 tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
                 playTwo()
