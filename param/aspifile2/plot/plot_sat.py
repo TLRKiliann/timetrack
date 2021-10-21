@@ -70,8 +70,8 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('SaO2% per Day',
+        fig.set_facecolor('lightsteelblue')
+        lab = fig.suptitle('Oxygen Saturation (SaO2%)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -81,7 +81,7 @@ try:
         labelcol_y.set_color('navy')
         labelcol_x = plt.xlabel("x-label")
         labelcol_x.set_color('navy')
-
+        
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
@@ -92,7 +92,7 @@ try:
         plt.plot(reo_x, reo_y, '--', color='teal')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Oxygen Saturation', fontsize=14)
+        plt.ylabel('Oxygen Saturation (SaO2%)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.legend(['SaO2%'])
         plt.gcf().autofmt_xdate(rotation=25)
