@@ -8,7 +8,6 @@
 """
 
 
-#from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -291,7 +290,7 @@ def process_of_unknown_duration(root):
     print('[PID] My pid is :', os.getpid())
     root.quit()
 
-def launchdownload():
+def launchDownload():
     """
         To start app with thread !
     """

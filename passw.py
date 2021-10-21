@@ -7,7 +7,9 @@ from tkinter import ttk
 from tkinter import messagebox
 import subprocess
 from playsound import playsound
-#from tt_download import launchdownload
+from tt_download import launchDownload
+from threading import Thread
+from playsound import playsound
 
 
 window = tk.Tk()
@@ -41,13 +43,26 @@ def playError():
 def playButt():
     playsound('./beep_sounds/menu_ok.wav')
 
+def playNieR():
+    playsound('./beep_sounds/NieR_sound.wav')
+
 def closeWindow():
     """    
         Class call from
         heal_track.py !
     """
     window.destroy()
-    #launchdownload()
+
+    def playmuse():
+        playsound('./beep_sounds/NieR_sound.wav')
+        print("[+] Music and thread complete.")
+
+    def launchMusic():
+        myt = Thread(target=playmuse)
+        myt.start()
+    launchMusic()
+
+    launchDownload()
 
 def validentry():
     """
@@ -59,25 +74,30 @@ def validentry():
     passentry = getpass.get()
     MSGBox = tk.messagebox.askyesno("Ask", "Validate password ?")
     if MSGBox == 1:
-        if entryname.get() == "root" and getpass.get() == "root":
-            playOne()
-            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-            playTwo()
-            closeWindow()
-        elif entryname.get() == "koala" and getpass.get() == "tree":
-            playOne()
-            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-            playTwo()
-            closeWindow()
-        elif entryname.get() == "me" and getpass.get() == "me":
-            playOne()
-            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-            playTwo()
-            closeWindow()
-        else:
-            playError()
-            tk.messagebox.showwarning("Warning", "Password or Username failed !")
-            playTwo()
+        with open('./txtpass.json', 'r') as read_file:
+            line1=read_file.readline()
+            line2=read_file.readline()
+            print(line1)
+            print(line2)
+            if entryname.get() == line1 and getpass.get() == line2:
+                playOne()
+                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+                playTwo()
+                closeWindow()
+            elif entryname.get() == "koala" and getpass.get() == "tree":
+                playOne()
+                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+                playTwo()
+                closeWindow()
+            elif entryname.get() == "me" and getpass.get() == "me":
+                playOne()
+                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+                playTwo()
+                closeWindow()
+            else:
+                playError()
+                tk.messagebox.showwarning("Warning", "Password or Username failed !")
+                playTwo()
     else:
         playsound('./beep_sounds/flute_error.wav')
 
