@@ -69,7 +69,6 @@ y_axis = list2
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
         lab = fig.suptitle('Respiratory Frequency',
