@@ -52,12 +52,12 @@ print(list2)
 try:
     list1 = list(map(str, list1))
 except ValueError as fmt_err:
-    print("+ Invalid number (no: . or , !)", fmt_err)
+    print("[!] Invalid number (no: . or , !)", fmt_err)
 
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
-    print("+ False value (no: string or int value)", err_val)
+    print("[!] False value (no: string or int value)", err_val)
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
 print(xdates)
@@ -69,39 +69,41 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Hgt(mmol/l) by Day',
+        fig.set_facecolor('lightsteelblue')
+        lab = fig.suptitle('Blood Glucose (mmol/l)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
-        plt.plot(x_axis, y_axis, 'o', color='orange')
-        plt.plot(x_axis, y_axis, '--', color='orange')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
+        
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='orange')
+        plt.plot(reo_x, reo_y, '--', color='orange')
+
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Hgt', fontsize=14)
+        plt.ylabel('Blood Glucose', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.xticks(rotation=25)
         plt.legend(['Glycemia'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception as err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile22/data_dategly.json')
-    print("+ File data_dategly.json removed !")
+    print("[+] File data_dategly.json removed !")
     os.remove('./param/aspifile22/data_gly.json')
-    print("+ File data_gly.json removed !\n")
+    print("[+] File data_gly.json removed !\n")
 except OSError as os_err:
-    print("+ OS error ! ...", os_err)
+    print("[!] OS error ! ...", os_err)
