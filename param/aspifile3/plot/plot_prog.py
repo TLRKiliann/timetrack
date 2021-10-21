@@ -24,13 +24,13 @@ try:
     fileO = open('./param/aspifile3/data_date.json')
     list1 = json.load(fileO)
 except ValueError as err_entry:
-    print("+ Value Error", err_entry)
+    print("[!] Value Error", err_entry)
 
 try:
     for letter in list1:
         print("list1: " + letter)
 except NameError as err_list:
-    print("+ Name Error list", err_list)
+    print("[!] Name Error list", err_list)
 
 print("\nList2 = systol :")
 print("--------------------")
@@ -39,13 +39,13 @@ try:
     fileO = open('./param/aspifile3/data_Systol.json')
     list2 = json.load(fileO)
 except ValueError as err_entry2:
-    print("+ Value Error", err_entry2)
+    print("[!] Value Error", err_entry2)
 
 try:
     for letter in list2:
         print("List2: " + letter)
 except NameError as err_list2:
-    print("+ Name Error list2", err_list2)
+    print("[!] Name Error list2", err_list2)
 
 dicolist = {}
 
@@ -53,7 +53,7 @@ try:
     for list1, list2 in zip(list1, list2):
         dicolist[list1] = list2
 except NameError as not_def:
-    print("+ Name Error list", not_def)
+    print("[!] Name Error list", not_def)
 
 print("\nAffichage du dictionnaire :")
 print("---------------------------")
@@ -95,13 +95,13 @@ try:
     file3 = open('./param/aspifile3/data_dia.json')
     list3 = json.load(file3)
 except ValueError as err_entry:
-    print("+ Value Error", err_entry)
+    print("[!] Value Error", err_entry)
 
 try:
     for letter in list3:
         print("list3: " + letter)
 except NameError as err_list:
-    print("+ Name Error list", err_list)
+    print("[!] Name Error list", err_list)
 
 print("\nList4 = diastol :")
 print("--------------------")
@@ -110,13 +110,13 @@ try:
     file4 = open('./param/aspifile3/data_Diastol.json')
     list4 = json.load(file4)
 except ValueError as err_entry2:
-    print("+ Value Error", err_entry2)
+    print("[!] Value Error", err_entry2)
 
 try:
     for letter in list4:
         print("List3: " + letter)
 except NameError as err_list3:
-    print("+ Name Error list3", err_list3)
+    print("[!] Name Error list3", err_list3)
 
 dicofinal = {}
 
@@ -124,7 +124,7 @@ try:
     for list3, list4 in zip(list3, list4):
         dicofinal[list3] = list4
 except NameError as not_def:
-    print("+ Name Error list", not_def)
+    print("[!] Name Error list", not_def)
 
 print("\nAffichage du dictionnaire :")
 print("---------------------------")
@@ -170,13 +170,12 @@ x_axis = xdates
 y_axis = list2
 z_axis = list4
 
-# Color style : fivethirtyeight, seaborn-darkgrid, bmh, classic
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Blood Pressure (TA) by Day',
+        lab = fig.suptitle('Blood Pressure (TA)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -203,12 +202,10 @@ try:
            colors = 'blue',
            label = 'vline_multiple - full height')
 
-        #plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('TA (blood pressure)', fontsize=14)
+        plt.ylabel('Blood Pressure (TA)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.xticks(rotation=25)
-        plt.legend(['TA (blood pressure)'])
+        plt.legend(['Blood Pressure (TA)'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
