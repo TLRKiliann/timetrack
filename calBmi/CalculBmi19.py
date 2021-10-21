@@ -167,8 +167,8 @@ def viewGraphicBmi():
     try:
         if os.path.getsize('./calBmi/doc_BMI19/file_bmi.json'):
             subprocess.run('./calBmi/doc_BMI19/convert_bmilist.py', check=True)
-    except FileNotFoundError as no_file:
-        print("[!] No BMI file exist !", no_file)
+    except FileNotFoundError as err_fnfbmi:
+        print("[!] No BMI file exist !", err_fnfbmi)
         tk.messagebox.showinfo('INFO', 'BMI file not found !')
 
 def viewGraphicKilo():
