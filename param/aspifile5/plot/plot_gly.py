@@ -69,8 +69,8 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Glycemia (mmol/l)',
+        fig.set_facecolor('lightsteelblue')
+        lab = fig.suptitle('Blood Glucose (mmol/l)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -80,7 +80,7 @@ try:
         labelcol_y.set_color('navy')
         labelcol_x = plt.xlabel("x-label")
         labelcol_x.set_color('navy')
-
+        
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
@@ -91,7 +91,7 @@ try:
         plt.plot(reo_x, reo_y, '--', color='orange')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Hgt', fontsize=14)
+        plt.ylabel('Blood Glucose', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.legend(['Glycemia'])
         plt.gcf().autofmt_xdate(rotation=25)

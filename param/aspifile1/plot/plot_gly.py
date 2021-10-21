@@ -70,7 +70,7 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Glycemia (mmol/l)',
+        lab = fig.suptitle('Blood Glucose (mmol/l)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -91,7 +91,7 @@ try:
         plt.plot(reo_x, reo_y, '--', color='orange')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Hgt', fontsize=14)
+        plt.ylabel('Blood Glucose', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.legend(['Glycemia'])
         plt.gcf().autofmt_xdate(rotation=25)
