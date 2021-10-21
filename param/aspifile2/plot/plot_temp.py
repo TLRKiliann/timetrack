@@ -16,13 +16,13 @@ try:
     fileO = open('./param/aspifile2/data_datetemp.json')
     list1 = json.load(fileO)
 except ValueError as err_entry:
-    print("+ Value Error", err_entry)
+    print("[!] Value Error", err_entry)
 
 try:
     for obj in list1:
         print("list1: " + obj)
 except NameError as err_list:
-    print("+ Name Error list", err_list)
+    print("[!] Name Error list", err_list)
 
 print("\nList2 = temperatures :")
 print("--------------------")
@@ -31,13 +31,13 @@ try:
     file1 = open('./param/aspifile2/data_temp.json')
     list2 = json.load(file1)
 except ValueError as err_entry2:
-    print("+ Value Error", err_entry2)
+    print("[!] Value Error", err_entry2)
 
 try:
     for obj in list2:
         print("List2: " + obj)
 except NameError as err_list2:
-    print("+ Name Error list2", err_list2)
+    print("[!] Name Error list2", err_list2)
 
 dicolist = {}
 
@@ -45,7 +45,7 @@ try:
     for list1, list2 in zip(list1, list2):
         dicolist[list1] = list2
 except NameError as not_def:
-    print("+ Name Error list", not_def)
+    print("[!] Name Error list", not_def)
 
 print("\nAffichage du dictionnaire :")
 print("---------------------------")
@@ -87,10 +87,9 @@ y_axis = list2
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        #figure, axes = plt.subplots()
         fig = plt.figure()
         fig.set_facecolor("lightsteelblue")
-        lab = fig.suptitle('Temperature (C°) by Day',
+        lab = fig.suptitle('Temperature (C°)',
             fontsize=18)
         lab.set_color('navy')
         ax = plt.subplot()
@@ -111,11 +110,9 @@ try:
         plt.plot(reo_x, reo_y, '--', color='red')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('T°C', fontsize=14)
+        plt.ylabel('Temperatures (C°)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        #plt.title('Temperature by Date', fontsize=16)
-        #plt.xticks(rotation=25)
-        plt.legend(['Temperatures C°'])
+        plt.legend(['Tc°'])
         plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
