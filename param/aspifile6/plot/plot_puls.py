@@ -52,12 +52,12 @@ print(list2)
 try:
     list1 = list(map(str, list1))
 except ValueError as dat_err:
-    print("+ Invalid number (no: . or , !)", dat_err)
+    print("[!] Invalid number (no: . or , !)", dat_err)
 
 try:
     list2 = list(map(int, list2))
 except ValueError as base_err:
-    print("+ Invalid number (no: . or , !)", base_err)
+    print("[!] Invalid number (no: . or , !)", base_err)
     list2 = []
 
 xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
@@ -71,36 +71,35 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor('lightsteelblue')
-        lab = fig.suptitle('Puls/min by Day',
+        lab = fig.suptitle('Pulsations/minute',
             fontsize=18)
-        lab.set_color('navy')
         lab.set_color('navy')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='navy')
         ax.tick_params(axis='y', colors='navy')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('navy')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('navy')
-        plt.plot(x_axis, y_axis, 's', color='red')
-        plt.plot(x_axis, y_axis, '--', color='orange')
+        labelcol_y = plt.ylabel("y-label")
+        labelcol_y.set_color('navy')
+        labelcol_x = plt.xlabel("x-label")
+        labelcol_x.set_color('navy')
         
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
 
+        reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
+        plt.plot(reo_x, reo_y, 'o', color='red')
+        plt.plot(reo_x, reo_y, '--', color='blue')
+
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.ylabel('Puls/min', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        #plt.title('Relevé des puls/min par date', fontsize=16)
-        #plt.xticks(rotation=25)
-        plt.legend(['Pulsations/min'])
+        plt.ylabel('Pulsations/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.legend(['puls/min'])
         plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
-except ValueError as shapes_err:
-    print("Invalid number", shapes_err)
+except Exception as err_val:
+    print("[!] Value Error !!! :", err_val)
 
 try:
     os.remove('./param/aspifile6/data_datepuls.json')

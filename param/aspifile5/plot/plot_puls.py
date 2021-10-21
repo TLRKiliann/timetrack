@@ -88,7 +88,7 @@ try:
                 xytext=(0,10), ha='center')
 
         reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
-        plt.plot(reo_x, reo_y, 'o', color='blue')
+        plt.plot(reo_x, reo_y, 'o', color='red')
         plt.plot(reo_x, reo_y, '--', color='blue')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
