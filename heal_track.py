@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-#import passw
+import passw
 
 from boxapp import callBox
 from cpfoldtrans import loaderfile
@@ -1997,7 +1997,7 @@ class Application(tk.Frame):
                 playsound('./beep_sounds/monitor.wav')
                 self.master.destroy()
             else:
-                playsound('./beep_sounds/ok_butt.wav')
+                playsound('./beep_sounds/loop79.mp3')
         except OSError as err_exit:
             print("[!] Error 2 : time to quit !!!", err_exit)
 
@@ -2012,7 +2012,7 @@ class Application(tk.Frame):
                 playsound('./beep_sounds/monitor.wav')
                 self.master.destroy()
             else:
-                playsound('./beep_sounds/ok_butt.wav')
+                playsound('./beep_sounds/loop79.mp3')
         except OSError as err_quit:
             print("[!] Error 3 : time to quit !!!", err_quit)
 

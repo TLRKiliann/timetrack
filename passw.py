@@ -7,7 +7,7 @@ from tkinter import ttk
 from tkinter import messagebox
 import subprocess
 from playsound import playsound
-from tt_download import launchdownload
+#from tt_download import launchdownload
 
 
 window = tk.Tk()
@@ -33,7 +33,7 @@ def playOne():
     playsound('./beep_sounds/c4_plant2.wav')
 
 def playTwo():
-    playsound('./beep_sounds/ok_butt.wav')
+    playsound('./beep_sounds/sound101.wav')
 
 def playError():
     playsound('./beep_sounds/metroid_alarm.wav')
@@ -47,7 +47,7 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-    launchdownload()
+    #launchdownload()
 
 def validentry():
     """
