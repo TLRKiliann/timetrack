@@ -277,11 +277,11 @@ def recordaux(self):
 
     print(self.CheckVar196.get())
     if self.CheckVar196.get() == 1:
-        print("[+] Nasogstric Tube was checked !")
+        print("[+] Nasogastric Tube was checked !")
         with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as nasogafile:
-            nasogafile.write("# Nasogstric Tube : " + time.strftime("%d/%m/%Y") + " checked\n")
+            nasogafile.write("# Nasogastric Tube : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
-        print("[-] Nasogstric Tube ok, nothing to do")
+        print("[-] Nasogastric Tube ok, nothing to do")
 
     print(self.CheckVar200.get())
     if self.CheckVar200.get() == 1:

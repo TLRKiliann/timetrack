@@ -1,0 +1,64 @@
+----------------------------------------------------------
+Date : 22/10/2021
+Patient name : Two B
+---------------------------------------------------------
+# Stick : 22/10/2021 checked
+# Walking Frame : 22/10/2021 checked
+# Rollator : 22/10/2021 checked
+# Wheelchair : 22/10/2021 checked
+# Crutches : 22/10/2021 checked
+# Vein-flon : 22/10/2021 checked
+# Pace-maker : 22/10/2021 checked
+# Holter : 22/10/2021 checked
+# Insulin Pump : 22/10/2021 checked
+# Morphine Pump : 22/10/2021 checked
+# VAC (escarre) : 22/10/2021 checked
+# Nasal Cannula : 22/10/2021 checked
+# Eyeglasses : 22/10/2021 checked
+# Hearing Aids L : 22/10/2021 checked
+# Hearing Aids R : 22/10/2021 checked
+# Arteriovenous Fistula : 22/10/2021 checked
+# Ostomy Bag : 22/10/2021 checked
+# Perfusion : 22/10/2021 checked
+# Periodical Injection : 22/10/2021 checked
+# Wound Wick : 22/10/2021 checked
+# Redon Drain : 22/10/2021 checked
+# Kher Drain : 22/10/2021 checked
+# Blake Drain : 22/10/2021 checked
+# Penrose Drain : 22/10/2021 checked
+# Mikulicz Drain : 22/10/2021 checked
+# Dialysis : 22/10/2021 checked
+# Biliary Drain : 22/10/2021 checked
+# Urinary Catheter : 22/10/2021 checked
+# Suprapubic Catheter : 22/10/2021 checked
+# Pleural Drain : 22/10/2021 checked
+# Nasogstric Tube : 22/10/2021 checked
+# VP Shunt : 22/10/2021 checked
+# VA Shunt : 22/10/2021 checked
+# 3-Ways Catheter : 22/10/2021 checked
+# PIC-Line : 22/10/2021 checked
+# Central Catheter : 22/10/2021 checked
+# Total Hip L : 22/10/2021 checked
+# Total Hip R : 22/10/2021 checked
+# Total Knee L : 22/10/2021 checked
+# Total Knee R : 22/10/2021 checked
+# Shoulder Prosthesis L : 22/10/2021 checked
+# Shoulder Prosthesis R : 22/10/2021 checked
+# Total Elbow L : 22/10/2021 checked
+# Total Elbow R : 22/10/2021 checked
+# Foot Prosthesis L : 22/10/2021 checked
+# Foot Prosthesis R : 22/10/2021 checked
+# Leg prosthesis L : 22/10/2021 checked
+# Leg prosthesis R : 22/10/2021 checked
+# Hand Prosthesis L : 22/10/2021 checked
+# Hand Prosthesis R : 22/10/2021 checked
+# Upper Arm Prosth. L : 22/10/2021 checked
+# Upper Arm Prosth. R : 22/10/2021 checked
+# Ocular Prosthesis L : 22/10/2021 checked
+# Ocular Prosthesis R : 22/10/2021 checked
+# Shoe Sole L : 22/10/2021 checked
+# Shoe Sole R : 22/10/2021 checked
+# Lower Dental Prosth. : 22/10/2021 checked
+# Upper Dental Prosth. : 22/10/2021 checked
+# Maxilofacial Prosthetics : 22/10/2021 checked
+# Nose Prosthesis : 22/10/2021 checked
