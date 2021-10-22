@@ -50,7 +50,8 @@ def callTreatment3(self):
         You can introduce, stop, traitement(s) and/or reserve(s).
         5 files are managed by this script to appreciate results.
     """
-    self.can.delete(tk.ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(bg='DodgerBlue2')
 
     s = ttk.Style()
@@ -739,7 +740,7 @@ def callTreatment3(self):
 
     def awayOut():
         try:
-            self.can.delete(tk.ALL)
+            self.effacer()
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("[!] Error from <patienttt1.py> to way out !!!", p_out)

@@ -1974,7 +1974,6 @@ class Application(tk.Frame):
         """ To delete ScrollBar """
         self.vsb.pack_forget()
 
-
     def addScroll(self):
         """ To add ScrollBar """
         try:
