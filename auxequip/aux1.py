@@ -543,7 +543,6 @@ def auxi_equip1(self):
     self.C450 = self.can.create_window(self.x510, self.y510,
         window = self.C450)
 
-    # Button save and quit
     self.x520, self.y520 = 800, 650
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',

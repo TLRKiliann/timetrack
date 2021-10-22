@@ -5,7 +5,7 @@
 """
     The purpose of this script is to copy
     the data from the aux_X.py script into
-    the auxequip document.
+    the ../doc_equip/. document.
 """
 
 
@@ -16,9 +16,9 @@ import time
 
 
 def recordaux(self):
-	"""
-	    Data to record from aux_X.py
-	"""
+    """
+        Data to record from aux_X.py
+    """
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", self.ntry_txt.get())
     with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as fintro:
@@ -67,7 +67,7 @@ def recordaux(self):
     if self.CheckVar5.get() == 1:
         print("[+] Crutches was checked !")
         with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as crutchfile:
-            crutchfile.write("# Crutches was checked : " + time.strftime("%d/%m/%Y") + " checked\n")
+            crutchfile.write("# Crutches : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Crutches ok, nothing to do")
 
@@ -501,15 +501,15 @@ def uploadaux():
         tk.messagebox.showerror("Error", "No auxiliary1.txt to upload...")
 
 def msgrec():
-	"""
-	    Message confirming that data has been saved.
-	"""
+    """
+        Message confirming that data has been saved.
+    """
     tk.messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def transwritedata(self):
-	"""
-	    This function allows different saving modes.
-	"""
+    """
+        This function allows different saving modes.
+    """
     MsgBox = tk.messagebox.askyesno('Record', 'Results will be saved, ok ?')
     if MsgBox == 1:
         recordaux(self)
