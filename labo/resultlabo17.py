@@ -29,7 +29,8 @@ def callLabo17(self):
     """
         To display labo into Canvas
     """
-    self.can.delete(tk.ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(bg='DodgerBlue2')
 
     self.x1, self.y1 = 540, 45
@@ -682,7 +683,7 @@ def callLabo17(self):
 
     def awayOut():
         try:
-            self.can.delete(tk.ALL)
+            self.effacer()
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("[!] Error from labo to way out", p_out)
