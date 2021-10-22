@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    GUI script for auxiliary equipment.
+"""
+
+
 import tkinter as tk
 from auxequip.folderaux.auxrec1 import transwritedata
 
@@ -9,8 +14,8 @@ from auxequip.folderaux.auxrec1 import transwritedata
 def auxi_equip1(self):
     """
         Main function called since main app
-        heal_track.py for displaying auxiliary
-        equipement.
+        (heal_track.py) for displaying auxiliary
+        equipment.
     """
     self.effacer()
     self.delScroll()
@@ -547,6 +552,9 @@ def auxi_equip1(self):
         window = self.buttonsave)
 
     def wayout():
+        """
+            The way out to return to main menu (patcaps.py).
+        """
         try:
             self.effacer()
             self.showPatients()

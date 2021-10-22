@@ -2,6 +2,13 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    The purpose of this script is to copy
+    the data from the aux_X.py script into
+    the auxequip document.
+"""
+
+
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
@@ -9,6 +16,9 @@ import time
 
 
 def recordaux(self):
+	"""
+	    Data to record from aux_X.py
+	"""
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", self.ntry_txt.get())
     with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as fintro:
@@ -477,7 +487,7 @@ def recordaux(self):
 
 def uploadaux():
     """
-        To upload data on server after creating files
+        Upload the data once they have been saved in the auxiliary_X.txt file
     """
     procaux = subprocess.run(["scp", "./auxequip/doc_equip/auxiliary1.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/auxiliary1.txt"],
@@ -491,9 +501,15 @@ def uploadaux():
         tk.messagebox.showerror("Error", "No auxiliary1.txt to upload...")
 
 def msgrec():
+	"""
+	    Message confirming that data has been saved.
+	"""
     tk.messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def transwritedata(self):
+	"""
+	    This function allows different saving modes.
+	"""
     MsgBox = tk.messagebox.askyesno('Record', 'Results will be saved, ok ?')
     if MsgBox == 1:
         recordaux(self)
