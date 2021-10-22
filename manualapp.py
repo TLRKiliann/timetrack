@@ -23,7 +23,7 @@ def instalpy(self):
         highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
 
     self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-    self.text_area.insert(tk.END," - MAPAPP -\n\n"
+    self.text_area.insert(tk.END,"\n - MAPAPP -\n\n"
 
         "\n Usefull functionalities :\n"
         " ----------------------------\n"
