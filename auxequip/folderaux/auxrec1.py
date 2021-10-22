@@ -38,7 +38,7 @@ def recordaux(self):
             sfile.write("# Stick : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Stick ok, nothing to do")
-        
+
     print(self.CheckVar2.get())
     if self.CheckVar2.get() == 1:
         print("[+] Walking Frame (FR) was checked !")
@@ -54,7 +54,7 @@ def recordaux(self):
             rollfile.write("# Rollator : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Rollator ok, nothing to do")
-        
+
     print(self.CheckVar4.get())
     if self.CheckVar4.get() == 1:
         print("[+] Wheelchair was checked !")
@@ -215,6 +215,15 @@ def recordaux(self):
     else:
         print("[-] Mikulicz Drain ok, nothing to do")
 
+    print(self.CheckVar191.get())
+    if self.CheckVar191.get() == 1:
+        print("[+] Dialysis was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as diafile:
+            diafile.write("# Dialysis : " + \
+                time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Dialysis ok, nothing to do")
+
     print(self.CheckVar200.get())
     if self.CheckVar200.get() == 1:
         print("[+] VP Shunt was checked !")
@@ -262,12 +271,12 @@ def recordaux(self):
 
     print(self.CheckVar214.get())
     if self.CheckVar214.get() == 1:
-        print("[+] Dialysis was checked !")
+        print("[+] Suprapubic Catheter was checked !")
         with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as diafile:
-            diafile.write("# Dialysis : " + \
+            diafile.write("# Suprapubic Catheter : " + \
                 time.strftime("%d/%m/%Y") + " checked\n")
     else:
-        print("[-] Dialysis ok, nothing to do")
+        print("[-] Suprapubic Catheter ok, nothing to do")
 
     print(self.CheckVar220.get())
     if self.CheckVar220.get() == 1:

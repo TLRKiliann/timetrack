@@ -266,6 +266,15 @@ def auxi_equip1(self):
     self.C190 = self.can.create_window(self.x240, self.y240,
         window = self.C190)
 
+    self.x241, self.y241 = 800, 145
+    self.CheckVar191 = tk.IntVar()
+    self.C191 = tk.Checkbutton(self.can, text="Dialysis", fg='navy',
+        bg='cyan', variable=self.CheckVar191,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C191 = self.can.create_window(self.x241, self.y241,
+        window = self.C191)
+
     self.x250, self.y250 = 1000, 145
     self.CheckVar200 = tk.IntVar()
     self.C200 = tk.Checkbutton(self.can, text="VP Shunt", fg='navy',
@@ -313,7 +322,7 @@ def auxi_equip1(self):
 
     self.x264, self.y264 = 1000, 255
     self.CheckVar214 = tk.IntVar()
-    self.C214 = tk.Checkbutton(self.can, text="Dialysis", fg='navy',
+    self.C214 = tk.Checkbutton(self.can, text="Suprapubic Catheter", fg='navy',
         bg='cyan', variable=self.CheckVar214,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor=tk.W)
@@ -399,78 +408,6 @@ def auxi_equip1(self):
     self.C290 = self.can.create_window(self.x350, self.y350,
         window = self.C290)
 
-    self.x360, self.y360 = 1000, 375
-    self.CheckVar300 = tk.IntVar()
-    self.C300 = tk.Checkbutton(self.can, text="Foot Prosthesis L", fg='navy',
-        bg='cyan', variable=self.CheckVar300,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C300 = self.can.create_window(self.x360, self.y360,
-        window = self.C300)
-
-    self.x370, self.y370 = 1000, 397
-    self.CheckVar310 = tk.IntVar()
-    self.C310 = tk.Checkbutton(self.can, text="Foot Prosthesis R", fg='navy',
-        bg='cyan', variable=self.CheckVar310,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C310 = self.can.create_window(self.x370, self.y370,
-        window = self.C310)
-
-    self.x380, self.y380 = 1000, 419
-    self.CheckVar320 = tk.IntVar()
-    self.C320 = tk.Checkbutton(self.can, text="Leg prosthesis L", fg='navy',
-        bg='cyan', variable=self.CheckVar320,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C320 = self.can.create_window(self.x380, self.y380,
-        window = self.C320)
-
-    self.x390, self.y390 = 1000, 441
-    self.CheckVar330 = tk.IntVar()
-    self.C330 = tk.Checkbutton(self.can, text="Leg prosthesis R", fg='navy',
-        bg='cyan', variable=self.CheckVar330,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C330 = self.can.create_window(self.x390, self.y390,
-        window = self.C330)
-
-    self.x400, self.y400 = 1000, 463
-    self.CheckVar340 = tk.IntVar()
-    self.C340 = tk.Checkbutton(self.can, text="Hand Prosthesis L", fg='navy',
-        bg='cyan', variable=self.CheckVar340,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C340 = self.can.create_window(self.x400, self.y400,
-        window = self.C340)
-
-    self.x410, self.y410 = 1000, 485
-    self.CheckVar350 = tk.IntVar()
-    self.C350 = tk.Checkbutton(self.can, text="Hand Prosthesis R", fg='navy',
-        bg='cyan', variable=self.CheckVar350,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C350 = self.can.create_window(self.x410, self.y410,
-        window = self.C350)
-
-    self.x420, self.y420 = 1000, 507
-    self.CheckVar360 = tk.IntVar()
-    self.C360 = tk.Checkbutton(self.can, text="Upper Arm Prosth. L", fg='navy',
-        bg='cyan', variable=self.CheckVar360,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C360 = self.can.create_window(self.x420, self.y420,
-        window = self.C360)
-
-    self.x430, self.y430 = 1000, 529
-    self.CheckVar370 = tk.IntVar()
-    self.C370 = tk.Checkbutton(self.can, text="Upper Arm Prosth. R", fg='navy',
-        bg='cyan', variable=self.CheckVar370,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C370 = self.can.create_window(self.x430, self.y430,
-        window = self.C370)
-
     self.x440, self.y440 = 800, 375
     self.CheckVar380 = tk.IntVar()
     self.C380 = tk.Checkbutton(self.can, text="Ocular Prosthesis L", fg='navy',
@@ -549,6 +486,78 @@ def auxi_equip1(self):
         highlightbackground='cyan', command=lambda: transwritedata(self))
     self.buttonsave = self.can.create_window(self.x520, self.y520,
         window = self.buttonsave)
+
+    self.x360, self.y360 = 1000, 375
+    self.CheckVar300 = tk.IntVar()
+    self.C300 = tk.Checkbutton(self.can, text="Foot Prosthesis L", fg='navy',
+        bg='cyan', variable=self.CheckVar300,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C300 = self.can.create_window(self.x360, self.y360,
+        window = self.C300)
+
+    self.x370, self.y370 = 1000, 397
+    self.CheckVar310 = tk.IntVar()
+    self.C310 = tk.Checkbutton(self.can, text="Foot Prosthesis R", fg='navy',
+        bg='cyan', variable=self.CheckVar310,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C310 = self.can.create_window(self.x370, self.y370,
+        window = self.C310)
+
+    self.x380, self.y380 = 1000, 419
+    self.CheckVar320 = tk.IntVar()
+    self.C320 = tk.Checkbutton(self.can, text="Leg prosthesis L", fg='navy',
+        bg='cyan', variable=self.CheckVar320,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C320 = self.can.create_window(self.x380, self.y380,
+        window = self.C320)
+
+    self.x390, self.y390 = 1000, 441
+    self.CheckVar330 = tk.IntVar()
+    self.C330 = tk.Checkbutton(self.can, text="Leg prosthesis R", fg='navy',
+        bg='cyan', variable=self.CheckVar330,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C330 = self.can.create_window(self.x390, self.y390,
+        window = self.C330)
+
+    self.x400, self.y400 = 1000, 463
+    self.CheckVar340 = tk.IntVar()
+    self.C340 = tk.Checkbutton(self.can, text="Hand Prosthesis L", fg='navy',
+        bg='cyan', variable=self.CheckVar340,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C340 = self.can.create_window(self.x400, self.y400,
+        window = self.C340)
+
+    self.x410, self.y410 = 1000, 485
+    self.CheckVar350 = tk.IntVar()
+    self.C350 = tk.Checkbutton(self.can, text="Hand Prosthesis R", fg='navy',
+        bg='cyan', variable=self.CheckVar350,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C350 = self.can.create_window(self.x410, self.y410,
+        window = self.C350)
+
+    self.x420, self.y420 = 1000, 507
+    self.CheckVar360 = tk.IntVar()
+    self.C360 = tk.Checkbutton(self.can, text="Upper Arm Prosth. L", fg='navy',
+        bg='cyan', variable=self.CheckVar360,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C360 = self.can.create_window(self.x420, self.y420,
+        window = self.C360)
+
+    self.x430, self.y430 = 1000, 529
+    self.CheckVar370 = tk.IntVar()
+    self.C370 = tk.Checkbutton(self.can, text="Upper Arm Prosth. R", fg='navy',
+        bg='cyan', variable=self.CheckVar370,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C370 = self.can.create_window(self.x430, self.y430,
+        window = self.C370)
 
     def wayout():
         """
