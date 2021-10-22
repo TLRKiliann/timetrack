@@ -159,6 +159,30 @@ def recordaux(self):
     else:
         print("[-] Arteriovenous Fistula ok, nothing to do")
 
+    print(self.CheckVar123.get())
+    if self.CheckVar123.get() == 1:
+        print("[+] Ostomy Bag was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as ostofile:
+            ostofile.write("# Ostomy Bag : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Ostomy Bag ok, nothing to do")
+
+    print(self.CheckVar124.get())
+    if self.CheckVar124.get() == 1:
+        print("[+] Perfusion was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as perfile:
+            perfile.write("# Perfusion : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Perfusion ok, nothing to do")
+
+    print(self.CheckVar125.get())
+    if self.CheckVar125.get() == 1:
+        print("[+] Periodical Injection was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as injectfile:
+            injectfile.write("# Periodical Injection : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Periodical Injection ok, nothing to do")
+
     print(self.CheckVar130.get())
     if self.CheckVar130.get() == 1:
         print("[+] Wound Wick was checked !")
@@ -166,14 +190,6 @@ def recordaux(self):
             wondyfile.write("# Wound Wick : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Wound Wick ok, nothing to do")
-
-    print(self.CheckVar140.get())
-    if self.CheckVar140.get() == 1:
-        print("[+] Pleural Drain was checked !")
-        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as pleuralfile:
-            pleuralfile.write("# Pleural Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
-    else:
-        print("[-] Pleural Drain ok, nothing to do")
 
     print(self.CheckVar150.get())
     if self.CheckVar150.get() == 1:
@@ -224,6 +240,49 @@ def recordaux(self):
     else:
         print("[-] Dialysis ok, nothing to do")
 
+    print(self.CheckVar192.get())
+    if self.CheckVar192.get() == 1:
+        print("[+] Biliary Drain was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as bilifile:
+            bilifile.write("# Biliary Drain : " + \
+                time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Biliary Drain ok, nothing to do")
+
+    print(self.CheckVar193.get())
+    if self.CheckVar193.get() == 1:
+        print("[+] Urinary Catheter was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as urifile:
+            urifile.write("# Urinary Catheter : " + \
+                time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Urinary Catheter ok, nothing to do")
+
+    print(self.CheckVar194.get())
+    if self.CheckVar194.get() == 1:
+        print("[+] Suprapubic Catheter was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as suprafile:
+            suprafile.write("# Suprapubic Catheter : " + \
+                time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Suprapubic Catheter ok, nothing to do")
+
+    print(self.CheckVar195.get())
+    if self.CheckVar195.get() == 1:
+        print("[+] Pleural Drain was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as pleuralfile:
+            pleuralfile.write("# Pleural Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Pleural Drain ok, nothing to do")
+
+    print(self.CheckVar196.get())
+    if self.CheckVar196.get() == 1:
+        print("[+] Nasogstric Tube was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as nasogafile:
+            nasogafile.write("# Nasogstric Tube : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Nasogstric Tube ok, nothing to do")
+
     print(self.CheckVar200.get())
     if self.CheckVar200.get() == 1:
         print("[+] VP Shunt was checked !")
@@ -268,15 +327,6 @@ def recordaux(self):
                 time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Central Catheter ok, nothing to do")
-
-    print(self.CheckVar214.get())
-    if self.CheckVar214.get() == 1:
-        print("[+] Suprapubic Catheter was checked !")
-        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as diafile:
-            diafile.write("# Suprapubic Catheter : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
-    else:
-        print("[-] Suprapubic Catheter ok, nothing to do")
 
     print(self.CheckVar220.get())
     if self.CheckVar220.get() == 1:

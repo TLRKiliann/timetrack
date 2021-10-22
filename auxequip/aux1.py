@@ -90,14 +90,14 @@ def auxi_equip1(self):
     self.C5 = self.can.create_window(self.x71, self.y71,
         window = self.C5)
 
-    self.x80, self.y80 = 200, 350
+    self.x80, self.y80 = 200, 310
     self.labl_appa = tk.Label(self.can, text='--- Equipment ---',
         font="Times 14 bold", width=21,
         height=1, bg='RoyalBlue3', fg='white')
     self.labl_appa = self.can.create_window(self.x80, self.y80,
         window = self.labl_appa)
 
-    self.x90, self.y90 = 200, 375
+    self.x90, self.y90 = 200, 335
     self.CheckVar50 = tk.IntVar()
     self.C50 = tk.Checkbutton(self.can, text="Vein-flon", fg='navy',
         bg='cyan', variable=self.CheckVar50,
@@ -106,7 +106,7 @@ def auxi_equip1(self):
     self.C50 = self.can.create_window(self.x90, self.y90,
         window = self.C50)
 
-    self.x100, self.y100 = 200, 397
+    self.x100, self.y100 = 200, 357
     self.CheckVar60 = tk.IntVar()
     self.C60 = tk.Checkbutton(self.can, text="Pace-maker", fg='navy',
         bg='cyan', variable=self.CheckVar60,
@@ -115,7 +115,7 @@ def auxi_equip1(self):
     self.C60 = self.can.create_window(self.x100, self.y100,
         window = self.C60)
 
-    self.x101, self.y101 = 200, 419
+    self.x101, self.y101 = 200, 379
     self.CheckVar61 = tk.IntVar()
     self.C61 = tk.Checkbutton(self.can, text="Holter", fg='navy',
         bg='cyan', variable=self.CheckVar61,
@@ -124,7 +124,7 @@ def auxi_equip1(self):
     self.C61 = self.can.create_window(self.x101, self.y101,
         window = self.C61)
 
-    self.x110, self.y110 = 200, 441
+    self.x110, self.y110 = 200, 401
     self.CheckVar70 = tk.IntVar()
     self.C70 = tk.Checkbutton(self.can, text="Insulin Pump", fg='navy',
         bg='cyan', variable=self.CheckVar70,
@@ -133,7 +133,7 @@ def auxi_equip1(self):
     self.C70 = self.can.create_window(self.x110, self.y110,
         window = self.C70)
 
-    self.x120, self.y120 = 200, 463
+    self.x120, self.y120 = 200, 423
     self.CheckVar80 = tk.IntVar()
     self.C80 = tk.Checkbutton(self.can, text="Morphine Pump", fg='navy',
         bg='cyan', variable=self.CheckVar80,
@@ -142,7 +142,7 @@ def auxi_equip1(self):
     self.C80 = self.can.create_window(self.x120, self.y120,
         window = self.C80)
 
-    self.x130, self.y130 = 200, 485
+    self.x130, self.y130 = 200, 445
     self.CheckVar90 = tk.IntVar()
     self.C90 = tk.Checkbutton(self.can, text="VAC (escarre)", fg='navy',
         bg='cyan', variable=self.CheckVar90,
@@ -151,7 +151,7 @@ def auxi_equip1(self):
     self.C90 = self.can.create_window(self.x130, self.y130,
         window = self.C90)
 
-    self.x140, self.y140 = 200, 507
+    self.x140, self.y140 = 200, 467
     self.CheckVar100 = tk.IntVar()
     self.C100 = tk.Checkbutton(self.can, text="Nasal Cannula", fg='navy',
         bg='cyan', variable=self.CheckVar100,
@@ -160,7 +160,7 @@ def auxi_equip1(self):
     self.C100 = self.can.create_window(self.x140, self.y140,
         window = self.C100)
 
-    self.x150, self.y150 = 200, 529
+    self.x150, self.y150 = 200, 489
     self.CheckVar110 = tk.IntVar()
     self.C110 = tk.Checkbutton(self.can, text="Eyeglasses", fg='navy',
         bg='cyan', variable=self.CheckVar110,
@@ -169,7 +169,7 @@ def auxi_equip1(self):
     self.C110 = self.can.create_window(self.x150, self.y150,
         window = self.C110)
 
-    self.x160, self.y160 = 200, 551
+    self.x160, self.y160 = 200, 511
     self.CheckVar120 = tk.IntVar()
     self.C120 = tk.Checkbutton(self.can, text="Hearing Aids L", fg='navy',
         bg='cyan', variable=self.CheckVar120,
@@ -178,7 +178,7 @@ def auxi_equip1(self):
     self.C120 = self.can.create_window(self.x160, self.y160,
         window = self.C120)
 
-    self.x161, self.y161 = 200, 573
+    self.x161, self.y161 = 200, 533
     self.CheckVar121 = tk.IntVar()
     self.C121 = tk.Checkbutton(self.can, text="Hearing Aids R", fg='navy',
         bg='cyan', variable=self.CheckVar121,
@@ -187,7 +187,7 @@ def auxi_equip1(self):
     self.C121 = self.can.create_window(self.x161, self.y161,
         window = self.C121)
 
-    self.x162, self.y162 = 200, 595
+    self.x162, self.y162 = 200, 555
     self.CheckVar122 = tk.IntVar()
     self.C122 = tk.Checkbutton(self.can, text="Arterioven. Fistula", fg='navy',
         bg='cyan', variable=self.CheckVar122,
@@ -195,6 +195,33 @@ def auxi_equip1(self):
         width=20, anchor=tk.W)
     self.C122 = self.can.create_window(self.x162, self.y162,
         window = self.C122)
+
+    self.x163, self.y163 = 200, 577
+    self.CheckVar123 = tk.IntVar()
+    self.C123 = tk.Checkbutton(self.can, text="Ostomy Bag", fg='navy',
+        bg='cyan', variable=self.CheckVar123,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C123 = self.can.create_window(self.x163, self.y163,
+        window = self.C123)
+
+    self.x164, self.y164 = 200, 599
+    self.CheckVar124 = tk.IntVar()
+    self.C124 = tk.Checkbutton(self.can, text="Perfusion", fg='navy',
+        bg='cyan', variable=self.CheckVar124,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C124 = self.can.create_window(self.x164, self.y164,
+        window = self.C124)
+
+    self.x165, self.y165 = 200, 621
+    self.CheckVar125 = tk.IntVar()
+    self.C125 = tk.Checkbutton(self.can, text="Periodical Injection", fg='navy',
+        bg='cyan', variable=self.CheckVar125,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C125 = self.can.create_window(self.x165, self.y165,
+        window = self.C125)
 
     self.x170, self.y170 = 800, 120
     self.labl_appa = tk.Label(self.can, text='--- Catheters and Drains ---',
@@ -212,16 +239,7 @@ def auxi_equip1(self):
     self.C130 = self.can.create_window(self.x180, self.y180,
         window = self.C130)
 
-    self.x190, self.y190 = 600, 167
-    self.CheckVar140 = tk.IntVar()
-    self.C140 = tk.Checkbutton(self.can, text="Pleural Drain", fg='navy',
-        bg='cyan', variable=self.CheckVar140,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C140 = self.can.create_window(self.x190, self.y190,
-        window = self.C140)
-
-    self.x200, self.y200 = 600, 189
+    self.x200, self.y200 = 600, 167
     self.CheckVar150 = tk.IntVar()
     self.C150 = tk.Checkbutton(self.can, text="Redon Drain", fg='navy',
         bg='cyan', variable=self.CheckVar150,
@@ -230,7 +248,7 @@ def auxi_equip1(self):
     self.C150 = self.can.create_window(self.x200, self.y200,
         window = self.C150)
 
-    self.x210, self.y210 = 600, 211 # sonde nasogastrique
+    self.x210, self.y210 = 600, 189
     self.CheckVar160 = tk.IntVar()
     self.C160 = tk.Checkbutton(self.can, text="Kher Drain", fg='navy',
         bg='cyan', variable=self.CheckVar160,
@@ -239,7 +257,7 @@ def auxi_equip1(self):
     self.C160 = self.can.create_window(self.x210, self.y210,
         window = self.C160)
 
-    self.x220, self.y220 = 600, 233
+    self.x220, self.y220 = 600, 211
     self.CheckVar170 = tk.IntVar()
     self.C170 = tk.Checkbutton(self.can, text="Blake Drain", fg='navy',
         bg='cyan', variable=self.CheckVar170,
@@ -248,7 +266,7 @@ def auxi_equip1(self):
     self.C170 = self.can.create_window(self.x220, self.y220,
         window = self.C170)
 
-    self.x230, self.y230 = 600, 255
+    self.x230, self.y230 = 600, 233
     self.CheckVar180 = tk.IntVar()
     self.C180 = tk.Checkbutton(self.can, text="Penrose Drain", fg='navy',
         bg='cyan', variable=self.CheckVar180,
@@ -257,7 +275,7 @@ def auxi_equip1(self):
     self.C180 = self.can.create_window(self.x230, self.y230,
         window = self.C180)
 
-    self.x240, self.y240 = 600, 277
+    self.x240, self.y240 = 600, 255
     self.CheckVar190 = tk.IntVar()
     self.C190 = tk.Checkbutton(self.can, text="Mikulicz Drain", fg='navy',
         bg='cyan', variable=self.CheckVar190,
@@ -274,6 +292,51 @@ def auxi_equip1(self):
         width=20, anchor=tk.W)
     self.C191 = self.can.create_window(self.x241, self.y241,
         window = self.C191)
+
+    self.x242, self.y242 = 800, 167
+    self.CheckVar192 = tk.IntVar()
+    self.C192 = tk.Checkbutton(self.can, text="Biliary Drain", fg='navy',
+        bg='cyan', variable=self.CheckVar192,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C192 = self.can.create_window(self.x242, self.y242,
+        window = self.C192)
+
+    self.x243, self.y243 = 800, 189
+    self.CheckVar193 = tk.IntVar()
+    self.C193 = tk.Checkbutton(self.can, text="Urinary Catheter", fg='navy',
+        bg='cyan', variable=self.CheckVar193,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C193 = self.can.create_window(self.x243, self.y243,
+        window = self.C193)
+
+    self.x244, self.y244 = 800, 211
+    self.CheckVar194 = tk.IntVar()
+    self.C194 = tk.Checkbutton(self.can, text="Suprapubic Catheter", fg='navy',
+        bg='cyan', variable=self.CheckVar194,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C194 = self.can.create_window(self.x244, self.y244,
+        window = self.C194)
+
+    self.x190, self.y190 = 800, 233
+    self.CheckVar195 = tk.IntVar()
+    self.C195 = tk.Checkbutton(self.can, text="Pleural Drain", fg='navy',
+        bg='cyan', variable=self.CheckVar195,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C195 = self.can.create_window(self.x190, self.y190,
+        window = self.C195)
+
+    self.x190, self.y190 = 800, 255
+    self.CheckVar196 = tk.IntVar()
+    self.C196 = tk.Checkbutton(self.can, text="Nasogastric Tube", fg='navy',
+        bg='cyan', variable=self.CheckVar196,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor=tk.W)
+    self.C196 = self.can.create_window(self.x190, self.y190,
+        window = self.C196)
 
     self.x250, self.y250 = 1000, 145
     self.CheckVar200 = tk.IntVar()
@@ -319,15 +382,6 @@ def auxi_equip1(self):
         width=20, anchor=tk.W)
     self.C213 = self.can.create_window(self.x263, self.y263,
         window = self.C213)
-
-    self.x264, self.y264 = 1000, 255
-    self.CheckVar214 = tk.IntVar()
-    self.C214 = tk.Checkbutton(self.can, text="Suprapubic Catheter", fg='navy',
-        bg='cyan', variable=self.CheckVar214,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor=tk.W)
-    self.C214 = self.can.create_window(self.x264, self.y264,
-        window = self.C214)
 
     self.x270, self.y270 = 800, 350
     self.labl_proth = tk.Label(self.can, text='--- Prosthesis ---',
