@@ -8,7 +8,6 @@ import sys
 import subprocess
 import os
 from pickle import dump
-from tkinter import *
 import tkinter as tk
 
 
@@ -44,7 +43,7 @@ class Calendar:
         else:
             self.month = 12
             self.year -= 1
-        #self.selected = (self.month, self.year)
+
         self.clear()
         self.setup(self.year, self.month)
 
@@ -55,7 +54,6 @@ class Calendar:
             self.month = 1
             self.year += 1
 
-        #self.selected = (self.month, self.year)
         self.clear()
         self.setup(self.year, self.month)
 
@@ -65,7 +63,6 @@ class Calendar:
         self.year_selected = self.year
         self.day_name = name
 
-        #data
         self.values['day_selected'] = actualday
         self.values['month_selected'] = self.month
         self.values['year_selected'] = self.year
@@ -76,46 +73,53 @@ class Calendar:
         self.setup(self.year, self.month)
 
     def setup(self, y, m):
-        # changed ok
-        left = tk.Button(self.parent, text='<', width=5, height=1, bg='navy', fg='cyan', command=self.go_prev)
+        left = tk.Button(self.parent, text='<', width=15, height=1,
+            fg='cyan', bg='RoyalBlue3', highlightbackground='RoyalBlue4',
+            activebackground='pale turquoise', command=self.go_prev)
         self.wid.append(left)
-        left.grid(row=0, column=1, pady=10)
+        left.grid(row=0, column=0, columnspan=2, pady=20)
 
         header = tk.Label(self.parent, fg='white', bg='DodgerBlue2',
-            height=2, font=('Times New Roman', 16, 'bold'), text='{} {}'.format(calendar.month_abbr[m], str(y)))
+            height=2, font=('Times New Roman', 16, 'bold'),
+            text='{} {}'.format(calendar.month_name[m], str(y))) #calendar.month_abbr[m]
         self.wid.append(header)
         header.grid(row=0, column=2, columnspan=3)
-        # changed ok
-        right = tk.Button(self.parent, text='>', width=5, height=1, bg='navy', fg='cyan', command=self.go_next)
+
+        right = tk.Button(self.parent, text='>', width=15, height=1,
+            fg='cyan', bg='RoyalBlue3', highlightbackground='RoyalBlue4',
+            activebackground='pale turquoise', command=self.go_next)
         self.wid.append(right)
-        right.grid(row=0, column=5, pady=10)
+        right.grid(row=0, column=5, columnspan=2, pady=20)
 
         days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
         for num, name in enumerate(days):
-            # changed
-            t = tk.Label(self.parent, text=name[:3], font=('Times', 14, 'bold'), fg='yellow', bg='navy')
+            t = tk.Label(self.parent, text=name[:3], font=('Times', 16, 'bold'),
+                fg='yellow', bg='DodgerBlue2')
             self.wid.append(t)
             t.grid(row=1, column=num)
-
 
         for w, week in enumerate(self.cal.monthdayscalendar(y, m), 2):
             for d, actualday in enumerate(week):
                 if actualday:
-                    # changed
-                    b = tk.Button(self.parent, width=5, height=3, text=actualday,
-                        fg='white', bg='navy',
-                        command=lambda actualday=actualday:self.selection(actualday, calendar.day_name[(actualday-1) % 7]))
+                    b = tk.Button(self.parent, width=8, height=4, text=actualday,
+                        fg='white', bg='RoyalBlue3', highlightbackground='RoyalBlue4',
+                        activebackground='pale turquoise',
+                        command=lambda actualday=actualday:self.selection(actualday,
+                            calendar.day_name[(actualday-1) % 7]))
                     self.wid.append(b)
-                    # changed
-                    b.grid(row=w, column=d)
-        # !!! Here, there is a big problem !!!
-        sel = tk.Label(self.parent, height=2, text='{} {} {}'.format(
-            calendar.month_name[self.month_selected],
-            self.day_selected, self.year_selected), font=('Times New Roman', 16, 'bold'), fg='white', bg='DodgerBlue2')
+                    b.grid(row=w, column=d, padx=5, pady=5)
+
+        sel = tk.Label(self.parent, height=2,
+            text='{} {} {}'.format(calendar.month_name[self.month_selected],
+            self.day_selected, self.year_selected), font=('Times New Roman', 16, 'bold'),
+        fg='white', bg='DodgerBlue2')
         self.wid.append(sel)
         sel.grid(row=8, column=0, columnspan=7)
 
-        ok = tk.Button(self.parent, width=5, text='OK', fg='cyan', bg='navy',
+        ok = tk.Button(self.parent, width=20, height=2, text='SAVE',
+            font=('Times New Roman', 14, 'bold'), fg='cyan', bg='RoyalBlue3',
+            highlightbackground='RoyalBlue4', activebackground='pale turquoise',
             command=self.kill_and_save)
         self.wid.append(ok)
         ok.grid(row=9, column=2, columnspan=3, pady=10)
@@ -124,7 +128,6 @@ class Calendar:
         self.parent.destroy()
 
 if __name__=='__main__':
-
     class Control:
         def __init__(self, parent):
             self.parent = parent.title("Time-Track")
@@ -135,27 +138,32 @@ if __name__=='__main__':
             with open('./newpatient/entryfile.txt', 'r') as file_r:
                 line_a = file_r.readline()
 
-            self.data_time = StringVar()
+            self.data_time = tk.StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
                 font='Times 14', width=22, fg='RoyalBlue4', bg='pale turquoise', bd=2,
-                justify=CENTER)
+                justify=tk.CENTER)
             self.data_time.set(line_a[:-1])
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='white', bg='RoyalBlue3',
                 activebackground='pale turquoise', command=self.popup)
+
             self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
                 font="Times 14", width=20, height=1,fg='white', bg='RoyalBlue3',
                 activebackground='pale turquoise', command=self.print_selected_date)
+
             self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
                 width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
                 command=self.accessDate)
+
             self.buttLook = tk.Button(self.parent, text='To change rdv', font="Times 14",
                 width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
                 command=self.accessLook)
+
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
                 height=1, fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
                 activeforeground='red', command=quit)
+
             self.labelo.grid()
             self.entryname.grid()
             self.choose_btn.grid()
@@ -179,15 +187,15 @@ if __name__=='__main__':
             print(self.data)
             try:
                 if os.path.getsize('./patient_agenda/events/patient_calendar.txt'):
-                    print("+ File 'patient_calendar.txt' exist !")
+                    print("[+] File 'patient_calendar.txt' exist !")
                     file = open('./patient_agenda/events/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
                     subprocess.run('./patient_agenda/events/entrer_event1.py', check=True)
             except FileNotFoundError as file_creat:
-                print("+ File not existing!")
+                print("[!] File not existing!")
                 print(file_creat)
-                print("+ File 'patient_calendar.txt' created !")
+                print("[+] File 'patient_calendar.txt' created !")
                 file = open('./patient_agenda/events/patient_calendar.txt','wb')
                 dump(self.data, file)
                 file.close()
@@ -195,16 +203,18 @@ if __name__=='__main__':
 
         def accessDate(self):
             try:
-                subprocess.run('./patient_agenda/events/doc_events/fix_agenda/read_file.py', check=True)
+                subprocess.run('./patient_agenda/events/doc_events/fix_agenda/read_file.py',
+                    check=True)
             except FileNotFoundError as note_agenda:
-                print("+ Agenda not created !")
+                print("[!] Agenda not created !")
                 print(note_agenda)
 
         def accessLook(self):
             try:
-                subprocess.run('./patient_agenda/events/doc_events/fix_agenda/main.py', check=True)
+                subprocess.run('./patient_agenda/events/doc_events/fix_agenda/main.py',
+                    check=True)
             except FileNotFoundError as note_change:
-                print("+ Agenda not created !")
+                print("[!] Agenda not created !")
                 print(note_change)
 
     root = tk.Tk()
