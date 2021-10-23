@@ -24,8 +24,9 @@ class Calendar:
         self.cal = calendar.TextCalendar(calendar.SUNDAY)
         self.year = datetime.date.today().year
         self.month = datetime.date.today().month
+        actualday = datetime.date.today().day
         self.wid = []
-        self.day_selected = 1
+        self.day_selected = actualday
         self.month_selected = self.month
         self.year_selected = self.year
         self.day_name = ''
@@ -35,7 +36,6 @@ class Calendar:
     def clear(self):
         for w in self.wid[:]:
             w.grid_forget()
-            #w.destroy()
             self.wid.remove(w)
 
     def go_prev(self):
@@ -59,14 +59,14 @@ class Calendar:
         self.clear()
         self.setup(self.year, self.month)
 
-    def selection(self, day, name):
-        self.day_selected = day
+    def selection(self, actualday, name):
+        self.day_selected = actualday
         self.month_selected = self.month
         self.year_selected = self.year
         self.day_name = name
 
         #data
-        self.values['day_selected'] = day
+        self.values['day_selected'] = actualday
         self.values['month_selected'] = self.month
         self.values['year_selected'] = self.year
         self.values['day_name'] = name
@@ -76,38 +76,42 @@ class Calendar:
         self.setup(self.year, self.month)
 
     def setup(self, y, m):
-        left = tk.Button(self.parent, text='<', bg='navy', fg='cyan', command=self.go_prev)
+        # changed ok
+        left = tk.Button(self.parent, text='<', width=5, height=1, bg='navy', fg='cyan', command=self.go_prev)
         self.wid.append(left)
-        left.grid(row=0, column=1)
+        left.grid(row=0, column=1, pady=10)
 
         header = tk.Label(self.parent, fg='white', bg='DodgerBlue2',
-            height=2, text='{}   {}'.format(calendar.month_abbr[m], str(y)))
+            height=2, font=('Times New Roman', 16, 'bold'), text='{} {}'.format(calendar.month_abbr[m], str(y)))
         self.wid.append(header)
         header.grid(row=0, column=2, columnspan=3)
-
-        right = tk.Button(self.parent, text='>', bg='navy', fg='cyan', command=self.go_next)
+        # changed ok
+        right = tk.Button(self.parent, text='>', width=5, height=1, bg='navy', fg='cyan', command=self.go_next)
         self.wid.append(right)
-        right.grid(row=0, column=5)
+        right.grid(row=0, column=5, pady=10)
 
         days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         for num, name in enumerate(days):
-            t = tk.Label(self.parent, text=name[:3], fg='yellow', bg='navy')
+            # changed
+            t = tk.Label(self.parent, text=name[:3], font=('Times', 14, 'bold'), fg='yellow', bg='navy')
             self.wid.append(t)
             t.grid(row=1, column=num)
 
-        for w, week in enumerate(self.cal.monthdayscalendar(y, m), 2):
-            for d, day in enumerate(week):
-                if day:
-                    #print(calendar.day_name[day])
-                    b = tk.Button(self.parent, width=1, text=day,
-                        fg='white', bg='navy',
-                        command=lambda day=day:self.selection(day, calendar.day_name[(day-1) % 7]))
-                    self.wid.append(b)
-                    b.grid(row=w, column=d, rowspan=1, columnspan=1, padx=2, pady=2)
 
-        sel = tk.Label(self.parent, height=2, text='{} {} {} {}'.format(
-            self.day_name, calendar.month_name[self.month_selected],
-            self.day_selected, self.year_selected), fg='white', bg='DodgerBlue2')
+        for w, week in enumerate(self.cal.monthdayscalendar(y, m), 2):
+            for d, actualday in enumerate(week):
+                if actualday:
+                    # changed
+                    b = tk.Button(self.parent, width=5, height=3, text=actualday,
+                        fg='white', bg='navy',
+                        command=lambda actualday=actualday:self.selection(actualday, calendar.day_name[(actualday-1) % 7]))
+                    self.wid.append(b)
+                    # changed
+                    b.grid(row=w, column=d)
+        # !!! Here, there is a big problem !!!
+        sel = tk.Label(self.parent, height=2, text='{} {} {}'.format(
+            calendar.month_name[self.month_selected],
+            self.day_selected, self.year_selected), font=('Times New Roman', 16, 'bold'), fg='white', bg='DodgerBlue2')
         self.wid.append(sel)
         sel.grid(row=8, column=0, columnspan=7)
 
@@ -163,6 +167,7 @@ if __name__=='__main__':
 
         def popup(self):
             child = tk.Toplevel(bg='DodgerBlue2')
+            child.resizable(False, False)
             cal = Calendar(child, self.data)
 
         def print_selected_date(self):

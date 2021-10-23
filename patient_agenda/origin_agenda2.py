@@ -163,6 +163,7 @@ if __name__=='__main__':
 
         def popup(self):
             child = tk.Toplevel(bg='DodgerBlue2')
+            child.resizable(False, False)
             cal = Calendar(child, self.data)
 
         def print_selected_date(self):
