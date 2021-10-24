@@ -62,7 +62,7 @@ def auxi_equip1(self):
             if os.path.getsize('./auxequip/doc_equip/auxiliary7.txt'):
                 importationFile('./auxequip/doc_equip/auxiliary7.txt', encodage="Utf-8")
         except FileNotFoundError as err_fnfaux:
-            print("[!] File auxiliary7.txt for patient 1 not found !", err_fnfaux)
+            print("[!] File auxiliary7.txt for patient 7 not found !", err_fnfaux)
             tk.messagebox.showwarning('Warning', 'File auxiliary7.txt not found !')
 
     showData()
