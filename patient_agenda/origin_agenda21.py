@@ -135,7 +135,7 @@ if __name__=='__main__':
             self.labelo = tk.Label(self.parent, text='Agenda',
                 font='Times 18 bold', width=17, height=2, fg='cyan', bg='RoyalBlue4')
 
-            with open('./newpatient/entryfile.txt', 'r') as file_r:
+            with open('./newpatient/entryfile21.txt', 'r') as file_r:
                 line_a = file_r.readline()
 
             self.data_time = tk.StringVar()
