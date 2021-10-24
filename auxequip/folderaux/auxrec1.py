@@ -73,11 +73,11 @@ def recordaux(self):
 
     print(self.CheckVar50.get())
     if self.CheckVar50.get() == 1:
-        print("[+] Vein-flon was checked !")
-        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as veinfile:
-            veinfile.write("# Vein-flon : " + time.strftime("%d/%m/%Y") + " checked\n")
+        print("[+] Patch was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as patchfile:
+            patchfile.write("# Patch : " + time.strftime("%d/%m/%Y") + " checked\n")
     else:
-        print("[-] Vein-flon ok, nothing to do")
+        print("[-] Patch ok, nothing to do")
 
     print(self.CheckVar60.get())
     if self.CheckVar60.get() == 1:
@@ -327,6 +327,14 @@ def recordaux(self):
                 time.strftime("%d/%m/%Y") + " checked\n")
     else:
         print("[-] Central Catheter ok, nothing to do")
+
+    print(self.CheckVar214.get())
+    if self.CheckVar214.get() == 1:
+        print("[+] Vein-flon was checked !")
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as veinfile:
+            veinfile.write("# Vein-flon : " + time.strftime("%d/%m/%Y") + " checked\n")
+    else:
+        print("[-] Vein-flon ok, nothing to do")
 
     print(self.CheckVar220.get())
     if self.CheckVar220.get() == 1:

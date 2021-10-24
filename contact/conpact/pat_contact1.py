@@ -28,7 +28,7 @@ def Window(self):
                 print("+ File contact1.txt created !")
 
         self.x1, self.y1 = 900, 420
-        self.txtBox = tk.Text(self.can, height=23, width=40, font=18, relief=SUNKEN)
+        self.txtBox = tk.Text(self.can, height=23, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
