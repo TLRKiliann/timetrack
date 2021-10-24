@@ -582,6 +582,6 @@ def transwritedata(self):
         recordaux(self)
         uploadaux()
         msgrec()
-        self.showPatients()
+        #self.showPatients()
     else:
         tk.messagebox.showinfo('Return', 'Ok, nothing has changed...')

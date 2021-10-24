@@ -79,9 +79,10 @@ class Calendar:
         self.wid.append(left)
         left.grid(row=0, column=0, columnspan=2, pady=20)
 
+        #calendar.month_abbr[m]
         header = tk.Label(self.parent, fg='white', bg='DodgerBlue2',
             height=2, font=('Times New Roman', 16, 'bold'),
-            text='{} {}'.format(calendar.month_name[m], str(y))) #calendar.month_abbr[m]
+            text='{} {}'.format(calendar.month_name[m], str(y)))
         self.wid.append(header)
         header.grid(row=0, column=2, columnspan=3)
 
@@ -102,13 +103,13 @@ class Calendar:
         for w, week in enumerate(self.cal.monthdayscalendar(y, m), 2):
             for d, actualday in enumerate(week):
                 if actualday:
-                    b = tk.Button(self.parent, width=8, height=4, text=actualday,
+                    b = tk.Button(self.parent, width=6, height=3, text=actualday,
                         fg='white', bg='RoyalBlue3', highlightbackground='RoyalBlue4',
                         activebackground='pale turquoise',
                         command=lambda actualday=actualday:self.selection(actualday,
                             calendar.day_name[(actualday-1) % 7]))
                     self.wid.append(b)
-                    b.grid(row=w, column=d, padx=5, pady=5)
+                    b.grid(row=w, column=d, padx=1, pady=1)
 
         sel = tk.Label(self.parent, height=2,
             text='{} {} {}'.format(calendar.month_name[self.month_selected],
@@ -117,7 +118,7 @@ class Calendar:
         self.wid.append(sel)
         sel.grid(row=8, column=0, columnspan=7)
 
-        ok = tk.Button(self.parent, width=20, height=2, text='SAVE',
+        ok = tk.Button(self.parent, width=20, height=1, text='SAVE',
             font=('Times New Roman', 14, 'bold'), fg='cyan', bg='RoyalBlue3',
             highlightbackground='RoyalBlue4', activebackground='pale turquoise',
             command=self.kill_and_save)

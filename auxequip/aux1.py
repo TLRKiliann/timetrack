@@ -8,6 +8,8 @@
 
 
 import tkinter as tk
+from tkinter import messagebox
+import os
 from auxequip.folderaux.auxrec1 import transwritedata
 
 
@@ -37,12 +39,33 @@ def auxi_equip1(self):
     self.ntry_txt.set(line1[:-1])
     self.entryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
+    
+    def showData():
+        """
+            call this function when this window opened
+            and after a save.
+        """
+        self.x3, self.y3 = 205, 370
+        self.textbox = tk.Text(self.can, height=30, width=35, font=18, relief=tk.SUNKEN)
+        self.textbox.delete('1.0', tk.END)
+        self.textbox.update()
+        self.ftextbox_window = self.can.create_window(self.x3, self.y3, window=self.textbox)
 
-    self.x3, self.y3 = 205, 370
-    self.textbox = tk.Text(self.can, height=30, width=35, font=18, relief=tk.SUNKEN)
-    self.textbox.delete('1.0', tk.END)
-    self.textbox.update()
-    self.ftextbox_window = self.can.create_window(self.x3, self.y3, window=self.textbox)
+        def importationFile(fichier, encodage="Utf-8"):
+            file = open(fichier, 'r', encoding=encodage)
+            content = file.readlines()
+            file.close()
+            for li in content:
+                self.textbox.insert(tk.END, li)
+
+        try:
+            if os.path.getsize('./auxequip/doc_equip/auxiliary1.txt'):
+                importationFile('./auxequip/doc_equip/auxiliary1.txt', encodage="Utf-8")
+        except FileNotFoundError as err_fnfaux:
+            print("[!] File auxiliary1.txt for patient 1 not found !", err_fnfaux)
+            tk.messagebox.showwarning('Warning', 'File auxiliary1.txt not found !')
+
+    showData()
 
     self.x30, self.y30 = 500, 120
     self.labl_mob = tk.Label(self.can, text='--- Mobilisation ---',
@@ -631,10 +654,10 @@ def auxi_equip1(self):
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
 
-    self.x600, self.y600 = 760, 580
+    self.x600, self.y600 = 780, 580
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command=lambda: transwritedata(self))
+        highlightbackground='cyan', command=lambda: ([transwritedata(self), showData()]))
     self.buttonsave = self.can.create_window(self.x600, self.y600,
         window = self.buttonsave)
 
