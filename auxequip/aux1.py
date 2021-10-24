@@ -42,8 +42,8 @@ def auxi_equip1(self):
     
     def showData():
         """
-            call this function when this window opened
-            and after a save.
+            This function is called when you
+            enter this page or after a save.
         """
         self.x3, self.y3 = 205, 370
         self.textbox = tk.Text(self.can, height=30, width=35, font=18, relief=tk.SUNKEN)
