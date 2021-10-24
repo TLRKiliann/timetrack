@@ -13,7 +13,7 @@ import os
 from auxequip.folderaux.auxrec18 import transwritedata
 
 
-def auxi_equip1(self):
+def auxi_equip18(self):
     """
         Main function called since main app
         (heal_track.py) for displaying auxiliary
