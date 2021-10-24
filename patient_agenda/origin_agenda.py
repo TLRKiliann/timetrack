@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-import calendar
-import datetime
-import sys
-import subprocess
-import os
-from pickle import dump
 import tkinter as tk
+import os
+import subprocess
+import datetime
+import calendar
+from pickle import dump
 
 
 class Calendar:
