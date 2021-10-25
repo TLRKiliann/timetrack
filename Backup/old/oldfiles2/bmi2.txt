@@ -1,0 +1,42 @@
+Date : 15/10/2021
+Heure : 09:39:31
+Prenom et Nom : Njin Nier
+Poids : 74
+Taille : 1.86
+BMI : 21.39
+
+Date : 01/10/2021
+Heure : 09:39:31
+Prenom et Nom : Njin Nier
+Poids : 74.8
+Taille : 1.86
+BMI : 21.621
+
+Date : 05/10/2021
+Heure : 09:39:31
+Prenom et Nom : Njin Nier
+Poids : 72.3
+Taille : 1.86
+BMI : 20.898
+
+Date : 15/10/2021
+Heure : 09:58:25
+Prenom et Nom : Njin Nier
+Poids : 75.3
+Taille : 1.86
+BMI : 21.766
+
+Date : 02/02/2021
+Heure : 09:58:25
+Prenom et Nom : Njin Nier
+Poids : 76.4
+Taille : 1.86
+BMI : 22.083
+
+Date : 05/05/2021
+Heure : 09:58:25
+Prenom et Nom : Njin Nier
+Poids : 74.8
+Taille : 1.86
+BMI : 21.621
+
