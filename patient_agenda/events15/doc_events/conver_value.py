@@ -50,13 +50,13 @@ final_data = extraday +'/'+ extramounth +'/'+ str(data_year) +' : '
 print(final_data)
 
 try:
-    if os.path.getsize('./patient_agenda/events10/doc_events/fix_agenda/patient_value.json'):
+    if os.path.getsize('./patient_agenda/events15/doc_events/fix_agenda/patient_value.json'):
         print("+ File 'value' exist !")   
-        with open('./patient_agenda/events10/doc_events/fix_agenda/patient_value.json','w') as partytime:
+        with open('./patient_agenda/events15/doc_events/fix_agenda/patient_value.json','w') as partytime:
             json.dump(final_data, partytime)
 except FileNotFoundError as msg:
     print("File doesn't exist, but it has been created !")
-    with open('./patient_agenda/events10/doc_events/fix_agenda/patient_value.json','w') as partyleft:
+    with open('./patient_agenda/events15/doc_events/fix_agenda/patient_value.json','w') as partyleft:
     	json.dump(final_data, partyleft)
 
-subprocess.call('./patient_agenda/events10/doc_events/fix_agenda/extend_agenda.py')
+subprocess.call('./patient_agenda/events15/doc_events/fix_agenda/extend_agenda.py')
