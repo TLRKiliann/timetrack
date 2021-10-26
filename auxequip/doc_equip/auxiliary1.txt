@@ -30,3 +30,18 @@ Date : 24/10/2021
 Patient name : Two B
 ---------------------------------------------------------
 # Vein-flon : 24/10/2021 checked
+----------------------------------------------------------
+Date : 26/10/2021
+Patient name : Two B
+---------------------------------------------------------
+# Total Knee L : 26/10/2021 checked
+# Total Knee R : 26/10/2021 checked
+# Shoulder Prosthesis L : 26/10/2021 checked
+# Shoulder Prosthesis R : 26/10/2021 checked
+----------------------------------------------------------
+Date : 26/10/2021
+Patient name : Two B
+---------------------------------------------------------
+# Dialysis : 26/10/2021 checked
+# Biliary Drain : 26/10/2021 checked
+# Suprapubic Catheter : 26/10/2021 checked
