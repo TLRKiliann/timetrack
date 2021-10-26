@@ -142,32 +142,32 @@ if __name__=='__main__':
 
             self.data_time = tk.StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
-                font='Times 14', width=20, fg='white', bg='RoyalBlue4', bd=2,
+                font='Times 14', width=20, fg='white', bg='DodgerBlue2', bd=2,
                 highlightbackground='pale turquoise', justify=tk.CENTER)
             self.data_time.set(line_a[:-1])
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 bd=2, font="Times 14", width=20, height=1, fg='cyan',
-                bg='RoyalBlue3', highlightbackground='DodgerBlue2',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.popup)
 
             self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
                 bd=2, font="Times 14", width=20, height=1,fg='cyan',
-                bg='RoyalBlue3', highlightbackground='DodgerBlue2',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.print_selected_date)
 
             self.buttAgenda = tk.Button(self.parent, text='Agenda',
                 font="Times 14", bd=2, width=20, height=1, fg='cyan',
-                bg='RoyalBlue3', highlightbackground='DodgerBlue2',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.accessDate)
 
             self.buttLook = tk.Button(self.parent, text='Modifications',
                 font="Times 14", bd=2, width=20, height=1,
-                fg='cyan', bg='RoyalBlue3', highlightbackground='DodgerBlue2',
+                fg='cyan', bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.accessLook)
 
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14",
-                width=20, bd=2, height=1, fg='white', bg='RoyalBlue3',
+                width=20, bd=2, height=1, fg='white', bg='RoyalBlue4',
                 activebackground='pale turquoise', command=quit)
 
             self.labelo.grid()
