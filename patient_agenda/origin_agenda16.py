@@ -131,38 +131,44 @@ if __name__=='__main__':
     class Control:
         def __init__(self, parent):
             self.parent = parent.title("Time-Track")
-            self.parent = parent.configure(background='cyan')
+            self.parent = parent.configure(background='RoyalBlue3')
+
             self.labelo = tk.Label(self.parent, text='Agenda',
-                font='Times 18 bold', width=17, height=2, fg='cyan', bg='RoyalBlue4')
+                font='Times 18 bold', width=17, height=2,
+                fg='white', bg='RoyalBlue3')
 
             with open('./newpatient/entryfile16.txt', 'r') as file_r:
                 line_a = file_r.readline()
 
             self.data_time = tk.StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
-                font='Times 14', width=22, fg='RoyalBlue4', bg='pale turquoise', bd=2,
-                justify=tk.CENTER)
+                font='Times 14', width=20, fg='white', bg='DodgerBlue2', bd=2,
+                highlightbackground='pale turquoise', justify=tk.CENTER)
             self.data_time.set(line_a[:-1])
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
-                font="Times 14", width=20, height=1, fg='white', bg='RoyalBlue3',
+                bd=2, font="Times 14", width=20, height=1, fg='cyan',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.popup)
 
             self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
-                font="Times 14", width=20, height=1,fg='white', bg='RoyalBlue3',
+                bd=2, font="Times 14", width=20, height=1,fg='cyan',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
                 activebackground='pale turquoise', command=self.print_selected_date)
 
-            self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
-                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
-                command=self.accessDate)
+            self.buttAgenda = tk.Button(self.parent, text='Agenda',
+                font="Times 14", bd=2, width=20, height=1, fg='cyan',
+                bg='RoyalBlue4', highlightbackground='DodgerBlue2',
+                activebackground='pale turquoise', command=self.accessDate)
 
-            self.buttLook = tk.Button(self.parent, text='To change rdv', font="Times 14",
-                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
-                command=self.accessLook)
+            self.buttLook = tk.Button(self.parent, text='Modifications',
+                font="Times 14", bd=2, width=20, height=1,
+                fg='cyan', bg='RoyalBlue4', highlightbackground='DodgerBlue2',
+                activebackground='pale turquoise', command=self.accessLook)
 
-            self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
-                height=1, fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
-                activeforeground='red', command=quit)
+            self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14",
+                width=20, bd=2, height=1, fg='white', bg='RoyalBlue4',
+                activebackground='pale turquoise', command=quit)
 
             self.labelo.grid()
             self.entryname.grid()
