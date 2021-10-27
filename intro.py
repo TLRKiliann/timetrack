@@ -63,7 +63,7 @@ def closeWindow():
 
     #launchDownload()
 
-def validentry():
+def validentry(event):
     """
         To validate entree
         from user.
@@ -128,7 +128,8 @@ getpass = tk.StringVar()
 passentry = ttk.Entry(window, textvariable=getpass, show='*')
 passentry.pack(padx=10)
 
-buttonvalidate = ttk.Button(window, text='Validate', command=validentry)
+window.bind('<Return>', validentry)
+buttonvalidate = ttk.Button(window, text='Enter')
 buttonvalidate.pack(pady=10)
 
 window.mainloop()
