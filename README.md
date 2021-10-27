@@ -1,4 +1,4 @@
-# TiMe-TRaK
+# TiMe-TRaCK
 
 A medical application (time-track - future version) to connect PyMySQL with MySQL (MariaDB) on raspberry. Below, I explain how to use this application with the MariaDB table in localhost, LAN and WAN connection).
 I chose a LAN infrastructure for security reasons. It is possible to extend the connection to the internet with a forwarding on the server (described below).
@@ -67,7 +67,6 @@ Password required
 ---
 
 ## How to install pymysql on client (out of virtualenv)
-----------------------------------------------------
 
 You could install it on server too for solving problem.
 
@@ -180,9 +179,7 @@ Host targetserver.serv@192.168.x.x\
 
 > sudo mysql_secure_installation
 
-Make sure you write down the password you set during this process as\
-we will need to use it to access the MySQL server and create databases\
-and users.
+Make sure you write down the password you set during this process as we will need to use it to access the MySQL server and create databases and users.
 
 ---
 
