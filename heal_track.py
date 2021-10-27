@@ -158,7 +158,7 @@ class ScrollCanvas(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.canvas_window=self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
 
@@ -1792,7 +1792,7 @@ class Application(tk.Frame):
         self.master.protocol("WM_DELETE_WINDOW", lambda arg=self.master: self.msgQuitapp(arg))
 
         self.mBar = MenuBar(self)
-        self.mBar.pack(side=tk.TOP, fill=tk.X, expand=True)
+        self.mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
         self.can = tk.Canvas(self, width=1250, height=700, bg='black')
         self.viewPort = tk.Frame(self.can)
@@ -1805,11 +1805,11 @@ class Application(tk.Frame):
         # clock_label to display time
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("helvetica", 18, 'bold'))
-        self.clock_label.pack(side=tk.TOP, fill=tk.X, expand=True)
+        self.clock_label.pack(side=tk.TOP, fill=tk.X, expand=1)
         self.clock_label.after(200, self.tick)
 
         # Frame size configuration
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
 

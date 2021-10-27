@@ -17,7 +17,7 @@ class ScrollCanvas(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.can.create_window((4, 4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -35,7 +35,7 @@ class Application(tk.Frame):
         self.master.title('TIME-TRACK : Care')
 
         mBar = MenuBar(self)
-        mBar.pack(side=tk.TOP, fill=tk.X, expand=True)
+        mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
         # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = tk.Canvas(self, width=600, height=400, bg='DodgerBlue2')
@@ -43,7 +43,7 @@ class Application(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         # Insertion du texte
@@ -51,7 +51,7 @@ class Application(tk.Frame):
             font=('Times New Roman', 28), fill='white')
         self.can.create_text(590, 380, anchor=tk.NE, text="14 needs",
             font=('Times', 12), fill='white') 
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
@@ -70,7 +70,7 @@ class Application(tk.Frame):
             highlightbackground='light sky blue',
             text="Read", command = self.lectureFic)
         self.fb3 = self.can.create_window(self.x3, self.y3, window=self.b3)
-        #self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        #self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.pack()
 
     # Méthode pour reconfigurer la scrollbar à chaque fois
