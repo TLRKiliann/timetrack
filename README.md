@@ -5,10 +5,9 @@ I chose a LAN infrastructure for security reasons. It is possible to extend the 
 
 ---
 
-Localhost :
------------
+## Localhost :
 
-+ One user: (localhost - 127.0.0.1)
+* One user: (localhost - 127.0.0.1)
 
 I recommend to create the MySQL database table in localhost (on your own machine). To do this you will have to modify the files of "update/" and "nutrition/" folders, as well as the "accessDB.py" file by replacing :
 
@@ -23,10 +22,10 @@ pymysql.connect(host='127.0.0.1', user='usr_namedb', password='user_passwd', dat
 
 ---
 
-LAN or WAN :
-------------
+## LAN or WAN :
 
-+ Multiple users: (LAN or WAN)
+
+* Multiple users: (LAN or WAN)
 
 You should install MySQL on one server. Otherwise each user will have an independent database if it is installed on localhost. This is obviously not the point, if something changes, the other users will not see what has changed in their database.
 It is also possible to extend the connection to the Internet (WAN) to have access outside the LAN (forwarding). To do this replace the following lines:
@@ -46,8 +45,8 @@ Don't be worry, I explain that below ;)
 
 # Configuration for LOCALHOST :
 
-MySQL Workbench (config on your local machine ! (NOT FOR DISTANT SERVER))
--------------------------------------------------------------------------
+## MySQL Workbench (config on your local machine ! (NOT DISTANT SERVER))
+
 
 1) Create a database :\
 MYSQL Connections --> click '+'
@@ -67,16 +66,16 @@ Password required
 
 ---
 
-How to install pymysql on client (out of virtualenv)
+# How to install pymysql on client (out of virtualenv)
 ----------------------------------------------------
 
 You could install it on server too for solving problem.
 
-+ Install python3-pymysql (out of virutalenv !):
+## Install python3-pymysql (out of virutalenv !):
 
 > sudo apt install python3-pymysql
 
-+ Install PyMySQL and MySQL (in virtualenv !)
+## Install PyMySQL and MySQL (in virtualenv !)
 
 > pip3 install pymysql (or PyMySQL)
 
@@ -90,12 +89,11 @@ You could install it on server too for solving problem.
 
 # Configuration for LAN :
 
-Install ssh public key :
-------------------------
+## Install ssh public key :
 
-Private key and public key :
+### Private key and public key :
 
-+ Generate rsa key :
+### Generate rsa key :
 
 > ssh-keygen -t rsa
 
@@ -105,14 +103,14 @@ Enter passphrase : XXXXXXXX
 
 ---
 
-+ Copy key on server :
+### Copy key on server :
 
 > ssh-copy-id -i ~/.ssh/rsa_file.pub serv@192.168.x.x
 passwd
 
 ---
 
-+ Connection with server :
+### Connection with server :
 
 > ssh -i ~/.ssh/rsa_file serv@192.168.x.x
 
@@ -122,9 +120,9 @@ Without passwd
 
 ---
 
-+ Save the key on client for remote server
+### Save the key on client for remote server
 
-+ We place ourselves in the right folder (use ls and cd ;) !
+_We place ourselves in the right folder (use ls and cd ;) !_
 
 > ssh-agent bash
 
@@ -134,7 +132,7 @@ Enter passphrase :
 
 ---
 
-+ To keep passphrase in memory :
+### To keep passphrase in memory :
 
 > ssh-add (-h = help) (-t = time in memory) (-l = list of keys) (-d rsa_file = delete the key)
 
@@ -148,11 +146,11 @@ Connection established !!!
 We only need to enter this sentence when we \
 want to connect to the remote server :
 
-+ For raspberry pi 3 :
+### For raspberry pi 3 :
 
 > ssh -i ~/.ssh/rsa_file serv@192.168.x.x
 
-+ For linux distro :
+### For linux distro :
 
 > ssh -i ~/.ssh/rsa_file pi@192.168.x.x
 
@@ -160,17 +158,16 @@ want to connect to the remote server :
 
 ---
 
-+ Verification :
+### Verification :
 
 > cat ~/.ssh/config
 
 ---
 
-+ In the file there should be the following :
+### In the file there should be the following :
 
 Host targetserver.serv@192.168.x.x\
    IdentityFile ~/.ssh/rsa_file # private key
-
 
 ---
 
@@ -184,12 +181,13 @@ Host targetserver.serv@192.168.x.x\
 
 > sudo mysql_secure_installation
 
-Make sure you write down the password you set during this process as we will need to use it to access the MySQL server and create databases and users.
+Make sure you write down the password you set during this process as\
+we will need to use it to access the MySQL server and create databases\
+and users.
 
 ---
 
-To start mysql :
-----------------
+## To start mysql :
 
 > sudo systemctl start mysql
 
@@ -203,8 +201,7 @@ or
 
 ---
 
-To stop mysql :
----------------
+## To stop mysql :
 
 > sudo systemctl stop mysql
 
@@ -218,8 +215,7 @@ or
 
 ---
 
-To reload MySQL : (after changing conf)
----------------------------------------
+## To reload MySQL : (after changing conf)
 
 > sudo systemctl reload mysql
 
@@ -227,8 +223,7 @@ To reload MySQL : (after changing conf)
 
 ---
 
-To restart MySQL : (after changing conf)
-----------------------------------------
+## To restart MySQL : (after changing conf)
 
 > sudo systemctl restart mysql
 
@@ -256,7 +251,7 @@ exit;
 
 ---
 
-+ Now database is accessible for user_name :
+### Now database is accessible for user_name :
 
 > sudo mysql -u user_name -p
 
@@ -283,7 +278,12 @@ exit;
 
 14) Configure file to /etc/mysql/mariadb.d.conf/50-server.cnf :
 > sudo nano /etc/mysql/mariadb.d.conf/50-server.cnf
-+ Active/Change the following lines :
+
+### Active/Change the following lines :
+
+|Port|Address|
+|----|-------|
+|3306|0.0.0.0|
 
 > port                3306\
 > bind-address        0.0.0.0
@@ -300,15 +300,13 @@ exit;
 
 ---
 
-To test CONFIGURATION from server side :
-----------------------------------------
+## To test CONFIGURATION from server side :
 
 > sudo netstat -anp | grep 3306
 
 ---
 
-To test CONFIGURATION of server from client side :
---------------------------------------------------
+## To test CONFIGURATION of server from client side :
 
 > mysql -u koala33 -h 192.168.XX.XX -p
 
@@ -332,8 +330,7 @@ Install python3-pymysql (out of virutalenv !):
 
 ---
 
-Install PyMySQL and MySQL (in virtualenv !)
--------------------------------------------
+# Install PyMySQL and MySQL (in virtualenv !)
 
 > pip3 install pymysql (or PyMySQL)
 
@@ -345,20 +342,18 @@ Install PyMySQL and MySQL (in virtualenv !)
 
 ---
 
-Compatibility with pymysql and mariadb (on client side - out of virtualenv !)
------------------------------------------------------------------------------
+# Compatibility with pymysql and mariadb (on client side - out of virtualenv !)
 
 > sudo apt-get install mariadb-client-10.1
 
 ---
 
-UFW :
------
+# UFW :
 
 You can grant access to the remote system with IP 192.168.XX.XX to connect
 the port 3306 with the following command (on server side) :
 
-+ LAN 
+* LAN 
 
 > sudo ufw allow from 192.168.XX.XX to any port 22\
 > sudo ufw allow from 192.168.XX.XX to any port 3306\
@@ -366,7 +361,7 @@ the port 3306 with the following command (on server side) :
 
 ---
 
-+ INTERNET
+* INTERNET
 
 > sudo ufw allow from 192.168.XX.XX to any port 22\
 > sudo ufw allow 3306/tcp\
@@ -374,10 +369,9 @@ the port 3306 with the following command (on server side) :
 
 ---
 
-Configuration UFW :
--------------------
+# Configuration UFW :
 
-+ SERVEUR :
+* SERVEUR :
 
 > To    Action      From\
 > 22    ALLOW IN    192.168.XX.XX\
@@ -385,7 +379,7 @@ Configuration UFW :
 
 ---
 
-+ CLIENT :
+* CLIENT :
 
 > Status: active\
 > Logging: on (low)\
@@ -396,15 +390,13 @@ Configuration UFW :
 
 # Configuration for WAN
 
-PORT FOWARDING (on server) to access db from internet (WAN)
------------------------------------------------------------
+## PORT FOWARDING (on server) to access db from internet (WAN)
 
 > echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ---
 
-Launch app with :
------------------
+## Launch app with :
 
 > $ python3 heal_track.py
 
@@ -414,8 +406,7 @@ or with :
 
 ---
 
-To connect to server from client side :
----------------------------------------
+## To connect to server from client side :
 
 Use ssh to remote access to server and configure all what you wants.
 
