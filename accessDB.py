@@ -38,7 +38,7 @@ class ScrollCanvas(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -62,7 +62,7 @@ class TrackDB(tk.Frame):
         self.can.create_window((4,4), window=self.frame,
             anchor=tk.NW, tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
         ID = tk.StringVar()
         Firstname = tk.StringVar()
@@ -124,7 +124,7 @@ class TrackDB(tk.Frame):
         self.datatt_records.column("disease", width=200)
         self.datatt_records.column("maindiagnostic", width=200)
 
-        self.datatt_records.pack(fill=tk.BOTH, expand=True)
+        self.datatt_records.pack(fill=tk.BOTH, expand=1)
 
         # Button refresh
         #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)

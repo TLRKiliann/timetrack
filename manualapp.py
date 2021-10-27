@@ -17,12 +17,12 @@ def instalpy(self):
     self.photo = tk.PhotoImage(file='./syno_gif/2b_bg.png')
 
     self.item = tk.Label(self.can, image=self.photo, bg='black')
-    self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
     self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='aquamarine',
         highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
 
-    self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+    self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
     self.text_area.insert(tk.END,"\n --------------------\n"
         " |- TUTORIAL -|\n"
         " --------------------\n"
