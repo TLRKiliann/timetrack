@@ -1,23 +1,14 @@
 ---####-|--- Affichage des besoins du patient à surveiller ---|-####---
 
-En date du : 10/10/2021 à 17:22:57 :
-Patient name : Two B
-+ Surveillance respiratoire requise
+En date du : 11/10/2021 à 09:32:09 :
+Patient name : Kayney Nier
++ Surveillance pour éviter les dangers requise
++ Surveillance propreté et/ou téguments requise
 ---
-
-
-Implemented as : 10/10/2021 at 17:25:24 :
-Pansement (PSMT) :
-Changement de venflon :
-Bilan hydrique :
-PCA (pompe antalgie) :
-
-
-Implemented as : 10/10/2021 at 17:41:33 :
 ---####-|--- Display of the patient's needs to be monitored ---|-####---
 
-Fixed on : 27/10/2021 at 18:02:44 :
-Patient name : Two B
+Fixed on : 27/10/2021 at 18:03:01 :
+Patient name : Kayney Nier
 [+] Respiratory monitoring - required
 [+] Temperature monitoring - required
 [+] Dietary and/or hydration monitoring - required
