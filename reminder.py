@@ -26,7 +26,7 @@ def alarmThread(self):
     # DodgerBlue2
     self.can.configure(bg='black')
     # fontalarmbg2.png 625, 350, 
-    self.photo = tk.PhotoImage(file='./syno_gif/minipy3.png')
+    self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
     def action():
@@ -116,7 +116,7 @@ def alarmThread(self):
     self.wbuttsave_window = self.can.create_window(self.x60, self.y60,
         window=self.buttsave)
 
-    self.photo2 = tk.PhotoImage(file='./syno_gif/minipy3.png')
+    self.photo2 = tk.PhotoImage(file='./syno_gif/9sf.png')
     self.item2 = self.can.create_image((1250,0), image=self.photo2, anchor=tk.NE)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))

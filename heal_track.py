@@ -516,7 +516,7 @@ class MenuBar(tk.Frame):
             background='black', activebackground='aquamarine',
             foreground='white', activeforeground='black',
             command=boss.funcPyCon)
-        me1.add_command(label='MapApp', font=("Times 14 bold"),
+        me1.add_command(label='Tutorial', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.mapApp)
@@ -2022,6 +2022,7 @@ class Application(tk.Frame):
         self.lab = tk.Tk()
         self.lab.title("ATCD")
         self.lab.configure(bg="grey22")
+        self.lab.resizable(False, False)
 
         self.labFra = tk.LabelFrame(self.lab, text="\nWelcome !",
             font=("Arial 12"),fg='cyan', bg='grey22')
@@ -2037,14 +2038,14 @@ class Application(tk.Frame):
         self.lab5 = tk.Label(self.labFra, justify=tk.LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
-            "to perform onto this app ! If you need help, you can go to MapApp to\n"
-            "access map of this app and understand how the app is used ;)\n\n"
+            "to perform onto this app ! If you need help, you can go to Tutorial to\n"
+            "understand how to use this app.\n\n"
             "Enjoy it !\n").pack(padx=10)
         self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=tk.SUNKEN)
         self.separator.pack(fill=tk.X, padx=30, pady=3)
         self.lab6 = tk.Label(self.labFra, justify=tk.LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
-            text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
+            text="Path : Menu Bar --> Menu --> Tutorial").pack(padx=10, pady=10)
 
     def callPatient1(self):
         """

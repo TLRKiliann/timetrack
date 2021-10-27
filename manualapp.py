@@ -14,7 +14,7 @@ def instalpy(self):
     self.effacer()
     self.delScroll()
 
-    self.photo = tk.PhotoImage(file='./syno_gif/2b_bg.png')
+    self.photo = tk.PhotoImage(file='./syno_gif/a2f.png')
 
     self.item = tk.Label(self.can, image=self.photo, bg='black')
     self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
