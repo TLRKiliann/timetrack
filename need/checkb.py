@@ -27,153 +27,162 @@ textname.set(line1[:-1])
 entryName.grid(sticky=tk.E, row=0, column=0, padx=30, pady=20)
 
 def recordOption():
-    print("+ Date : " + time.strftime("%d/%m/%Y"))
-    print("+ Nom du patient : ", entryName.get())
-    with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:        
-        file.write("---####-|--- Affichage des besoins du patient à surveiller ---|-####---\n")
-        file.write("\nEn date du : ")
-        file.write(time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
-        file.write("Patient name : ")
-        file.write(entryName.get() + "\n")
 
-    print(CheckVar1.get())
+    print("[+] Date : " + time.strftime("%d/%m/%Y"))
+    print("[+] Patient name : ", entryName.get())
+    with open('./need/doc_suivi/patient1_14b.txt', 'a+') as mfile:        
+        mfile.write("---####-|--- Display of the patient's needs to be monitored ---|-####---\n")
+        mfile.write("\nFixed on : ")
+        mfile.write(time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+        mfile.write("Patient name : ")
+        mfile.write(entryName.get() + "\n")
+
     if CheckVar1.get() == 1:
-        print("Surveillance respiratoire requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance respiratoire requise\n")
+        print("Respiratory monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as respfile:
+            respfile.write("[+] Respiratory monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
-    print(CheckVar2.get())
     if CheckVar2.get() == 1:
-        print("Surveillance de la température requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance de la température requise\n")
+        print("Temperature monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as tempfile:
+            tempfile.write("[+] Temperature monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar3.get())
     if CheckVar3.get() == 1:
-        print("Surveillance alimentaire et/ou hydratation requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance alimentaire et/ou hydratation requise\n")
+        print("Dietary and/or hydration monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as hydrafile:
+            hydrafile.write("[+] Dietary and/or hydration monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar4.get())
     if CheckVar4.get() == 1:
-        print("Surveillance urinaire et/ou fécale requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance urinaire et/ou fécale requise\n")
+        print("Urinary and/or fecal monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as elimfile:
+            elimfile.write("[+] Urinary and/or fecal monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar5.get())
     if CheckVar5.get() == 1:
-        print("Surveillance du sommeil requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance du sommeil requise\n")
+        print("Sleep monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as somfile:
+            somfile.write("[+] Sleep monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar6.get())
     if CheckVar6.get() == 1:
-        print("Surveillance posturale et/ou des déplacements requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance posturale et/ou des déplacements requise\n")
+        print("Postural and/or movement monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as mobfile:
+            mobfile.write("[+] Postural and/or movement monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar7.get())
     if CheckVar7.get() == 1:
-        print("Surveillance pour éviter les dangers requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance pour éviter les dangers requise\n")
+        print("Monitoring to prevent hazards - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as dangerfile:
+            dangerfile.write("[+] Monitoring to prevent hazards - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar8.get())
     if CheckVar8.get() == 1:
-        print("Surveillance propreté et/ou téguments requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance propreté et/ou téguments requise\n")
+        print("Cleanliness and/or integument monitoring - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as skinfile:
+            skinfile.write("[+] Cleanliness and/or integument monitoring - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar9.get())
     if CheckVar9.get() == 1:
-        print("Surveillance ou aide pour l'habillage/déshabillage requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Surveillance ou aide pour l'habillage/déshabillage requise\n")
+        print("Supervision or assistance with dressing/undressing - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as wearfile:
+            wearfile.write("[+] Supervision or assistance with dressing/undressing - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar10.get())
     if CheckVar10.get() == 1:
-        print("Stimulation ou aide pour la communication requise en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Stimulation ou aide pour la communication requise\n")
+        print("Stimulation or assistance with communication - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as speakfile:
+            speakfile.write("[+] Stimulation or assistance with communication - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar11.get())
     if CheckVar11.get() == 1:
-        print("Agir pour aider la personne dans ses valeurs et croyances en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Agir pour aider la personne dans ses valeurs et croyances\n")
+        print("Helping the person to act on their values and beliefs")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as prayfile:
+            prayfile.write("[+] Helping the person to act on their values and beliefs\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar12.get())
     if CheckVar12.get() == 1:
-        print("Accompagner ou aider la personne à se réaliser en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Accompagner ou aider la personne à se réaliser\n")
+        print("Accompany or help the person to realize himself")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as devfile:
+            devfile.write("[+] Accompany or help the person to realize himself\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar13.get())
     if CheckVar13.get() == 1:
-        print("Accompagnement ou aide dans se recréer requis en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Accompagnement ou aide dans se recréer requis\n")
+        print("Accompany or help the person to recreate - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as resortfile:
+            resortfile.write("[+] Accompany or help the person to recreate - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
     print(CheckVar14.get())
     if CheckVar14.get() == 1:
-        print("Accompagnement ou aide dans l'apprentissage requis en ajout")
-        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-            file.write("+ Accompagnement ou aide dans l'apprentissage requis\n")
+        print("Accompany or assist the person in learning - required")
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as learnfile:
+            learnfile.write("[+] Accompany or assist the person in learning - required\n")
     else:
-        print("Nothing to do")
+        print("[---] Nothing to do")
 
-    with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-        file.write("---\n")
+    with open('./need/doc_suivi/patient1_14b.txt', 'a+') as writefile:
+        writefile.write("---\n")
 
+def confRec():
+    """
+        Launch subprocess to save data to ther server.
+    """
     proc = subprocess.run(["scp", "./need/doc_suivi/patient1_14b.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient1_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
+
     if proc.stderr == b'':
-        print("+ File patient1_14b.txt uploaded !")
+        print("[Upload] File patient1_14b.txt uploaded !")
         tk.messagebox.showinfo("INFO", "patient1_14b.txt uploaded...")
     else:
-        print("+ No file to upload !")
+        print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No patient1_14b.txt to upload...")
-
-def confRec():
+    
     tk.messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def recordTofile():
-    MsgBox = tk.messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
+    """
+        When usr click on <yes> button of msgbox,
+        functions are called to save what has been
+        checked with Checkbutton() widget.  
+    """
+    MsgBox = tk.messagebox.askyesno('Record', 'Results will be saved into '\
+        'Care and Monitoring, ok ?')
     if MsgBox == 1:
-        print("Ok data saved")
         recordOption()
         confRec()
+        print("[+] Ok data saved")
         fen.destroy()
     else:
-        tk.messagebox.showinfo('Return', 'You will return back')
+        tk.messagebox.showinfo('Info', 'Nothing has changed.')
 
 CheckVar1 = tk.IntVar()
 C1 = tk.Checkbutton(fen, text="Respirer", fg='navy', 
@@ -275,7 +284,7 @@ C14.grid(row=14, column=0)
 
 buttonTocheck = tk.Button(fen, text="Save", width=10, fg='yellow',
     bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
-    activebackground='pale turquoise', command=recordTofile)
+    activebackground='pale turquoise', command= recordTofile)
 buttonTocheck.grid(sticky=tk.W, row=15, column=0, padx=20, pady=10)
 
 buttonQuit = tk.Button(fen, text='Quit', width=10, fg='white',
