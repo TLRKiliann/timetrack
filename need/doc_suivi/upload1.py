@@ -2,6 +2,12 @@
 # -*- coding : utf-8 -*-
 
 
+"""
+    Upload file main_14b.txt with thread
+    with bar upload GUI in ttk style.
+"""
+
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -30,7 +36,7 @@ def managetask(root):
     root.mainloop()
 
 def process_unknown_duration(root):
-    time.sleep(1)
+    #time.sleep(1)
     proc = subprocess.run(["scp", "./need/doc_suivi/main_14b.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/main_14b.txt"],
         stderr=subprocess.PIPE)
