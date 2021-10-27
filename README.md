@@ -1,11 +1,11 @@
-# TIME-TRACK (Connection Heal)
+# TiMe-TRaK
 
 A medical application (time-track - future version) to connect PyMySQL with MySQL (MariaDB) on raspberry. Below, I explain how to use this application with the MariaDB table in localhost, LAN and WAN connection).
 I chose a LAN infrastructure for security reasons. It is possible to extend the connection to the internet with a forwarding on the server (described below).
 
 ---
 
-## Localhost :
+### Localhost :
 
 * One user: (localhost - 127.0.0.1)
 
@@ -22,7 +22,7 @@ pymysql.connect(host='127.0.0.1', user='usr_namedb', password='user_passwd', dat
 
 ---
 
-## LAN or WAN :
+### LAN or WAN :
 
 
 * Multiple users: (LAN or WAN)
@@ -43,9 +43,9 @@ Don't be worry, I explain that below ;)
 
 ---
 
-# Configuration for LOCALHOST :
+## Configuration for LOCALHOST :
 
-## MySQL Workbench (config on your local machine ! (NOT DISTANT SERVER))
+### MySQL Workbench (config on your local machine ! (NOT DISTANT SERVER))
 
 
 1) Create a database :\
@@ -66,12 +66,12 @@ Password required
 
 ---
 
-# How to install pymysql on client (out of virtualenv)
+## How to install pymysql on client (out of virtualenv)
 ----------------------------------------------------
 
 You could install it on server too for solving problem.
 
-## Install python3-pymysql (out of virutalenv !):
+### Install python3-pymysql (out of virutalenv !):
 
 > sudo apt install python3-pymysql
 
@@ -87,13 +87,13 @@ You could install it on server too for solving problem.
 
 ---
 
-# Configuration for LAN :
+## Configuration for LAN :
 
-## Install ssh public key :
+### Install ssh public key :
 
-### Private key and public key :
+#### Private key and public key :
 
-### Generate rsa key :
+#### Generate rsa key :
 
 > ssh-keygen -t rsa
 
@@ -103,24 +103,24 @@ Enter passphrase : XXXXXXXX
 
 ---
 
-### Copy key on server :
+#### Copy key on server :
 
 > ssh-copy-id -i ~/.ssh/rsa_file.pub serv@192.168.x.x
 passwd
 
 ---
 
-### Connection with server :
+#### Connection with server :
 
 > ssh -i ~/.ssh/rsa_file serv@192.168.x.x
 
 Enter passphrase: XXXXXX
 
-Without passwd
+_You don't need to enter password._
 
 ---
 
-### Save the key on client for remote server
+#### Save the key on client for remote server
 
 _We place ourselves in the right folder (use ls and cd ;) !_
 
@@ -128,11 +128,11 @@ _We place ourselves in the right folder (use ls and cd ;) !_
 
 > ssh -i ~/.ssh/rsa_file serv@192.168.x.x
 
-Enter passphrase :
+Enter your passphrase.
 
 ---
 
-### To keep passphrase in memory :
+#### To keep passphrase in memory :
 
 > ssh-add (-h = help) (-t = time in memory) (-l = list of keys) (-d rsa_file = delete the key)
 
@@ -143,14 +143,13 @@ Connection established !!!
 
 ---
 
-We only need to enter this sentence when we \
-want to connect to the remote server :
+We only need to enter this sentence when we want to connect to the remote server :
 
-### For raspberry pi 3 :
+#### For raspberry pi 3 :
 
 > ssh -i ~/.ssh/rsa_file serv@192.168.x.x
 
-### For linux distro :
+#### For linux distro :
 
 > ssh -i ~/.ssh/rsa_file pi@192.168.x.x
 
@@ -158,20 +157,20 @@ want to connect to the remote server :
 
 ---
 
-### Verification :
+#### Verification :
 
 > cat ~/.ssh/config
 
 ---
 
-### In the file there should be the following :
+#### In the file there should be the following :
 
 Host targetserver.serv@192.168.x.x\
    IdentityFile ~/.ssh/rsa_file # private key
 
 ---
 
-# How to install MySQL on Raspberry pi 3b (server) :
+## How to install MySQL on Raspberry pi 3b (server) :
 
 > sudo apt update
 
@@ -187,7 +186,7 @@ and users.
 
 ---
 
-## To start mysql :
+### To start mysql :
 
 > sudo systemctl start mysql
 
@@ -201,7 +200,7 @@ or
 
 ---
 
-## To stop mysql :
+### To stop mysql :
 
 > sudo systemctl stop mysql
 
@@ -215,7 +214,7 @@ or
 
 ---
 
-## To reload MySQL : (after changing conf)
+### To reload MySQL : (after changing conf)
 
 > sudo systemctl reload mysql
 
@@ -223,13 +222,13 @@ or
 
 ---
 
-## To restart MySQL : (after changing conf)
+### To restart MySQL : (after changing conf)
 
 > sudo systemctl restart mysql
 
 ---
 
-# How to create database with MySQL (on server side)
+## How to create database with MySQL (on server side)
 
 1) sudo mysql -u root -p
 
@@ -237,7 +236,7 @@ or
 
 3) CREATE DATABASE database_name;
 
-+ Create a new user (with remote access) and grant privileges to this user on the new database:
+### Create a new user (with remote access) and grant privileges to this user on the new database:
  
 4) GRANT ALL PRIVILEGES ON database_name.* TO 'user_name'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
 
@@ -300,13 +299,13 @@ exit;
 
 ---
 
-## To test CONFIGURATION from server side :
+### To test CONFIGURATION from server side :
 
 > sudo netstat -anp | grep 3306
 
 ---
 
-## To test CONFIGURATION of server from client side :
+### To test CONFIGURATION of server from client side :
 
 > mysql -u koala33 -h 192.168.XX.XX -p
 
@@ -320,7 +319,7 @@ Use a virtualenv (on client side)
 
 ---
 
-# How to install pymysql on client (out of virtualenv)
+## How to install pymysql on client (out of virtualenv)
 
 You could install it on server too for solving problem.
 
@@ -330,7 +329,7 @@ Install python3-pymysql (out of virutalenv !):
 
 ---
 
-# Install PyMySQL and MySQL (in virtualenv !)
+## Install PyMySQL and MySQL (in virtualenv !)
 
 > pip3 install pymysql (or PyMySQL)
 
@@ -342,13 +341,13 @@ Install python3-pymysql (out of virutalenv !):
 
 ---
 
-# Compatibility with pymysql and mariadb (on client side - out of virtualenv !)
+## Compatibility with pymysql and mariadb (on client side - out of virtualenv !)
 
 > sudo apt-get install mariadb-client-10.1
 
 ---
 
-# UFW :
+## UFW :
 
 You can grant access to the remote system with IP 192.168.XX.XX to connect
 the port 3306 with the following command (on server side) :
@@ -369,7 +368,7 @@ the port 3306 with the following command (on server side) :
 
 ---
 
-# Configuration UFW :
+## Configuration UFW :
 
 * SERVEUR :
 
@@ -388,15 +387,15 @@ the port 3306 with the following command (on server side) :
 
 ---
 
-# Configuration for WAN
+## Configuration for WAN
 
-## PORT FOWARDING (on server) to access db from internet (WAN)
+### PORT FOWARDING (on server) to access db from internet (WAN)
 
 > echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ---
 
-## Launch app with :
+### Launch app with :
 
 > $ python3 heal_track.py
 
@@ -406,7 +405,7 @@ or with :
 
 ---
 
-## To connect to server from client side :
+### To connect to server from client side :
 
 Use ssh to remote access to server and configure all what you wants.
 
