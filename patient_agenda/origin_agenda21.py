@@ -171,7 +171,7 @@ if __name__=='__main__':
                 activebackground='pale turquoise', command=quit)
 
             self.labelo.grid()
-            self.entryname.grid()
+            self.entryname.grid(pady=10)
             self.choose_btn.grid()
             self.show_btn.grid()
             self.buttAgenda.grid()
