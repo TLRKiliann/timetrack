@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 import os
 
@@ -12,7 +11,8 @@ def doctorWind(self):
         Main function to define 
         design for contact interface.
     """
-    self.can.delete(ALL)
+    self.effacer()
+    self.addScroll()
     self.can.configure(background='DodgerBlue2')
 
     def allInData():
@@ -21,14 +21,14 @@ def doctorWind(self):
         """
         try:
             if os.path.getsize('./contact/conpact/contactdoc1.txt'):
-                print("+ Ok, contactdoc1.txt exist (t1)")
+                print("[+] Ok, contactdoc1.txt exist (t1)")
         except FileNotFoundError as errfnf:
-            print("+ No file contactdoc1.txt exist (Error1)", errfnf)
+            print("[!] File contactdoc1.txt not found (Error1)", errfnf)
             with open('./contact/conpact/contactdoc1.txt', 'w') as testf:
-                print("+ File contactdoc1.txt created !", testf)
+                print("[+] File contactdoc1.txt created !", testf)
 
         self.x1, self.y1 = 900, 370
-        self.txtBox = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -56,18 +56,18 @@ def doctorWind(self):
             else:
                 pass
         except FileNotFoundError as err_r:
-            print("+ No file contactdoc1.txt exist (Error2)", err_r)
+            print("[!] File contactdoc1.txt not found (Error2)", err_r)
 
         try:
             if os.path.getsize('./contact/conpact/contactdoc2.txt'):
-                print("+ Ok, contactdoc2.txt exist (t2)")
+                print("[+] Ok, contactdoc2.txt exist (t2)")
         except FileNotFoundError as nfd2:
-            print("+ No file contactdoc2.txt exist (Error3)", nfd2)
+            print("[!] File contactdoc2.txt not found (Error3)", nfd2)
             with open('./contact/conpact/contactdoc2.txt', 'w') as testfd2:
-                print("+ File contactdoc2.txt created !", testfd2)
+                print("[+] File contactdoc2.txt created !", testfd2)
 
         self.x2, self.y2 = 900, 890
-        self.txtBox2 = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox2 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox2.delete('1.0', tk.END)
         self.txtBox2.update()
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
@@ -95,18 +95,18 @@ def doctorWind(self):
             else:
                 pass
         except FileNotFoundError as err_r3:
-            print("+ No file contactdoc2.txt exist (Error4)", err_r3)
+            print("[!] File contactdoc2.txt not found (Error4)", err_r3)
 
         try:
             if os.path.getsize('./contact/conpact/contactdoc3.txt'):
-                print("+ Ok, contactdoc3.txt exist (t3)")
+                print("[+] Ok, contactdoc3.txt exist (t3)")
         except FileNotFoundError as nfd3:
-            print("+ No file contactdoc3.txt exist (Error5)", nfd3)
+            print("[!] No file contactdoc3.txt exist (Error5)", nfd3)
             with open('./contact/conpact/contactdoc3.txt', 'w') as testfd3:
-                print("+ File contactdoc3.txt created !", testfd3)
+                print("[+] File contactdoc3.txt created !", testfd3)
 
         self.x3, self.y3 = 900, 1410
-        self.txtBox3 = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox3 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox3.delete('1.0', tk.END)
         self.txtBox3.update()
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
@@ -134,7 +134,7 @@ def doctorWind(self):
             else:
                 pass
         except FileNotFoundError as err_r3:
-            print("+ No file contactdoc3.txt exist (Error6)", err_r3)
+            print("[!] File contactdoc3.txt not found (Error6)", err_r3)
 
     def recorderData(namentry, txtspec1, specentry1, txtphone,
         phonentry, txtmobile, mobilentry, addrtxt, addrentry,
@@ -144,11 +144,11 @@ def doctorWind(self):
         """
         try:
             if os.path.getsize('./contact/conpact/contactdoc1.txt'):
-                print("+ Ok, contactdoc1.txt exist")
+                print("[+] Ok, contactdoc1.txt exist")
         except FileNotFoundError as errfnf:
-            print("+ No file contactdoc1.txt exist (Error7)", errfnf)
+            print("[!] File contactdoc1.txt not found (Error7)", errfnf)
             with open('./contact/conpact/contactdoc1.txt', 'w') as testf:
-                print("+ File contactdoc1.txt created !")
+                print("[+] File contactdoc1.txt created !")
 
         try:
             with open('./contact/conpact/contactdoc1.txt', 'w') as iofile:
@@ -161,15 +161,15 @@ def doctorWind(self):
                 iofile.write("\n" + entrymail.get())
                 iofile.write("\n" + entryfax.get())
         except FileNotFoundError as fn:
-            print("+ File not found !", fn)
+            print("[!] File contactdoc1.txt not found !", fn)
 
         try:
             if os.path.getsize('./contact/conpact/finaldoc1.txt'):
                 os.remove('./contact/conpact/finaldoc1.txt')
         except FileNotFoundError as err_termin:
-            print("+ finaldoc1 not found !(Error8)", err_termin)
+            print("[!] finaldoc1 not found (Error8)", err_termin)
             with open('./contact/conpact/finaldoc1.txt', 'a+'):
-                print("+ finaldoc1.txt exist!")
+                print("[+] finaldoc1.txt created!")
         try:
             with open('./contact/conpact/finaldoc1.txt', 'w') as terminfile:
                 terminfile.write("Doctor : " + namentry.get())
@@ -181,7 +181,7 @@ def doctorWind(self):
                 terminfile.write("\ne-mail : " + entrymail.get())
                 terminfile.write("\nFax : " + entryfax.get())
         except FileNotFoundError as err2_final:
-            print("+ finaldoc1.txt not created (Error9)", err2_final)
+            print("[!] finaldoc1.txt not created (Error9)", err2_final)
 
         allInData()
 
@@ -191,11 +191,11 @@ def doctorWind(self):
 
         try:
             if os.path.getsize('./contact/conpact/contactdoc2.txt'):
-                print("+ Ok, contactdoc2.txt exist")
+                print("[+] Ok, contactdoc2.txt exist")
         except FileNotFoundError as errfnf2:
-            print("+ No file contactdoc2.txt exist (Error10)", errfnf2)
+            print("[!] File contactdoc2.txt not found (Error10)", errfnf2)
             with open('./contact/conpact/contactdoc2.txt', 'w') as testf2:
-                print("+ File contactdoc2.txt created !", testf2)
+                print("[+] File contactdoc2.txt created !", testf2)
 
         try:
             with open('./contact/conpact/contactdoc2.txt', 'w') as datadoc:
@@ -208,7 +208,7 @@ def doctorWind(self):
                 datadoc.write("\n" + entrymail2.get())
                 datadoc.write("\n" + entryfax2.get())
         except FileNotFoundError as fn2:
-            print("+ File not found !", fn2)
+            print("[!] File contactdoc2.txt not found (Error11)!", fn2)
 
         try:
             if os.path.getsize('./contact/conpact/finaldoc2.txt'):
@@ -238,11 +238,11 @@ def doctorWind(self):
 
         try:
             if os.path.getsize('./contact/conpact/contactdoc3.txt'):
-                print("+ Ok, contactdoc3.txt exist")
+                print("[+] Ok, contactdoc3.txt exist")
         except FileNotFoundError as errfnf3:
-            print("+ No file contactdoc3.txt exist (Error13)", errfnf3)
+            print("[!] File contactdoc3.txt not found (Error13)", errfnf3)
             with open('./contact/conpact/contactdoc3.txt', 'w') as testf3:
-                print("+ File contactdoc3.txt created !", testf3)
+                print("[+] File contactdoc3.txt created !", testf3)
 
         try:
             with open('./contact/conpact/contactdoc3.txt', 'w') as datadoc3:
@@ -255,15 +255,15 @@ def doctorWind(self):
                 datadoc3.write("\n" + entrymail3.get())
                 datadoc3.write("\n" + entryfax3.get())
         except FileNotFoundError as fn3:
-            print("+ File not found !", fn3)
+            print("[!] File contactdoc3.txt not found (Error14)", fn3)
 
         try:
             if os.path.getsize('./contact/conpact/finaldoc3.txt'):
                 os.remove('./contact/conpact/finaldoc3.txt')
         except FileNotFoundError as err_termin3:
-            print("+ finaldoc3 not found !(Error14)", err_termin3)
+            print("[!] File finaldoc3 not found (Error15)", err_termin3)
             with open('./contact/conpact/finaldoc3.txt', 'a+'):
-                print("+ finaldoc3.txt exist!")
+                print("[+] File finaldoc3.txt created !")
         try:
             with open('./contact/conpact/finaldoc3.txt', 'w') as finalf3:
                 finalf3.write("Doctor : " + namentry3.get())
@@ -275,34 +275,34 @@ def doctorWind(self):
                 finalf3.write("\ne-mail : " + entrymail3.get())
                 finalf3.write("\nFax : " + entryfax3.get())
         except FileNotFoundError as err_final3:
-            print("+ finaldoc3.txt not created (Error15)", err_final3)
+            print("[!] finaldoc3.txt not created (Error16)", err_final3)
 
         allInData()
     # To display all textbox when opening window.
     allInData()
 
     # Label title
-    self.x11, self.y11 = 250, 100
+    self.x4, self.y4 = 250, 100
     self.lbltitle = tk.Label(self.can, text="Contact",
-        font=('helvetica', 40, 'bold'),
+        font=('Times New Roman', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
+    self.wlbltitle_window = self.can.create_window(self.x4, self.y4,
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 460, 100
+    self.x5, self.y5 = 460, 100
     self.labtitle = tk.Label(self.can, text="Doctors",
-        font=('Times', 40, 'italic'),
+        font=('Times New Roman', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
-    self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
+    self.wlabtitle_window = self.can.create_window(self.x5, self.y5,
         window = self.labtitle)
 
     # Doctor 1
-    self.x1, self.y1 = 250, 200
+    self.x6, self.y6 = 250, 200
     self.labelname = tk.Label(self.can, text="Doctor :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabelname_window = self.can.create_window(self.x1, self.y1,
+    self.wlabelname_window = self.can.create_window(self.x6, self.y6,
         window = self.labelname)
 
     try:
@@ -316,16 +316,16 @@ def doctorWind(self):
             line7 = namefile.readline()
             line8 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File contactdoc1.txt doesn't exist ! (Error16)", callfile)
+        print("[!] File contactdoc1.txt doesn't exist ! (Error16)", callfile)
 
     try:
         self.txt_pat = linex
-        self.x2, self.y2 = 450, 200
+        self.x7, self.y7 = 450, 200
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(linex[:-1])
-        self.wnamentry_window = self.can.create_window(self.x2, self.y2,
+        self.wnamentry_window = self.can.create_window(self.x7, self.y7,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created ! (Error17)", ub_error1)
@@ -333,7 +333,7 @@ def doctorWind(self):
     # Specialization
     self.x20, self.y20 = 250, 250
     self.speclab1 = tk.Label(self.can, text="Specialization :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab1_window = self.can.create_window(self.x20, self.y20,
         window = self.speclab1)
@@ -350,7 +350,7 @@ def doctorWind(self):
     # Phone
     self.x22, self.y22 = 250, 300
     self.phonelabel = tk.Label(self.can, text="Phone :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel_window = self.can.create_window(self.x22, self.y22,
         window = self.phonelabel)
@@ -367,7 +367,7 @@ def doctorWind(self):
     # Mobile
     self.x24, self.y24 = 250, 350
     self.lblmobile = tk.Label(self.can, text="Mobile :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile_window = self.can.create_window(self.x24, self.y24,
         window = self.lblmobile)
@@ -384,7 +384,7 @@ def doctorWind(self):
     # Street
     self.x30, self.y30 = 250, 400
     self.addrlabel = tk.Label(self.can, text="Street :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
@@ -400,7 +400,7 @@ def doctorWind(self):
 
     self.x32, self.y32 = 250, 450
     self.labcity = tk.Label(self.can, text="City :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity_window = self.can.create_window(self.x32, self.y32,
         window = self.labcity)
@@ -417,7 +417,7 @@ def doctorWind(self):
     # e-mail
     self.x40, self.y40 = 250, 500
     self.mailabel = tk.Label(self.can, text="e-mail :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
@@ -434,7 +434,7 @@ def doctorWind(self):
     # Fax
     self.x50, self.y50 = 250, 550
     self.lblfax = tk.Label(self.can, text="Fax :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax_window = self.can.create_window(self.x50, self.y50,
         window = self.lblfax)
@@ -464,7 +464,7 @@ def doctorWind(self):
     # Doctor 2
     self.x60, self.y60 = 250, 720
     self.lbldocname = tk.Label(self.can, text="Doctor :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbldocname_window = self.can.create_window(self.x60, self.y60,
         window = self.lbldocname)
@@ -480,7 +480,7 @@ def doctorWind(self):
             docline7 = docfile2.readline()
             docline8 = docfile2.readline()
     except FileNotFoundError as callfiledoc2:
-        print("+ File contactdoc2.txt doesn't exist ! (Error18)", callfiledoc2)
+        print("[!] File contactdoc2.txt doesn't exist ! (Error18)", callfiledoc2)
 
     try:
         self.txt_doc2 = docline1
@@ -497,7 +497,7 @@ def doctorWind(self):
     # Specialization
     self.x63, self.y63 = 250, 770
     self.speclab2 = tk.Label(self.can, text="Specialization :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab2_window = self.can.create_window(self.x63, self.y63,
         window = self.speclab2)
@@ -514,7 +514,7 @@ def doctorWind(self):
     # Phone
     self.x65, self.y65 = 250, 820
     self.phonelabel2 = tk.Label(self.can, text="Phone :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel2_window = self.can.create_window(self.x65, self.y65,
         window = self.phonelabel2)
@@ -531,7 +531,7 @@ def doctorWind(self):
     # Mobile
     self.x67, self.y67 = 250, 870
     self.lblmobile2 = tk.Label(self.can, text="Mobile :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile2_window = self.can.create_window(self.x67, self.y67,
         window = self.lblmobile2)
@@ -548,7 +548,7 @@ def doctorWind(self):
     # Street
     self.x69, self.y69 = 250, 920
     self.addrlabel2 = tk.Label(self.can, text="Street :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel2_window = self.can.create_window(self.x69, self.y69,
         window = self.addrlabel2)
@@ -564,7 +564,7 @@ def doctorWind(self):
 
     self.x71, self.y71 = 250, 970
     self.labcity2 = tk.Label(self.can, text="City :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity2_window = self.can.create_window(self.x71, self.y71,
         window = self.labcity2)
@@ -581,7 +581,7 @@ def doctorWind(self):
     # e-mail
     self.x73, self.y73 = 250, 1020
     self.mailabel2 = tk.Label(self.can, text="e-mail :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel2_window = self.can.create_window(self.x73, self.y73,
         window = self.mailabel2)
@@ -598,7 +598,7 @@ def doctorWind(self):
     # Fax
     self.x75, self.y75 = 250, 1070
     self.lblfax2 = tk.Label(self.can, text="Fax :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax2_window = self.can.create_window(self.x75, self.y75,
         window = self.lblfax2)
@@ -629,7 +629,7 @@ def doctorWind(self):
     # Doctor 3
     self.x80, self.y80 = 250, 1240
     self.lbldocname3 = tk.Label(self.can, text="Doctor :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbldocname3_window = self.can.create_window(self.x80, self.y80,
         window = self.lbldocname3)
@@ -645,7 +645,7 @@ def doctorWind(self):
             doc3line7 = docfile3.readline()
             doc3line8 = docfile3.readline()
     except FileNotFoundError as callfiledoc3:
-        print("+ File contactdoc3.txt doesn't exist ! (Error20)", callfiledoc3)
+        print("[!] File contactdoc3.txt doesn't exist ! (Error20)", callfiledoc3)
 
     try:
         self.txt_doc3 = doc3line1
@@ -657,11 +657,11 @@ def doctorWind(self):
         self.wnamentry3_window = self.can.create_window(self.x81, self.y81,
             window = self.namentry3)
     except UnboundLocalError as err_doc3:
-        print("+ File 1 not created ! (Error21)", err_doc3)
+        print("[!] File 1 not created ! (Error21)", err_doc3)
 
     self.x82, self.y82 = 250, 1290
     self.speclab3 = tk.Label(self.can, text="Specialization :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab3_window = self.can.create_window(self.x82, self.y82,
         window = self.speclab3)
@@ -678,7 +678,7 @@ def doctorWind(self):
     # Phone
     self.x84, self.y84 = 250, 1340
     self.phonelabel3 = tk.Label(self.can, text="Phone :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel3_window = self.can.create_window(self.x84, self.y84,
         window = self.phonelabel3)
@@ -695,7 +695,7 @@ def doctorWind(self):
     # Mobile
     self.x86, self.y86 = 250, 1390
     self.lblmobile3 = tk.Label(self.can, text="Mobile :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile3_window = self.can.create_window(self.x86, self.y86,
         window = self.lblmobile3)
@@ -712,7 +712,7 @@ def doctorWind(self):
     # Street
     self.x88, self.y88 = 250, 1440
     self.addrlabel3 = tk.Label(self.can, text="Street :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel3_window = self.can.create_window(self.x88, self.y88,
         window = self.addrlabel3)
@@ -728,7 +728,7 @@ def doctorWind(self):
 
     self.x90, self.y90 = 250, 1490
     self.labcity3 = tk.Label(self.can, text="City :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity3_window = self.can.create_window(self.x90, self.y90,
         window = self.labcity3)
@@ -745,7 +745,7 @@ def doctorWind(self):
     # e-mail
     self.x92, self.y92 = 250, 1540
     self.mailabel3 = tk.Label(self.can, text="e-mail :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel3_window = self.can.create_window(self.x92, self.y92,
         window = self.mailabel3)
@@ -762,7 +762,7 @@ def doctorWind(self):
     # Fax
     self.x94, self.y94 = 250, 1590
     self.lblfax3 = tk.Label(self.can, text="Fax :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax3_window = self.can.create_window(self.x94, self.y94,
         window = self.lblfax3)
@@ -790,4 +790,6 @@ def doctorWind(self):
     self.fbat96_window = self.can.create_window(self.x96, self.y96,
         window=self.bat96)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)

@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 import os
 
@@ -12,7 +11,8 @@ def homecsWind(self):
         Main function to define 
         design for contact interface.
     """
-    self.can.delete(ALL)
+    self.effacer()
+    self.addScroll()
     self.can.configure(background='DodgerBlue2')
 
     def allInData():
@@ -28,7 +28,7 @@ def homecsWind(self):
                 print("+ File hcscontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
-        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -63,7 +63,7 @@ def homecsWind(self):
                 print("+ File hcscontact2.txt created !")
 
         self.x2, self.y2 = 900, 750
-        self.txtBox2 = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox2 = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox2.delete('1.0', tk.END)
         self.txtBox2.update()
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
@@ -98,7 +98,7 @@ def homecsWind(self):
                 print("+ File hcscontact3.txt created !")
 
         self.x3, self.y3 = 900, 1170
-        self.txtBox3 = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox3 = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox3.delete('1.0', tk.END)
         self.txtBox3.update()
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
@@ -660,4 +660,6 @@ def homecsWind(self):
     self.fb132_window = self.can.create_window(self.x132, self.y132,
         window=self.b132)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)

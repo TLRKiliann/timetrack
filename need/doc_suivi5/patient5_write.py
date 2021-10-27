@@ -11,9 +11,9 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-import time
 import os
 import subprocess
+import time
 from upload5 import needuploadata
 
 

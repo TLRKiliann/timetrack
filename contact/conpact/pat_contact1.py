@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 import os
 
@@ -12,7 +11,8 @@ def Window(self):
         Main function to define 
         design for contact interface.
     """
-    self.can.delete(ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(background='DodgerBlue2')
 
     def allInData():
@@ -47,6 +47,7 @@ def Window(self):
                     polins = policyfile.readline()
                     civilstat = policyfile.readline()
                     confessionstat = policyfile.readline()
+
                 self.txtBox.insert(tk.INSERT, "--- Data Patient ---\n")
                 self.txtBox.insert(tk.END, "\nPatient name : " + line1)
                 self.txtBox.insert(tk.END, "\nBirthdate : " + line2)
@@ -124,7 +125,7 @@ def Window(self):
     # Label title
     self.x11, self.y11 = 250, 100
     self.lbltitle = tk.Label(self.can, text="Contact",
-        font=('helvetica', 40, 'bold'),
+        font=('Times New Roman', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
@@ -140,7 +141,7 @@ def Window(self):
     # Name
     self.x1, self.y1 = 250, 200
     self.labelname = tk.Label(self.can, text="Patient Name :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabelname_window = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
@@ -185,7 +186,7 @@ def Window(self):
     # Native
     self.x15, self.y15 = 250, 250
     self.nativelab = tk.Label(self.can, text="Native :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wnativelab_window = self.can.create_window(self.x15, self.y15,
         window = self.nativelab)
@@ -202,7 +203,7 @@ def Window(self):
     # Phone
     self.x20, self.y20 = 250, 300
     self.phonelabel = tk.Label(self.can, text="Phone Number :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
         window = self.phonelabel)
@@ -219,7 +220,7 @@ def Window(self):
     # Street
     self.x30, self.y30 = 250, 350
     self.addrlabel = tk.Label(self.can, text="Street :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
@@ -235,7 +236,7 @@ def Window(self):
 
     self.x32, self.y32 = 250, 400
     self.labcity = tk.Label(self.can, text="City :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity_window = self.can.create_window(self.x32, self.y32,
         window = self.labcity)
@@ -252,7 +253,7 @@ def Window(self):
     # e-mail
     self.x40, self.y40 = 250, 450
     self.mailabel = tk.Label(self.can, text="e-mail :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
@@ -269,7 +270,7 @@ def Window(self):
     # Assurance
     self.x50, self.y50 = 250, 500
     self.mailabel = tk.Label(self.can, text="Insurance :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x50, self.y50,
         window = self.mailabel)
@@ -286,7 +287,7 @@ def Window(self):
     # Police
     self.x50, self.y50 = 250, 550
     self.mailabel = tk.Label(self.can, text="Policy Number :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x50, self.y50,
         window = self.mailabel)
@@ -303,7 +304,7 @@ def Window(self):
     # Civil status
     self.x52, self.y52 = 250, 600
     self.labcivil = tk.Label(self.can, text="Civil Status :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcivil_window = self.can.create_window(self.x52, self.y52,
         window = self.labcivil)
@@ -320,7 +321,7 @@ def Window(self):
     # Religious Confession
     self.x54, self.y54 = 250, 650
     self.labconfess = tk.Label(self.can, text="Confession :",
-        font=('helvetica', 18, 'bold'),
+        font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabconfess_window = self.can.create_window(self.x54, self.y54,
         window = self.labconfess)
@@ -347,4 +348,6 @@ def Window(self):
             self.confess, self.entryconfess))
     self.fb56_window = self.can.create_window(self.x56, self.y56, window=self.b56)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")

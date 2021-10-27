@@ -26,9 +26,9 @@ top = tk.Frame(root, bg='DodgerBlue2')
 top2 = tk.Frame(root, bg='DodgerBlue2')
 top3 = tk.Frame(root, bg='DodgerBlue2')
 bottom = tk.Frame(root, bg='DodgerBlue2')
-top.pack(side='top')
-top2.pack(side='top')
-top3.pack(side='top')
+top.pack(side=tk.TOP)
+top2.pack(side=tk.TOP)
+top3.pack(side=tk.TOP)
 bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
 labelo = tk.Label(root, text="Care and monitoring : ",
@@ -291,8 +291,8 @@ try:
     if os.path.getsize('./need/doc_suivi/patient1_14b.txt'):
         importationFile('./need/doc_suivi/patient1_14b.txt',
             encodage='Utf-8')
-except FileNotFoundError as err_nffile:
-    print(err_nffile)
+except FileNotFoundError as err_fnfw:
+    print(err_fnfw)
     tk.messagebox.showwarning("WARNING", "File not found !")
 
 root.mainloop()

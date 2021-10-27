@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 import os
 
@@ -12,7 +11,8 @@ def famWind(self):
         Main function to define 
         design for contact interface.
     """
-    self.can.delete(ALL)
+    self.effacer()
+    self.delScroll()
     self.can.configure(background='DodgerBlue2')
 
     def allInData():
@@ -28,7 +28,7 @@ def famWind(self):
                 print("+ File famycontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
-        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -243,4 +243,6 @@ def famWind(self):
             self.mailtxt, self.entrymail))
     self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
