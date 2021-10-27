@@ -23,9 +23,11 @@ def alarmThread(self):
     """
     self.effacer()
     self.delScroll()
-    self.can.configure(bg='DodgerBlue2')
-    self.photo = tk.PhotoImage(file='./syno_gif/fontalarmbg2.png')
-    self.item = self.can.create_image(625, 350, image=self.photo)
+    # DodgerBlue2
+    self.can.configure(bg='black')
+    # fontalarmbg2.png 625, 350, 
+    self.photo = tk.PhotoImage(file='./syno_gif/minipy3.png')
+    self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
     def action():
         """
@@ -57,19 +59,19 @@ def alarmThread(self):
 
     self.x10, self.y10 = 625, 100
     self.textLab = tk.Label(self.can, text="Alarm Clock",
-        font=('serif', 28, 'bold'), fg='white', bg='DodgerBlue2')
+        font=('serif', 28, 'bold'), fg='white', bg='black')
     self.textLab_window = self.can.create_window(self.x10, self.y10,
         window=self.textLab)
 
     self.x20, self.y20 = 625, 200
     self.textLab = tk.Label(self.can, text="Set Time",
-        font=('serif', 22, 'bold'), fg='aquamarine', bg='DodgerBlue2')
+        font=('serif', 22, 'bold'), fg='aquamarine', bg='black')
     self.textLab_window = self.can.create_window(self.x20, self.y20,
         window=self.textLab)
 
     self.x21, self.y21 = 625, 300
     self.textLab = tk.Label(self.can, text="Hours : Minutes : Seconds",
-        font=('serif', 14, 'bold'), fg='white', bg='DodgerBlue2')
+        font=('serif', 14, 'bold'), fg='white', bg='black')
     self.textLab_window = self.can.create_window(self.x21, self.y21,
         window=self.textLab)
 
@@ -96,7 +98,7 @@ def alarmThread(self):
 
     self.x51, self.y51 = 625, 420
     self.notifLab = tk.Label(self.can, text="Notifications :",
-        font=('serif', 16, 'bold'), fg='white', bg='DodgerBlue2')
+        font=('serif', 16, 'bold'), fg='white', bg='black')
     self.wnotifLab_window = self.can.create_window(self.x51, self.y51,
         window=self.notifLab)
 
@@ -109,10 +111,13 @@ def alarmThread(self):
 
     self.x60, self.y60 = 625, 550
     self.buttsave = tk.Button(self.can, text="Save", fg='white',
-        bg='RoyalBlue2', bd=3, width=10, highlightbackground='DodgerBlue2',
+        bg='RoyalBlue2', bd=3, width=10, highlightbackground='black',
         activebackground='pale turquoise', command = action)
     self.wbuttsave_window = self.can.create_window(self.x60, self.y60,
         window=self.buttsave)
+
+    self.photo2 = tk.PhotoImage(file='./syno_gif/minipy3.png')
+    self.item2 = self.can.create_image((1250,0), image=self.photo2, anchor=tk.NE)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.unbind_all("<Button-4>")
