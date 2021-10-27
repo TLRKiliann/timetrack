@@ -35,7 +35,7 @@ def recordaux(self):
     if self.CheckVar1.get() == 1:
         print("[+] Stick was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as sfile:
-            sfile.write("# Stick : " + time.strftime("%d/%m/%Y") + " checked\n")
+            sfile.write("# Stick : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Stick ok, nothing to do")
 
@@ -43,7 +43,7 @@ def recordaux(self):
     if self.CheckVar2.get() == 1:
         print("[+] Walking Frame (FR) was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as wffile:
-            wffile.write("# Walking Frame : " + time.strftime("%d/%m/%Y") + " checked\n")
+            wffile.write("# Walking Frame : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Walking Frame ok, nothing to do")
 
@@ -51,7 +51,7 @@ def recordaux(self):
     if self.CheckVar3.get() == 1:
         print("[+] Rollator was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rollfile:
-            rollfile.write("# Rollator : " + time.strftime("%d/%m/%Y") + " checked\n")
+            rollfile.write("# Rollator : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Rollator ok, nothing to do")
 
@@ -59,7 +59,7 @@ def recordaux(self):
     if self.CheckVar4.get() == 1:
         print("[+] Wheelchair was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as wheelfile:
-            wheelfile.write("# Wheelchair : " + time.strftime("%d/%m/%Y") + " checked\n")
+            wheelfile.write("# Wheelchair : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Wheelchair ok, nothing to do")
 
@@ -67,7 +67,7 @@ def recordaux(self):
     if self.CheckVar5.get() == 1:
         print("[+] Crutches was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as crutchfile:
-            crutchfile.write("# Crutches : " + time.strftime("%d/%m/%Y") + " checked\n")
+            crutchfile.write("# Crutches : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Crutches ok, nothing to do")
 
@@ -75,7 +75,7 @@ def recordaux(self):
     if self.CheckVar50.get() == 1:
         print("[+] Patch was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as patchfile:
-            patchfile.write("# Patch : " + time.strftime("%d/%m/%Y") + " checked\n")
+            patchfile.write("# Patch : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Patch ok, nothing to do")
 
@@ -83,7 +83,7 @@ def recordaux(self):
     if self.CheckVar60.get() == 1:
         print("[+] Pace-maker was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as pacefile:
-            pacefile.write("# Pace-maker : " + time.strftime("%d/%m/%Y") + " checked\n")
+            pacefile.write("# Pace-maker : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Pace-maker ok, nothing to do")
 
@@ -91,7 +91,7 @@ def recordaux(self):
     if self.CheckVar61.get() == 1:
         print("[+] Holter was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as holtfile:
-            holtfile.write("# Holter : " + time.strftime("%d/%m/%Y") + " checked\n")
+            holtfile.write("# Holter : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Holter ok, nothing to do")
 
@@ -99,7 +99,7 @@ def recordaux(self):
     if self.CheckVar70.get() == 1:
         print("[+] Insulin Pump was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as insulinfile:
-            insulinfile.write("# Insulin Pump : " + time.strftime("%d/%m/%Y") + " checked\n")
+            insulinfile.write("# Insulin Pump : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Insulin Pump ok, nothing to do")
 
@@ -107,7 +107,7 @@ def recordaux(self):
     if self.CheckVar80.get() == 1:
         print("[+] Morphine Pump was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as mofile:
-            mofile.write("# Morphine Pump : " + time.strftime("%d/%m/%Y") + " checked\n")
+            mofile.write("# Morphine Pump : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Morphine Pump ok, nothing to do")
 
@@ -115,7 +115,7 @@ def recordaux(self):
     if self.CheckVar90.get() == 1:
         print("[+] VAC (escarre) was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as vacfile:
-            vacfile.write("# VAC (escarre) : " + time.strftime("%d/%m/%Y") + " checked\n")
+            vacfile.write("# VAC (escarre) : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] VAC (escarre) ok, nothing to do")
 
@@ -123,7 +123,7 @@ def recordaux(self):
     if self.CheckVar100.get() == 1:
         print("[+] Nasal Cannula was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as nasalfile:
-            nasalfile.write("# Nasal Cannula : " + time.strftime("%d/%m/%Y") + " checked\n")
+            nasalfile.write("# Nasal Cannula : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Nasal Cannula ok, nothing to do")
 
@@ -131,7 +131,7 @@ def recordaux(self):
     if self.CheckVar110.get() == 1:
         print("[+] Eyeglasses was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as glassfile:
-            glassfile.write("# Eyeglasses : " + time.strftime("%d/%m/%Y") + " checked\n")
+            glassfile.write("# Eyeglasses : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Eyeglasses ok, nothing to do")
 
@@ -139,7 +139,7 @@ def recordaux(self):
     if self.CheckVar120.get() == 1:
         print("[+] Hearing Aids L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as hearfile:
-            hearfile.write("# Hearing Aids L : " + time.strftime("%d/%m/%Y") + " checked\n")
+            hearfile.write("# Hearing Aids L : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Hearing Aids L ok, nothing to do")
 
@@ -147,7 +147,7 @@ def recordaux(self):
     if self.CheckVar121.get() == 1:
         print("[+] Hearing Aids R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as hearightfile:
-            hearightfile.write("# Hearing Aids R : " + time.strftime("%d/%m/%Y") + " checked\n")
+            hearightfile.write("# Hearing Aids R : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Hearing Aids R ok, nothing to do")
 
@@ -155,7 +155,7 @@ def recordaux(self):
     if self.CheckVar122.get() == 1:
         print("[+] Arteriovenous Fistula was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as artfistfile:
-            artfistfile.write("# Arteriovenous Fistula : " + time.strftime("%d/%m/%Y") + " checked\n")
+            artfistfile.write("# Arteriovenous Fistula : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Arteriovenous Fistula ok, nothing to do")
 
@@ -163,7 +163,7 @@ def recordaux(self):
     if self.CheckVar123.get() == 1:
         print("[+] Ostomy Bag was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as ostofile:
-            ostofile.write("# Ostomy Bag : " + time.strftime("%d/%m/%Y") + " checked\n")
+            ostofile.write("# Ostomy Bag : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Ostomy Bag ok, nothing to do")
 
@@ -171,7 +171,7 @@ def recordaux(self):
     if self.CheckVar124.get() == 1:
         print("[+] Perfusion was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as perfile:
-            perfile.write("# Perfusion : " + time.strftime("%d/%m/%Y") + " checked\n")
+            perfile.write("# Perfusion : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Perfusion ok, nothing to do")
 
@@ -179,7 +179,7 @@ def recordaux(self):
     if self.CheckVar125.get() == 1:
         print("[+] Periodical Injection was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as injectfile:
-            injectfile.write("# Periodical Injection : " + time.strftime("%d/%m/%Y") + " checked\n")
+            injectfile.write("# Periodical Injection : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Periodical Injection ok, nothing to do")
 
@@ -187,7 +187,7 @@ def recordaux(self):
     if self.CheckVar130.get() == 1:
         print("[+] Wound Wick was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as wondyfile:
-            wondyfile.write("# Wound Wick : " + time.strftime("%d/%m/%Y") + " checked\n")
+            wondyfile.write("# Wound Wick : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Wound Wick ok, nothing to do")
 
@@ -195,7 +195,7 @@ def recordaux(self):
     if self.CheckVar150.get() == 1:
         print("[+] Redon Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as redonfile:
-            redonfile.write("# Redon Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            redonfile.write("# Redon Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Redon Drain ok, nothing to do")
 
@@ -203,7 +203,7 @@ def recordaux(self):
     if self.CheckVar160.get() == 1:
         print("[+] Kher Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as kherfile:
-            kherfile.write("# Kher Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            kherfile.write("# Kher Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Kher Drain ok, nothing to do")
 
@@ -211,7 +211,7 @@ def recordaux(self):
     if self.CheckVar170.get() == 1:
         print("[+] Blake Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as blakefile:
-            blakefile.write("# Blake Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            blakefile.write("# Blake Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Blake Drain ok, nothing to do")
 
@@ -219,7 +219,7 @@ def recordaux(self):
     if self.CheckVar180.get() == 1:
         print("[+] Penrose Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as penrosefile:
-            penrosefile.write("# Penrose Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            penrosefile.write("# Penrose Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Penrose Drain ok, nothing to do")
 
@@ -227,7 +227,7 @@ def recordaux(self):
     if self.CheckVar190.get() == 1:
         print("[+] Mikulicz Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as mikufile:
-            mikufile.write("# Mikulicz Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            mikufile.write("# Mikulicz Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Mikulicz Drain ok, nothing to do")
 
@@ -236,7 +236,7 @@ def recordaux(self):
         print("[+] Dialysis was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as diafile:
             diafile.write("# Dialysis : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Dialysis ok, nothing to do")
 
@@ -245,7 +245,7 @@ def recordaux(self):
         print("[+] Biliary Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as bilifile:
             bilifile.write("# Biliary Drain : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Biliary Drain ok, nothing to do")
 
@@ -254,7 +254,7 @@ def recordaux(self):
         print("[+] Urinary Catheter was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as urifile:
             urifile.write("# Urinary Catheter : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Urinary Catheter ok, nothing to do")
 
@@ -263,7 +263,7 @@ def recordaux(self):
         print("[+] Suprapubic Catheter was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as suprafile:
             suprafile.write("# Suprapubic Catheter : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Suprapubic Catheter ok, nothing to do")
 
@@ -271,7 +271,7 @@ def recordaux(self):
     if self.CheckVar195.get() == 1:
         print("[+] Pleural Drain was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as pleuralfile:
-            pleuralfile.write("# Pleural Drain : " + time.strftime("%d/%m/%Y") + " checked\n")
+            pleuralfile.write("# Pleural Drain : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Pleural Drain ok, nothing to do")
 
@@ -279,7 +279,7 @@ def recordaux(self):
     if self.CheckVar196.get() == 1:
         print("[+] Nasogastric Tube was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as nasogafile:
-            nasogafile.write("# Nasogastric Tube : " + time.strftime("%d/%m/%Y") + " checked\n")
+            nasogafile.write("# Nasogastric Tube : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Nasogastric Tube ok, nothing to do")
 
@@ -288,7 +288,7 @@ def recordaux(self):
         print("[+] VP Shunt was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as vpfile:
             vpfile.write("# VP Shunt : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] VP Shunt ok, nothing to do")
 
@@ -297,7 +297,7 @@ def recordaux(self):
         print("[+] VA Shunt was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as vafile:
             vafile.write("# VA Shunt : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] VA Shunt ok, nothing to do")
 
@@ -306,7 +306,7 @@ def recordaux(self):
         print("[+] 3-Ways Catheter was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as treewayfile:
             treewayfile.write("# 3-Ways Catheter : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] 3-Ways Catheter ok, nothing to do")
 
@@ -315,7 +315,7 @@ def recordaux(self):
         print("[+] PIC-Line was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as picfile:
             picfile.write("# PIC-Line : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] PIC-Line ok, nothing to do")
 
@@ -324,7 +324,7 @@ def recordaux(self):
         print("[+] Central Catheter was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as centralcatf:
             centralcatf.write("# Central Catheter : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Central Catheter ok, nothing to do")
 
@@ -332,7 +332,7 @@ def recordaux(self):
     if self.CheckVar214.get() == 1:
         print("[+] Vein-flon was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as veinfile:
-            veinfile.write("# Vein-flon : " + time.strftime("%d/%m/%Y") + " checked\n")
+            veinfile.write("# Vein-flon : " + time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Vein-flon ok, nothing to do")
 
@@ -341,7 +341,7 @@ def recordaux(self):
         print("[+] Total Hip L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lhipfile:
             lhipfile.write("# Total Hip L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Hip L ok, nothing to do")
 
@@ -350,7 +350,7 @@ def recordaux(self):
         print("[+] Total Hip R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rhipfile:
             rhipfile.write("# Total Hip R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Hip R ok, nothing to do")
 
@@ -359,7 +359,7 @@ def recordaux(self):
         print("[+] Total Knee L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lkneefile:
             lkneefile.write("# Total Knee L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Knee L ok, nothing to do")
 
@@ -368,7 +368,7 @@ def recordaux(self):
         print("[+] Total Knee R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rkneefile:
             rkneefile.write("# Total Knee R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Knee R ok, nothing to do")
 
@@ -377,7 +377,7 @@ def recordaux(self):
         print("[+] Shoulder Prosthesis L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as shouldfile:
             shouldfile.write("# Shoulder Prosthesis L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Shoulder Prosthesis L ok, nothing to do")
 
@@ -386,7 +386,7 @@ def recordaux(self):
         print("[+] Shoulder Prosthesis R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rshouldfile:
             rshouldfile.write("# Shoulder Prosthesis R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Shoulder Prosthesis R ok, nothing to do")
 
@@ -395,7 +395,7 @@ def recordaux(self):
         print("[+] Total Elbow L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lelbfile:
             lelbfile.write("# Total Elbow L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Elbow L ok, nothing to do")
 
@@ -404,7 +404,7 @@ def recordaux(self):
         print("[+] Total Elbow R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as relbfile:
             relbfile.write("# Total Elbow R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Total Elbow R ok, nothing to do")
 
@@ -413,7 +413,7 @@ def recordaux(self):
         print("[+] Foot Prosthesis L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lfootfile:
             lfootfile.write("# Foot Prosthesis L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Foot Prosthesis L ok, nothing to do")
 
@@ -422,7 +422,7 @@ def recordaux(self):
         print("[+] Foot Prosthesis R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rfootfile:
             rfootfile.write("# Foot Prosthesis R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Foot Prosthesis R ok, nothing to do")
 
@@ -431,7 +431,7 @@ def recordaux(self):
         print("[+] Leg prosthesis L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as llegfile:
             llegfile.write("# Leg prosthesis L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Leg prosthesis L ok, nothing to do")
 
@@ -440,7 +440,7 @@ def recordaux(self):
         print("[+] Leg prosthesis R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rlegfile:
             rlegfile.write("# Leg prosthesis R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Leg prosthesis R ok, nothing to do")
 
@@ -449,7 +449,7 @@ def recordaux(self):
         print("[+] Hand Prosthesis L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lhandfile:
             lhandfile.write("# Hand Prosthesis L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Hand Prosthesis L ok, nothing to do")
 
@@ -458,7 +458,7 @@ def recordaux(self):
         print("[+] Hand Prosthesis R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rhandfile:
             rhandfile.write("# Hand Prosthesis R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Hand Prosthesis R ok, nothing to do")
 
@@ -467,7 +467,7 @@ def recordaux(self):
         print("[+] Upper Arm Prosth. L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as larmfile:
             larmfile.write("# Upper Arm Prosth. L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Upper Arm Prosth. L ok, nothing to do")
 
@@ -476,7 +476,7 @@ def recordaux(self):
         print("[+] Upper Arm Prosth. R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rarmfile:
             rarmfile.write("# Upper Arm Prosth. R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Upper Arm Prosth. R ok, nothing to do")
 
@@ -485,7 +485,7 @@ def recordaux(self):
         print("[+] Ocular Prosthesis L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as locularfile:
             locularfile.write("# Ocular Prosthesis L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Ocular Prosthesis L ok, nothing to do")
 
@@ -494,7 +494,7 @@ def recordaux(self):
         print("[+] Ocular Prosthesis R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rocularfile:
             rocularfile.write("# Ocular Prosthesis R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Ocular Prosthesis R ok, nothing to do")
 
@@ -503,7 +503,7 @@ def recordaux(self):
         print("[+] Shoe Sole L was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as lsemfile:
             lsemfile.write("# Shoe Sole L : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Shoe Sole L ok, nothing to do")
 
@@ -512,7 +512,7 @@ def recordaux(self):
         print("[+] Shoe Sole R was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as rsemfile:
             rsemfile.write("# Shoe Sole R : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Shoe Sole R ok, nothing to do")
 
@@ -521,7 +521,7 @@ def recordaux(self):
         print("[+] Lower Dental Prosth. was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as ldentalfile:
             ldentalfile.write("# Lower Dental Prosth. : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Lower Dental Prosth. ok, nothing to do")
 
@@ -530,7 +530,7 @@ def recordaux(self):
         print("[+] Upper Dental Prosth. was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as udentalfile:
             udentalfile.write("# Upper Dental Prosth. : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Upper Dental Prosth. ok, nothing to do")
 
@@ -539,7 +539,7 @@ def recordaux(self):
         print("[+] Maxilofacial Prosthetics was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as maxilofile:
             maxilofile.write("# Maxilofacial Prosthetics : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Maxilofacial Prosthetics ok, nothing to do")
 
@@ -548,7 +548,7 @@ def recordaux(self):
         print("[+] Nose Prosthesis was checked !")
         with open('./auxequip/doc_equip/auxiliary12.txt', 'a+') as nasaprotfile:
             nasaprotfile.write("# Nose Prosthesis : " + \
-                time.strftime("%d/%m/%Y") + " checked\n")
+                time.strftime("%d/%m/%Y") + " yes\n")
     else:
         print("[-] Nose Prosthesis ok, nothing to do")
 

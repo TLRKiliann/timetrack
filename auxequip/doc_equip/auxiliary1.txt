@@ -1,47 +1,28 @@
 ----------------------------------------------------------
-Date : 24/10/2021
+Date : 27/10/2021
 Patient name : Two B
 ---------------------------------------------------------
-# Stick : 24/10/2021 checked
+# Total Elbow R : 27/10/2021 yes
+# Maxilofacial Prosthetics : 27/10/2021 yes
 ----------------------------------------------------------
-Date : 24/10/2021
+Date : 27/10/2021
 Patient name : Two B
 ---------------------------------------------------------
-# Walking Frame : 24/10/2021 checked
+# Periodical Injection : 27/10/2021 yes
+# Total Elbow R : 27/10/2021 yes
+# Maxilofacial Prosthetics : 27/10/2021 yes
 ----------------------------------------------------------
-Date : 24/10/2021
+Date : 27/10/2021
 Patient name : Two B
 ---------------------------------------------------------
-# Rollator : 24/10/2021 checked
-# Wheelchair : 24/10/2021 checked
-# Crutches : 24/10/2021 checked
+# Periodical Injection : 27/10/2021 yes
+# Mikulicz Drain : 27/10/2021 yes
+# Total Elbow R : 27/10/2021 yes
+# Maxilofacial Prosthetics : 27/10/2021 yes
 ----------------------------------------------------------
-Date : 24/10/2021
+Date : 27/10/2021
 Patient name : Two B
 ---------------------------------------------------------
-# Patch : 24/10/2021 checked
-----------------------------------------------------------
-Date : 24/10/2021
-Patient name : Two B
----------------------------------------------------------
-# Holter : 24/10/2021 checked
-----------------------------------------------------------
-Date : 24/10/2021
-Patient name : Two B
----------------------------------------------------------
-# Vein-flon : 24/10/2021 checked
-----------------------------------------------------------
-Date : 26/10/2021
-Patient name : Two B
----------------------------------------------------------
-# Total Knee L : 26/10/2021 checked
-# Total Knee R : 26/10/2021 checked
-# Shoulder Prosthesis L : 26/10/2021 checked
-# Shoulder Prosthesis R : 26/10/2021 checked
-----------------------------------------------------------
-Date : 26/10/2021
-Patient name : Two B
----------------------------------------------------------
-# Dialysis : 26/10/2021 checked
-# Biliary Drain : 26/10/2021 checked
-# Suprapubic Catheter : 26/10/2021 checked
+# Suprapubic Catheter : 27/10/2021 yes
+# 3-Ways Catheter : 27/10/2021 yes
+# Upper Arm Prosth. R : 27/10/2021 yes
