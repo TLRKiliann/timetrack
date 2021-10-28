@@ -57,13 +57,13 @@ def alarmThread(self):
                     + comment.get() + " !")
                 n -= 1
 
-    self.x10, self.y10 = 625, 100
+    self.x10, self.y10 = 625, 80
     self.textLab = tk.Label(self.can, text="Alarm Clock",
         font=('serif', 28, 'bold'), fg='white', bg='black')
     self.textLab_window = self.can.create_window(self.x10, self.y10,
         window=self.textLab)
 
-    self.x20, self.y20 = 625, 200
+    self.x20, self.y20 = 625, 240
     self.textLab = tk.Label(self.can, text="Set Time",
         font=('serif', 22, 'bold'), fg='aquamarine', bg='black')
     self.textLab_window = self.can.create_window(self.x20, self.y20,
