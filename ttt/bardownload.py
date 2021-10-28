@@ -37,6 +37,7 @@ def process_unknown_duration(root):
         with root as one of the input And once
         done, add root.quit() at the end.
     """
+    time.sleep(1)
     print("[PID] My pid is :", os.getpid())
     root.quit() # To destroy threading
 

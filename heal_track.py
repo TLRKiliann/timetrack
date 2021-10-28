@@ -152,9 +152,7 @@ class ScrollCanvas(tk.Frame):
 
         self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
-        # New viewPort
         self.viewPort = tk.Frame(self.can)
-
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
@@ -164,9 +162,6 @@ class ScrollCanvas(tk.Frame):
 
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
-
-        #self.onFrameConfigure(None)
-        # New viewPort
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
 
@@ -180,7 +175,6 @@ class MenuBar(tk.Frame):
         fileMenu = tk.Menubutton(self, text='Menu', fg='white',
             font=("Times 14"), bg='grey30', relief=tk.GROOVE)
 
-        # Instanciate for label below (in me2.add_command)
         new_text = tk.StringVar()
         try:
             with open('./newpatient/entryfile.txt', 'r') as namefile:
