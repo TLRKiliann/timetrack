@@ -2,6 +2,12 @@
 #! -*- coding:Utf-8 -*-
 
 
+"""
+    Connecting the duration of progress bar
+    with task = number of subprocess.
+"""
+
+
 from need.needownload.ndownload1 import need_dl1
 from need.needownload.ndownload2 import need_dl2
 from need.needownload.ndownload3 import need_dl3

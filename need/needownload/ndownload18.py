@@ -32,7 +32,7 @@ def task(root):
         style = 'blue.Horizontal.TProgressbar',
         orient = 'horizontal',
         length = 200,
-        mode = 'determinate')
+        mode = 'indeterminate')
     pb_need.pack()
     pb_need.start(10)
     root.resizable(False, False)

@@ -9,7 +9,6 @@ import time
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
-
 from diag.call_diag import *
 from ttt.call_medic import *
 from labo.callabo import *
