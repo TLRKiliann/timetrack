@@ -37,7 +37,6 @@ class Application(tk.Frame):
         mBar = MenuBar(self)
         mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
-        # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = tk.Canvas(self, width=600, height=400, bg='DodgerBlue2')
         self.frame = tk.Frame(self.can)
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
@@ -46,13 +45,13 @@ class Application(tk.Frame):
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
-        # Insertion du texte
+
         self.can.create_text(300, 150, anchor=tk.CENTER, text="Care and Monitoring",
             font=('Times New Roman', 28), fill='white')
         self.can.create_text(590, 380, anchor=tk.NE, text="14 needs",
             font=('Times', 12), fill='white') 
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
-        # Configuration de la Scrollbar sur le Frame
+
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
         self.x2, self.y2 = 200, 250
@@ -70,10 +69,8 @@ class Application(tk.Frame):
             highlightbackground='light sky blue',
             text="Read", command = self.lectureFic)
         self.fb3 = self.can.create_window(self.x3, self.y3, window=self.b3)
-        #self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.pack()
 
-    # Méthode pour reconfigurer la scrollbar à chaque fois
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
@@ -91,7 +88,6 @@ class Application(tk.Frame):
             print("[!] Sorry, file '14 needs' not exist !")
             print(outmsg)
             self.commentFileRecNeeds()
-
 
     def lectureFic(self):
         """
