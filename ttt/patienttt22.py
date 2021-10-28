@@ -52,7 +52,9 @@ def callTreatment22(self):
     """
     self.effacer()
     self.delScroll()
-    self.can.configure(bg='DodgerBlue2')
+    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
+    self.itemfirst = self.can.create_image((0,0), image=self.photo,
+        anchor=tk.NW)
 
     s = ttk.Style()
     s.theme_use('default')

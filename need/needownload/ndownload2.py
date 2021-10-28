@@ -34,7 +34,7 @@ def task(root):
         length = 200,
         mode = 'determinate')
     pb_need.pack()
-    pb_need.start(5)
+    pb_need.start(6)
     root.resizable(False, False)
     root.mainloop()
 

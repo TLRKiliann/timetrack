@@ -1862,24 +1862,6 @@ class Application(tk.Frame):
         canvas_width = event.width
         self.can.itemconfig(self.canvas_window, width = canvas_width)
 
-    def effacer(self):
-        '''Reinitialize canvas when we pass through another'''
-        self.can.delete(tk.ALL)
-
-        try:
-            exists = self.item.winfo_exists()
-            if exists == 1:
-                self.item.pack_forget()
-        except Exception as err_tk:
-            print("item doesn't exist", err_tk)
-
-        try:
-            existext = self.text_area.winfo_exists()
-            if existext == 1:
-                self.text_area.pack_forget()
-        except Exception as err_ex:
-            print("text_area doesn't exist", err_ex)
-
     def delScroll(self):
         """ To delete ScrollBar """
         self.vsb.pack_forget()
@@ -1894,6 +1876,23 @@ class Application(tk.Frame):
         except Exception as err_scrl:
             print("Scrollbar doesn't exist", err_scrl)
             self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+
+    def effacer(self):
+        '''Reinitialize canvas when we pass through another'''
+        self.can.delete(tk.ALL)
+        try:
+            exists = self.item.winfo_exists()
+            if exists == 1:
+                self.item.pack_forget()
+        except Exception as err_tk:
+            print("item doesn't exist", err_tk)
+
+        try:
+            existext = self.text_area.winfo_exists()
+            if existext == 1:
+                self.text_area.pack_forget()
+        except Exception as err_ex:
+            print("text_area doesn't exist", err_ex)
 
     def msgQuitapp(self, arg):
         """
