@@ -8,7 +8,7 @@ from tkinter import messagebox
 import subprocess
 from threading import Thread
 from playsound import playsound
-#from tt_download import launchDownload
+from tt_download import launchDownload
 
 
 window = tk.Tk()
@@ -34,7 +34,8 @@ def playOne():
     playsound('./beep_sounds/c4_plant2.wav')
 
 def playTwo():
-    playsound('./beep_sounds/sound101.wav')
+    playsound('./beep_sounds/loop79.mp3')
+    #playsound('./beep_sounds/sound101.wav')
 
 def playError():
     playsound('./beep_sounds/metroid_alarm.wav')
@@ -60,8 +61,7 @@ def closeWindow():
         myt = Thread(target=playmuse)
         myt.start()
     launchMusic()
-
-    #launchDownload()
+    launchDownload()
 
 def validentry(event):
     """
