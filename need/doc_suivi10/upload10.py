@@ -11,7 +11,7 @@ import threading
 
 
 def managetask(root):
-    root.title("Upload")
+    root.title("Uploading")
     style = ttk.Style()
     style.theme_use('alt')
     style.configure('blue.Horizontal.TProgressbar',
@@ -52,13 +52,14 @@ def process_unknown_duration(root):
     else:
         print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No patient10_14b.txt to upload...")
-    print('Upload done !')
+    print("\n[ - Upload complete - ]")
     root.quit()
 
 def needuploadata():
     root = tk.Tk()
     treat = threading.Thread(target=process_unknown_duration, args=(root,))
     treat.start()
-    managetask(root)  # This will block while the mainloop runs
+    print("\n[ Uploading data from 14 needs... ]\n")
+    managetask(root)
     treat.join()
     root.destroy()
