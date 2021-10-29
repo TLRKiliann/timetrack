@@ -21,7 +21,9 @@ def auxi_equip10(self):
     """
     self.effacer()
     self.delScroll()
-    self.can.configure(background='DodgerBlue2')
+    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
+    self.itemfirst = self.can.create_image((0,0), image=self.photo,
+        anchor=tk.NW)
 
     self.x1, self.y1 = 530, 45
     self.labl_name = tk.Label(self.can, text="EQUIPMENT FOR : ",
