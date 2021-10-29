@@ -19,7 +19,7 @@ from playsound import playsound
 
 def alarmThread(self):
     """
-        Function called from main app (./heal_track.py)
+        Function called from main app (heal_track.py)
     """
     self.effacer()
     self.delScroll()
