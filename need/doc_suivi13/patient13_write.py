@@ -23,16 +23,16 @@ bottom = tk.Frame(root, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
 top2.pack(side=tk.TOP)
 top3.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
 labelo = tk.Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
 labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile13.txt', 'r') as filename:
-    line_a=filename.readline()
-    line_b=filename.readline()
-    line_c=filename.readline()
+    line_a = filename.readline()
+    line_b = filename.readline()
+    line_c = filename.readline()
 
 text_name = tk.StringVar()
 entryname = tk.Entry(root, textvariable=text_name)
@@ -64,24 +64,24 @@ def callbacksoins(event):
 
 def changeitempsmt():
     """
-        To permit user to choose a care with
+        Permit user to choose a care with
         a ttk.Combobox() !
     """
     itempsmt["values"] = ["",
-                            "Pansement (PSMT)",
-                            "Protocol de PSMT",
-                            "Réfection de PSMT",
-                            "Méchage",
-                            "Points de suture"]
+                            "Bandage",
+                            "Wound dressing protocol",
+                            "Repair of bandages",
+                            "Meching of a wound",
+                            "Stitches"]
 
 mystring = tk.StringVar()
 itempsmt = ttk.Combobox(root, textvariable=mystring, width=20,
-    values=["Pansement",
-            "Pansement (PSMT)",
-            "Protocol de PSMT",
-            "Réfection de PSMT",
-            "Méchage",
-            "Points de suture"], postcommand=changeitempsmt)
+    values=["Bandage",
+            "Bandage",
+            "Wound dressing protocol",
+            "Repair of bandages",
+            "Meching of a wound",
+            "Stitches"], postcommand=changeitempsmt)
 
 itempsmt.bind("<<ComboboxSelected>>", callbackItem)
 itempsmt.current(0)
@@ -89,57 +89,57 @@ itempsmt.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
 
 def changeitemapp():
     """
-        To permit user to choose a care with
+        Permit user to choose a care with
         a ttk.Combobox() !
     """
     itemapp["values"] = ["",
-                            "Appareillage",
-                            "Pose de venflon",
-                            "Changement de venflon",
-                            "Pose de sonde",
-                            "Soins de sonde",
-                            "Chamgement de sonde",
-                            "Retrait de sonde",
-                            "Rendu sac collecteur",
-                            "Pose de drain",
-                            "Soins de drain",
-                            "Changement de drain",
-                            "Retrait du drain",
+                            "Equipment",
+                            "Vein-flon installation",
+                            "Vein-flon change",
+                            "Probe placement",
+                            "Probe care",
+                            "Probe change",
+                            "Removal of probe",
+                            "Collector bag return",
+                            "Drain installation",
+                            "Drain care",
+                            "Drain change",
+                            "Removal of drain",
                             "Pleurevac",
-                            "Apparence des liquides",
-                            "Quantité des liquides",
-                            "Mise en culture",
+                            "Liquid appearance",
+                            "Quantity of liquids",
+                            "Cultivation",
                             "CIPAP",
-                            "Lunettes à O²",
-                            "Pompe à insuline",
-                            "PCA (pompe antalgie)",
+                            "Nose cannula O²",
+                            "Insulin pump",
+                            "Anthalgic pump",
                             "VAC (escarre)",
                             "Pacemaker",
                             "Holter"]
 
 mystring2 = tk.StringVar()
 itemapp = ttk.Combobox(root, textvariable=mystring2, width=20,
-    values=["Appareillage/Sondes",
-            "Appareillage",
-            "Pose de venflon",
-            "Changement de venflon",
-            "Pose de sonde",
-            "Soins de sonde",
-            "Chamgement de sonde",
-            "Retrait de sonde",
-            "Rendu sac collecteur",
-            "Pose de drain",
-            "Soins de drain",
-            "Changement de drain",
-            "Retrait du drain",
+    values=["Equipment/Sondes",
+            "Equipment",
+            "Vein-flon installation",
+            "Vein-flon change",
+            "Probe placement",
+            "Probe care",
+            "Probe change",
+            "Removal of probe",
+            "Collector bag return",
+            "Drain installation",
+            "Drain care",
+            "Drain change",
+            "Removal of drain",
             "Pleurevac",
-            "Apparence des liquides",
-            "Quantité des liquides",
-            "Mise en culture",
+            "Liquid appearance",
+            "Quantity of liquids",
+            "Cultivation",
             "CIPAP",
-            "Lunettes à O²",
-            "Pompe à insuline",
-            "PCA (pompe antalgie)",
+            "Nose cannula O²",
+            "Insulin pump",
+            "Anthalgic pump",
             "VAC (escarre)",
             "Pacemaker",
             "Holter"], postcommand=changeitemapp)
@@ -150,28 +150,28 @@ itemapp.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
 
 def changeitemsoins():
     """
-        To permit user to choose a care with
+        Permit user to choose a care with
         a ttk.Combobox() !
     """
     itemsoins["values"] = ["",
-                            "Examens",
-                            "Bilan hydrique",
-                            "Diurèse",
+                            "Exams",
+                            "Water balance",
+                            "Diuresis",
                             "Stix (combo)",
                             "Coproculture",
-                            "Soins d'hygiène",
-                            "Soins + Surveillances"]
+                            "Hygiene care",
+                            "Care and Monitoring"]
 
 mystring3 = tk.StringVar()
 itemsoins = ttk.Combobox(root, textvariable=mystring3, width=20,
-    values=["Examens",
-            "Examens",
-            "Bilan hydrique",
-            "Diurèse",
+    values=["Exams",
+            "Exams",
+            "Water balance",
+            "Diuresis",
             "Stix (combo)",
             "Coproculture",
-            "Soins d'hygiène",
-            "Soins + Surveillances"], postcommand=changeitemsoins)
+            "Hygiene care",
+            "Care and Monitoring"], postcommand=changeitemsoins)
 
 itemsoins.bind("<<ComboboxSelected>>", callbacksoins)
 itemsoins.current(0)
