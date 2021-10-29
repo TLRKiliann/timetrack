@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    Read file main_14b.txt in encodage Utf-8.
+"""
+
+
 import tkinter as tk
 from tkinter import messagebox
 import os
@@ -15,17 +20,16 @@ fen.resizable(False, False)
 top = tk.Frame(fen, bg='DodgerBlue2')
 bottom = tk.Frame(fen, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
 labelo = tk.Label(fen, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
 labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
-# To read name in Entry widget
 with open('./newpatient/entryfile18.txt', 'r') as filename:
-    line_a=filename.readline()
-    line_b=filename.readline()
-    line_c=filename.readline()
+    line_a = filename.readline()
+    line_b = filename.readline()
+    line_c = filename.readline()
 
 text_name = tk.StringVar()
 text_name.set(line_a[:-1])
