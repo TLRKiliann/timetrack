@@ -1,0 +1,28 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 11/10/2021 à 09:32:09 :
+Patient name : Kayney Nier
++ Surveillance pour éviter les dangers requise
++ Surveillance propreté et/ou téguments requise
+---
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 27/10/2021 at 18:03:01 :
+Patient name : Kayney Nier
+[+] Respiratory monitoring - required
+[+] Temperature monitoring - required
+[+] Dietary and/or hydration monitoring - required
+[+] Urinary and/or fecal monitoring - required
+[+] Sleep monitoring - required
+[+] Postural and/or movement monitoring - required
+[+] Monitoring to prevent hazards - required
+[+] Cleanliness and/or integument monitoring - required
+[+] Supervision or assistance with dressing/undressing - required
+[+] Stimulation or assistance with communication - required
+[+] Helping the person to act on their values and beliefs
+[+] Accompany or help the person to realize himself
+[+] Accompany or help the person to recreate - required
+[+] Accompany or assist the person in learning - required
+---
+
+

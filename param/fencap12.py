@@ -320,7 +320,7 @@ def uploadfunc():
 
 def mainRead():
     try:
-        os.path.getsize('./param/main_read12.py'):
+        if os.path.getsize('./param/main_read12.py'):
         subprocess.run('./param/main_read12.py', check=True)
     except FileNotFoundError as fnfe_read:
         print("[!] Sorry, file main_read12.py not found !")
