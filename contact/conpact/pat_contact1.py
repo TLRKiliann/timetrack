@@ -4,6 +4,7 @@
 
 import tkinter as tk
 import os
+from contact.conpact.writerfiles.writepat import recorderData
 
 
 def Window(self):
@@ -19,113 +20,49 @@ def Window(self):
         """
             First page
         """
-        try:
-            if os.path.getsize('./contact/conpact/contact1.txt'):
-                print("+ Ok, contact1.txt exist (t1)")
-        except FileNotFoundError as errfnf:
-            print("+ No file contact1.txt exist", errfnf)
-            with open('./contact/conpact/contact1.txt', 'w') as testf:
-                print("+ File contact1.txt created !")
-
         self.x1, self.y1 = 900, 370
         self.txtBox = tk.Text(self.can, height=23, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
-        try:
-            if os.path.exists('./contact/conpact/contact1.txt'):
-                with open('./contact/conpact/contact1.txt', 'r') as policyfile:
-                    line1 = policyfile.readline()
-                    line2 = policyfile.readline()
-                    native = policyfile.readline()
-                    phone = policyfile.readline()
-                    street = policyfile.readline()
-                    state = policyfile.readline()
-                    email = policyfile.readline()
-                    assu = policyfile.readline()
-                    polins = policyfile.readline()
-                    civilstat = policyfile.readline()
-                    confessionstat = policyfile.readline()
+        def importationFile():
+            try:
+                if os.path.exists('./contact/conpact/contact1.txt'):
+                    with open('./contact/conpact/contact1.txt', 'r') as policyfile:
+                        line1 = policyfile.readline()
+                        line2 = policyfile.readline()
+                        native = policyfile.readline()
+                        phone = policyfile.readline()
+                        street = policyfile.readline()
+                        state = policyfile.readline()
+                        email = policyfile.readline()
+                        assu = policyfile.readline()
+                        polins = policyfile.readline()
+                        civilstat = policyfile.readline()
+                        confessionstat = policyfile.readline()
 
-                self.txtBox.insert(tk.INSERT, "--- Data Patient ---\n")
-                self.txtBox.insert(tk.END, "\nPatient name : " + line1)
-                self.txtBox.insert(tk.END, "\nBirthdate : " + line2)
-                self.txtBox.insert(tk.END, "\nNative : " + native)
-                self.txtBox.insert(tk.END, "\nPhone : " + phone)
-                self.txtBox.insert(tk.END, "\nStreet : " + street)
-                self.txtBox.insert(tk.END, "\nCity : " + state)
-                self.txtBox.insert(tk.END, "\ne-mail : " + email)
-                self.txtBox.insert(tk.END, "\nInsurance : " + assu)
-                self.txtBox.insert(tk.END, "\nPolicy : " + polins)
-                self.txtBox.insert(tk.END, "\nCivil status : " + civilstat)
-                self.txtBox.insert(tk.END, "\nConfession : " + confessionstat)
-            else:
-                pass
-        except FileNotFoundError as err_r:
-            print("+ No file contact1.txt exist (Error1)", err_r)
-
-    def recorderData(namentry, birthvar, native, nativaentry, txtphone, phonentry,
-        addrtxt, addrentry, citytxt, cityentry, mailtxt, entrymail, assurance, entryassu,
-        policy, entrypolicy, civil, entrycivil, confess, entryconfess):
-        """
-            Display origin
-        """
-        try:
-            if os.path.getsize('./contact/conpact/contact1.txt'):
-                print("+ Ok, contact1.txt exist")
-        except FileNotFoundError as errfnf:
-            print("+ No file contact1.txt exist (Error2)", errfnf)
-            with open('./contact/conpact/contact1.txt', 'w') as testf:
-                print("+ File contact1.txt created !")
-
-        try:
-            with open('./contact/conpact/contact1.txt', 'w') as iofile:
-                iofile.write(namentry.get())
-                iofile.write("\n" + birthvar)
-                iofile.write("\n" + nativaentry.get())
-                iofile.write("\n" + phonentry.get())
-                iofile.write("\n" + addrentry.get())
-                iofile.write("\n" + cityentry.get())
-                iofile.write("\n" + entrymail.get())
-                iofile.write("\n" + entryassu.get())
-                iofile.write("\n" + entrypolicy.get())
-                iofile.write("\n" + entrycivil.get())
-                iofile.write("\n" + entryconfess.get())
-        except FileNotFoundError as fn:
-            print("+ File not found !", fn)
-
-        try:
-            if os.path.getsize('./contact/conpact/finalfile1.txt'):
-                os.remove('./contact/conpact/finalfile1.txt')
-        except FileNotFoundError as err_termin:
-            print("+ finalfile1 not found !(Error3)", err_termin)
-            with open('./contact/conpact/finalfile1.txt', 'a+'):
-                print("+ finalfile1.txt exist!")
-        try:
-            with open('./contact/conpact/finalfile1.txt', 'w') as terminfile:
-                terminfile.write("Patient name : " + namentry.get())
-                terminfile.write("\nBirthdate : " + birthvar)
-                terminfile.write("\nNative : " + nativaentry.get())
-                terminfile.write("\nPhone : " + phonentry.get())
-                terminfile.write("\nStreet : " + addrentry.get())
-                terminfile.write("\nCity : " + cityentry.get())
-                terminfile.write("\ne-mail : " + entrymail.get())
-                terminfile.write("\nInsurance : " + entryassu.get())
-                terminfile.write("\nPolicy : " + entrypolicy.get())
-                terminfile.write("\nCivil status : " + entrycivil.get())
-                terminfile.write("\nConfession : " + entryconfess.get())
-        except FileNotFoundError as err2_final:
-            print("+ finalfile1.txt not created (Error4)", err2_final)
-
-        allInData()
+                        self.txtBox.insert(tk.INSERT, "--- Data Patient ---\n")
+                        self.txtBox.insert(tk.END, "\nPatient name : " + line1)
+                        self.txtBox.insert(tk.END, "\nBirthdate : " + line2)
+                        self.txtBox.insert(tk.END, "\nNative : " + native)
+                        self.txtBox.insert(tk.END, "\nPhone : " + phone)
+                        self.txtBox.insert(tk.END, "\nStreet : " + street)
+                        self.txtBox.insert(tk.END, "\nCity : " + state)
+                        self.txtBox.insert(tk.END, "\ne-mail : " + email)
+                        self.txtBox.insert(tk.END, "\nInsurance : " + assu)
+                        self.txtBox.insert(tk.END, "\nPolicy : " + polins)
+                        self.txtBox.insert(tk.END, "\nCivil status : " + civilstat)
+                        self.txtBox.insert(tk.END, "\nConfession : " + confessionstat)
+            except FileNotFoundError as err_r:
+                print("[!] File contact1.txt doesn't exist (Error1)", err_r)
 
     allInData()
 
     # Label title
     self.x11, self.y11 = 250, 50
     self.lbltitle = tk.Label(self.can, text="Contact",
-        font=('Times New Roman', 40, 'bold'),
+        font=('Times New Roman', 30, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
@@ -133,8 +70,8 @@ def Window(self):
     # Label title2
     self.x12, self.y12 = 450, 50
     self.labtitle = tk.Label(self.can, text="Patient",
-        font=('Times', 40, 'italic'),
-        bg='DodgerBlue2', fg='coral')
+        font=('Times New Roman', 30, 'italic'),
+        bg='DodgerBlue2', fg='cyan')
     self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
         window = self.labtitle)
 
@@ -153,7 +90,7 @@ def Window(self):
             txt_pat = line1
             birthvar = line2[:-1]
     except FileNotFoundError as callfile:
-        print("+ File entryfile.txt doesn't exist !", callfile)
+        print("[+] File entryfile.txt doesn't exist !", callfile)
 
     try:
         self.txt_pat = line1
@@ -165,7 +102,7 @@ def Window(self):
         self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ File 1 not created !", ub_error1)
+        print("[!] File 1 not created !", ub_error1)
 
     try:
         with open('./contact/conpact/contact1.txt', 'r') as namefile:
@@ -181,7 +118,7 @@ def Window(self):
             line10 = namefile.readline()
             line11 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File contact1.txt doesn't exist ! (Error5)", callfile)
+        print("[!] File contact1.txt doesn't exist ! (Error5)", callfile)
 
     # Native
     self.x15, self.y15 = 250, 200
@@ -340,12 +277,7 @@ def Window(self):
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',
-        command = lambda: recorderData(self.namentry, birthvar,
-            self.native, self.nativaentry, self.txtphone, self.phonentry,
-            self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
-            self.mailtxt, self.entrymail, self.assurance, self.entryassu,
-            self.policy, self.entrypolicy, self.civil, self.entrycivil,
-            self.confess, self.entryconfess))
+        command = lambda: ([recorderData(self, birthvar), allInData()]))
     self.fb56_window = self.can.create_window(self.x56, self.y56, window=self.b56)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
