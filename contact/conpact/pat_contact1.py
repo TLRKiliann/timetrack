@@ -27,7 +27,7 @@ def Window(self):
             with open('./contact/conpact/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
-        self.x1, self.y1 = 900, 420
+        self.x1, self.y1 = 900, 370
         self.txtBox = tk.Text(self.can, height=23, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
@@ -123,7 +123,7 @@ def Window(self):
     allInData()
 
     # Label title
-    self.x11, self.y11 = 250, 100
+    self.x11, self.y11 = 250, 50
     self.lbltitle = tk.Label(self.can, text="Contact",
         font=('Times New Roman', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -131,7 +131,7 @@ def Window(self):
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 450, 100
+    self.x12, self.y12 = 450, 50
     self.labtitle = tk.Label(self.can, text="Patient",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
@@ -139,7 +139,7 @@ def Window(self):
         window = self.labtitle)
 
     # Name
-    self.x1, self.y1 = 250, 200
+    self.x1, self.y1 = 250, 150
     self.labelname = tk.Label(self.can, text="Patient Name :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -157,7 +157,7 @@ def Window(self):
 
     try:
         self.txt_pat = line1
-        self.x2, self.y2 = 450, 200
+        self.x2, self.y2 = 450, 150
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
@@ -184,7 +184,7 @@ def Window(self):
         print("+ File contact1.txt doesn't exist ! (Error5)", callfile)
 
     # Native
-    self.x15, self.y15 = 250, 250
+    self.x15, self.y15 = 250, 200
     self.nativelab = tk.Label(self.can, text="Native :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -192,7 +192,7 @@ def Window(self):
         window = self.nativelab)
 
     self.native = line3
-    self.x16, self.y16 = 450, 250
+    self.x16, self.y16 = 450, 200
     self.native = tk.StringVar()
     self.nativaentry = tk.Entry(self.can, textvariable=self.native,
         highlightbackground='grey', bd=3)
@@ -201,7 +201,7 @@ def Window(self):
         window = self.nativaentry)
 
     # Phone
-    self.x20, self.y20 = 250, 300
+    self.x20, self.y20 = 250, 250
     self.phonelabel = tk.Label(self.can, text="Phone Number :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -209,7 +209,7 @@ def Window(self):
         window = self.phonelabel)
 
     self.txtphone = line4
-    self.x21, self.y21 = 450, 300
+    self.x21, self.y21 = 450, 250
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
@@ -218,7 +218,7 @@ def Window(self):
         window = self.phonentry)
 
     # Street
-    self.x30, self.y30 = 250, 350
+    self.x30, self.y30 = 250, 300
     self.addrlabel = tk.Label(self.can, text="Street :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -226,7 +226,7 @@ def Window(self):
         window = self.addrlabel)
 
     self.addrtxt = line5
-    self.x31, self.y31 = 450, 350
+    self.x31, self.y31 = 450, 300
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
@@ -234,7 +234,7 @@ def Window(self):
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
-    self.x32, self.y32 = 250, 400
+    self.x32, self.y32 = 250, 350
     self.labcity = tk.Label(self.can, text="City :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -242,7 +242,7 @@ def Window(self):
         window = self.labcity)
 
     self.citytxt = line6
-    self.x33, self.y33 = 450, 400
+    self.x33, self.y33 = 450, 350
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
@@ -251,7 +251,7 @@ def Window(self):
         window = self.cityentry)
 
     # e-mail
-    self.x40, self.y40 = 250, 450
+    self.x40, self.y40 = 250, 400
     self.mailabel = tk.Label(self.can, text="e-mail :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -259,7 +259,7 @@ def Window(self):
         window = self.mailabel)
 
     self.mailtxt = line7
-    self.x41, self.y41 = 450, 450
+    self.x41, self.y41 = 450, 400
     self.mailtxt = tk.StringVar()
     self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
@@ -268,7 +268,7 @@ def Window(self):
         window = self.entrymail)
 
     # Assurance
-    self.x50, self.y50 = 250, 500
+    self.x50, self.y50 = 250, 450
     self.mailabel = tk.Label(self.can, text="Insurance :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -276,7 +276,7 @@ def Window(self):
         window = self.mailabel)
 
     self.assurance = line8
-    self.x51, self.y51 = 450, 500
+    self.x51, self.y51 = 450, 450
     self.assurance = tk.StringVar()
     self.entryassu = tk.Entry(self.can, textvariable=self.assurance,
         highlightbackground='grey', bd=3)
@@ -285,7 +285,7 @@ def Window(self):
         window = self.entryassu)
 
     # Police
-    self.x50, self.y50 = 250, 550
+    self.x50, self.y50 = 250, 500
     self.mailabel = tk.Label(self.can, text="Policy Number :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -293,7 +293,7 @@ def Window(self):
         window = self.mailabel)
 
     self.policy = line9
-    self.x51, self.y51 = 450, 550
+    self.x51, self.y51 = 450, 500
     self.policy = tk.StringVar()
     self.entrypolicy = tk.Entry(self.can, textvariable=self.policy,
         highlightbackground='grey', bd=3)
@@ -302,7 +302,7 @@ def Window(self):
         window = self.entrypolicy)
 
     # Civil status
-    self.x52, self.y52 = 250, 600
+    self.x52, self.y52 = 250, 550
     self.labcivil = tk.Label(self.can, text="Civil Status :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -310,7 +310,7 @@ def Window(self):
         window = self.labcivil)
 
     self.civil = line10
-    self.x53, self.y53 = 450, 600
+    self.x53, self.y53 = 450, 550
     self.civil = tk.StringVar()
     self.entrycivil = tk.Entry(self.can, textvariable=self.civil,
         highlightbackground='grey', bd=3)
@@ -319,7 +319,7 @@ def Window(self):
         window = self.entrycivil)
 
     # Religious Confession
-    self.x54, self.y54 = 250, 650
+    self.x54, self.y54 = 250, 600
     self.labconfess = tk.Label(self.can, text="Confession :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -327,7 +327,7 @@ def Window(self):
         window = self.labconfess)
 
     self.confess = line11
-    self.x55, self.y55 = 450, 650
+    self.x55, self.y55 = 450, 600
     self.confess = tk.StringVar()
     self.entryconfess = tk.Entry(self.can, textvariable=self.confess,
         highlightbackground='grey', bd=3)
@@ -335,7 +335,7 @@ def Window(self):
     self.wentryconfess_window = self.can.create_window(self.x55, self.y55,
         window = self.entryconfess)
 
-    self.x56, self.y56 = 350, 720
+    self.x56, self.y56 = 350, 660
     self.b56 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
