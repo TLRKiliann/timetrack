@@ -23,10 +23,8 @@ def instalpy(self):
         highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
 
     self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
-    self.text_area.insert(tk.END,"\n --------------------\n"
-        " |- TUTORIAL -|\n"
-        " --------------------\n"
-
+    self.text_area.insert(tk.END,"\n\n"
+        "                                             --- TUTORIAL ---\n"
         "\n [+] Usefull functionalities :\n"
         " ----------------------------------\n"
         " [*] Backup is scheduled every 5 days and each month for Vital Parameters and BMI\n"
