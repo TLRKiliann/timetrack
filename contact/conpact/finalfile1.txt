@@ -1,11 +1,11 @@
 Patient name : Two B
 Birthdate : 00/00/0000
-Native : POD 048
-Phone : 28163786127836
-Street : 25 Deep-Forest
-City : Night
-e-mail : 2b@gmail.com
-Insurance : astra
-Policy : 234-456-789-333
+Native : Oregon
+Phone : 97888978798
+Street : View
+City : Map
+e-mail : 2b@protonmail.com
+Insurance : YoRHa
+Policy : 897348972472937
 Civil status : Alone
 Confession : None
