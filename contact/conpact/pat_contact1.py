@@ -62,27 +62,27 @@ def Window(self):
     allInData()
 
     # Label title
-    self.x11, self.y11 = 520, 50
+    self.x2, self.y2 = 520, 50
     self.lbltitle = tk.Label(self.can, text="Contact",
         font=('MS Serif', 30, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
+    self.wlbltitle_window = self.can.create_window(self.x2, self.y2,
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 710, 50
-    self.labtitle = tk.Label(self.can, text="Patient",
+    self.x3, self.y3 = 710, 50
+    self.lblsectitle = tk.Label(self.can, text="Patient",
         font=('MS Serif', 30, 'bold'),
         bg='DodgerBlue2', fg='cyan')
-    self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
-        window = self.labtitle)
+    self.wlblsectitle_window = self.can.create_window(self.x3, self.y3,
+        window = self.lblsectitle)
 
     # Name
-    self.x1, self.y1 = 250, 120
+    self.x4, self.y4 = 250, 120
     self.labelname = tk.Label(self.can, text="Patient Name :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabelname_window = self.can.create_window(self.x1, self.y1,
+    self.wlabelname_window = self.can.create_window(self.x4, self.y4,
         window = self.labelname)
 
     try:
@@ -96,12 +96,12 @@ def Window(self):
 
     try:
         self.txt_pat = line1
-        self.x2, self.y2 = 450, 120
+        self.x5, self.y5 = 450, 120
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(line1[:-1])
-        self.wnamentry_window = self.can.create_window(self.x2, self.y2,
+        self.wnamentry_window = self.can.create_window(self.x5, self.y5,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("[!] File 1 not created !", ub_error1)
@@ -123,68 +123,68 @@ def Window(self):
         print("[!] File contact1.txt doesn't exist ! (Error5)", callfile)
 
     # Native
-    self.x15, self.y15 = 250, 170
+    self.x6, self.y6 = 250, 170
     self.nativelab = tk.Label(self.can, text="Native :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wnativelab_window = self.can.create_window(self.x15, self.y15,
+    self.wnativelab_window = self.can.create_window(self.x6, self.y6,
         window = self.nativelab)
 
     self.native = line3
-    self.x16, self.y16 = 450, 170
+    self.x7, self.y7 = 450, 170
     self.native = tk.StringVar()
     self.nativaentry = tk.Entry(self.can, textvariable=self.native,
         highlightbackground='grey', bd=3)
     self.native.set(line3[:-1])
-    self.wnativaentry_window = self.can.create_window(self.x16, self.y16,
+    self.wnativaentry_window = self.can.create_window(self.x7, self.y7,
         window = self.nativaentry)
 
     # Phone
-    self.x20, self.y20 = 250, 220
+    self.x10, self.y10 = 250, 220
     self.phonelabel = tk.Label(self.can, text="Phone Number :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
+    self.wphonelabel_window = self.can.create_window(self.x10, self.y10,
         window = self.phonelabel)
 
     self.txtphone = line4
-    self.x21, self.y21 = 450, 220
+    self.x11, self.y11 = 450, 220
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line4[:-1])
-    self.wphonentry_window = self.can.create_window(self.x21, self.y21,
+    self.wphonentry_window = self.can.create_window(self.x11, self.y11,
         window = self.phonentry)
 
     # Street
-    self.x30, self.y30 = 250, 270
+    self.x12, self.y12 = 250, 270
     self.addrlabel = tk.Label(self.can, text="Street :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
+    self.waddrlabel_window = self.can.create_window(self.x12, self.y12,
         window = self.addrlabel)
 
     self.addrtxt = line5
-    self.x31, self.y31 = 450, 270
+    self.x20, self.y20 = 450, 270
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=3)
     self.addrtxt.set(line5[:-1])
-    self.waddrentry_window = self.can.create_window(self.x31, self.y31,
+    self.waddrentry_window = self.can.create_window(self.x20, self.y20,
         window = self.addrentry)
 
-    self.x32, self.y32 = 250, 320
+    self.x30, self.y30 = 250, 320
     self.labcity = tk.Label(self.can, text="City :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabcity_window = self.can.create_window(self.x32, self.y32,
+    self.wlabcity_window = self.can.create_window(self.x30, self.y30,
         window = self.labcity)
 
     self.citytxt = line6
     self.x33, self.y33 = 450, 320
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=3)
     self.citytxt.set(line6[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -224,63 +224,63 @@ def Window(self):
         window = self.entryassu)
 
     # Police
-    self.x50, self.y50 = 250, 470
+    self.x52, self.y52 = 250, 470
     self.mailabel = tk.Label(self.can, text="Policy Number :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wmailabel_window = self.can.create_window(self.x50, self.y50,
+    self.wmailabel_window = self.can.create_window(self.x52, self.y52,
         window = self.mailabel)
 
     self.policy = line9
-    self.x51, self.y51 = 450, 470
+    self.x53, self.y53 = 450, 470
     self.policy = tk.StringVar()
     self.entrypolicy = tk.Entry(self.can, textvariable=self.policy,
         highlightbackground='grey', bd=3)
     self.policy.set(line9[:-1])
-    self.wentrypolicy_window = self.can.create_window(self.x51, self.y51,
+    self.wentrypolicy_window = self.can.create_window(self.x53, self.y53,
         window = self.entrypolicy)
 
     # Civil status
-    self.x52, self.y52 = 250, 520
+    self.x60, self.y60 = 250, 520
     self.labcivil = tk.Label(self.can, text="Civil Status :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabcivil_window = self.can.create_window(self.x52, self.y52,
+    self.wlabcivil_window = self.can.create_window(self.x60, self.y60,
         window = self.labcivil)
 
     self.civil = line10
-    self.x53, self.y53 = 450, 520
+    self.x61, self.y61 = 450, 520
     self.civil = tk.StringVar()
     self.entrycivil = tk.Entry(self.can, textvariable=self.civil,
         highlightbackground='grey', bd=3)
     self.civil.set(line10[:-1])
-    self.wentrycivil_window = self.can.create_window(self.x53, self.y53,
+    self.wentrycivil_window = self.can.create_window(self.x61, self.y61,
         window = self.entrycivil)
 
     # Religious Confession
-    self.x54, self.y54 = 250, 570
+    self.x62, self.y62 = 250, 570
     self.labconfess = tk.Label(self.can, text="Confession :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabconfess_window = self.can.create_window(self.x54, self.y54,
+    self.wlabconfess_window = self.can.create_window(self.x62, self.y62,
         window = self.labconfess)
 
     self.confess = line11
-    self.x55, self.y55 = 450, 570
+    self.x63, self.y63 = 450, 570
     self.confess = tk.StringVar()
     self.entryconfess = tk.Entry(self.can, textvariable=self.confess,
         highlightbackground='grey', bd=3)
     self.confess.set(line11)
-    self.wentryconfess_window = self.can.create_window(self.x55, self.y55,
+    self.wentryconfess_window = self.can.create_window(self.x63, self.y63,
         window = self.entryconfess)
 
-    self.x56, self.y56 = 350, 640
-    self.b56 = tk.Button(self.can, text="Save Modifications", font=16,
+    self.x64, self.y64 = 350, 640
+    self.b64 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',
         command = lambda: ([recorderData(self, birthvar), allInData()]))
-    self.fb56_window = self.can.create_window(self.x56, self.y56, window=self.b56)
+    self.fb64_window = self.can.create_window(self.x64, self.y64, window=self.b64)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.unbind_all("<Button-4>")
