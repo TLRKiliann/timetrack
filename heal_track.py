@@ -43,104 +43,6 @@ from contact.famconfunc import callFamWind
 from contact.doctorconfunc import callDoctorWind
 from contact.homeconfunc import callHomecsWind
 
-"""
-#from contact.conpact.pat_contact1 import Window
-from contact.conpact.doc_contact1 import doctorWind
-from contact.conpact.family_contact1 import famWind
-from contact.conpact.hcs_contact1 import homecsWind
-#from contact.conpact2.pat_contact2 import Window2
-from contact.conpact2.doc_contact2 import doctorWind2
-from contact.conpact2.family_contact2 import famWind2
-from contact.conpact2.hcs_contact2 import homecsWind2
-#from contact.conpact3.pat_contact3 import Window3
-from contact.conpact3.doc_contact3 import doctorWind3
-from contact.conpact3.family_contact3 import famWind3
-from contact.conpact3.hcs_contact3 import homecsWind3
-#from contact.conpact4.pat_contact4 import Window4
-from contact.conpact4.doc_contact4 import doctorWind4
-from contact.conpact4.family_contact4 import famWind4
-from contact.conpact4.hcs_contact4 import homecsWind4
-#from contact.conpact5.pat_contact5 import Window5
-from contact.conpact5.doc_contact5 import doctorWind5
-from contact.conpact5.family_contact5 import famWind5
-from contact.conpact5.hcs_contact5 import homecsWind5
-#from contact.conpact6.pat_contact6 import Window6
-from contact.conpact6.doc_contact6 import doctorWind6
-from contact.conpact6.family_contact6 import famWind6
-from contact.conpact6.hcs_contact6 import homecsWind6
-#from contact.conpact7.pat_contact7 import Window7
-from contact.conpact7.doc_contact7 import doctorWind7
-from contact.conpact7.family_contact7 import famWind7
-from contact.conpact7.hcs_contact7 import homecsWind7
-#from contact.conpact8.pat_contact8 import Window8
-from contact.conpact8.doc_contact8 import doctorWind8
-from contact.conpact8.family_contact8 import famWind8
-from contact.conpact8.hcs_contact8 import homecsWind8
-#from contact.conpact9.pat_contact9 import Window9
-from contact.conpact9.doc_contact9 import doctorWind9
-from contact.conpact9.family_contact9 import famWind9
-from contact.conpact9.hcs_contact9 import homecsWind9
-#from contact.conpact10.pat_contact10 import Window10
-from contact.conpact10.doc_contact10 import doctorWind10
-from contact.conpact10.family_contact10 import famWind10
-from contact.conpact10.hcs_contact10 import homecsWind10
-#from contact.conpact11.pat_contact11 import Window11
-from contact.conpact11.doc_contact11 import doctorWind11
-from contact.conpact11.family_contact11 import famWind11
-from contact.conpact11.hcs_contact11 import homecsWind11
-#from contact.conpact12.pat_contact12 import Window12
-from contact.conpact12.doc_contact12 import doctorWind12
-from contact.conpact12.family_contact12 import famWind12
-from contact.conpact12.hcs_contact12 import homecsWind12
-#from contact.conpact13.pat_contact13 import Window13
-from contact.conpact13.doc_contact13 import doctorWind13
-from contact.conpact13.family_contact13 import famWind13
-from contact.conpact13.hcs_contact13 import homecsWind13
-#from contact.conpact14.pat_contact14 import Window14
-from contact.conpact14.doc_contact14 import doctorWind14
-from contact.conpact14.family_contact14 import famWind14
-from contact.conpact14.hcs_contact14 import homecsWind14
-#from contact.conpact15.pat_contact15 import Window15
-from contact.conpact15.doc_contact15 import doctorWind15
-from contact.conpact15.family_contact15 import famWind15
-from contact.conpact15.hcs_contact15 import homecsWind15
-#from contact.conpact16.pat_contact16 import Window16
-from contact.conpact16.doc_contact16 import doctorWind16
-from contact.conpact16.family_contact16 import famWind16
-from contact.conpact16.hcs_contact16 import homecsWind16
-#from contact.conpact17.pat_contact17 import Window17
-from contact.conpact17.doc_contact17 import doctorWind17
-from contact.conpact17.family_contact17 import famWind17
-from contact.conpact17.hcs_contact17 import homecsWind17
-#from contact.conpact18.pat_contact18 import Window18
-from contact.conpact18.doc_contact18 import doctorWind18
-from contact.conpact18.family_contact18 import famWind18
-from contact.conpact18.hcs_contact18 import homecsWind18
-#from contact.conpact19.pat_contact19 import Window19
-from contact.conpact19.doc_contact19 import doctorWind19
-from contact.conpact19.family_contact19 import famWind19
-from contact.conpact19.hcs_contact19 import homecsWind19
-#from contact.conpact20.pat_contact20 import Window20
-from contact.conpact20.doc_contact20 import doctorWind20
-from contact.conpact20.family_contact20 import famWind20
-from contact.conpact20.hcs_contact20 import homecsWind20
-#from contact.conpact21.pat_contact21 import Window21
-from contact.conpact21.doc_contact21 import doctorWind21
-from contact.conpact21.family_contact21 import famWind21
-from contact.conpact21.hcs_contact21 import homecsWind21
-#from contact.conpact22.pat_contact22 import Window22
-from contact.conpact22.doc_contact22 import doctorWind22
-from contact.conpact22.family_contact22 import famWind22
-from contact.conpact22.hcs_contact22 import homecsWind22
-#from contact.conpact23.pat_contact23 import Window23
-from contact.conpact23.doc_contact23 import doctorWind23
-from contact.conpact23.family_contact23 import famWind23
-from contact.conpact23.hcs_contact23 import homecsWind23
-#from contact.conpact24.pat_contact24 import Window24
-from contact.conpact24.doc_contact24 import doctorWind24
-from contact.conpact24.family_contact24 import famWind24
-from contact.conpact24.hcs_contact24 import homecsWind24
-"""
 
 def tocopyfiles():
     """
@@ -2209,42 +2111,51 @@ class Application(tk.Frame):
             tk.messagebox.showerror('Error', 'Something went wrong with : '\
             './patient_agenda/origin_agenda23.py ')
 
+
     def contact_num(self, h):
         """
             call contact patient
         """
-        if h==h:
+        if h == h:
             print("h value : ", h)
             callPatNum(self, h)
         else:
-            print("h seems to be inexistant...")
+            print("h seems to be inexistent...")
 
     def contactfamily(self, j):
-        if j==j:
+        """
+            call contact family
+        """
+        if j == j:
             print("j value : ", j)
             callFamWind(self, j)
         else:
-            print("j seems to be inexistant...")
+            print("j seems to be inexistent...")
 
     def contactdoctor(self, k):
-        if k==k:
+        """
+            call contact doctor
+        """
+        if k == k:
             print("k value : ", k)
             callDoctorWind(self, k)
         else:
-            print("k seems to be inexistant...")
+            print("k seems to be inexistent...")
 
     def contacthcsystem(self, l):
-        if l==l:
+        """
+            call contact hcsystem
+        """
+        if l == l:
             print("l value : ", l)
             callHomecsWind(self, l)
         else:
-            print("l seems to be inexistant...")
+            print("l seems to be inexistent...")
 
-    # CheckBox 14 needs (functions)
     def besoinsCoche(self, b):
         """
-            New window is open with
-            subprocess.Popen()
+            New window is open with subprocess.Popen()
+            for checking 14 needs.
         """
         if b == 1:
             subprocess.Popen('./need/checkb.py', shell=False)
@@ -2428,10 +2339,8 @@ class Application(tk.Frame):
 
     def showParam(self, p):
         """
-            Decreases the opacity of
-            the background window
-            and run subprocess.run()
-            to call Vital Parameters.
+            Decreases the opacity of the background window
+            and run subprocess.run() to call Vital Parameters.
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             cmd()
@@ -2552,124 +2461,146 @@ class Application(tk.Frame):
 
     def visitMed(self):
         """
-            Hide the background window
-            during vm_patient.py script
-            is running
+            Hide the background window during vm_patient.py
+            script is running.
         """
         medownload1()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
         self.master.deiconify()
+
     def visitMed2(self):
         medownload2()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient2.py", check=True)
         self.master.deiconify()
+
     def visitMed3(self):
         medownload3()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient3.py", check=True)
         self.master.deiconify()
+
     def visitMed4(self):
         medownload4()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient4.py", check=True)
         self.master.deiconify()
+
     def visitMed5(self):
         medownload5()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient5.py", check=True)
         self.master.deiconify()
+
     def visitMed6(self):
         medownload6()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient6.py", check=True)
         self.master.deiconify()
+
     def visitMed7(self):
         medownload7()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient7.py", check=True)
         self.master.deiconify()
+
     def visitMed8(self):
         medownload8()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient8.py", check=True)
         self.master.deiconify()
+
     def visitMed9(self):
         medownload9()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient9.py", check=True)
         self.master.deiconify()
+
     def visitMed10(self):
         medownload10()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient10.py", check=True)
         self.master.deiconify()
+
     def visitMed11(self):
         medownload11()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient11.py", check=True)
         self.master.deiconify()
+
     def visitMed12(self):
         medownload12()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient12.py", check=True)
         self.master.deiconify()
+
     def visitMed13(self):
         medownload13()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient13.py", check=True)
         self.master.deiconify()
+
     def visitMed14(self):
         medownload14()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient14.py", check=True)
         self.master.deiconify()
+
     def visitMed15(self):
         medownload15()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient15.py", check=True)
         self.master.deiconify()
+
     def visitMed16(self):
         medownload16()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient16.py", check=True)
         self.master.deiconify()
+
     def visitMed17(self):
         medownload17()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient17.py", check=True)
         self.master.deiconify()
+
     def visitMed18(self):
         medownload18()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient18.py", check=True)
         self.master.deiconify()
+
     def visitMed19(self):
         medownload19()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient19.py", check=True)
         self.master.deiconify()
+
     def visitMed20(self):
         medownload20()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient20.py", check=True)
         self.master.deiconify()
+
     def visitMed21(self):
         medownload21()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient21.py", check=True)
         self.master.deiconify()
+
     def visitMed22(self):
         medownload22()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient22.py", check=True)
         self.master.deiconify()
+
     def visitMed23(self):
         medownload23()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient23.py", check=True)
         self.master.deiconify()
+
     def visitMed24(self):
         medownload24()
         self.master.withdraw()
@@ -2678,9 +2609,8 @@ class Application(tk.Frame):
 
     def nutritionMenu(self, n):
         """
-            Hide the background window
-            during nutrit_patient script
-            is running
+            Hide the background window during nutrit_patient
+            script is running.
         """
         if n == 1:
             self.master.withdraw()
@@ -2783,8 +2713,7 @@ class Application(tk.Frame):
 
     def manualFile(self):
         """
-            To consult TXT and PDF
-            files (manual)
+            To consult TXT and PDF files (manual).
         """
         self.master.withdraw()
         subprocess.run('./manual/pdfopenmanual.py', check=True)
@@ -2792,7 +2721,7 @@ class Application(tk.Frame):
 
     def allFilesBackup(self, f):
         """
-            To acces files into Backup folder
+            To acces files into Backup folder.
         """
         if f == 1:
             self.master.wm_attributes('-alpha', 0.8)
@@ -2806,133 +2735,133 @@ class Application(tk.Frame):
             backupFuncPatient2(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 3:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient3(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 4:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient4(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 5:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient5(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 6:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient6(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 7:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient7(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 8:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient8(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 9:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient9(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 10:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient10(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 11:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient11(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 12:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient12(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 13:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient13(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 14:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient14(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 15:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient15(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 16:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient16(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 17:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient17(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 18:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient18(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 19:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient19(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 20:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient20(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 21:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient21(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 22:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient22(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 23:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient23(self)
             self.master.wm_attributes('-alpha', 1.0)
             self.master.update()
-        elif f == 2:
+        elif f == 24:
             self.master.wm_attributes('-alpha', 0.8)
             self.master.update()
             backupFuncPatient24(self)
@@ -2956,10 +2885,9 @@ class Application(tk.Frame):
 
     def upDateAll(self):
         """
-            To reset app by pressing
-            refresh button. Close,
-            open directly and update
-            data from patcaps.py !
+            To reset app by pressing refresh button.
+            Close, open directly and update data from
+            patcaps.py !
         """
         try:
             if self._job is not None:
