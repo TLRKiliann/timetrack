@@ -65,7 +65,7 @@ class ScrollCanvas(tk.Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
-        self.canvas_window=self.can.create_window((4,4), window=self.viewPort,
+        self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
 
         self.viewPort.bind("<Configure>", self.onFrameConfigure)

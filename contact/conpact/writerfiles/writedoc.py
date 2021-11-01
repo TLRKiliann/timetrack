@@ -20,14 +20,14 @@ def docRecord(self):
 
     try:
         with open('./contact/conpact/contactdoc1.txt', 'w') as iofile:
-            iofile.write(namentry.get())
-            iofile.write("\n" + specentry1.get())
-            iofile.write("\n" + phonentry.get())
-            iofile.write("\n" + mobilentry.get())
-            iofile.write("\n" + addrentry.get())
-            iofile.write("\n" + cityentry.get())
-            iofile.write("\n" + entrymail.get())
-            iofile.write("\n" + entryfax.get())
+            iofile.write(self.namentry.get())
+            iofile.write("\n" + self.specentry1.get())
+            iofile.write("\n" + self.phonentry.get())
+            iofile.write("\n" + self.mobilentry.get())
+            iofile.write("\n" + self.addrentry.get())
+            iofile.write("\n" + self.cityentry.get())
+            iofile.write("\n" + self.entrymail.get())
+            iofile.write("\n" + self.entryfax.get())
     except FileNotFoundError as fn:
         print("[!] File contactdoc1.txt not found !", fn)
 
@@ -40,14 +40,14 @@ def docRecord(self):
             print("[+] finaldoc1.txt created!")
     try:
         with open('./contact/conpact/finaldoc1.txt', 'w') as terminfile:
-            terminfile.write("Doctor : " + namentry.get())
-            terminfile.write("\nSpecialization : " + specentry1.get())
-            terminfile.write("\nPhone : " + phonentry.get())
-            terminfile.write("\nMobile : " + mobilentry.get())
-            terminfile.write("\nStreet : " + addrentry.get())
-            terminfile.write("\nCity : " + cityentry.get())
-            terminfile.write("\ne-mail : " + entrymail.get())
-            terminfile.write("\nFax : " + entryfax.get())
+            terminfile.write("Doctor : " + self.namentry.get())
+            terminfile.write("\nSpecialization : " + self.specentry1.get())
+            terminfile.write("\nPhone : " + self.phonentry.get())
+            terminfile.write("\nMobile : " + self.mobilentry.get())
+            terminfile.write("\nStreet : " + self.addrentry.get())
+            terminfile.write("\nCity : " + self.cityentry.get())
+            terminfile.write("\ne-mail : " + self.entrymail.get())
+            terminfile.write("\nFax : " + self.entryfax.get())
     except FileNotFoundError as err2_final:
         print("[!] finaldoc1.txt not created (Error9)", err2_final)
 
@@ -106,7 +106,7 @@ def docThreeRecord(self):
 
     try:
         with open('./contact/conpact/contactdoc3.txt', 'w') as datadoc3:
-            datadoc3.write(namentry3.get())
+            datadoc3.write(self.namentry3.get())
             datadoc3.write("\n" + self.specentry3.get())
             datadoc3.write("\n" + self.phonentry3.get())
             datadoc3.write("\n" + self.mobilentry3.get())
