@@ -86,7 +86,7 @@ def famWind(self):
             line5 = namefile.readline()
             line6 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File famycontact1.txt doesn't exist !", callfile)
+        print("[!] File famycontact1.txt doesn't exist !", callfile)
 
     try:
         self.txt_pat = linex
