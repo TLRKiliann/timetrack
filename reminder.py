@@ -35,7 +35,6 @@ def alarmThread(self):
         """
         treat = threading.Thread(target=alarm, args=(1,))
         treat.setDaemon(True)
-        time.sleep(2)
         treat.start()
 
     def alarm(n):
@@ -53,8 +52,8 @@ def alarmThread(self):
             if current_time == set_alarm_time:
                 print("Alarm ring !")
                 playsound("./beep_sounds/metroid_alarm.wav")
-                MSGBOXA = tk.messagebox.showwarning("Alarm", "Remind : "\
-                    + comment.get() + " !")
+                tk.messagebox.showwarning("Alarm", "Remind : "\
+                    + comment.get())
                 n -= 1
 
     self.x10, self.y10 = 625, 80
