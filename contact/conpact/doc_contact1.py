@@ -243,7 +243,7 @@ def doctorWind(self):
     self.x31, self.y31 = 450, 400
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt.set(line5[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
@@ -259,7 +259,7 @@ def doctorWind(self):
     self.x33, self.y33 = 450, 450
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt.set(line6[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -332,7 +332,7 @@ def doctorWind(self):
         self.x62, self.y62 = 450, 720
         self.txt_doc2 = tk.StringVar()
         self.namentry2 = tk.Entry(self.can, textvariable=self.txt_doc2,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_doc2.set(docline1[:-1])
         self.wnamentry2_window = self.can.create_window(self.x62, self.y62,
             window = self.namentry2)
@@ -402,7 +402,7 @@ def doctorWind(self):
     self.x70, self.y70 = 450, 920
     self.addrtxt2 = tk.StringVar()
     self.addrentry2 = tk.Entry(self.can, textvariable=self.addrtxt2,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt2.set(docline5[:-1])
     self.waddrentry2_window = self.can.create_window(self.x70, self.y70,
         window = self.addrentry2)
@@ -418,7 +418,7 @@ def doctorWind(self):
     self.x72, self.y72 = 450, 970
     self.citytxt2 = tk.StringVar()
     self.cityentry2 = tk.Entry(self.can, textvariable=self.citytxt2,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt2.set(docline6[:-1])
     self.wcityentry2_window = self.can.create_window(self.x72, self.y72,
         window = self.cityentry2)
@@ -492,7 +492,7 @@ def doctorWind(self):
         self.x81, self.y81 = 450, 1240
         self.txt_doc3 = tk.StringVar()
         self.namentry3 = tk.Entry(self.can, textvariable=self.txt_doc3,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_doc3.set(doc3line1[:-1])
         self.wnamentry3_window = self.can.create_window(self.x81, self.y81,
             window = self.namentry3)
@@ -561,7 +561,7 @@ def doctorWind(self):
     self.x89, self.y89 = 450, 1440
     self.addrtxt3 = tk.StringVar()
     self.addrentry3 = tk.Entry(self.can, textvariable=self.addrtxt3,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt3.set(doc3line5[:-1])
     self.waddrentry3_window = self.can.create_window(self.x89, self.y89,
         window = self.addrentry3)
@@ -577,7 +577,7 @@ def doctorWind(self):
     self.x91, self.y91 = 450, 1490
     self.citytxt3 = tk.StringVar()
     self.cityentry3 = tk.Entry(self.can, textvariable=self.citytxt3,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt3.set(doc3line6[:-1])
     self.wcityentry3_window = self.can.create_window(self.x91, self.y91,
         window = self.cityentry3)
