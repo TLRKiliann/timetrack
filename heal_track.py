@@ -38,103 +38,109 @@ from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
 from vmed.medload import *
 
-from contact.conpact.pat_contact1 import Window
+from contact.patconfunc import callPatNum
+from contact.famconfunc import callFamWind
+from contact.doctorconfunc import callDoctorWind
+from contact.homeconfunc import callHomecsWind
+
+"""
+#from contact.conpact.pat_contact1 import Window
 from contact.conpact.doc_contact1 import doctorWind
 from contact.conpact.family_contact1 import famWind
 from contact.conpact.hcs_contact1 import homecsWind
-from contact.conpact2.pat_contact2 import Window2
+#from contact.conpact2.pat_contact2 import Window2
 from contact.conpact2.doc_contact2 import doctorWind2
 from contact.conpact2.family_contact2 import famWind2
 from contact.conpact2.hcs_contact2 import homecsWind2
-from contact.conpact3.pat_contact3 import Window3
+#from contact.conpact3.pat_contact3 import Window3
 from contact.conpact3.doc_contact3 import doctorWind3
 from contact.conpact3.family_contact3 import famWind3
 from contact.conpact3.hcs_contact3 import homecsWind3
-from contact.conpact4.pat_contact4 import Window4
+#from contact.conpact4.pat_contact4 import Window4
 from contact.conpact4.doc_contact4 import doctorWind4
 from contact.conpact4.family_contact4 import famWind4
 from contact.conpact4.hcs_contact4 import homecsWind4
-from contact.conpact5.pat_contact5 import Window5
+#from contact.conpact5.pat_contact5 import Window5
 from contact.conpact5.doc_contact5 import doctorWind5
 from contact.conpact5.family_contact5 import famWind5
 from contact.conpact5.hcs_contact5 import homecsWind5
-from contact.conpact6.pat_contact6 import Window6
+#from contact.conpact6.pat_contact6 import Window6
 from contact.conpact6.doc_contact6 import doctorWind6
 from contact.conpact6.family_contact6 import famWind6
 from contact.conpact6.hcs_contact6 import homecsWind6
-from contact.conpact7.pat_contact7 import Window7
+#from contact.conpact7.pat_contact7 import Window7
 from contact.conpact7.doc_contact7 import doctorWind7
 from contact.conpact7.family_contact7 import famWind7
 from contact.conpact7.hcs_contact7 import homecsWind7
-from contact.conpact8.pat_contact8 import Window8
+#from contact.conpact8.pat_contact8 import Window8
 from contact.conpact8.doc_contact8 import doctorWind8
 from contact.conpact8.family_contact8 import famWind8
 from contact.conpact8.hcs_contact8 import homecsWind8
-from contact.conpact9.pat_contact9 import Window9
+#from contact.conpact9.pat_contact9 import Window9
 from contact.conpact9.doc_contact9 import doctorWind9
 from contact.conpact9.family_contact9 import famWind9
 from contact.conpact9.hcs_contact9 import homecsWind9
-from contact.conpact10.pat_contact10 import Window10
+#from contact.conpact10.pat_contact10 import Window10
 from contact.conpact10.doc_contact10 import doctorWind10
 from contact.conpact10.family_contact10 import famWind10
 from contact.conpact10.hcs_contact10 import homecsWind10
-from contact.conpact11.pat_contact11 import Window11
+#from contact.conpact11.pat_contact11 import Window11
 from contact.conpact11.doc_contact11 import doctorWind11
 from contact.conpact11.family_contact11 import famWind11
 from contact.conpact11.hcs_contact11 import homecsWind11
-from contact.conpact12.pat_contact12 import Window12
+#from contact.conpact12.pat_contact12 import Window12
 from contact.conpact12.doc_contact12 import doctorWind12
 from contact.conpact12.family_contact12 import famWind12
 from contact.conpact12.hcs_contact12 import homecsWind12
-from contact.conpact13.pat_contact13 import Window13
+#from contact.conpact13.pat_contact13 import Window13
 from contact.conpact13.doc_contact13 import doctorWind13
 from contact.conpact13.family_contact13 import famWind13
 from contact.conpact13.hcs_contact13 import homecsWind13
-from contact.conpact14.pat_contact14 import Window14
+#from contact.conpact14.pat_contact14 import Window14
 from contact.conpact14.doc_contact14 import doctorWind14
 from contact.conpact14.family_contact14 import famWind14
 from contact.conpact14.hcs_contact14 import homecsWind14
-from contact.conpact15.pat_contact15 import Window15
+#from contact.conpact15.pat_contact15 import Window15
 from contact.conpact15.doc_contact15 import doctorWind15
 from contact.conpact15.family_contact15 import famWind15
 from contact.conpact15.hcs_contact15 import homecsWind15
-from contact.conpact16.pat_contact16 import Window16
+#from contact.conpact16.pat_contact16 import Window16
 from contact.conpact16.doc_contact16 import doctorWind16
 from contact.conpact16.family_contact16 import famWind16
 from contact.conpact16.hcs_contact16 import homecsWind16
-from contact.conpact17.pat_contact17 import Window17
+#from contact.conpact17.pat_contact17 import Window17
 from contact.conpact17.doc_contact17 import doctorWind17
 from contact.conpact17.family_contact17 import famWind17
 from contact.conpact17.hcs_contact17 import homecsWind17
-from contact.conpact18.pat_contact18 import Window18
+#from contact.conpact18.pat_contact18 import Window18
 from contact.conpact18.doc_contact18 import doctorWind18
 from contact.conpact18.family_contact18 import famWind18
 from contact.conpact18.hcs_contact18 import homecsWind18
-from contact.conpact19.pat_contact19 import Window19
+#from contact.conpact19.pat_contact19 import Window19
 from contact.conpact19.doc_contact19 import doctorWind19
 from contact.conpact19.family_contact19 import famWind19
 from contact.conpact19.hcs_contact19 import homecsWind19
-from contact.conpact20.pat_contact20 import Window20
+#from contact.conpact20.pat_contact20 import Window20
 from contact.conpact20.doc_contact20 import doctorWind20
 from contact.conpact20.family_contact20 import famWind20
 from contact.conpact20.hcs_contact20 import homecsWind20
-from contact.conpact21.pat_contact21 import Window21
+#from contact.conpact21.pat_contact21 import Window21
 from contact.conpact21.doc_contact21 import doctorWind21
 from contact.conpact21.family_contact21 import famWind21
 from contact.conpact21.hcs_contact21 import homecsWind21
-from contact.conpact22.pat_contact22 import Window22
+#from contact.conpact22.pat_contact22 import Window22
 from contact.conpact22.doc_contact22 import doctorWind22
 from contact.conpact22.family_contact22 import famWind22
 from contact.conpact22.hcs_contact22 import homecsWind22
-from contact.conpact23.pat_contact23 import Window23
+#from contact.conpact23.pat_contact23 import Window23
 from contact.conpact23.doc_contact23 import doctorWind23
 from contact.conpact23.family_contact23 import famWind23
 from contact.conpact23.hcs_contact23 import homecsWind23
-from contact.conpact24.pat_contact24 import Window24
+#from contact.conpact24.pat_contact24 import Window24
 from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
-
+"""
 
 def tocopyfiles():
     """
@@ -612,384 +618,384 @@ class MenuBar(tk.Frame):
         me1 = Menu(contchck)
         me1.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num1)
+            command=lambda: boss.contact_num(h=1))
         me1.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_1)
+            command=lambda: boss.contactfamily(j=1))
         me1.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_1)
+            command=lambda: boss.contactdoctor(k=1))
         me1.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_1)
+            command=lambda: boss.contacthcsystem(l=1))
         contchck.add_cascade(label=new_text, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me1)
         me2 = Menu(contchck)
         me2.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num2)
+            command=lambda: boss.contact_num(h=2))
         me2.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_2)
+            command=lambda: boss.contactfamily(j=2))
         me2.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_2)
+            command=lambda: boss.contactdoctor(k=2))
         me2.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_2)
+            command=lambda: boss.contacthcsystem(l=2))
         contchck.add_cascade(label=new_text2, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me2)
         me3 = Menu(contchck)
         me3.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num3)
+            command=lambda: boss.contact_num(h=3))
         me3.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_3)
+            command=lambda: boss.contactfamily(j=3))
         me3.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_3)
+            command=lambda: boss.contactdoctor(k=3))
         me3.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_3)
+            command=lambda: boss.contacthcsystem(l=3))
         contchck.add_cascade(label=new_text3, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
         me4 = Menu(contchck)
         me4.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num4)
+            command=lambda: boss.contact_num(h=4))
         me4.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_4)
+            command=lambda: boss.contactfamily(j=4))
         me4.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_4)
+            command=lambda: boss.contactdoctor(k=4))
         me4.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_4)
+            command=lambda: boss.contacthcsystem(l=4))
         contchck.add_cascade(label=new_text4, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me4)
         me5 = Menu(contchck)
         me5.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num5)
+            command=lambda: boss.contact_num(h=5))
         me5.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_5)
+            command=lambda: boss.contactfamily(j=5))
         me5.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_5)
+            command=lambda: boss.contactdoctor(k=5))
         me5.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_5)
+            command=lambda: boss.contacthcsystem(l=5))
         contchck.add_cascade(label=new_text5, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me5)
         me6 = Menu(contchck)
         me6.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num6)
+            command=lambda: boss.contact_num(h=6))
         me6.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_6)
+            command=lambda: boss.contactfamily(j=6))
         me6.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_6)
+            command=lambda: boss.contactdoctor(k=6))
         me6.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_6)
+            command=lambda: boss.contacthcsystem(l=6))
         contchck.add_cascade(label=new_text6, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me6)
         me7 = Menu(contchck)
         me7.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num7)
+            command=lambda: boss.contact_num(h=7))
         me7.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_7)
+            command=lambda: boss.contactfamily(j=7))
         me7.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_7)
+            command=lambda: boss.contactdoctor(k=7))
         me7.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_7)
+            command=lambda: boss.contacthcsystem(l=7))
         contchck.add_cascade(label=new_text7, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me7)
         me8 = Menu(contchck)
         me8.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num8)
+            command=lambda: boss.contact_num(h=8))
         me8.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_8)
+            command=lambda: boss.contactfamily(j=8))
         me8.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_8)
+            command=lambda: boss.contactdoctor(k=8))
         me8.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_8)
+            command=lambda: boss.contacthcsystem(l=8))
         contchck.add_cascade(label=new_text8, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me8)
         me9 = Menu(contchck)
         me9.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num9)
+            command=lambda: boss.contact_num(h=9))
         me9.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_9)
+            command=lambda: boss.contactfamily(j=9))
         me9.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_9)
+            command=lambda: boss.contactdoctor(k=9))
         me9.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_9)
+            command=lambda: boss.contacthcsystem(l=9))
         contchck.add_cascade(label=new_text9, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me9)
         me10 = Menu(contchck)
         me10.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num10)
+            command=lambda: boss.contact_num(h=10))
         me10.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_10)
+            command=lambda: boss.contactfamily(j=10))
         me10.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_10)
+            command=lambda: boss.contactdoctor(k=10))
         me10.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_10)
+            command=lambda: boss.contacthcsystem(l=10))
         contchck.add_cascade(label=new_text10, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me10)
         me11 = Menu(contchck)
         me11.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num11)
+            command=lambda: boss.contact_num(h=11))
         me11.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_11)
+            command=lambda: boss.contactfamily(j=11))
         me11.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_11)
+            command=lambda: boss.contactdoctor(k=11))
         me11.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_11)
+            command=lambda: boss.contacthcsystem(l=11))
         contchck.add_cascade(label=new_text11, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me11)
         me12 = Menu(contchck)
         me12.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num12)
+            command=lambda: boss.contact_num(h=12))
         me12.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_12)
+            command=lambda: boss.contactfamily(j=12))
         me12.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_12)
+            command=lambda: boss.contactdoctor(k=12))
         me12.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_12)
+            command=lambda: boss.contacthcsystem(l=12))
         contchck.add_cascade(label=new_text12, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me12)
         me13 = Menu(contchck)
         me13.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num13)
+            command=lambda: boss.contact_num(h=13))
         me13.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_13)
+            command=lambda: boss.contactfamily(j=13))
         me13.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_13)
+            command=lambda: boss.contactdoctor(k=13))
         me13.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_13)
+            command=lambda: boss.contacthcsystem(l=13))
         contchck.add_cascade(label=new_text13, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me13)
         me14 = Menu(contchck)
         me14.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num14)
+            command=lambda: boss.contact_num(h=14))
         me14.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_14)
+            command=lambda: boss.contactfamily(j=14))
         me14.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_14)
+            command=lambda: boss.contactdoctor(k=14))
         me14.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_14)
+            command=lambda: boss.contacthcsystem(l=14))
         contchck.add_cascade(label=new_text14, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me14)
         me15 = Menu(contchck)
         me15.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num15)
+            command=lambda: boss.contact_num(h=15))
         me15.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_15)
+            command=lambda: boss.contactfamily(j=15))
         me15.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_15)
+            command=lambda: boss.contactdoctor(k=15))
         me15.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_15)
+            command=lambda: boss.contacthcsystem(l=15))
         contchck.add_cascade(label=new_text15, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me15)
         me16 = Menu(contchck)
         me16.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num16)
+            command=lambda: boss.contact_num(h=16))
         me16.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_16)
+            command=lambda: boss.contactfamily(j=16))
         me16.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_16)
+            command=lambda: boss.contactdoctor(k=16))
         me16.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_16)
+            command=lambda: boss.contacthcsystem(l=16))
         contchck.add_cascade(label=new_text16, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me16)
         me17 = Menu(contchck)
         me17.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num17)
+            command=lambda: boss.contact_num(h=17))
         me17.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_17)
+            command=lambda: boss.contactfamily(j=17))
         me17.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_17)
+            command=lambda: boss.contactdoctor(k=17))
         me17.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_17)
+            command=lambda: boss.contacthcsystem(l=17))
         contchck.add_cascade(label=new_text17, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me17)
         me18 = Menu(contchck)
         me18.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num18)
+            command=lambda: boss.contact_num(h=18))
         me18.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_18)
+            command=lambda: boss.contactfamily(j=18))
         me18.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_18)
+            command=lambda: boss.contactdoctor(k=18))
         me18.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_18)
+            command=lambda: boss.contacthcsystem(l=18))
         contchck.add_cascade(label=new_text18, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me18)
         me19 = Menu(contchck)
         me19.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num19)
+            command=lambda: boss.contact_num(h=19))
         me19.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_19)
+            command=lambda: boss.contactfamily(j=19))
         me19.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_19)
+            command=lambda: boss.contactdoctor(k=19))
         me19.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_19)
+            command=lambda: boss.contacthcsystem(l=19))
         contchck.add_cascade(label=new_text19, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me19)
         me20 = Menu(contchck)
         me20.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num20)
+            command=lambda: boss.contact_num(h=20))
         me20.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_20)
+            command=lambda: boss.contactfamily(j=20))
         me20.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_20)
+            command=lambda: boss.contactdoctor(k=20))
         me20.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_20)
+            command=lambda: boss.contacthcsystem(l=20))
         contchck.add_cascade(label=new_text20, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me20)
         me21 = Menu(contchck)
         me21.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num21)
+            command=lambda: boss.contact_num(h=21))
         me21.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_21)
+            command=lambda: boss.contactfamily(j=21))
         me21.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_21)
+            command=lambda: boss.contactdoctor(k=21))
         me21.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_21)
+            command=lambda: boss.contacthcsystem(l=21))
         contchck.add_cascade(label=new_text21, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me21)
         me22 = Menu(contchck)
         me22.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num22)
+            command=lambda: boss.contact_num(h=22))
         me22.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_22)
+            command=lambda: boss.contactfamily(j=22))
         me22.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_22)
+            command=lambda: boss.contactdoctor(k=22))
         me22.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_22)
+            command=lambda: boss.contacthcsystem(l=22))
         contchck.add_cascade(label=new_text22, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me22)
         me23 = Menu(contchck)
         me23.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num23)
+            command=lambda: boss.contact_num(h=23))
         me23.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_23)
+            command=lambda: boss.contactfamily(j=23))
         me23.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_23)
+            command=lambda: boss.contactdoctor(k=23))
         me23.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_23)
+            command=lambda: boss.contacthcsystem(l=23))
         contchck.add_cascade(label=new_text23, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me23)
         me24 = Menu(contchck)
         me24.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num24)
+            command=lambda: boss.contact_num(h=24))
         me24.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactfamily_24)
+            command=lambda: boss.contactfamily(j=24))
         me24.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contactdoctor_24)
+            command=lambda: boss.contactdoctor(k=24))
         me24.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contacthcsystem_24)
+            command=lambda: boss.contacthcsystem(l=24))
         contchck.add_cascade(label=new_text24, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me24)
@@ -2203,320 +2209,36 @@ class Application(tk.Frame):
             tk.messagebox.showerror('Error', 'Something went wrong with : '\
             './patient_agenda/origin_agenda23.py ')
 
-    # Contact patientX functions
-    def contact_num1(self):
+    def contact_num(self, h):
         """
-            Opened since menu items
+            call contact patient
         """
-        Window(self)
-
-    def contactfamily_1(self):
-        famWind(self)
-
-    def contactdoctor_1(self):
-        doctorWind(self)
-
-    def contacthcsystem_1(self):
-        homecsWind(self)
-
-    # Contact patient 2
-    def contact_num2(self):
-        Window2(self)
-
-    def contactfamily_2(self):
-        famWind2(self)
-
-    def contactdoctor_2(self):
-        doctorWind2(self)
-
-    def contacthcsystem_2(self):
-        homecsWind2(self)
-
-    # Contact patient 3
-    def contact_num3(self):
-        Window3(self)
-
-    def contactfamily_3(self):
-        famWind3(self)
-
-    def contactdoctor_3(self):
-        doctorWind3(self)
-
-    def contacthcsystem_3(self):
-        homecsWind3(self)
-
-    # Contact patient 4
-    def contact_num4(self):
-        Window4(self)
-
-    def contactfamily_4(self):
-        famWind4(self)
-
-    def contactdoctor_4(self):
-        doctorWind4(self)
-
-    def contacthcsystem_4(self):
-        homecsWind4(self)
-
-    # Contact patient 5
-    def contact_num5(self):
-        Window5(self)
-
-    def contactfamily_5(self):
-        famWind5(self)
-
-    def contactdoctor_5(self):
-        doctorWind5(self)
-
-    def contacthcsystem_5(self):
-        homecsWind5(self)
-
-    # Contact patient 6
-    def contact_num6(self):
-        Window6(self)
-
-    def contactfamily_6(self):
-        famWind6(self)
-
-    def contactdoctor_6(self):
-        doctorWind6(self)
-
-    def contacthcsystem_6(self):
-        homecsWind6(self)
-
-    # Contact patient 7
-    def contact_num7(self):
-        Window7(self)
-
-    def contactfamily_7(self):
-        famWind7(self)
-
-    def contactdoctor_7(self):
-        doctorWind7(self)
-
-    def contacthcsystem_7(self):
-        homecsWind7(self)
-
-    # Contact patient 8
-    def contact_num8(self):
-        Window8(self)
-
-    def contactfamily_8(self):
-        famWind8(self)
-
-    def contactdoctor_8(self):
-        doctorWind8(self)
-
-    def contacthcsystem_8(self):
-        homecsWind8(self)
-
-    # Contact patient 9
-    def contact_num9(self):
-        Window9(self)
-
-    def contactfamily_9(self):
-        famWind9(self)
-
-    def contactdoctor_9(self):
-        doctorWind9(self)
-
-    def contacthcsystem_9(self):
-        homecsWind9(self)
-
-    # Contact patient 10
-    def contact_num10(self):
-        Window10(self)
-
-    def contactfamily_10(self):
-        famWind10(self)
-
-    def contactdoctor_10(self):
-        doctorWind10(self)
-
-    def contacthcsystem_10(self):
-        homecsWind10(self)
-
-    # Contact patient 11
-    def contact_num11(self):
-        Window11(self)
-
-    def contactfamily_11(self):
-        famWind11(self)
-
-    def contactdoctor_11(self):
-        doctorWind11(self)
-
-    def contacthcsystem_11(self):
-        homecsWind11(self)
-
-    # Contact patient 12
-    def contact_num12(self):
-        Window12(self)
-
-    def contactfamily_12(self):
-        famWind12(self)
-
-    def contactdoctor_12(self):
-        doctorWind12(self)
-
-    def contacthcsystem_12(self):
-        homecsWind12(self)
-
-    # Contact patient 13
-    def contact_num13(self):
-        Window13(self)
-
-    def contactfamily_13(self):
-        famWind13(self)
-
-    def contactdoctor_13(self):
-        doctorWind13(self)
-
-    def contacthcsystem_13(self):
-        homecsWind13(self)
-
-    # Contact patient 14
-    def contact_num14(self):
-        Window14(self)
-
-    def contactfamily_14(self):
-        famWind14(self)
-
-    def contactdoctor_14(self):
-        doctorWind14(self)
-
-    def contacthcsystem_14(self):
-        homecsWind14(self)
-
-    # Contact patient 15
-    def contact_num15(self):
-        Window15(self)
-
-    def contactfamily_15(self):
-        famWind15(self)
-
-    def contactdoctor_15(self):
-        doctorWind15(self)
-
-    def contacthcsystem_15(self):
-        homecsWind15(self)
-
-    # Contact patient 16
-    def contact_num16(self):
-        Window16(self)
-
-    def contactfamily_16(self):
-        famWind16(self)
-
-    def contactdoctor_16(self):
-        doctorWind16(self)
-
-    def contacthcsystem_16(self):
-        homecsWind16(self)
-
-    # Contact patient 17
-    def contact_num17(self):
-        Window17(self)
-
-    def contactfamily_17(self):
-        famWind17(self)
-
-    def contactdoctor_17(self):
-        doctorWind17(self)
-
-    def contacthcsystem_17(self):
-        homecsWind17(self)
-
-    # Contact patient 18
-    def contact_num18(self):
-        Window18(self)
-
-    def contactfamily_18(self):
-        famWind18(self)
-
-    def contactdoctor_18(self):
-        doctorWind18(self)
-
-    def contacthcsystem_18(self):
-        homecsWind18(self)
-
-    # Contact patient 19
-    def contact_num19(self):
-        Window19(self)
-
-    def contactfamily_19(self):
-        famWind19(self)
-
-    def contactdoctor_19(self):
-        doctorWind19(self)
-
-    def contacthcsystem_19(self):
-        homecsWind19(self)
-
-    # Contact patient 20
-    def contact_num20(self):
-        Window20(self)
-
-    def contactfamily_20(self):
-        famWind20(self)
-
-    def contactdoctor_20(self):
-        doctorWind20(self)
-
-    def contacthcsystem_20(self):
-        homecsWind20(self)
-
-    # Contact patient 21
-    def contact_num21(self):
-        Window21(self)
-
-    def contactfamily_21(self):
-        famWind21(self)
-
-    def contactdoctor_21(self):
-        doctorWind21(self)
-
-    def contacthcsystem_21(self):
-        homecsWind21(self)
-
-    # Contact patient 22
-    def contact_num22(self):
-        Window22(self)
-
-    def contactfamily_22(self):
-        famWind22(self)
-
-    def contactdoctor_22(self):
-        doctorWind22(self)
-
-    def contacthcsystem_22(self):
-        homecsWind22(self)
-
-    # Contact patient 23
-    def contact_num23(self):
-        Window23(self)
-
-    def contactfamily_23(self):
-        famWind23(self)
-
-    def contactdoctor_23(self):
-        doctorWind23(self)
-
-    def contacthcsystem_23(self):
-        homecsWind23(self)
-
-    # Contact patient 24
-    def contact_num24(self):
-        Window24(self)
-
-    def contactfamily_24(self):
-        famWind24(self)
-
-    def contactdoctor_24(self):
-        doctorWind24(self)
-
-    def contacthcsystem_24(self):
-        homecsWind24(self)
+        if h==h:
+            print("h value : ", h)
+            callPatNum(self, h)
+        else:
+            print("h seems to be inexistant...")
+
+    def contactfamily(self, j):
+        if j==j:
+            print("j value : ", j)
+            callFamWind(self, j)
+        else:
+            print("j seems to be inexistant...")
+
+    def contactdoctor(self, k):
+        if k==k:
+            print("k value : ", k)
+            callDoctorWind(self, k)
+        else:
+            print("k seems to be inexistant...")
+
+    def contacthcsystem(self, l):
+        if l==l:
+            print("l value : ", l)
+            callHomecsWind(self, l)
+        else:
+            print("l seems to be inexistant...")
 
     # CheckBox 14 needs (functions)
     def besoinsCoche(self, b):

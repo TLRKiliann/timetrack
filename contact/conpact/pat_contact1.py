@@ -14,13 +14,15 @@ def Window(self):
     """
     self.effacer()
     self.delScroll()
-    self.can.configure(background='DodgerBlue2')
+    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
+    self.itemfirst = self.can.create_image((0,0), image=self.photo,
+        anchor=tk.NW)
 
     def allInData():
         """
             First page
         """
-        self.x1, self.y1 = 900, 340
+        self.x1, self.y1 = 900, 345
         self.txtBox = tk.Text(self.can, height=23, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
@@ -99,7 +101,7 @@ def Window(self):
         self.x5, self.y5 = 450, 120
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_pat.set(line1[:-1])
         self.wnamentry_window = self.can.create_window(self.x5, self.y5,
             window = self.namentry)
@@ -134,7 +136,7 @@ def Window(self):
     self.x7, self.y7 = 450, 170
     self.native = tk.StringVar()
     self.nativaentry = tk.Entry(self.can, textvariable=self.native,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.native.set(line3[:-1])
     self.wnativaentry_window = self.can.create_window(self.x7, self.y7,
         window = self.nativaentry)
@@ -151,12 +153,12 @@ def Window(self):
     self.x11, self.y11 = 450, 220
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtphone.set(line4[:-1])
     self.wphonentry_window = self.can.create_window(self.x11, self.y11,
         window = self.phonentry)
 
-    # Street
+    # Address
     self.x12, self.y12 = 250, 270
     self.addrlabel = tk.Label(self.can, text="Street :",
         font=('Times New Roman', 18, 'bold'),
@@ -168,7 +170,7 @@ def Window(self):
     self.x20, self.y20 = 450, 270
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.addrtxt.set(line5[:-1])
     self.waddrentry_window = self.can.create_window(self.x20, self.y20,
         window = self.addrentry)
@@ -184,7 +186,7 @@ def Window(self):
     self.x33, self.y33 = 450, 320
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.citytxt.set(line6[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -201,7 +203,7 @@ def Window(self):
     self.x41, self.y41 = 450, 370
     self.mailtxt = tk.StringVar()
     self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mailtxt.set(line7[:-1])
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
@@ -218,7 +220,7 @@ def Window(self):
     self.x51, self.y51 = 450, 420
     self.assurance = tk.StringVar()
     self.entryassu = tk.Entry(self.can, textvariable=self.assurance,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.assurance.set(line8[:-1])
     self.wentryassu_window = self.can.create_window(self.x51, self.y51,
         window = self.entryassu)
@@ -235,7 +237,7 @@ def Window(self):
     self.x53, self.y53 = 450, 470
     self.policy = tk.StringVar()
     self.entrypolicy = tk.Entry(self.can, textvariable=self.policy,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.policy.set(line9[:-1])
     self.wentrypolicy_window = self.can.create_window(self.x53, self.y53,
         window = self.entrypolicy)
@@ -252,7 +254,7 @@ def Window(self):
     self.x61, self.y61 = 450, 520
     self.civil = tk.StringVar()
     self.entrycivil = tk.Entry(self.can, textvariable=self.civil,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.civil.set(line10[:-1])
     self.wentrycivil_window = self.can.create_window(self.x61, self.y61,
         window = self.entrycivil)
@@ -269,15 +271,16 @@ def Window(self):
     self.x63, self.y63 = 450, 570
     self.confess = tk.StringVar()
     self.entryconfess = tk.Entry(self.can, textvariable=self.confess,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.confess.set(line11)
     self.wentryconfess_window = self.can.create_window(self.x63, self.y63,
         window = self.entryconfess)
 
+    # Button save
     self.x64, self.y64 = 350, 640
-    self.b64 = tk.Button(self.can, text="Save Modifications", font=16,
-        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
-        highlightbackground='cyan',
+    self.b64 = tk.Button(self.can, text="Save Modifications", font=('MS Serif',14),
+        width=30, bd=3, bg='RoyalBlue3', fg='cyan',
+        highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
         command = lambda: ([recorderData(self, birthvar), allInData()]))
     self.fb64_window = self.can.create_window(self.x64, self.y64, window=self.b64)

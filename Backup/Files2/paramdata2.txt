@@ -31,3 +31,14 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 21/10/2021
+Hour : 05:39:38
+Name and Surname : Njin Nier
+TA : 135/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.7°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 0/10
+
