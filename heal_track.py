@@ -64,14 +64,13 @@ class ScrollCanvas(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
-
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
-        self.can.bind("<Configure>", self.onCanvasConfigure)
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
+        self.can.bind("<Configure>", self.onCanvasConfigure)
 
 class MenuBar(tk.Frame):
     """
@@ -1770,6 +1769,7 @@ class Application(tk.Frame):
     def delScroll(self):
         """ To delete ScrollBar """
         self.vsb.pack_forget()
+        print("ScrollBar deleted")
 
     def addScroll(self):
         """ To add ScrollBar """
@@ -1781,6 +1781,7 @@ class Application(tk.Frame):
         except Exception as err_scrl:
             print("Scrollbar doesn't exist", err_scrl)
             self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+            print("Ok, ScrollBar created")
 
     def effacer(self):
         '''Reinitialize canvas when we pass through another'''
@@ -1790,7 +1791,7 @@ class Application(tk.Frame):
             if exists == 1:
                 self.item.pack_forget()
         except Exception as err_tk:
-            print("item doesn't exist", err_tk)
+            print("item doesn't exist - ok, don't need to delete it", err_tk)
 
         try:
             existext = self.text_area.winfo_exists()
@@ -1856,7 +1857,7 @@ class Application(tk.Frame):
             bg='grey17', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey10',
             activebackground='pale turquoise')
-        self.button1_window = self.can.create_window(75, 30, anchor=tk.CENTER,
+        self.fbutton1_window = self.can.create_window(75, 30, anchor=tk.CENTER,
             window=self.button1)
 
         # Connection to DB
@@ -1876,7 +1877,7 @@ class Application(tk.Frame):
             window=self.button3)
 
         # Patients button
-        self.button4 = tk.Button(self, text="RESIDENTS", font=('Times 18 bold'),
+        self.button4 = tk.Button(self, text="RESIDENTS", font=('Times', 18, 'bold'),
             bg='RoyalBlue3', fg='white', command = self.showPatients)
         self.button4.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')

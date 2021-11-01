@@ -17,20 +17,17 @@ def doctorWind(self):
     self.effacer()
     self.addScroll()
     self.can.configure(background='DodgerBlue2')
-    self.can.create_window((4,4), window=self.viewPort,
-                anchor=tk.NW, tags="self.viewPort")
-    self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
     def docData():
         """
             First page
         """
-        self.x1, self.y1 = 900, 370
+        self.x2, self.y2 = 900, 370
         self.txtBox = tk.Text(self.can, height=17, width=40, font=18,
             relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1,
+        self.ftxtBox_window = self.can.create_window(self.x2, self.y2,
             window=self.txtBox)
 
         def numberOneDox():
@@ -60,11 +57,11 @@ def doctorWind(self):
 
         numberOneDox()
 
-        self.x2, self.y2 = 900, 890
+        self.x3, self.y3 = 900, 890
         self.txtBox2 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox2.delete('1.0', tk.END)
         self.txtBox2.update()
-        self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
+        self.ftxtBox2_window = self.can.create_window(self.x3, self.y3, window=self.txtBox2)
 
         def numberTwoDox():
             try:
@@ -93,11 +90,11 @@ def doctorWind(self):
         
         numberTwoDox()
 
-        self.x3, self.y3 = 900, 1410
+        self.x4, self.y4 = 900, 1410
         self.txtBox3 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox3.delete('1.0', tk.END)
         self.txtBox3.update()
-        self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
+        self.ftxtBox3_window = self.can.create_window(self.x4, self.y4, window=self.txtBox3)
 
         def numbThreeDox():
             try:
@@ -128,28 +125,34 @@ def doctorWind(self):
 
     docData()
 
+    # Label ghost1
+    self.x1, self.y1 = 250, 50
+    self.firstghost = tk.Label(self.can, width=10, text="", bg='DodgerBlue2')
+    self.wfirstghost_window = self.can.create_window(self.x1, self.y1,
+        window = self.firstghost)
+
     # Label title
-    self.x4, self.y4 = 250, 100
+    self.x10, self.y10 = 250, 100
     self.lbltitle = tk.Label(self.can, text="Contact",
         font=('MS Serif', 30, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlbltitle_window = self.can.create_window(self.x4, self.y4,
+    self.wlbltitle_window = self.can.create_window(self.x10, self.y10,
         window = self.lbltitle)
 
     # Label title2
-    self.x5, self.y5 = 460, 100
+    self.x11, self.y11 = 460, 100
     self.lblsectitle = tk.Label(self.can, text="Doctors",
         font=('MS Serif', 30, 'bold'),
         bg='DodgerBlue2', fg='cyan')
-    self.wlblsectitle_window = self.can.create_window(self.x5, self.y5,
+    self.wlblsectitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lblsectitle)
 
     # Doctor 1
-    self.x6, self.y6 = 250, 200
+    self.x12, self.y12 = 250, 200
     self.labelname = tk.Label(self.can, text="Doctor :",
         font=('Times New Roman', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.wlabelname_window = self.can.create_window(self.x6, self.y6,
+    self.wlabelname_window = self.can.create_window(self.x12, self.y12,
         window = self.labelname)
 
     try:
@@ -167,12 +170,12 @@ def doctorWind(self):
 
     try:
         self.txt_pat = linex
-        self.x7, self.y7 = 450, 200
+        self.x14, self.y14 = 450, 200
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=2)
         self.txt_pat.set(linex[:-1])
-        self.wnamentry_window = self.can.create_window(self.x7, self.y7,
+        self.wnamentry_window = self.can.create_window(self.x14, self.y14,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created ! (Error17)", ub_error1)
