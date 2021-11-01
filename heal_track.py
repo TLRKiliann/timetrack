@@ -61,16 +61,22 @@ class ScrollCanvas(tk.Frame):
         self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.viewPort = tk.Frame(self.can)
+
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=1) 
+
         self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
+        self.can.bind("<Configure>", self.onCanvasConfigure)
+
+        self.onFrameConfigure(None)
+
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
-        self.can.bind("<Configure>", self.onCanvasConfigure)
 
 class MenuBar(tk.Frame):
     """
@@ -1703,22 +1709,28 @@ class Application(tk.Frame):
         self.clock_label.after(200, self.tick)
 
         self.viewPort = tk.Frame(self.can)
+        self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
+            anchor=tk.NW, tags="self.viewPort")
+
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
             troughcolor='SteelBlue2', bg="RoyalBlue3", activebackground='pale turquoise')
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
-        self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
-            anchor=tk.NW, tags="self.viewPort")
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
-        #self.frame.bind("<Configure>", self.onFrameConfigure)
+
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
-        #self.onFrameConfigure(None)
-        self.pack()
+        self.can.bind("<Configure>", self.onCanvasConfigure)
+
+        self.onFrameConfigure(None)
+        
+        self.viewPort.bind('<Enter>', self.onEnter)
+        self.viewPort.bind('<Leave>', self.onLeave)
+
         self.startPage()
 
     def tick(self):
-        """ Updates the display clock every 200 milliseconds """
+        ''' Updates the display clock every 200 milliseconds '''
         self.new_time = time.strftime("%H:%M:%S %p")
         try:
             if self.new_time == self.new_time:
@@ -1728,6 +1740,15 @@ class Application(tk.Frame):
                 self._job = self.clock_label.after(200, self.tick)
         except (ValueError, OSError) as val_err:
             print("[!] Error time --> ", val_err)
+
+    def onCanvasConfigure(self, event):
+        '''Reset the canvas window to encompass inner frame when required'''
+        canvas_width = event.width
+        self.can.itemconfig(self.canvas_window, width = canvas_width)
+
+    def onFrameConfigure(self, event):
+        '''Reset the scroll region to encompass the inner frame'''
+        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
 
     def onMouseWheel(self, event):
         """
@@ -1757,32 +1778,6 @@ class Application(tk.Frame):
         else:
             self.can.unbind_all("<MouseWheel>")
 
-    def onFrameConfigure(self, event):
-        '''Reset the scroll region to encompass the inner frame'''
-        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-
-    def onCanvasConfigure(self, event):
-        '''Reset the canvas window to encompass inner frame when required'''
-        canvas_width = event.width
-        self.can.itemconfig(self.canvas_window, width = canvas_width)
-
-    def delScroll(self):
-        """ To delete ScrollBar """
-        self.vsb.pack_forget()
-        print("ScrollBar deleted")
-
-    def addScroll(self):
-        """ To add ScrollBar """
-        try:
-            exists = self.vsb.winfo_exists()
-            if exists == 1:
-                self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-                print("Ok, ScrollBar exist")
-        except Exception as err_scrl:
-            print("Scrollbar doesn't exist", err_scrl)
-            self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-            print("Ok, ScrollBar created")
-
     def effacer(self):
         '''Reinitialize canvas when we pass through another'''
         self.can.delete(tk.ALL)
@@ -1799,6 +1794,24 @@ class Application(tk.Frame):
                 self.text_area.pack_forget()
         except Exception as err_ex:
             print("text_area doesn't exist", err_ex)
+
+    def delScroll(self):
+        ''' To delete ScrollBar '''
+        #pack_forget()
+        self.vsb.forget()
+        print("ScrollBar deleted")
+
+    def addScroll(self):
+        ''' To add ScrollBar '''
+        try:
+            exists = self.vsb.winfo_exists()
+            if exists == 1:
+                self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+                print("Ok, ScrollBar exist")
+        except Exception as err_scrl:
+            print("Scrollbar doesn't exist", err_scrl)
+            self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+            print("Ok, ScrollBar created")
 
     def msgQuitapp(self, arg):
         """
@@ -2900,5 +2913,5 @@ class Application(tk.Frame):
 if __name__=='__main__':
     root = tk.Tk()
     root.resizable(False, False)
-    Application(root).pack()
+    Application(root).pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
     root.mainloop()
