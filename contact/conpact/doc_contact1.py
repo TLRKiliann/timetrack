@@ -16,20 +16,22 @@ def doctorWind(self):
     """
     self.effacer()
     self.addScroll()
-    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
-    self.itemfirst = self.can.create_image((0,0), image=self.photo,
-        anchor=tk.NW)
-    #self.can.configure(background='DodgerBlue2')
+    self.can.configure(background='DodgerBlue2')
+    self.can.create_window((4,4), window=self.viewPort,
+                anchor=tk.NW, tags="self.viewPort")
+    self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
     def docData():
         """
             First page
         """
         self.x1, self.y1 = 900, 370
-        self.txtBox = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
+        self.txtBox = tk.Text(self.can, height=17, width=40, font=18,
+            relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
+        self.ftxtBox_window = self.can.create_window(self.x1, self.y1,
+            window=self.txtBox)
 
         def numberOneDox():
             try:
@@ -293,7 +295,7 @@ def doctorWind(self):
     self.wentryfax_window = self.can.create_window(self.x51, self.y51,
         window = self.entryfax)
 
-    self.x52, self.y52 = 350, 620
+    self.x52, self.y52 = 370, 620
     self.b52 = tk.Button(self.can, text="Save Modifications",
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3', fg='cyan',
         highlightbackground='DodgerBlue2', activebackground='pale turquoise',
@@ -452,7 +454,7 @@ def doctorWind(self):
     self.wentryfax2_window = self.can.create_window(self.x76, self.y76,
         window = self.entryfax2)
 
-    self.x77, self.y77 = 350, 1140
+    self.x77, self.y77 = 370, 1140
     self.bat77 = tk.Button(self.can, text="Save Modifications",
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
         fg='cyan', highlightbackground='DodgerBlue2',
@@ -611,7 +613,7 @@ def doctorWind(self):
     self.wentryfax3_window = self.can.create_window(self.x95, self.y95,
         window = self.entryfax3)
 
-    self.x96, self.y96 = 350, 1670
+    self.x96, self.y96 = 370, 1670
     self.bat96 = tk.Button(self.can, text="Save Modifications",
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
         fg='cyan', highlightbackground='DodgerBlue2',
@@ -619,6 +621,11 @@ def doctorWind(self):
         command = lambda: ([docThreeRecord(self), docData()]))
     self.fbat96_window = self.can.create_window(self.x96, self.y96,
         window=self.bat96)
+
+    self.x100, self.y100 = 370, 1720
+    self.lblghost = tk.Label(self.can, width=10, text="", bg='DodgerBlue2')
+    self.wlblghost_window = self.can.create_window(self.x100, self.y100,
+        window = self.lblghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.bind_all("<Button-4>", self.onMouseWheel)

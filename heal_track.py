@@ -1697,25 +1697,21 @@ class Application(tk.Frame):
         self.mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
         self.can = tk.Canvas(self, width=1250, height=700, bg='black')
-        self.viewPort = tk.Frame(self.can)
 
-        # ScrollCanvas limited by area of ScrollBar 1250 - 700
-        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
-            troughcolor='SteelBlue2', bg="RoyalBlue3", activebackground='pale turquoise')
-        self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-
-        # clock_label to display time
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("helvetica", 18, 'bold'))
         self.clock_label.pack(side=tk.TOP, fill=tk.X, expand=1)
         self.clock_label.after(200, self.tick)
 
-        # Frame size configuration
-        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+        self.viewPort = tk.Frame(self.can)
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
+            troughcolor='SteelBlue2', bg="RoyalBlue3", activebackground='pale turquoise')
+        self.can.configure(yscrollcommand=self.vsb.set)
+        self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+
         self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
-
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
         #self.frame.bind("<Configure>", self.onFrameConfigure)
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         #self.onFrameConfigure(None)
@@ -1856,7 +1852,7 @@ class Application(tk.Frame):
             font=('Times', 12), fill='turquoise')
 
         # 3 buttons at first.
-        self.button1 = tk.Button(self, text="Info", font=('Times 14 bold'),
+        self.button1 = tk.Button(self, text="Info", font=('Times', 14, 'bold'),
             bg='grey17', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey10',
             activebackground='pale turquoise')
@@ -1864,19 +1860,19 @@ class Application(tk.Frame):
             window=self.button1)
 
         # Connection to DB
-        self.button2 = tk.Button(self, text="DATABASE", font=('Times 18 bold'),
+        self.button2 = tk.Button(self, text="DATABASE", font=('Times', 18, 'bold'),
             bg='RoyalBlue3', fg='white', command = self.funcPyCon)
         self.button2.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
-        self.button2_window = self.can.create_window(300, 450, anchor=tk.CENTER,
+        self.fbutton2_window = self.can.create_window(300, 450, anchor=tk.CENTER,
             window=self.button2)
 
         # Synopsis button
-        self.button3 = tk.Button(self, text="EVENTBOX", font=('Times 18 bold'),
+        self.button3 = tk.Button(self, text="EVENTBOX", font=('Times', 18, 'bold'),
             bg='RoyalBlue3', fg='white', command = self.showSynopsis)
         self.button3.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
-        self.button3_window = self.can.create_window(625, 450, anchor=tk.CENTER,
+        self.fbutton3_window = self.can.create_window(625, 450, anchor=tk.CENTER,
             window=self.button3)
 
         # Patients button
@@ -1884,7 +1880,7 @@ class Application(tk.Frame):
             bg='RoyalBlue3', fg='white', command = self.showPatients)
         self.button4.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
-        self.button4_window = self.can.create_window(950, 450, anchor=tk.CENTER,
+        self.fbutton4_window = self.can.create_window(950, 450, anchor=tk.CENTER,
             window=self.button4)
         #self.pack()
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
