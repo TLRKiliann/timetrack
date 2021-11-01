@@ -1700,7 +1700,8 @@ class Application(tk.Frame):
         self.viewPort = tk.Frame(self.can)
 
         # ScrollCanvas limited by area of ScrollBar 1250 - 700
-        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
+            troughcolor='SteelBlue2', bg="RoyalBlue3", activebackground='pale turquoise')
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 

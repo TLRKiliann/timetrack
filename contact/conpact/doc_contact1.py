@@ -15,7 +15,6 @@ def doctorWind(self):
         design for contact interface.
     """
     self.effacer()
-    #self.delScroll()
     self.addScroll()
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,

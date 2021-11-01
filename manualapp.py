@@ -21,6 +21,7 @@ def instalpy(self):
 
     self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='aquamarine',
         highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
+    self.text_area.vbar.config(troughcolor='black', bg='aquamarine')
 
     self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
     self.text_area.insert(tk.END,"\n\n"
