@@ -278,8 +278,8 @@ def Window(self):
 
     # Button save
     self.x64, self.y64 = 350, 640
-    self.b64 = tk.Button(self.can, text="Save Modifications", font=('MS Serif',14),
-        width=30, bd=3, bg='RoyalBlue3', fg='cyan',
+    self.b64 = tk.Button(self.can, text="Save Modifications", font=('MS Serif', 14),
+        width=28, bd=3, bg='RoyalBlue3', fg='cyan',
         highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
         command = lambda: ([recorderData(self, birthvar), allInData()]))
