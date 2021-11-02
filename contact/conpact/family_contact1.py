@@ -93,7 +93,7 @@ def famWind(self):
         self.x14, self.y14 = 450, 200
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_pat.set(linex[:-1])
         self.wnamentry_window = self.can.create_window(self.x14, self.y14,
             window = self.namentry)
@@ -112,7 +112,7 @@ def famWind(self):
     self.x21, self.y21 = 450, 250
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtphone.set(line2[:-1])
     self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
@@ -129,7 +129,7 @@ def famWind(self):
     self.x23, self.y23 = 450, 300
     self.txtmobile = tk.StringVar()
     self.mobilentry = tk.Entry(self.can, textvariable=self.txtmobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtmobile.set(line3[:-1])
     self.wmobilentry_window = self.can.create_window(self.x23, self.y23,
         window = self.mobilentry)
@@ -146,7 +146,7 @@ def famWind(self):
     self.x31, self.y31 = 450, 350
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt.set(line4[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
@@ -162,7 +162,7 @@ def famWind(self):
     self.x33, self.y33 = 450, 400
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt.set(line5[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -179,7 +179,7 @@ def famWind(self):
     self.x41, self.y41 = 450, 450
     self.mailtxt = tk.StringVar()
     self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mailtxt.set(line6)
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
