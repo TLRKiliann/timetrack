@@ -36,6 +36,7 @@ def recorderFam(self):
         print("[!] finalfam1 not found !(t2)", err_termin)
         with open('./contact/conpact5/finalfam5.txt', 'a+'):
             print("[+] finalfam5.txt exist!")
+
     try:
         with open('./contact/conpact5/finalfam5.txt', 'w') as terminfile:
             terminfile.write("Name : " + self.namentry.get())

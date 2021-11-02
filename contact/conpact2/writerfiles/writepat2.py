@@ -41,6 +41,7 @@ def recorderData(self, birthvar):
         print("[!] finalfile2.txt not found !(Error3)", err_termin)
         with open('./contact/conpact2/finalfile2.txt', 'a+'):
             print("[+] File finalfile2.txt exist!")
+
     try:
         with open('./contact/conpact2/finalfile2.txt', 'w') as terminfile:
             terminfile.write("Patient name : " + self.namentry.get())

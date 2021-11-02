@@ -38,6 +38,7 @@ def docRecord(self):
         print("[!] finaldoc1 not found (Error8)", err_termin)
         with open('./contact/conpact4/finaldoc1.txt', 'a+'):
             print("[+] finaldoc1.txt created!")
+
     try:
         with open('./contact/conpact4/finaldoc1.txt', 'w') as terminfile:
             terminfile.write("Doctor : " + self.namentry.get())
@@ -81,6 +82,7 @@ def docTwoRecord(self):
         print("[!] finaldoc2 not found !(Error11)", err_termin2)
         with open('./contact/conpact4/finaldoc2.txt', 'a+'):
             print("[+] finaldoc2.txt exist!")
+
     try:
         with open('./contact/conpact4/finaldoc2.txt', 'w') as finalf:
             finalf.write("Doctor : " + self.namentry2.get())
@@ -124,6 +126,7 @@ def docThreeRecord(self):
         print("[!] File finaldoc3 not found (Error15)", err_termin3)
         with open('./contact/conpact4/finaldoc3.txt', 'a+'):
             print("[+] File finaldoc3.txt created !")
+
     try:
         with open('./contact/conpact4/finaldoc3.txt', 'w') as finalf3:
             finalf3.write("Doctor : " + self.namentry3.get())
