@@ -69,16 +69,16 @@ def instalpy(self):
 
         " [+] Alarm :\n"
         "----------------\n"
-        " [*] Program the alarm by entering a comment. It will work as long as the application\n"
+        " [*] Set the alarm by entering a comment. It will work as long as the application\n"
         " remains open.\n\n"
 
         " [+] Agenda :\n"
         "----------------\n"
         " [1] Press <choose a date> date button and press <fix appointment> to follow step.\n"
         " [2] You have the possibility to fix an appointment after.\n"
-        " [*] An alrm will ring one day before appointment.\n"
+        " [*] A reminder will show you one day before appointment.\n"
         " [*] You can change in everytime the clock or the data of appointment.\n"
-        " [*] You can see all RDV wth a reader.\n\n"
+        " [*] You can see all RDV with a reader.\n\n"
 
         " [+] 14 Needs :\n"
         "------------------\n"
@@ -104,18 +104,18 @@ def instalpy(self):
         " --------------------------------------------\n"
         " [*] Click on <Global> button and search file you're interested by.\n"
         " You can put all files you want in this folder, but it will not be uploaded to server.\n"
-        " For that it's better to upload it with scp command, such as : \n"
-        " (with python3 command :)\n"
-        " subprocess.run(['scp', './Backup/FilesX/yourfile.xyz', 'pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.xyz]',\n"
-        " stderr=subprocess.PIPE)\n"
-        " (or with shell command :)\n"
-        " $ scp ./Backup/FilesX/yourfile.xyz pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.xyz\n"
+        " For that, it's better to upload it with scp command, such as : \n"
+        " (with python3 command :)\n\n"
+        " subprocess.run(['scp', './Backup/FilesX/yourfile.pdf',\n"
+        "'pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.pdf]', stderr=subprocess.PIPE)\n"
+        " (or with shell command :)\n\n"
+        " $ scp ./Backup/FilesX/yourfile.pdf pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.pdf\n\n"
 
         " [*] Click on <EventBox> for seeing previously about yesterday news and backup will"\
-        " be launched every 5 days.\n"
+        " be launched every 5 days. This interface is usefull to prevent if a rdv has been fixed for tomorrow.\n\n"
 
-        "\n !!! WARNING !!! : Don't press 'delete patient' before informing administrator, \n"\
-        " otherwise all files and data will be losted...\n"
+        " !!! WARNING !!! : Don't press <delete patient> button before informing your administrator, \n"
+        " otherwise all files and data will be losted forever...\n"
 
         "\n Developped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n")
 
