@@ -44,7 +44,7 @@ def Window5(self):
                         civilstat = policyfile.readline()
                         confessionstat = policyfile.readline()
             except FileNotFoundError as err_r:
-                print("[!] File contact5.txt doesn't exist (Error1)", err_r)
+                print("[!] File contact5.txt doesn't exist (Error_1)", err_r)
 
             self.txtBox.insert(tk.INSERT, "--- Data Patient ---\n")
             self.txtBox.insert(tk.END, "\nPatient name : " + line1)
@@ -122,7 +122,7 @@ def Window5(self):
             line10 = namefile.readline()
             line11 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("[!] File contact5.txt doesn't exist ! (Error5)", callfile)
+        print("[!] File contact5.txt doesn't exist ! (Error_2)", callfile)
 
     # Native
     self.x6, self.y6 = 250, 170

@@ -1,0 +1,11 @@
+Patient name : Julian Assange
+Birthdate : 07/07/2007
+Native : Australia
+Phone : 1232131312312
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@hotmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ

@@ -11,15 +11,15 @@ def recorderFam(self):
         Display origin
     """
     try:
-        if os.path.getsize('./contact/conpact5/famycontact5.txt'):
-            print("[+] Ok, famycontact5.txt exist (t2)")
+        if os.path.getsize('./contact/conpact7/famycontact7.txt'):
+            print("[+] Ok, famycontact7.txt exist (t2)")
     except FileNotFoundError as err_fnf:
-        print("[!] No file famycontact5.txt exist", err_fnf)
-        with open('./contact/conpact5/famycontact5.txt', 'w') as testf:
-            print("[+] File famycontact5.txt created !")
+        print("[!] No file famycontact7.txt exist", err_fnf)
+        with open('./contact/conpact7/famycontact7.txt', 'w') as testf:
+            print("[+] File famycontact7.txt created !")
 
     try:
-        with open('./contact/conpact5/famycontact5.txt', 'w') as iofile:
+        with open('./contact/conpact7/famycontact7.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + self.phonentry.get())
             iofile.write("\n" + self.mobilentry.get())
@@ -27,18 +27,18 @@ def recorderFam(self):
             iofile.write("\n" + self.cityentry.get())
             iofile.write("\n" + self.entrymail.get())
     except FileNotFoundError as fn:
-        print("[!] File famycontact5.txt not found !", fn)
+        print("[!] File famycontact7.txt not found !", fn)
 
     try:
-        if os.path.getsize('./contact/conpact5/finalfam5.txt'):
-            os.remove('./contact/conpact5/finalfam5.txt')
+        if os.path.getsize('./contact/conpact7/finalfam7.txt'):
+            os.remove('./contact/conpact7/finalfam7.txt')
     except FileNotFoundError as err_termin:
-        print("[!] finalfam5.txt not found !(t2)", err_termin)
-        with open('./contact/conpact5/finalfam5.txt', 'a+'):
-            print("[+] finalfam5.txt exist!")
+        print("[!] finalfam7.txt not found !(t2)", err_termin)
+        with open('./contact/conpact7/finalfam7.txt', 'a+'):
+            print("[+] finalfam7.txt exist!")
 
     try:
-        with open('./contact/conpact5/finalfam5.txt', 'w') as terminfile:
+        with open('./contact/conpact7/finalfam7.txt', 'w') as terminfile:
             terminfile.write("Name : " + self.namentry.get())
             terminfile.write("\nPhone : " + self.phonentry.get())
             terminfile.write("\nPhone : " + self.mobilentry.get())
@@ -46,4 +46,4 @@ def recorderFam(self):
             terminfile.write("\nCity : " + self.cityentry.get())
             terminfile.write("\ne-mail : " + self.entrymail.get())
     except FileNotFoundError as err2_final:
-        print("[!] finalfam5.txt not created (t2)", err2_final)
+        print("[!] finalfam7.txt not created (t2)", err2_final)

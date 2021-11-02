@@ -178,7 +178,7 @@ def doctorWind5(self):
         self.wnamentry_window = self.can.create_window(self.x14, self.y14,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ File 1 not created ! (Error17)", ub_error1)
+        print("[!] Linex does not created ! (Error17)", ub_error1)
 
     # Specialization
     self.x20, self.y20 = 250, 250
