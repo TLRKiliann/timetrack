@@ -87,7 +87,7 @@ def doctorWind(self):
             self.txtBox2.insert(tk.END, "\nCity : " + docstate)
             self.txtBox2.insert(tk.END, "\ne-mail : " + docemail)
             self.txtBox2.insert(tk.END, "\nFax : " + docfax)
-        
+
         numberTwoDox()
 
         self.x4, self.y4 = 900, 1410

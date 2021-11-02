@@ -11,15 +11,15 @@ def recorderData(self, birthvar):
         Display origin
     """
     try:
-        if os.path.getsize('./contact/conpact/contact1.txt'):
-            print("[+] Ok, contact1.txt exist")
+        if os.path.getsize('./contact/conpac4/contact4.txt'):
+            print("[+] Ok, contact4.txt exist")
     except FileNotFoundError as errfnf:
-        print("[!] File contact1.txt doesn't exist (Error2)", errfnf)
-        with open('./contact/conpact/contact1.txt', 'w') as testf:
-            print("[+] File contact1.txt created !")
+        print("[!] File contact4.txt doesn't exist (Error2)", errfnf)
+        with open('./contact/conpac4/contact4.txt', 'w') as testf:
+            print("[+] File contact4.txt created !")
 
     try:
-        with open('./contact/conpact/contact1.txt', 'w') as iofile:
+        with open('./contact/conpac4/contact4.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + birthvar)
             iofile.write("\n" + self.nativaentry.get())
@@ -35,15 +35,15 @@ def recorderData(self, birthvar):
         print("[!] File not found !", fn)
 
     try:
-        if os.path.getsize('./contact/conpact/finalfile1.txt'):
-            os.remove('./contact/conpact/finalfile1.txt')
+        if os.path.getsize('./contact/conpact4/finalfile4.txt'):
+            os.remove('./contact/conpact4/finalfile4.txt')
     except FileNotFoundError as err_termin:
-        print("[!] finalfile1.txt not found !(Error3)", err_termin)
-        with open('./contact/conpact/finalfile1.txt', 'a+'):
-            print("[+] File finalfile1.txt exist!")
+        print("[!] finalfile4.txt not found !(Error3)", err_termin)
+        with open('./contact/conpact4/finalfile4.txt', 'a+'):
+            print("[+] File finalfile4.txt exist!")
 
     try:
-        with open('./contact/conpact/finalfile1.txt', 'w') as terminfile:
+        with open('./contact/conpact4/finalfile4.txt', 'w') as terminfile:
             terminfile.write("Patient name : " + self.namentry.get())
             terminfile.write("\nBirthdate : " + birthvar)
             terminfile.write("\nNative : " + self.nativaentry.get())
@@ -56,4 +56,4 @@ def recorderData(self, birthvar):
             terminfile.write("\nCivil status : " + self.entrycivil.get())
             terminfile.write("\nConfession : " + self.entryconfess.get())
     except FileNotFoundError as err2_final:
-        print("[!] finalfile1.txt not created (Error4)", err2_final)
+        print("[!] finalfile4.txt not created (Error4)", err2_final)
