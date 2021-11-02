@@ -1,0 +1,11 @@
+Patient name : Emile exp6
+Birthdate : 00/00/0000
+Native : Chicago
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Chicago
+e-mail : zut@gmail.com
+Insurance : Basket-ball
+Policy : 9767897583
+Civil status : homeless
+Confession : None
