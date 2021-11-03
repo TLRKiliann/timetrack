@@ -1,0 +1,11 @@
+Patient name : 3x3c t3ch
+Birthdate : 11/11/2011
+Native : Hungary
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@gmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ

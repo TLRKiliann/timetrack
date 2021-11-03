@@ -1,0 +1,8 @@
+Doctor : Lynnett Pick
+Specialization : Dentiste
+Phone : 082389047
+Mobile : 0762834264
+Street : WesleyAlley
+City : Fairewiev
+e-mail : denta@gmail.com
+Fax : 23942321
