@@ -1,0 +1,11 @@
+Patient name : Sophia Lorren
+Birthdate : 14/04/2014
+Native : Paris
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@gmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ
