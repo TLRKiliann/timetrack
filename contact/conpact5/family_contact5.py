@@ -98,7 +98,7 @@ def famWind5(self):
         self.wnamentry_window = self.can.create_window(self.x14, self.y14,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ File 1 not created !", ub_error1)
+        print("[!] File famycontact5.txt not created !", ub_error1)
 
     # Phone
     self.x20, self.y20 = 250, 250
