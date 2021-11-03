@@ -1,0 +1,11 @@
+Patient name : Dyson Dix
+Birthdate : 10/10/2010
+Native : Texas
+Phone : 077 339 65 45
+Street : Blvd Sun-Street 68
+City : Kansastate
+e-mail : zut@gmail.com
+Insurance : Helsan
+Policy : 9767897583
+Civil status : Maried
+Confession : Christ
