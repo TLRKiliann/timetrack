@@ -19,9 +19,9 @@ def instalpy(self):
     self.item = tk.Label(self.can, image=self.photo, bg='black')
     self.item.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
-    self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='aquamarine',
+    self.text_area = tk.scrolledtext.ScrolledText(self.can, fg='turquoise',
         highlightbackground='black', width=92, height=30, font=("Times New Roman", 14), bd=0)
-    self.text_area.vbar.config(troughcolor='black', bg='aquamarine')
+    self.text_area.vbar.config(troughcolor='black', bg='turquoise')
 
     self.text_area.pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
     self.text_area.insert(tk.END,"\n\n"

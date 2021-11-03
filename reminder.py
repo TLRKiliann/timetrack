@@ -56,7 +56,7 @@ def alarmThread(self):
                     + comment.get())
                 n -= 1
 
-    self.x10, self.y10 = 625, 80
+    self.x10, self.y10 = 625, 120
     self.textLab = tk.Label(self.can, text="Alarm Clock",
         font=('serif', 28, 'bold'), fg='white', bg='black')
     self.textLab_window = self.can.create_window(self.x10, self.y10,
@@ -64,7 +64,7 @@ def alarmThread(self):
 
     self.x20, self.y20 = 625, 240
     self.textLab = tk.Label(self.can, text="Set Time",
-        font=('serif', 22, 'bold'), fg='aquamarine', bg='black')
+        font=('serif', 22, 'bold'), fg='turquoise', bg='black')
     self.textLab_window = self.can.create_window(self.x20, self.y20,
         window=self.textLab)
 
@@ -97,7 +97,7 @@ def alarmThread(self):
 
     self.x51, self.y51 = 625, 420
     self.notifLab = tk.Label(self.can, text="Notifications :",
-        font=('serif', 16, 'bold'), fg='white', bg='black')
+        font=('serif', 16, 'bold'), fg='turquoise', bg='black')
     self.wnotifLab_window = self.can.create_window(self.x51, self.y51,
         window=self.notifLab)
 
@@ -110,7 +110,7 @@ def alarmThread(self):
 
     self.x60, self.y60 = 625, 550
     self.buttsave = tk.Button(self.can, text="Save", fg='white',
-        bg='RoyalBlue2', bd=3, width=10, highlightbackground='black',
+        bg='RoyalBlue3', bd=3, width=10, highlightbackground='black',
         activebackground='pale turquoise', command = action)
     self.wbuttsave_window = self.can.create_window(self.x60, self.y60,
         window=self.buttsave)
