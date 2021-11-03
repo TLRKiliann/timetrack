@@ -1713,7 +1713,7 @@ class Application(tk.Frame):
             anchor=tk.NW, tags="self.viewPort")
 
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
-            troughcolor='SteelBlue2', bg="RoyalBlue3", activebackground='pale turquoise')
+            troughcolor='SteelBlue2', bg='RoyalBlue3', activebackground='pale turquoise')
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
@@ -1726,7 +1726,7 @@ class Application(tk.Frame):
         
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
-
+        self.pack()
         self.startPage()
 
     def tick(self):
