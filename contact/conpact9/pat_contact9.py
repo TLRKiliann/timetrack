@@ -30,6 +30,14 @@ def Window9(self):
 
         def importationFile():
             try:
+                if os.path.getsize('./contact/conpact9/contact9.txt'):
+                    print("[+] Ok, contact9.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File contact9.txt doesn't exist (Error2)", errfnf)
+                with open('./contact/conpact9/contact9.txt', 'w') as testf:
+                    print("[+] File contact9.txt created !")
+
+            try:
                 if os.path.exists('./contact/conpact9/contact9.txt'):
                     with open('./contact/conpact9/contact9.txt', 'r') as policyfile:
                         line1 = policyfile.readline()
