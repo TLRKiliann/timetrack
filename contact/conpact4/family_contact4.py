@@ -30,6 +30,14 @@ def famWind4(self):
 
         def readerFamily():
             try:
+                if os.path.getsize('./contact/conpact4/famycontact4.txt'):
+                    print("[+] Ok, famycontact4.txt exist (t2)")
+            except FileNotFoundError as err_fnf:
+                print("[!] No file famycontact4.txt exist", err_fnf)
+                with open('./contact/conpact4/famycontact4.txt', 'w') as testf:
+                    print("[+] File famycontact4.txt created !")
+
+            try:
                 if os.path.exists('./contact/conpact4/famycontact4.txt'):
                     with open('./contact/conpact4/famycontact4.txt', 'r') as policyfile:
                         line1 = policyfile.readline()
