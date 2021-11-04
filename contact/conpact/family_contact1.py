@@ -29,6 +29,18 @@ def famWind(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         def readerFamily():
+            """
+                Verify if file contactX.txt exist and display
+                his content in the textbox.
+            """
+            try:
+                if os.path.getsize('./contact/conpact/famycontact1.txt'):
+                    print("[+] Ok, famycontact1.txt exist (t2)")
+            except FileNotFoundError as err_fnf:
+                print("[!] No file famycontact1.txt exist", err_fnf)
+                with open('./contact/conpact/famycontact1.txt', 'w') as testf:
+                    print("[+] File famycontact1.txt created !")
+
             try:
                 if os.path.exists('./contact/conpact/famycontact1.txt'):
                     with open('./contact/conpact/famycontact1.txt', 'r') as policyfile:

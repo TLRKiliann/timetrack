@@ -29,6 +29,18 @@ def Window(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         def importationFile():
+            """
+                Verify if file contactX.txt exist and display
+                his content in the textbox.
+            """
+            try:
+                if os.path.getsize('./contact/conpact/contact1.txt'):
+                    print("[+] Ok, contact1.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File contact1.txt doesn't exist (Error2)", errfnf)
+                with open('./contact/conpact/contact1.txt', 'w') as testf:
+                    print("[+] File contact1.txt created !")
+
             try:
                 if os.path.exists('./contact/conpact/contact1.txt'):
                     with open('./contact/conpact/contact1.txt', 'r') as policyfile:
