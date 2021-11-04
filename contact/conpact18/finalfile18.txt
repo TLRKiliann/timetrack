@@ -1,0 +1,11 @@
+Patient name : Tim Berners Lee
+Birthdate : 18/08/2018
+Native : kjahjk
+Phone : 823748
+Street : akhdjkhas
+City : ajdhsakd
+e-mail : ajshjkdas
+Insurance : hdakjdh
+Policy : 8783739
+Civil status : djajkdh
+Confession : kadjkhas
