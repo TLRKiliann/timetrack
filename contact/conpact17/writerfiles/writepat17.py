@@ -11,7 +11,7 @@ def recorderData(self, birthvar):
         Display origin
     """
     try:
-        with open('./contact/conpact16/contact16.txt', 'w') as iofile:
+        with open('./contact/conpact17/contact17.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + birthvar)
             iofile.write("\n" + self.nativaentry.get())
@@ -27,15 +27,15 @@ def recorderData(self, birthvar):
         print("[!] File not found !", fn)
 
     try:
-        if os.path.getsize('./contact/conpact16/finalfile16.txt'):
-            os.remove('./contact/conpact16/finalfile16.txt')
+        if os.path.getsize('./contact/conpact17/finalfile17.txt'):
+            os.remove('./contact/conpact17/finalfile17.txt')
     except FileNotFoundError as err_termin:
-        print("[!] finalfile16.txt not found !(Error_3)", err_termin)
-        with open('./contact/conpact16/finalfile16.txt', 'a+'):
-            print("[+] File finalfile16.txt created!")
+        print("[!] finalfile17.txt not found !(Error_3)", err_termin)
+        with open('./contact/conpact17/finalfile17.txt', 'a+'):
+            print("[+] File finalfile17.txt created!")
 
     try:
-        with open('./contact/conpact16/finalfile16.txt', 'w') as terminfile:
+        with open('./contact/conpact17/finalfile17.txt', 'w') as terminfile:
             terminfile.write("Patient name : " + self.namentry.get())
             terminfile.write("\nBirthdate : " + birthvar)
             terminfile.write("\nNative : " + self.nativaentry.get())
@@ -48,4 +48,4 @@ def recorderData(self, birthvar):
             terminfile.write("\nCivil status : " + self.entrycivil.get())
             terminfile.write("\nConfession : " + self.entryconfess.get())
     except FileNotFoundError as err2_final:
-        print("[!] finalfile16.txt not created (Error_4)", err2_final)
+        print("[!] finalfile17.txt not created (Error_4)", err2_final)

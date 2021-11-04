@@ -11,7 +11,7 @@ def docRecord(self):
         Display origin
     """
     try:
-        with open('./contact/conpact16/contactdoc1.txt', 'w') as iofile:
+        with open('./contact/conpact17/contactdoc1.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + self.specentry1.get())
             iofile.write("\n" + self.phonentry.get())
@@ -24,15 +24,15 @@ def docRecord(self):
         print("[!] File contactdoc1.txt not found !", fn)
 
     try:
-        if os.path.getsize('./contact/conpact16/finaldoc1.txt'):
-            os.remove('./contact/conpact16/finaldoc1.txt')
+        if os.path.getsize('./contact/conpact17/finaldoc1.txt'):
+            os.remove('./contact/conpact17/finaldoc1.txt')
     except FileNotFoundError as err_termin:
         print("[!] finaldoc1 not found (Error_1)", err_termin)
-        with open('./contact/conpact16/finaldoc1.txt', 'a+'):
+        with open('./contact/conpact17/finaldoc1.txt', 'a+'):
             print("[+] finaldoc1.txt created!")
 
     try:
-        with open('./contact/conpact16/finaldoc1.txt', 'w') as terminfile:
+        with open('./contact/conpact17/finaldoc1.txt', 'w') as terminfile:
             terminfile.write("Doctor : " + self.namentry.get())
             terminfile.write("\nSpecialization : " + self.specentry1.get())
             terminfile.write("\nPhone : " + self.phonentry.get())
@@ -46,7 +46,7 @@ def docRecord(self):
 
 def docTwoRecord(self):
     try:
-        with open('./contact/conpact16/contactdoc2.txt', 'w') as datadoc:
+        with open('./contact/conpact17/contactdoc2.txt', 'w') as datadoc:
             datadoc.write(self.namentry2.get())
             datadoc.write("\n" + self.specentry2.get())
             datadoc.write("\n" + self.phonentry2.get())
@@ -59,15 +59,15 @@ def docTwoRecord(self):
         print("[!] File contactdoc2.txt not found (Error_3)!", fn2)
 
     try:
-        if os.path.getsize('./contact/conpact16/finaldoc2.txt'):
-            os.remove('./contact/conpact16/finaldoc2.txt')
+        if os.path.getsize('./contact/conpact17/finaldoc2.txt'):
+            os.remove('./contact/conpact17/finaldoc2.txt')
     except FileNotFoundError as err_termin2:
         print("[!] finaldoc2 not found !(Error_4)", err_termin2)
-        with open('./contact/conpact16/finaldoc2.txt', 'a+'):
+        with open('./contact/conpact17/finaldoc2.txt', 'a+'):
             print("[+] finaldoc2.txt created!")
 
     try:
-        with open('./contact/conpact16/finaldoc2.txt', 'w') as finalf:
+        with open('./contact/conpact17/finaldoc2.txt', 'w') as finalf:
             finalf.write("Doctor : " + self.namentry2.get())
             finalf.write("\nSpecialization : " + self.specentry2.get())
             finalf.write("\nPhone : " + self.phonentry2.get())
@@ -81,7 +81,7 @@ def docTwoRecord(self):
 
 def docThreeRecord(self):
     try:
-        with open('./contact/conpact16/contactdoc3.txt', 'w') as datadoc3:
+        with open('./contact/conpact17/contactdoc3.txt', 'w') as datadoc3:
             datadoc3.write(self.namentry3.get())
             datadoc3.write("\n" + self.specentry3.get())
             datadoc3.write("\n" + self.phonentry3.get())
@@ -94,15 +94,15 @@ def docThreeRecord(self):
         print("[!] File contactdoc3.txt not found (Error_6)", fn3)
 
     try:
-        if os.path.getsize('./contact/conpact16/finaldoc3.txt'):
-            os.remove('./contact/conpact16/finaldoc3.txt')
+        if os.path.getsize('./contact/conpact17/finaldoc3.txt'):
+            os.remove('./contact/conpact17/finaldoc3.txt')
     except FileNotFoundError as err_termin3:
         print("[!] File finaldoc3 not found (Error_7)", err_termin3)
-        with open('./contact/conpact16/finaldoc3.txt', 'a+'):
+        with open('./contact/conpact17/finaldoc3.txt', 'a+'):
             print("[+] File finaldoc3.txt created !")
 
     try:
-        with open('./contact/conpact16/finaldoc3.txt', 'w') as finalf3:
+        with open('./contact/conpact17/finaldoc3.txt', 'w') as finalf3:
             finalf3.write("Doctor : " + self.namentry3.get())
             finalf3.write("\nSpecialization : " + self.specentry3.get())
             finalf3.write("\nPhone : " + self.phonentry3.get())
