@@ -30,6 +30,14 @@ def Window10(self):
 
         def importationFile():
             try:
+                if os.path.getsize('./contact/conpact10/contact10.txt'):
+                    print("[+] Ok, contact10.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File contact10.txt doesn't exist (Error2)", errfnf)
+                with open('./contact/conpact10/contact10.txt', 'w') as testf:
+                    print("[+] File contact10.txt created !")
+
+            try:
                 if os.path.exists('./contact/conpact10/contact10.txt'):
                     with open('./contact/conpact10/contact10.txt', 'r') as policyfile:
                         line1 = policyfile.readline()

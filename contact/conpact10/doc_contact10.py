@@ -32,6 +32,14 @@ def doctorWind10(self):
 
         def numberOneDox():
             try:
+                if os.path.getsize('./contact/conpact10/contactdoc1.txt'):
+                    print("[+] Ok, contactdoc1.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File contactdoc1.txt not found (Error7)", errfnf)
+                with open('./contact/conpact10/contactdoc1.txt', 'w') as testf:
+                    print("[+] File contactdoc1.txt created !")
+
+            try:
                 if os.path.exists('./contact/conpact10/contactdoc1.txt'):
                     with open('./contact/conpact10/contactdoc1.txt', 'r') as policyfile:
                         line1 = policyfile.readline()
@@ -65,6 +73,14 @@ def doctorWind10(self):
 
         def numberTwoDox():
             try:
+                if os.path.getsize('./contact/conpact10/contactdoc2.txt'):
+                    print("[+] Ok, contactdoc2.txt exist")
+            except FileNotFoundError as errfnf2:
+                print("[!] File contactdoc2.txt not found (Error10)", errfnf2)
+                with open('./contact/conpact10/contactdoc2.txt', 'w') as testf2:
+                    print("[+] File contactdoc2.txt created !", testf2)
+
+            try:
                 if os.path.exists('./contact/conpact10/contactdoc2.txt'):
                     with open('./contact/conpact10/contactdoc2.txt', 'r') as policydoc:
                         docline1 = policydoc.readline()
@@ -97,6 +113,14 @@ def doctorWind10(self):
         self.ftxtBox3_window = self.can.create_window(self.x4, self.y4, window=self.txtBox3)
 
         def numbThreeDox():
+            try:
+                if os.path.getsize('./contact/conpact10/contactdoc3.txt'):
+                    print("[+] Ok, contactdoc3.txt exist")
+            except FileNotFoundError as errfnf3:
+                print("[!] File contactdoc3.txt not found (Error13)", errfnf3)
+                with open('./contact/conpact10/contactdoc3.txt', 'w') as testf3:
+                    print("[+] File contactdoc3.txt created !", testf3)
+
             try:
                 if os.path.exists('./contact/conpact10/contactdoc3.txt'):
                     with open('./contact/conpact10/contactdoc3.txt', 'r') as policydoc3:
