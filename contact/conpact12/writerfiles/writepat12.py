@@ -11,14 +11,6 @@ def recorderData(self, birthvar):
         Display origin
     """
     try:
-        if os.path.getsize('./contact/conpact12/contact12.txt'):
-            print("[+] Ok, contact12.txt exist")
-    except FileNotFoundError as errfnf:
-        print("[!] File contact12.txt doesn't exist (Error2)", errfnf)
-        with open('./contact/conpact12/contact12.txt', 'w') as testf:
-            print("[+] File contact12.txt created !")
-
-    try:
         with open('./contact/conpact12/contact12.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + birthvar)

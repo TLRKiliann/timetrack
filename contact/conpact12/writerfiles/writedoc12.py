@@ -11,14 +11,6 @@ def docRecord(self):
         Display origin
     """
     try:
-        if os.path.getsize('./contact/conpact12/contactdoc1.txt'):
-            print("[+] Ok, contactdoc1.txt exist")
-    except FileNotFoundError as errfnf:
-        print("[!] File contactdoc1.txt not found (Error7)", errfnf)
-        with open('./contact/conpact12/contactdoc1.txt', 'w') as testf:
-            print("[+] File contactdoc1.txt created !")
-
-    try:
         with open('./contact/conpact12/contactdoc1.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + self.specentry1.get())
@@ -53,15 +45,6 @@ def docRecord(self):
         print("[!] finaldoc1.txt not created (Error9)", err2_final)
 
 def docTwoRecord(self):
-
-    try:
-        if os.path.getsize('./contact/conpact12/contactdoc2.txt'):
-            print("[+] Ok, contactdoc2.txt exist")
-    except FileNotFoundError as errfnf2:
-        print("[!] File contactdoc2.txt not found (Error10)", errfnf2)
-        with open('./contact/conpact12/contactdoc2.txt', 'w') as testf2:
-            print("[+] File contactdoc2.txt created !", testf2)
-
     try:
         with open('./contact/conpact12/contactdoc2.txt', 'w') as datadoc:
             datadoc.write(self.namentry2.get())
@@ -97,15 +80,6 @@ def docTwoRecord(self):
         print("[!] finaldoc2.txt not created (Error12)", err_final2)
 
 def docThreeRecord(self):
-
-    try:
-        if os.path.getsize('./contact/conpact12/contactdoc3.txt'):
-            print("[+] Ok, contactdoc3.txt exist")
-    except FileNotFoundError as errfnf3:
-        print("[!] File contactdoc3.txt not found (Error13)", errfnf3)
-        with open('./contact/conpact12/contactdoc3.txt', 'w') as testf3:
-            print("[+] File contactdoc3.txt created !", testf3)
-
     try:
         with open('./contact/conpact12/contactdoc3.txt', 'w') as datadoc3:
             datadoc3.write(self.namentry3.get())
