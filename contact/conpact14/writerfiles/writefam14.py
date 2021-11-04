@@ -11,14 +11,6 @@ def recorderFam(self):
         Display origin
     """
     try:
-        if os.path.getsize('./contact/conpact14/famycontact14.txt'):
-            print("[+] Ok, famycontact14.txt exist (t2)")
-    except FileNotFoundError as err_fnf:
-        print("[!] No file famycontact14.txt exist", err_fnf)
-        with open('./contact/conpact14/famycontact14.txt', 'w') as testf:
-            print("[+] File famycontact14.txt created !")
-
-    try:
         with open('./contact/conpact14/famycontact14.txt', 'w') as iofile:
             iofile.write(self.namentry.get())
             iofile.write("\n" + self.phonentry.get())
