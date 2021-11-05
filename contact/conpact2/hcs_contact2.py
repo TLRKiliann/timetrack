@@ -527,7 +527,7 @@ def homecsWind2(self):
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
         fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: ([careThirdRec(self), careInSys()]))
+        command = lambda: ([careThreeRec(self), careInSys()]))
     self.fb132_window = self.can.create_window(self.x132, self.y132,
         window=self.b132)
 
