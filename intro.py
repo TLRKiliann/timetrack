@@ -6,9 +6,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from threading import Thread
-from pod import callVideo
 from playsound import playsound
 from tt_download import launchDownload
+from pod import callVideo
 
 
 window = tk.Tk()
