@@ -48,6 +48,7 @@ def tocopyfiles():
     """
         Load 24 folders when app start.
     """
+    time.sleep(7)
     loaderfile()
 tocopyfiles()
 

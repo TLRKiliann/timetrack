@@ -13,3 +13,17 @@ Bilan hydrique :
 PCA (pompe antalgie) :
 
 
+Implemented as : 10/10/2021 at 17:41:33 :
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 05/11/2021 at 19:32:46 :
+Patient name : Two B
+[+] Urinary and/or fecal monitoring - required
+Some trb with urinary night
+[+] Sleep monitoring - required
+1x/2h passage en chambre
+[+] Postural and/or movement monitoring - required
+Recall mister to standup good
+---
+
+

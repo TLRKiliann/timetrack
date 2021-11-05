@@ -37,3 +37,8 @@ Patient name : Two B
 # Total Hip L : 27/10/2021 yes
 # Foot Prosthesis L : 27/10/2021 yes
 # Nose Prosthesis : 27/10/2021 yes
+----------------------------------------------------------
+Date : 05/11/2021
+Patient name : Two B
+---------------------------------------------------------
+# Crutches : 05/11/2021 yes

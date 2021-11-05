@@ -6,10 +6,10 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import subprocess
-#import threading
+import threading
+import time
 from playsound import playsound
 from tt_download import launchDownload
-#from pod import callVideo
 
 
 window = tk.Tk()
@@ -53,7 +53,16 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-    launchDownload()
+
+    def muse():
+        playsound("./syno_gif/minipodcom.mp4")
+    t1 = threading.Thread(target=muse)
+    t1.start()
+
+    def down():
+        time.sleep(6)
+        launchDownload()
+    down()
 
 def validentry(event):
     """
