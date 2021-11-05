@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 import os
+from contact.conpact9.writerfiles.writehcs9 import careOneRec
+from contact.conpact9.writerfiles.writehcs9 import careTwoRec
+from contact.conpact9.writerfiles.writehcs9 import careThreeRec
 
 
 def homecsWind9(self):
@@ -12,262 +14,140 @@ def homecsWind9(self):
         Main function to define 
         design for contact interface.
     """
-    self.can.delete(ALL)
+    self.effacer()
+    self.addScroll()
     self.can.configure(background='DodgerBlue2')
 
-    def allInData():
+    def careInSys():
         """
             First page
         """
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact1.txt'):
-                print("+ Ok, hcscontact1.txt exist (t1)")
-        except FileNotFoundError as errfnf:
-            print("+ No file hcscontact1.txt exist (Error1) !", errfnf)
-            with open('./contact/conpact9/hcscontact1.txt', 'w') as testf:
-                print("+ File hcscontact1.txt created !")
-
         self.x1, self.y1 = 900, 330
-        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
-        try:
-            if os.path.exists('./contact/conpact9/hcscontact1.txt'):
-                with open('./contact/conpact9/hcscontact1.txt', 'r') as policyfile:
-                    line1 = policyfile.readline()
-                    phone = policyfile.readline()
-                    iphone2 = policyfile.readline()
-                    street = policyfile.readline()
-                    state = policyfile.readline()
-                    email = policyfile.readline()
-                self.txtBox.insert(tk.INSERT, "--- Data Home Care System ---\n")
-                self.txtBox.insert(tk.END, "\nName : " + line1)
-                self.txtBox.insert(tk.END, "\nPhone : " + phone)
-                self.txtBox.insert(tk.END, "\nMobile : " + iphone2)
-                self.txtBox.insert(tk.END, "\nStreet : " + street)
-                self.txtBox.insert(tk.END, "\nCity : " + state)
-                self.txtBox.insert(tk.END, "\ne-mail : " + email)
-            else:
-                pass
-        except FileNotFoundError as err_r:
-            print("+ No file hcscontact1.txt exist (Error2) !", err_r)
+        def sysCareOne():
+            try:
+                if os.path.getsize('./contact/conpact9/hcscontact1.txt'):
+                    print("[+] Ok, hcscontact1.txt exist (t1)")
+            except FileNotFoundError as errfnf:
+                print("[!] File hcscontact1.txt doesn't exist (Error_1) !", errfnf)
+                with open('./contact/conpact9/hcscontact1.txt', 'w') as testf:
+                    print("[+] File hcscontact1.txt created !")
 
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact2.txt'):
-                print("+ Ok, hcscontact2.txt exist (t1)")
-        except FileNotFoundError as errfnf2:
-            print("+ No file hcscontact2.txt exist (Error3) !", errfnf2)
-            with open('./contact/conpact9/hcscontact2.txt', 'w') as testf:
-                print("+ File hcscontact2.txt created !")
+            try:
+                if os.path.exists('./contact/conpact9/hcscontact1.txt'):
+                    with open('./contact/conpact9/hcscontact1.txt', 'r') as policyfile:
+                        line1 = policyfile.readline()
+                        phone = policyfile.readline()
+                        iphone2 = policyfile.readline()
+                        street = policyfile.readline()
+                        state = policyfile.readline()
+                        email = policyfile.readline()
+                    self.txtBox.insert(tk.INSERT, "--- Data Home Care System ---\n")
+                    self.txtBox.insert(tk.END, "\nName : " + line1)
+                    self.txtBox.insert(tk.END, "\nPhone : " + phone)
+                    self.txtBox.insert(tk.END, "\nMobile : " + iphone2)
+                    self.txtBox.insert(tk.END, "\nStreet : " + street)
+                    self.txtBox.insert(tk.END, "\nCity : " + state)
+                    self.txtBox.insert(tk.END, "\ne-mail : " + email)
+                else:
+                    pass
+            except FileNotFoundError as err_r:
+                print("[!] File hcscontact1.txt doesn't exist (Error_2) !", err_r)
+
+        sysCareOne()
 
         self.x2, self.y2 = 900, 750
-        self.txtBox2 = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox2 = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox2.delete('1.0', tk.END)
         self.txtBox2.update()
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
 
-        try:
-            if os.path.exists('./contact/conpact9/hcscontact2.txt'):
-                with open('./contact/conpact9/hcscontact2.txt', 'r') as secondfile:
-                    nameline = secondfile.readline()
-                    phone_line = secondfile.readline()
-                    iphone_line= secondfile.readline()
-                    street_line = secondfile.readline()
-                    state_line = secondfile.readline()
-                    email_line = secondfile.readline()
-                self.txtBox2.insert(tk.INSERT, "--- Data Home Care System 2 ---\n")
-                self.txtBox2.insert(tk.END, "\nName : " + nameline)
-                self.txtBox2.insert(tk.END, "\nPhone : " + phone_line)
-                self.txtBox2.insert(tk.END, "\nMobile : " + iphone_line)
-                self.txtBox2.insert(tk.END, "\nStreet : " + street_line)
-                self.txtBox2.insert(tk.END, "\nCity : " + state_line)
-                self.txtBox2.insert(tk.END, "\ne-mail : " + email_line)
-            else:
-                pass
-        except FileNotFoundError as err_line:
-            print("+ No file hcscontact2.txt exist (Error4) !", err_line)
+        def sysCareSec():
+            try:
+                if os.path.getsize('./contact/conpact9/hcscontact2.txt'):
+                    print("[+] Ok, hcscontact2.txt exist.")
+            except FileNotFoundError as errfnf2:
+                print("[!] File hcscontact2.txt doesn't exist (Error_3) !", errfnf2)
+                with open('./contact/conpact9/hcscontact2.txt', 'w') as testf:
+                    print("[+] File hcscontact2.txt created !")
 
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact3.txt'):
-                print("+ Ok, hcscontact3.txt exist (t1)")
-        except FileNotFoundError as errfnf2:
-            print("+ No file hcscontact3.txt exist (Error3) !", errfnf2)
-            with open('./contact/conpact9/hcscontact3.txt', 'w') as testf:
-                print("+ File hcscontact3.txt created !")
+            try:
+                if os.path.exists('./contact/conpact9/hcscontact2.txt'):
+                    with open('./contact/conpact9/hcscontact2.txt', 'r') as secondfile:
+                        nameline = secondfile.readline()
+                        phone_line = secondfile.readline()
+                        iphone_line= secondfile.readline()
+                        street_line = secondfile.readline()
+                        state_line = secondfile.readline()
+                        email_line = secondfile.readline()
+                    self.txtBox2.insert(tk.INSERT, "--- Data Home Care System 2 ---\n")
+                    self.txtBox2.insert(tk.END, "\nName : " + nameline)
+                    self.txtBox2.insert(tk.END, "\nPhone : " + phone_line)
+                    self.txtBox2.insert(tk.END, "\nMobile : " + iphone_line)
+                    self.txtBox2.insert(tk.END, "\nStreet : " + street_line)
+                    self.txtBox2.insert(tk.END, "\nCity : " + state_line)
+                    self.txtBox2.insert(tk.END, "\ne-mail : " + email_line)
+                else:
+                    pass
+            except FileNotFoundError as err_line:
+                print("[!] File hcscontact2.txt doesn't exist (Error_4) !", err_line)
+
+        sysCareSec()
 
         self.x3, self.y3 = 900, 1170
-        self.txtBox3 = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox3 = tk.Text(self.can, height=13, width=40, font=18, relief=tk.SUNKEN)
         self.txtBox3.delete('1.0', tk.END)
         self.txtBox3.update()
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
 
-        try:
-            if os.path.exists('./contact/conpact9/hcscontact3.txt'):
-                with open('./contact/conpact9/hcscontact3.txt', 'r') as secondfile:
-                    nameline3 = secondfile.readline()
-                    phone_line3 = secondfile.readline()
-                    iphone_line3= secondfile.readline()
-                    street_line3 = secondfile.readline()
-                    state_line3 = secondfile.readline()
-                    email_line3 = secondfile.readline()
-                self.txtBox3.insert(tk.INSERT, "--- Data Home Care System 3 ---\n")
-                self.txtBox3.insert(tk.END, "\nName : " + nameline3)
-                self.txtBox3.insert(tk.END, "\nPhone : " + phone_line3)
-                self.txtBox3.insert(tk.END, "\nMobile : " + iphone_line3)
-                self.txtBox3.insert(tk.END, "\nStreet : " + street_line3)
-                self.txtBox3.insert(tk.END, "\nCity : " + state_line3)
-                self.txtBox3.insert(tk.END, "\ne-mail : " + email_line3)
-            else:
-                pass
-        except FileNotFoundError as err_line:
-            print("+ No file hcscontact3.txt exist (Error4) !", err_line)
+        def sysCareThird():
+            try:
+                if os.path.getsize('./contact/conpact9/hcscontact3.txt'):
+                    print("[+] Ok, hcscontact3.txt exist.")
+            except FileNotFoundError as errfnf2:
+                print("[!] File hcscontact3.txt doesn't exist (Error_5) !", errfnf2)
+                with open('./contact/conpact9/hcscontact3.txt', 'w') as testf:
+                    print("[+] File hcscontact3.txt created !")
 
-    def recorderData(namentry, txtphone, phonentry, txtmobile,
-        mobilentry, addrtxt, addrentry, citytxt, cityentry,
-        mailtxt, entrymail):
-        """
-            Display origin
-        """
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact1.txt'):
-                print("+ Ok, hcscontact1.txt exist (t2)")
-        except FileNotFoundError as errfnf:
-            print("+ No file hcscontact1.txt exist (Error5) !", errfnf)
-            with open('./contact/conpact9/hcscontact1.txt', 'w') as testf:
-                print("+ File hcscontact1.txt created !")
+            try:
+                if os.path.exists('./contact/conpact9/hcscontact3.txt'):
+                    with open('./contact/conpact9/hcscontact3.txt', 'r') as secondfile:
+                        nameline3 = secondfile.readline()
+                        phone_line3 = secondfile.readline()
+                        iphone_line3= secondfile.readline()
+                        street_line3 = secondfile.readline()
+                        state_line3 = secondfile.readline()
+                        email_line3 = secondfile.readline()
+                    self.txtBox3.insert(tk.INSERT, "--- Data Home Care System 3 ---\n")
+                    self.txtBox3.insert(tk.END, "\nName : " + nameline3)
+                    self.txtBox3.insert(tk.END, "\nPhone : " + phone_line3)
+                    self.txtBox3.insert(tk.END, "\nMobile : " + iphone_line3)
+                    self.txtBox3.insert(tk.END, "\nStreet : " + street_line3)
+                    self.txtBox3.insert(tk.END, "\nCity : " + state_line3)
+                    self.txtBox3.insert(tk.END, "\ne-mail : " + email_line3)
+                else:
+                    pass
+            except FileNotFoundError as err_line:
+                print("[!] File hcscontact3.txt exist (Error_6) !", err_line)
 
-        try:
-            with open('./contact/conpact9/hcscontact1.txt', 'w') as iofile:
-                iofile.write(namentry.get())
-                iofile.write("\n" + phonentry.get())
-                iofile.write("\n" + mobilentry.get())
-                iofile.write("\n" + addrentry.get())
-                iofile.write("\n" + cityentry.get())
-                iofile.write("\n" + entrymail.get())
-        except FileNotFoundError as fn:
-            print("+ File hcscontact1.txt not found (Error6) !", fn)
+        sysCareThird()
 
-        try:
-            if os.path.getsize('./contact/conpact9/finalhcs1.txt'):
-                os.remove('./contact/conpact9/finalhcs1.txt')
-        except FileNotFoundError as err_termin:
-            print("+ finalhcs1 not found (Error7) !", err_termin)
-            with open('./contact/conpact9/finalhcs1.txt', 'a+'):
-                print("+ finalhcs1.txt exist!")
+    careInSys()
 
-        try:
-            with open('./contact/conpact9/finalhcs1.txt', 'w') as terminfile:
-                terminfile.write("Name : " + namentry.get())
-                terminfile.write("\nPhone : " + phonentry.get())
-                terminfile.write("\nPhone : " + mobilentry.get())
-                terminfile.write("\nStreet : " + addrentry.get())
-                terminfile.write("\nCity : " + cityentry.get())
-                terminfile.write("\ne-mail : " + entrymail.get())
-        except FileNotFoundError as err2_final:
-            print("+ finalhcs1.txt not created (Error8) !", err2_final)
-
-        allInData()
-
-    def recordersecData(name_twoentry, txt_twophone, twophonentry,
-        txt_twomobile, mobile_toentry, addr_twotxt, addr_twoentry,
-        twocitytxt, city_twoentry, mail_twotxt, entry_twomail):
-        """
-            Display origin
-        """
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact2.txt'):
-                print("+ Ok, hcscontact2.txt exist (t3)")
-        except FileNotFoundError as errfnf:
-            print("+ No file hcscontact2.txt exist (Error9) !", errfnf)
-            with open('./contact/conpact9/hcscontact2.txt', 'w') as testf:
-                print("+ File hcscontact2.txt created !")
-
-        try:
-            with open('./contact/conpact9/hcscontact2.txt', 'w') as copyfile:
-                copyfile.write(name_twoentry.get())
-                copyfile.write("\n" + twophonentry.get())
-                copyfile.write("\n" + mobile_toentry.get())
-                copyfile.write("\n" + addr_twoentry.get())
-                copyfile.write("\n" + city_twoentry.get())
-                copyfile.write("\n" + entry_twomail.get())
-        except FileNotFoundError as fn:
-            print("+ File not found (Error10) !", fn)
-
-        try:
-            if os.path.getsize('./contact/conpact9/finalhcs2.txt'):
-                os.remove('./contact/conpact9/finalhcs2.txt')
-        except FileNotFoundError as err_termin:
-            print("+ finalhcs2 not found (Error11) !", err_termin)
-            with open('./contact/conpact9/finalhcs2.txt', 'a+'):
-                print("+ finalhcs2.txt exist!")
-
-        try:
-            with open('./contact/conpact9/finalhcs2.txt', 'w') as secterfile:
-                secterfile.write("Name : " + name_twoentry.get())
-                secterfile.write("\nPhone : " + twophonentry.get())
-                secterfile.write("\nPhone : " + mobile_toentry.get())
-                secterfile.write("\nStreet : " + addr_twoentry.get())
-                secterfile.write("\nCity : " + city_twoentry.get())
-                secterfile.write("\ne-mail : " + entry_twomail.get())
-        except FileNotFoundError as err2_final:
-            print("+ finalhcs2.txt not created (Error12) !", err2_final)
-
-        allInData()
-
-    def recorderthirdData(name_thirdentry, txt_thirdphone, thirdphonentry,
-        txt_thirdmobile, mobile_thirdentry, addr_thirdtxt, addr_thirdentry,
-        thirdcitytxt, city_thirdentry, mail_thirdtxt, entry_thirdmail):
-        """
-            Display origin
-        """
-        try:
-            if os.path.getsize('./contact/conpact9/hcscontact3.txt'):
-                print("+ Ok, hcscontact3.txt exist (t3)")
-        except FileNotFoundError as errfnf:
-            print("+ No file hcscontact3.txt exist (Error13) !", errfnf)
-            with open('./contact/conpact9/hcscontact3.txt', 'w') as testf:
-                print("+ File hcscontact3.txt created !")
-
-        try:
-            with open('./contact/conpact9/hcscontact3.txt', 'w') as copyfile:
-                copyfile.write(name_thirdentry.get())
-                copyfile.write("\n" + thirdphonentry.get())
-                copyfile.write("\n" + mobile_thirdentry.get())
-                copyfile.write("\n" + addr_thirdentry.get())
-                copyfile.write("\n" + city_thirdentry.get())
-                copyfile.write("\n" + entry_thirdmail.get())
-        except FileNotFoundError as fn:
-            print("+ File not found (Error14) !", fn)
-
-        try:
-            if os.path.getsize('./contact/conpact9/finalhcs3.txt'):
-                os.remove('./contact/conpact9/finalhcs3.txt')
-        except FileNotFoundError as err_termin:
-            print("+ finalhcs3 not found (Error15) !", err_termin)
-            with open('./contact/conpact9/finalhcs3.txt', 'a+'):
-                print("+ finalhcs3.txt exist!")
-
-        try:
-            with open('./contact/conpact9/finalhcs3.txt', 'w') as secterfile:
-                secterfile.write("Name : " + name_thirdentry.get())
-                secterfile.write("\nPhone : " + thirdphonentry.get())
-                secterfile.write("\nPhone : " + mobile_thirdentry.get())
-                secterfile.write("\nStreet : " + addr_thirdentry.get())
-                secterfile.write("\nCity : " + city_thirdentry.get())
-                secterfile.write("\ne-mail : " + entry_thirdmail.get())
-        except FileNotFoundError as err2_final3:
-            print("+ finalhcs3.txt not created (Error16) !", err2_final3)
-
-        allInData()
-
-    allInData()
+    # Label ghost1
+    self.x4, self.y4 = 250, 50
+    self.firstghost = tk.Label(self.can, width=10, text="", bg='DodgerBlue2')
+    self.wfirstghost_window = self.can.create_window(self.x4, self.y4,
+        window = self.firstghost)
 
     # Label title
     self.x11, self.y11 = 250, 100
     self.lbltitle = tk.Label(self.can, text="Contact",
-        font=('helvetica', 40, 'bold'),
+        font=('MS Serif', 30, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
@@ -275,8 +155,8 @@ def homecsWind9(self):
     # Label title2
     self.x12, self.y12 = 580, 100
     self.labtitle = tk.Label(self.can, text="Home Care System",
-        font=('Times', 40, 'italic'),
-        bg='DodgerBlue2', fg='coral')
+        font=('MS Serif', 30, 'bold'),
+        bg='DodgerBlue2', fg='cyan')
     self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
         window = self.labtitle)
 
@@ -297,19 +177,19 @@ def homecsWind9(self):
             line5 = namefile.readline()
             line6 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File hcscontact1.txt doesn't exist (Error13) !", callfile)
+        print("[!] File hcscontact1.txt doesn't exist (Error_18) !", callfile)
 
     try:
         self.txt_pat = linex
         self.x2, self.y2 = 450, 200
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_pat.set(linex[:-1])
         self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ File hcscontact1.txt empty... (Error14) !", ub_error1)
+        print("[!] File hcscontact1.txt empty... (Error_19) !", ub_error1)
 
     # Phone
     self.x20, self.y20 = 250, 250
@@ -323,7 +203,7 @@ def homecsWind9(self):
     self.x21, self.y21 = 450, 250
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtphone.set(line2[:-1])
     self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
@@ -340,7 +220,7 @@ def homecsWind9(self):
     self.x21, self.y21 = 450, 300
     self.txtmobile = tk.StringVar()
     self.mobilentry = tk.Entry(self.can, textvariable=self.txtmobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtmobile.set(line3[:-1])
     self.wmobilentry_window = self.can.create_window(self.x21, self.y21,
         window = self.mobilentry)
@@ -357,7 +237,7 @@ def homecsWind9(self):
     self.x31, self.y31 = 450, 350
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt.set(line4[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
@@ -373,7 +253,7 @@ def homecsWind9(self):
     self.x33, self.y33 = 450, 400
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt.set(line5[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -390,20 +270,17 @@ def homecsWind9(self):
     self.x41, self.y41 = 450, 450
     self.mailtxt = tk.StringVar()
     self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mailtxt.set(line6)
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
-    self.x52, self.y52 = 350, 520
-    self.b52 = tk.Button(self.can, text="Save Modifications", font=16,
-        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
-        highlightbackground='cyan',
+    self.x52, self.y52 = 370, 520
+    self.b52 = tk.Button(self.can, text="Save Modifications",
+        font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
+        fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: recorderData(self.namentry, self.txtphone,
-            self.phonentry, self.txtmobile, self.mobilentry,
-            self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
-            self.mailtxt, self.entrymail))
+        command = lambda: ([careOneRec(self), careInSys()]))
     self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
 
     # Name 2
@@ -423,14 +300,14 @@ def homecsWind9(self):
            two_line5 = namefile.readline()
            two_line6 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File hcscontact2.txt doesn't exist (Error15) !", callfile)
+        print("[!] File hcscontact2.txt doesn't exist (Error_20) !", callfile)
 
     try:
         self.txt_twopat = two_linex
         self.x102, self.y102 = 450, 620
         self.txt_twopat = tk.StringVar()
         self.name_twoentry = tk.Entry(self.can, textvariable=self.txt_twopat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_twopat.set(two_linex[:-1])
         self.wname_twoentry_window = self.can.create_window(self.x102, self.y102,
             window = self.name_twoentry)
@@ -449,7 +326,7 @@ def homecsWind9(self):
     self.x104, self.y104 = 450, 670
     self.txt_twophone = tk.StringVar()
     self.twophonentry = tk.Entry(self.can, textvariable=self.txt_twophone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_twophone.set(two_line2[:-1])
     self.wtwophonentry_window = self.can.create_window(self.x104, self.y104,
         window = self.twophonentry)
@@ -466,7 +343,7 @@ def homecsWind9(self):
     self.x106, self.y106 = 450, 720
     self.txt_twomobile = tk.StringVar()
     self.mobile_toentry = tk.Entry(self.can, textvariable=self.txt_twomobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_twomobile.set(two_line3[:-1])
     self.wmobile_toentry_window = self.can.create_window(self.x106, self.y106,
         window = self.mobile_toentry)
@@ -483,7 +360,7 @@ def homecsWind9(self):
     self.x111, self.y111 = 450, 770
     self.addr_twotxt = tk.StringVar()
     self.addr_twoentry = tk.Entry(self.can, textvariable=self.addr_twotxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addr_twotxt.set(two_line4[:-1])
     self.waddr_twoentry_window = self.can.create_window(self.x111, self.y111,
         window = self.addr_twoentry)
@@ -499,7 +376,7 @@ def homecsWind9(self):
     self.x113, self.y113 = 450, 820
     self.twocitytxt = tk.StringVar()
     self.city_twoentry = tk.Entry(self.can, textvariable=self.twocitytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.twocitytxt.set(two_line5[:-1])
     self.wcity_twoentry_window = self.can.create_window(self.x113, self.y113,
         window = self.city_twoentry)
@@ -516,20 +393,17 @@ def homecsWind9(self):
     self.x115, self.y115 = 450, 870
     self.mail_twotxt = tk.StringVar()
     self.entry_twomail = tk.Entry(self.can, textvariable=self.mail_twotxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mail_twotxt.set(two_line6)
     self.wentry_twomail_window = self.can.create_window(self.x115, self.y115,
         window = self.entry_twomail)
 
-    self.x116, self.y116 = 350, 940
-    self.b116 = tk.Button(self.can, text="Save Modifications", font=16,
-        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
-        highlightbackground='cyan',
+    self.x116, self.y116 = 370, 940
+    self.b116 = tk.Button(self.can, text="Save Modifications",
+        font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
+        fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: recordersecData(self.name_twoentry, self.txt_twophone,
-            self.twophonentry, self.txt_twomobile, self.mobile_toentry,
-            self.addr_twotxt, self.addr_twoentry, self.twocitytxt, self.city_twoentry,
-            self.mail_twotxt, self.entry_twomail))
+        command = lambda: ([careTwoRec(self), careInSys()]))
     self.fb116_window = self.can.create_window(self.x116, self.y116,
         window=self.b116)
 
@@ -550,14 +424,14 @@ def homecsWind9(self):
            third_line5 = namefile3.readline()
            third_line6 = namefile3.readline()
     except FileNotFoundError as callfile3:
-        print("+ File hcscontact3.txt doesn't exist (Error17) !", callfile3)
+        print("[!] File hcscontact3.txt doesn't exist (Error_21) !", callfile3)
 
     try:
         self.txt_thirdpat = third_linex
         self.x121, self.y121 = 450, 1040
         self.txt_thirdpat = tk.StringVar()
         self.name_thirdentry = tk.Entry(self.can, textvariable=self.txt_thirdpat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_thirdpat.set(third_linex[:-1])
         self.wname_thirdentry_window = self.can.create_window(self.x121, self.y121,
             window = self.name_thirdentry)
@@ -576,7 +450,7 @@ def homecsWind9(self):
     self.x123, self.y123 = 450, 1090
     self.txt_thirdphone = tk.StringVar()
     self.thirdphonentry = tk.Entry(self.can, textvariable=self.txt_thirdphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_thirdphone.set(third_line2[:-1])
     self.wthirdphonentry_window = self.can.create_window(self.x123, self.y123,
         window = self.thirdphonentry)
@@ -593,7 +467,7 @@ def homecsWind9(self):
     self.x125, self.y125 = 450, 1140
     self.txt_thirdmobile = tk.StringVar()
     self.mobile_thirdentry = tk.Entry(self.can, textvariable=self.txt_thirdmobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_thirdmobile.set(third_line3[:-1])
     self.wmobile_thirdentry_window = self.can.create_window(self.x125, self.y125,
         window = self.mobile_thirdentry)
@@ -610,7 +484,7 @@ def homecsWind9(self):
     self.x127, self.y127 = 450, 1190
     self.addr_thirdtxt = tk.StringVar()
     self.addr_thirdentry = tk.Entry(self.can, textvariable=self.addr_thirdtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addr_thirdtxt.set(third_line4[:-1])
     self.waddr_thirdentry_window = self.can.create_window(self.x127, self.y127,
         window = self.addr_thirdentry)
@@ -626,7 +500,7 @@ def homecsWind9(self):
     self.x129, self.y129 = 450, 1240
     self.thirdcitytxt = tk.StringVar()
     self.city_thirdentry = tk.Entry(self.can, textvariable=self.thirdcitytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.thirdcitytxt.set(third_line5[:-1])
     self.wcity_thirdentry_window = self.can.create_window(self.x129, self.y129,
         window = self.city_thirdentry)
@@ -643,21 +517,26 @@ def homecsWind9(self):
     self.x131, self.y131 = 450, 1290
     self.mail_thirdtxt = tk.StringVar()
     self.entry_thirdmail = tk.Entry(self.can, textvariable=self.mail_thirdtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mail_thirdtxt.set(third_line6)
     self.wentry_thirdmail_window = self.can.create_window(self.x131, self.y131,
         window = self.entry_thirdmail)
 
-    self.x132, self.y132 = 350, 1360
-    self.b132 = tk.Button(self.can, text="Save Modifications", font=16,
-        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
-        highlightbackground='cyan',
+    self.x132, self.y132 = 370, 1360
+    self.b132 = tk.Button(self.can, text="Save Modifications",
+        font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
+        fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: recorderthirdData(self.name_thirdentry, self.txt_thirdphone,
-            self.thirdphonentry, self.txt_thirdmobile, self.mobile_thirdentry,
-            self.addr_thirdtxt, self.addr_thirdentry, self.thirdcitytxt,
-            self.city_thirdentry, self.mail_thirdtxt, self.entry_thirdmail))
+        command = lambda: ([careThreeRec(self), careInSys()]))
     self.fb132_window = self.can.create_window(self.x132, self.y132,
         window=self.b132)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    # Label ghost1
+    self.x140, self.y140 = 370, 1410
+    self.secondghost = tk.Label(self.can, width=10, text="", bg='DodgerBlue2')
+    self.fsecondghost_window = self.can.create_window(self.x140, self.y140,
+        window = self.secondghost)
+
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)
