@@ -184,7 +184,7 @@ def homecsWind2(self):
         self.x2, self.y2 = 450, 200
         self.txt_pat = tk.StringVar()
         self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_pat.set(linex[:-1])
         self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
@@ -203,7 +203,7 @@ def homecsWind2(self):
     self.x21, self.y21 = 450, 250
     self.txtphone = tk.StringVar()
     self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtphone.set(line2[:-1])
     self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
@@ -220,7 +220,7 @@ def homecsWind2(self):
     self.x21, self.y21 = 450, 300
     self.txtmobile = tk.StringVar()
     self.mobilentry = tk.Entry(self.can, textvariable=self.txtmobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txtmobile.set(line3[:-1])
     self.wmobilentry_window = self.can.create_window(self.x21, self.y21,
         window = self.mobilentry)
@@ -237,7 +237,7 @@ def homecsWind2(self):
     self.x31, self.y31 = 450, 350
     self.addrtxt = tk.StringVar()
     self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addrtxt.set(line4[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
@@ -253,7 +253,7 @@ def homecsWind2(self):
     self.x33, self.y33 = 450, 400
     self.citytxt = tk.StringVar()
     self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.citytxt.set(line5[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
@@ -270,7 +270,7 @@ def homecsWind2(self):
     self.x41, self.y41 = 450, 450
     self.mailtxt = tk.StringVar()
     self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mailtxt.set(line6)
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
@@ -307,7 +307,7 @@ def homecsWind2(self):
         self.x102, self.y102 = 450, 620
         self.txt_twopat = tk.StringVar()
         self.name_twoentry = tk.Entry(self.can, textvariable=self.txt_twopat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_twopat.set(two_linex[:-1])
         self.wname_twoentry_window = self.can.create_window(self.x102, self.y102,
             window = self.name_twoentry)
@@ -326,7 +326,7 @@ def homecsWind2(self):
     self.x104, self.y104 = 450, 670
     self.txt_twophone = tk.StringVar()
     self.twophonentry = tk.Entry(self.can, textvariable=self.txt_twophone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_twophone.set(two_line2[:-1])
     self.wtwophonentry_window = self.can.create_window(self.x104, self.y104,
         window = self.twophonentry)
@@ -343,7 +343,7 @@ def homecsWind2(self):
     self.x106, self.y106 = 450, 720
     self.txt_twomobile = tk.StringVar()
     self.mobile_toentry = tk.Entry(self.can, textvariable=self.txt_twomobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_twomobile.set(two_line3[:-1])
     self.wmobile_toentry_window = self.can.create_window(self.x106, self.y106,
         window = self.mobile_toentry)
@@ -360,7 +360,7 @@ def homecsWind2(self):
     self.x111, self.y111 = 450, 770
     self.addr_twotxt = tk.StringVar()
     self.addr_twoentry = tk.Entry(self.can, textvariable=self.addr_twotxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addr_twotxt.set(two_line4[:-1])
     self.waddr_twoentry_window = self.can.create_window(self.x111, self.y111,
         window = self.addr_twoentry)
@@ -376,7 +376,7 @@ def homecsWind2(self):
     self.x113, self.y113 = 450, 820
     self.twocitytxt = tk.StringVar()
     self.city_twoentry = tk.Entry(self.can, textvariable=self.twocitytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.twocitytxt.set(two_line5[:-1])
     self.wcity_twoentry_window = self.can.create_window(self.x113, self.y113,
         window = self.city_twoentry)
@@ -393,7 +393,7 @@ def homecsWind2(self):
     self.x115, self.y115 = 450, 870
     self.mail_twotxt = tk.StringVar()
     self.entry_twomail = tk.Entry(self.can, textvariable=self.mail_twotxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mail_twotxt.set(two_line6)
     self.wentry_twomail_window = self.can.create_window(self.x115, self.y115,
         window = self.entry_twomail)
@@ -431,7 +431,7 @@ def homecsWind2(self):
         self.x121, self.y121 = 450, 1040
         self.txt_thirdpat = tk.StringVar()
         self.name_thirdentry = tk.Entry(self.can, textvariable=self.txt_thirdpat,
-            highlightbackground='grey', bd=4)
+            highlightbackground='grey', bd=2)
         self.txt_thirdpat.set(third_linex[:-1])
         self.wname_thirdentry_window = self.can.create_window(self.x121, self.y121,
             window = self.name_thirdentry)
@@ -450,7 +450,7 @@ def homecsWind2(self):
     self.x123, self.y123 = 450, 1090
     self.txt_thirdphone = tk.StringVar()
     self.thirdphonentry = tk.Entry(self.can, textvariable=self.txt_thirdphone,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_thirdphone.set(third_line2[:-1])
     self.wthirdphonentry_window = self.can.create_window(self.x123, self.y123,
         window = self.thirdphonentry)
@@ -467,7 +467,7 @@ def homecsWind2(self):
     self.x125, self.y125 = 450, 1140
     self.txt_thirdmobile = tk.StringVar()
     self.mobile_thirdentry = tk.Entry(self.can, textvariable=self.txt_thirdmobile,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.txt_thirdmobile.set(third_line3[:-1])
     self.wmobile_thirdentry_window = self.can.create_window(self.x125, self.y125,
         window = self.mobile_thirdentry)
@@ -484,7 +484,7 @@ def homecsWind2(self):
     self.x127, self.y127 = 450, 1190
     self.addr_thirdtxt = tk.StringVar()
     self.addr_thirdentry = tk.Entry(self.can, textvariable=self.addr_thirdtxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.addr_thirdtxt.set(third_line4[:-1])
     self.waddr_thirdentry_window = self.can.create_window(self.x127, self.y127,
         window = self.addr_thirdentry)
@@ -500,7 +500,7 @@ def homecsWind2(self):
     self.x129, self.y129 = 450, 1240
     self.thirdcitytxt = tk.StringVar()
     self.city_thirdentry = tk.Entry(self.can, textvariable=self.thirdcitytxt,
-        highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=2)
     self.thirdcitytxt.set(third_line5[:-1])
     self.wcity_thirdentry_window = self.can.create_window(self.x129, self.y129,
         window = self.city_thirdentry)
@@ -517,7 +517,7 @@ def homecsWind2(self):
     self.x131, self.y131 = 450, 1290
     self.mail_thirdtxt = tk.StringVar()
     self.entry_thirdmail = tk.Entry(self.can, textvariable=self.mail_thirdtxt,
-        highlightbackground='grey', bd=3)
+        highlightbackground='grey', bd=2)
     self.mail_thirdtxt.set(third_line6)
     self.wentry_thirdmail_window = self.can.create_window(self.x131, self.y131,
         window = self.entry_thirdmail)
