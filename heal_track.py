@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-#import intro
+import intro
 
 from boxapp import callBox
 from cpfoldtrans import loaderfile
@@ -2870,5 +2870,5 @@ class Application(tk.Frame):
 if __name__=='__main__':
     root = tk.Tk()
     root.resizable(False, False)
-    Application(root).pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+    Application(root).pack()
     root.mainloop()

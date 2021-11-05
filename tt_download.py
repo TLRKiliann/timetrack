@@ -298,7 +298,6 @@ def launchDownload():
     treat = threading.Thread(target=process_of_unknown_duration, args=(root,))
     treat.start()
     print("\n[Downloading...]\n")
-    # This will block while the mainloop runs
     task(root)
     treat.join()
     root.destroy()

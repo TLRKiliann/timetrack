@@ -5,10 +5,11 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-from threading import Thread
+import subprocess
+#import threading
 from playsound import playsound
 from tt_download import launchDownload
-from pod import callVideo
+#from pod import callVideo
 
 
 window = tk.Tk()
@@ -52,22 +53,7 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-
-    def playVid():
-        callVideo()
-
-    def playDown():
-        launchDownload()
-
-    def callthread():
-        threadvid = Thread(target=playVid)
-        threadown = Thread(target=playDown)
-        threadvid.start()
-        threadown.start()
-        threadvid.join()
-        threadown.join()
-
-    callthread()
+    launchDownload()
 
 def validentry(event):
     """
