@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-#import intro
+import intro
 
 from boxapp import callBox
 from cpfoldtrans import loaderfile

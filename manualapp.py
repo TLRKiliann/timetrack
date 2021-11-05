@@ -4,6 +4,8 @@
 
 import tkinter as tk
 from tkinter import scrolledtext
+from threading import Thread
+from playsound import playsound
 
 
 def instalpy(self):
@@ -13,6 +15,16 @@ def instalpy(self):
     """
     self.effacer()
     self.delScroll()
+
+    def playmuse():
+        playsound('./beep_sounds/NieR_sound.wav')
+        print("[+] Music and thread complete.")
+
+    def launchMusic():
+        myt = Thread(target=playmuse)
+        myt.start()
+
+    launchMusic()
 
     self.photo = tk.PhotoImage(file='./syno_gif/a2f.png')
 

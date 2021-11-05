@@ -5,8 +5,8 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-import subprocess
 from threading import Thread
+from pod import callVideo
 from playsound import playsound
 from tt_download import launchDownload
 
@@ -53,15 +53,21 @@ def closeWindow():
     """
     window.destroy()
 
-    def playmuse():
-        playsound('./beep_sounds/NieR_sound.wav')
-        print("[+] Music and thread complete.")
+    def playVid():
+        callVideo()
 
-    def launchMusic():
-        myt = Thread(target=playmuse)
-        myt.start()
-    launchMusic()
-    launchDownload()
+    def playDown():
+        launchDownload()
+
+    def callthread():
+        threadvid = Thread(target=playVid)
+        threadown = Thread(target=playDown)
+        threadvid.start()
+        threadown.start()
+        threadvid.join()
+        threadown.join()
+
+    callthread()
 
 def validentry(event):
     """
