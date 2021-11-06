@@ -3,8 +3,8 @@
 
 
 """
-    Main script to start.
-    It call directly passw.py to validate access
+    Main script to start the application.
+    It call directly intro.py to validate access
     privileges.
 """
 
@@ -34,6 +34,7 @@ from Backup.backupfile import dataBackToSave
 from need.needownload.refdlneed import *
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
+from extensions.param_extended import parameters
 from extensions.bmi_extended import bmicalkilo
 from vmed.medload import *
 
@@ -2342,64 +2343,10 @@ class Application(tk.Frame):
 
     def showParam(self, p):
         """
-            Decreases the opacity of the background window
-            and run subprocess.run() to call Vital Parameters.
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            cmd()
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            Call param functions from extensions folder.
         """
-        if p == 1:
-            subprocess.Popen("./param/fencap.py", shell=False)
-        elif p == 2:
-            subprocess.Popen("./param/fencap2.py", shell=False)
-        elif p == 3:
-            subprocess.Popen("./param/fencap3.py", shell=False)
-        elif p == 4:
-            subprocess.Popen("./param/fencap4.py", shell=False)
-        elif p == 5:
-            subprocess.Popen("./param/fencap5.py", shell=False)
-        elif p == 6:
-            subprocess.Popen("./param/fencap6.py", shell=False)
-        elif p == 7:
-            subprocess.Popen("./param/fencap7.py", shell=False)
-        elif p == 8:
-            subprocess.Popen("./param/fencap8.py", shell=False)
-        elif p == 9:
-            subprocess.Popen("./param/fencap9.py", shell=False)
-        elif p == 10:
-            subprocess.Popen("./param/fencap10.py", shell=False)
-        elif p == 11:
-            subprocess.Popen("./param/fencap11.py", shell=False)
-        elif p == 12:
-            subprocess.Popen("./param/fencap12.py", shell=False)
-        elif p == 13:
-            subprocess.Popen("./param/fencap13.py", shell=False)
-        elif p == 14:
-            subprocess.Popen("./param/fencap14.py", shell=False)
-        elif p == 15:
-            subprocess.Popen("./param/fencap15.py", shell=False)
-        elif p == 16:
-            subprocess.Popen("./param/fencap16.py", shell=False)
-        elif p == 17:
-            subprocess.Popen("./param/fencap17.py", shell=False)
-        elif p == 18:
-            subprocess.Popen("./param/fencap18.py", shell=False)
-        elif p == 19:
-            subprocess.Popen("./param/fencap19.py", shell=False)
-        elif p == 20:
-            subprocess.Popen("./param/fencap20.py", shell=False)
-        elif p == 21:
-            subprocess.Popen("./param/fencap21.py", shell=False)
-        elif p == 22:
-            subprocess.Popen("./param/fencap22.py", shell=False)
-        elif p == 23:
-            subprocess.Popen("./param/fencap23.py", shell=False)
-        elif p == 24:
-            subprocess.Popen("./param/fencap24.py", shell=False)
-        else:
-            print("Errro, to call ./param/fencapX.py with subprocess")
+        parameters(self, p)
+
 
     def bmikilo(self, u):
         """

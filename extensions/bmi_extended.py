@@ -4,7 +4,7 @@
 
 """
     Intermediate file of functions
-    to call scripts from calBmi/
+    to call scripts from ./calBmi/
 """
 
 
@@ -75,4 +75,5 @@ def bmicalkilo(self, u):
         subprocess.Popen("./calBmi/calculbmi24.py", shell=False)
     else:
         print("[!] Error, to call ./calBmi/calculbmiX.py with subprocess.")
-        tk.messagebox.showerror("Error", "Something wrong with subprocess...")
+        tk.messagebox.showerror("Error",
+            "Something wrong with subprocess...(bmi extensions)")
