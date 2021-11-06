@@ -23,9 +23,7 @@ def alarmThread(self):
     """
     self.effacer()
     self.delScroll()
-    # DodgerBlue2
     self.can.configure(bg='black')
-    # fontalarmbg2.png 625, 350, 
     self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
@@ -54,6 +52,10 @@ def alarmThread(self):
                 playsound("./beep_sounds/metroid_alarm.wav")
                 tk.messagebox.showwarning("Alarm", "Remind : "\
                     + comment.get())
+                n -= 1
+            elif current_time > set_alarm_time:
+                print("Alarm reset ! - (current_time is bigger than alarm_time)")
+                tk.messagebox.showerror("Error", "Look at time! Time has past.")
                 n -= 1
 
     self.x10, self.y10 = 625, 120
