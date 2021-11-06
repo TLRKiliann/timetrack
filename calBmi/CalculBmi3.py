@@ -18,7 +18,7 @@ import os
 import subprocess
 import json
 from functools import partial
-from bmi_download.progresstask3 import downloadata
+from bmi_download.progbmi3 import downloadBmi3
 from bmi_upload.uploadbar import uploadmain
 from bmi_upload.upload3 import uploadata
 
@@ -27,7 +27,7 @@ def tocallprogressbar():
     """
         To display progress bar with current download
     """
-    downloadata()
+    downloadBmi3()
 tocallprogressbar()
 
 gui = tk.Tk()

@@ -39,25 +39,25 @@ def task(root):
     root.resizable(False, False)
     root.mainloop()
 
-def process_of_unknown_duration(root):
+def procesSubBmi(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
         done, add root.quit() at the end.
     """
     time.sleep(1)
-    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/bmi5.txt",
+    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/bmi3.txt",
         "./calBmi/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("[Download] File bmi5.txt downloaded !")
-        #tk.messagebox.showinfo("INFO", "bmi5.txt downloaded")
+        print("[Download] File bmi3.txt downloaded !")
+        #tk.messagebox.showinfo("INFO", "calBmidata7.txt downloaded")
     else:
         print("[!] No file to download !")
-        tk.messagebox.showerror("Error", "No bmi5.txt to download")
+        tk.messagebox.showerror("Error", "No bmi3.txt to download")
 
-    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/file_kg.json",
-        "./calBmi/doc_BMI5/"], stderr=subprocess.PIPE)
+    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/file_kg.json",
+        "./calBmi/doc_BMI3/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("[Download] File file_kg.json downloaded !")
@@ -66,8 +66,8 @@ def process_of_unknown_duration(root):
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No file_kg.json to download")
 
-    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/file_bmi.json",
-        "./calBmi/doc_BMI5/"], stderr=subprocess.PIPE)
+    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/file_bmi.json",
+        "./calBmi/doc_BMI3/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
         print("[Download] File file_bmi.json downloaded !")
@@ -75,20 +75,19 @@ def process_of_unknown_duration(root):
     else:
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No file_bmi.json to download...")
-
-    print('Done')
     # linux, mac
     print('My pid is', os.getpid())
-    root.quit() # To destroy threading
+    print("[ Download complete ]")
+    root.quit()
 
-def downloadata():
+def downloadBmi3():
     """
         To start app with thread !
     """
     root = tk.Tk()
-    t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    t1 = threading.Thread(target=procesSubBmi, args=(root,))
     t1.start()
-    print("Download...")
+    print("[ Downloading BMI_2 start ]")
     task(root)
     t1.join()
     root.destroy()
