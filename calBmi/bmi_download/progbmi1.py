@@ -75,19 +75,19 @@ def process_of_unknown_duration(root):
     else:
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No file_bmi.json to download...")
-    print("Done !")
     # linux, mac
     print('My pid is', os.getpid())
+    print("[ Download complete ]")
     root.quit() # To destroy threading
 
-def downloadata():
+def downloadBmi1():
     """
         To start app with thread !
     """
     root = tk.Tk()
     t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
     t1.start()
-    print("Download...")
+    print("[ Downloading BMI start ]")
     task(root)
     t1.join()
     root.destroy()
