@@ -87,7 +87,7 @@ def downloadBmi3():
     root = tk.Tk()
     t1 = threading.Thread(target=procesSubBmi, args=(root,))
     t1.start()
-    print("[ Downloading BMI_2 start ]")
+    print("[ Downloading BMI_3 start ]")
     task(root)
     t1.join()
     root.destroy()
