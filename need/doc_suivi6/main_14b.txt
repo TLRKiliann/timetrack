@@ -1,0 +1,9 @@
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 06/11/2021 at 17:46:58 :
+Patient name : NieR Automata
+[+] Supervision or assistance with dressing/undressing - required
+Simple aid
+---
+
+

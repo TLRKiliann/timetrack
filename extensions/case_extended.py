@@ -4,7 +4,7 @@
 
 """
     Intermediate file of functions
-    to call scripts from ./need/
+    to call scripts from ./need/checkbX.py
 """
 
 
@@ -93,4 +93,4 @@ def checkcaseExtend(self, b):
     else:
         print("[!] Error, No checkbox has been found !")
         tk.messagebox.showerror("Error",
-            "Something wrong with subprocess...(checkcase extensions)")
+            "Something wrong with subprocess...(need/checkb extensions)")

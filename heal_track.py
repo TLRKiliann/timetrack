@@ -32,12 +32,16 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 
 from extensions.agenda_extension import extendAgenda
+
 from extensions.case_extended import checkcaseExtend 
-from need.needownload.refdlneed import *
-from param.backup_month import paramBackToSave
-from calBmi.bmi_backup import bmiBackToSave
+from extensions.health_ext import extendHealth
+
 from extensions.param_extended import parameters
+from param.backup_month import paramBackToSave
+
+from calBmi.bmi_backup import bmiBackToSave
 from extensions.bmi_extended import bmicalkilo
+
 from vmed.medload import *
 
 from contact.patconfunc import callPatNum
@@ -2036,128 +2040,7 @@ class Application(tk.Frame):
             Hide background window and
             call script with subprocess.run()
         """
-        if s == 1:
-            needload1()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_1.py", check=True)
-            self.master.deiconify()
-        elif s == 2:
-            needload2()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_2.py", check=True)
-            self.master.deiconify()
-        elif s == 3:
-            needload3()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_3.py", check=True)
-            self.master.deiconify()
-        elif s == 4:
-            needload4()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_4.py", check=True)
-            self.master.deiconify()
-        elif s == 5:
-            needload5()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_5.py", check=True)
-            self.master.deiconify()
-        elif s == 6:
-            needload6()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_6.py", check=True)
-            self.master.deiconify()
-        elif s == 7:
-            needload7()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_7.py", check=True)
-            self.master.deiconify()
-        elif s == 8:
-            needload8()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_8.py", check=True)
-            self.master.deiconify()
-        elif s == 9:
-            needload9()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_9.py", check=True)
-            self.master.deiconify()
-        elif s == 10:
-            needload10()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_10.py", check=True)
-            self.master.deiconify()
-        elif s == 11:
-            needload11()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_11.py", check=True)
-            self.master.deiconify()
-        elif s == 12:
-            needload12()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_12.py", check=True)
-            self.master.deiconify()
-        elif s == 13:
-            needload13()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_13.py", check=True)
-            self.master.deiconify()
-        elif s == 14:
-            needload14()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_14.py", check=True)
-            self.master.deiconify()
-        elif s == 15:
-            needload15()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_15.py", check=True)
-            self.master.deiconify()
-        elif s == 16:
-            needload16()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_16.py", check=True)
-            self.master.deiconify()
-        elif s == 17:
-            needload17()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_17.py", check=True)
-            self.master.deiconify()
-        elif s == 18:
-            needload18()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_18.py", check=True)
-            self.master.deiconify()
-        elif s == 19:
-            needload19()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_19.py", check=True)
-            self.master.deiconify()
-        elif s == 20:
-            needload20()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_20.py", check=True)
-            self.master.deiconify()
-        elif s == 21:
-            needload21()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_21.py", check=True)
-            self.master.deiconify()
-        elif s == 22:
-            needload22()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_22.py", check=True)
-            self.master.deiconify()
-        elif s == 23:
-            needload23()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_23.py", check=True)
-            self.master.deiconify()
-        elif s == 24:
-            needload24()
-            self.master.withdraw()
-            subprocess.run("./need/suivi_patient_24.py", check=True)
-            self.master.deiconify()
-        else:
-            print("[!] Error, to call ./need/suivi_patient_X.py with subprocess")
+        extendHealth(self, s)
 
     def showParam(self, p):
         """
@@ -2171,11 +2054,12 @@ class Application(tk.Frame):
         """
         bmicalkilo(self, u)
 
-    def visitMed(self):
+    def visitMed(self, t):
         """
             Hide the background window during vm_patient.py
             script is running.
         """
+        medicalvisit(self, t)
         medownload1()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
