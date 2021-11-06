@@ -39,7 +39,7 @@ def task(root):
     root.resizable(False, False)
     root.mainloop()
 
-def process_of_unknown_duration(root):
+def procesSubBmi(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
@@ -75,20 +75,19 @@ def process_of_unknown_duration(root):
     else:
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No file_bmi.json to download...")
-
-    print('Done')
     # linux, mac
     print('My pid is', os.getpid())
-    root.quit() # To destroy threading
+    print("[ Download complete ]")
+    root.quit()
 
-def downloadata():
+def downloadBmi10():
     """
         To start app with thread !
     """
     root = tk.Tk()
-    t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    t1 = threading.Thread(target=procesSubBmi, args=(root,))
     t1.start()
-    print("Download...")
+    print("[ Downloading BMI_10 start ]")
     task(root)
     t1.join()
     root.destroy()
