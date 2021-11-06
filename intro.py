@@ -10,6 +10,7 @@ import threading
 import time
 from playsound import playsound
 from tt_download import launchDownload
+from cpfoldtrans import loaderfile
 
 
 window = tk.Tk()
@@ -55,14 +56,28 @@ def closeWindow():
     window.destroy()
 
     def muse():
+        """
+            Video intro of NieR:Automata
+        """
         playsound("./syno_gif/minipodcom.mp4")
     t1 = threading.Thread(target=muse)
     t1.start()
 
     def down():
+        """
+            Download all files.
+        """
         time.sleep(6)
         launchDownload()
     down()
+
+    def tocopyfiles():
+        """
+            Load 24 folders when app start.
+        """
+        time.sleep(6)
+        loaderfile()
+    tocopyfiles()
 
 def validentry(event):
     """
