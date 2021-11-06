@@ -21,10 +21,8 @@ import time
 import json
 from playsound import playsound
 
-import intro
-
+#import intro
 from boxapp import callBox
-from cpfoldtrans import loaderfile
 
 from reminder import alarmThread
 from manualapp import instalpy
@@ -43,14 +41,6 @@ from contact.famconfunc import callFamWind
 from contact.doctorconfunc import callDoctorWind
 from contact.homeconfunc import callHomecsWind
 
-
-def tocopyfiles():
-    """
-        Load 24 folders when app start.
-    """
-    time.sleep(7)
-    loaderfile()
-tocopyfiles()
 
 class ScrollCanvas(tk.Frame):
     """
