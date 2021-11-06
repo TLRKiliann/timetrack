@@ -34,6 +34,7 @@ from Backup.backupfile import dataBackToSave
 from need.needownload.refdlneed import *
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
+from extensions.bmi_extended import bmicalkilo
 from vmed.medload import *
 
 from contact.patconfunc import callPatNum
@@ -1222,76 +1223,76 @@ class MenuBar(tk.Frame):
         meBmi = Menu(cmd_BMI)
         meBmi.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=1))
+            command=lambda: boss.bmikilo(u=1))
         meBmi.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=2))
+            command=lambda: boss.bmikilo(u=2))
         meBmi.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=3))
+            command=lambda: boss.bmikilo(u=3))
         meBmi.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=4))
+            command=lambda: boss.bmikilo(u=4))
         meBmi.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=5))
+            command=lambda: boss.bmikilo(u=5))
         meBmi.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=6))
+            command=lambda: boss.bmikilo(u=6))
         meBmi.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=7))
+            command=lambda: boss.bmikilo(u=7))
         meBmi.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=8))
+            command=lambda: boss.bmikilo(u=8))
         meBmi.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=9))
+            command=lambda: boss.bmikilo(u=9))
         meBmi.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=10))
+            command=lambda: boss.bmikilo(u=10))
         meBmi.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=11))
+            command=lambda: boss.bmikilo(u=11))
         meBmi.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=12))
+            command=lambda: boss.bmikilo(u=12))
         meBmi.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=13))
+            command=lambda: boss.bmikilo(u=13))
         meBmi.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=14))
+            command=lambda: boss.bmikilo(u=14))
         meBmi.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=15))
+            command=lambda: boss.bmikilo(u=15))
         meBmi.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=16))
+            command=lambda: boss.bmikilo(u=16))
         meBmi.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=17))
+            command=lambda: boss.bmikilo(u=17))
         meBmi.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=18))
+            command=lambda: boss.bmikilo(u=18))
         meBmi.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=19))
+            command=lambda: boss.bmikilo(u=19))
         meBmi.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=20))
+            command=lambda: boss.bmikilo(u=20))
         meBmi.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=21))
+            command=lambda: boss.bmikilo(u=21))
         meBmi.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=22))
+            command=lambda: boss.bmikilo(u=22))
         meBmi.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=23))
+            command=lambda: boss.bmikilo(u=23))
         meBmi.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=lambda: boss.calculB(u=24))
+            command=lambda: boss.bmikilo(u=24))
         # Integration of 3rd menu
         cmd_BMI.configure(activeforeground='black', activebackground='cyan',
             menu=meBmi)
@@ -2400,66 +2401,11 @@ class Application(tk.Frame):
         else:
             print("Errro, to call ./param/fencapX.py with subprocess")
 
-    def calculB(self, u):
+    def bmikilo(self, u):
         """
-            Decreases opacity of background window
-            during script CalculBmiX.py is running.
-            Call a BMI frame.
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            Call bmi functions from extensions folder.
         """
-        if u == 1:
-            subprocess.Popen("./calBmi/calculbmi.py", shell=False)
-        elif u == 2:
-            subprocess.Popen("./calBmi/calculbmi2.py", shell=False)
-        elif u == 3:
-            subprocess.Popen("./calBmi/calculbmi3.py", shell=False)
-        elif u == 4:
-            subprocess.Popen("./calBmi/calculbmi4.py", shell=False)
-        elif u == 5:
-            subprocess.Popen("./calBmi/calculbmi5.py", shell=False)
-        elif u == 6:
-            subprocess.Popen("./calBmi/calculbmi6.py", shell=False)
-        elif u == 7:
-            subprocess.Popen("./calBmi/calculbmi7.py", shell=False)
-        elif u == 8:
-            subprocess.Popen("./calBmi/calculbmi8.py", shell=False)
-        elif u == 9:
-            subprocess.Popen("./calBmi/calculbmi9.py", shell=False)
-        elif u == 10:
-            subprocess.Popen("./calBmi/calculbmi10.py", shell=False)
-        elif u == 11:
-            subprocess.Popen("./calBmi/calculbmi11.py", shell=False)
-        elif u == 12:
-            subprocess.Popen("./calBmi/calculbmi12.py", shell=False)
-        elif u == 13:
-            subprocess.Popen("./calBmi/calculbmi13.py", shell=False)
-        elif u == 14:
-            subprocess.Popen("./calBmi/calculbmi14.py", shell=False)
-        elif u == 15:
-            subprocess.Popen("./calBmi/calculbmi15.py", shell=False)
-        elif u == 16:
-            subprocess.Popen("./calBmi/calculbmi16.py", shell=False)
-        elif u == 17:
-            subprocess.Popen("./calBmi/calculbmi17.py", shell=False)
-        elif u == 18:
-            subprocess.Popen("./calBmi/calculbmi18.py", shell=False)
-        elif u == 19:
-            subprocess.Popen("./calBmi/calculbmi19.py", shell=False)
-        elif u == 20:
-            subprocess.Popen("./calBmi/calculbmi20.py", shell=False)
-        elif u == 21:
-            subprocess.Popen("./calBmi/calculbmi21.py", shell=False)
-        elif u == 22:
-            subprocess.Popen("./calBmi/calculbmi22.py", shell=False)
-        elif u == 23:
-            subprocess.Popen("./calBmi/calculbmi23.py", shell=False)
-        elif u == 24:
-            subprocess.Popen("./calBmi/calculbmi24.py", shell=False)
-        else:
-            print("[!] Error, to call ./calBmi/calculbmiX.py with subprocess.")
+        bmicalkilo(self, u)
 
     def visitMed(self):
         """
