@@ -149,7 +149,8 @@ def launchSaver():
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
-            dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
+            dataBmi['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Kg' : entryNum1.get()})
             with open('./calBmi/doc_BMI13/file_kg.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
@@ -158,7 +159,8 @@ def launchSaver():
         print("[+] File file_kg.json created !")
         dataBmi = {}
         dataBmi['data'] = []
-        dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : entryNum1.get()})
+        dataBmi['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Kg' : entryNum1.get()})
         with open('./calBmi/doc_BMI13/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
     uploadfunc()
