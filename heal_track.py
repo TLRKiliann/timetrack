@@ -32,6 +32,7 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 
 from extensions.agenda_extension import extendAgenda
+from extensions.case_extended import checkcaseExtend 
 from need.needownload.refdlneed import *
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
@@ -2025,59 +2026,9 @@ class Application(tk.Frame):
 
     def besoinsCoche(self, b):
         """
-            New window is open with subprocess.Popen()
-            for checking 14 needs.
+            Call checkcase functions from extensions folder.
         """
-        if b == 1:
-            subprocess.Popen('./need/checkb.py', shell=False)
-        elif b == 2:
-            subprocess.Popen('./need/checkb2.py', shell=False)
-        elif b == 3:
-            subprocess.Popen('./need/checkb3.py', shell=False)
-        elif b == 4:
-            subprocess.Popen('./need/checkb4.py', shell=False)
-        elif b == 5:
-            subprocess.Popen('./need/checkb5.py', shell=False)
-        elif b == 6:
-            subprocess.Popen('./need/checkb6.py', shell=False)
-        elif b == 7:
-            subprocess.Popen('./need/checkb7.py', shell=False)
-        elif b == 8:
-            subprocess.Popen('./need/checkb8.py', shell=False)
-        elif b == 9:
-            subprocess.Popen('./need/checkb9.py', shell=False)
-        elif b == 10:
-            subprocess.Popen('./need/checkb10.py', shell=False)
-        elif b == 11:
-            subprocess.Popen('./need/checkb11.py', shell=False)
-        elif b == 12:
-            subprocess.Popen('./need/checkb12.py', shell=False)
-        elif b == 13:
-            subprocess.Popen('./need/checkb13.py', shell=False)
-        elif b == 14:
-            subprocess.Popen('./need/checkb14.py', shell=False)
-        elif b == 15:
-            subprocess.Popen('./need/checkb15.py', shell=False)
-        elif b == 16:
-            subprocess.Popen('./need/checkb16.py', shell=False)
-        elif b == 17:
-            subprocess.Popen('./need/checkb17.py', shell=False)
-        elif b == 18:
-            subprocess.Popen('./need/checkb18.py', shell=False)
-        elif b == 19:
-            subprocess.Popen('./need/checkb19.py', shell=False)
-        elif b == 20:
-            subprocess.Popen('./need/checkb20.py', shell=False)
-        elif b == 21:
-            subprocess.Popen('./need/checkb21.py', shell=False)
-        elif b == 22:
-            subprocess.Popen('./need/checkb22.py', shell=False)
-        elif b == 23:
-            subprocess.Popen('./need/checkb23.py', shell=False)
-        elif b == 24:
-            subprocess.Popen('./need/checkb24.py', shell=False)
-        else:
-            print("[!] Error, No checkbox has been found !")
+        checkcaseExtend(self, b)
 
     def suiviSoins(self, s):
         """
@@ -2213,7 +2164,6 @@ class Application(tk.Frame):
             Call param functions from extensions folder.
         """
         parameters(self, p)
-
 
     def bmikilo(self, u):
         """
