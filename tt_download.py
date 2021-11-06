@@ -12,9 +12,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import threading
+import os
 import time
 import subprocess
-import os
 
 
 def task(root):
@@ -29,17 +29,17 @@ def task(root):
         troughrelief = 'flat',
         background = '#2f92ff')
 
-    pb_hD = ttk.Progressbar(root,
+    progbar = ttk.Progressbar(root,
         style = 'blue.Horizontal.TProgressbar',
         orient = 'horizontal',
         length = 200,
         mode = 'indeterminate')
-    pb_hD.pack()
-    pb_hD.start(10)
+    progbar.pack()
+    progbar.start(10)
     root.resizable(False, False)
     root.mainloop()
 
-def process_of_unknown_duration(root):
+def downloadAllFiles(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
@@ -295,7 +295,7 @@ def launchDownload():
         To start app with thread !
     """
     root = tk.Tk()
-    treat = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    treat = threading.Thread(target=downloadAllFiles, args=(root,))
     treat.start()
     print("\n[Downloading...]\n")
     task(root)
