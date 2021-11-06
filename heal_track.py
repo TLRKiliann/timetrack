@@ -42,7 +42,7 @@ from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
 from extensions.bmi_extended import bmicalkilo
 
-from vmed.medload import *
+from extensions.medvisit_extended import medicalVisit
 
 from contact.patconfunc import callPatNum
 from contact.famconfunc import callFamWind
@@ -1312,76 +1312,76 @@ class MenuBar(tk.Frame):
         meVmed = Menu(cmd_Vmed)
         meVmed.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed)
+            command=lambda: boss.visitMed(t=1))
         meVmed.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed2)
+            command=lambda: boss.visitMed(t=2))
         meVmed.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed3)
+            command=lambda: boss.visitMed(t=3))
         meVmed.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed4)
+            command=lambda: boss.visitMed(t=4))
         meVmed.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed5)
+            command=lambda: boss.visitMed(t=5))
         meVmed.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed6)
+            command=lambda: boss.visitMed(t=6))
         meVmed.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed7)
+            command=lambda: boss.visitMed(t=7))
         meVmed.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed8)
+            command=lambda: boss.visitMed(t=8))
         meVmed.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed9)
+            command=lambda: boss.visitMed(t=9))
         meVmed.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed10)
+            command=lambda: boss.visitMed(t=10))
         meVmed.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed11)
+            command=lambda: boss.visitMed(t=11))
         meVmed.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed12)
+            command=lambda: boss.visitMed(t=12))
         meVmed.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed13)
+            command=lambda: boss.visitMed(t=13))
         meVmed.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed14)
+            command=lambda: boss.visitMed(t=14))
         meVmed.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed15)
+            command=lambda: boss.visitMed(t=15))
         meVmed.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed16)
+            command=lambda: boss.visitMed(t=16))
         meVmed.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed17)
+            command=lambda: boss.visitMed(t=17))
         meVmed.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed18)
+            command=lambda: boss.visitMed(t=18))
         meVmed.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed19)
+            command=lambda: boss.visitMed(t=19))
         meVmed.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed20)
+            command=lambda: boss.visitMed(t=20))
         meVmed.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed21)
+            command=lambda: boss.visitMed(t=21))
         meVmed.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed22)
+            command=lambda: boss.visitMed(t=22))
         meVmed.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed23)
+            command=lambda: boss.visitMed(t=23))
         meVmed.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.visitMed24)
+            command=lambda: boss.visitMed(t=24))
         # Integration of 3rd menu
         cmd_Vmed.configure(activeforeground='black', activebackground='cyan',
             menu=meVmed)
@@ -2059,149 +2059,7 @@ class Application(tk.Frame):
             Hide the background window during vm_patient.py
             script is running.
         """
-        medicalvisit(self, t)
-        medownload1()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient1.py", check=True)
-        self.master.deiconify()
-
-    def visitMed2(self):
-        medownload2()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient2.py", check=True)
-        self.master.deiconify()
-
-    def visitMed3(self):
-        medownload3()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient3.py", check=True)
-        self.master.deiconify()
-
-    def visitMed4(self):
-        medownload4()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient4.py", check=True)
-        self.master.deiconify()
-
-    def visitMed5(self):
-        medownload5()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient5.py", check=True)
-        self.master.deiconify()
-
-    def visitMed6(self):
-        medownload6()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient6.py", check=True)
-        self.master.deiconify()
-
-    def visitMed7(self):
-        medownload7()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient7.py", check=True)
-        self.master.deiconify()
-
-    def visitMed8(self):
-        medownload8()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient8.py", check=True)
-        self.master.deiconify()
-
-    def visitMed9(self):
-        medownload9()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient9.py", check=True)
-        self.master.deiconify()
-
-    def visitMed10(self):
-        medownload10()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient10.py", check=True)
-        self.master.deiconify()
-
-    def visitMed11(self):
-        medownload11()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient11.py", check=True)
-        self.master.deiconify()
-
-    def visitMed12(self):
-        medownload12()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient12.py", check=True)
-        self.master.deiconify()
-
-    def visitMed13(self):
-        medownload13()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient13.py", check=True)
-        self.master.deiconify()
-
-    def visitMed14(self):
-        medownload14()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient14.py", check=True)
-        self.master.deiconify()
-
-    def visitMed15(self):
-        medownload15()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient15.py", check=True)
-        self.master.deiconify()
-
-    def visitMed16(self):
-        medownload16()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient16.py", check=True)
-        self.master.deiconify()
-
-    def visitMed17(self):
-        medownload17()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient17.py", check=True)
-        self.master.deiconify()
-
-    def visitMed18(self):
-        medownload18()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient18.py", check=True)
-        self.master.deiconify()
-
-    def visitMed19(self):
-        medownload19()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient19.py", check=True)
-        self.master.deiconify()
-
-    def visitMed20(self):
-        medownload20()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient20.py", check=True)
-        self.master.deiconify()
-
-    def visitMed21(self):
-        medownload21()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient21.py", check=True)
-        self.master.deiconify()
-
-    def visitMed22(self):
-        medownload22()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient22.py", check=True)
-        self.master.deiconify()
-
-    def visitMed23(self):
-        medownload23()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient23.py", check=True)
-        self.master.deiconify()
-
-    def visitMed24(self):
-        medownload24()
-        self.master.withdraw()
-        subprocess.run("./vmed/vm_patient24.py", check=True)
-        self.master.deiconify()
+        medicalVisit(self, t)
 
     def nutritionMenu(self, n):
         """
