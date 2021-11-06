@@ -2411,55 +2411,55 @@ class Application(tk.Frame):
             self.master.update()
         """
         if u == 1:
-            subprocess.Popen("./calBmi/CalculBmi.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi.py", shell=False)
         elif u == 2:
-            subprocess.Popen("./calBmi/CalculBmi2.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi2.py", shell=False)
         elif u == 3:
-            subprocess.Popen("./calBmi/CalculBmi3.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi3.py", shell=False)
         elif u == 4:
-            subprocess.Popen("./calBmi/CalculBmi4.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi4.py", shell=False)
         elif u == 5:
-            subprocess.Popen("./calBmi/CalculBmi5.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi5.py", shell=False)
         elif u == 6:
-            subprocess.Popen("./calBmi/CalculBmi6.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi6.py", shell=False)
         elif u == 7:
-            subprocess.Popen("./calBmi/CalculBmi7.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi7.py", shell=False)
         elif u == 8:
-            subprocess.Popen("./calBmi/CalculBmi8.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi8.py", shell=False)
         elif u == 9:
-            subprocess.Popen("./calBmi/CalculBmi9.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi9.py", shell=False)
         elif u == 10:
-            subprocess.Popen("./calBmi/CalculBmi10.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi10.py", shell=False)
         elif u == 11:
-            subprocess.Popen("./calBmi/CalculBmi11.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi11.py", shell=False)
         elif u == 12:
-            subprocess.Popen("./calBmi/CalculBmi12.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi12.py", shell=False)
         elif u == 13:
-            subprocess.Popen("./calBmi/CalculBmi13.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi13.py", shell=False)
         elif u == 14:
-            subprocess.Popen("./calBmi/CalculBmi14.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi14.py", shell=False)
         elif u == 15:
-            subprocess.Popen("./calBmi/CalculBmi15.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi15.py", shell=False)
         elif u == 16:
-            subprocess.Popen("./calBmi/CalculBmi16.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi16.py", shell=False)
         elif u == 17:
-            subprocess.Popen("./calBmi/CalculBmi17.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi17.py", shell=False)
         elif u == 18:
-            subprocess.Popen("./calBmi/CalculBmi18.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi18.py", shell=False)
         elif u == 19:
-            subprocess.Popen("./calBmi/CalculBmi19.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi19.py", shell=False)
         elif u == 20:
-            subprocess.Popen("./calBmi/CalculBmi20.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi20.py", shell=False)
         elif u == 21:
-            subprocess.Popen("./calBmi/CalculBmi21.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi21.py", shell=False)
         elif u == 22:
-            subprocess.Popen("./calBmi/CalculBmi22.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi22.py", shell=False)
         elif u == 23:
-            subprocess.Popen("./calBmi/CalculBmi23.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi23.py", shell=False)
         elif u == 24:
-            subprocess.Popen("./calBmi/CalculBmi24.py", shell=False)
+            subprocess.Popen("./calBmi/calculbmi24.py", shell=False)
         else:
-            print("[!] Error, to call ./calBmi/CalculBmiX.py with subprocess.")
+            print("[!] Error, to call ./calBmi/calculbmiX.py with subprocess.")
 
     def visitMed(self):
         """
