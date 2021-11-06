@@ -68,7 +68,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line1)
+                    self.tbox99.insert(END, "\n\n==> " + line1)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -99,7 +99,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line2)
+                    self.tbox99.insert(END, "\n\n==> " + line2)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -130,7 +130,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line3)
+                    self.tbox99.insert(END, "\n\n==> " + line3)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -161,7 +161,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line4)
+                    self.tbox99.insert(END, "\n\n==> " + line4)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -192,7 +192,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line5)
+                    self.tbox99.insert(END, "\n\n==> " + line5)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -223,7 +223,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line6)
+                    self.tbox99.insert(END, "\n\n==> " + line6)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -254,7 +254,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line7)
+                    self.tbox99.insert(END, "\n\n==> " + line7)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -285,7 +285,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line8)
+                    self.tbox99.insert(END, "\n\n==> " + line8)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -316,7 +316,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line9)
+                    self.tbox99.insert(END, "\n\n==> " + line9)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -347,7 +347,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line10)
+                    self.tbox99.insert(END, "\n\n==> " + line10)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -378,7 +378,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line11)
+                    self.tbox99.insert(END, "\n\n==> " + line11)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -409,7 +409,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line12)
+                    self.tbox99.insert(END, "\n\n==> " + line12)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -440,7 +440,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line13)
+                    self.tbox99.insert(END, "\n\n==> " + line13)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -471,7 +471,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line14)
+                    self.tbox99.insert(END, "\n\n==> " + line14)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -502,7 +502,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line15)
+                    self.tbox99.insert(END, "\n\n==> " + line15)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -533,7 +533,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line16)
+                    self.tbox99.insert(END, "\n\n==> " + line16)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -564,7 +564,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line17)
+                    self.tbox99.insert(END, "\n\n==> " + line17)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -595,7 +595,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line18)
+                    self.tbox99.insert(END, "\n\n==> " + line18)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -626,7 +626,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line19)
+                    self.tbox99.insert(END, "\n\n==> " + line19)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -657,7 +657,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line20)
+                    self.tbox99.insert(END, "\n\n==> " + line20)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -688,7 +688,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line21)
+                    self.tbox99.insert(END, "\n\n==> " + line21)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -719,7 +719,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line22)
+                    self.tbox99.insert(END, "\n\n==> " + line22)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -750,7 +750,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line23)
+                    self.tbox99.insert(END, "\n\n==> " + line23)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
@@ -781,7 +781,7 @@ def callBox(self):
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.tbox99.insert(END, "\n\n---> " + line24)
+                    self.tbox99.insert(END, "\n\n==> " + line24)
                     self.tbox99.insert(INSERT, line)
                     self.tbox99.insert(INSERT, lines[i+1])
                     self.tbox99.insert(INSERT, lines[i+2])
