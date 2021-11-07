@@ -236,7 +236,7 @@ def callResident(self):
         self.y24, window=self.butt2labo)
 
     self.x25, self.y25 = 868, 262
-    self.butt2vm = tk.Button(self.can, text="Validation2",
+    self.butt2vm = tk.Button(self.can, text="Validation 2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=32))
@@ -315,7 +315,7 @@ def callResident(self):
         self.y34, window=self.butt3labo)
 
     self.x35, self.y35 = 868, 294
-    self.butt3vm = tk.Button(self.can, text="Validation3",
+    self.butt3vm = tk.Button(self.can, text="Validation 3",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=3))
@@ -395,7 +395,7 @@ def callResident(self):
         self.y44, window=self.butt4labo)
 
     self.x45, self.y45 = 868, 326
-    self.butt4vm = tk.Button(self.can, text="Validation4",
+    self.butt4vm = tk.Button(self.can, text="Validation 4",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=4))
@@ -475,7 +475,7 @@ def callResident(self):
         self.y54, window=self.butt5labo)
 
     self.x55, self.y55 = 868, 358
-    self.butt5vm = tk.Button(self.can, text="Validation5", font=16,
+    self.butt5vm = tk.Button(self.can, text="Validation 5", font=16,
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=5))
@@ -554,7 +554,7 @@ def callResident(self):
         self.y65, window=self.butt6labo)
 
     self.x66, self.y66 = 868, 390
-    self.butt6vm = tk.Button(self.can, text="Validation6", font=16,
+    self.butt6vm = tk.Button(self.can, text="Validation 6", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=6))
@@ -633,7 +633,7 @@ def callResident(self):
         self.y74, window=self.butt7labo)
 
     self.x75, self.y75 = 868, 422
-    self.butt7vm = tk.Button(self.can, text="Validation7",
+    self.butt7vm = tk.Button(self.can, text="Validation 7",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=7))
@@ -712,7 +712,7 @@ def callResident(self):
         self.y84, window=self.butt8labo)
 
     self.x85, self.y85 = 868, 454
-    self.butt8vm = tk.Button(self.can, text="Validation8", font=16,
+    self.butt8vm = tk.Button(self.can, text="Validation 8", font=16,
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=8))
@@ -791,7 +791,7 @@ def callResident(self):
         self.y94, window=self.butt9labo)
 
     self.x95, self.y95 = 868, 486
-    self.butt9vm = tk.Button(self.can, text="Validation9",
+    self.butt9vm = tk.Button(self.can, text="Validation 9",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=9))
@@ -870,7 +870,7 @@ def callResident(self):
         self.y104, window=self.butt10labo)
 
     self.x105, self.y105 = 868, 518
-    self.butt10vm = tk.Button(self.can, text="Validation10",
+    self.butt10vm = tk.Button(self.can, text="Validation 10",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=10))
@@ -949,7 +949,7 @@ def callResident(self):
         self.y114, window=self.butt11labo)
 
     self.x115, self.y115 = 868, 550
-    self.butt11vm = tk.Button(self.can, text="Validation11",
+    self.butt11vm = tk.Button(self.can, text="Validation 11",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=11))
@@ -1028,7 +1028,7 @@ def callResident(self):
         self.y124, window=self.butt12labo)
 
     self.x125, self.y125 = 868, 582
-    self.butt12vm = tk.Button(self.can, text="Validation12",
+    self.butt12vm = tk.Button(self.can, text="Validation 12",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=12))
@@ -1107,7 +1107,7 @@ def callResident(self):
         self.y134, window=self.butt13labo)
 
     self.x135, self.y135 = 868, 614
-    self.butt13vm = tk.Button(self.can, text="Validation13",
+    self.butt13vm = tk.Button(self.can, text="Validation 13",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=13))
@@ -1186,7 +1186,7 @@ def callResident(self):
         self.y144, window=self.butt14labo)
 
     self.x145, self.y145 = 868, 646
-    self.butt14vm = tk.Button(self.can, text="Validation14",
+    self.butt14vm = tk.Button(self.can, text="Validation 14",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: callCareVal(self, v=14))
@@ -1267,7 +1267,7 @@ def callResident(self):
     self.x155, self.y155 = 868, 678
     self.butt15vm = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
-        activebackground='pale turquoise', text="Validation15",
+        activebackground='pale turquoise', text="Validation 15",
         command=lambda: callCareVal(self, v=15))
     self.fbutt15vm_window = self.can.create_window(self.x155,
         self.y155, window=self.butt15vm)
@@ -1346,7 +1346,7 @@ def callResident(self):
     self.x165, self.y165 = 868, 710
     self.butt16vm = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Validation16",
+        activebackground='pale turquoise', text="Validation 16",
         command=lambda: callCareVal(self, v=16))
     self.fbutt16vm_window = self.can.create_window(self.x165,
         self.y165, window=self.butt16vm)
@@ -1425,7 +1425,7 @@ def callResident(self):
     self.x175, self.y175 = 868, 742
     self.butt17vm = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
-        activebackground='pale turquoise', text="Validation17",
+        activebackground='pale turquoise', text="Validation 17",
         command=lambda: callCareVal(self, v=17))
     self.fbutt17vm_window = self.can.create_window(self.x175,
         self.y175, window=self.butt17vm)
@@ -1504,7 +1504,7 @@ def callResident(self):
     self.x185, self.y185 = 868, 774
     self.butt18vm = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Validation18",
+        activebackground='pale turquoise', text="Validation 18",
         command=lambda: callCareVal(self, v=18))
     self.fbutt18vm_window = self.can.create_window(self.x185,
         self.y185, window=self.butt18vm)
@@ -1583,7 +1583,7 @@ def callResident(self):
     self.x195, self.y195 = 868, 806
     self.butt19vm = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
-        activebackground='pale turquoise', text="Validation19",
+        activebackground='pale turquoise', text="Validation 19",
         command=lambda: callCareVal(self, v=19))
     self.fbutt19vm_window = self.can.create_window(self.x195,
         self.y195, window=self.butt19vm)
@@ -1662,7 +1662,7 @@ def callResident(self):
     self.x205, self.y205 = 868, 838
     self.but20vm = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Validation20",
+        activebackground='pale turquoise', text="Validation 20",
         command=lambda: callCareVal(self, v=20))
     self.fbut20vm_window = self.can.create_window(self.x205,
         self.y205, window=self.but20vm)
@@ -1741,7 +1741,7 @@ def callResident(self):
     self.x215, self.y215 = 868, 870
     self.butt21vm = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
-        activebackground='pale turquoise', text="Validation21",
+        activebackground='pale turquoise', text="Validation 21",
         command=lambda: callCareVal(self, v=21))
     self.fbutt21vm_window = self.can.create_window(self.x215,
         self.y215, window=self.butt21vm)
@@ -1820,7 +1820,7 @@ def callResident(self):
     self.x225, self.y225 = 868, 902
     self.butt22vm = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Validation22",
+        activebackground='pale turquoise', text="Validation 22",
         command=lambda: callCareVal(self, v=22))
     self.fbutt22vm_window = self.can.create_window(self.x225,
         self.y225, window=self.butt22vm)
@@ -1899,7 +1899,7 @@ def callResident(self):
     self.x235, self.y235 = 868, 934
     self.butt23vm = tk.Button(self.can, width=10, font=16,
         fg='navy', bg='SteelBlue2',
-        activebackground='pale turquoise', text="Validation23",
+        activebackground='pale turquoise', text="Validation 23",
         command=lambda: callCareVal(self, v=23))
     self.fbutt23vm_window = self.can.create_window(self.x235,
         self.y235, window=self.butt23vm)
@@ -1978,7 +1978,7 @@ def callResident(self):
     self.x245, self.y245 = 868, 966
     self.butt24vm = tk.Button(self.can, width=10, font=16,
         fg='white', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Validation24",
+        activebackground='pale turquoise', text="Validation 24",
         command=lambda: callCareVal(self, v=24))
     self.fbutt24vm_window = self.can.create_window(self.x245,
         self.y245, window=self.butt24vm)
