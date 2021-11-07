@@ -164,6 +164,6 @@ def medicalVisit(self, t):
         subprocess.run("./vmed/vm_patient24.py", check=True)
         self.master.deiconify()
     else:
-        print("Errro, to call ./vmed/ with subprocess")
+        print("[!] Error, to call ./vmed/ with subprocess")
         tk.messagebox.showerror("Error",
             "Something wrong with subprocess...(medicalVisit extensions)")

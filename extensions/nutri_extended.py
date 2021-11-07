@@ -4,7 +4,7 @@
 
 """
     Intermediate file of functions
-    to call scripts from ./param/
+    to call scripts from ./nutrition/
 """
 
 

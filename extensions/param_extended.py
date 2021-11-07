@@ -96,6 +96,6 @@ def parameters(self, p):
         print("Patient n°", p)
         subprocess.Popen("./param/fencap24.py", shell=False)
     else:
-        print("Errro, to call ./param/fencapX.py with subprocess")
+        print("[!] Error, to call ./param/fencapX.py with subprocess")
         tk.messagebox.showerror("Error",
             "Something wrong with subprocess...(parameters extensions)")

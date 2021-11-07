@@ -24,8 +24,8 @@ from boxapp import callBox
 from reminder import alarmThread
 from manualapp import instalpy
 from patcaps import callResident
-from backapp import *
 from Backup.backupfile import dataBackToSave
+from backapp import *
 from extensions.agenda_extension import extendAgenda
 from extensions.case_extended import checkcaseExtend 
 from extensions.health_ext import extendHealth
@@ -35,6 +35,7 @@ from calBmi.bmi_backup import bmiBackToSave
 from extensions.bmi_extended import bmicalkilo
 from extensions.medvisit_extended import medicalVisit
 from extensions.nutri_extended import nutritionExtend
+from extensions.overview import overviewExtend
 from contact.patconfunc import callPatNum
 from contact.famconfunc import callFamWind
 from contact.doctorconfunc import callDoctorWind
@@ -2068,111 +2069,9 @@ class Application(tk.Frame):
 
     def allFilesBackup(self, f):
         """
-            To acces files into Backup folder.
-            self.master.wm_attributes('-alpha', 0.8)
-            self.master.update()
-            func...
-            self.master.wm_attributes('-alpha', 1.0)
-            self.master.update()
+            Call backup functions from extensions folder.
         """
-        if f == 1:
-            self.master.withdraw()
-            backupFuncPatient(self)
-            self.master.deiconify()
-        elif f == 2:
-            self.master.withdraw()
-            backupFuncPatient2(self)
-            self.master.deiconify()
-        elif f == 3:
-            self.master.withdraw()
-            backupFuncPatient3(self)
-            self.master.deiconify()
-        elif f == 4:
-            self.master.withdraw()
-            backupFuncPatient4(self)
-            self.master.deiconify()
-        elif f == 5:
-            self.master.withdraw()
-            backupFuncPatient5(self)
-            self.master.deiconify()
-        elif f == 6:
-            self.master.withdraw()
-            backupFuncPatient6(self)
-            self.master.deiconify()
-        elif f == 7:
-            self.master.withdraw()
-            backupFuncPatient7(self)
-            self.master.deiconify()
-        elif f == 8:
-            self.master.withdraw()
-            backupFuncPatient8(self)
-            self.master.deiconify()
-        elif f == 9:
-            self.master.withdraw()
-            backupFuncPatient9(self)
-            self.master.deiconify()
-        elif f == 10:
-            self.master.withdraw()
-            backupFuncPatient10(self)
-            self.master.deiconify()
-        elif f == 11:
-            self.master.withdraw()
-            backupFuncPatient11(self)
-            self.master.deiconify()
-        elif f == 12:
-            self.master.withdraw()
-            backupFuncPatient12(self)
-            self.master.deiconify()
-        elif f == 13:
-            self.master.withdraw()
-            backupFuncPatient13(self)
-            self.master.deiconify()
-        elif f == 14:
-            self.master.withdraw()
-            backupFuncPatient14(self)
-            self.master.deiconify()
-        elif f == 15:
-            self.master.withdraw()
-            backupFuncPatient15(self)
-            self.master.deiconify()
-        elif f == 16:
-            self.master.withdraw()
-            backupFuncPatient16(self)
-            self.master.deiconify()
-        elif f == 17:
-            self.master.withdraw()
-            backupFuncPatient17(self)
-            self.master.deiconify()
-        elif f == 18:
-            self.master.withdraw()
-            backupFuncPatient18(self)
-            self.master.deiconify()
-        elif f == 19:
-            self.master.withdraw()
-            backupFuncPatient19(self)
-            self.master.deiconify()
-        elif f == 20:
-            self.master.withdraw()
-            backupFuncPatient20(self)
-            self.master.deiconify()
-        elif f == 21:
-            self.master.withdraw()
-            backupFuncPatient21(self)
-            self.master.deiconify()
-        elif f == 22:
-            self.master.withdraw()
-            backupFuncPatient22(self)
-            self.master.deiconify()
-        elif f == 23:
-            self.master.withdraw()
-            backupFuncPatient23(self)
-            self.master.deiconify()
-        elif f == 24:
-            self.master.withdraw()
-            backupFuncPatient24(self)
-            self.master.deiconify()
-        else:
-            print("[!] Error - maybe no backup maide !")
+        overviewExtend(self, f)
 
     def updateFiletxt(self):
         """
