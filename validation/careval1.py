@@ -15,46 +15,24 @@ def valFunc1(self):
     """
     self.effacer()
     self.delScroll()
-    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcustom.png')
+    self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
 
-    def regroupAll():
-        """
-            second textbox2
-        """
-        self.x11, self.y11 = 900, 480
-        self.txtBox2 = tk.Text(self.can, height=12, width=60, font=18, relief=tk.SUNKEN)
-        self.txtBox2.delete('1.0', tk.END)
-        self.txtBox2.update()
-        self.ftxtBox2_window = self.can.create_window(self.x11, self.y11, window=self.txtBox2)
+    def awayOut():
+        try:
+            self.effacer()
+            self.showPatients()
+        except (OSError, ValueError) as p_out:
+            print("[!] Error to way out !!!", p_out)
 
-        def importationTxtBox():
-            """
-                To import data from validate_1.txt
-                and display in textbox2.
-            """
-            try:
-                if os.path.getsize('./validation/valfiles1/validate_1.txt'):
-                    print("[+] Ok, validate_1.txt exist")
-            except FileNotFoundError as errfnf:
-                print("[!] File validate_1.txt not found !", errfnf)
-                with open('./validation/valfiles1/validate_1.txt', 'w') as testf:
-                    print("[+] File validate_1.txt created !")
-
-            try:
-                if os.path.exists('./validation/valfiles1/validate_1.txt'):
-                    with open('./validation/valfiles1/validate_1.txt', 'r') as val_f:
-                        nametxt = val_f.read()
-            except (FileNotFoundError, UnboundLocalError) as err_nfvali:
-                print("[!] File validate_1.txt not found !", err_nfvali)
-
-            self.txtBox2.insert(tk.INSERT, "--- Heal-Care ---\n")
-            self.txtBox2.insert(tk.END, nametxt)
-
-        importationTxtBox()
-
-    regroupAll()
+    # button return
+    self.x40, self.y40 = 80, 40
+    self.butreturn = tk.Button(self.can, text="Return to main", width=10,
+        fg='cyan', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
+        activebackground='pale turquoise', command=awayOut)
+    self.fbutreturn_window = self.can.create_window(self.x40, self.y40,
+        window=self.butreturn)
 
     # first textbox
     self.x10, self.y10 = 260, 460
@@ -69,6 +47,7 @@ def valFunc1(self):
         """
         try:
             with open('./validation/valfiles1/validate_1.txt', 'a+') as wcarefile:
+                wcarefile.write('\n\n' + time.strftime('%d/%m/%Y'))
                 wcarefile.write('\n' + self.patname.get() + ' - ')
                 wcarefile.write(self.healthenter.get() + ' - ')
                 wcarefile.write(self.daystring.get() + ' - ')
@@ -78,6 +57,7 @@ def valFunc1(self):
         except FileNotFoundError as err_wc:
             print("[!] File validate_1.txt not found !", err_wc)
             with open('./validation/valfiles1/validate_1.txt', 'a+') as add_caref:
+                add_caref.write('\n\n' + time.strftime('%d/%m/%Y'))
                 add_caref.write('\n' + self.patname.get() + ' - ')
                 add_caref.write(self.healthenter.get() + ' - ')
                 add_caref.write(self.daystring.get() + ' - ')
@@ -88,8 +68,8 @@ def valFunc1(self):
     # Label title
     self.x1, self.y1 = 625, 50
     self.lbltitle = tk.Label(self.can, text="Validation",
-        font=('MS Serif', 30, 'bold'),
-        bg='DodgerBlue2', fg='white')
+        font=('MS Serif', 26, 'bold'),
+        bg='DodgerBlue2', fg='cyan')
     self.wlbltitle_window = self.can.create_window(self.x1, self.y1,
         window = self.lbltitle)
 
@@ -127,7 +107,7 @@ def valFunc1(self):
 
     # Care lbl
     self.x4, self.y4 = 120, 170
-    self.lblcare = tk.Label(self.can, text="Care to validate :",
+    self.lblcare = tk.Label(self.can, text="Heal Care :",
         font=('MS Serif', 14, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblcare_window = self.can.create_window(self.x4, self.y4,
@@ -137,7 +117,7 @@ def valFunc1(self):
     self.healthenter = tk.StringVar()
     self.labhealth = tk.Entry(self.can, textvariable=self.healthenter,
         highlightbackground='grey', bd=2)
-    self.healthenter.set("care heal")
+    self.healthenter.set("???")
     self.wlabhealth_window = self.can.create_window(self.x5, self.y5,
         window = self.labhealth)
 
@@ -146,7 +126,7 @@ def valFunc1(self):
 
     # number of times per day label
     self.x6, self.y6 = 120, 220
-    self.lblperday = tk.Label(self.can, text="Per day :",
+    self.lblperday = tk.Label(self.can, text="Per day - Per week :",
         font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
     self.wlblperday_window = self.can.create_window(self.x6, self.y6,
         window = self.lblperday)
@@ -154,16 +134,17 @@ def valFunc1(self):
     # number of times per day combobox
     def nbreperday():
         self.comboBoxpd['values']=['', '1x/d', '2x/d', '3x/d', '4x/d',
-        '5x/d', '6x/d']
+        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week']
 
     self.daystring = tk.StringVar()
-    self.comboBoxpd = ttk.Combobox(self.can, width=4, textvariable=self.daystring,
+    self.comboBoxpd = ttk.Combobox(self.can, width=8, textvariable=self.daystring,
         values=['', '1x/d', '2x/d', '3x/d', '4x/d',
-        '5x/d', '6x/d'], postcommand=nbreperday)
+        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week'],
+        postcommand=nbreperday)
 
     self.comboBoxpd.bind("<<ComboboxSelected>>", callbackDay)
     self.comboBoxpd.current(0)
-    self.fcomboBoxpd_window = self.can.create_window(260, 220, window=self.comboBoxpd)
+    self.fcomboBoxpd_window = self.can.create_window(277, 220, window=self.comboBoxpd)
 
     # until date entry
     self.x7, self.y7 = 120, 270
@@ -186,15 +167,105 @@ def valFunc1(self):
     self.wlblcomment_window = self.can.create_window(self.x9, self.y9,
         window = self.lblcomment)
 
-    # enter button
-    self.x11, self.y11 = 260, 620
+    def regroupAll():
+        """
+            second textbox2
+        """
+        self.x20, self.y20 = 900, 460
+        self.txtBox2 = tk.Text(self.can, height=20, width=60, font=18, relief=tk.SUNKEN)
+        self.txtBox2.delete('1.0', tk.END)
+        self.txtBox2.update()
+        self.ftxtBox2_window = self.can.create_window(self.x20, self.y20,
+            window=self.txtBox2)
+
+        def importationTxtBox():
+            """
+                To import data from validate_1.txt
+                and display in textbox2.
+            """
+            try:
+                if os.path.getsize('./validation/valfiles1/validate_1.txt'):
+                    print("[+] Ok, validate_1.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File validate_1.txt not found !", errfnf)
+                with open('./validation/valfiles1/validate_1.txt', 'w') as testf:
+                    print("[+] File validate_1.txt created !")
+
+            try:
+                if os.path.exists('./validation/valfiles1/validate_1.txt'):
+                    with open('./validation/valfiles1/validate_1.txt', 'r') as val_f:
+                        nametxt = val_f.read()
+            except (FileNotFoundError, UnboundLocalError) as err_nfvali:
+                print("[!] File validate_1.txt not found !", err_nfvali)
+
+            self.txtBox2.insert(tk.INSERT, "--- Heal Care ---\n")
+            self.txtBox2.insert(tk.END, nametxt)
+
+        importationTxtBox()
+
+    regroupAll()
+
+    # left button to save
+    self.x21, self.y21 = 260, 620
     self.butsavechk = tk.Button(self.can, text="Save", width=20,
         fg='yellow', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
-        activebackground='pale turquoise', command=lambda: ([stackvalidate(self), regroupAll()]))
-    self.fbutsavechk_window = self.can.create_window(self.x11, self.y11,
+        activebackground='pale turquoise', command=lambda: ([stackvalidate(self),
+            regroupAll()]))
+    self.fbutsavechk_window = self.can.create_window(self.x21, self.y21,
         window=self.butsavechk)
 
-    # textbox textbox
+    # explanations lbl
+    self.x23, self.y23 = 890, 120
+    self.lblexplan = tk.Label(self.can, text="Date and hour are automaticaly recorded.",
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
+    self.wlblexplan_window = self.can.create_window(self.x23, self.y23,
+        window = self.lblexplan)
+
+    def validRightFrame(self):
+        """
+            Save everything from Right Frame.
+        """
+        print(self.firstcheck.get())
+        if self.firstcheck.get() == 1:
+            print("ok validate")
+            with open('./validation/valfiles1/validate_1.txt', 'a+') as oneval:
+                oneval.write('\n\n' + time.strftime("%d/%m/%Y : %H:%M:%S") + '\n')
+                oneval.write(self.tttovalid.get())
+                oneval.write("[+] validated")
+        else:
+            print("[---] Nothing validated.")
+
+    self.x30, self.y30 = 710, 170
+    self.firstcheck = tk.IntVar()
+    self.checkone = tk.Checkbutton(self.can, text="Validate", font=('MS Serif', 12),
+        fg='navy', bg='DodgerBlue2', variable=self.firstcheck, onvalue=1, offvalue=0,
+        height=1, width=8, anchor=tk.W)
+    self.fcheckone_window = self.can.create_window(self.x30, self.y30,
+        window = self.checkone)
+
+    self.x31, self.y31 = 870, 170
+    self.tttovalid = tk.StringVar()
+    self.lbltreat = tk.Entry(self.can, width=20, textvariable=self.tttovalid,
+        highlightbackground='grey', bd=2)
+    self.tttovalid.set('???')
+    self.wlbltreat_window = self.can.create_window(self.x31, self.y31,
+        window = self.lbltreat)
+
+    # Care lbl for validating
+    self.x32, self.y32 = 1070, 170
+    self.lblcare = tk.Label(self.can, text="<-- Care to validate",
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
+    self.wlblcare_window = self.can.create_window(self.x32, self.y32,
+        window = self.lblcare)
+
+    # right button to save
+    self.x33, self.y33 = 870, 220
+    self.butrightchk = tk.Button(self.can, text="Save Validation", width=20,
+        fg='yellow', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
+        activebackground='pale turquoise', command=lambda: ([validRightFrame(self),
+            regroupAll()]))
+    self.fbutrightchk_window = self.can.create_window(self.x33, self.y33,
+        window=self.butrightchk)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.unbind_all("<Button-4>")
