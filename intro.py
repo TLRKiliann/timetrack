@@ -59,7 +59,7 @@ def closeWindow():
         """
             Video intro of NieR:Automata
         """
-        playsound("./syno_gif/minipodcom.mp4")
+        playsound("./syno_gif/9s_prog.mp4")
     t1 = threading.Thread(target=muse)
     t1.start()
 
@@ -67,7 +67,6 @@ def closeWindow():
         """
             Download all files.
         """
-        time.sleep(6)
         launchDownload()
     down()
 
@@ -75,9 +74,14 @@ def closeWindow():
         """
             Load 24 folders when app start.
         """
-        time.sleep(6)
+        #time.sleep(2)
         loaderfile()
     tocopyfiles()
+
+    def pod():
+        playsound("./syno_gif/pod_font.mp3")
+    t2 = threading.Thread(target=pod)
+    t2.start()
 
 def validentry(event):
     """
