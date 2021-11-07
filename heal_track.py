@@ -16,9 +16,11 @@ from tkinter import scrolledtext
 import os
 import sys
 import platform
+import subprocess
 import time
 import json
 from playsound import playsound
+
 #import intro
 from boxapp import callBox
 from reminder import alarmThread
