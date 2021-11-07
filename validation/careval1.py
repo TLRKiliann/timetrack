@@ -4,6 +4,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+import os
 import time
 
 
@@ -17,6 +18,72 @@ def valFunc1(self):
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcustom.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
+
+    def regroupAll():
+        """
+            second textbox2
+        """
+        self.x11, self.y11 = 900, 480
+        self.txtBox2 = tk.Text(self.can, height=12, width=60, font=18, relief=tk.SUNKEN)
+        self.txtBox2.delete('1.0', tk.END)
+        self.txtBox2.update()
+        self.ftxtBox2_window = self.can.create_window(self.x11, self.y11, window=self.txtBox2)
+
+        def importationTxtBox():
+            """
+                To import data from validate_1.txt
+                and display in textbox2.
+            """
+            try:
+                if os.path.getsize('./validation/valfiles1/validate_1.txt'):
+                    print("[+] Ok, validate_1.txt exist")
+            except FileNotFoundError as errfnf:
+                print("[!] File validate_1.txt not found !", errfnf)
+                with open('./validation/valfiles1/validate_1.txt', 'w') as testf:
+                    print("[+] File validate_1.txt created !")
+
+            try:
+                if os.path.exists('./validation/valfiles1/validate_1.txt'):
+                    with open('./validation/valfiles1/validate_1.txt', 'r') as val_f:
+                        nametxt = val_f.read()
+            except (FileNotFoundError, UnboundLocalError) as err_nfvali:
+                print("[!] File validate_1.txt not found !", err_nfvali)
+
+            self.txtBox2.insert(tk.INSERT, "--- Heal-Care ---\n")
+            self.txtBox2.insert(tk.END, nametxt)
+
+        importationTxtBox()
+
+    regroupAll()
+
+    # first textbox
+    self.x10, self.y10 = 260, 460
+    self.txtBox = tk.Text(self.can, height=10, width=40, font=18, relief=tk.SUNKEN)
+    self.txtBox.delete('1.0', tk.END)
+    self.txtBox.update()
+    self.ftxtBox_window = self.can.create_window(self.x10, self.y10, window=self.txtBox)
+
+    def stackvalidate(self):
+        """
+            To save data from left frame.
+        """
+        try:
+            with open('./validation/valfiles1/validate_1.txt', 'a+') as wcarefile:
+                wcarefile.write('\n' + self.patname.get() + ' - ')
+                wcarefile.write(self.healthenter.get() + ' - ')
+                wcarefile.write(self.daystring.get() + ' - ')
+                wcarefile.write('Date of end : ' + self.datenter.get() + ' - ')
+                wcarefile.write(self.txtBox.get('1.0', tk.END))
+                print("[+] Ok, data recorded into file validate_1.txt.")
+        except FileNotFoundError as err_wc:
+            print("[!] File validate_1.txt not found !", err_wc)
+            with open('./validation/valfiles1/validate_1.txt', 'a+') as add_caref:
+                add_caref.write('\n' + self.patname.get() + ' - ')
+                add_caref.write(self.healthenter.get() + ' - ')
+                add_caref.write(self.daystring.get() + ' - ')
+                add_caref.write('Date of end : ' + self.datenter.get() + ' - ')
+                add_caref.write(self.txtBox.get('1.0', tk.END))
+                print("[+] File validate_1.txt created !")
 
     # Label title
     self.x1, self.y1 = 625, 50
@@ -42,17 +109,17 @@ def valFunc1(self):
         print("[!] File entryfile.txt doesn't exist !", callfile)
 
     try:
-        self.data_time = line1
+        self.patname = line1
         self.x3, self.y3 = 320, 120
-        self.new_data1 = tk.StringVar()
+        self.patname = tk.StringVar()
         self.entread = tk.Entry(self.can,
-            textvariable=self.new_data1,
+            textvariable=self.patname,
             highlightbackground='grey', bd=2)
         if line1 == '-':
             line1 = line1
         else:
             line1 = line1[:-1]
-        self.new_data1.set(line1)
+        self.patname.set(line1)
         self.fentread_window = self.can.create_window(self.x3,
             self.y3, window=self.entread)
     except UnboundLocalError as ub_error1:
@@ -119,27 +186,12 @@ def valFunc1(self):
     self.wlblcomment_window = self.can.create_window(self.x9, self.y9,
         window = self.lblcomment)
 
-    # first textbox
-    self.x10, self.y10 = 260, 460
-    self.txtBox = tk.Text(self.can, height=10, width=40, font=18, relief=tk.SUNKEN)
-    #self.txtBox.delete('1.0', tk.END)
-    #self.txtBox.update()
-    self.ftxtBox_window = self.can.create_window(self.x10, self.y10, window=self.txtBox)
-
-    # second textbox2
-    self.x11, self.y11 = 900, 380
-    self.txtBox2 = tk.Text(self.can, height=28, width=60, font=18, relief=tk.SUNKEN)
-    #self.txtBox2.delete('1.0', tk.END)
-    #self.txtBox2.update()
-    self.ftxtBox2_window = self.can.create_window(self.x11, self.y11, window=self.txtBox2)
-
-
     # enter button
     self.x11, self.y11 = 260, 620
     self.butsavechk = tk.Button(self.can, text="Save", width=20,
         fg='yellow', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
-        activebackground='pale turquoise')
-    self.butsavechk_window = self.can.create_window(self.x11, self.y11,
+        activebackground='pale turquoise', command=lambda: ([stackvalidate(self), regroupAll()]))
+    self.fbutsavechk_window = self.can.create_window(self.x11, self.y11,
         window=self.butsavechk)
 
     # textbox textbox
