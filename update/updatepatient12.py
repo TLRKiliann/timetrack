@@ -47,17 +47,14 @@ def searchDB():
 
 def diagRecapt(diagnosis):
     try:
-        if os.path.getsize('./diag/doc_diag12/diagrecap12.txt'):
-            with open('./diag/doc_diag12/diagrecap12.txt', 'a+') as filediag:
-                filediag.write(diagnosis + '\n')
-
+        if os.path.exists('./diag/doc_diag12/diagrecap12.txt'):
             tk.messagebox.showinfo("Info", "Data was updated for entryfile12.txt, "\
                 "allergyfile12.txt !")
     except FileNotFoundError as not_ffile:
-        print("- diagrecap12.txt not found, pls create file clicking on diagnostic -")
-        print(str(not_ffile))
-        tk.messagebox.showwarning("WARNING", "File diagrecap12.txt not found ! "\
-            "Please, create one by clicking on diagnostic 'add'.")
+        print("[!] diagrecap12.txt not found !", not_ffile)
+        with open('./diag/doc_diag12/diagrecap12.txt', 'w') as filediag:
+            filediag.write(diagnosis + '\n')
+        tk.messagebox.showwarning("WARNING", "File diagrecap12.txt created !")
 
 def searchLineName10(firstpat, surname, birthvalue,
     allergia, transdisval, diagnosis):

@@ -45,21 +45,15 @@ def searchDB():
         print("[!] Database no connected [!]")
 
 def diagRecapt(diagnosis):
-    """
-        Modify main diagnosis in diagrecap_X.txt file.
-    """
     try:
-        if os.path.getsize('./diag/doc_diag2/diagrecap2.txt'):
-            with open('./diag/doc_diag2/diagrecap2.txt', 'a+') as filediag:
-                filediag.write(diagnosis + '\n')
-
+        if os.path.exists('./diag/doc_diag2/diagrecap2.txt'):
             tk.messagebox.showinfo("Info", "Data was updated for entryfile2.txt, "\
                 "allergyfile2.txt !")
     except FileNotFoundError as not_ffile:
-        print("- diagrecap2.txt not found, plz create file clicking on diagnostic -")
-        print(not_ffile)
-        tk.messagebox.showwarning("WARNING", "File diagrecap2.txt not found ! "\
-            "Please, create one by clicking on diagnostic 'add'.")
+        print("[!] diagrecap2.txt not found !", not_ffile)
+        with open('./diag/doc_diag2/diagrecap2.txt', 'w') as filediag:
+            filediag.write(diagnosis + '\n')
+        tk.messagebox.showwarning("WARNING", "File diagrecap2.txt created !")
 
 def searchLineName2(firstpat, surname, birthvalue,
     allergia, transdisval, diagnosis):
