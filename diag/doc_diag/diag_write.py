@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -18,16 +17,16 @@ root.configure(background='DodgerBlue2')
 top = tk.Frame(root, bg='DodgerBlue2')
 bottom = tk.Frame(root, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
 labelo = tk.Label(root, text="Diagnostics and ATCD for : ",
     font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
-    line_a=filename.readline()
-    line_b=filename.readline()
-    line_c=filename.readline()
+    line_a = filename.readline()
+    line_b = filename.readline()
+    line_c = filename.readline()
 
 textname = tk.StringVar()
 entryName = tk.Entry(root, textvariable=textname)
@@ -52,7 +51,7 @@ def retrieve_upload():
     diagupload()
 
 def saveMyButt():
-    MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"\
+    MsgBox = tk.messagebox.askquestion("Confirm", "Are you sure ?\n"\
         "It will save all data !")
     if MsgBox == 'yes':
         retrieve_input()
@@ -70,7 +69,7 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(tk.END, li)
 
-textBox = Text(root, height=15, width=60, font=18, relief=SUNKEN)
+textBox = tk.Text(root, height=15, width=60, font=18, relief=tk.SUNKEN)
 #textBox.insert(tk.INSERT, "En date du : ")
 #textBox.insert(tk.END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)

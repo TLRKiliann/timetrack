@@ -32,9 +32,9 @@ def task(root):
         style = 'blue.Horizontal.TProgressbar',
         orient = 'horizontal',
         length = 200,
-        mode = 'determinate')
+        mode = 'indeterminate')
     pb_need.pack()
-    pb_need.start(6)
+    pb_need.start(10)
     root.resizable(False, False)
     root.mainloop()
 
@@ -64,6 +64,7 @@ def process_launched(root):
         tk.messagebox.showerror("Error", "No patient1_14b.txt to download !")
 
     print('My pid is :', os.getpid())
+    print("[ Downloading complete ! ]")
     root.quit()
 
 def need_dl1():

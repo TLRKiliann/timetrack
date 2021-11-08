@@ -222,8 +222,8 @@ def saveData():
     except FileNotFoundError as outcom:
         print("[!] Sorry, file 'main_14b.txt' not found !", outcom)
         print("[+] File 'main_14b.txt' created !")
-        with open('./need/doc_suivi/main_14b.txt', 'a+') as namefile:
-            namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
+        with open('./need/doc_suivi/main_14b.txt', 'a+') as namesecfi:
+            namesecfi.write(textBox.get("0.0", "end-1c") + '\n\n')
     textBox.insert(tk.INSERT, "\n---Data saved !---")
     suiteBackup()
     uploadfunc()
