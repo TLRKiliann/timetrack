@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import os
@@ -46,22 +45,19 @@ def searchDB():
         sqlCon.close()
     except:
         print("Error with function search in DB")
-        messagebox.showwarning('Warning', 'Database no connected !')
+        tk.messagebox.showwarning('Warning', 'Database no connected !')
         print("Database no connected !")
 
 def diagRecapt(diagnosis):
     try:
-        if os.path.getsize('./diag/doc_diag/diagrecap1.txt'):
-            with open('./diag/doc_diag/diagrecap1.txt', 'a+') as filediag:
-                filediag.write(diagnosis + '\n')
-
-            messagebox.showinfo("Info", "Data was updated for entryfile.txt, "\
+        if os.path.exists('./diag/doc_diag/diagrecap1.txt'):
+            tk.messagebox.showinfo("Info", "Data was updated for entryfile.txt, "\
                 "allergyfile.txt !")
     except FileNotFoundError as not_ffile:
-        print("- diagrecap1.txt not found, plz create file clicking on diagnostic -")
-        print(not_ffile)
-        messagebox.showwarning("WARNING", "File diagrecap1.txt not found ! "\
-            "Please, create one by clicking on diagnostic 'add'.")
+        print("[!] diagrecap1.txt not found !", not_ffile)
+        with open('./diag/doc_diag/diagrecap1.txt', 'w') as filediag:
+            filediag.write(diagnosis + '\n')
+        tk.messagebox.showwarning("WARNING", "File diagrecap1.txt created !")
 
 def searchLineName(firstpat, surname, birthvalue,
     allergia, transdisval, diagnosis):
@@ -70,7 +66,7 @@ def searchLineName(firstpat, surname, birthvalue,
         entryfile.txt and display
         messagebox.
     """
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
+    MsgBox = tk.messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
         with open('./newpatient/entryfile.txt', 'w') as fullfile:
             fullfile.write(firstpat + " " + surname + '\n')
@@ -82,7 +78,7 @@ def searchLineName(firstpat, surname, birthvalue,
         with open('./allergy/allergyfile.txt', 'w') as filealler:
             filealler.write(allergia + " ")
     else:
-        messagebox.showinfo("INFO", "! Nothing has been saved !")
+        tk.messagebox.showinfo("INFO", "! Nothing has been saved !")
     diagRecapt(diagnosis)
 
 def funcrecord():
@@ -95,10 +91,10 @@ def funcrecord():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File entryfile.txt uploaded !")
-        #messagebox.showinfo("INFO", "entryfile.txt uploaded...")
+        #tk.messagebox.showinfo("INFO", "entryfile.txt uploaded...")
     else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No entryfile.txt to upload...")
+        print("[!] No file to upload !")
+        tk.messagebox.showerror("Error", "No entryfile.txt to upload...")
 
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
@@ -120,7 +116,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
 
     # Interact with database to update
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
-        messagebox.showerror("MySQL Connection", "Enter Correct Details !")
+        tk.messagebox.showerror("MySQL Connection", "Enter Correct Details !")
     else:
         sqlCon = pymysql.connect(host='192.168.18.12', port=3306, user='koala33',
             password='Ko@l@tr3379', database='timetrackconn')
@@ -137,7 +133,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         ))
         sqlCon.commit()
         sqlCon.close()
-        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+        tk.messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
 
     if idpatient == '1':
         if os.path.getsize('./newpatient/entryfile.txt'):
@@ -215,7 +211,7 @@ diagnos_pat.pack()
 buttonsearch = tk.Button(gui, text="Search ID", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='pale turquoise', command = searchDB)
-buttonsearch.pack(side=LEFT, padx=10, pady=20)
+buttonsearch.pack(side=tk.LEFT, padx=10, pady=20)
 
 buttonupdate = tk.Button(gui, text="Enter", width=8, bd=3,
     fg='orange', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -223,12 +219,12 @@ buttonupdate = tk.Button(gui, text="Enter", width=8, bd=3,
     command = lambda: uptopat(idpatient, patient_num, firstpat, firstname_pat,
         surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
         transdisval, diseasetrans, diagnosis, diagnos_pat))
-buttonupdate.pack(side=LEFT, padx=10, pady=20)
+buttonupdate.pack(side=tk.LEFT, padx=10, pady=20)
 
 buttQuit = tk.Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='pale turquoise', command=quit)
-buttQuit.pack(side=LEFT, padx=10, pady=20)
+buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
 
 searchDB()
 gui.mainloop()
