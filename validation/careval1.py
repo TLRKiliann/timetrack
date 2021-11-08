@@ -10,7 +10,7 @@ import time
 
 def valFunc1(self):
     """
-        Main function to define 
+        Main function to define
         design for contact interface.
     """
     self.effacer()
@@ -185,8 +185,9 @@ def valFunc1(self):
                     print("[+] Ok, validate_1.txt exist")
             except FileNotFoundError as errfnf:
                 print("[!] File validate_1.txt not found !", errfnf)
-                with open('./validation/valfiles1/validate_1.txt', 'w') as testf:
-                    print("[+] File validate_1.txt created !")
+                with open('./validation/valfiles1/validate_1.txt', 'w'):
+                    pass
+                print("[+] File validate_1.txt created !")
 
             try:
                 if os.path.exists('./validation/valfiles1/validate_1.txt'):
@@ -249,7 +250,7 @@ def valFunc1(self):
     self.tttovalid.set('???')
     self.wentrytreat_window = self.can.create_window(self.x31, self.y31,
         window = self.entrytreat)
-    
+
     # signature
     self.x32, self.y32 = 660, 220
     self.labsign = tk.Label(self.can, text="Signature :",
