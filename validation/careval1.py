@@ -47,7 +47,7 @@ def valFunc1(self):
         """
         try:
             with open('./validation/valfiles1/validate_1.txt', 'a+') as wcarefile:
-                wcarefile.write('\n\n' + time.strftime('%d/%m/%Y'))
+                wcarefile.write('\n' + time.strftime('%d/%m/%Y'))
                 wcarefile.write('\n' + self.patname.get() + ' - ')
                 wcarefile.write(self.healthenter.get() + ' - ')
                 wcarefile.write(self.daystring.get() + ' - ')
@@ -57,7 +57,7 @@ def valFunc1(self):
         except FileNotFoundError as err_wc:
             print("[!] File validate_1.txt not found !", err_wc)
             with open('./validation/valfiles1/validate_1.txt', 'a+') as add_caref:
-                add_caref.write('\n\n' + time.strftime('%d/%m/%Y'))
+                add_caref.write('\n' + time.strftime('%d/%m/%Y'))
                 add_caref.write('\n' + self.patname.get() + ' - ')
                 add_caref.write(self.healthenter.get() + ' - ')
                 add_caref.write(self.daystring.get() + ' - ')
@@ -219,13 +219,14 @@ def valFunc1(self):
         if self.firstcheck.get() == 1:
             print("ok validate")
             with open('./validation/valfiles1/validate_1.txt', 'a+') as oneval:
-                oneval.write('\n\n' + self.datetov.get() + '\n')
+                oneval.write('\n' + self.datetov.get() + '\n')
                 oneval.write(self.tttovalid.get())
                 oneval.write(" [+] validated")
+                oneval.write(self.signval.get() + '\n')
         else:
             print("[---] Nothing validated.")
 
-    self.x24, self.y24 = 680, 170
+    self.x24, self.y24 = 680, 120
     self.datetov = tk.StringVar()
     self.entdatev = tk.Entry(self.can, width=18, textvariable=self.datetov,
         highlightbackground='grey', bd=2)
@@ -233,7 +234,7 @@ def valFunc1(self):
     self.wentdatev_window = self.can.create_window(self.x24, self.y24,
         window = self.entdatev)
 
-    self.x30, self.y30 = 660, 220
+    self.x30, self.y30 = 660, 170
     self.firstcheck = tk.IntVar()
     self.checkone = tk.Checkbutton(self.can, text="Validate", font=('MS Serif', 12),
         fg='navy', bg='DodgerBlue2', variable=self.firstcheck, onvalue=1, offvalue=0,
@@ -241,21 +242,35 @@ def valFunc1(self):
     self.fcheckone_window = self.can.create_window(self.x30, self.y30,
         window = self.checkone)
 
-    self.x31, self.y31 = 820, 220
+    self.x31, self.y31 = 820, 170
     self.tttovalid = tk.StringVar()
-    self.lbltreat = tk.Entry(self.can, width=20, textvariable=self.tttovalid,
+    self.entrytreat = tk.Entry(self.can, width=20, textvariable=self.tttovalid,
         highlightbackground='grey', bd=2)
     self.tttovalid.set('???')
-    self.wlbltreat_window = self.can.create_window(self.x31, self.y31,
-        window = self.lbltreat)
+    self.wentrytreat_window = self.can.create_window(self.x31, self.y31,
+        window = self.entrytreat)
+    
+    # signature
+    self.x32, self.y32 = 660, 220
+    self.labsign = tk.Label(self.can, text="Signature :",
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
+    self.wlabsign_window = self.can.create_window(self.x32, self.y32,
+        window = self.labsign)
+
+    self.x33, self.y33 = 820, 220
+    self.signval = tk.StringVar()
+    self.entsign = tk.Entry(self.can, width=20, textvariable=self.signval,
+        highlightbackground='grey', bd=2)
+    self.fentsign_window = self.can.create_window(self.x33, self.y33,
+        window = self.entsign)
 
     # right button to save
-    self.x33, self.y33 = 1020, 220
+    self.x34, self.y34 = 1040, 220
     self.butrightchk = tk.Button(self.can, text="Save Validation", width=20,
         fg='yellow', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
         activebackground='pale turquoise', command=lambda: ([validRightFrame(self),
             regroupAll()]))
-    self.fbutrightchk_window = self.can.create_window(self.x33, self.y33,
+    self.fbutrightchk_window = self.can.create_window(self.x34, self.y34,
         window=self.butrightchk)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
