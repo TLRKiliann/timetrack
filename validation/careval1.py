@@ -68,16 +68,14 @@ def valFunc1(self):
     # Label title
     self.x1, self.y1 = 625, 50
     self.lbltitle = tk.Label(self.can, text="Validation",
-        font=('MS Serif', 26, 'bold'),
-        bg='DodgerBlue2', fg='cyan')
+        font=('MS Serif', 26, 'bold'), bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x1, self.y1,
         window = self.lbltitle)
 
     # Name lbl
     self.x2, self.y2 = 120, 120
     self.lblname = tk.Label(self.can, text="Patient Name :",
-        font=('MS Serif', 14, 'bold'),
-        bg='DodgerBlue2', fg='white')
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
     self.wlblname_window = self.can.create_window(self.x2, self.y2,
         window = self.lblname)
 
@@ -108,8 +106,7 @@ def valFunc1(self):
     # Care lbl
     self.x4, self.y4 = 120, 170
     self.lblcare = tk.Label(self.can, text="Heal Care :",
-        font=('MS Serif', 14, 'bold'),
-        bg='DodgerBlue2', fg='white')
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
     self.wlblcare_window = self.can.create_window(self.x4, self.y4,
         window = self.lblcare)
 
@@ -155,7 +152,7 @@ def valFunc1(self):
 
     self.x8, self.y8 = 275, 270
     self.datenter = tk.StringVar()
-    self.labentdate = tk.Entry(self.can, width=9, textvariable=self.datenter,
+    self.labentdate = tk.Entry(self.can, width=10, textvariable=self.datenter,
         highlightbackground='grey', bd=2)
     self.datenter.set(time.strftime("%d/%m/%Y"))
     self.wlabentdate_window = self.can.create_window(self.x8, self.y8,
@@ -214,13 +211,6 @@ def valFunc1(self):
     self.fbutsavechk_window = self.can.create_window(self.x21, self.y21,
         window=self.butsavechk)
 
-    # explanations lbl
-    self.x23, self.y23 = 890, 120
-    self.lblexplan = tk.Label(self.can, text="Date and hour are automaticaly recorded.",
-        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
-    self.wlblexplan_window = self.can.create_window(self.x23, self.y23,
-        window = self.lblexplan)
-
     def validRightFrame(self):
         """
             Save everything from Right Frame.
@@ -229,13 +219,21 @@ def valFunc1(self):
         if self.firstcheck.get() == 1:
             print("ok validate")
             with open('./validation/valfiles1/validate_1.txt', 'a+') as oneval:
-                oneval.write('\n\n' + time.strftime("%d/%m/%Y : %H:%M:%S") + '\n')
+                oneval.write('\n\n' + self.datetov.get() + '\n')
                 oneval.write(self.tttovalid.get())
-                oneval.write("[+] validated")
+                oneval.write(" [+] validated")
         else:
             print("[---] Nothing validated.")
 
-    self.x30, self.y30 = 710, 170
+    self.x24, self.y24 = 680, 170
+    self.datetov = tk.StringVar()
+    self.entdatev = tk.Entry(self.can, width=18, textvariable=self.datetov,
+        highlightbackground='grey', bd=2)
+    self.datetov.set(time.strftime('%d/%m/%Y : %H:%M:%S'))
+    self.wentdatev_window = self.can.create_window(self.x24, self.y24,
+        window = self.entdatev)
+
+    self.x30, self.y30 = 660, 220
     self.firstcheck = tk.IntVar()
     self.checkone = tk.Checkbutton(self.can, text="Validate", font=('MS Serif', 12),
         fg='navy', bg='DodgerBlue2', variable=self.firstcheck, onvalue=1, offvalue=0,
@@ -243,7 +241,7 @@ def valFunc1(self):
     self.fcheckone_window = self.can.create_window(self.x30, self.y30,
         window = self.checkone)
 
-    self.x31, self.y31 = 870, 170
+    self.x31, self.y31 = 820, 220
     self.tttovalid = tk.StringVar()
     self.lbltreat = tk.Entry(self.can, width=20, textvariable=self.tttovalid,
         highlightbackground='grey', bd=2)
@@ -251,15 +249,8 @@ def valFunc1(self):
     self.wlbltreat_window = self.can.create_window(self.x31, self.y31,
         window = self.lbltreat)
 
-    # Care lbl for validating
-    self.x32, self.y32 = 1070, 170
-    self.lblcare = tk.Label(self.can, text="<-- Care to validate",
-        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
-    self.wlblcare_window = self.can.create_window(self.x32, self.y32,
-        window = self.lblcare)
-
     # right button to save
-    self.x33, self.y33 = 870, 220
+    self.x33, self.y33 = 1020, 220
     self.butrightchk = tk.Button(self.can, text="Save Validation", width=20,
         fg='yellow', bg='RoyalBlue3', bd=3, highlightbackground='DodgerBlue2',
         activebackground='pale turquoise', command=lambda: ([validRightFrame(self),
