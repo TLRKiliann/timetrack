@@ -2,7 +2,6 @@
 # -*- coding : utf-8 -*-
 
 
-from tkinter import *
 import tkinter as tk
 from tkinter import ttk
 import threading
@@ -22,16 +21,17 @@ def task(root):
         troughrelief = 'flat',
         background = '#2f92ff')
 
-    pb_hD = ttk.Progressbar(root,
+    pbdown = ttk.Progressbar(root,
         style = 'blue.Horizontal.TProgressbar',
         orient = 'horizontal',
         length = 200,
         mode = 'determinate')
-    pb_hD.pack()
-    pb_hD.start(10)
+    pbdown.pack()
+    pbdown.start(10)
+    root.resizable(False, False)
     root.mainloop()
 
-def process_unknown_duration(root):
+def processDownload(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
@@ -39,14 +39,14 @@ def process_unknown_duration(root):
     """
     time.sleep(1)
     print("[PID] My pid is :", os.getpid())
-    root.quit() # To destroy threading
+    print("[ Downloading complete ! ]")
+    root.quit()
 
 def downloadatattt():
     root = tk.Tk()
-    t1 = threading.Thread(target=process_unknown_duration, args=(root,))
-    #print(t1)
+    t1 = threading.Thread(target=processDownload, args=(root,))
     t1.start()
-    print("\n[Downloading...]\n")
-    task(root) # This will block while the mainloop runs
+    print("\n[ Downloading for medication... ]\n")
+    task(root)
     t1.join()
-    root.destroy() # To destroy completely window
+    root.destroy()
