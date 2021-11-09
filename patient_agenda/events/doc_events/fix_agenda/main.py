@@ -21,7 +21,7 @@ top2 = tk.Frame(gui, bg='SteelBlue2')
 bottom = tk.Frame(gui, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
 top2.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=tk.YES)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=1)
 
 labelTit = tk.Label(gui, text="Save changes !", font=("Arial 16 bold"),
     fg='white', bg='DodgerBlue2')
@@ -140,7 +140,7 @@ def save_input():
 def messFromSafeButt():
     MsgBox = tk.messagebox.askquestion("Confirm", "Are you sure ?\n"
         "It will save all data !")
-    if MsgBox == 1:
+    if MsgBox == 'yes':
         save_input()
         textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("[+] Data saved !")
