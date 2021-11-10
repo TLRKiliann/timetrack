@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from tkinter import *
+#from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -36,8 +36,8 @@ def doc_medical2(self):
         d_linedmst = filename2.readline()
 
     self.x2, self.y2 = 640, 45
-    ntry_txt = StringVar()
-    self.entryname = Entry(self.can, textvariable=ntry_txt)
+    ntry_txt = tk.StringVar()
+    self.entryname = tk.Entry(self.can, textvariable=ntry_txt)
     ntry_txt.set(a_linedmst[:-1])
     self.wentryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
@@ -78,7 +78,7 @@ def doc_medical2(self):
             importationAdmin('./contact/conpact2/finalfile1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finalfile1 not found !")
-        messagebox.showinfo('INFO', 'File finalfile1 not found !')
+        tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
 
     self.x7, self.y7 = 870, 380
     self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
@@ -104,7 +104,7 @@ def doc_medical2(self):
             importationDoc1('./contact/conpact2/finaldoc1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finaldoc1 not found !")
-        messagebox.showinfo('INFO', 'File finaldoc1 not found !')
+        tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
 
     # Doctor2 from contact col 2
     self.x9, self.y9 = 870, 670
@@ -123,7 +123,7 @@ def doc_medical2(self):
             importationDoc2('./contact/conpact2/finaldoc2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finaldoc2 not found !")
-        messagebox.showinfo('INFO', 'File finaldoc2 not found !')
+        tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
 
     # Doctor2 from contact col 2
     self.x10, self.y10 = 870, 850
@@ -142,7 +142,7 @@ def doc_medical2(self):
             importationDoc3('./contact/conpact2/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finaldoc3.txt not found !")
-        messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
 
     # Family contact from contact col 2
     self.x11, self.y11 = 870, 960
@@ -168,7 +168,7 @@ def doc_medical2(self):
             importationFam('./contact/conpact2/finalfam1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finalfam1.txt not found !")
-        messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
 
     # Home Care System contact from contact col 2
     self.x13, self.y13 = 870, 1140
@@ -194,7 +194,7 @@ def doc_medical2(self):
             importationHealOne('./contact/conpact2/finalhcs1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File finalhcs1.txt not found !")
-        messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
 
     self.x15, self.y15 = 870, 1370
     self.t15 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
@@ -211,8 +211,8 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finalhcs2.txt'):
             importationHealTwo('./contact/conpact2/finalhcs2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finalhcs2.txt not found !")
-        messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
+        print("[!] File finalhcs2.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
 
     self.x16, self.y16 = 870, 1510
     self.t16 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
@@ -230,8 +230,8 @@ def doc_medical2(self):
             importationHealThree('./contact/conpact2/finalhcs3.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finalhcs3.txt not found !")
-        messagebox.showinfo('INFO', 'File finalhcs3.txt not found !')
+        print("[!] File finalhcs3.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalhcs3.txt not found !')
 
     self.x17, self.y17 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
@@ -345,12 +345,12 @@ def doc_medical2(self):
                     "All diagnostics done...")
                 break
     except FileNotFoundError as infofileout:
-        print("+ File 1 has not been found", infofileout)
+        print("[!] File 1 has not been found", infofileout)
     except IndexError as inforange:
         self.t29.insert(tk.INSERT, "All diagnostics done...")
-        print("+ List 1 got less than 6 lines", inforange)
+        print("[!] List 1 got less than 6 lines", inforange)
     else:
-        ("+ Error unknow 1 (for diag)")
+        ("[!] Error unknow 1 (for diag)")
 
     # Labl + Textbox + func to read in ttt files
     self.x30, self.y30 = 80, 560
@@ -386,7 +386,7 @@ def doc_medical2(self):
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_ttt not found !")
-        messagebox.showinfo('INFO', 'File intro_ttt not found !')
+        tk.messagebox.showinfo('INFO', 'File intro_ttt not found !')
 
     try:
         if os.path.getsize('./ttt/doc_ttt2/intro_res.txt'):
@@ -394,7 +394,7 @@ def doc_medical2(self):
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_res not found !")
-        messagebox.showinfo('INFO', 'File intro_res not found !')
+        tk.messagebox.showinfo('INFO', 'File intro_res not found !')
 
     # Lbl for VP
     self.x32, self.y32 = 60, 800
@@ -424,7 +424,7 @@ def doc_medical2(self):
             importationParam('./param/paramdata2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File paramdata2.txt not found !")
-        messagebox.showinfo('INFO', 'File paramdata2.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File paramdata2.txt not found !')
 
     # Lbl for BMI
     self.x34, self.y34 = 40, 1040
@@ -452,7 +452,7 @@ def doc_medical2(self):
             importationBmi('./calBmi/bmi2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File bmi2.txt not found !")
-        messagebox.showinfo('INFO', 'File bmi2.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File bmi2.txt not found !')
 
     def launchfunc(ent_name, nt_birth, allertxt, transdis):
         """
@@ -460,17 +460,17 @@ def doc_medical2(self):
         """
         try:
             if os.path.exists('./dmst_doc/doc_dmst2/rslt_dmst2.txt'):
-                messagebox.showwarning('Warning',
+                tk.messagebox.showwarning('Warning',
                     '!!! Warning, saving new data will erased old file !!!')
-                msgayn = messagebox.askyesno('Look', 'Would you like to continue ?')
+                msgayn = tk.messagebox.askyesno('Look', 'Would you like to continue ?')
                 if msgayn == 1:
                     os.remove('./dmst_doc/doc_dmst2/rslt_dmst2.txt')
                     print("!!! rslt_dmst2.txt removed !!!")
                 else:
-                    messagebox.showinfo("INFO", "Nothing has changed !")
+                    tk.messagebox.showinfo("INFO", "Nothing has changed !")
         except FileNotFoundError as fnf_totry:
             print("[!] No rslt_dmst2.txt exist !", fnf_totry)
-            messagebox.showinfo("INFO", "Let's creat one ! ;)")
+            tk.messagebox.showinfo("INFO", "Let's creat one ! ;)")
 
         try:
             with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file:
@@ -1281,7 +1281,7 @@ def doc_medical2(self):
             importationHealTwo('./auxequip/doc_equip/auxiliary2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("+ File auxiliary2.txt not found !")
-        messagebox.showinfo('INFO', 'File auxiliary2.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File auxiliary2.txt not found !')
 
     # PLAFA
     self.x88, self.y88 = 750, 1655
@@ -1293,7 +1293,7 @@ def doc_medical2(self):
 
     CheckVar9 = tk.IntVar()
     self.x89, self.y89 = 920, 1655
-    self.C75 = Checkbutton(self.can, text=" Oui", fg='black', 
+    self.C75 = tk.Checkbutton(self.can, text=" Oui", fg='black', 
         bg='cyan', variable=CheckVar9,
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
@@ -1302,7 +1302,7 @@ def doc_medical2(self):
 
     CheckVar10 = tk.IntVar()
     self.x90, self.y90 = 994, 1655
-    self.C76 = Checkbutton(self.can, text=" Non", fg='black', 
+    self.C76 = tk.Checkbutton(self.can, text=" Non", fg='black', 
         bg='cyan', variable=CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
@@ -1319,7 +1319,7 @@ def doc_medical2(self):
 
     CheckVar11 = tk.IntVar()
     self.x92, self.y92 = 920, 1700
-    self.C77 = Checkbutton(self.can, text=" Oui", fg='black',
+    self.C77 = tk.Checkbutton(self.can, text=" Oui", fg='black',
         bg='cyan', variable=CheckVar11, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
@@ -1328,7 +1328,7 @@ def doc_medical2(self):
 
     CheckVar12 = tk.IntVar()
     self.x93, self.y93 = 994, 1700
-    self.C78 = Checkbutton(self.can, text=" Non", fg='black',
+    self.C78 = tk.Checkbutton(self.can, text=" Non", fg='black',
         bg='cyan', variable=CheckVar12, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
@@ -1557,10 +1557,10 @@ def doc_medical2(self):
         print("Result SCP transfert : %s" % repr(proc.stderr))
         if proc.stderr == b'':
             print("+ File rslt_dmst2.txt uploaded !")
-            #messagebox.showinfo("INFO", "rslt_dmst2.txt uploaded...")
+            #tk.messagebox.showinfo("INFO", "rslt_dmst2.txt uploaded...")
         else:
             print("+ No file to upload !")
-            messagebox.showerror("Error", "No rslt_dmst2.txt to upload...")
+            tk.messagebox.showerror("Error", "No rslt_dmst2.txt to upload...")
 
         secproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/parcours.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/parcours.txt"],
@@ -1568,10 +1568,10 @@ def doc_medical2(self):
         print("Result SCP transfert : %s" % repr(secproc.stderr))
         if secproc.stderr == b'':
             print("+ File parcours.txt uploaded !")
-            #messagebox.showinfo("INFO", "parcours.txt uploaded...")
+            #tk.messagebox.showinfo("INFO", "parcours.txt uploaded...")
         else:
             print("+ No file to upload !")
-            messagebox.showerror("Error", "No parcours.txt to upload...")
+            tk.messagebox.showerror("Error", "No parcours.txt to upload...")
 
         thirdproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/pbm.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/pbm.txt"],
@@ -1579,10 +1579,10 @@ def doc_medical2(self):
         print("Result SCP transfert : %s" % repr(thirdproc.stderr))
         if thirdproc.stderr == b'':
             print("+ File pbm.txt uploaded !")
-            #messagebox.showinfo("INFO", "pbm.txt uploaded...")
+            #tk.messagebox.showinfo("INFO", "pbm.txt uploaded...")
         else:
             print("+ No file to upload !")
-            messagebox.showerror("Error", "No pbm.txt to upload...")
+            tk.messagebox.showerror("Error", "No pbm.txt to upload...")
 
         forthproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/project.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/project.txt"],
@@ -1590,10 +1590,10 @@ def doc_medical2(self):
         print("Result SCP transfert : %s" % repr(forthproc.stderr))
         if forthproc.stderr == b'':
             print("+ File project.txt uploaded !")
-            #messagebox.showinfo("INFO", "project.txt uploaded...")
+            #tk.messagebox.showinfo("INFO", "project.txt uploaded...")
         else:
             print("+ No file to upload !")
-            messagebox.showerror("Error", "No project.txt to upload...")
+            tk.messagebox.showerror("Error", "No project.txt to upload...")
 
         fivth = subprocess.run(["scp", "./need/doc_suivi2/main_14b.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/main_14b.txt"],
@@ -1601,22 +1601,22 @@ def doc_medical2(self):
         print("Result SCP transfert : %s" % repr(fivth.stderr))
         if fivth.stderr == b'':
             print("+ File main_14b.txt uploaded !")
-            #messagebox.showinfo("INFO", "main_14b.txt uploaded...")
+            #tk.messagebox.showinfo("INFO", "main_14b.txt uploaded...")
         else:
             print("+ No file to upload !")
-            messagebox.showerror("Error", "No main_14b.txt to upload...")
+            tk.messagebox.showerror("Error", "No main_14b.txt to upload...")
 
     def msgvalidate():
         """
             To display a msg to confirm that all data have been saved.
         """
-        messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+        tk.messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
     def record_alldata(ent_name, nt_birth, allertxt, transdis):
         """
             That the main function to save all data by calling other functions.
         """
-        MsgBox = messagebox.askyesno('Record', 'Data will be saved, ok ?')
+        MsgBox = tk.messagebox.askyesno('Record', 'Data will be saved, ok ?')
         if MsgBox == 1:
             saveData()
             launchfunc(ent_name, nt_birth, allertxt, transdis)
@@ -1625,7 +1625,7 @@ def doc_medical2(self):
             msgvalidate()
             self.showPatients()
         else:
-            messagebox.showinfo('Return', 'Ok, nothing has changed...')
+            tk.messagebox.showinfo('Return', 'Ok, nothing has changed...')
 
     def way_back():
         """
@@ -1684,4 +1684,6 @@ def doc_medical2(self):
     self.wlbl_ghost = self.can.create_window(self.x112, self.y112,
         window = self.lbl_ghost)
 
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind_all("<Button-4>", self.onMouseWheel)
+    self.can.bind_all("<Button-5>", self.onMouseWheel)
