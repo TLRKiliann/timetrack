@@ -8,9 +8,8 @@ from tkinter import filedialog
 
 
 """
-    To access to backup files
-    from the main file time-track.py
-    with a GUI self.textbox
+    Accesses the backup files from the file dialog and
+    opens the selected file with a text box to read.
 """
 
 
@@ -33,7 +32,7 @@ def backupFuncPatient(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -63,7 +62,7 @@ def backupFuncPatient2(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -92,7 +91,7 @@ def backupFuncPatient3(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -121,7 +120,7 @@ def backupFuncPatient4(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -150,7 +149,7 @@ def backupFuncPatient5(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -179,7 +178,7 @@ def backupFuncPatient6(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -208,7 +207,7 @@ def backupFuncPatient7(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -237,7 +236,7 @@ def backupFuncPatient8(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -266,7 +265,7 @@ def backupFuncPatient9(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -295,7 +294,7 @@ def backupFuncPatient10(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -324,7 +323,7 @@ def backupFuncPatient11(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -353,7 +352,7 @@ def backupFuncPatient12(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -382,7 +381,7 @@ def backupFuncPatient13(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -411,7 +410,7 @@ def backupFuncPatient14(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -440,7 +439,7 @@ def backupFuncPatient15(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -469,7 +468,7 @@ def backupFuncPatient16(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -498,7 +497,7 @@ def backupFuncPatient17(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -527,7 +526,7 @@ def backupFuncPatient18(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -556,7 +555,7 @@ def backupFuncPatient19(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -585,7 +584,7 @@ def backupFuncPatient20(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -614,7 +613,7 @@ def backupFuncPatient21(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -643,7 +642,7 @@ def backupFuncPatient22(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -672,7 +671,7 @@ def backupFuncPatient23(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:
@@ -701,7 +700,7 @@ def backupFuncPatient24(self):
 
     try:
         with open(filepath, 'r') as fichier:
-            content=fichier.readlines()
+            content = fichier.readlines()
             for li in content:
                 self.textBox.insert(tk.END, li)
     except FileNotFoundError as error_file:

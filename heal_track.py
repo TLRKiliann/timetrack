@@ -4,8 +4,8 @@
 
 """
     Main script to start the application.
-    It call directly intro.py to validate access
-    privileges.
+    It call directly intro.py to validate
+    access privileges.
 """
 
 
@@ -26,8 +26,8 @@ from mainmod.boxapp import callBox
 from mainmod.reminder import alarmThread
 from mainmod.manualapp import instalpy
 from mainmod.patcaps import callResident
+from mainmod.backapp import *
 from Backup.backupfile import dataBackToSave
-from backapp import *
 from extensions.agenda_extension import extendAgenda
 from extensions.case_extended import checkcaseExtend 
 from extensions.health_ext import extendHealth
@@ -1684,7 +1684,8 @@ class Application(tk.Frame):
         tk.Frame.__init__(self, borderwidth=0, bg='RoyalBlue4', padx=20, pady=20, relief=tk.GROOVE)
         self.master.title('Time-Track Developed by ko@l@tr33')
         self.master.withdraw()
-        self.master.update_idletasks()  # Update "requested size" from geometry manager
+        # Update "requested size" from geometry manager
+        self.master.update_idletasks()
         x = (self.master.winfo_screenwidth() / 3 - self.master.winfo_reqwidth()) / 2
         y = (self.master.winfo_screenheight() / 3 - self.master.winfo_reqheight()) / 2
         self.master.geometry("+%d+%d" % (x, y))

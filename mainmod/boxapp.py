@@ -8,7 +8,7 @@ import subprocess
 import os
 import time
 import datetime
-from backapp import *
+from mainmod.backapp import *
 #from mainmod.patcaps import callResident
 from agendapp import dispAgBox
 from tttapp import dispTttBox

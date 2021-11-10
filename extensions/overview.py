@@ -11,7 +11,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
-from backapp import *
+from mainmod.backapp import *
+
 
 def overviewExtend(self, f):
     """
