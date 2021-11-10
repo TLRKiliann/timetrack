@@ -9,8 +9,9 @@ import subprocess
 import threading
 import time
 from playsound import playsound
-from tt_download import launchDownload
-from cpfoldtrans import loaderfile
+
+from starter.tt_download import launchDownload
+from starter.cpfoldtrans import loaderfile
 
 
 window = tk.Tk()
@@ -93,7 +94,7 @@ def validentry(event):
     passentry = getpass.get()
     MSGBOX = tk.messagebox.askyesno("Ask", "Validate password ?")
     if MSGBOX == 1:
-        with open('./filenter.txt', 'r') as read_file:
+        with open('./starter/filenter.txt', 'r') as read_file:
             line1 = read_file.readline()
             line2 = read_file.readline()
             line3 = read_file.readline()

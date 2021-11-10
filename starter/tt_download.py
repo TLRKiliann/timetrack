@@ -286,8 +286,8 @@ def downloadAllFiles(root):
         print("[!] No folder Files24 to download from server !")
         messagebox.showerror("Error", "No folder Files24 to download from server !")
 
-    print('Downloading done !\n')
     print('[PID] My pid is :', os.getpid())
+    print('[ Download complete ! ]\n')
     root.quit()
 
 def launchDownload():
@@ -297,7 +297,7 @@ def launchDownload():
     root = tk.Tk()
     treat = threading.Thread(target=downloadAllFiles, args=(root,))
     treat.start()
-    print("\n[Downloading...]\n")
+    print("\n[ Downloading... ]\n")
     task(root)
     treat.join()
     root.destroy()

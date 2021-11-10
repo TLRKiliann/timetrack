@@ -3,6 +3,10 @@
 
 
 """
+    to improved :
+    entryfile.txt --> agenda_saved ???
+    agenda_saved à copier sous agenda comme les autres...
+
     Don't need for Vital Parameters...
     Don't need for BMI...
 

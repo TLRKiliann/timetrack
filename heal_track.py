@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-#import intro
+#import starter.intro
 from boxapp import callBox
 from reminder import alarmThread
 from manualapp import instalpy
