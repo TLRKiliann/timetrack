@@ -9,7 +9,7 @@ import os
 import time
 import datetime
 from backapp import *
-from patcaps import callResident
+from mainmod.patcaps import callResident
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
@@ -18,6 +18,7 @@ from resapp import dispResBox
 def callBox(self):
     """
         Everything that is current and to update.
+        Call a reminder if date is equal to today.
     """
     self.effacer()
     self.delScroll()
@@ -25,7 +26,7 @@ def callBox(self):
 
     self.photo = tk.PhotoImage(file='./syno_gif/fontalarmbg2.png')
     self.item = self.can.create_image(625, 350, image=self.photo)
-    # To backup (main file)
+    # Compare date !
     self.updateFiletxt()
     dispAgBox()
     dispTttBox()

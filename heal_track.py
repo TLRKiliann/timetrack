@@ -24,8 +24,8 @@ from playsound import playsound
 #import starter.intro
 from boxapp import callBox
 from reminder import alarmThread
-from manualapp import instalpy
-from patcaps import callResident
+from mainmod.manualapp import instalpy
+from mainmod.patcaps import callResident
 from Backup.backupfile import dataBackToSave
 from backapp import *
 from extensions.agenda_extension import extendAgenda
@@ -2063,7 +2063,7 @@ class Application(tk.Frame):
 
     def manualFile(self):
         """
-            To consult TXT and PDF files (manual).
+            Open manual in TXT and PDF format.
         """
         self.master.withdraw()
         subprocess.run('./manual/pdfopenmanual.py', check=True)
@@ -2078,8 +2078,7 @@ class Application(tk.Frame):
     def updateFiletxt(self):
         """
             It's time to backup !
-            This function is called
-            from boxapp.py (line 22)
+            This function is called from boxapp.py (line 22)
             dataBackToSave(self) --> Backup/backupfile.py
             paramBackToSave(self) -- > param/backup_month.py
             bmiBackToSave(self) --> calBmi_backup.py

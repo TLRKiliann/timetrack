@@ -1,0 +1,14 @@
+Date : 06/11/2021
+Heure : 15:08:10
+Prenom et Nom : Heligan Stead
+Poids : 75.4
+Taille : 1.72
+BMI : 25.487
+
+Date : 04/11/2021
+Heure : 15:08:10
+Prenom et Nom : Heligan Stead
+Poids : 75.1
+Taille : 1.72
+BMI : 25.385
+

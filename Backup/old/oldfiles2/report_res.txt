@@ -24,5 +24,18 @@ Reserves :[
         "Number/24h": "1",
         "Reason": "anxiété",
         "Signature": ""
+    },
+    {
+        "Date": "04/10/2021",
+        "Date of introduction": "",
+        "Date of end": "//",
+        "Treatment": "play",
+        "Dosage": "mus",
+        "Reserve": 1,
+        "First-line": 0,
+        "Second-line": 1,
+        "Number/24h": "1",
+        "Reason": "to test",
+        "Signature": "music"
     }
 ]

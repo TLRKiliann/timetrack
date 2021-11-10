@@ -40,3 +40,10 @@ Poids : 74.8
 Taille : 1.86
 BMI : 21.621
 
+Date : 06/10/2021
+Heure : 15:12:01
+Prenom et Nom : Njin Nier
+Poids : 75.4
+Taille : 1.84
+BMI : 22.271
+
