@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-#from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -44,14 +43,14 @@ def doc_medical2(self):
 
     self.x3, self.y3 = 250, 100
     self.labl_title = tk.Label(self.can, text='--- Personal Data ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlabl_title = self.can.create_window(self.x3, self.y3,
         window = self.labl_title)
 
     self.x4, self.y4 = 870, 100
     self.labl_title2 = tk.Label(self.can, text='--- Admin Data ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlabl_title2 = self.can.create_window(self.x4, self.y4,
         window = self.labl_title2)
@@ -77,12 +76,12 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finalfile1.txt'):
             importationAdmin('./contact/conpact2/finalfile1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finalfile1 not found !")
+        print("[!] File finalfile1 not found !")
         tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
 
     self.x7, self.y7 = 870, 380
     self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_doc = self.can.create_window(self.x7, self.y7,
         window = self.lbl_doc)
@@ -103,7 +102,7 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finaldoc1.txt'):
             importationDoc1('./contact/conpact2/finaldoc1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finaldoc1 not found !")
+        print("[!] File finaldoc1 not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
 
     # Doctor2 from contact col 2
@@ -122,7 +121,7 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finaldoc2.txt'):
             importationDoc2('./contact/conpact2/finaldoc2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finaldoc2 not found !")
+        print("[!] File finaldoc2 not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
 
     # Doctor2 from contact col 2
@@ -141,13 +140,13 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finaldoc3.txt'):
             importationDoc3('./contact/conpact2/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finaldoc3.txt not found !")
+        print("[!] File finaldoc3.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
 
     # Family contact from contact col 2
     self.x11, self.y11 = 870, 960
     self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_fam = self.can.create_window(self.x11, self.y11,
         window = self.lbl_fam)
@@ -167,13 +166,13 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finalfam1.txt'):
             importationFam('./contact/conpact2/finalfam1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finalfam1.txt not found !")
+        print("[!] File finalfam1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
 
     # Home Care System contact from contact col 2
     self.x13, self.y13 = 870, 1140
     self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_heal = self.can.create_window(self.x13, self.y13,
         window = self.lbl_heal)
@@ -193,7 +192,7 @@ def doc_medical2(self):
         if os.path.getsize('./contact/conpact2/finalhcs1.txt'):
             importationHealOne('./contact/conpact2/finalhcs1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finalhcs1.txt not found !")
+        print("[!] File finalhcs1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
 
     self.x15, self.y15 = 870, 1370
@@ -423,7 +422,7 @@ def doc_medical2(self):
         if os.path.getsize('./param/paramdata2.txt'):
             importationParam('./param/paramdata2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File paramdata2.txt not found !")
+        print("[!] File paramdata2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File paramdata2.txt not found !')
 
     # Lbl for BMI
@@ -851,7 +850,7 @@ def doc_medical2(self):
     self.x36, self.y36 = 250, 1290 
     self.lbl_need = tk.Label(self.can,
         text='--- AGGIR (grid) and depedencies ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_need = self.can.create_window(self.x36, self.y36,
         window = self.lbl_need)
@@ -867,7 +866,7 @@ def doc_medical2(self):
 
     self.x38, self.y38 = 80, 1360
     self.lbl_eat = tk.Label(self.can, text='- Orientation :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_eat = self.can.create_window(self.x38, self.y38,
         window = self.lbl_eat)
@@ -916,7 +915,7 @@ def doc_medical2(self):
     # second need
     self.x44, self.y44 = 80, 1385
     self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_sec = self.can.create_window(self.x44, self.y44,
         window = self.lbl_sec)
@@ -965,7 +964,7 @@ def doc_medical2(self):
     # third need
     self.x50, self.y50 = 80, 1410
     self.lbl_third = tk.Label(self.can, text='- Toilette :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_third = self.can.create_window(self.x50, self.y50,
         window = self.lbl_third)
@@ -1014,7 +1013,7 @@ def doc_medical2(self):
     # Forth need
     self.x56, self.y56 = 80, 1435
     self.lbl_forth = tk.Label(self.can, text='- Habillage :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_forth = self.can.create_window(self.x56, self.y56,
         window = self.lbl_forth)
@@ -1063,7 +1062,7 @@ def doc_medical2(self):
     # fivth need
     self.x62, self.y62 = 80, 1460
     self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
         window = self.lbl_fivth)
@@ -1112,7 +1111,7 @@ def doc_medical2(self):
     # Sixth need
     self.x68, self.y68 = 80, 1485
     self.lbl_sixth = tk.Label(self.can, text='- Elimination :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_sixth = self.can.create_window(self.x68, self.y68,
         window = self.lbl_sixth)
@@ -1161,7 +1160,7 @@ def doc_medical2(self):
     # Seventh need
     self.x74, self.y74 = 80, 1510
     self.lbl_seven = tk.Label(self.can, text='- Déplacement :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_seven = self.can.create_window(self.x74, self.y74,
         window = self.lbl_seven)
@@ -1210,7 +1209,7 @@ def doc_medical2(self):
     # Heighth need
     self.x80, self.y80 = 80, 1535
     self.lbl_height = tk.Label(self.can, text='- Communication :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_height = self.can.create_window(self.x80, self.y80,
         window = self.lbl_height)
@@ -1260,7 +1259,7 @@ def doc_medical2(self):
     self.x86, self.y86 = 250, 1580
     self.lbl_aux = tk.Label(self.can,
         text='--- Auxiliary Equipement ---',
-        font="Times 14 bold", width=60,
+        font=('Times', 14, 'bold'), width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_aux = self.can.create_window(self.x86, self.y86,
         window = self.lbl_aux)
@@ -1280,13 +1279,13 @@ def doc_medical2(self):
         if os.path.getsize('./auxequip/doc_equip/auxiliary2.txt'):
             importationHealTwo('./auxequip/doc_equip/auxiliary2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File auxiliary2.txt not found !")
+        print("[!] File auxiliary2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File auxiliary2.txt not found !')
 
     # PLAFA
     self.x88, self.y88 = 750, 1655
     self.lbl_plafa = tk.Label(self.can, text='PLAFA :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_plafa = self.can.create_window(self.x88, self.y88,
         window = self.lbl_plafa)
@@ -1312,7 +1311,7 @@ def doc_medical2(self):
     # Directives Anticip.
     self.x91, self.y91 = 750, 1700
     self.lbl_diranticip = tk.Label(self.can, text='Directives anticipées :',
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_diranticip = self.can.create_window(self.x91, self.y91,
         window = self.lbl_diranticip)
@@ -1338,7 +1337,7 @@ def doc_medical2(self):
     # 14 needs
     self.x94, self.y94 = 550, 1765
     self.lbl_need = tk.Label(self.can, text='--- 14 Needs ---',
-        font="Times 14 bold", width=128,
+        font=('Times', 14, 'bold'), width=128,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_need = self.can.create_window(self.x94, self.y94,
         window = self.lbl_need)
@@ -1358,22 +1357,22 @@ def doc_medical2(self):
 
     try:
         if os.path.getsize('./need/doc_suivi2/main_14b.txt'):
-            print("+ File 'main_14b.txt' exist !")
+            print("[+] File 'main_14b.txt' exist !")
             needimport('./need/doc_suivi2/main_14b.txt')
     except FileNotFoundError as need_f:
-        print("+ File 'main_14b.txt' does not exist !")
+        print("[!] File 'main_14b.txt' does not exist !")
         print(need_f)
 
     # Line
     self.x96, self.y96 = 550, 2225
-    self.lbl_need = tk.Label(self.can, font="Times 14 bold",
+    self.lbl_need = tk.Label(self.can, font=('Times', 14, 'bold'),
         width=128, height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_need = self.can.create_window(self.x96, self.y96,
         window = self.lbl_need)
 
     self.x97, self.y97 = 80, 2270 #80, 1760
     self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_evadate = self.can.create_window(self.x97, self.y97,
         window = self.lbl_evadate)
@@ -1393,43 +1392,43 @@ def doc_medical2(self):
         """
         try:
             if os.path.getsize('./dmst_doc/doc_dmst2/parcours.txt'):
-                print("+ File 'parcours.txt' exist !")
+                print("[+] File 'parcours.txt' exist !")
                 with open('./dmst_doc/doc_dmst2/parcours.txt', 'w') as parc_file:
                     parc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as err_parc:
-            print("+ Sorry, file 'parcours.txt' not exist !", err_parc)
-            print("+ File 'parcours.txt' created !")
+            print("[!] Sorry, file 'parcours.txt' not exist !", err_parc)
+            print("[+] File 'parcours.txt' created !")
             with open('./dmst_doc/doc_dmst2/parcours.txt', 'a+') as noparc_file:
                 noparc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
         self.t100.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./dmst_doc/doc_dmst2/pbm.txt'):
-                print("+ File 'pbm.txt' exist !")
+                print("[+] File 'pbm.txt' exist !")
                 with open('./dmst_doc/doc_dmst2/pbm.txt', 'w') as pbmfile:
                     pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as err_pbm:
-            print("+ Sorry, file 'pbm.txt' not exist !", err_pbm)
-            print("+ File 'pbm.txt' created !")
+            print("[!] Sorry, file 'pbm.txt' not exist !", err_pbm)
+            print("[+] File 'pbm.txt' created !")
             with open('./dmst_doc/doc_dmst2/pbm.txt', 'a+') as no_pbmfile:
                 no_pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
         self.t102.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./dmst_doc/doc_dmst2/project.txt'):
-                print("+ File 'project.txt' exist !")
+                print("[+] File 'project.txt' exist !")
                 with open('./dmst_doc/doc_dmst2/project.txt', 'w') as projectfile:
                     projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as err_proj:
-            print("+ Sorry, file 'project.txt' not exist !", err_proj)
-            print("+ File 'project.txt' created !")
+            print("[!] Sorry, file 'project.txt' not exist !", err_proj)
+            print("[+] File 'project.txt' created !")
             with open('./dmst_doc/doc_dmst2/project.txt', 'a+') as no_projectfile:
                 no_projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
         self.t104.insert(tk.INSERT, "\n---Data saved !---")
 
     self.x99, self.y99 = 80, 2315 #80, 1800
     self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_parcvita = self.can.create_window(self.x99, self.y99,
         window = self.lbl_parcvita)
@@ -1449,15 +1448,15 @@ def doc_medical2(self):
 
     try:
         if os.path.getsize('./dmst_doc/doc_dmst2/parcours.txt'):
-            print("+ File 'parcours.txt' exist !")
+            print("[+] File 'parcours.txt' exist !")
             importationFile('./dmst_doc/doc_dmst2/parcours.txt')
     except FileNotFoundError as nf_file:
-        print("+ File 'parcours.txt' does not exist !")
+        print("[!] File 'parcours.txt' does not exist !")
         print(nf_file)
 
     self.x101, self.y101 = 80, 2540 # 80, 2020
     self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_pbm = self.can.create_window(self.x101, self.y101,
         window = self.lbl_pbm)
@@ -1477,15 +1476,15 @@ def doc_medical2(self):
 
     try:
         if os.path.getsize('./dmst_doc/doc_dmst2/pbm.txt'):
-            print("+ File 'pbm.txt' exist !")
+            print("[+] File 'pbm.txt' exist !")
             pbmimport('./dmst_doc/doc_dmst2/pbm.txt')
     except FileNotFoundError as pbm_f:
-        print("+ File 'pbm.txt' does not exist !")
+        print("[!] File 'pbm.txt' does not exist !")
         print(pbm_f)
 
     self.x103, self.y103 = 80, 2760 #80, 2240
     self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
-        font="Times 14 bold", width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_project = self.can.create_window(self.x103, self.y103,
         window = self.lbl_project)
@@ -1505,10 +1504,10 @@ def doc_medical2(self):
 
     try:
         if os.path.getsize('./dmst_doc/doc_dmst2/project.txt'):
-            print("+ File 'project.txt' exist !")
+            print("[+] File 'project.txt' exist !")
             projectimport('./dmst_doc/doc_dmst2/project.txt')
     except FileNotFoundError as project_f:
-        print("+ File 'project.txt' does not exist !")
+        print("[!] File 'project.txt' does not exist !")
         print(project_f)
 
     def copytobackup():
@@ -1519,7 +1518,7 @@ def doc_medical2(self):
             if os.path.exists('./dmst_doc/doc_dmst2/parcours.txt'):
                 shutil.copy('./dmst_doc/doc_dmst2/parcours.txt',
                     './Backup/Files2/parcours.txt')
-                print("+ File --> parcours.txt copied into ./Backup/Files2")
+                print("[+] File --> parcours.txt copied into ./Backup/Files2")
         except FileNotFoundError as nf_parco:
             print("Not found", nf_parco)
 
@@ -1527,7 +1526,7 @@ def doc_medical2(self):
             if os.path.exists('./dmst_doc/doc_dmst2/pbm.txt'):
                 shutil.copy('./dmst_doc/doc_dmst2/pbm.txt',
                     './Backup/Files2/pbm.txt')
-                print("+ File --> pbm.txt copied into ./Backup/Files2")
+                print("[+] File --> pbm.txt copied into ./Backup/Files2")
         except FileNotFoundError as nf_prob:
             print("Not found", nf_prob)
 
@@ -1535,7 +1534,7 @@ def doc_medical2(self):
             if os.path.exists('./dmst_doc/doc_dmst2/project.txt'):
                 shutil.copy('./dmst_doc/doc_dmst2/project.txt',
                     './Backup/Files2/project.txt')
-                print("+ File --> project.txt copied into ./Backup/Files2")
+                print("[+] File --> project.txt copied into ./Backup/Files2")
         except FileNotFoundError as nf_projex:
             print("Not found", nf_projex)
 
@@ -1543,7 +1542,7 @@ def doc_medical2(self):
             if os.path.exists('./dmst_doc/doc_dmst2/rslt_dmst2.txt'):
                 shutil.copy('./dmst_doc/doc_dmst2/rslt_dmst2.txt',
                     './Backup/Files2/rslt_dmst2.txt')
-                print("+ File --> rslt_dmst2.txt copied into ./Backup/Files2")
+                print("[+] File --> rslt_dmst2.txt copied into ./Backup/Files2")
         except FileNotFoundError as nf_rltd:
             print("Not found", nf_rltd)
 
@@ -1556,10 +1555,10 @@ def doc_medical2(self):
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(proc.stderr))
         if proc.stderr == b'':
-            print("+ File rslt_dmst2.txt uploaded !")
+            print("[Upload] File rslt_dmst2.txt uploaded !")
             #tk.messagebox.showinfo("INFO", "rslt_dmst2.txt uploaded...")
         else:
-            print("+ No file to upload !")
+            print("[!] No file to upload !")
             tk.messagebox.showerror("Error", "No rslt_dmst2.txt to upload...")
 
         secproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/parcours.txt",
@@ -1567,10 +1566,10 @@ def doc_medical2(self):
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(secproc.stderr))
         if secproc.stderr == b'':
-            print("+ File parcours.txt uploaded !")
+            print("[Upload] File parcours.txt uploaded !")
             #tk.messagebox.showinfo("INFO", "parcours.txt uploaded...")
         else:
-            print("+ No file to upload !")
+            print("[!] No file to upload !")
             tk.messagebox.showerror("Error", "No parcours.txt to upload...")
 
         thirdproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/pbm.txt",
@@ -1578,10 +1577,10 @@ def doc_medical2(self):
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(thirdproc.stderr))
         if thirdproc.stderr == b'':
-            print("+ File pbm.txt uploaded !")
+            print("[Upload] File pbm.txt uploaded !")
             #tk.messagebox.showinfo("INFO", "pbm.txt uploaded...")
         else:
-            print("+ No file to upload !")
+            print("[!] No file to upload !")
             tk.messagebox.showerror("Error", "No pbm.txt to upload...")
 
         forthproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/project.txt",
@@ -1589,10 +1588,10 @@ def doc_medical2(self):
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(forthproc.stderr))
         if forthproc.stderr == b'':
-            print("+ File project.txt uploaded !")
+            print("[Upload] File project.txt uploaded !")
             #tk.messagebox.showinfo("INFO", "project.txt uploaded...")
         else:
-            print("+ No file to upload !")
+            print("[!] No file to upload !")
             tk.messagebox.showerror("Error", "No project.txt to upload...")
 
         fivth = subprocess.run(["scp", "./need/doc_suivi2/main_14b.txt",
@@ -1600,10 +1599,10 @@ def doc_medical2(self):
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(fivth.stderr))
         if fivth.stderr == b'':
-            print("+ File main_14b.txt uploaded !")
+            print("[Upload] File main_14b.txt uploaded !")
             #tk.messagebox.showinfo("INFO", "main_14b.txt uploaded...")
         else:
-            print("+ No file to upload !")
+            print("[!] No file to upload !")
             tk.messagebox.showerror("Error", "No main_14b.txt to upload...")
 
     def msgvalidate():
@@ -1654,7 +1653,7 @@ def doc_medical2(self):
     self.buttreadprint = tk.Button(self.can, text="Read / Print",
         width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command = prireadfunc)
+        highlightbackground='DodgerBlue2', command = prireadfunc)
     self.buttreadprint = self.can.create_window(self.x109, self.y109,
         window = self.buttreadprint)
 
@@ -1662,7 +1661,7 @@ def doc_medical2(self):
     self.x110, self.y110 = 800, 3020
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command = lambda : record_alldata(ent_name,
+        highlightbackground='DodgerBlue2', command = lambda : record_alldata(ent_name,
             nt_birth, allertxt, transdis))
     self.buttonsave = self.can.create_window(self.x110, self.y110,
         window = self.buttonsave)
@@ -1672,14 +1671,14 @@ def doc_medical2(self):
     self.buttonquit = tk.Button(self.can, text='Return to main menu',
         width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command = way_back)
+        highlightbackground='DodgerBlue2', command = way_back)
     self.buttonquit = self.can.create_window(self.x111, self.y111,
         window = self.buttonquit)
 
     # Label ghost
     self.x112, self.y112 = 80, 3070
     self.lbl_ghost = tk.Label(self.can, text="",
-        font=('MS Serif', 14, 'bold'), width=20, height=1,
+        font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_ghost = self.can.create_window(self.x112, self.y112,
         window = self.lbl_ghost)
