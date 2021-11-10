@@ -22,8 +22,8 @@ import json
 from playsound import playsound
 
 #import starter.intro
-from boxapp import callBox
-from reminder import alarmThread
+from mainmod.boxapp import callBox
+from mainmod.reminder import alarmThread
 from mainmod.manualapp import instalpy
 from mainmod.patcaps import callResident
 from Backup.backupfile import dataBackToSave

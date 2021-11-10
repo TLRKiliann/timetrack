@@ -9,7 +9,7 @@ import os
 import time
 import datetime
 from backapp import *
-from mainmod.patcaps import callResident
+#from mainmod.patcaps import callResident
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResBox
