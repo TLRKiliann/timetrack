@@ -14,7 +14,6 @@
 """
 
 
-#from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
@@ -32,15 +31,19 @@ class ScrollCanvas(tk.Frame):
     """
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
+
         self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.frame = tk.Frame(self.can)
+
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+
         self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
+
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
 class TrackDB(tk.Frame):
@@ -52,15 +55,18 @@ class TrackDB(tk.Frame):
         tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue4',
             padx=20, pady=20, relief=tk.GROOVE)
         self.master.title('Times-Track DataBase Viewer')
-        # ScrollCanvas limite de la zone à parcourir avec la barre
+
         self.can = tk.Canvas(self, width=1250, height=800, bg='white')
         self.frame = tk.Frame(self.can)
+
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL,
             command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+
         self.can.create_window((4,4), window=self.frame,
             anchor=tk.NW, tags="self.frame")
+
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
 
@@ -127,7 +133,6 @@ class TrackDB(tk.Frame):
         self.datatt_records.pack(fill=tk.BOTH, expand=1)
 
         # Button refresh
-        #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
         self.btnSearch = tk.Button(self.can, text="Refresh Data",
             font=('arial', 12, 'bold'), padx=8, width=16, height=1,
             fg='white', bg='RoyalBlue4', bd=3,  activebackground='cyan',
