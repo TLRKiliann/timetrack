@@ -58,7 +58,7 @@ class ScrollCanvas(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=1) 
+        self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1) 
 
         self.canvas_window = self.can.create_window((4,4), window=self.viewPort,
             anchor=tk.NW, tags="self.viewPort")
@@ -66,10 +66,10 @@ class ScrollCanvas(tk.Frame):
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
 
-        self.onFrameConfigure(None)
-
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
+
+        self.onFrameConfigure(None)
 
 class MenuBar(tk.Frame):
     """
@@ -79,7 +79,7 @@ class MenuBar(tk.Frame):
         tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
 
         fileMenu = tk.Menubutton(self, text='Menu', fg='white',
-            font=("Times 14"), bg='grey30', relief=tk.GROOVE)
+            font=('Times', 14), bg='grey30', relief=tk.GROOVE)
 
         new_text = tk.StringVar()
         try:
@@ -1716,10 +1716,11 @@ class Application(tk.Frame):
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
 
-        self.onFrameConfigure(None)
-        
         self.viewPort.bind('<Enter>', self.onEnter)
         self.viewPort.bind('<Leave>', self.onLeave)
+
+        self.onFrameConfigure(None)
+
         self.pack()
         self.startPage()
 
@@ -1738,7 +1739,7 @@ class Application(tk.Frame):
     def onCanvasConfigure(self, event):
         '''Reset the canvas window to encompass inner frame when required'''
         canvas_width = event.width
-        self.can.itemconfig(self.canvas_window, width = canvas_width)
+        self.can.itemconfig(self.canvas_window, width=canvas_width)
 
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -1765,6 +1766,28 @@ class Application(tk.Frame):
         else:
             self.can.bind_all("<MouseWheel>", self.onMouseWheel)
 
+    def addScroll(self):
+        ''' To add ScrollBar '''
+        try:
+            exists = self.vsb.winfo_exists()
+            if exists == 1:
+                self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+                print("Ok, ScrollBar exist")
+        except Exception as err_scrl:
+            print("Scrollbar doesn't exist", err_scrl)
+            self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
+            print("Ok, ScrollBar created")
+
+    def reinitscroll(self, event):
+        """
+            Reinitialization of scrollbarcanvas
+            and MouseWheelcanvas.
+        """
+        self.addScroll()
+        print("ScrollBar appears again !")
+        self.onEnter(event)
+        print("MouseWheel reactivated for all !")
+
     def onLeave(self, event):
         if platform.system() == 'Linux':
             self.can.unbind_all("<Button-4>")
@@ -1780,7 +1803,7 @@ class Application(tk.Frame):
             if exists == 1:
                 self.item.pack_forget()
         except Exception as err_tk:
-            print("item doesn't exist - ok, don't need to delete it", err_tk)
+            print("item doesn't exist", err_tk)
 
         try:
             existext = self.text_area.winfo_exists()
@@ -1791,21 +1814,8 @@ class Application(tk.Frame):
 
     def delScroll(self):
         ''' To delete ScrollBar '''
-        #pack_forget()
         self.vsb.forget()
         print("ScrollBar deleted")
-
-    def addScroll(self):
-        ''' To add ScrollBar '''
-        try:
-            exists = self.vsb.winfo_exists()
-            if exists == 1:
-                self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-                print("Ok, ScrollBar exist")
-        except Exception as err_scrl:
-            print("Scrollbar doesn't exist", err_scrl)
-            self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
-            print("Ok, ScrollBar created")
 
     def msgQuitapp(self, arg):
         """
@@ -1819,7 +1829,6 @@ class Application(tk.Frame):
                 self.master.destroy()
             else:
                 playsound('./beep_sounds/sound101.wav')
-                #playsound('./beep_sounds/loop79.mp3')
         except OSError as err_exit:
             print("[!] Error 2 : time to quit !!!", err_exit)
 
@@ -1846,6 +1855,8 @@ class Application(tk.Frame):
         # Insert picture
         self.effacer()
         self.delScroll()
+        self.can.unbind_all("<Button-4>")
+        self.can.unbind_all("<Button-5>")
         self.photo = tk.PhotoImage(file='./syno_gif/fondcolorbg4.png')
         self.itemfirst = self.can.create_image((0,0), image=self.photo,
             anchor=tk.NW)
@@ -1890,7 +1901,7 @@ class Application(tk.Frame):
             activebackground='pale turquoise')
         self.fbutton4_window = self.can.create_window(950, 450, anchor=tk.CENTER,
             window=self.button4)
-        #self.pack()
+
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
 
     def alarmProg(self):
@@ -2107,5 +2118,5 @@ class Application(tk.Frame):
 if __name__=='__main__':
     root = tk.Tk()
     root.resizable(False, False)
-    Application(root).pack()
+    Application(root).pack(side=tk.TOP, fill=tk.BOTH, expand=1)
     root.mainloop()

@@ -21,7 +21,10 @@ def callResident(self):
         with theirs names and more.
     """
     self.effacer()
-    self.addScroll()
+    self.delScroll()
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
+
     self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -2002,5 +2005,7 @@ def callResident(self):
         window = self.lbl_ghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.bind_all("<Button-4>", self.onMouseWheel)
-    self.can.bind_all("<Button-5>", self.onMouseWheel)
+    self.can.bind("<Button-1>", self.reinitscroll)
+    #self.addScroll()
+    #self.can.bind_all("<Button-4>", self.onMouseWheel)
+    #self.can.bind_all("<Button-5>", self.onMouseWheel)

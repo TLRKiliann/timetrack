@@ -30,8 +30,20 @@ def doc_medical2(self):
         DMST (Document Medical Soins Transmissions).
     """
     self.effacer()
-    self.addScroll()
+    self.delScroll()
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")
     self.can.configure(background='DodgerBlue2')
+
+    def deactscroll(event):
+        """
+            Deactivate scrollbar and MouseWheel.
+            It's activated by clicking on textbox
+        """
+        self.delScroll()
+        self.can.unbind_all("<Button-4>")
+        self.can.unbind_all("<Button-5>")
+        print("MouseWheel deactivated for textbox !")
 
     self.x1, self.y1 = 500, 45
     self.labl_name = tk.Label(self.can, text="DMST",
@@ -75,6 +87,7 @@ def doc_medical2(self):
     # Admin from contact col 2
     self.x6, self.y6 = 870, 240
     self.t6 = tk.Text(self.can, height=11, width=50, font=18, relief=tk.SUNKEN)
+    self.t6.bind("<Button-1>", deactscroll)
     self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
 
     try:
@@ -94,6 +107,7 @@ def doc_medical2(self):
     # Doctor from contact col 2
     self.x8, self.y8 = 870, 490
     self.t8 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t8.bind("<Button-1>", deactscroll)
     self.wt8_window = self.can.create_window(self.x8, self.y8, window=self.t8)
 
     try:
@@ -106,6 +120,7 @@ def doc_medical2(self):
     # Doctor2 from contact col 2
     self.x9, self.y9 = 870, 670
     self.t9 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t9.bind("<Button-1>", deactscroll)
     self.wt9_window = self.can.create_window(self.x9, self.y9, window=self.t9)
 
     try:
@@ -118,6 +133,7 @@ def doc_medical2(self):
     # Doctor2 from contact col 2
     self.x10, self.y10 = 870, 850
     self.t10 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t10.bind("<Button-1>", deactscroll)
     self.wt10_window = self.can.create_window(self.x10, self.y10, window=self.t10)
 
     try:
@@ -136,6 +152,7 @@ def doc_medical2(self):
 
     self.x12, self.y12 = 870, 1050
     self.t12 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t12.bind("<Button-1>", deactscroll)
     self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
 
     try:
@@ -154,6 +171,7 @@ def doc_medical2(self):
 
     self.x14, self.y14 = 870, 1230
     self.t14 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t14.bind("<Button-1>", deactscroll)
     self.wt14_window = self.can.create_window(self.x14, self.y14, window=self.t14)
 
     try:
@@ -183,6 +201,7 @@ def doc_medical2(self):
 
     self.x16, self.y16 = 870, 1510
     self.t16 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t16.bind("<Button-1>", deactscroll)
     self.wt16_window = self.can.create_window(self.x16, self.y16, window=self.t16)
 
     try:
@@ -323,30 +342,6 @@ def doc_medical2(self):
 
 
 
-    def deactscroll(event):
-        self.vsb.forget()
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
-        print("MouseWheel deactivated for textbox !")
-
-    self.x31, self.y31 = 250, 680
-    self.t31 = tk.Text(self.can, height=10, width=50, font=18,
-        relief=tk.SUNKEN)
-    self.t31.bind("<Button-1>", deactscroll)
-    self.wt31_window = self.can.create_window(self.x31, self.y31,
-        window=self.t31)
-
-    def reinitscroll(event):
-        self.addScroll()
-        print("ScrollBar appears again !")
-        self.can.bind_all("<Button-4>", self.onMouseWheel)
-        self.can.bind_all("<Button-5>", self.onMouseWheel)
-        #self.can.configure(background='DodgerBlue2')
-        print("MouseWheel reactivated for all !")
-
-    self.can.bind("<Button-1>", reinitscroll)
-
-
 
 
     def importationFile(fichier, encodage="Utf-8"):
@@ -355,6 +350,13 @@ def doc_medical2(self):
         file.close()
         for li in content:
             self.t31.insert(tk.END, li)
+
+    self.x31, self.y31 = 250, 680
+    self.t31 = tk.Text(self.can, height=10, width=50, font=18,
+        relief=tk.SUNKEN)
+    self.t31.bind("<Button-1>", deactscroll)
+    self.wt31_window = self.can.create_window(self.x31, self.y31,
+        window=self.t31)
 
     try:
         if os.path.getsize('./ttt/doc_ttt2/intro_ttt.txt'):
@@ -372,6 +374,12 @@ def doc_medical2(self):
         print("[!] File intro_res not found !")
         tk.messagebox.showinfo('INFO', 'File intro_res not found !')
 
+
+
+
+
+
+
     # Lbl for VP
     self.x32, self.y32 = 60, 800
     self.paramlab = tk.Label(self.can, text="Vitals Parameters : ",
@@ -384,6 +392,7 @@ def doc_medical2(self):
     self.x33, self.y33 = 250, 920
     self.t33 = tk.Text(self.can, height=10, width=50, font=18,
         relief=tk.SUNKEN)
+    self.t33.bind("<Button-1>", deactscroll)
     self.wt33_window = self.can.create_window(self.x33, self.y33,
         window=self.t33)
 
@@ -405,6 +414,7 @@ def doc_medical2(self):
     self.x35, self.y35 = 250, 1160
     self.t35 = tk.Text(self.can, height=10, width=50, font=18,
         relief=tk.SUNKEN)
+    self.t35.bind("<Button-1>", deactscroll)
     self.wt35_window = self.can.create_window(self.x35, self.y35,
         window=self.t35)
 
@@ -842,6 +852,7 @@ def doc_medical2(self):
 
     self.x87, self.y87 = 250, 1670
     self.t87 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t87.bind("<Button-1>", deactscroll)
     self.wt87_window = self.can.create_window(self.x87, self.y87, window=self.t87)
 
     try:
@@ -864,7 +875,7 @@ def doc_medical2(self):
     self.C75 = tk.Checkbutton(self.can, text=" Oui", fg='black', 
         bg='cyan', variable=self.CheckVar9,
         onvalue=1, offvalue=0, height=1, 
-        width=6, anchor="w")
+        width=6, anchor=tk.W)
     self.wC75 = self.can.create_window(self.x89, self.y89,
         window = self.C75)
 
@@ -873,7 +884,7 @@ def doc_medical2(self):
     self.C76 = tk.Checkbutton(self.can, text=" Non", fg='black', 
         bg='cyan', variable=self.CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
-        width=6, anchor="w")
+        width=6, anchor=tk.W)
     self.wC76 = self.can.create_window(self.x90, self.y90,
         window = self.C76)
 
@@ -890,7 +901,7 @@ def doc_medical2(self):
     self.C77 = tk.Checkbutton(self.can, text=" Oui", fg='black',
         bg='cyan', variable=self.CheckVar11, 
         onvalue=1, offvalue=0, height=1, 
-        width=6, anchor="w")
+        width=6, anchor=tk.W)
     self.wC77 = self.can.create_window(self.x92, self.y92,
         window = self.C77)
 
@@ -899,7 +910,7 @@ def doc_medical2(self):
     self.C78 = tk.Checkbutton(self.can, text=" Non", fg='black',
         bg='cyan', variable=self.CheckVar12, 
         onvalue=1, offvalue=0, height=1, 
-        width=6, anchor="w")
+        width=6, anchor=tk.W)
     self.wC78 = self.can.create_window(self.x93, self.y93,
         window = self.C78)
 
@@ -921,6 +932,7 @@ def doc_medical2(self):
     self.x95, self.y95 = 550, 1995
     self.t95 = tk.Text(self.can, height=20, width=100, font=18,
         relief=tk.SUNKEN)
+    self.t95.bind("<Button-1>", deactscroll)
     self.wt95_window = self.can.create_window(self.x95, self.y95,
         window=self.t95)
 
@@ -970,6 +982,7 @@ def doc_medical2(self):
     self.x100, self.y100 = 600, 2405 #600, 1890
     self.t100 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
+    self.t100.bind("<Button-1>", deactscroll)
     self.wt100_window = self.can.create_window(self.x100, self.y100,
         window=self.t100)
 
@@ -998,6 +1011,7 @@ def doc_medical2(self):
     self.x102, self.y102 = 600, 2625 #600, 2110
     self.t102 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
+    self.t102.bind("<Button-1>", deactscroll)
     self.wt102_window = self.can.create_window(self.x102, self.y102,
         window=self.t102)
 
@@ -1026,6 +1040,7 @@ def doc_medical2(self):
     self.x104, self.y104 = 600, 2845 #600, 2330
     self.t104 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
+    self.t104.bind("<Button-1>", deactscroll)
     self.wt104_window = self.can.create_window(self.x104, self.y104,
         window=self.t104)
 
@@ -1048,8 +1063,7 @@ def doc_medical2(self):
             To return back to main page.
         """
         try:
-            #self.effacer()
-            #self.delScroll()
+            self.effacer()
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
@@ -1084,8 +1098,8 @@ def doc_medical2(self):
     # Button to read and print
     self.x109, self.y109 = 600, 3020
     self.buttreadprint = tk.Button(self.can, text="Read / Print",
-        width=10, bd=3,
-        fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
+        width=10, bd=3, fg='yellow', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         highlightbackground='DodgerBlue2', command = prireadfunc)
     self.buttreadprint = self.can.create_window(self.x109, self.y109,
         window = self.buttreadprint)
@@ -1117,5 +1131,4 @@ def doc_medical2(self):
         window = self.lbl_ghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.bind_all("<Button-4>", self.onMouseWheel)
-    self.can.bind_all("<Button-5>", self.onMouseWheel)
+    self.can.bind("<Button-1>", self.reinitscroll)
