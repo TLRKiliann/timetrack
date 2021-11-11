@@ -7,8 +7,20 @@ from tkinter import messagebox
 import time
 import os
 import platform
-import subprocess
-import shutil
+from dmst_doc.extdmst2.extdmstfile2 import importationAdmin
+from dmst_doc.extdmst2.extdmstfile2 import importationDoc1
+from dmst_doc.extdmst2.extdmstfile2 import importationDoc2
+from dmst_doc.extdmst2.extdmstfile2 import importationDoc3
+from dmst_doc.extdmst2.extdmstfile2 import importationFam
+from dmst_doc.extdmst2.extdmstfile2 import importationHealOne
+from dmst_doc.extdmst2.extdmstfile2 import importationHealThree
+from dmst_doc.extdmst2.extdmstfile2 import importationFile2
+from dmst_doc.extdmst2.extdmstfile2 import importationParam
+from dmst_doc.extdmst2.extdmstfile2 import importationBmi
+from dmst_doc.extdmst2.extdmstfile2 import launchfunc
+from dmst_doc.extdmst2.extdmstfile2 import saveData
+from dmst_doc.extdmst2.extdmstfile2 import copytobackup
+from dmst_doc.extdmst2.extdmstfile2 import uptoserv
 
 
 def doc_medical2(self):
@@ -65,16 +77,9 @@ def doc_medical2(self):
     self.t6 = tk.Text(self.can, height=11, width=50, font=18, relief=tk.SUNKEN)
     self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
 
-    def importationAdmin(fichier, encodage="Utf-8"):
-        filecontact = open(fichier, 'r', encoding=encodage)
-        content = filecontact.readlines()
-        filecontact.close()
-        for li in content:
-            self.t6.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finalfile1.txt'):
-            importationAdmin('./contact/conpact2/finalfile1.txt', encodage="Utf-8")
+            importationAdmin(self, './contact/conpact2/finalfile1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalfile1 not found !")
         tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
@@ -91,16 +96,9 @@ def doc_medical2(self):
     self.t8 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
     self.wt8_window = self.can.create_window(self.x8, self.y8, window=self.t8)
 
-    def importationDoc1(fichier, encodage="Utf-8"):
-        filecontdoc = open(fichier, 'r', encoding=encodage)
-        content = filecontdoc.readlines()
-        filecontdoc.close()
-        for li in content:
-            self.t8.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finaldoc1.txt'):
-            importationDoc1('./contact/conpact2/finaldoc1.txt', encodage="Utf-8")
+            importationDoc1(self, './contact/conpact2/finaldoc1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc1 not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
@@ -110,16 +108,9 @@ def doc_medical2(self):
     self.t9 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
     self.wt9_window = self.can.create_window(self.x9, self.y9, window=self.t9)
 
-    def importationDoc2(fichier, encodage="Utf-8"):
-        filedoc2 = open(fichier, 'r', encoding=encodage)
-        content = filedoc2.readlines()
-        filedoc2.close()
-        for li in content:
-            self.t9.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finaldoc2.txt'):
-            importationDoc2('./contact/conpact2/finaldoc2.txt', encodage="Utf-8")
+            importationDoc2(self, './contact/conpact2/finaldoc2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc2 not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
@@ -129,21 +120,13 @@ def doc_medical2(self):
     self.t10 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
     self.wt10_window = self.can.create_window(self.x10, self.y10, window=self.t10)
 
-    def importationDoc3(fichier, encodage="Utf-8"):
-        filedoc3 = open(fichier, 'r', encoding=encodage)
-        content = filedoc3.readlines()
-        filedoc3.close()
-        for li in content:
-            self.t10.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finaldoc3.txt'):
-            importationDoc3('./contact/conpact2/finaldoc3.txt', encodage="Utf-8")
+            importationDoc3(self, './contact/conpact2/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc3.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
 
-    # Family contact from contact col 2
     self.x11, self.y11 = 870, 960
     self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
         font=('Times', 14, 'bold'), width=60,
@@ -155,21 +138,13 @@ def doc_medical2(self):
     self.t12 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
     self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
 
-    def importationFam(fichier, encodage="Utf-8"):
-        filedoc3 = open(fichier, 'r', encoding=encodage)
-        content = filedoc3.readlines()
-        filedoc3.close()
-        for li in content:
-            self.t12.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finalfam1.txt'):
-            importationFam('./contact/conpact2/finalfam1.txt', encodage="Utf-8")
+            importationFam(self, './contact/conpact2/finalfam1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalfam1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
 
-    # Home Care System contact from contact col 2
     self.x13, self.y13 = 870, 1140
     self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
         font=('Times', 14, 'bold'), width=60,
@@ -181,16 +156,9 @@ def doc_medical2(self):
     self.t14 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
     self.wt14_window = self.can.create_window(self.x14, self.y14, window=self.t14)
 
-    def importationHealOne(fichier, encodage="Utf-8"):
-        filehcs = open(fichier, 'r', encoding=encodage)
-        content = filehcs.readlines()
-        filehcs.close()
-        for li in content:
-            self.t14.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finalhcs1.txt'):
-            importationHealOne('./contact/conpact2/finalhcs1.txt', encodage="Utf-8")
+            importationHealOne(self, './contact/conpact2/finalhcs1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalhcs1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
@@ -217,16 +185,9 @@ def doc_medical2(self):
     self.t16 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
     self.wt16_window = self.can.create_window(self.x16, self.y16, window=self.t16)
 
-    def importationHealThree(fichier, encodage="Utf-8"):
-        filehcs3 = open(fichier, 'r', encoding=encodage)
-        content = filehcs3.readlines()
-        filehcs3.close()
-        for li in content:
-            self.t16.insert(tk.END, li)
-
     try:
         if os.path.getsize('./contact/conpact2/finalhcs3.txt'):
-            importationHealThree('./contact/conpact2/finalhcs3.txt',
+            importationHealThree(self, './contact/conpact2/finalhcs3.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalhcs3.txt not found !")
@@ -287,34 +248,34 @@ def doc_medical2(self):
         window=self.textHour)
 
     self.x25, self.y25 = 260, 200
-    ent_name = tk.StringVar()
-    self.txt_name = tk.Entry(self.can, textvariable=ent_name,
+    self.ent_name = tk.StringVar()
+    self.txt_name = tk.Entry(self.can, textvariable=self.ent_name,
         highlightbackground='grey', bd=2)
-    ent_name.set(a_linedmst[:-1])
+    self.ent_name.set(a_linedmst[:-1])
     self.wtxt_name_window = self.can.create_window(self.x25, self.y25,
         window=self.txt_name)
 
     self.x26, self.y26 = 260, 230
-    nt_birth = tk.StringVar()
-    self.s_birth = tk.Entry(self.can, textvariable=nt_birth,
+    self.nt_birth = tk.StringVar()
+    self.s_birth = tk.Entry(self.can, textvariable=self.nt_birth,
         highlightbackground='grey', bd=2)
-    nt_birth.set(b_linedmst[:-1])
+    self.nt_birth.set(b_linedmst[:-1])
     self.ws_birth_window = self.can.create_window(self.x26, self.y26,
         window=self.s_birth)
 
     self.x27, self.y27 = 260, 260
-    allertxt = tk.StringVar()
-    self.allername = tk.Entry(self.can, textvariable=allertxt,
+    self.allertxt = tk.StringVar()
+    self.allername = tk.Entry(self.can, textvariable=self.allertxt,
         highlightbackground='grey', bd=2)
-    allertxt.set(c_linedmst[:-1])
+    self.allertxt.set(c_linedmst[:-1])
     self.wallername_window = self.can.create_window(self.x27, self.y27,
         window=self.allername)
 
     self.x28, self.y28 = 260, 290
-    transdis = tk.StringVar()
-    self.transmission = tk.Entry(self.can, textvariable=transdis,
+    self.transdis = tk.StringVar()
+    self.transmission = tk.Entry(self.can, textvariable=self.transdis,
         highlightbackground='grey', bd=2)
-    transdis.set(d_linedmst[:-1])
+    self.transdis.set(d_linedmst[:-1])
     self.wtransmission_window = self.can.create_window(self.x28, self.y28,
         window=self.transmission)
 
@@ -359,11 +320,34 @@ def doc_medical2(self):
     self.wtttlab_window = self.can.create_window(self.x30, self.y30,
         window=self.tttlab)
 
+
+
+
+    def deactscroll(event):
+        self.vsb.forget()
+        self.can.unbind_all("<Button-4>")
+        self.can.unbind_all("<Button-5>")
+        print("MouseWheel deactivated for textbox !")
+
     self.x31, self.y31 = 250, 680
     self.t31 = tk.Text(self.can, height=10, width=50, font=18,
         relief=tk.SUNKEN)
+    self.t31.bind("<Button-1>", deactscroll)
     self.wt31_window = self.can.create_window(self.x31, self.y31,
         window=self.t31)
+
+    def reinitscroll(event):
+        self.addScroll()
+        print("ScrollBar appears again !")
+        self.can.bind_all("<Button-4>", self.onMouseWheel)
+        self.can.bind_all("<Button-5>", self.onMouseWheel)
+        #self.can.configure(background='DodgerBlue2')
+        print("MouseWheel reactivated for all !")
+
+    self.can.bind("<Button-1>", reinitscroll)
+
+
+
 
     def importationFile(fichier, encodage="Utf-8"):
         file = open(fichier, 'r', encoding=encodage)
@@ -371,13 +355,6 @@ def doc_medical2(self):
         file.close()
         for li in content:
             self.t31.insert(tk.END, li)
-
-    def importationFile2(fichier2, encodage="Utf-8"):
-        file2 = open(fichier2, 'r', encoding=encodage)
-        content=file2.readlines()
-        file2.close()
-        for li2 in content:
-            self.t31.insert(tk.END, li2)
 
     try:
         if os.path.getsize('./ttt/doc_ttt2/intro_ttt.txt'):
@@ -389,7 +366,7 @@ def doc_medical2(self):
 
     try:
         if os.path.getsize('./ttt/doc_ttt2/intro_res.txt'):
-            importationFile2('./ttt/doc_ttt2/intro_res.txt',
+            importationFile2(self, './ttt/doc_ttt2/intro_res.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_res not found !")
@@ -410,17 +387,9 @@ def doc_medical2(self):
     self.wt33_window = self.can.create_window(self.x33, self.y33,
         window=self.t33)
 
-    # Display text in textbox from param files
-    def importationParam(fichier, encodage="Utf-8"):
-        fileparam = open(fichier, 'r', encoding=encodage)
-        content = fileparam.readlines()
-        fileparam.close()
-        for li in content:
-            self.t33.insert(tk.END, li)
-
     try:
         if os.path.getsize('./param/paramdata2.txt'):
-            importationParam('./param/paramdata2.txt', encodage="Utf-8")
+            importationParam(self, './param/paramdata2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File paramdata2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File paramdata2.txt not found !')
@@ -439,413 +408,13 @@ def doc_medical2(self):
     self.wt35_window = self.can.create_window(self.x35, self.y35,
         window=self.t35)
 
-    # Display text in textbox from bmi files
-    def importationBmi(fichier, encodage="Utf-8"):
-        filebmi = open(fichier, 'r', encoding=encodage)
-        content = filebmi.readlines()
-        filebmi.close()
-        for li in content:
-            self.t35.insert(tk.END, li)
     try:
         if os.path.getsize('./calBmi/bmi2.txt'):
-            importationBmi('./calBmi/bmi2.txt', encodage="Utf-8")
+            importationBmi(self, './calBmi/bmi2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File bmi2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File bmi2.txt not found !')
 
-    def launchfunc(ent_name, nt_birth, allertxt, transdis):
-        """
-            To record data after warning !
-        """
-        try:
-            if os.path.exists('./dmst_doc/doc_dmst2/rslt_dmst2.txt'):
-                tk.messagebox.showwarning('Warning',
-                    '!!! Warning, saving new data will erased old file !!!')
-                msgayn = tk.messagebox.askyesno('Look', 'Would you like to continue ?')
-                if msgayn == 1:
-                    os.remove('./dmst_doc/doc_dmst2/rslt_dmst2.txt')
-                    print("!!! rslt_dmst2.txt removed !!!")
-                else:
-                    tk.messagebox.showinfo("INFO", "Nothing has changed !")
-        except FileNotFoundError as fnf_totry:
-            print("[!] No rslt_dmst2.txt exist !", fnf_totry)
-            tk.messagebox.showinfo("INFO", "Let's creat one ! ;)")
-
-        try:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file:
-                file.write("----------------------------------------------------------\n")
-                file.write("Date : ")
-                file.write(time.strftime("%d.%m.%Y") + '\n')
-                file.write("Hour : ")
-                file.write(time.strftime("%H:%M:%S") + '\n')
-                file.write("Patient name : ")
-                file.write(ent_name.get() + '\n')
-                file.write("Birthday : ")
-                file.write(nt_birth.get() + '\n')
-                file.write("Allergy : ")
-                file.write(allertxt.get() + '\n')
-                file.write("Transmissible disease : ")
-                file.write(transdis.get() + '\n')
-                file.write("----------------------------------------------------------\n\n")
-        except FileNotFoundError as nf_rsltdm:
-            print("[!] File rslt_dmst2.txt not found !", nf_rsltdm)
-        
-        print("!!! rslt_dmst2 initialized !!!")
-
-        try:
-            with open('./diag/doc_diag2/diagrecap2.txt', 'r') as file_di:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    diag_content = file_di.readlines()
-                    for li in diag_content:
-                        file_dm.writelines(diag_content)
-                        break
-        except FileNotFoundError as diag_nf:
-            print("[!] File diagrecap2.txt not found !", diag_nf)
-
-        try:
-            with open('./ttt/doc_ttt2/intro_ttt.txt', 'r') as file_ttt:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    ttt_content = file_ttt.readlines()
-                    for li in ttt_content:
-                        file_dm.writelines("\n--- Treatments ---\n")
-                        file_dm.writelines(ttt_content)
-                        break
-        except FileNotFoundError as intro_nf:
-            print("[!] File intro_ttt.txt not found !", intro_nf)
-
-        try:
-            with open('./ttt/doc_ttt2/intro_res.txt', 'r') as file_res:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    res_content = file_res.readlines()
-                    for li in res_content:
-                        file_dm.writelines("--- Reserves ---\n")
-                        file_dm.writelines(res_content)
-                        break
-        except FileNotFoundError as res_nf:
-            print("[!] File intro_res.txt not found !", res_nf)
-
-        try:
-            with open('./param/paramdata2.txt', 'r') as file_pa:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    pa_content = file_pa.readlines()
-                    for li in pa_content:
-                        file_dm.writelines("--- Vitals Parameters ---\n")
-                        file_dm.writelines(pa_content)
-                        break
-        except FileNotFoundError as param_nf:
-            print("[!] File paramdata2.txt not found !", param_nf)
-
-        try:
-            with open('./calBmi/bmi2.txt', 'r') as file_b:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    bmi_content = file_b.readlines()
-                    for li in bmi_content:
-                        file_dm.writelines("--- BMI ---\n")
-                        file_dm.writelines(bmi_content)
-                        break
-        except FileNotFoundError as bmi_nf:
-            print("[!] File bmi2.txt not found !", bmi_nf)
-
-        try:
-            with open('./contact/conpact2/finalfile1.txt', 'r') as file_contf1:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    fcf1_content = file_contf1.readlines()
-                    for li in fcf1_content:
-                        file_dm.writelines("\n--- Patient data ---\n")
-                        file_dm.writelines(fcf1_content)
-                        break
-        except FileNotFoundError as ff1_nf:
-            print("[!] File finalfile1.txt not found !", ff1_nf)
-
-        try:
-            with open('./contact/conpact2/finaldoc1.txt', 'r') as file_do1:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    fcd1_content = file_do1.readlines()
-                    for li in fcd1_content:
-                        file_dm.writelines("\n\n--- Docotor1 data ---\n")
-                        file_dm.writelines(fcd1_content)
-                        break
-        except FileNotFoundError as fd1_nf:
-            print("[!] File finaldoc1.txt not found !", fd1_nf)
-
-        try:
-            with open('./contact/conpact2/finaldoc2.txt', 'r') as file_do2:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    fcd2_content = file_do2.readlines()
-                    for li in fcd2_content:
-                        file_dm.writelines("\n\n--- Docotor2 data ---\n")
-                        file_dm.writelines(fcd2_content)
-                        break
-        except FileNotFoundError as fd2_nf:
-            print("[!] File finaldoc2.txt not found !", fd2_nf)
-
-        try:
-            with open('./contact/conpact2/finaldoc3.txt', 'r') as file_do3:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    fcd3_content = file_do3.readlines()
-                    for li in fcd3_content:
-                        file_dm.writelines("\n\n--- Docotor3 data ---\n")
-                        file_dm.writelines(fcd3_content)
-                        break
-        except FileNotFoundError as fd3_nf:
-            print("[!] File finaldoc3.txt not found !", fd3_nf)
-        
-        try:
-            with open('./contact/conpact2/finalfam1.txt', 'r') as file_fam:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    ff_content = file_fam.readlines()
-                    for li in ff_content:
-                        file_dm.writelines("\n\n--- Family data ---\n")
-                        file_dm.writelines(ff_content)
-                        break
-        except FileNotFoundError as ffam_nf:
-            print("[!] File finalfam1.txt not found !", ffam_nf)
-
-        try:
-            with open('./contact/conpact2/finalhcs1.txt', 'r') as file_hcs1:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    hcs1_content = file_hcs1.readlines()
-                    for li in hcs1_content:
-                        file_dm.writelines("\n\n--- Home Care System1 ---\n")
-                        file_dm.writelines(hcs1_content)
-                        break
-        except FileNotFoundError as hcs1_nf:
-            print("[!] File finalhcs1.txt not found !", hcs1_nf)
-
-        try:
-            with open('./contact/conpact2/finalhcs2.txt', 'r') as file_hcs2:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    hcs2_content = file_hcs2.readlines()
-                    for li in hcs2_content:
-                        file_dm.writelines("\n\n--- Home Care System2 ---\n")
-                        file_dm.writelines(hcs2_content)
-                        break
-        except FileNotFoundError as hcs2_nf:
-            print("[!] File finalhcs2.txt not found !", hcs2_nf)
-
-        try:
-            with open('./contact/conpact2/finalhcs3.txt', 'r') as file_hcs3:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    hcs3_content = file_hcs3.readlines()
-                    for li in hcs3_content:
-                        file_dm.writelines("\n\n--- Home Care System3 ---\n")
-                        file_dm.writelines(hcs3_content)
-                        break
-        except FileNotFoundError as hcs3_nf:
-            print("[!] File finalhcs3.txt not found !", hcs3_nf)
-
-        try:
-            with open('./auxequip/doc_equip/auxiliary2.txt', 'r') as file_aux:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', '+a') as file_dm:
-                    ox_equip = file_aux.readlines()
-                    for li in ox_equip:
-                        file_dm.writelines("\n\n--- Auxiliary Equipement ---\n")
-                        file_dm.writelines(ox_equip)
-                        break
-        except FileNotFoundError as aux_nf:
-            print("[!] File auxiliary2.txt not found !", aux_nf)
-
-        print(CheckVar1.get())
-        if CheckVar1.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("\n\n--- AGGIR grid : ---\n")
-                file1.write("[+] Orientation = 1\n")
-        elif CheckVar1.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("\n\n--- AGGIR grid : ---\n")
-                file2.write("[+] Orientation = 2\n")
-        elif CheckVar1.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("\n\n--- AGGIR grid : ---\n")
-                file3.write("[+] Orientation = 3\n")
-        elif CheckVar1.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("\n\n--- AGGIR grid : ---\n")
-                file4.write("[+] Orientation = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("\n\n--- AGGIR grid : ---\n")
-                file0.write("[+] Orientation = 0\n")
-
-        print(CheckVar2.get())
-        if CheckVar2.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Cohérence = 1\n")
-        elif CheckVar2.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Cohérence = 2\n")
-        elif CheckVar2.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Cohérence = 3\n")
-        elif CheckVar2.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Cohérence = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Cohérence = 0\n")
-
-        print(CheckVar3.get())
-        if CheckVar3.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Toilette = 1\n")
-        elif CheckVar3.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Toilette = 2\n")
-        elif CheckVar3.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Toilette = 3\n")
-        elif CheckVar3.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Toilette = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Toilette = 0\n")
-
-        print(CheckVar4.get())
-        if CheckVar4.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Habillage = 1\n")
-        elif CheckVar4.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Habillage = 2\n")
-        elif CheckVar4.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Habillage = 3\n")
-        elif CheckVar4.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Habillage = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Habillage = 0\n")
-
-        print(CheckVar5.get())
-        if CheckVar5.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Alimentation = 1\n")
-        elif CheckVar5.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Alimentation = 2\n")
-        elif CheckVar5.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Alimentation = 3\n")
-        elif CheckVar5.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Alimentation = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Alimentation = 0\n")
-
-        print(CheckVar6.get())
-        if CheckVar6.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Elimination = 1\n")
-        elif CheckVar6.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Elimination = 2\n")
-        elif CheckVar6.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Elimination = 3\n")
-        elif CheckVar6.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Elimination = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Elimination = 0\n")
-
-        print(CheckVar7.get())
-        if CheckVar7.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Déplacement = 1\n")
-        elif CheckVar7.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Déplacement = 2\n")
-        elif CheckVar7.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Déplacement = 3\n")
-        elif CheckVar7.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Déplacement = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Déplacement = 0\n")
-
-        print(CheckVar8.get())
-        if CheckVar8.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Communication = 1\n")
-        elif CheckVar8.get() == 2:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file2:
-                file2.write("[+] Communication = 2\n")
-        elif CheckVar8.get() == 3:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file3:
-                file3.write("[+] Communication = 3\n")
-        elif CheckVar8.get() == 4:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file4:
-                file4.write("[+] Communication = 4\n")
-        else:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file0:
-                file0.write("[+] Communication = 0\n")
-
-        print(CheckVar9.get())
-        if CheckVar9.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("\n[+] PLAFA = Oui\n")
-        else:
-            print("[!] None (PLAFA)")
-
-        print(CheckVar10.get())
-        if CheckVar10.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("\n[+] PLAFA = Non\n")
-        else:
-            print("[!] None (PLAFA)")
-
-        print(CheckVar11.get())
-        if CheckVar11.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Directives anticipées = Oui\n\n")
-        else:
-            print("[!] None (Directives anticipées)")
-
-        print(CheckVar12.get())
-        if CheckVar12.get() == 1:
-            with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as file1:
-                file1.write("[+] Directives anticipées = Non\n\n")
-        else:
-            print("[!] None (Directives anticipées)")
-
-        try:
-            with open('./dmst_doc/doc_dmst2/parcours.txt', 'r') as ftor:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as ftocp:
-                    lines = ftor.readlines()
-                    for li in lines:
-                        ftocp.writelines("\nParcours :\n")
-                        ftocp.writelines(lines)
-                        break
-        except FileNotFoundError as err_parc:
-            print("! File not found !", err_parc)
-
-        try:
-            with open('./dmst_doc/doc_dmst2/pbm.txt', 'r') as fpbmtor:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as fthreecp:
-                    lines = fpbmtor.readlines()
-                    for li in lines:
-                        fthreecp.writelines("Problématique :\n")
-                        fthreecp.writelines(lines)
-                        break
-        except FileNotFoundError as err_pbm:
-            print("! File not found !", err_pbm)
-
-        try:
-            with open('./dmst_doc/doc_dmst2/project.txt', 'r') as fprojcp:
-                with open('./dmst_doc/doc_dmst2/rslt_dmst2.txt', 'a+') as fortocp:
-                    lines = fprojcp.readlines()
-                    for li in lines:
-                        fortocp.writelines("Projet :\n")
-                        fortocp.writelines(lines)
-                        break
-        except FileNotFoundError as err_proj:
-            print("[!] File project.txt not found !", err_proj)
 
     self.x36, self.y36 = 250, 1290 
     self.lbl_need = tk.Label(self.can,
@@ -871,11 +440,11 @@ def doc_medical2(self):
     self.wlbl_eat = self.can.create_window(self.x38, self.y38,
         window = self.lbl_eat)
 
-    CheckVar1 = tk.IntVar()
+    self.CheckVar1 = tk.IntVar()
     self.x39, self.y39 = 240, 1360
     self.C0 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
+        bg='DodgerBlue2', variable=self.CheckVar1,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC0 = self.can.create_window(self.x39, self.y39,
         window = self.C0)
@@ -883,7 +452,7 @@ def doc_medical2(self):
     self.x40, self.y40 = 295, 1360
     self.C1 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
+        bg='DodgerBlue2', variable=self.CheckVar1,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC1 = self.can.create_window(self.x40, self.y40,
         window = self.C1)
@@ -891,7 +460,7 @@ def doc_medical2(self):
     self.x41, self.y41 = 350, 1360
     self.C2 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
+        bg='DodgerBlue2', variable=self.CheckVar1,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC2 = self.can.create_window(self.x41, self.y41,
         window = self.C2)
@@ -899,7 +468,7 @@ def doc_medical2(self):
     self.x42, self.y42 = 405, 1360
     self.C3 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1, 
+        bg='DodgerBlue2', variable=self.CheckVar1, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC3 = self.can.create_window(self.x42, self.y42,
         window = self.C3)
@@ -907,7 +476,7 @@ def doc_medical2(self):
     self.x43, self.y43 = 460, 1360
     self.C4 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1, 
+        bg='DodgerBlue2', variable=self.CheckVar1, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC4 = self.can.create_window(self.x43, self.y43,
         window = self.C4)
@@ -920,11 +489,11 @@ def doc_medical2(self):
     self.wlbl_sec = self.can.create_window(self.x44, self.y44,
         window = self.lbl_sec)
 
-    CheckVar2 = tk.IntVar()
+    self.CheckVar2 = tk.IntVar()
     self.x45, self.y45 = 240, 1385
     self.C10 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
+        bg='DodgerBlue2', variable=self.CheckVar2,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC10 = self.can.create_window(self.x45, self.y45,
         window = self.C10)
@@ -932,7 +501,7 @@ def doc_medical2(self):
     self.x46, self.y46 = 295, 1385
     self.C11 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
+        bg='DodgerBlue2', variable=self.CheckVar2,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC11 = self.can.create_window(self.x46, self.y46,
         window = self.C11)
@@ -940,7 +509,7 @@ def doc_medical2(self):
     self.x47, self.y47 = 350, 1385
     self.C12 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
+        bg='DodgerBlue2', variable=self.CheckVar2,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC12 = self.can.create_window(self.x47, self.y47,
         window = self.C12)
@@ -948,7 +517,7 @@ def doc_medical2(self):
     self.x48, self.y48 = 405, 1385
     self.C13 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar2, 
+        bg='DodgerBlue2', variable=self.CheckVar2, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC13 = self.can.create_window(self.x48, self.y48,
         window = self.C13)
@@ -956,7 +525,7 @@ def doc_medical2(self):
     self.x49, self.y49 = 460, 1385
     self.C14 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar2, 
+        bg='DodgerBlue2', variable=self.CheckVar2, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC14 = self.can.create_window(self.x49, self.y49,
         window = self.C14)
@@ -969,11 +538,11 @@ def doc_medical2(self):
     self.wlbl_third = self.can.create_window(self.x50, self.y50,
         window = self.lbl_third)
 
-    CheckVar3 = tk.IntVar()
+    self.CheckVar3 = tk.IntVar()
     self.x51, self.y51 = 240, 1410
     self.C20 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
+        bg='DodgerBlue2', variable=self.CheckVar3,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC20 = self.can.create_window(self.x51, self.y51,
         window = self.C20)
@@ -981,7 +550,7 @@ def doc_medical2(self):
     self.x52, self.y52 = 295, 1410
     self.C21 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
+        bg='DodgerBlue2', variable=self.CheckVar3,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC21 = self.can.create_window(self.x52, self.y52,
         window = self.C21)
@@ -989,7 +558,7 @@ def doc_medical2(self):
     self.x53, self.y53 = 350, 1410
     self.C22 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
+        bg='DodgerBlue2', variable=self.CheckVar3,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC22 = self.can.create_window(self.x53, self.y53,
         window = self.C22)
@@ -997,7 +566,7 @@ def doc_medical2(self):
     self.x54, self.y54 = 405, 1410
     self.C23 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3, 
+        bg='DodgerBlue2', variable=self.CheckVar3, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC23 = self.can.create_window(self.x54, self.y54,
         window = self.C23)
@@ -1005,7 +574,7 @@ def doc_medical2(self):
     self.x55, self.y55 = 460, 1410
     self.C24 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3, 
+        bg='DodgerBlue2', variable=self.CheckVar3, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC24 = self.can.create_window(self.x55, self.y55,
         window = self.C24)
@@ -1018,11 +587,11 @@ def doc_medical2(self):
     self.wlbl_forth = self.can.create_window(self.x56, self.y56,
         window = self.lbl_forth)
 
-    CheckVar4 = tk.IntVar()
+    self.CheckVar4 = tk.IntVar()
     self.x57, self.y57 = 240, 1435
     self.C30 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
+        bg='DodgerBlue2', variable=self.CheckVar4,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC30 = self.can.create_window(self.x57, self.y57,
         window = self.C30)
@@ -1030,7 +599,7 @@ def doc_medical2(self):
     self.x58, self.y58 = 295, 1435
     self.C31 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
+        bg='DodgerBlue2', variable=self.CheckVar4,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC31 = self.can.create_window(self.x58, self.y58,
         window = self.C31)
@@ -1038,7 +607,7 @@ def doc_medical2(self):
     self.x59, self.y59 = 350, 1435
     self.C32 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
+        bg='DodgerBlue2', variable=self.CheckVar4,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC32 = self.can.create_window(self.x59, self.y59,
         window = self.C32)
@@ -1046,7 +615,7 @@ def doc_medical2(self):
     self.x60, self.y60 = 405, 1435
     self.C33 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4, 
+        bg='DodgerBlue2', variable=self.CheckVar4, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC33 = self.can.create_window(self.x60, self.y60,
         window = self.C33)
@@ -1054,7 +623,7 @@ def doc_medical2(self):
     self.x61, self.y61 = 460, 1435
     self.C34 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4, 
+        bg='DodgerBlue2', variable=self.CheckVar4, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC34 = self.can.create_window(self.x61, self.y61,
         window = self.C34)
@@ -1067,11 +636,11 @@ def doc_medical2(self):
     self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
         window = self.lbl_fivth)
 
-    CheckVar5 = tk.IntVar()
+    self.CheckVar5 = tk.IntVar()
     self.x63, self.y63 = 240, 1460
     self.C40 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
+        bg='DodgerBlue2', variable=self.CheckVar5,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC40 = self.can.create_window(self.x63, self.y63,
         window = self.C40)
@@ -1079,7 +648,7 @@ def doc_medical2(self):
     self.x64, self.y64 = 295, 1460
     self.C41 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
+        bg='DodgerBlue2', variable=self.CheckVar5,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC41 = self.can.create_window(self.x64, self.y64,
         window = self.C41)
@@ -1087,7 +656,7 @@ def doc_medical2(self):
     self.x65, self.y65 = 350, 1460
     self.C42 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
+        bg='DodgerBlue2', variable=self.CheckVar5,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC42 = self.can.create_window(self.x65, self.y65,
         window = self.C42)
@@ -1095,7 +664,7 @@ def doc_medical2(self):
     self.x66, self.y66 = 405, 1460
     self.C43 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5, 
+        bg='DodgerBlue2', variable=self.CheckVar5, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC43 = self.can.create_window(self.x66, self.y66,
         window = self.C43)
@@ -1103,7 +672,7 @@ def doc_medical2(self):
     self.x67, self.y67 = 460, 1460
     self.C44 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5, 
+        bg='DodgerBlue2', variable=self.CheckVar5, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC44 = self.can.create_window(self.x67, self.y67,
         window = self.C44)
@@ -1116,11 +685,11 @@ def doc_medical2(self):
     self.wlbl_sixth = self.can.create_window(self.x68, self.y68,
         window = self.lbl_sixth)
 
-    CheckVar6 = tk.IntVar()
+    self.CheckVar6 = tk.IntVar()
     self.x69, self.y69 = 240, 1485
     self.C50 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
+        bg='DodgerBlue2', variable=self.CheckVar6,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC50 = self.can.create_window(self.x69, self.y69,
         window = self.C50)
@@ -1128,7 +697,7 @@ def doc_medical2(self):
     self.x70, self.y70 = 295, 1485
     self.C51 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
+        bg='DodgerBlue2', variable=self.CheckVar6,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC51 = self.can.create_window(self.x70, self.y70,
         window = self.C51)
@@ -1136,7 +705,7 @@ def doc_medical2(self):
     self.x71, self.y71 = 350, 1485
     self.C52 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
+        bg='DodgerBlue2', variable=self.CheckVar6,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC52 = self.can.create_window(self.x71, self.y71,
         window = self.C52)
@@ -1144,7 +713,7 @@ def doc_medical2(self):
     self.x72, self.y72 = 405, 1485
     self.C53 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6, 
+        bg='DodgerBlue2', variable=self.CheckVar6, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC53 = self.can.create_window(self.x72, self.y72,
         window = self.C53)
@@ -1152,7 +721,7 @@ def doc_medical2(self):
     self.x73, self.y73 = 460, 1485
     self.C54 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6, 
+        bg='DodgerBlue2', variable=self.CheckVar6, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC54 = self.can.create_window(self.x73, self.y73,
         window = self.C54)
@@ -1165,11 +734,11 @@ def doc_medical2(self):
     self.wlbl_seven = self.can.create_window(self.x74, self.y74,
         window = self.lbl_seven)
 
-    CheckVar7 = tk.IntVar()
+    self.CheckVar7 = tk.IntVar()
     self.x75, self.y75 = 240, 1510
     self.C60 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
+        bg='DodgerBlue2', variable=self.CheckVar7,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC60 = self.can.create_window(self.x75, self.y75,
         window = self.C60)
@@ -1177,7 +746,7 @@ def doc_medical2(self):
     self.x76, self.y76 = 295, 1510
     self.C61 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
+        bg='DodgerBlue2', variable=self.CheckVar7,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC61 = self.can.create_window(self.x76, self.y76,
         window = self.C61)
@@ -1185,7 +754,7 @@ def doc_medical2(self):
     self.x77, self.y77 = 350, 1510
     self.C62 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
+        bg='DodgerBlue2', variable=self.CheckVar7,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC62 = self.can.create_window(self.x77, self.y77,
         window = self.C62)
@@ -1193,7 +762,7 @@ def doc_medical2(self):
     self.x78, self.y78 = 405, 1510
     self.C63 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar7, 
+        bg='DodgerBlue2', variable=self.CheckVar7, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC63 = self.can.create_window(self.x78, self.y78,
         window = self.C63)
@@ -1201,7 +770,7 @@ def doc_medical2(self):
     self.x79, self.y79 = 460, 1510
     self.C64 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar7, 
+        bg='DodgerBlue2', variable=self.CheckVar7, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC64 = self.can.create_window(self.x79, self.y79,
         window = self.C64)
@@ -1214,11 +783,11 @@ def doc_medical2(self):
     self.wlbl_height = self.can.create_window(self.x80, self.y80,
         window = self.lbl_height)
 
-    CheckVar8 = tk.IntVar()
+    self.CheckVar8 = tk.IntVar()
     self.x81, self.y81 = 240, 1535
     self.C70 = tk.Radiobutton(self.can, text="0",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
+        bg='DodgerBlue2', variable=self.CheckVar8,
         value=0, height=1, width=3, anchor=tk.W)
     self.wC70 = self.can.create_window(self.x81, self.y81,
         window = self.C70)
@@ -1226,7 +795,7 @@ def doc_medical2(self):
     self.x82, self.y82 = 295, 1535
     self.C71 = tk.Radiobutton(self.can, text="1",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
+        bg='DodgerBlue2', variable=self.CheckVar8,
         value=1, height=1, width=3, anchor=tk.W)
     self.wC71 = self.can.create_window(self.x82, self.y82,
         window = self.C71)
@@ -1234,7 +803,7 @@ def doc_medical2(self):
     self.x83, self.y83 = 350, 1535
     self.C72 = tk.Radiobutton(self.can, text="2",
         highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
+        bg='DodgerBlue2', variable=self.CheckVar8,
         value=2, height=1, width=3, anchor=tk.W)
     self.wC72 = self.can.create_window(self.x83, self.y83,
         window = self.C72)
@@ -1242,7 +811,7 @@ def doc_medical2(self):
     self.x84, self.y84 = 405, 1535
     self.C73 = tk.Radiobutton(self.can, text="3",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar8, 
+        bg='DodgerBlue2', variable=self.CheckVar8, 
         value=3, height=1, width=3, anchor=tk.W)
     self.wC73 = self.can.create_window(self.x84, self.y84,
         window = self.C73)
@@ -1250,7 +819,7 @@ def doc_medical2(self):
     self.x85, self.y85 = 460, 1535
     self.C74 = tk.Radiobutton(self.can, text="4",
         highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar8, 
+        bg='DodgerBlue2', variable=self.CheckVar8, 
         value=4, height=1, width=3, anchor=tk.W)
     self.wC74 = self.can.create_window(self.x85, self.y85,
         window = self.C74)
@@ -1290,19 +859,19 @@ def doc_medical2(self):
     self.wlbl_plafa = self.can.create_window(self.x88, self.y88,
         window = self.lbl_plafa)
 
-    CheckVar9 = tk.IntVar()
+    self.CheckVar9 = tk.IntVar()
     self.x89, self.y89 = 920, 1655
     self.C75 = tk.Checkbutton(self.can, text=" Oui", fg='black', 
-        bg='cyan', variable=CheckVar9,
+        bg='cyan', variable=self.CheckVar9,
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC75 = self.can.create_window(self.x89, self.y89,
         window = self.C75)
 
-    CheckVar10 = tk.IntVar()
+    self.CheckVar10 = tk.IntVar()
     self.x90, self.y90 = 994, 1655
     self.C76 = tk.Checkbutton(self.can, text=" Non", fg='black', 
-        bg='cyan', variable=CheckVar10, 
+        bg='cyan', variable=self.CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC76 = self.can.create_window(self.x90, self.y90,
@@ -1316,19 +885,19 @@ def doc_medical2(self):
     self.wlbl_diranticip = self.can.create_window(self.x91, self.y91,
         window = self.lbl_diranticip)
 
-    CheckVar11 = tk.IntVar()
+    self.CheckVar11 = tk.IntVar()
     self.x92, self.y92 = 920, 1700
     self.C77 = tk.Checkbutton(self.can, text=" Oui", fg='black',
-        bg='cyan', variable=CheckVar11, 
+        bg='cyan', variable=self.CheckVar11, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC77 = self.can.create_window(self.x92, self.y92,
         window = self.C77)
 
-    CheckVar12 = tk.IntVar()
+    self.CheckVar12 = tk.IntVar()
     self.x93, self.y93 = 994, 1700
     self.C78 = tk.Checkbutton(self.can, text=" Non", fg='black',
-        bg='cyan', variable=CheckVar12, 
+        bg='cyan', variable=self.CheckVar12, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC78 = self.can.create_window(self.x93, self.y93,
@@ -1383,48 +952,6 @@ def doc_medical2(self):
     ntry_eva.set(time.strftime("%d/%m/%Y"))
     self.wentryname = self.can.create_window(self.x98, self.y98,
         window = self.entryname)    
-
-    def saveData():
-        """
-            Test if file parcours.txt exist and write data.
-            A msg into textbox appear to informate user that
-            data have been saved.
-        """
-        try:
-            if os.path.getsize('./dmst_doc/doc_dmst2/parcours.txt'):
-                print("[+] File 'parcours.txt' exist !")
-                with open('./dmst_doc/doc_dmst2/parcours.txt', 'w') as parc_file:
-                    parc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
-        except FileNotFoundError as err_parc:
-            print("[!] Sorry, file 'parcours.txt' not exist !", err_parc)
-            print("[+] File 'parcours.txt' created !")
-            with open('./dmst_doc/doc_dmst2/parcours.txt', 'a+') as noparc_file:
-                noparc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
-        self.t100.insert(tk.INSERT, "\n---Data saved !---")
-
-        try:
-            if os.path.getsize('./dmst_doc/doc_dmst2/pbm.txt'):
-                print("[+] File 'pbm.txt' exist !")
-                with open('./dmst_doc/doc_dmst2/pbm.txt', 'w') as pbmfile:
-                    pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
-        except FileNotFoundError as err_pbm:
-            print("[!] Sorry, file 'pbm.txt' not exist !", err_pbm)
-            print("[+] File 'pbm.txt' created !")
-            with open('./dmst_doc/doc_dmst2/pbm.txt', 'a+') as no_pbmfile:
-                no_pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
-        self.t102.insert(tk.INSERT, "\n---Data saved !---")
-
-        try:
-            if os.path.getsize('./dmst_doc/doc_dmst2/project.txt'):
-                print("[+] File 'project.txt' exist !")
-                with open('./dmst_doc/doc_dmst2/project.txt', 'w') as projectfile:
-                    projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
-        except FileNotFoundError as err_proj:
-            print("[!] Sorry, file 'project.txt' not exist !", err_proj)
-            print("[+] File 'project.txt' created !")
-            with open('./dmst_doc/doc_dmst2/project.txt', 'a+') as no_projectfile:
-                no_projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
-        self.t104.insert(tk.INSERT, "\n---Data saved !---")
 
     self.x99, self.y99 = 80, 2315 #80, 1800
     self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
@@ -1510,131 +1037,37 @@ def doc_medical2(self):
         print("[!] File 'project.txt' does not exist !")
         print(project_f)
 
-    def copytobackup():
-        """
-            To copy file below to ./Backup/Files2
-        """
-        try:
-            if os.path.exists('./dmst_doc/doc_dmst2/parcours.txt'):
-                shutil.copy('./dmst_doc/doc_dmst2/parcours.txt',
-                    './Backup/Files2/parcours.txt')
-                print("[+] File --> parcours.txt copied into ./Backup/Files2")
-        except FileNotFoundError as nf_parco:
-            print("Not found", nf_parco)
-
-        try:
-            if os.path.exists('./dmst_doc/doc_dmst2/pbm.txt'):
-                shutil.copy('./dmst_doc/doc_dmst2/pbm.txt',
-                    './Backup/Files2/pbm.txt')
-                print("[+] File --> pbm.txt copied into ./Backup/Files2")
-        except FileNotFoundError as nf_prob:
-            print("Not found", nf_prob)
-
-        try:
-            if os.path.exists('./dmst_doc/doc_dmst2/project.txt'):
-                shutil.copy('./dmst_doc/doc_dmst2/project.txt',
-                    './Backup/Files2/project.txt')
-                print("[+] File --> project.txt copied into ./Backup/Files2")
-        except FileNotFoundError as nf_projex:
-            print("Not found", nf_projex)
-
-        try:
-            if os.path.exists('./dmst_doc/doc_dmst2/rslt_dmst2.txt'):
-                shutil.copy('./dmst_doc/doc_dmst2/rslt_dmst2.txt',
-                    './Backup/Files2/rslt_dmst2.txt')
-                print("[+] File --> rslt_dmst2.txt copied into ./Backup/Files2")
-        except FileNotFoundError as nf_rltd:
-            print("Not found", nf_rltd)
-
-    def uptoserv():
-        """
-            To upload data on server after creating files.
-        """
-        proc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/rslt_dmst2.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/rslt_dmst2.txt"],
-            stderr=subprocess.PIPE)
-        print("Result SCP transfert : %s" % repr(proc.stderr))
-        if proc.stderr == b'':
-            print("[Upload] File rslt_dmst2.txt uploaded !")
-            #tk.messagebox.showinfo("INFO", "rslt_dmst2.txt uploaded...")
-        else:
-            print("[!] No file to upload !")
-            tk.messagebox.showerror("Error", "No rslt_dmst2.txt to upload...")
-
-        secproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/parcours.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/parcours.txt"],
-            stderr=subprocess.PIPE)
-        print("Result SCP transfert : %s" % repr(secproc.stderr))
-        if secproc.stderr == b'':
-            print("[Upload] File parcours.txt uploaded !")
-            #tk.messagebox.showinfo("INFO", "parcours.txt uploaded...")
-        else:
-            print("[!] No file to upload !")
-            tk.messagebox.showerror("Error", "No parcours.txt to upload...")
-
-        thirdproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/pbm.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/pbm.txt"],
-            stderr=subprocess.PIPE)
-        print("Result SCP transfert : %s" % repr(thirdproc.stderr))
-        if thirdproc.stderr == b'':
-            print("[Upload] File pbm.txt uploaded !")
-            #tk.messagebox.showinfo("INFO", "pbm.txt uploaded...")
-        else:
-            print("[!] No file to upload !")
-            tk.messagebox.showerror("Error", "No pbm.txt to upload...")
-
-        forthproc = subprocess.run(["scp", "./dmst_doc/doc_dmst2/project.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/project.txt"],
-            stderr=subprocess.PIPE)
-        print("Result SCP transfert : %s" % repr(forthproc.stderr))
-        if forthproc.stderr == b'':
-            print("[Upload] File project.txt uploaded !")
-            #tk.messagebox.showinfo("INFO", "project.txt uploaded...")
-        else:
-            print("[!] No file to upload !")
-            tk.messagebox.showerror("Error", "No project.txt to upload...")
-
-        fivth = subprocess.run(["scp", "./need/doc_suivi2/main_14b.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt2/dmst2/main_14b.txt"],
-            stderr=subprocess.PIPE)
-        print("Result SCP transfert : %s" % repr(fivth.stderr))
-        if fivth.stderr == b'':
-            print("[Upload] File main_14b.txt uploaded !")
-            #tk.messagebox.showinfo("INFO", "main_14b.txt uploaded...")
-        else:
-            print("[!] No file to upload !")
-            tk.messagebox.showerror("Error", "No main_14b.txt to upload...")
-
     def msgvalidate():
         """
             To display a msg to confirm that all data have been saved.
         """
         tk.messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
-    def record_alldata(ent_name, nt_birth, allertxt, transdis):
-        """
-            That the main function to save all data by calling other functions.
-        """
-        MsgBox = tk.messagebox.askyesno('Record', 'Data will be saved, ok ?')
-        if MsgBox == 1:
-            saveData()
-            launchfunc(ent_name, nt_birth, allertxt, transdis)
-            copytobackup()
-            uptoserv()
-            msgvalidate()
-            self.showPatients()
-        else:
-            tk.messagebox.showinfo('Return', 'Ok, nothing has changed...')
-
     def way_back():
         """
             To return back to main page.
         """
         try:
-            self.effacer()
+            #self.effacer()
+            #self.delScroll()
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
+
+    def record_alldata(self):
+        """
+            That the main function to save all data by calling other functions.
+        """
+        MsgBox = tk.messagebox.askyesno('Record', 'Data will be saved, ok ?')
+        if MsgBox == 1:
+            saveData(self)
+            launchfunc(self)
+            copytobackup()
+            uptoserv()
+            msgvalidate()
+            way_back()
+        else:
+            tk.messagebox.showinfo('Return', 'Ok, nothing has changed...')
 
     def prireadfunc():
 
@@ -1661,16 +1094,16 @@ def doc_medical2(self):
     self.x110, self.y110 = 800, 3020
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='DodgerBlue2', command = lambda : record_alldata(ent_name,
-            nt_birth, allertxt, transdis))
+        highlightbackground='DodgerBlue2', command=lambda: record_alldata(self))
+        # ent_name, nt_birth, allertxt, transdis
     self.buttonsave = self.can.create_window(self.x110, self.y110,
         window = self.buttonsave)
 
     # Button quit
     self.x111, self.y111 = 1020, 3020
     self.buttonquit = tk.Button(self.can, text='Return to main menu',
-        width=20, bd=3,
-        fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
+        width=20, bd=3, fg='white', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         highlightbackground='DodgerBlue2', command = way_back)
     self.buttonquit = self.can.create_window(self.x111, self.y111,
         window = self.buttonquit)

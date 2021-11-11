@@ -325,7 +325,7 @@ def doc_medical4(self):
 
     # Display text in textbox from diag file
     try:
-        with open('./diag/doc_diag2/diagrecap2.txt', 'r') as filediag:
+        with open('./diag/doc_diag4/diagrecap4.txt', 'r') as filediag:
             linesdiag = filediag.readlines()
             for i in range(0, len(linesdiag)):
                 for line in linesdiag:
@@ -380,16 +380,16 @@ def doc_medical4(self):
             self.t31.insert(tk.END, li2)
 
     try:
-        if os.path.getsize('./ttt/doc_ttt2/intro_ttt.txt'):
-            importationFile('./ttt/doc_ttt2/intro_ttt.txt',
+        if os.path.getsize('./ttt/doc_ttt4/intro_ttt.txt'):
+            importationFile('./ttt/doc_ttt4/intro_ttt.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_ttt not found !")
         tk.messagebox.showinfo('INFO', 'File intro_ttt not found !')
 
     try:
-        if os.path.getsize('./ttt/doc_ttt2/intro_res.txt'):
-            importationFile2('./ttt/doc_ttt2/intro_res.txt',
+        if os.path.getsize('./ttt/doc_ttt4/intro_res.txt'):
+            importationFile2('./ttt/doc_ttt4/intro_res.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_res not found !")
@@ -419,11 +419,11 @@ def doc_medical4(self):
             self.t33.insert(tk.END, li)
 
     try:
-        if os.path.getsize('./param/paramdata2.txt'):
-            importationParam('./param/paramdata2.txt', encodage="Utf-8")
+        if os.path.getsize('./param/paramdata4.txt'):
+            importationParam('./param/paramdata4.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("[!] File paramdata2.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File paramdata2.txt not found !')
+        print("[!] File paramdata4.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File paramdata4.txt not found !')
 
     # Lbl for BMI
     self.x34, self.y34 = 40, 1040
@@ -447,11 +447,11 @@ def doc_medical4(self):
         for li in content:
             self.t35.insert(tk.END, li)
     try:
-        if os.path.getsize('./calBmi/bmi2.txt'):
-            importationBmi('./calBmi/bmi2.txt', encodage="Utf-8")
+        if os.path.getsize('./calBmi/bmi4.txt'):
+            importationBmi('./calBmi/bmi4.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("[!] File bmi2.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File bmi2.txt not found !')
+        print("[!] File bmi4.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File bmi4.txt not found !')
 
     def launchfunc(ent_name, nt_birth, allertxt, transdis):
         """
@@ -490,20 +490,20 @@ def doc_medical4(self):
         except FileNotFoundError as nf_rsltdm:
             print("[!] File rslt_dmst4.txt not found !", nf_rsltdm)
         
-        print("!!! rslt_dmst2 initialized !!!")
+        print("!!! rslt_dmst4 initialized !!!")
 
         try:
-            with open('./diag/doc_diag2/diagrecap2.txt', 'r') as file_di:
+            with open('./diag/doc_diag4/diagrecap4.txt', 'r') as file_di:
                 with open('./dmst_doc/doc_dmst4/rslt_dmst4.txt', '+a') as file_dm:
                     diag_content = file_di.readlines()
                     for li in diag_content:
                         file_dm.writelines(diag_content)
                         break
         except FileNotFoundError as diag_nf:
-            print("[!] File diagrecap2.txt not found !", diag_nf)
+            print("[!] File diagrecap4.txt not found !", diag_nf)
 
         try:
-            with open('./ttt/doc_ttt2/intro_ttt.txt', 'r') as file_ttt:
+            with open('./ttt/doc_ttt4/intro_ttt.txt', 'r') as file_ttt:
                 with open('./dmst_doc/doc_dmst4/rslt_dmst4.txt', '+a') as file_dm:
                     ttt_content = file_ttt.readlines()
                     for li in ttt_content:
@@ -514,7 +514,7 @@ def doc_medical4(self):
             print("[!] File intro_ttt.txt not found !", intro_nf)
 
         try:
-            with open('./ttt/doc_ttt2/intro_res.txt', 'r') as file_res:
+            with open('./ttt/doc_ttt4/intro_res.txt', 'r') as file_res:
                 with open('./dmst_doc/doc_dmst4/rslt_dmst4.txt', '+a') as file_dm:
                     res_content = file_res.readlines()
                     for li in res_content:
@@ -525,7 +525,7 @@ def doc_medical4(self):
             print("[!] File intro_res.txt not found !", res_nf)
 
         try:
-            with open('./param/paramdata2.txt', 'r') as file_pa:
+            with open('./param/paramdata4.txt', 'r') as file_pa:
                 with open('./dmst_doc/doc_dmst4/rslt_dmst4.txt', '+a') as file_dm:
                     pa_content = file_pa.readlines()
                     for li in pa_content:
@@ -533,10 +533,10 @@ def doc_medical4(self):
                         file_dm.writelines(pa_content)
                         break
         except FileNotFoundError as param_nf:
-            print("[!] File paramdata2.txt not found !", param_nf)
+            print("[!] File paramdata4.txt not found !", param_nf)
 
         try:
-            with open('./calBmi/bmi2.txt', 'r') as file_b:
+            with open('./calBmi/bmi4.txt', 'r') as file_b:
                 with open('./dmst_doc/doc_dmst4/rslt_dmst4.txt', '+a') as file_dm:
                     bmi_content = file_b.readlines()
                     for li in bmi_content:
@@ -544,7 +544,7 @@ def doc_medical4(self):
                         file_dm.writelines(bmi_content)
                         break
         except FileNotFoundError as bmi_nf:
-            print("[!] File bmi2.txt not found !", bmi_nf)
+            print("[!] File bmi4.txt not found !", bmi_nf)
 
         try:
             with open('./contact/conpact4/finalfile1.txt', 'r') as file_contf1:
