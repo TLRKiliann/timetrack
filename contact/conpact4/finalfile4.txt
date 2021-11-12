@@ -1,0 +1,11 @@
+Patient name : Steve Jobs
+Birthdate : 00/00/0000
+Native : fdgfg
+Phone : 43526565
+Street : 46456546456
+City : gfsdgsdg
+e-mail : sfgdfsgfdg
+Insurance : dgfgdfgf
+Policy : 45345354354
+Civil status : rtewtwertr
+Confession : ushjkjhfjkdsg
