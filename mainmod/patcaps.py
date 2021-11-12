@@ -28,8 +28,8 @@ def callResident(self):
     self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
-    self.can.configure(background='DodgerBlue2')
-    self.can.focus_set()
+    #print(self.can.configure())
+    self.can.config(bg='DodgerBlue2')
 
     # Display date
     self.x1, self.y1 = 1140, 40

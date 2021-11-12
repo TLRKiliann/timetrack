@@ -51,8 +51,9 @@ class ScrollCanvas(tk.Frame):
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
 
-        self.can = tk.Canvas(self, width=width, height=height, bd=bd,
-            bg=bg, relief=relief)
+        self.can = tk.Canvas(self, width=width, height=height, bd=1,
+            highlightbackground="white",
+            highlightthickness=1, relief=relief)
         self.viewPort = tk.Frame(self.can)
 
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview)
@@ -1695,7 +1696,7 @@ class Application(tk.Frame):
         self.mBar = MenuBar(self)
         self.mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
-        self.can = tk.Canvas(self, width=1250, height=700, bg='white', bd=1)
+        self.can = tk.Canvas(self, width=1250, height=700)
 
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("Times", 18, 'bold'))
@@ -1709,10 +1710,10 @@ class Application(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
             troughcolor='SteelBlue2', bg='RoyalBlue3', activebackground='pale turquoise')
         self.can.configure(yscrollcommand=self.vsb.set)
+        #print(self.can.config())
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
-        self.can.focus_set()
 
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
@@ -1819,7 +1820,8 @@ class Application(tk.Frame):
     def delScroll(self):
         ''' To delete ScrollBar '''
         self.vsb.forget()
-        #self.item.pack_forget()
+        self.can.config(bd=1, highlightbackground="white",
+            highlightthickness=1)
         print("ScrollBar deleted")
 
     def msgQuitapp(self, arg):

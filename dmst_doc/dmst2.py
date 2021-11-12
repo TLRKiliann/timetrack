@@ -33,8 +33,7 @@ def doc_medical2(self):
     self.delScroll()
     self.can.unbind_all("<Button-4>")
     self.can.unbind_all("<Button-5>")
-    self.can.configure(background='DodgerBlue2')
-    self.can.focus_set()
+    self.can.config(background='DodgerBlue2')
 
     def deactscroll(event):
         """
