@@ -510,7 +510,9 @@ def saveData(self):
         print("[+] File 'parcours.txt' created !")
         with open('./dmst_doc/doc_dmst2/parcours.txt', 'a+') as noparc_file:
             noparc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
+    self.t100.config(state='normal')
     self.t100.insert(tk.INSERT, "\n---Data saved !---")
+    self.t100.config(state='disable')
 
     try:
         if os.path.getsize('./dmst_doc/doc_dmst2/pbm.txt'):
@@ -522,7 +524,9 @@ def saveData(self):
         print("[+] File 'pbm.txt' created !")
         with open('./dmst_doc/doc_dmst2/pbm.txt', 'a+') as no_pbmfile:
             no_pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
+    self.t102.config(state='normal')
     self.t102.insert(tk.INSERT, "\n---Data saved !---")
+    self.t102.config(state='disable')
 
     try:
         if os.path.getsize('./dmst_doc/doc_dmst2/project.txt'):
@@ -534,7 +538,9 @@ def saveData(self):
         print("[+] File 'project.txt' created !")
         with open('./dmst_doc/doc_dmst2/project.txt', 'a+') as no_projectfile:
             no_projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
+    self.t104.config(state='normal')
     self.t104.insert(tk.INSERT, "\n---Data saved !---")
+    self.t104.config(state='disable')
 
 def copytobackup():
     """

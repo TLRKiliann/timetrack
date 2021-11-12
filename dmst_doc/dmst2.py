@@ -34,7 +34,6 @@ def doc_medical2(self):
     self.can.unbind_all("<Button-4>")
     self.can.unbind_all("<Button-5>")
     self.can.config(background='DodgerBlue2')
-    #self.can.focus_set()
 
     def deactscroll(event):
         """
@@ -84,148 +83,11 @@ def doc_medical2(self):
     self.wlabl_title = self.can.create_window(self.x3, self.y3,
         window = self.labl_title)
 
-    self.x4, self.y4 = 870, 100
-    self.labl_title2 = tk.Label(self.can, text='--- Admin Data ---',
-        font=('Times', 14, 'bold'), width=60,
-        height=1, bg='RoyalBlue3', fg='white')
-    self.wlabl_title2 = self.can.create_window(self.x4, self.y4,
-        window = self.labl_title2)
-
     self.x5, self.y5 = 90, 140
     self.LabDate = tk.Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor=tk.E)
-    self.wLabDate_window = self.can.create_window(self.x5, self.y5, window=self.LabDate)
-
-    # Admin from contact col 2
-    self.x6, self.y6 = 870, 240
-    self.t6 = tk.Text(self.can, height=11, width=50, font=18, relief=tk.SUNKEN)
-    self.t6.bind("<Button-1>", deactscroll)
-    self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finalfile1.txt'):
-            importationAdmin(self, './contact/conpact2/finalfile1.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finalfile1 not found !")
-        tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
-
-    self.x7, self.y7 = 870, 380
-    self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
-        font=('Times', 14, 'bold'), width=60,
-        height=1, bg='RoyalBlue3', fg='white')
-    self.wlbl_doc = self.can.create_window(self.x7, self.y7,
-        window = self.lbl_doc)
-
-    # Doctor from contact col 2
-    self.x8, self.y8 = 870, 490
-    self.t8 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
-    self.t8.bind("<Button-1>", deactscroll)
-    self.wt8_window = self.can.create_window(self.x8, self.y8, window=self.t8)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finaldoc1.txt'):
-            importationDoc1(self, './contact/conpact2/finaldoc1.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finaldoc1 not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
-
-    # Doctor2 from contact col 2
-    self.x9, self.y9 = 870, 670
-    self.t9 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
-    self.t9.bind("<Button-1>", deactscroll)
-    self.wt9_window = self.can.create_window(self.x9, self.y9, window=self.t9)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finaldoc2.txt'):
-            importationDoc2(self, './contact/conpact2/finaldoc2.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finaldoc2 not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
-
-    # Doctor3 from contact col 2
-    self.x10, self.y10 = 870, 850
-    self.t10 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
-    self.t10.bind("<Button-1>", deactscroll)
-    self.wt10_window = self.can.create_window(self.x10, self.y10, window=self.t10)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finaldoc3.txt'):
-            importationDoc3(self, './contact/conpact2/finaldoc3.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finaldoc3.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
-
-    self.x11, self.y11 = 870, 960
-    self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
-        font=('Times', 14, 'bold'), width=60,
-        height=1, bg='RoyalBlue3', fg='white')
-    self.wlbl_fam = self.can.create_window(self.x11, self.y11,
-        window = self.lbl_fam)
-
-    self.x12, self.y12 = 870, 1050
-    self.t12 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
-    self.t12.bind("<Button-1>", deactscroll)
-    self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finalfam1.txt'):
-            importationFam(self, './contact/conpact2/finalfam1.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finalfam1.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
-
-    self.x13, self.y13 = 870, 1140
-    self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
-        font=('Times', 14, 'bold'), width=60,
-        height=1, bg='RoyalBlue3', fg='white')
-    self.wlbl_heal = self.can.create_window(self.x13, self.y13,
-        window = self.lbl_heal)
-
-    self.x14, self.y14 = 870, 1230
-    self.t14 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
-    self.t14.bind("<Button-1>", deactscroll)
-    self.wt14_window = self.can.create_window(self.x14, self.y14, window=self.t14)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finalhcs1.txt'):
-            importationHealOne(self, './contact/conpact2/finalhcs1.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finalhcs1.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
-
-    self.x15, self.y15 = 870, 1370
-    self.t15 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
-    self.t15.bind("<Button-1>", deactscroll)
-    self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
-
-    def importationHealTwo(fichier, encodage="Utf-8"):
-        filehcs2 = open(fichier, 'r', encoding=encodage)
-        content = filehcs2.readlines()
-        filehcs2.close()
-        for li in content:
-            self.t15.config(state='normal')
-            self.t15.insert(tk.END, li)
-            self.t15.config(state='disable')
-
-    try:
-        if os.path.getsize('./contact/conpact2/finalhcs2.txt'):
-            importationHealTwo('./contact/conpact2/finalhcs2.txt', encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finalhcs2.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
-
-    self.x16, self.y16 = 870, 1510
-    self.t16 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
-    self.t16.bind("<Button-1>", deactscroll)
-    self.wt16_window = self.can.create_window(self.x16, self.y16, window=self.t16)
-
-    try:
-        if os.path.getsize('./contact/conpact2/finalhcs3.txt'):
-            importationHealThree(self, './contact/conpact2/finalhcs3.txt',
-                encodage="Utf-8")
-    except FileNotFoundError as no_file:
-        print("[!] File finalhcs3.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finalhcs3.txt not found !')
+    self.wLabDate_window = self.can.create_window(self.x5, self.y5,
+        window=self.LabDate)
 
     self.x17, self.y17 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
@@ -328,6 +190,7 @@ def doc_medical2(self):
                     line.replace('{', '')
                     line.replace('}', '')
                     line = linesdiag[i]
+                    self.t29.config(state='normal')
                     self.t29.insert(tk.INSERT, linesdiag[i])
                     self.t29.insert(tk.INSERT, linesdiag[i+1])
                     self.t29.insert(tk.INSERT, linesdiag[i+2])
@@ -335,14 +198,19 @@ def doc_medical2(self):
                     self.t29.insert(tk.INSERT, linesdiag[i+4])
                     self.t29.insert(tk.INSERT, linesdiag[i+5])
                     self.t29.insert(tk.INSERT, linesdiag[i+6])
+                    self.t29.config(state='disable')
                     break
+                self.t29.config(state='normal')
                 self.t29.insert(tk.INSERT,
                     "All diagnostics done...")
+                self.t29.config(state='disable')
                 break
     except FileNotFoundError as infofileout:
         print("[!] File 1 has not been found", infofileout)
     except IndexError as inforange:
+        self.t29.config(state='normal')
         self.t29.insert(tk.INSERT, "All diagnostics done...")
+        self.t29.config(state='disable')
         print("[!] List 1 got less than 6 lines", inforange)
     else:
         ("[!] Error unknow 1 (for diag)")
@@ -439,6 +307,144 @@ def doc_medical2(self):
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_need = self.can.create_window(self.x36, self.y36,
         window = self.lbl_need)
+
+    self.x4, self.y4 = 870, 100
+    self.labl_title2 = tk.Label(self.can, text='--- Admin Data ---',
+        font=('Times', 14, 'bold'), width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlabl_title2 = self.can.create_window(self.x4, self.y4,
+        window = self.labl_title2)
+
+    # Admin from contact col 2
+    self.x6, self.y6 = 870, 240
+    self.t6 = tk.Text(self.can, height=11, width=50, font=18, relief=tk.SUNKEN)
+    self.t6.bind("<Button-1>", deactscroll)
+    self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalfile1.txt'):
+            importationAdmin(self, './contact/conpact2/finalfile1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finalfile1 not found !")
+        tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
+
+    self.x7, self.y7 = 870, 380
+    self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
+        font=('Times', 14, 'bold'), width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_doc = self.can.create_window(self.x7, self.y7,
+        window = self.lbl_doc)
+
+    # Doctor from contact col 2
+    self.x8, self.y8 = 870, 490
+    self.t8 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t8.bind("<Button-1>", deactscroll)
+    self.wt8_window = self.can.create_window(self.x8, self.y8, window=self.t8)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finaldoc1.txt'):
+            importationDoc1(self, './contact/conpact2/finaldoc1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finaldoc1 not found !")
+        tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
+
+    # Doctor2 from contact col 2
+    self.x9, self.y9 = 870, 670
+    self.t9 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t9.bind("<Button-1>", deactscroll)
+    self.wt9_window = self.can.create_window(self.x9, self.y9, window=self.t9)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finaldoc2.txt'):
+            importationDoc2(self, './contact/conpact2/finaldoc2.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finaldoc2 not found !")
+        tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
+
+    # Doctor3 from contact col 2
+    self.x10, self.y10 = 870, 850
+    self.t10 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
+    self.t10.bind("<Button-1>", deactscroll)
+    self.wt10_window = self.can.create_window(self.x10, self.y10, window=self.t10)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finaldoc3.txt'):
+            importationDoc3(self, './contact/conpact2/finaldoc3.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finaldoc3.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
+
+    self.x11, self.y11 = 870, 960
+    self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
+        font=('Times', 14, 'bold'), width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_fam = self.can.create_window(self.x11, self.y11,
+        window = self.lbl_fam)
+
+    self.x12, self.y12 = 870, 1050
+    self.t12 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t12.bind("<Button-1>", deactscroll)
+    self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalfam1.txt'):
+            importationFam(self, './contact/conpact2/finalfam1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finalfam1.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
+
+    self.x13, self.y13 = 870, 1140
+    self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
+        font=('Times', 14, 'bold'), width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_heal = self.can.create_window(self.x13, self.y13,
+        window = self.lbl_heal)
+
+    self.x14, self.y14 = 870, 1230
+    self.t14 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t14.bind("<Button-1>", deactscroll)
+    self.wt14_window = self.can.create_window(self.x14, self.y14, window=self.t14)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs1.txt'):
+            importationHealOne(self, './contact/conpact2/finalhcs1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finalhcs1.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
+
+    def importationHealTwo(fichier, encodage="Utf-8"):
+        filehcs2 = open(fichier, 'r', encoding=encodage)
+        content = filehcs2.readlines()
+        filehcs2.close()
+        for li in content:
+            self.t15.config(state='normal')
+            self.t15.insert(tk.END, li)
+            self.t15.config(state='disable')
+
+    self.x15, self.y15 = 870, 1370
+    self.t15 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t15.bind("<Button-1>", deactscroll)
+    self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs2.txt'):
+            importationHealTwo('./contact/conpact2/finalhcs2.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finalhcs2.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
+
+    self.x16, self.y16 = 870, 1510
+    self.t16 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t16.bind("<Button-1>", deactscroll)
+    self.wt16_window = self.can.create_window(self.x16, self.y16, window=self.t16)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs3.txt'):
+            importationHealThree(self, './contact/conpact2/finalhcs3.txt',
+                encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("[!] File finalhcs3.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalhcs3.txt not found !')
 
     self.x37, self.y37 = 250, 1320
     self.lbl_exneeds = tk.Label(self.can,
@@ -878,6 +884,14 @@ def doc_medical2(self):
     self.wlbl_plafa = self.can.create_window(self.x88, self.y88,
         window = self.lbl_plafa)
 
+    # Directives Anticip.
+    self.x91, self.y91 = 750, 1700
+    self.lbl_diranticip = tk.Label(self.can, text='Directives anticipées :',
+        font=('Times', 14, 'bold'), width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor=tk.W)
+    self.wlbl_diranticip = self.can.create_window(self.x91, self.y91,
+        window = self.lbl_diranticip)
+
     self.CheckVar9 = tk.IntVar()
     self.x89, self.y89 = 920, 1655
     self.C75 = tk.Checkbutton(self.can, text=" Oui", fg='black', 
@@ -895,14 +909,6 @@ def doc_medical2(self):
         width=6, anchor=tk.W)
     self.wC76 = self.can.create_window(self.x90, self.y90,
         window = self.C76)
-
-    # Directives Anticip.
-    self.x91, self.y91 = 750, 1700
-    self.lbl_diranticip = tk.Label(self.can, text='Directives anticipées :',
-        font=('Times', 14, 'bold'), width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor=tk.W)
-    self.wlbl_diranticip = self.can.create_window(self.x91, self.y91,
-        window = self.lbl_diranticip)
 
     self.CheckVar11 = tk.IntVar()
     self.x92, self.y92 = 920, 1700
@@ -961,21 +967,21 @@ def doc_medical2(self):
     self.wlbl_need = self.can.create_window(self.x96, self.y96,
         window = self.lbl_need)
 
-    self.x97, self.y97 = 80, 2270 #80, 1760
+    self.x97, self.y97 = 80, 2270
     self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_evadate = self.can.create_window(self.x97, self.y97,
         window = self.lbl_evadate)
 
-    self.x98, self.y98 = 240, 2270 #240, 1760
+    self.x98, self.y98 = 240, 2270
     self.ntry_eva = tk.StringVar()
     self.entryname = tk.Entry(self.can, textvariable=self.ntry_eva, width=10)
     self.ntry_eva.set(time.strftime("%d/%m/%Y"))
     self.wentryname = self.can.create_window(self.x98, self.y98,
         window = self.entryname)    
 
-    self.x99, self.y99 = 80, 2315 #80, 1800
+    self.x99, self.y99 = 80, 2315
     self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
@@ -991,7 +997,7 @@ def doc_medical2(self):
             self.t100.insert(tk.END, li)
             self.t100.config(state='disable')
 
-    self.x100, self.y100 = 600, 2405 #600, 1890
+    self.x100, self.y100 = 600, 2405
     self.t100 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
     self.t100.bind("<Button-1>", deactscroll)
@@ -1022,7 +1028,7 @@ def doc_medical2(self):
             self.t102.insert(tk.END, li)
             self.t102.config(state='disable')
 
-    self.x102, self.y102 = 600, 2625 #600, 2110
+    self.x102, self.y102 = 600, 2625
     self.t102 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
     self.t102.bind("<Button-1>", deactscroll)
@@ -1037,7 +1043,7 @@ def doc_medical2(self):
         print("[!] File 'pbm.txt' does not exist !")
         print(pbm_f)
 
-    self.x103, self.y103 = 80, 2760 #80, 2240
+    self.x103, self.y103 = 80, 2760
     self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
@@ -1053,7 +1059,7 @@ def doc_medical2(self):
             self.t104.insert(tk.END, li)
             self.t104.config(state='disable')
 
-    self.x104, self.y104 = 600, 2845 #600, 2330
+    self.x104, self.y104 = 600, 2845
     self.t104 = tk.Text(self.can, height=10, width=80, font=18,
         relief=tk.SUNKEN)
     self.t104.bind("<Button-1>", deactscroll)
@@ -1124,7 +1130,6 @@ def doc_medical2(self):
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='DodgerBlue2', command=lambda: record_alldata(self))
-        # ent_name, nt_birth, allertxt, transdis
     self.buttonsave = self.can.create_window(self.x110, self.y110,
         window = self.buttonsave)
 

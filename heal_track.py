@@ -1708,7 +1708,6 @@ class Application(tk.Frame):
         self.vsb = tk.Scrollbar(self, orient=tk.VERTICAL, command=self.can.yview,
             troughcolor='SteelBlue2', bg='RoyalBlue3', activebackground='pale turquoise')
         self.can.configure(yscrollcommand=self.vsb.set)
-        #print(self.can.config())
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
@@ -1848,6 +1847,40 @@ class Application(tk.Frame):
         except OSError as err_quit:
             print("[!] Error 3 : time to quit !!!", err_quit)
 
+    def alarmProg(self):
+        """
+            Usr set an alarm to remind him something.
+        """
+        alarmThread(self)
+
+    def showSynopsis(self):
+        """
+            Call synopsis boxapp.py for
+            reading data one day before.
+        """
+        callBox(self)
+
+    def showPatients(self):
+        """
+            Call functions in patcaps.py.
+            Main frame with all patients.
+        """
+        callResident(self)
+
+    def funcPyCon(self):
+        """
+            Display data from mysql database.
+        """
+        self.master.withdraw()
+        subprocess.run('./accessDB.py', check=True)
+        self.master.deiconify()
+
+    def mapApp(self):
+        """
+            Explanations about application.
+        """
+        instalpy(self)
+
     def startPage(self):
         """
             First page when you start app.
@@ -1855,8 +1888,7 @@ class Application(tk.Frame):
         # Insert picture
         self.effacer()
         self.delScroll()
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
+
         self.photo = tk.PhotoImage(file='./syno_gif/fondcolorbg4.png')
         self.itemfirst = self.can.create_image((0,0), image=self.photo,
             anchor=tk.NW)
@@ -1903,40 +1935,8 @@ class Application(tk.Frame):
             window=self.button4)
 
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-
-    def alarmProg(self):
-        """
-            Usr set an alarm to remind him something.
-        """
-        alarmThread(self)
-
-    def showSynopsis(self):
-        """
-            Call synopsis boxapp.py for
-            reading data one day before.
-        """
-        callBox(self)
-
-    def showPatients(self):
-        """
-            Call functions in patcaps.py.
-            Main frame with all patients.
-        """
-        callResident(self)
-
-    def funcPyCon(self):
-        """
-            Display data from mysql database.
-        """
-        self.master.withdraw()
-        subprocess.run('./accessDB.py', check=True)
-        self.master.deiconify()
-
-    def mapApp(self):
-        """
-            Explanations about application.
-        """
-        instalpy(self)
+        self.can.unbind_all("<Button-4>")
+        self.can.unbind_all("<Button-5>")
 
     def frameInfo(self):
         """
