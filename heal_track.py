@@ -1695,10 +1695,10 @@ class Application(tk.Frame):
         self.mBar = MenuBar(self)
         self.mBar.pack(side=tk.TOP, fill=tk.X, expand=1)
 
-        self.can = tk.Canvas(self, width=1250, height=700, bg='black')
+        self.can = tk.Canvas(self, width=1250, height=700, bg='white', bd=1)
 
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
-            font=("helvetica", 18, 'bold'))
+            font=("Times", 18, 'bold'))
         self.clock_label.pack(side=tk.TOP, fill=tk.X, expand=1)
         self.clock_label.after(200, self.tick)
 
@@ -1712,6 +1712,7 @@ class Application(tk.Frame):
         self.vsb.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.can.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+        self.can.focus_set()
 
         self.viewPort.bind("<Configure>", self.onFrameConfigure)
         self.can.bind("<Configure>", self.onCanvasConfigure)
@@ -1736,14 +1737,14 @@ class Application(tk.Frame):
         except (ValueError, OSError) as val_err:
             print("[!] Error time --> ", val_err)
 
+    def onFrameConfigure(self, event):
+        '''Reset the scroll region to encompass the inner frame'''
+        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+
     def onCanvasConfigure(self, event):
         '''Reset the canvas window to encompass inner frame when required'''
         canvas_width = event.width
         self.can.itemconfig(self.canvas_window, width=canvas_width)
-
-    def onFrameConfigure(self, event):
-        '''Reset the scroll region to encompass the inner frame'''
-        self.can.configure(scrollregion=self.can.bbox(tk.ALL))
 
     def onMouseWheel(self, event):
         """
@@ -1787,6 +1788,9 @@ class Application(tk.Frame):
         print("ScrollBar appears again !")
         self.onEnter(event)
         print("MouseWheel reactivated for all !")
+        self.can.config(highlightthickness = 0)
+        self.can.focus_set()
+        self.can.focus("")
 
     def onLeave(self, event):
         if platform.system() == 'Linux':
@@ -1815,6 +1819,7 @@ class Application(tk.Frame):
     def delScroll(self):
         ''' To delete ScrollBar '''
         self.vsb.forget()
+        #self.item.pack_forget()
         print("ScrollBar deleted")
 
     def msgQuitapp(self, arg):

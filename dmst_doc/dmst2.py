@@ -34,6 +34,7 @@ def doc_medical2(self):
     self.can.unbind_all("<Button-4>")
     self.can.unbind_all("<Button-5>")
     self.can.configure(background='DodgerBlue2')
+    self.can.focus_set()
 
     def deactscroll(event):
         """
@@ -130,7 +131,7 @@ def doc_medical2(self):
         print("[!] File finaldoc2 not found !")
         tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
 
-    # Doctor2 from contact col 2
+    # Doctor3 from contact col 2
     self.x10, self.y10 = 870, 850
     self.t10 = tk.Text(self.can, height=8, width=50, font=18, relief=tk.SUNKEN)
     self.t10.bind("<Button-1>", deactscroll)
@@ -183,6 +184,7 @@ def doc_medical2(self):
 
     self.x15, self.y15 = 870, 1370
     self.t15 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
+    self.t15.bind("<Button-1>", deactscroll)
     self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
 
     def importationHealTwo(fichier, encodage="Utf-8"):
@@ -301,6 +303,7 @@ def doc_medical2(self):
     #Textbox for diag 1
     self.x29, self.y29 = 250, 440
     self.t29 = tk.Text(self.can, height=10, width=50, font=18, relief=tk.SUNKEN)
+    self.t29.bind("<Button-1>", deactscroll)
     self.wt29_window = self.can.create_window(self.x29, self.y29, window=self.t29)
 
     # Display text in textbox from diag file
@@ -1063,7 +1066,6 @@ def doc_medical2(self):
             To return back to main page.
         """
         try:
-            self.effacer()
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
@@ -1130,5 +1132,5 @@ def doc_medical2(self):
     self.wlbl_ghost = self.can.create_window(self.x112, self.y112,
         window = self.lbl_ghost)
 
-    self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.bind("<Button-1>", self.reinitscroll)
+    self.can.configure(scrollregion=self.can.bbox(tk.ALL))

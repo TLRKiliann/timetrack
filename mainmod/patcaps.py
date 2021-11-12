@@ -29,6 +29,7 @@ def callResident(self):
     self.item_image = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
     self.can.configure(background='DodgerBlue2')
+    self.can.focus_set()
 
     # Display date
     self.x1, self.y1 = 1140, 40
