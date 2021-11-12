@@ -34,6 +34,7 @@ def doc_medical2(self):
     self.can.unbind_all("<Button-4>")
     self.can.unbind_all("<Button-5>")
     self.can.config(background='DodgerBlue2')
+    #self.can.focus_set()
 
     def deactscroll(event):
         """
@@ -44,6 +45,17 @@ def doc_medical2(self):
         self.can.unbind_all("<Button-4>")
         self.can.unbind_all("<Button-5>")
         print("MouseWheel deactivated for textbox !")
+
+    def toreinitscroll(event):
+        """
+            Reactivate ScrollBar and MouseWheel.
+        """
+        self.can.config(highlightbackground='white',
+            highlightthickness=1)
+        self.addScroll()
+        print("ScrollBar appears again !")
+        self.onEnter(event)
+        print("MouseWheel reactivated for all !")
 
     self.x1, self.y1 = 500, 45
     self.labl_name = tk.Label(self.can, text="DMST",
@@ -59,9 +71,9 @@ def doc_medical2(self):
         d_linedmst = filename2.readline()
 
     self.x2, self.y2 = 640, 45
-    ntry_txt = tk.StringVar()
-    self.entryname = tk.Entry(self.can, textvariable=ntry_txt)
-    ntry_txt.set(a_linedmst[:-1])
+    self.ntry_txt = tk.StringVar()
+    self.entryname = tk.Entry(self.can, textvariable=self.ntry_txt)
+    self.ntry_txt.set(a_linedmst[:-1])
     self.wentryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
 
@@ -191,7 +203,9 @@ def doc_medical2(self):
         content = filehcs2.readlines()
         filehcs2.close()
         for li in content:
+            self.t15.config(state='normal')
             self.t15.insert(tk.END, li)
+            self.t15.config(state='disable')
 
     try:
         if os.path.getsize('./contact/conpact2/finalhcs2.txt'):
@@ -260,10 +274,10 @@ def doc_medical2(self):
         window=self.textDate)
 
     self.x24, self.y24 = 260, 170
-    time_Htring = tk.IntVar()
-    self.textHour = tk.Entry(self.can, textvariable=time_Htring,
+    self.time_Htring = tk.IntVar()
+    self.textHour = tk.Entry(self.can, textvariable=self.time_Htring,
         highlightbackground='grey', bd=2)
-    time_Htring.set(time.strftime("%H:%M:%S"))
+    self.time_Htring.set(time.strftime("%H:%M:%S"))
     self.wtextHour_window = self.can.create_window(self.x24, self.y24,
         window=self.textHour)
 
@@ -341,28 +355,25 @@ def doc_medical2(self):
     self.wtttlab_window = self.can.create_window(self.x30, self.y30,
         window=self.tttlab)
 
-
-
-
-
-
-    def importationFile(fichier, encodage="Utf-8"):
-        file = open(fichier, 'r', encoding=encodage)
-        content=file.readlines()
-        file.close()
-        for li in content:
+    def importationFile(self, fichier, encodage="Utf-8"):
+        file31 = open(fichier, 'r', encoding=encodage)
+        content31 = file31.readlines()
+        file31.close()
+        for li in content31:
+            self.t31.config(state='normal')
             self.t31.insert(tk.END, li)
+            self.t31.config(state='disable')
 
     self.x31, self.y31 = 250, 680
     self.t31 = tk.Text(self.can, height=10, width=50, font=18,
         relief=tk.SUNKEN)
-    self.t31.bind("<Button-1>", deactscroll)
     self.wt31_window = self.can.create_window(self.x31, self.y31,
         window=self.t31)
+    self.t31.bind("<Button-1>", deactscroll)
 
     try:
         if os.path.getsize('./ttt/doc_ttt2/intro_ttt.txt'):
-            importationFile('./ttt/doc_ttt2/intro_ttt.txt',
+            importationFile(self, './ttt/doc_ttt2/intro_ttt.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_ttt not found !")
@@ -375,12 +386,6 @@ def doc_medical2(self):
     except FileNotFoundError as no_file:
         print("[!] File intro_res not found !")
         tk.messagebox.showinfo('INFO', 'File intro_res not found !')
-
-
-
-
-
-
 
     # Lbl for VP
     self.x32, self.y32 = 60, 800
@@ -426,7 +431,6 @@ def doc_medical2(self):
     except FileNotFoundError as no_file:
         print("[!] File bmi2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File bmi2.txt not found !')
-
 
     self.x36, self.y36 = 250, 1290 
     self.lbl_need = tk.Label(self.can,
@@ -850,7 +854,9 @@ def doc_medical2(self):
         content = filehcs2.readlines()
         filehcs2.close()
         for li in content:
+            self.t87.config(state='normal')
             self.t87.insert(tk.END, li)
+            self.t87.config(state='disable')
 
     self.x87, self.y87 = 250, 1670
     self.t87 = tk.Text(self.can, height=6, width=50, font=18, relief=tk.SUNKEN)
@@ -929,7 +935,9 @@ def doc_medical2(self):
         seccontent = secfile.readlines()
         secfile.close()
         for li in seccontent:
+            self.t95.config(state='normal')
             self.t95.insert(tk.END, li)
+            self.t95.config(state='disable')
 
     self.x95, self.y95 = 550, 1995
     self.t95 = tk.Text(self.can, height=20, width=100, font=18,
@@ -961,9 +969,9 @@ def doc_medical2(self):
         window = self.lbl_evadate)
 
     self.x98, self.y98 = 240, 2270 #240, 1760
-    ntry_eva = tk.StringVar()
-    self.entryname = tk.Entry(self.can, textvariable=ntry_eva, width=10)
-    ntry_eva.set(time.strftime("%d/%m/%Y"))
+    self.ntry_eva = tk.StringVar()
+    self.entryname = tk.Entry(self.can, textvariable=self.ntry_eva, width=10)
+    self.ntry_eva.set(time.strftime("%d/%m/%Y"))
     self.wentryname = self.can.create_window(self.x98, self.y98,
         window = self.entryname)    
 
@@ -979,7 +987,9 @@ def doc_medical2(self):
         content = file.readlines()
         file.close()
         for li in content:
+            self.t100.config(state='normal')
             self.t100.insert(tk.END, li)
+            self.t100.config(state='disable')
 
     self.x100, self.y100 = 600, 2405 #600, 1890
     self.t100 = tk.Text(self.can, height=10, width=80, font=18,
@@ -1008,7 +1018,9 @@ def doc_medical2(self):
         seccontent = secfile.readlines()
         secfile.close()
         for li in seccontent:
+            self.t102.config(state='normal')
             self.t102.insert(tk.END, li)
+            self.t102.config(state='disable')
 
     self.x102, self.y102 = 600, 2625 #600, 2110
     self.t102 = tk.Text(self.can, height=10, width=80, font=18,
@@ -1037,7 +1049,9 @@ def doc_medical2(self):
         thirdcontent = thirdfile.readlines()
         thirdfile.close()
         for li in thirdcontent:
+            self.t104.config(state='normal')
             self.t104.insert(tk.END, li)
+            self.t104.config(state='disable')
 
     self.x104, self.y104 = 600, 2845 #600, 2330
     self.t104 = tk.Text(self.can, height=10, width=80, font=18,
@@ -1131,5 +1145,5 @@ def doc_medical2(self):
     self.wlbl_ghost = self.can.create_window(self.x112, self.y112,
         window = self.lbl_ghost)
 
-    self.can.bind("<Button-1>", self.reinitscroll)
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.bind("<Button-1>", toreinitscroll)

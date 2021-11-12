@@ -1,6 +1,6 @@
 ----------------------------------------------------------
-Date : 11.11.2021
-Hour : 10:56:09
+Date : 12.11.2021
+Hour : 12:40:11
 Patient name : Njin Nier
 Birthday : 00/00/0000
 Allergy : Shellfish, Gluten, Soya, Chips
@@ -277,6 +277,8 @@ adasd
 
 
 
+
+
 Problématique :
 
 dasda
@@ -296,11 +298,15 @@ dasadas
 
 
 
+
+
 Projet :
 
 
 
 asdasd
+
+
 
 
 

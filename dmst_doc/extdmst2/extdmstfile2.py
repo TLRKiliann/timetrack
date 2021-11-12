@@ -15,70 +15,90 @@ def importationAdmin(self, fichier, encodage="Utf-8"):
     content = filecontact.readlines()
     filecontact.close()
     for li in content:
+        self.t6.config(state='normal')
         self.t6.insert(tk.END, li)
+        self.t6.config(state='disable')
 
 def importationDoc1(self, fichier, encodage="Utf-8"):
     filecontdoc = open(fichier, 'r', encoding=encodage)
     content = filecontdoc.readlines()
     filecontdoc.close()
     for li in content:
+        self.t8.config(state='normal')
         self.t8.insert(tk.END, li)
+        self.t8.config(state='disable')
 
 def importationDoc2(self, fichier, encodage="Utf-8"):
     filedoc2 = open(fichier, 'r', encoding=encodage)
     content = filedoc2.readlines()
     filedoc2.close()
     for li in content:
+        self.t9.config(state='normal')
         self.t9.insert(tk.END, li)
+        self.t9.config(state='disable')
 
 def importationDoc3(self, fichier, encodage="Utf-8"):
     filedoc3 = open(fichier, 'r', encoding=encodage)
     content = filedoc3.readlines()
     filedoc3.close()
     for li in content:
+        self.t10.config(state='normal')
         self.t10.insert(tk.END, li)
+        self.t10.config(state='disable')
 
 def importationFam(self, fichier, encodage="Utf-8"):
     filedoc3 = open(fichier, 'r', encoding=encodage)
     content = filedoc3.readlines()
     filedoc3.close()
     for li in content:
+        self.t12.config(state='normal')
         self.t12.insert(tk.END, li)
+        self.t12.config(state='disable')
 
 def importationHealOne(self, fichier, encodage="Utf-8"):
     filehcs = open(fichier, 'r', encoding=encodage)
     content = filehcs.readlines()
     filehcs.close()
     for li in content:
+        self.t14.config(state='normal')
         self.t14.insert(tk.END, li)
+        self.t14.config(state='disable')
 
 def importationHealThree(self, fichier, encodage="Utf-8"):
     filehcs3 = open(fichier, 'r', encoding=encodage)
     content = filehcs3.readlines()
     filehcs3.close()
     for li in content:
+        self.t16.config(state='normal')
         self.t16.insert(tk.END, li)
+        self.t16.config(state='disable')
 
 def importationFile2(self, fichier2, encodage="Utf-8"):
     file2 = open(fichier2, 'r', encoding=encodage)
     content=file2.readlines()
     file2.close()
     for li2 in content:
+        self.t31.config(state='normal')
         self.t31.insert(tk.END, li2)
+        self.t31.config(state='disable')
 
 def importationParam(self, fichier, encodage="Utf-8"):
     fileparam = open(fichier, 'r', encoding=encodage)
     content = fileparam.readlines()
     fileparam.close()
     for li in content:
+        self.t33.config(state='normal')
         self.t33.insert(tk.END, li)
+        self.t33.config(state='disable')
 
 def importationBmi(self, fichier, encodage="Utf-8"):
     filebmi = open(fichier, 'r', encoding=encodage)
     content = filebmi.readlines()
     filebmi.close()
     for li in content:
+        self.t35.config(state='normal')
         self.t35.insert(tk.END, li)
+        self.t35.config(state='disable')
 
 def launchfunc(self):
     """
