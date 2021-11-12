@@ -1,0 +1,12 @@
+----------------------------------------------------------
+Date : 12/11/2021
+Patient name : Njin Nier
+---------------------------------------------------------
+# Rollator : 12/11/2021 yes
+# Eyeglasses : 12/11/2021 yes
+# Wound Wick : 12/11/2021 yes
+# Nasogastric Tube : 12/11/2021 yes
+# VP Shunt : 12/11/2021 yes
+# Total Hip L : 12/11/2021 yes
+# Foot Prosthesis L : 12/11/2021 yes
+# Nose Prosthesis : 12/11/2021 yes

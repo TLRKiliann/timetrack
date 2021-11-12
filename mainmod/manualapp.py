@@ -134,3 +134,5 @@ def instalpy(self):
     self.text_area.configure(state ='disable', background="black")
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
+    self.can.unbind_all("<Button-4>")
+    self.can.unbind_all("<Button-5>")

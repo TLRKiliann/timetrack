@@ -1,6 +1,6 @@
 ----------------------------------------------------------
 Date : 12.11.2021
-Hour : 12:40:11
+Hour : 18:32:08
 Patient name : Njin Nier
 Birthday : 00/00/0000
 Allergy : Shellfish, Gluten, Soya, Chips
@@ -201,6 +201,18 @@ Taille : 1.84
 BMI : 22.271
 
 
+--- Patient data ---
+Patient name : Njin Nier
+Birthdate : 00/00/0000
+Native : zui
+Phone : 12890378
+Street : 10982390
+City : sjfhjs
+e-mail : sfsj
+Insurance : jsdkljfkls
+Policy : 3234-545-767-8888
+Civil status : klékasdf
+Confession : jasjda
 
 --- Docotor1 data ---
 Doctor : hjfdhsj
@@ -232,21 +244,52 @@ City : ghjhgg
 e-mail : uzihhui
 Fax : 978978979
 
+--- Family data ---
+Name : Elise
+Phone : 7389472984
+Phone : 928347892747
+Street : View
+City : Map
+e-mail : eli@hotmail.com
+
+--- Home Care System1 ---
+Name : Jeffrey
+Phone : 90473289
+Phone : 123093812
+Street : jlksdjf
+City : ljdflas
+e-mail : kasljlajdk
+
 --- Home Care System2 ---
 Name : Ali
-Phone : 
-Phone : 
-Street : 
-City : 
-e-mail : 
+Phone : 456456456
+Phone : 4348054434
+Street : fdsfsfsfs
+City : sfdsfsdfs
+e-mail : ssfdsffffsdfsdf
 
 --- Home Care System3 ---
-Name : Ali
-Phone : 
-Phone : 
-Street : 
-City : 
-e-mail : 
+Name : Sophie
+Phone : 342344334
+Phone : 432433465788
+Street : qweqwe
+City : qweqw
+e-mail : eqwe
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 12/11/2021
+Patient name : Njin Nier
+---------------------------------------------------------
+# Rollator : 12/11/2021 yes
+# Eyeglasses : 12/11/2021 yes
+# Wound Wick : 12/11/2021 yes
+# Nasogastric Tube : 12/11/2021 yes
+# VP Shunt : 12/11/2021 yes
+# Total Hip L : 12/11/2021 yes
+# Foot Prosthesis L : 12/11/2021 yes
+# Nose Prosthesis : 12/11/2021 yes
+
 
 --- AGGIR grid : ---
 [+] Orientation = 0
@@ -259,9 +302,11 @@ e-mail :
 [+] Communication = 0
 
 Parcours :
-asdasdas
+ljsdlkajkdjasdklaskdjlaskd
 
-adasd
+
+
+
 
 
 
@@ -300,11 +345,19 @@ dasadas
 
 
 
+
+
+
+
 Projet :
 
 
 
 asdasd
+
+
+
+
 
 
 

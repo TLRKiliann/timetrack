@@ -2007,6 +2007,3 @@ def callResident(self):
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
     self.can.bind("<Button-1>", self.reinitscroll)
-    #self.addScroll()
-    #self.can.bind_all("<Button-4>", self.onMouseWheel)
-    #self.can.bind_all("<Button-5>", self.onMouseWheel)

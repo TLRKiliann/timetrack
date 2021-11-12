@@ -322,11 +322,11 @@ def doc_medical2(self):
     self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
 
     try:
-        if os.path.getsize('./contact/conpact2/finalfile1.txt'):
-            importationAdmin(self, './contact/conpact2/finalfile1.txt', encodage="Utf-8")
+        if os.path.exists('./contact/conpact2/finalfile2.txt'):
+            importationAdmin(self, './contact/conpact2/finalfile2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("[!] File finalfile1 not found !")
-        tk.messagebox.showinfo('INFO', 'File finalfile1 not found !')
+        print("[!] File finalfile2.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File Admin not found !')
 
     self.x7, self.y7 = 870, 380
     self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
@@ -346,7 +346,7 @@ def doc_medical2(self):
             importationDoc1(self, './contact/conpact2/finaldoc1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc1 not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc1 not found !')
+        tk.messagebox.showinfo('INFO', 'File Doctor not found !')
 
     # Doctor2 from contact col 2
     self.x9, self.y9 = 870, 670
@@ -359,7 +359,7 @@ def doc_medical2(self):
             importationDoc2(self, './contact/conpact2/finaldoc2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc2 not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc2 not found !')
+        tk.messagebox.showinfo('INFO', 'File Doctor2 not found !')
 
     # Doctor3 from contact col 2
     self.x10, self.y10 = 870, 850
@@ -372,7 +372,7 @@ def doc_medical2(self):
             importationDoc3(self, './contact/conpact2/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc3.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
+        tk.messagebox.showinfo('INFO', 'File Doctor3 not found !')
 
     self.x11, self.y11 = 870, 960
     self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
@@ -387,11 +387,11 @@ def doc_medical2(self):
     self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
 
     try:
-        if os.path.getsize('./contact/conpact2/finalfam1.txt'):
-            importationFam(self, './contact/conpact2/finalfam1.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact2/finalfam2.txt'):
+            importationFam(self, './contact/conpact2/finalfam2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("[!] File finalfam1.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
+        print("[!] File finalfam2.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File finalfam2.txt not found !')
 
     self.x13, self.y13 = 870, 1140
     self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
@@ -505,7 +505,7 @@ def doc_medical2(self):
 
     # second need
     self.x44, self.y44 = 80, 1385
-    self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
+    self.lbl_sec = tk.Label(self.can, text='- Coherence :',
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_sec = self.can.create_window(self.x44, self.y44,
@@ -554,7 +554,7 @@ def doc_medical2(self):
 
     # third need
     self.x50, self.y50 = 80, 1410
-    self.lbl_third = tk.Label(self.can, text='- Toilette :',
+    self.lbl_third = tk.Label(self.can, text='- Toilet :',
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_third = self.can.create_window(self.x50, self.y50,
@@ -603,7 +603,7 @@ def doc_medical2(self):
 
     # Forth need
     self.x56, self.y56 = 80, 1435
-    self.lbl_forth = tk.Label(self.can, text='- Habillage :',
+    self.lbl_forth = tk.Label(self.can, text='- Dressing :',
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_forth = self.can.create_window(self.x56, self.y56,
@@ -652,7 +652,7 @@ def doc_medical2(self):
 
     # fivth need
     self.x62, self.y62 = 80, 1460
-    self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
+    self.lbl_fivth = tk.Label(self.can, text='- Food :',
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
@@ -750,7 +750,7 @@ def doc_medical2(self):
 
     # Seventh need
     self.x74, self.y74 = 80, 1510
-    self.lbl_seven = tk.Label(self.can, text='- Déplacement :',
+    self.lbl_seven = tk.Label(self.can, text='- Move around :',
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_seven = self.can.create_window(self.x74, self.y74,
@@ -968,7 +968,7 @@ def doc_medical2(self):
         window = self.lbl_need)
 
     self.x97, self.y97 = 80, 2270
-    self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
+    self.lbl_evadate = tk.Label(self.can, text="Date of evaluation : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_evadate = self.can.create_window(self.x97, self.y97,
@@ -982,7 +982,7 @@ def doc_medical2(self):
         window = self.entryname)    
 
     self.x99, self.y99 = 80, 2315
-    self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
+    self.lbl_parcvita = tk.Label(self.can, text="Historic : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_parcvita = self.can.create_window(self.x99, self.y99,
@@ -995,7 +995,7 @@ def doc_medical2(self):
         for li in content:
             self.t100.config(state='normal')
             self.t100.insert(tk.END, li)
-            self.t100.config(state='disable')
+            self.t100.config(state='normal')
 
     self.x100, self.y100 = 600, 2405
     self.t100 = tk.Text(self.can, height=10, width=80, font=18,
@@ -1026,7 +1026,7 @@ def doc_medical2(self):
         for li in seccontent:
             self.t102.config(state='normal')
             self.t102.insert(tk.END, li)
-            self.t102.config(state='disable')
+            self.t102.config(state='normal')
 
     self.x102, self.y102 = 600, 2625
     self.t102 = tk.Text(self.can, height=10, width=80, font=18,
@@ -1057,7 +1057,7 @@ def doc_medical2(self):
         for li in thirdcontent:
             self.t104.config(state='normal')
             self.t104.insert(tk.END, li)
-            self.t104.config(state='disable')
+            self.t104.config(state='normal')
 
     self.x104, self.y104 = 600, 2845
     self.t104 = tk.Text(self.can, height=10, width=80, font=18,
