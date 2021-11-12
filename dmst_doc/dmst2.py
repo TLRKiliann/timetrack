@@ -982,7 +982,7 @@ def doc_medical2(self):
         window = self.entryname)    
 
     self.x99, self.y99 = 80, 2315
-    self.lbl_parcvita = tk.Label(self.can, text="Historic : ",
+    self.lbl_parcvita = tk.Label(self.can, text="Path life : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_parcvita = self.can.create_window(self.x99, self.y99,
@@ -1013,7 +1013,7 @@ def doc_medical2(self):
         print(nf_file)
 
     self.x101, self.y101 = 80, 2540 # 80, 2020
-    self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
+    self.lbl_pbm = tk.Label(self.can, text="Problematic : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_pbm = self.can.create_window(self.x101, self.y101,
@@ -1044,7 +1044,7 @@ def doc_medical2(self):
         print(pbm_f)
 
     self.x103, self.y103 = 80, 2760
-    self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
+    self.lbl_project = tk.Label(self.can, text="Personal targets : ",
         font=('Times', 14, 'bold'), width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor=tk.W)
     self.wlbl_project = self.can.create_window(self.x103, self.y103,
