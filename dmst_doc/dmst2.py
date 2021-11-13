@@ -43,18 +43,8 @@ def doc_medical2(self):
         self.delScroll()
         self.can.unbind_all("<Button-4>")
         self.can.unbind_all("<Button-5>")
+        self.t104.config(state='normal')
         print("MouseWheel deactivated for textbox !")
-
-    def toreinitscroll(event):
-        """
-            Reactivate ScrollBar and MouseWheel.
-        """
-        self.can.config(highlightbackground='white',
-            highlightthickness=1)
-        self.addScroll()
-        print("ScrollBar appears again !")
-        self.onEnter(event)
-        print("MouseWheel reactivated for all !")
 
     self.x1, self.y1 = 500, 45
     self.labl_name = tk.Label(self.can, text="DMST",
@@ -1151,4 +1141,4 @@ def doc_medical2(self):
         window = self.lbl_ghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.bind("<Button-1>", toreinitscroll)
+    self.can.bind("<Button-1>", self.reinitscroll)
