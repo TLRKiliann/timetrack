@@ -1787,6 +1787,7 @@ class Application(tk.Frame):
         print("ScrollBar appears again !")
         self.onEnter(event)
         print("MouseWheel reactivated for all !")
+        self.master.focus()
         print('1', self.master.focus())
 
     def onLeave(self, event):
@@ -1817,6 +1818,7 @@ class Application(tk.Frame):
         ''' To delete ScrollBar '''
         self.vsb.forget()
         print("ScrollBar deleted")
+        self.master.focus()
         print('2', self.master.focus())
 
     def msgQuitapp(self, arg):
