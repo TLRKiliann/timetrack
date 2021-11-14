@@ -14,7 +14,7 @@ def instalpy(self):
         and how to use app
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
 
     def playmuse():
         playsound('./beep_sounds/NieR_sound.wav')
@@ -134,5 +134,4 @@ def instalpy(self):
     self.text_area.configure(state ='disable', background="black")
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)

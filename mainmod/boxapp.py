@@ -21,7 +21,7 @@ def callBox(self):
         Call a reminder if date is equal to today.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.can.configure(background='DodgerBlue2')
 
     self.photo = tk.PhotoImage(file='./syno_gif/fontalarmbg2.png')
@@ -799,5 +799,4 @@ def callBox(self):
         print("[Err_3] Error unknow boxapp.py 24")
         
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)

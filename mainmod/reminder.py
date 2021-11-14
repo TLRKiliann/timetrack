@@ -22,7 +22,7 @@ def alarmThread(self):
         Function called from main app (heal_track.py)
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.can.configure(bg='black')
     self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
@@ -121,5 +121,4 @@ def alarmThread(self):
     self.item2 = self.can.create_image((1250,0), image=self.photo2, anchor=tk.NE)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)

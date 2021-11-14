@@ -21,7 +21,7 @@ def callResident(self):
         with theirs names and more.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
 
     self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image((0,0), image=self.photo,
@@ -237,7 +237,7 @@ def callResident(self):
     self.butt2vm = tk.Button(self.can, text="Validation 2",
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
-        command=lambda: callCareVal(self, v=32))
+        command=lambda: callCareVal(self, v=2))
     self.fbutt2vm_window = self.can.create_window(self.x25,
         self.y25, window=self.butt2vm)
 
@@ -2004,6 +2004,5 @@ def callResident(self):
         window = self.lbl_ghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
     self.can.bind("<Button-1>", self.reinitscroll)
+    self.can.bind("<Button-3>", self.delScroll)

@@ -1788,7 +1788,7 @@ class Application(tk.Frame):
         self.onEnter(event)
         print("MouseWheel reactivated for all !")
         self.master.focus()
-        print('1', self.master.focus())
+        print('Master 1 :', self.master.focus())
 
     def onLeave(self, event):
         if platform.system() == 'Linux':
@@ -1814,12 +1814,25 @@ class Application(tk.Frame):
         except Exception as err_ex:
             print("text_area doesn't exist", err_ex)
 
-    def delScroll(self):
+    def delScroll(self, event):
         ''' To delete ScrollBar '''
         self.vsb.forget()
         print("ScrollBar deleted")
+        self.onLeave(event)
         self.master.focus()
-        print('2', self.master.focus())
+        print('Master 2 :', self.master.focus())
+
+    def forgetVsb(self):
+        ''' To delete ScrollBar '''
+        try:
+            exists = self.vsb.winfo_exists()
+            if exists == 1:
+                self.vsb.forget()
+                print("Ok, ScrollBar delete.")
+        except Exception as err_delscrol:
+            print("Scrollbar doesn't exist", err_delscrol)
+            self.vsb.forget()
+            print("Ok, ScrollBar deleted.")
 
     def msgQuitapp(self, arg):
         """
@@ -1892,7 +1905,7 @@ class Application(tk.Frame):
         """
         # Insert picture
         self.effacer()
-        self.delScroll()
+        self.forgetVsb()
 
         self.photo = tk.PhotoImage(file='./syno_gif/fondcolorbg4.png')
         self.itemfirst = self.can.create_image((0,0), image=self.photo,
@@ -1940,8 +1953,7 @@ class Application(tk.Frame):
             window=self.button4)
 
         self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-        self.can.unbind_all("<Button-4>")
-        self.can.unbind_all("<Button-5>")
+        self.can.bind("<Button-1>", self.delScroll)
 
     def frameInfo(self):
         """

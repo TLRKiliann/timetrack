@@ -14,7 +14,8 @@ def valFunc1(self):
         design for contact interface.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
+
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -238,7 +239,7 @@ def valFunc1(self):
     self.x30, self.y30 = 660, 170
     self.firstcheck = tk.IntVar()
     self.checkone = tk.Checkbutton(self.can, text="Validate", font=('MS Serif', 12),
-        fg='navy', bg='DodgerBlue2', variable=self.firstcheck, onvalue=1, offvalue=0,
+        fg='navy', bg='cyan', variable=self.firstcheck, onvalue=1, offvalue=0,
         height=1, width=8, anchor=tk.W)
     self.fcheckone_window = self.can.create_window(self.x30, self.y30,
         window = self.checkone)
@@ -275,5 +276,4 @@ def valFunc1(self):
         window=self.butrightchk)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)
