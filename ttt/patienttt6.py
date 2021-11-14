@@ -51,7 +51,7 @@ def callTreatment6(self):
         5 files are managed by this script to appreciate results.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -755,5 +755,4 @@ def callTreatment6(self):
         window=self.buttQuit)
     
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)
