@@ -1,0 +1,22 @@
+Date : 12/11/2021
+Hour : 19:18:53
+Name and Surname : Kayney Nier
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.1°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 10/11/2021
+Hour : 19:18:53
+Name and Surname : Kayney Nier
+TA : 118/88mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 18/min
+Temperature : 36.4°C
+Glycemie : 5.2 mmol/l
+Douleurs (Pain) : 7/10
+
