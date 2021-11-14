@@ -105,21 +105,21 @@ def launchfunc(self):
         To record data after warning !
     """
     try:
-        if os.path.exists('./dmst_doc/doc_dmst6/rslt_dmst6.txt'):
+        if os.path.exists('./dmst_doc/doc_dmst7/rslt_dmst7.txt'):
             tk.messagebox.showwarning('Warning',
                 '!!! Warning, saving new data will erased old file !!!')
             msgayn = tk.messagebox.askyesno('Look', 'Would you like to continue ?')
             if msgayn == 1:
-                os.remove('./dmst_doc/doc_dmst6/rslt_dmst6.txt')
-                print("!!! rslt_dmst6.txt removed !!!")
+                os.remove('./dmst_doc/doc_dmst7/rslt_dmst7.txt')
+                print("!!! rslt_dmst7.txt removed !!!")
             else:
                 tk.messagebox.showinfo("INFO", "Nothing has changed !")
     except FileNotFoundError as fnf_totry:
-        print("[!] No rslt_dmst6.txt exist !", fnf_totry)
+        print("[!] No rslt_dmst7.txt exist !", fnf_totry)
         tk.messagebox.showinfo("INFO", "Let's creat one ! ;)")
 
     try:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file:
             file.write("----------------------------------------------------------\n")
             file.write("Date : ")
             file.write(time.strftime("%d.%m.%Y") + '\n')
@@ -135,23 +135,23 @@ def launchfunc(self):
             file.write(self.transdis.get() + '\n')
             file.write("----------------------------------------------------------\n\n")
     except FileNotFoundError as nf_rsltdm:
-        print("[!] File rslt_dmst6.txt not found !", nf_rsltdm)
+        print("[!] File rslt_dmst7.txt not found !", nf_rsltdm)
     
-    print("!!! rslt_dmst2 initialized !!!")
+    print("!!! rslt_dmst7 initialized !!!")
 
     try:
-        with open('./diag/doc_diag6/diagrecap6.txt', 'r') as file_di:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./diag/doc_diag7/diagrecap7.txt', 'r') as file_di:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 diag_content = file_di.readlines()
                 for li in diag_content:
                     file_dm.writelines(diag_content)
                     break
     except FileNotFoundError as diag_nf:
-        print("[!] File diagrecap6.txt not found !", diag_nf)
+        print("[!] File diagrecap7.txt not found !", diag_nf)
 
     try:
-        with open('./ttt/doc_ttt6/intro_ttt.txt', 'r') as file_ttt:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./ttt/doc_ttt7/intro_ttt.txt', 'r') as file_ttt:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 ttt_content = file_ttt.readlines()
                 for li in ttt_content:
                     file_dm.writelines("\n--- Treatments ---\n")
@@ -161,8 +161,8 @@ def launchfunc(self):
         print("[!] File intro_ttt.txt not found !", intro_nf)
 
     try:
-        with open('./ttt/doc_ttt6/intro_res.txt', 'r') as file_res:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./ttt/doc_ttt7/intro_res.txt', 'r') as file_res:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 res_content = file_res.readlines()
                 for li in res_content:
                     file_dm.writelines("--- Reserves ---\n")
@@ -172,41 +172,41 @@ def launchfunc(self):
         print("[!] File intro_res.txt not found !", res_nf)
 
     try:
-        with open('./param/paramdata6.txt', 'r') as file_pa:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./param/paramdata7.txt', 'r') as file_pa:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 pa_content = file_pa.readlines()
                 for li in pa_content:
                     file_dm.writelines("--- Vitals Parameters ---\n")
                     file_dm.writelines(pa_content)
                     break
     except FileNotFoundError as param_nf:
-        print("[!] File paramdata6.txt not found !", param_nf)
+        print("[!] File paramdata7.txt not found !", param_nf)
 
     try:
-        with open('./calBmi/bmi6.txt', 'r') as file_b:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./calBmi/bmi7.txt', 'r') as file_b:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 bmi_content = file_b.readlines()
                 for li in bmi_content:
                     file_dm.writelines("--- BMI ---\n")
                     file_dm.writelines(bmi_content)
                     break
     except FileNotFoundError as bmi_nf:
-        print("[!] File bmi6.txt not found !", bmi_nf)
+        print("[!] File bmi7.txt not found !", bmi_nf)
 
     try:
-        with open('./contact/conpact6/finalfile6.txt', 'r') as file_contf1:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finalfile7.txt', 'r') as file_contf1:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 fcf1_content = file_contf1.readlines()
                 for li in fcf1_content:
                     file_dm.writelines("\n--- Patient data ---\n")
                     file_dm.writelines(fcf1_content)
                     break
     except FileNotFoundError as ff1_nf:
-        print("[!] File finalfile6.txt not found !", ff1_nf)
+        print("[!] File finalfile7.txt not found !", ff1_nf)
 
     try:
-        with open('./contact/conpact6/finaldoc1.txt', 'r') as file_do1:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finaldoc1.txt', 'r') as file_do1:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 fcd1_content = file_do1.readlines()
                 for li in fcd1_content:
                     file_dm.writelines("\n\n--- Docotor1 data ---\n")
@@ -216,8 +216,8 @@ def launchfunc(self):
         print("[!] File finaldoc1.txt not found !", fd1_nf)
 
     try:
-        with open('./contact/conpact6/finaldoc2.txt', 'r') as file_do2:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finaldoc2.txt', 'r') as file_do2:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 fcd2_content = file_do2.readlines()
                 for li in fcd2_content:
                     file_dm.writelines("\n\n--- Docotor2 data ---\n")
@@ -227,8 +227,8 @@ def launchfunc(self):
         print("[!] File finaldoc2.txt not found !", fd2_nf)
 
     try:
-        with open('./contact/conpact6/finaldoc3.txt', 'r') as file_do3:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finaldoc3.txt', 'r') as file_do3:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 fcd3_content = file_do3.readlines()
                 for li in fcd3_content:
                     file_dm.writelines("\n\n--- Docotor3 data ---\n")
@@ -238,19 +238,19 @@ def launchfunc(self):
         print("[!] File finaldoc3.txt not found !", fd3_nf)
     
     try:
-        with open('./contact/conpact6/finalfam6.txt', 'r') as file_fam:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finalfam7.txt', 'r') as file_fam:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 ff_content = file_fam.readlines()
                 for li in ff_content:
                     file_dm.writelines("\n\n--- Family data ---\n")
                     file_dm.writelines(ff_content)
                     break
     except FileNotFoundError as ffam_nf:
-        print("[!] File finalfam6.txt not found !", ffam_nf)
+        print("[!] File finalfam7.txt not found !", ffam_nf)
 
     try:
-        with open('./contact/conpact6/finalhcs1.txt', 'r') as file_hcs1:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finalhcs1.txt', 'r') as file_hcs1:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 hcs1_content = file_hcs1.readlines()
                 for li in hcs1_content:
                     file_dm.writelines("\n\n--- Home Care System1 ---\n")
@@ -260,8 +260,8 @@ def launchfunc(self):
         print("[!] File finalhcs1.txt not found !", hcs1_nf)
 
     try:
-        with open('./contact/conpact6/finalhcs2.txt', 'r') as file_hcs2:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finalhcs2.txt', 'r') as file_hcs2:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 hcs2_content = file_hcs2.readlines()
                 for li in hcs2_content:
                     file_dm.writelines("\n\n--- Home Care System2 ---\n")
@@ -271,8 +271,8 @@ def launchfunc(self):
         print("[!] File finalhcs2.txt not found !", hcs2_nf)
 
     try:
-        with open('./contact/conpact6/finalhcs3.txt', 'r') as file_hcs3:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./contact/conpact7/finalhcs3.txt', 'r') as file_hcs3:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 hcs3_content = file_hcs3.readlines()
                 for li in hcs3_content:
                     file_dm.writelines("\n\n--- Home Care System3 ---\n")
@@ -282,188 +282,188 @@ def launchfunc(self):
         print("[!] File finalhcs3.txt not found !", hcs3_nf)
 
     try:
-        with open('./auxequip/doc_equip/auxiliary6.txt', 'r') as file_aux:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', '+a') as file_dm:
+        with open('./auxequip/doc_equip/auxiliary7.txt', 'r') as file_aux:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', '+a') as file_dm:
                 ox_equip = file_aux.readlines()
                 for li in ox_equip:
                     file_dm.writelines("\n\n--- Auxiliary Equipement ---\n")
                     file_dm.writelines(ox_equip)
                     break
     except FileNotFoundError as aux_nf:
-        print("[!] File auxiliary6.txt not found !", aux_nf)
+        print("[!] File auxiliary7.txt not found !", aux_nf)
 
     print(self.CheckVar1.get())
     if self.CheckVar1.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("\n\n--- AGGIR grid : ---\n")
             file1.write("[+] Orientation = 1\n")
     elif self.CheckVar1.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("\n\n--- AGGIR grid : ---\n")
             file2.write("[+] Orientation = 2\n")
     elif self.CheckVar1.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("\n\n--- AGGIR grid : ---\n")
             file3.write("[+] Orientation = 3\n")
     elif self.CheckVar1.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("\n\n--- AGGIR grid : ---\n")
             file4.write("[+] Orientation = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("\n\n--- AGGIR grid : ---\n")
             file0.write("[+] Orientation = 0\n")
 
     print(self.CheckVar2.get())
     if self.CheckVar2.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Cohérence = 1\n")
     elif self.CheckVar2.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Cohérence = 2\n")
     elif self.CheckVar2.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Cohérence = 3\n")
     elif self.CheckVar2.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Cohérence = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Cohérence = 0\n")
 
     print(self.CheckVar3.get())
     if self.CheckVar3.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Toilette = 1\n")
     elif self.CheckVar3.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Toilette = 2\n")
     elif self.CheckVar3.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Toilette = 3\n")
     elif self.CheckVar3.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Toilette = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Toilette = 0\n")
 
     print(self.CheckVar4.get())
     if self.CheckVar4.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Habillage = 1\n")
     elif self.CheckVar4.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Habillage = 2\n")
     elif self.CheckVar4.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Habillage = 3\n")
     elif self.CheckVar4.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Habillage = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Habillage = 0\n")
 
     print(self.CheckVar5.get())
     if self.CheckVar5.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Alimentation = 1\n")
     elif self.CheckVar5.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Alimentation = 2\n")
     elif self.CheckVar5.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Alimentation = 3\n")
     elif self.CheckVar5.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Alimentation = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Alimentation = 0\n")
 
     print(self.CheckVar6.get())
     if self.CheckVar6.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Elimination = 1\n")
     elif self.CheckVar6.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Elimination = 2\n")
     elif self.CheckVar6.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Elimination = 3\n")
     elif self.CheckVar6.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Elimination = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Elimination = 0\n")
 
     print(self.CheckVar7.get())
     if self.CheckVar7.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Déplacement = 1\n")
     elif self.CheckVar7.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Déplacement = 2\n")
     elif self.CheckVar7.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Déplacement = 3\n")
     elif self.CheckVar7.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Déplacement = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Déplacement = 0\n")
 
     print(self.CheckVar8.get())
     if self.CheckVar8.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Communication = 1\n")
     elif self.CheckVar8.get() == 2:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file2:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file2:
             file2.write("[+] Communication = 2\n")
     elif self.CheckVar8.get() == 3:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file3:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file3:
             file3.write("[+] Communication = 3\n")
     elif self.CheckVar8.get() == 4:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file4:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file4:
             file4.write("[+] Communication = 4\n")
     else:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file0:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file0:
             file0.write("[+] Communication = 0\n")
 
     print(self.CheckVar9.get())
     if self.CheckVar9.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("\n[+] PLAFA = Oui\n")
     else:
         print("[!] None (PLAFA)")
 
     print(self.CheckVar10.get())
     if self.CheckVar10.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("\n[+] PLAFA = Non\n")
     else:
         print("[!] None (PLAFA)")
 
     print(self.CheckVar11.get())
     if self.CheckVar11.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Directives anticipées = Oui\n\n")
     else:
         print("[!] None (Directives anticipées)")
 
     print(self.CheckVar12.get())
     if self.CheckVar12.get() == 1:
-        with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as file1:
+        with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as file1:
             file1.write("[+] Directives anticipées = Non\n\n")
     else:
         print("[!] None (Directives anticipées)")
 
     try:
-        with open('./dmst_doc/doc_dmst6/parcours.txt', 'r') as ftor:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as ftocp:
+        with open('./dmst_doc/doc_dmst7/parcours.txt', 'r') as ftor:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as ftocp:
                 lines = ftor.readlines()
                 for li in lines:
                     ftocp.writelines("\nParcours :\n")
@@ -473,8 +473,8 @@ def launchfunc(self):
         print("! File not found !", err_parc)
 
     try:
-        with open('./dmst_doc/doc_dmst6/pbm.txt', 'r') as fpbmtor:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as fthreecp:
+        with open('./dmst_doc/doc_dmst7/pbm.txt', 'r') as fpbmtor:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as fthreecp:
                 lines = fpbmtor.readlines()
                 for li in lines:
                     fthreecp.writelines("Problématique :\n")
@@ -484,8 +484,8 @@ def launchfunc(self):
         print("! File not found !", err_pbm)
 
     try:
-        with open('./dmst_doc/doc_dmst6/project.txt', 'r') as fprojcp:
-            with open('./dmst_doc/doc_dmst6/rslt_dmst6.txt', 'a+') as fortocp:
+        with open('./dmst_doc/doc_dmst7/project.txt', 'r') as fprojcp:
+            with open('./dmst_doc/doc_dmst7/rslt_dmst7.txt', 'a+') as fortocp:
                 lines = fprojcp.readlines()
                 for li in lines:
                     fortocp.writelines("Projet :\n")
@@ -501,42 +501,42 @@ def saveData(self):
         data have been saved.
     """
     try:
-        if os.path.getsize('./dmst_doc/doc_dmst6/parcours.txt'):
+        if os.path.getsize('./dmst_doc/doc_dmst7/parcours.txt'):
             print("[+] File 'parcours.txt' exist !")
-            with open('./dmst_doc/doc_dmst6/parcours.txt', 'w') as parc_file:
+            with open('./dmst_doc/doc_dmst7/parcours.txt', 'w') as parc_file:
                 parc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as err_parc:
         print("[!] Sorry, file 'parcours.txt' not exist !", err_parc)
         print("[+] File 'parcours.txt' created !")
-        with open('./dmst_doc/doc_dmst6/parcours.txt', 'a+') as noparc_file:
+        with open('./dmst_doc/doc_dmst7/parcours.txt', 'a+') as noparc_file:
             noparc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
     self.t100.config(state='normal')
     self.t100.insert(tk.INSERT, "\n---Data saved !---")
     self.t100.config(state='disable')
 
     try:
-        if os.path.getsize('./dmst_doc/doc_dmst6/pbm.txt'):
+        if os.path.getsize('./dmst_doc/doc_dmst7/pbm.txt'):
             print("[+] File 'pbm.txt' exist !")
-            with open('./dmst_doc/doc_dmst6/pbm.txt', 'w') as pbmfile:
+            with open('./dmst_doc/doc_dmst7/pbm.txt', 'w') as pbmfile:
                 pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as err_pbm:
         print("[!] Sorry, file 'pbm.txt' not exist !", err_pbm)
         print("[+] File 'pbm.txt' created !")
-        with open('./dmst_doc/doc_dmst6/pbm.txt', 'a+') as no_pbmfile:
+        with open('./dmst_doc/doc_dmst7/pbm.txt', 'a+') as no_pbmfile:
             no_pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
     self.t102.config(state='normal')
     self.t102.insert(tk.INSERT, "\n---Data saved !---")
     self.t102.config(state='disable')
 
     try:
-        if os.path.getsize('./dmst_doc/doc_dmst6/project.txt'):
+        if os.path.getsize('./dmst_doc/doc_dmst7/project.txt'):
             print("[+] File 'project.txt' exist !")
-            with open('./dmst_doc/doc_dmst6/project.txt', 'w') as projectfile:
+            with open('./dmst_doc/doc_dmst7/project.txt', 'w') as projectfile:
                 projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as err_proj:
         print("[!] Sorry, file 'project.txt' not exist !", err_proj)
         print("[+] File 'project.txt' created !")
-        with open('./dmst_doc/doc_dmst6/project.txt', 'a+') as no_projectfile:
+        with open('./dmst_doc/doc_dmst7/project.txt', 'a+') as no_projectfile:
             no_projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
     self.t104.config(state='normal')
     self.t104.insert(tk.INSERT, "\n---Data saved !---")
@@ -544,37 +544,37 @@ def saveData(self):
 
 def copytobackup():
     """
-        To copy file below to ./Backup/Files6
+        To copy file below to ./Backup/Files7
     """
     try:
-        if os.path.exists('./dmst_doc/doc_dmst6/parcours.txt'):
-            shutil.copy('./dmst_doc/doc_dmst6/parcours.txt',
-                './Backup/Files6/parcours.txt')
-            print("[+] File --> parcours.txt copied into ./Backup/Files6")
+        if os.path.exists('./dmst_doc/doc_dmst7/parcours.txt'):
+            shutil.copy('./dmst_doc/doc_dmst7/parcours.txt',
+                './Backup/Files7/parcours.txt')
+            print("[+] File --> parcours.txt copied into ./Backup/Files7")
     except FileNotFoundError as nf_parco:
         print("Not found", nf_parco)
 
     try:
-        if os.path.exists('./dmst_doc/doc_dmst6/pbm.txt'):
-            shutil.copy('./dmst_doc/doc_dmst6/pbm.txt',
-                './Backup/Files6/pbm.txt')
-            print("[+] File --> pbm.txt copied into ./Backup/Files6")
+        if os.path.exists('./dmst_doc/doc_dmst7/pbm.txt'):
+            shutil.copy('./dmst_doc/doc_dmst7/pbm.txt',
+                './Backup/Files7/pbm.txt')
+            print("[+] File --> pbm.txt copied into ./Backup/Files7")
     except FileNotFoundError as nf_prob:
         print("Not found", nf_prob)
 
     try:
-        if os.path.exists('./dmst_doc/doc_dmst6/project.txt'):
-            shutil.copy('./dmst_doc/doc_dmst6/project.txt',
-                './Backup/Files6/project.txt')
-            print("[+] File --> project.txt copied into ./Backup/Files6")
+        if os.path.exists('./dmst_doc/doc_dmst7/project.txt'):
+            shutil.copy('./dmst_doc/doc_dmst7/project.txt',
+                './Backup/Files7/project.txt')
+            print("[+] File --> project.txt copied into ./Backup/Files7")
     except FileNotFoundError as nf_projex:
         print("Not found", nf_projex)
 
     try:
-        if os.path.exists('./dmst_doc/doc_dmst6/rslt_dmst6.txt'):
-            shutil.copy('./dmst_doc/doc_dmst6/rslt_dmst6.txt',
-                './Backup/Files6/rslt_dmst6.txt')
-            print("[+] File --> rslt_dmst6.txt copied into ./Backup/Files6")
+        if os.path.exists('./dmst_doc/doc_dmst7/rslt_dmst7.txt'):
+            shutil.copy('./dmst_doc/doc_dmst7/rslt_dmst7.txt',
+                './Backup/Files7/rslt_dmst7.txt')
+            print("[+] File --> rslt_dmst7.txt copied into ./Backup/Files7")
     except FileNotFoundError as nf_rltd:
         print("Not found", nf_rltd)
 
@@ -582,19 +582,19 @@ def uptoserv():
     """
         To upload data on server after creating files.
     """
-    proc = subprocess.run(["scp", "./dmst_doc/doc_dmst6/rslt_dmst6.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6/dmst6/rslt_dmst6.txt"],
+    proc = subprocess.run(["scp", "./dmst_doc/doc_dmst7/rslt_dmst7.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/dmst7/rslt_dmst7.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("[Upload] File rslt_dmst6.txt uploaded !")
-        #tk.messagebox.showinfo("INFO", "rslt_dmst6.txt uploaded...")
+        print("[Upload] File rslt_dmst7.txt uploaded !")
+        #tk.messagebox.showinfo("INFO", "rslt_dmst7.txt uploaded...")
     else:
         print("[!] No file to upload !")
-        tk.messagebox.showerror("Error", "No rslt_dmst6.txt to upload...")
+        tk.messagebox.showerror("Error", "No rslt_dmst7.txt to upload...")
 
-    secproc = subprocess.run(["scp", "./dmst_doc/doc_dmst6/parcours.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6/dmst6/parcours.txt"],
+    secproc = subprocess.run(["scp", "./dmst_doc/doc_dmst7/parcours.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/dmst7/parcours.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
@@ -604,8 +604,8 @@ def uptoserv():
         print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No parcours.txt to upload...")
 
-    thirdproc = subprocess.run(["scp", "./dmst_doc/doc_dmst6/pbm.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6/dmst6/pbm.txt"],
+    thirdproc = subprocess.run(["scp", "./dmst_doc/doc_dmst7/pbm.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/dmst7/pbm.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
@@ -615,8 +615,8 @@ def uptoserv():
         print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No pbm.txt to upload...")
 
-    forthproc = subprocess.run(["scp", "./dmst_doc/doc_dmst6/project.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6/dmst6/project.txt"],
+    forthproc = subprocess.run(["scp", "./dmst_doc/doc_dmst7/project.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/dmst7/project.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(forthproc.stderr))
     if forthproc.stderr == b'':
@@ -626,8 +626,8 @@ def uptoserv():
         print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No project.txt to upload...")
 
-    fivth = subprocess.run(["scp", "./need/doc_suivi6/main_14b.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6/dmst6/main_14b.txt"],
+    fivth = subprocess.run(["scp", "./need/doc_suivi7/main_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/dmst7/main_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(fivth.stderr))
     if fivth.stderr == b'':
