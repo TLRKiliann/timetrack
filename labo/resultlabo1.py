@@ -30,7 +30,7 @@ def callLabo1(self):
         To display labo into Canvas
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -701,5 +701,4 @@ def callLabo1(self):
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)
