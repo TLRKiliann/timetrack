@@ -140,7 +140,7 @@ def launchfunc(self):
     print("!!! rslt_dmst1 initialized !!!")
 
     try:
-        with open('./diag/doc_diag1/diagrecap1.txt', 'r') as file_di:
+        with open('./diag/doc_diag/diagrecap1.txt', 'r') as file_di:
             with open('./dmst_doc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 diag_content = file_di.readlines()
                 for li in diag_content:
@@ -150,7 +150,7 @@ def launchfunc(self):
         print("[!] File diagrecap1.txt not found !", diag_nf)
 
     try:
-        with open('./ttt/doc_ttt1/intro_ttt.txt', 'r') as file_ttt:
+        with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file_ttt:
             with open('./dmst_doc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 ttt_content = file_ttt.readlines()
                 for li in ttt_content:
@@ -161,7 +161,7 @@ def launchfunc(self):
         print("[!] File intro_ttt.txt not found !", intro_nf)
 
     try:
-        with open('./ttt/doc_ttt1/intro_res.txt', 'r') as file_res:
+        with open('./ttt/doc_ttt/intro_res.txt', 'r') as file_res:
             with open('./dmst_doc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 res_content = file_res.readlines()
                 for li in res_content:
@@ -183,7 +183,7 @@ def launchfunc(self):
         print("[!] File paramdata1.txt not found !", param_nf)
 
     try:
-        with open('./calBmi/bmi1.txt', 'r') as file_b:
+        with open('./calBmi/bmi.txt', 'r') as file_b:
             with open('./dmst_doc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 bmi_content = file_b.readlines()
                 for li in bmi_content:
@@ -191,7 +191,7 @@ def launchfunc(self):
                     file_dm.writelines(bmi_content)
                     break
     except FileNotFoundError as bmi_nf:
-        print("[!] File bmi1.txt not found !", bmi_nf)
+        print("[!] File bmi.txt not found !", bmi_nf)
 
     try:
         with open('./contact/conpact1/finalfile1.txt', 'r') as file_contf1:
@@ -626,7 +626,7 @@ def uptoserv():
         print("[!] No file to upload !")
         tk.messagebox.showerror("Error", "No project.txt to upload...")
 
-    fivth = subprocess.run(["scp", "./need/doc_suivi1/main_14b.txt",
+    fivth = subprocess.run(["scp", "./need/doc_suivi/main_14b.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/main_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(fivth.stderr))

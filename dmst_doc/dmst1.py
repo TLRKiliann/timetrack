@@ -170,7 +170,7 @@ def doc_medical1(self):
 
     # Display text in textbox from diag file
     try:
-        with open('./diag/doc_diag1/diagrecap1.txt', 'r') as filediag:
+        with open('./diag/doc_diag/diagrecap1.txt', 'r') as filediag:
             linesdiag = filediag.readlines()
             for i in range(0, len(linesdiag)):
                 for line in linesdiag:
@@ -227,16 +227,16 @@ def doc_medical1(self):
     self.t31.bind("<Button-1>", deactscroll)
 
     try:
-        if os.path.getsize('./ttt/doc_ttt1/intro_ttt.txt'):
-            importationFile(self, './ttt/doc_ttt1/intro_ttt.txt',
+        if os.path.getsize('./ttt/doc_ttt/intro_ttt.txt'):
+            importationFile(self, './ttt/doc_ttt/intro_ttt.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_ttt not found !")
         tk.messagebox.showinfo('INFO', 'File intro_ttt not found !')
 
     try:
-        if os.path.getsize('./ttt/doc_ttt1/intro_res.txt'):
-            importationFile2(self, './ttt/doc_ttt1/intro_res.txt',
+        if os.path.getsize('./ttt/doc_ttt/intro_res.txt'):
+            importationFile2(self, './ttt/doc_ttt/intro_res.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File intro_res not found !")
@@ -281,11 +281,11 @@ def doc_medical1(self):
         window=self.t35)
 
     try:
-        if os.path.getsize('./calBmi/bmi1.txt'):
-            importationBmi(self, './calBmi/bmi1.txt', encodage="Utf-8")
+        if os.path.getsize('./calBmi/bmi.txt'):
+            importationBmi(self, './calBmi/bmi.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("[!] File bmi1.txt not found !")
-        tk.messagebox.showinfo('INFO', 'File bmi1.txt not found !')
+        print("[!] File bmi.txt not found !")
+        tk.messagebox.showinfo('INFO', 'File bmi.txt not found !')
 
     self.x36, self.y36 = 250, 1290 
     self.lbl_need = tk.Label(self.can,
@@ -940,9 +940,9 @@ def doc_medical1(self):
         window=self.t95)
 
     try:
-        if os.path.getsize('./need/doc_suivi1/main_14b.txt'):
+        if os.path.getsize('./need/doc_suivi/main_14b.txt'):
             print("[+] File 'main_14b.txt' exist !")
-            needimport('./need/doc_suivi1/main_14b.txt')
+            needimport('./need/doc_suivi/main_14b.txt')
     except FileNotFoundError as need_f:
         print("[!] File 'main_14b.txt' does not exist !")
         print(need_f)
