@@ -30,9 +30,7 @@ def doc_medical4(self):
         DMST (Document Medical Soins Transmissions).
     """
     self.effacer()
-    self.delScroll()
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.forgetVsb()
     self.can.config(background='DodgerBlue2')
 
     def deactscroll(event):
@@ -40,7 +38,7 @@ def doc_medical4(self):
             Deactivate scrollbar and MouseWheel.
             It's activated by clicking on textbox
         """
-        self.delScroll()
+        self.vsb.forget()
         self.can.unbind_all("<Button-4>")
         self.can.unbind_all("<Button-5>")
         print("MouseWheel deactivated for textbox !")
