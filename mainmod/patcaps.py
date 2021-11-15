@@ -175,6 +175,7 @@ def callResident(self):
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst1(self))
+    self.buttdmst.bind("<Button-1>", self.delScroll)
     self.fbuttdmst_window = self.can.create_window(self.x17,
         self.y17, window=self.buttdmst)
 
@@ -254,6 +255,7 @@ def callResident(self):
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst2(self))
+    self.butt2dmst.bind("<Button-1>", self.delScroll)
     self.fbutt2dmst_window = self.can.create_window(self.x27,
         self.y27, window=self.butt2dmst)
 
@@ -333,6 +335,7 @@ def callResident(self):
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst3(self))
+    self.butt3dmst.bind("<Button-1>", self.delScroll)
     self.fbutt3dmst_window = self.can.create_window(self.x37,
         self.y37, window=self.butt3dmst)
 
@@ -413,6 +416,7 @@ def callResident(self):
         font=16, width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst4(self))
+    self.butt4dmst.bind("<Button-1>", self.delScroll)
     self.fbutt4dmst_window = self.can.create_window(self.x47,
         self.y47, window=self.butt4dmst)
 
@@ -493,6 +497,7 @@ def callResident(self):
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst5(self))
+    self.butt5dmst.bind("<Button-1>", self.delScroll)
     self.fbutt5dmst_window = self.can.create_window(self.x57,
         self.y57, window=self.butt5dmst)
 
@@ -572,6 +577,7 @@ def callResident(self):
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst6(self))
+    self.butt6dmst.bind("<Button-1>", self.delScroll)
     self.fbutt6dmst_window = self.can.create_window(self.x68,
         self.y68, window=self.butt6dmst)
 
@@ -651,6 +657,7 @@ def callResident(self):
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst7(self))
+    self.butt7dmst.bind("<Button-1>", self.delScroll)
     self.fbutt7dmst_window = self.can.create_window(self.x77,
         self.y77, window=self.butt7dmst)
 
@@ -730,6 +737,7 @@ def callResident(self):
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst8(self))
+    self.butt8dmst.bind("<Button-1>", self.delScroll)
     self.fbutt8dmst_window = self.can.create_window(self.x87,
         self.y87, window=self.butt8dmst)
 
@@ -809,6 +817,7 @@ def callResident(self):
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst9(self))
+    self.butt9dmst.bind("<Button-1>", self.delScroll)
     self.fbutt9dmst_window = self.can.create_window(self.x97,
         self.y97, window=self.butt9dmst)
 
@@ -888,6 +897,7 @@ def callResident(self):
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst10(self))
+    self.butt10dmst.bind("<Button-1>", self.delScroll)
     self.fbutt10dmst_window = self.can.create_window(self.x107,
         self.y107, window=self.butt10dmst)
 
@@ -967,6 +977,7 @@ def callResident(self):
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst11(self))
+    self.butt11dmst.bind("<Button-1>", self.delScroll)
     self.fbutt11dmst_window = self.can.create_window(self.x117,
         self.y117, window=self.butt11dmst)
 
@@ -1046,6 +1057,7 @@ def callResident(self):
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst12(self))
+    self.butt12dmst.bind("<Button-1>", self.delScroll)
     self.fbutt12dmst_window = self.can.create_window(self.x127,
         self.y127, window=self.butt12dmst)
 
@@ -1125,6 +1137,7 @@ def callResident(self):
         width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=lambda: dmst13(self))
+    self.butt13dmst.bind("<Button-1>", self.delScroll)
     self.fbutt13dmst_window = self.can.create_window(self.x137,
         self.y137, window=self.butt13dmst)
 
@@ -1204,6 +1217,7 @@ def callResident(self):
         width=10, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=lambda: dmst14(self))
+    self.butt14dmst.bind("<Button-1>", self.delScroll)
     self.fbutt14dmst_window = self.can.create_window(self.x147,
         self.y147, window=self.butt14dmst)
 
@@ -1283,6 +1297,7 @@ def callResident(self):
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 15",
         command=lambda: dmst15(self))
+    self.butt15dmst.bind("<Button-1>", self.delScroll)
     self.fbutt15dmst_window = self.can.create_window(self.x157,
         self.y157, window=self.butt15dmst)
 
@@ -1362,6 +1377,7 @@ def callResident(self):
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 16",
         command=lambda: dmst16(self))
+    self.butt16dmst.bind("<Button-1>", self.delScroll)
     self.fbutt16dmst_window = self.can.create_window(self.x167,
         self.y167, window=self.butt16dmst)
 
@@ -1441,6 +1457,7 @@ def callResident(self):
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 17",
         command=lambda: dmst17(self))
+    self.butt17dmst.bind("<Button-1>", self.delScroll)
     self.fbutt17dmst_window = self.can.create_window(self.x177,
         self.y177, window=self.butt17dmst)
 
@@ -1520,6 +1537,7 @@ def callResident(self):
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 18",
         command=lambda: dmst18(self))
+    self.butt18dmst.bind("<Button-1>", self.delScroll)
     self.fbutt18dmst_window = self.can.create_window(self.x187,
         self.y187, window=self.butt18dmst)
 
@@ -1599,6 +1617,7 @@ def callResident(self):
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 19",
         command=lambda: dmst19(self))
+    self.butt19dmst.bind("<Button-1>", self.delScroll)
     self.fbutt19dmst_window = self.can.create_window(self.x197,
         self.y197, window=self.butt19dmst)
 
@@ -1678,6 +1697,7 @@ def callResident(self):
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 20",
         command=lambda: dmst20(self))
+    self.but20dmst.bind("<Button-1>", self.delScroll)
     self.fbut20dmst_window = self.can.create_window(self.x207,
         self.y207, window=self.but20dmst)
 
@@ -1757,6 +1777,7 @@ def callResident(self):
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 21",
         command=lambda: dmst21(self))
+    self.butt21dmst.bind("<Button-1>", self.delScroll)
     self.fbutt21dmst_window = self.can.create_window(self.x217,
         self.y217, window=self.butt21dmst)
 
@@ -1836,6 +1857,7 @@ def callResident(self):
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 22",
         command=lambda: dmst22(self))
+    self.butt22dmst.bind("<Button-1>", self.delScroll)
     self.fbutt22dmst_window = self.can.create_window(self.x227,
         self.y227, window=self.butt22dmst)
 
@@ -1915,6 +1937,7 @@ def callResident(self):
         fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise', text="DMST 23",
         command=lambda: dmst23(self))
+    self.butt23dmst.bind("<Button-1>", self.delScroll)
     self.fbutt23dmst_window = self.can.create_window(self.x237,
         self.y237, window=self.butt23dmst)
 
@@ -1994,6 +2017,7 @@ def callResident(self):
         fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise', text="DMST 24",
         command=lambda: dmst24(self))
+    self.butt24dmst.bind("<Button-1>", self.delScroll)
     self.fbutt24dmst_window = self.can.create_window(self.x247,
         self.y247, window=self.butt24dmst)
 
