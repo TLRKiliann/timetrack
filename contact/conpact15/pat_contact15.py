@@ -13,7 +13,7 @@ def Window15(self):
         design for contact interface.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -294,5 +294,4 @@ def Window15(self):
     self.fb64_window = self.can.create_window(self.x64, self.y64, window=self.b64)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)
