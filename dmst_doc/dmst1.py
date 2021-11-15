@@ -309,8 +309,8 @@ def doc_medical1(self):
     self.wt6_window = self.can.create_window(self.x6, self.y6, window=self.t6)
 
     try:
-        if os.path.exists('./contact/conpact1/finalfile1.txt'):
-            importationAdmin(self, './contact/conpact1/finalfile1.txt', encodage="Utf-8")
+        if os.path.exists('./contact/conpact/finalfile1.txt'):
+            importationAdmin(self, './contact/conpact/finalfile1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalfile1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File Admin not found !')
@@ -329,8 +329,8 @@ def doc_medical1(self):
     self.wt8_window = self.can.create_window(self.x8, self.y8, window=self.t8)
 
     try:
-        if os.path.getsize('./contact/conpact1/finaldoc1.txt'):
-            importationDoc1(self, './contact/conpact1/finaldoc1.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finaldoc1.txt'):
+            importationDoc1(self, './contact/conpact/finaldoc1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc1 not found !")
         tk.messagebox.showinfo('INFO', 'File Doctor not found !')
@@ -342,8 +342,8 @@ def doc_medical1(self):
     self.wt9_window = self.can.create_window(self.x9, self.y9, window=self.t9)
 
     try:
-        if os.path.getsize('./contact/conpact1/finaldoc2.txt'):
-            importationDoc2(self, './contact/conpact1/finaldoc2.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finaldoc2.txt'):
+            importationDoc2(self, './contact/conpact/finaldoc2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc2 not found !")
         tk.messagebox.showinfo('INFO', 'File Doctor2 not found !')
@@ -355,8 +355,8 @@ def doc_medical1(self):
     self.wt10_window = self.can.create_window(self.x10, self.y10, window=self.t10)
 
     try:
-        if os.path.getsize('./contact/conpact1/finaldoc3.txt'):
-            importationDoc3(self, './contact/conpact1/finaldoc3.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finaldoc3.txt'):
+            importationDoc3(self, './contact/conpact/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finaldoc3.txt not found !")
         tk.messagebox.showinfo('INFO', 'File Doctor3 not found !')
@@ -374,8 +374,8 @@ def doc_medical1(self):
     self.wt12_window = self.can.create_window(self.x12, self.y12, window=self.t12)
 
     try:
-        if os.path.getsize('./contact/conpact1/finalfam1.txt'):
-            importationFam(self, './contact/conpact1/finalfam1.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finalfam1.txt'):
+            importationFam(self, './contact/conpact/finalfam1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalfam1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
@@ -393,8 +393,8 @@ def doc_medical1(self):
     self.wt14_window = self.can.create_window(self.x14, self.y14, window=self.t14)
 
     try:
-        if os.path.getsize('./contact/conpact1/finalhcs1.txt'):
-            importationHealOne(self, './contact/conpact1/finalhcs1.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finalhcs1.txt'):
+            importationHealOne(self, './contact/conpact/finalhcs1.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalhcs1.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
@@ -414,8 +414,8 @@ def doc_medical1(self):
     self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
 
     try:
-        if os.path.getsize('./contact/conpact1/finalhcs2.txt'):
-            importationHealTwo('./contact/conpact1/finalhcs2.txt', encodage="Utf-8")
+        if os.path.getsize('./contact/conpact/finalhcs2.txt'):
+            importationHealTwo('./contact/conpact/finalhcs2.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalhcs2.txt not found !")
         tk.messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
@@ -426,8 +426,8 @@ def doc_medical1(self):
     self.wt16_window = self.can.create_window(self.x16, self.y16, window=self.t16)
 
     try:
-        if os.path.getsize('./contact/conpact1/finalhcs3.txt'):
-            importationHealThree(self, './contact/conpact1/finalhcs3.txt',
+        if os.path.getsize('./contact/conpact/finalhcs3.txt'):
+            importationHealThree(self, './contact/conpact/finalhcs3.txt',
                 encodage="Utf-8")
     except FileNotFoundError as no_file:
         print("[!] File finalhcs3.txt not found !")
