@@ -13,7 +13,7 @@ def famWind3(self):
         design for contact interface.
     """
     self.effacer()
-    self.delScroll()
+    self.forgetVsb()
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
     self.itemfirst = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
@@ -201,5 +201,4 @@ def famWind3(self):
     self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.unbind_all("<Button-4>")
-    self.can.unbind_all("<Button-5>")
+    self.can.bind("<Button-1>", self.delScroll)
