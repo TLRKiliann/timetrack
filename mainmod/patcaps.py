@@ -21,8 +21,8 @@ def callResident(self):
         with theirs names and more.
     """
     self.effacer()
-    self.forgetVsb()
-
+    #self.forgetVsb()
+    #self.addScroll()
     self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)

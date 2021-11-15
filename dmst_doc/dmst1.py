@@ -30,7 +30,7 @@ def doc_medical1(self):
         DMST (Document Medical Soins Transmissions).
     """
     self.effacer()
-    self.forgetVsb()
+    #self.forgetVsb()
     self.can.config(background='DodgerBlue2')
 
     def deactscroll(event):

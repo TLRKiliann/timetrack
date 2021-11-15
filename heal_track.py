@@ -1953,6 +1953,7 @@ class Application(tk.Frame):
             bg='RoyalBlue3', fg='white', command = self.showPatients)
         self.button4.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
+        self.button4.bind("<Button-1>", self.delScroll)
         self.fbutton4_window = self.can.create_window(950, 450, anchor=tk.CENTER,
             window=self.button4)
 
