@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-import starter.intro
+#import starter.intro
 from mainmod.boxapp import callBox
 from mainmod.reminder import alarmThread
 from mainmod.manualapp import instalpy
@@ -1804,15 +1804,19 @@ class Application(tk.Frame):
             exists = self.item.winfo_exists()
             if exists == 1:
                 self.item.pack_forget()
+                print('Master 3 :', self.master.focus())
         except Exception as err_tk:
             print("item doesn't exist", err_tk)
+            print('Master 5 :', self.master.focus())
 
         try:
             existext = self.text_area.winfo_exists()
             if existext == 1:
                 self.text_area.pack_forget()
+                print('Master 4 :', self.master.focus())
         except Exception as err_ex:
             print("text_area doesn't exist", err_ex)
+            print('Master 6 :', self.master.focus())
 
     def delScroll(self, event):
         ''' To delete ScrollBar '''

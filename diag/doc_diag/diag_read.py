@@ -21,7 +21,7 @@ labelo = tk.Label(fen, text="Diagnostics and ATCD for : ",
     font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
-with open('./newpatient/entryfile1.txt', 'r') as filename:
+with open('./newpatient/entryfile.txt', 'r') as filename:
     line_a = filename.readline()
     line_b = filename.readline()
     line_c = filename.readline()
