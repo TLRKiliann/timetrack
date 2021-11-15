@@ -26,3 +26,10 @@ Poids : 75.3
 Taille : 1.86
 BMI : 21.766
 
+Date : 15/11/2021
+Heure : 11:16:14
+Prenom et Nom : Two B
+Poids : 75.4
+Taille : 1.72
+BMI : 25.487
+

@@ -1,0 +1,15 @@
+- Register : RESERVES -
+Date : 15/11/2021
+Hour : 11:13:26
+Name : Two B
+Date of introduction : 
+Name of Reserve : Drug1
+Dosage : 1 mg
+Reserve : yes
+First-line : no
+Second-line : yes
+Number/24h : 1
+Reason : angoisse
+Date of end : 07/01/2022
+Signature : etc
+

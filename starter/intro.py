@@ -64,10 +64,16 @@ def closeWindow():
     t1 = threading.Thread(target=muse)
     t1.start()
 
+    def pod():
+        playsound("./syno_gif/niercompod.mp3")
+    t2 = threading.Thread(target=pod)
+    t2.start()
+
     def down():
         """
             Download all files.
         """
+        time.sleep(5)
         launchDownload()
     down()
 
@@ -75,14 +81,8 @@ def closeWindow():
         """
             Load 24 folders when app start.
         """
-        #time.sleep(2)
         loaderfile()
     tocopyfiles()
-
-    def pod():
-        playsound("./syno_gif/pod_font.mp3")
-    t2 = threading.Thread(target=pod)
-    t2.start()
 
 def validentry(event):
     """
