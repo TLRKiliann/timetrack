@@ -15,7 +15,7 @@ def homecsWind6(self):
         design for contact interface.
     """
     self.effacer()
-    self.addScroll()
+    self.forgetVsb()
     self.can.configure(background='DodgerBlue2')
 
     def careInSys():
@@ -538,5 +538,5 @@ def homecsWind6(self):
         window = self.secondghost)
 
     self.can.configure(scrollregion=self.can.bbox(tk.ALL))
-    self.can.bind_all("<Button-4>", self.onMouseWheel)
-    self.can.bind_all("<Button-5>", self.onMouseWheel)
+    self.can.bind("<Button-1>", self.reinitscroll)
+    self.can.bind("<Button-3>", self.delScroll)
