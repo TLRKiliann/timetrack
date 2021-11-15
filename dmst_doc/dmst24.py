@@ -1126,6 +1126,7 @@ def doc_medical24(self):
         width=20, bd=3, fg='white', bg='RoyalBlue3',
         activebackground='pale turquoise',
         highlightbackground='DodgerBlue2', command = way_back)
+    self.buttonquit.bind("<Button-1>", self.delScroll)
     self.buttonquit = self.can.create_window(self.x111, self.y111,
         window = self.buttonquit)
 
