@@ -116,11 +116,15 @@ def instalpy(self):
         " --------------------------------------------\n"
         " [*] Click on <Global> button and search file you're interested by.\n"
         " You can put all files you want in this folder, but it will not be uploaded to server.\n"
-        " For that, it's better to upload it with scp command, such as : \n"
+        " For that, it's better to upload it with scp command, such as :\n\n"
+
         " (with python3 command :)\n\n"
+
         " subprocess.run(['scp', './Backup/FilesX/yourfile.pdf',\n"
-        "'pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.pdf]', stderr=subprocess.PIPE)\n"
+        "'pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.pdf]', stderr=subprocess.PIPE)\n\n"
+
         " (or with shell command :)\n\n"
+
         " $ scp ./Backup/FilesX/yourfile.pdf pi@192.168.18.12:~/tt_doc/doc_txtX/FilesX/yourfile.pdf\n\n"
 
         " [*] Click on <EventBox> for seeing previously about yesterday news and backup will"\

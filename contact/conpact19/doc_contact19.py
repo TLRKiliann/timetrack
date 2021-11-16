@@ -15,7 +15,6 @@ def doctorWind19(self):
         design for contact interface.
     """
     self.effacer()
-    self.forgetVsb()
     self.can.configure(background='DodgerBlue2')
 
     def docData():

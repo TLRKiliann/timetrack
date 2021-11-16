@@ -7,6 +7,7 @@ import os
 from contact.conpact.writerfiles.writedoc import docRecord
 from contact.conpact.writerfiles.writedoc import docTwoRecord
 from contact.conpact.writerfiles.writedoc import docThreeRecord
+from contact.conpact.calldatadoc.datadocfile1 import funcDoc
 
 
 def doctorWind(self):
@@ -15,139 +16,11 @@ def doctorWind(self):
         design for contact interface.
     """
     self.effacer()
-    #self.forgetVsb()
     self.can.configure(background='DodgerBlue2')
 
-    def docData():
-        """
-            First page
-        """
-        self.x2, self.y2 = 900, 370
-        self.txtBox = tk.Text(self.can, height=17, width=40, font=18,
-            relief=tk.SUNKEN)
-        self.txtBox.delete('1.0', tk.END)
-        self.txtBox.update()
-        self.ftxtBox_window = self.can.create_window(self.x2, self.y2,
-            window=self.txtBox)
-
-        def numberOneDox():
-            try:
-                if os.path.getsize('./contact/conpact/contactdoc1.txt'):
-                    print("[+] Ok, contactdoc1.txt exist")
-            except FileNotFoundError as errfnf:
-                print("[!] File contactdoc1.txt not found (Error7)", errfnf)
-                with open('./contact/conpact/contactdoc1.txt', 'w') as testf:
-                    print("[+] File contactdoc1.txt created !")
-
-            try:
-                if os.path.exists('./contact/conpact/contactdoc1.txt'):
-                    with open('./contact/conpact/contactdoc1.txt', 'r') as policyfile:
-                        line1 = policyfile.readline()
-                        spec = policyfile.readline()
-                        phone = policyfile.readline()
-                        iphone2 = policyfile.readline()
-                        street = policyfile.readline()
-                        state = policyfile.readline()
-                        email = policyfile.readline()
-                        fax = policyfile.readline()
-            except FileNotFoundError as err_r:
-                print("[!] File contactdoc1.txt not found (Error_1)", err_r)
-
-            self.txtBox.insert(tk.INSERT, "--- Data Doctor ---\n")
-            self.txtBox.insert(tk.END, "\nDoctor : " + line1)
-            self.txtBox.insert(tk.END, "\nSpecialization : " + spec)
-            self.txtBox.insert(tk.END, "\nPhone : " + phone)
-            self.txtBox.insert(tk.END, "\nMobile : " + iphone2)
-            self.txtBox.insert(tk.END, "\nStreet : " + street)
-            self.txtBox.insert(tk.END, "\nCity : " + state)
-            self.txtBox.insert(tk.END, "\ne-mail : " + email)
-            self.txtBox.insert(tk.END, "\nFax : " + fax)
-
-        numberOneDox()
-
-        self.x3, self.y3 = 900, 890
-        self.txtBox2 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
-        self.txtBox2.delete('1.0', tk.END)
-        self.txtBox2.update()
-        self.ftxtBox2_window = self.can.create_window(self.x3, self.y3, window=self.txtBox2)
-
-        def numberTwoDox():
-            try:
-                if os.path.getsize('./contact/conpact/contactdoc2.txt'):
-                    print("[+] Ok, contactdoc2.txt exist")
-            except FileNotFoundError as errfnf2:
-                print("[!] File contactdoc2.txt not found (Error10)", errfnf2)
-                with open('./contact/conpact/contactdoc2.txt', 'w') as testf2:
-                    print("[+] File contactdoc2.txt created !", testf2)
-
-            try:
-                if os.path.exists('./contact/conpact/contactdoc2.txt'):
-                    with open('./contact/conpact/contactdoc2.txt', 'r') as policydoc:
-                        docline1 = policydoc.readline()
-                        docspecia = policydoc.readline()
-                        docphone = policydoc.readline()
-                        dociphone2 = policydoc.readline()
-                        docstreet = policydoc.readline()
-                        docstate = policydoc.readline()
-                        docemail = policydoc.readline()
-                        docfax = policydoc.readline()
-            except FileNotFoundError as err_r3:
-                print("[!] File contactdoc2.txt not found (Error_2)", err_r3)
-
-            self.txtBox2.insert(tk.INSERT, "--- Data Doctor 2 ---\n")
-            self.txtBox2.insert(tk.END, "\nDoctor : " + docline1)
-            self.txtBox2.insert(tk.END, "\nSpecialization : " + docspecia)
-            self.txtBox2.insert(tk.END, "\nPhone : " + docphone)
-            self.txtBox2.insert(tk.END, "\nMobile : " + dociphone2)
-            self.txtBox2.insert(tk.END, "\nStreet : " + docstreet)
-            self.txtBox2.insert(tk.END, "\nCity : " + docstate)
-            self.txtBox2.insert(tk.END, "\ne-mail : " + docemail)
-            self.txtBox2.insert(tk.END, "\nFax : " + docfax)
-
-        numberTwoDox()
-
-        self.x4, self.y4 = 900, 1410
-        self.txtBox3 = tk.Text(self.can, height=17, width=40, font=18, relief=tk.SUNKEN)
-        self.txtBox3.delete('1.0', tk.END)
-        self.txtBox3.update()
-        self.ftxtBox3_window = self.can.create_window(self.x4, self.y4, window=self.txtBox3)
-
-        def numbThreeDox():
-            try:
-                if os.path.getsize('./contact/conpact/contactdoc3.txt'):
-                    print("[+] Ok, contactdoc3.txt exist")
-            except FileNotFoundError as errfnf3:
-                print("[!] File contactdoc3.txt not found (Error13)", errfnf3)
-                with open('./contact/conpact/contactdoc3.txt', 'w') as testf3:
-                    print("[+] File contactdoc3.txt created !", testf3)
-
-            try:
-                if os.path.exists('./contact/conpact/contactdoc3.txt'):
-                    with open('./contact/conpact/contactdoc3.txt', 'r') as policydoc3:
-                        doc3line1 = policydoc3.readline()
-                        doc3special = policydoc3.readline()
-                        doc3phone = policydoc3.readline()
-                        doc3iphone2 = policydoc3.readline()
-                        doc3street = policydoc3.readline()
-                        doc3state = policydoc3.readline()
-                        doc3email = policydoc3.readline()
-                        doc3fax = policydoc3.readline()
-            except FileNotFoundError as err_r3:
-                print("[!] File contactdoc3.txt not found (Error_3)", err_r3)
-
-            self.txtBox3.insert(tk.INSERT, "--- Data Doctor 3 ---\n")
-            self.txtBox3.insert(tk.END, "\nDoctor : " + doc3line1)
-            self.txtBox3.insert(tk.END, "\nSpecialization : " + doc3special)
-            self.txtBox3.insert(tk.END, "\nPhone : " + doc3phone)
-            self.txtBox3.insert(tk.END, "\nMobile : " + doc3iphone2)
-            self.txtBox3.insert(tk.END, "\nStreet : " + doc3street)
-            self.txtBox3.insert(tk.END, "\nCity : " + doc3state)
-            self.txtBox3.insert(tk.END, "\ne-mail : " + doc3email)
-            self.txtBox3.insert(tk.END, "\nFax : " + doc3fax)
-
-        numbThreeDox()
-
-    docData()
+    def docData(self):
+        funcDoc(self)
+    docData(self)
 
     # Label ghost1
     self.x1, self.y1 = 250, 50
@@ -202,7 +75,7 @@ def doctorWind(self):
         self.wnamentry_window = self.can.create_window(self.x14, self.y14,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ File 1 not created ! (Error17)", ub_error1)
+        print("[!] File contactdoc1.txt not created ! (Error17)", ub_error1)
 
     # Specialization
     self.x20, self.y20 = 250, 250
@@ -326,7 +199,7 @@ def doctorWind(self):
     self.b52 = tk.Button(self.can, text="Save Modifications",
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3', fg='cyan',
         highlightbackground='DodgerBlue2', activebackground='pale turquoise',
-        command = lambda: ([docRecord(self), docData()]))
+        command = lambda: ([docRecord(self), docData(self)]))
     self.fb52_window = self.can.create_window(self.x52, self.y52,
         window=self.b52)
 
@@ -486,7 +359,7 @@ def doctorWind(self):
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
         fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: ([docTwoRecord(self), docData()]))
+        command = lambda: ([docTwoRecord(self), docData(self)]))
     self.fbat77_window = self.can.create_window(self.x77,
         self.y77, window=self.bat77)
 
@@ -645,7 +518,7 @@ def doctorWind(self):
         font=('MS Serif', 14), width=26, bd=3, bg='RoyalBlue3',
         fg='cyan', highlightbackground='DodgerBlue2',
         activebackground='pale turquoise',
-        command = lambda: ([docThreeRecord(self), docData()]))
+        command = lambda: ([docThreeRecord(self), docData(self)]))
     self.fbat96_window = self.can.create_window(self.x96, self.y96,
         window=self.bat96)
 
