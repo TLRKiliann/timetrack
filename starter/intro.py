@@ -94,39 +94,39 @@ def validentry(event):
     passentry = getpass.get()
     MSGBOX = tk.messagebox.askyesno("Ask", "Validate password ?")
     if MSGBOX == 1:
-        with open('./starter/filenter.txt', 'r') as read_file:
-            line1 = read_file.readline()
-            line2 = read_file.readline()
-            line3 = read_file.readline()
-            line4 = read_file.readline()
-            line5 = read_file.readline()
-            line6 = read_file.readline()
-            line7 = read_file.readline()
-            line8 = read_file.readline()
-            if entryname.get() == line1[:-1] and getpass.get() == line2[:-1]:
-                playOne()
-                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-                playTwo()
-                closeWindow()
-            elif entryname.get() == line3[:-1] and getpass.get() == line4[:-1]:
-                playOne()
-                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-                playTwo()
-                closeWindow()
-            elif entryname.get() == line5[:-1] and getpass.get() == line6[:-1]:
-                playOne()
-                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-                playTwo()
-                closeWindow()
-            elif entryname.get() == line7[:-1] and getpass.get() == line8[:-1]:
-                playOne()
-                tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
-                playTwo()
-                closeWindow()
-            else:
-                playError()
-                tk.messagebox.showwarning("Warning", "Password or Username failed !")
-                playTwo()
+        read_file = open('./starter/filenter.txt', 'r')
+        line1 = read_file.readline()
+        line2 = read_file.readline()
+        line3 = read_file.readline()
+        line4 = read_file.readline()
+        line5 = read_file.readline()
+        line6 = read_file.readline()
+        line7 = read_file.readline()
+        line8 = read_file.readline()
+        if entryname.get() == line1[:-1] and getpass.get() == line2[:-1]:
+            playOne()
+            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+            playTwo()
+            closeWindow()
+        elif entryname.get() == line3[:-1] and getpass.get() == line4[:-1]:
+            playOne()
+            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+            playTwo()
+            closeWindow()
+        elif entryname.get() == line5[:-1] and getpass.get() == line6[:-1]:
+            playOne()
+            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+            playTwo()
+            closeWindow()
+        elif entryname.get() == line7[:-1] and getpass.get() == line8[:-1]:
+            playOne()
+            tk.messagebox.showinfo("ACCESS", "Welcome ! You get access !!!")
+            playTwo()
+            closeWindow()
+        else:
+            playError()
+            tk.messagebox.showwarning("Warning", "Password or Username failed !")
+            playTwo()
     else:
         playsound('./beep_sounds/flute_error.wav')
 

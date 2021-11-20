@@ -1,0 +1,14 @@
+Treatments :[
+    {
+        "Date": "20/11/2021",
+        "Date of introduction": "10 February 2021",
+        "Date of end": "26/11/2021",
+        "Treatment": "Drug1",
+        "Dosage": "10 mg",
+        "Morning": "1",
+        "Midday": "---",
+        "Evening": "2",
+        "Night": "---",
+        "Signature": "etc"
+    }
+]

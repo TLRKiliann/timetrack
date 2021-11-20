@@ -1,0 +1,14 @@
+Date : 10/02/2021
+Heure : 10:04:54
+Prenom et Nom : Michael Douglas
+Poids : 80
+Taille : 1.77
+BMI : 25.535
+
+Date : 21/02/2021
+Heure : 10:04:54
+Prenom et Nom : Michael Douglas
+Poids : 82
+Taille : 1.77
+BMI : 26.174
+

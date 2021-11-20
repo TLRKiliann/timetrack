@@ -1,0 +1,7 @@
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 16/11/2021 at 22:42:01 :
+Patient name : Heligan Stead
+[+] Urinary and/or fecal monitoring - required
+[+] Sleep monitoring - required
+---

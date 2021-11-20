@@ -1,0 +1,18 @@
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 16/11/2021 at 22:25:44 :
+Patient name : Dyson Dix
+[+] Sleep monitoring - required
+[+] Monitoring to prevent hazards - required
+[+] Stimulation or assistance with communication - required
+---
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 16/11/2021 at 22:27:44 :
+Patient name : Dyson Dix
+[+] Postural and/or movement monitoring - required
+[+] Cleanliness and/or integument monitoring - required
+[+] Supervision or assistance with dressing/undressing - required
+---
+
+

@@ -1,0 +1,55 @@
+Date : 01/09/2021
+Hour : 22:54:17
+Name and Surname : NieR Automata
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 18/min
+Temperature : 37.1°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 01/09/2021
+Hour : 22:54:17
+Name and Surname : NieR Automata
+TA : 127/82mmHg
+Puls : 77/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 6.1 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 01/10/2021
+Hour : 22:54:17
+Name and Surname : NieR Automata
+TA : 127/82mmHg
+Puls : 77/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 6.1 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 01/11/2021
+Hour : 22:54:17
+Name and Surname : NieR Automata
+TA : 133/77mmHg
+Puls : 89/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.6°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 16/11/2021
+Hour : 22:56:35
+Name and Surname : NieR Automata
+TA : 116/83mmHg
+Puls : 79/min
+SaO2 : 97%
+FR : 16/min
+Temperature : 36.3°C
+Glycemie : 5.8 mmol/l
+Douleurs (Pain) : 0/10
+

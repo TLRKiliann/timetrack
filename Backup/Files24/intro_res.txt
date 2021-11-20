@@ -1,0 +1,15 @@
+- Register : RESERVES -
+Date : 20/11/2021
+Hour : 10:12:01
+Name : Michael Douglas
+Date of introduction : 10 February 2021
+Name of Reserve : Drug1
+Dosage : 10 mg
+Reserve : yes
+First-line : yes
+Second-line : no
+Number/24h : 1
+Reason : anxiety
+Date of end : 26/11/2021
+Signature : etc
+

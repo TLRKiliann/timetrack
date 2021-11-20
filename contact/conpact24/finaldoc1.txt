@@ -1,8 +1,8 @@
-Doctor : Lynnett Pick
-Specialization : Neuro
-Phone : 082389047
-Mobile : 0762834264
-Street : WesleyAlley
-City : Fairewiev
-e-mail : denta@gmail.com
-Fax : 23942321
+Doctor : Goncalves
+Specialization : Dermato
+Phone : 886887678
+Mobile : 767867878
+Street : street 24
+City : Hero City
+e-mail : aljsdka@aljdl
+Fax : 8979879789

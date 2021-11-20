@@ -7,3 +7,23 @@ Simple aid
 ---
 
 
+Implemented as : 06/11/2021 at 17:47:35 :
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 16/11/2021 at 22:51:41 :
+Patient name : NieR Automata
+[+] Monitoring to prevent hazards - required
+Look at ..
+---
+
+
+Implemented as : 16/11/2021 at 22:52:09 :
+Meching of a wound :
+...
+Probe care :
+ddd
+
+Stix (combo) :
+asljdkl
+
+

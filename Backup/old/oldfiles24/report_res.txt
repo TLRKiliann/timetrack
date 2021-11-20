@@ -1,0 +1,15 @@
+Reserves :[
+    {
+        "Date": "20/11/2021",
+        "Date of introduction": "10 February 2021",
+        "Date of end": "26/11/2021",
+        "Treatment": "Drug1",
+        "Dosage": "10 mg",
+        "Reserve": 1,
+        "First-line": 1,
+        "Second-line": 0,
+        "Number/24h": "1",
+        "Reason": "anxiety",
+        "Signature": "etc"
+    }
+]

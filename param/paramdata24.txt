@@ -1,0 +1,22 @@
+Date : 10/02/2021
+Hour : 10:02:01
+Name and Surname : Michael Douglas
+TA : 122/86mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.4°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 21/02/2021
+Hour : 10:02:01
+Name and Surname : Michael Douglas
+TA : 140/97mmHg
+Puls : 82/min
+SaO2 : 99%
+FR : 18/min
+Temperature : 36.6°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+

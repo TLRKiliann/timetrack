@@ -130,10 +130,10 @@ def instalpy(self):
         " [*] Click on <EventBox> for seeing previously about yesterday news and backup will"\
         " be launched every 5 days. This interface is usefull to prevent if a rdv has been fixed for tomorrow.\n\n"
 
-        " !!! WARNING !!! : Don't press <delete patient> button before informing your administrator, \n"
-        " otherwise all files and data will be losted forever...\n"
+        " !!! WARNING !!! : Don't press <delete patient> button before having saved the patient's DMST,\n"
+        " otherwise all files and data will be losted forever...\n\n"
 
-        "\n Developped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n")
+        " Developped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n")
 
     self.text_area.configure(state ='disable', background="black")
 

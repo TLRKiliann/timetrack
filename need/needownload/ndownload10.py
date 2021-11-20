@@ -53,7 +53,7 @@ def process_launched(root):
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No main_14b.txt to download !")
 
-    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files10/patient10_14b.txt",
+    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/patient10_14b.txt",
         "./need/doc_suivi10/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
@@ -62,6 +62,9 @@ def process_launched(root):
     else:
         print("[!] No file to download !")
         tk.messagebox.showerror("Error", "No patient10_14b.txt to download !")
+
+    print('My pid is :', os.getpid())
+    root.quit()
 
 def need_dl10():
     root = tk.Tk()

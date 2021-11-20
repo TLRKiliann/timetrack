@@ -289,7 +289,7 @@ buttonQuitter = tk.Button(root, text="Quit", bd=3, width=10,
 buttonQuitter.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
-    if os.path.getsize('./need/doc_suivi10/patient10_14b.txt'):
+    if os.path.exists('./need/doc_suivi10/patient10_14b.txt'):
         importationFile('./need/doc_suivi10/patient10_14b.txt',
             encodage='Utf-8')
 except FileNotFoundError as err_nffile:

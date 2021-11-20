@@ -308,6 +308,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
 gui = tk.Tk()
 gui.title("Time-Track")
 gui.configure(bg='DodgerBlue2')
+gui.resizable(False, False)
 #gui.geometry('300x200')
 
 labelID = tk.Label(gui, text='ID Number : ',
@@ -327,7 +328,7 @@ labelName.pack(pady=10)
 Nompatient = tk.StringVar()
 entree = tk.Entry(gui, textvariable=Nompatient,
     highlightbackground='SteelBlue', bd=4)
-Nompatient.set('Firstname + Lastname')
+Nompatient.set('Firstname Lastname')
 entree.pack()
 
 bouton1 = tk.Button(gui, text="Delete", fg='yellow', bg='RoyalBlue3',

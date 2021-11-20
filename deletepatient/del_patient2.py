@@ -9,7 +9,7 @@
 """
 
 
-from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import os
 import subprocess
@@ -362,6 +362,63 @@ def delFuncFile2():
             print("[del] File hcscontact3.txt deleted (2)")
     except FileNotFoundError as err_hcs3:
         print("[!] File hcscontact3.txt does not exist", err_hcs3)
+
+    # Final
+    try:
+        if os.path.getsize('./contact/conpact2/finalfile2.txt'):
+            os.remove('./contact/conpact2/finalfile2.txt')
+            print("[del] File finalfile2.txt deleted")
+    except FileNotFoundError as err_finalf:
+        print("[!] File finalfile2.txt does not exist", err_finalf)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalfiledoc1.txt'):
+            os.remove('./contact/conpact2/finalfiledoc1.txt')
+            print("[del] File finalfiledoc1.txt deleted")
+    except FileNotFoundError as err_finald1:
+        print("[!] File finalfiledoc1.txt does not exist", err_finald1)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finaldoc2.txt'):
+            os.remove('./contact/conpact2/finaldoc2.txt')
+            print("[del] File finaldoc2.txt deleted")
+    except FileNotFoundError as err_finald2:
+        print("[!] File finaldoc2.txt does not exist", err_finald2)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finaldoc3.txt'):
+            os.remove('./contact/conpact2/finaldoc3.txt')
+            print("[del] File finaldoc3.txt deleted")
+    except FileNotFoundError as err_finald3:
+        print("[!] File finaldoc3.txt does not exist", err_finald3)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalfam2.txt'):
+            os.remove('./contact/conpact2/finalfam2.txt')
+            print("[del] File finalfam2.txt deleted")
+    except FileNotFoundError as err_finalfam:
+        print("[!] File finalfam2.txt does not exist", err_finalfam)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs1.txt'):
+            os.remove('./contact/conpact2/finalhcs1.txt')
+            print("[del] File finalhcs1.txt deleted")
+    except FileNotFoundError as err_finalhcs1:
+        print("[!] File finalhcs1.txt does not exist", err_finalhcs1)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs2.txt'):
+            os.remove('./contact/conpact2/finalhcs2.txt')
+            print("[del] File finalhcs2.txt deleted")
+    except FileNotFoundError as err_finalhcs2:
+        print("[!] File finalhcs2.txt does not exist", err_finalhcs2)
+
+    try:
+        if os.path.getsize('./contact/conpact2/finalhcs3.txt'):
+            os.remove('./contact/conpact2/finalhcs3.txt')
+            print("[del] File finalhcs3.txt deleted")
+    except FileNotFoundError as err_finalhcs3:
+        print("[!] File finalhcs3.txt does not exist", err_finalhcs3)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst2/parcours.txt'):

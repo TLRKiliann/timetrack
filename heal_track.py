@@ -21,7 +21,7 @@ import time
 import json
 from playsound import playsound
 
-#import starter.intro
+import starter.intro
 from mainmod.boxapp import callBox
 from mainmod.reminder import alarmThread
 from mainmod.manualapp import instalpy
@@ -1681,7 +1681,7 @@ class Application(tk.Frame):
     """
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=0, bg='RoyalBlue4', padx=20, pady=20, relief=tk.GROOVE)
-        self.master.tk.call('wm', 'iconphoto', self.master._w, tk.PhotoImage(file='./syno_gif/YoRHa2.gif'))
+        self.master.tk.call('wm', 'iconphoto', self.master._w, tk.PhotoImage(file='./syno_gif/yorhabest.gif'))
         self.master.title('Time-Track Developed by ko@l@tr33')
         self.master.withdraw()
         # Update "requested size" from geometry manager

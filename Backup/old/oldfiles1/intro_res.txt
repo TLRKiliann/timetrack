@@ -1,120 +1,15 @@
 - Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Drug101
-Dosage : 10 mg
+Date : 15/11/2021
+Hour : 11:13:26
+Name : Two B
+Date of introduction : 
+Name of Reserve : Drug1
+Dosage : 1 mg
 Reserve : yes
-First-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Nexium
-Dosage : 40 mg
-Reserve : yes
+First-line : no
 Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Olanzapine
-Dosage : 10 mg
-Reserve : yes
-First-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Temesta
-Dosage : 2,5 mg
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Olanzapine
-Dosage : 20 mg
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Drug101
-Dosage : 50 ml
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:16:26
-Name : Ker Moren
-Date of introduction : 06 April 2004
-Name of Reserve : Olanzapine
-Dosage : 7,5 mg
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:35:11
-Name : Ker Moren
-Date of introduction : 04 March 2004
-Name of Reserve : Drug202
-Dosage : 202 mg
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:35:11
-Name : Ker Moren
-Date of introduction : 04 March 2004
-Name of Reserve : Drug404
-Dosage : 100 mg
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
-Signature : etc
-
-- Register : RESERVES -
-Date : 14/09/2021
-Hour : 09:35:11
-Name : Ker Moren
-Date of introduction : 04 March 2004
-Name of Reserve : Drug303
-Dosage : 50 ml
-Reserve : yes
-Second-line : yes
-Date of end : 14/09/2021
+Number/24h : 1
+Reason : angoisse
+Date of end : 07/01/2022
 Signature : etc
 

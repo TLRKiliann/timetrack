@@ -1,0 +1,28 @@
+Date : 16/11/2021
+Heure : 22:58:52
+Prenom et Nom : NieR Automata
+Poids : 77
+Taille : 1.86
+BMI : 22.257
+
+Date : 02/05/2021
+Heure : 22:58:52
+Prenom et Nom : NieR Automata
+Poids : 75.2
+Taille : 1.86
+BMI : 21.737
+
+Date : 02/07/2021
+Heure : 22:58:52
+Prenom et Nom : NieR Automata
+Poids : 79.2
+Taille : 1.86
+BMI : 22.893
+
+Date : 22/09/2021
+Heure : 22:58:52
+Prenom et Nom : NieR Automata
+Poids : 83
+Taille : 1.86
+BMI : 23.991
+

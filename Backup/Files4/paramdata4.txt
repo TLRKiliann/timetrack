@@ -1,0 +1,22 @@
+Date : 16/11/2021
+Hour : 20:43:22
+Name and Surname : Steve Jobs
+TA : 130/89mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.2°C
+Glycemie : 4.3 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 10/10/2021
+Hour : 20:43:22
+Name and Surname : Steve Jobs
+TA : 130/89mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.2°C
+Glycemie : 4.3 mmol/l
+Douleurs (Pain) : 1/10
+
