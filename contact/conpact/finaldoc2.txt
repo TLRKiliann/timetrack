@@ -1,8 +1,0 @@
-Doctor : Emil
-Specialization : Wave
-Phone : 8724893222
-Mobile : 2893748
-Street : G
-City : 3248
-e-mail : fjksfj
-Fax : sfjkl

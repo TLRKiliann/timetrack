@@ -1,5 +1,2 @@
 --- DIAGNOSTICS ---
-Introversion
-Schizophrenia
-
-
+Diagnostic (main)

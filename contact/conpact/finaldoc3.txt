@@ -1,8 +1,0 @@
-Doctor : 093894
-Specialization : 2398490
-Phone : 49832490
-Mobile : 383290
-Street : Fairview
-City : Dallas
-e-mail : m
-Fax : 2398478923947

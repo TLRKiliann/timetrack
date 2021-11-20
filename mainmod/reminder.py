@@ -23,37 +23,38 @@ def alarmThread(self):
     """
     self.effacer()
     self.forgetVsb()
+
     self.can.configure(bg='black')
     self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
-    def action():
+    def action(self):
         """
             To start app with thread !
         """
-        treat = threading.Thread(target=alarm, args=(1,))
-        treat.setDaemon(True)
-        treat.start()
+        self.treat = threading.Thread(target=alarm, args=(self, 1,))
+        self.treat.setDaemon(True)
+        self.treat.start()
 
-    def alarm(n):
+    def alarm(self, n):
         """
             Alarm will sound at the scheduled time.
         """
         n = 1
         while n == 1 :
-            set_alarm_time = f"{hour.get()}:{minute.get()}:{second.get()}"
+            self.set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
             time.sleep(1)
 
             current_time = datetime.datetime.now().strftime("%H:%M:%S")
-            print(current_time, set_alarm_time)
+            print(current_time, self.set_alarm_time)
 
-            if current_time == set_alarm_time:
+            if current_time == self.set_alarm_time:
                 print("Alarm ring !")
                 playsound("./beep_sounds/metroid_alarm.wav")
                 tk.messagebox.showwarning("Alarm", "Remind : "\
-                    + comment.get())
+                    + self.comment.get())
                 n -= 1
-            elif current_time > set_alarm_time:
+            elif current_time > self.set_alarm_time:
                 print("Alarm reset ! - (current_time is bigger than alarm_time)")
                 tk.messagebox.showerror("Error", "Look at time! Time has past.")
                 n -= 1
@@ -77,23 +78,23 @@ def alarmThread(self):
         window=self.textLab)
 
     self.x30, self.y30 = 520, 350
-    hour = tk.StringVar()
-    self.entryhou = tk.Entry(self.can, textvariable=hour, width=6)
-    hour.set(time.strftime("%H"))
+    self.hour = tk.StringVar()
+    self.entryhou = tk.Entry(self.can, textvariable=self.hour, width=6)
+    self.hour.set(time.strftime("%H"))
     self.wentryhou_window = self.can.create_window(self.x30, self.y30,
         window=self.entryhou)
 
     self.x40, self.y40 = 620, 350
-    minute = tk.StringVar()
-    self.entrymin = tk.Entry(self.can, textvariable=minute, width=6)
-    minute.set(time.strftime("%M"))
+    self.minute = tk.StringVar()
+    self.entrymin = tk.Entry(self.can, textvariable=self.minute, width=6)
+    self.minute.set(time.strftime("%M"))
     self.wentrymin_window = self.can.create_window(self.x40, self.y40,
         window=self.entrymin)
 
     self.x50, self.y50 = 720, 350
-    second = tk.StringVar()
-    self.entrysec = tk.Entry(self.can, textvariable=second, width=6)
-    second.set(time.strftime("%S"))
+    self.second = tk.StringVar()
+    self.entrysec = tk.Entry(self.can, textvariable=self.second, width=6)
+    self.second.set(time.strftime("%S"))
     self.wentrysec_window = self.can.create_window(self.x50, self.y50,
         window=self.entrysec)
 
@@ -104,16 +105,16 @@ def alarmThread(self):
         window=self.notifLab)
 
     self.x52, self.y52 = 625, 470
-    comment = tk.StringVar()
-    self.entrycom = tk.Entry(self.can, textvariable=comment, width=30)
-    comment.set('Write your comment here')
+    self.comment = tk.StringVar()
+    self.entrycom = tk.Entry(self.can, textvariable=self.comment, width=30)
+    self.comment.set('Write your comment here')
     self.wentrycom_window = self.can.create_window(self.x52, self.y52,
         window=self.entrycom)
 
     self.x60, self.y60 = 625, 550
     self.buttsave = tk.Button(self.can, text="Save", fg='white',
         bg='RoyalBlue3', bd=3, width=10, highlightbackground='black',
-        activebackground='pale turquoise', command = action)
+        activebackground='pale turquoise', command =lambda: action(self))
     self.wbuttsave_window = self.can.create_window(self.x60, self.y60,
         window=self.buttsave)
 

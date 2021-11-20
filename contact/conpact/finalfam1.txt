@@ -1,6 +1,0 @@
-Name : Birguit
-Phone : 00-22-223-45-67
-Phone : 84-945-55-667-43
-Street : Helltrack
-City : Null
-e-mail : b@gmail.com
