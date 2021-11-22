@@ -96,7 +96,7 @@ You could install it on server too for solving problem.
 
 #### Generate rsa key :
 
-`ssh-keygen -t rsa`
+`ssh-keygen -t rsa -b 4096`
 
 Enter file to save key : rsa_file
 
