@@ -262,7 +262,7 @@ exit;
 
 11) `SHOW TABLES;`
 
-12) `MariaDB [timetrackconn]> CREATE TABLE timetrackconn(\
+12) `MariaDB [timetrackconn]> CREATE TABLE timetrackconn(`\
         -> stdid INT UNSIGNED NOT NULL AUTO_INCREMENT,\
         -> firstname VARCHAR(45) NULL,\
         -> surname VARCHAR(45) NULL,\
@@ -271,7 +271,7 @@ exit;
         -> disease VARCHAR(45) NULL,\
         -> maindiagnostic VARCHAR(45) NULL,\
         -> PRIMARY KEY (stdid)\
-        -> );\`
+        -> );\
 
 13) `sudo systemctl restart mysql`
 
