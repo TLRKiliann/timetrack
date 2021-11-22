@@ -1,6 +1,6 @@
 # TIME-TRACK 
 
-: python3 :
+: python :
 
 * tkinter8.6
 
