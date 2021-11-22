@@ -34,10 +34,12 @@ by
 You should install MySQL on one server. Otherwise each user will have an independent database if it is installed on localhost. This is obviously not the point, if something changes, the other users will not see what has changed in their database.
 It is also possible to extend the connection to the Internet (WAN) to have access outside the LAN (forwarding). In order to do this, replace the following lines:
 
+***LAN configuration :***\
 `pymysql.connect(host='192.168.XX.XX', port=3306, user='usr_namedb', password='user_passwd', database='timetrackconn')`
 
 by
 
+***WAN configuration :***\
 `pymysql.connect(host='publicIP', port=3306, user='usr_namedb', password='user_passwd', database='timetrackconn')`
 
 ---
