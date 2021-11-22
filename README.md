@@ -16,12 +16,12 @@ I chose a LAN infrastructure for security reasons. It is possible to extend the 
 
 I recommend to create the MySQL database table in localhost (on your own machine). To do this you will have to modify the files of "update/" and "nutrition/" folders, as well as the "accessDB.py" file by replacing :
 
-LAN configuration :\
+`LAN configuration :`\
 pymysql.connect(host='192.168.XX.XX', port=3306, user='usr_namedb', password='user_passwd', database='timetrackconn')
 
 by
 
-Localhost configuration :\
+`Localhost configuration :`\
 pymysql.connect(host='127.0.0.1', user='usr_namedb', password='user_passwd', database='timetrackconn')\
 (No port needed in this case).
 
@@ -40,11 +40,6 @@ It is also possible to extend the connection to the Internet (WAN) to have acces
 by
 
 ##### pymysql.connect(host='publicIP', port=3306, user='usr_namedb', password='user_passwd', database='timetrackconn')
-
----
-
-in files of folders "update/", "nutrition/", as well as the file "accessDB.py".
-Don't be worry, I explain that below ;)
 
 ---
 
