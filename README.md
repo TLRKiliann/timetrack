@@ -238,9 +238,9 @@ or
 
 5) `flush privileges;`
 
-6) `quit; 
+6) `quit;` 
 or 
-exit;
+`exit;`
 
 7) `sudo /etc/init.d/mysql restart`
 
