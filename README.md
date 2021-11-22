@@ -257,15 +257,15 @@ exit;
 11) `SHOW TABLES;`
 
 12) ```
-    MariaDB [timetrackconn]> CREATE TABLE timetrackconn(\
-        -> stdid INT UNSIGNED NOT NULL AUTO_INCREMENT,\
-        -> firstname VARCHAR(45) NULL,\
-        -> surname VARCHAR(45) NULL,\
-        -> birth VARCHAR(45) NULL,\
-        -> allergy VARCHAR(45) NULL,\
-        -> disease VARCHAR(45) NULL,\
-        -> maindiagnostic VARCHAR(45) NULL,\
-        -> PRIMARY KEY (stdid)\
+    MariaDB [timetrackconn]> CREATE TABLE timetrackconn(
+        -> stdid INT UNSIGNED NOT NULL AUTO_INCREMENT,
+        -> firstname VARCHAR(45) NULL,
+        -> surname VARCHAR(45) NULL,
+        -> birth VARCHAR(45) NULL,
+        -> allergy VARCHAR(45) NULL,
+        -> disease VARCHAR(45) NULL,
+        -> maindiagnostic VARCHAR(45) NULL,
+        -> PRIMARY KEY (stdid)
         -> );
     ```
 
