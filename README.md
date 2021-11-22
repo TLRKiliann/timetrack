@@ -10,27 +10,26 @@ I chose a LAN infrastructure for security reasons. It is possible to extend the 
 
 ---
 
-### Localhost :
+## Localhost :
 
-* One user: (localhost - 127.0.0.1)
+### One user: (localhost - 127.0.0.1)
 
 I recommend to create the MySQL database table in localhost (on your own machine). To do this you will have to modify the files of "update/" and "nutrition/" folders, as well as the "accessDB.py" file by replacing :
 
-`LAN configuration :`\
+LAN configuration :\
 pymysql.connect(host='192.168.XX.XX', port=3306, user='usr_namedb', password='user_passwd', database='timetrackconn')
 
 by
 
-`Localhost configuration :`\
+Localhost configuration :\
 pymysql.connect(host='127.0.0.1', user='usr_namedb', password='user_passwd', database='timetrackconn')\
 (No port needed in this case).
 
 ---
 
-### LAN or WAN :
+## LAN or WAN :
 
-
-* Multiple users: (LAN or WAN)
+### Multiple users: (LAN or WAN)
 
 You should install MySQL on one server. Otherwise each user will have an independent database if it is installed on localhost. This is obviously not the point, if something changes, the other users will not see what has changed in their database.
 It is also possible to extend the connection to the Internet (WAN) to have access outside the LAN (forwarding). In order to do this, replace the following lines:
