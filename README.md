@@ -424,6 +424,6 @@ Use ssh to remote access to server and configure all what you wants.
 Still under development !
 (It should be finished by june 2022)
 
-Enjoy it ! ;)
+Enjoy it ! :wink:
 
 ko@l@tr33 :koala:
