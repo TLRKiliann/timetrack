@@ -293,13 +293,13 @@ exit;
 
 16) Configure firewall to open port 3306 for clients on LAN :
 
-`sudo ufw allow from 192.168.XX.100 to any port 3306\`
+`sudo ufw allow from 192.168.XX.100 to any port 3306\`\
 
-`sudo ufw allow from 192.168.XX.200 to any port 3306\`
+`sudo ufw allow from 192.168.XX.200 to any port 3306\`\
 
-`sudo ufw allow from 192.168.XX.300 to any port 3306\`
+`sudo ufw allow from 192.168.XX.300 to any port 3306\`\
 
-`sudo ufw allow from 192.168.XX.400 to any port 3306\`
+`sudo ufw allow from 192.168.XX.400 to any port 3306\`\
 
 `sudo ufw reload`
 
