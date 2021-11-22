@@ -77,7 +77,7 @@ You could install it on server too for solving problem.
 
 ### Install python3-pymysql (out of virutalenv !):
 
-'sudo apt install python3-pymysql'
+`sudo apt install python3-pymysql`
 
 ## Install PyMySQL and MySQL (in virtualenv !)
 
