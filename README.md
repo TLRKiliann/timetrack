@@ -4,6 +4,10 @@ A medical application (time-track - future version) to connect PyMySQL with MySQ
 I chose a LAN infrastructure for security reasons. It is possible to extend the connection to the internet with a forwarding on the server (described below).
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=TLRKiliann&show_icons=true)
+
+* Python3
+* tkinter8.6
+
 ---
 
 ### Localhost :
