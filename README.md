@@ -1,7 +1,7 @@
 # TIME-TRACK 
 
 * python3
-* tkinter8.6)
+* tkinter8.6
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=TLRKiliann&show_icons=true)
 
