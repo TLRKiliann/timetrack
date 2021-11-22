@@ -289,7 +289,8 @@ exit;
 > bind-address        0.0.0.0
 
 15) Restart mariadb.service :
-> sudo systemctl restart mariadb.service
+
+`sudo systemctl restart mariadb.service`
 
 16) Configure firewall to open port 3306 for clients on LAN :
 
@@ -313,15 +314,15 @@ exit;
 
 ### To test CONFIGURATION of server from client side :
 
-`mysql -u koala33 -h 192.168.XX.XX -p`
+`$ mysql -u koala33 -h 192.168.XX.XX -p`
 
 ---
 
 Use a virtualenv (on client side)
 ---------------------------------
-`virtualenv myvirtualenv`
+`$ virtualenv myvirtualenv`
 
-`source myvirtualenv/bin/activate`
+`$ source myvirtualenv/bin/activate`
 
 ---
 
@@ -337,13 +338,13 @@ Install python3-pymysql (out of virutalenv !):
 
 ## Install PyMySQL and MySQL (in virtualenv !)
 
-`pip3 install pymysql (or PyMySQL)`
+`$ pip3 install pymysql (or PyMySQL)`
 
 `sudo apt-get build-dep python-mysqldb`
 
-`pip install mysql-python`
+`$ pip install mysql-python`
 
-`pip install mysql-connector-python`
+`$ pip install mysql-connector-python`
 
 ---
 
@@ -382,9 +383,11 @@ the port 3306 with the following command (on server side) :
 
 * SERVEUR :
 
-> To    Action      From\
-> 22    ALLOW IN    192.168.XX.XX\
-> 3306  ALLOW IN    192.168.XX.XX
+> |  To  |  Action  |     From      |
+> |------|----------|---------------|
+> |   22 | ALLOW IN | 192.168.XX.XX |
+> |------|----------|---------------|
+> | 3306 | ALLOW IN | 192.168.XX.XX |
 
 ---
 
@@ -401,7 +404,7 @@ the port 3306 with the following command (on server side) :
 
 ### PORT FOWARDING (on server) to access db from internet (WAN)
 
-`echo 1 > /proc/sys/net/ipv4/ip_forward`
+`# echo 1 > /proc/sys/net/ipv4/ip_forward`
 
 ---
 
@@ -411,7 +414,7 @@ the port 3306 with the following command (on server side) :
 
 or with :
 
-`python3 heal_track.py '(Application.__init__(self))`
+`$ python3 heal_track.py '(Application.__init__(self))`
 
 ---
 
