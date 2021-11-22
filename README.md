@@ -1,4 +1,4 @@
-# TiMe-TRaCK
+# TIME-TRACK
 
 * Python3
 * tkinter8.6
@@ -164,7 +164,7 @@ We only need to enter this sentence when we want to connect to the remote server
 #### In the file there should be the following :
 
 Host targetserver.serv@192.168.x.x\
-    IdentityFile ~/.ssh/rsa_file # private key
+IdentityFile ~/.ssh/rsa_file # private key
 
 ---
 
@@ -238,9 +238,7 @@ or
 
 5) `flush privileges;`
 
-6) `quit;` 
-or 
-`exit;`
+6) `quit;` or `exit;`
 
 7) `sudo /etc/init.d/mysql restart`
 
@@ -313,7 +311,7 @@ or
 
 ### To test CONFIGURATION of server from client side :
 
-`$ mysql -u koala33 -h 192.168.XX.XX -p`
+`mysql -u koala33 -h 192.168.XX.XX -p`
 
 ---
 
