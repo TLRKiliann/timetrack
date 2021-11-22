@@ -163,26 +163,26 @@ We only need to enter this sentence when we want to connect to the remote server
 
 #### Verification :
 
-> cat ~/.ssh/config
+`cat ~/.ssh/config`
 
 ---
 
 #### In the file there should be the following :
 
 Host targetserver.serv@192.168.x.x\
-   IdentityFile ~/.ssh/rsa_file # private key
+    IdentityFile ~/.ssh/rsa_file # private key
 
 ---
 
 ## How to install MySQL on Raspberry pi 3b (server) :
 
-> sudo apt update
+`sudo apt update`
 
-> sudo apt upgrade
+`sudo apt upgrade`
 
-> sudo apt install mariadb-server
+`sudo apt install mariadb-server`
 
-> sudo mysql_secure_installation
+`sudo mysql_secure_installation`
 
 Make sure you write down the password you set during this process as we will need to use it to access the MySQL server and create databases and users.
 
@@ -190,81 +190,79 @@ Make sure you write down the password you set during this process as we will nee
 
 ### To start mysql :
 
-> sudo systemctl start mysql
+`sudo systemctl start mysql`
 
 or
 
-> sudo /etc/init.d/mysql start
+`sudo /etc/init.d/mysql start`
 
 or
 
-> service mysql start
+`service mysql start`
 
 ---
 
 ### To stop mysql :
 
-> sudo systemctl stop mysql
+`sudo systemctl stop mysql`
 
 or
 
-> sudo /etc/init.d/mysql stop
+`sudo /etc/init.d/mysql stop`
 
 or
 
-> service mysql stop
+`service mysql stop`
 
 ---
 
 ### To reload MySQL : (after changing conf)
 
-> sudo systemctl reload mysql
+`sudo systemctl reload mysql`
 
-> sudo systemctl reload mariadb.service
+`sudo systemctl reload mariadb.service`
 
 ---
 
 ### To restart MySQL : (after changing conf)
 
-> sudo systemctl restart mysql
+`sudo systemctl restart mysql`
 
 ---
 
 ## How to create database with MySQL (on server side)
 
-1) sudo mysql -u root -p
+1) `sudo mysql -u root -p`
 
-2) CREATE USER 'user_name'@localhost IDENTIFIED BY 'password';
+2) `CREATE USER 'user_name'@localhost IDENTIFIED BY 'password';`
 
-3) CREATE DATABASE database_name;
+3) `CREATE DATABASE database_name;`
 
 ### Create a new user (with remote access) and grant privileges to this user on the new database:
  
-4) GRANT ALL PRIVILEGES ON database_name.* TO 'user_name'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+4) `GRANT ALL PRIVILEGES ON database_name.* TO 'user_name'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;`
 
-5) flush privileges;
+5) `flush privileges;`
 
-6) quit; 
+6) `quit; 
 or 
 exit;
 
-7) sudo /etc/init.d/mysql restart
+7) `sudo /etc/init.d/mysql restart`
 
 ---
 
 ### Now database is accessible for user_name :
 
-> sudo mysql -u user_name -p
+8) `sudo mysql -u user_name -p`
 
-8) sudo mysql -u user_name -p
+9) `SHOW DATABASES;`
 
-9) SHOW DATABASES;
+10) `USE timetrackconn;`
 
-10) USE timetrackconn;
+11) `SHOW TABLES;`
 
-11) SHOW TABLES;
-
-12) MariaDB [timetrackconn]> CREATE TABLE timetrackconn(\
+12) `MariaDB [timetrackconn]> CREATE TABLE timetrackconn(\
         -> stdid INT UNSIGNED NOT NULL AUTO_INCREMENT,\
         -> firstname VARCHAR(45) NULL,\
         -> surname VARCHAR(45) NULL,\
@@ -273,12 +271,13 @@ exit;
         -> disease VARCHAR(45) NULL,\
         -> maindiagnostic VARCHAR(45) NULL,\
         -> PRIMARY KEY (stdid)\
-        -> );\
+        -> );\`
 
-13) sudo systemctl restart mysql
+13) `sudo systemctl restart mysql`
 
 14) Configure file to /etc/mysql/mariadb.d.conf/50-server.cnf :
-> sudo nano /etc/mysql/mariadb.d.conf/50-server.cnf
+
+`sudo nano /etc/mysql/mariadb.d.conf/50-server.cnf`
 
 ### Active/Change the following lines :
 
@@ -293,10 +292,15 @@ exit;
 > sudo systemctl restart mariadb.service
 
 16) Configure firewall to open port 3306 for clients on LAN :
+
 `sudo ufw allow from 192.168.XX.100 to any port 3306\`
+
 `sudo ufw allow from 192.168.XX.200 to any port 3306\`
+
 `sudo ufw allow from 192.168.XX.300 to any port 3306\`
+
 `sudo ufw allow from 192.168.XX.400 to any port 3306\`
+
 `sudo ufw reload`
 
 ---
