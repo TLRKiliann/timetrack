@@ -81,13 +81,13 @@ You could install it on server too for solving problem.
 
 ## Install PyMySQL and MySQL (in virtualenv !)
 
-> pip3 install pymysql (or PyMySQL)
+`pip3 install pymysql (or PyMySQL)`
 
-> sudo apt-get build-dep python-mysqldb
+`sudo apt-get build-dep python-mysqldb`
 
-> pip install mysql-python
+`pip install mysql-python`
 
-> pip install mysql-connector-python
+`pip install mysql-connector-python`
 
 ---
 
@@ -99,7 +99,7 @@ You could install it on server too for solving problem.
 
 #### Generate rsa key :
 
-> ssh-keygen -t rsa
+`ssh-keygen -t rsa`
 
 Enter file to save key : rsa_file
 
@@ -109,14 +109,14 @@ Enter passphrase : XXXXXXXX
 
 #### Copy key on server :
 
-> ssh-copy-id -i ~/.ssh/rsa_file.pub serv@192.168.x.x
+`ssh-copy-id -i ~/.ssh/rsa_file.pub serv@192.168.x.x`
 passwd
 
 ---
 
 #### Connection with server :
 
-> ssh -i ~/.ssh/rsa_file serv@192.168.x.x
+`ssh -i ~/.ssh/rsa_file serv@192.168.x.x`
 
 Enter passphrase: XXXXXX
 
@@ -128,9 +128,9 @@ _You don't need to enter password._
 
 _We place ourselves in the right folder (use ls and cd ;) !_
 
-> ssh-agent bash
+`ssh-agent bash`
 
-> ssh -i ~/.ssh/rsa_file serv@192.168.x.x
+`ssh -i ~/.ssh/rsa_file serv@192.168.x.x`
 
 Enter your passphrase.
 
@@ -138,9 +138,9 @@ Enter your passphrase.
 
 #### To keep passphrase in memory :
 
-> ssh-add (-h = help) (-t = time in memory) (-l = list of keys) (-d rsa_file = delete the key)
+`ssh-add (-h = help) (-t = time in memory) (-l = list of keys) (-d rsa_file = delete the key)`
 
-> ssh-add ~/.ssh/rsa_file
+`ssh-add ~/.ssh/rsa_file`
 
 Enter passphrase : (once time)
 Connection established !!!
@@ -151,13 +151,13 @@ We only need to enter this sentence when we want to connect to the remote server
 
 #### For raspberry pi 3 :
 
-> ssh -i ~/.ssh/rsa_file serv@192.168.x.x
+`ssh -i ~/.ssh/rsa_file serv@192.168.x.x`
 
 #### For linux distro :
 
-> ssh -i ~/.ssh/rsa_file pi@192.168.x.x
+`ssh -i ~/.ssh/rsa_file pi@192.168.x.x`
 
-> logout
+`logout`
 
 ---
 
@@ -293,31 +293,31 @@ exit;
 > sudo systemctl restart mariadb.service
 
 16) Configure firewall to open port 3306 for clients on LAN :
-> sudo ufw allow from 192.168.XX.100 to any port 3306\
-> sudo ufw allow from 192.168.XX.200 to any port 3306\
-> sudo ufw allow from 192.168.XX.300 to any port 3306\
-> sudo ufw allow from 192.168.XX.400 to any port 3306\
-> sudo ufw reload
+`sudo ufw allow from 192.168.XX.100 to any port 3306\`
+`sudo ufw allow from 192.168.XX.200 to any port 3306\`
+`sudo ufw allow from 192.168.XX.300 to any port 3306\`
+`sudo ufw allow from 192.168.XX.400 to any port 3306\`
+`sudo ufw reload`
 
 ---
 
 ### To test CONFIGURATION from server side :
 
-> sudo netstat -anp | grep 3306
+`sudo netstat -anp | grep 3306`
 
 ---
 
 ### To test CONFIGURATION of server from client side :
 
-> mysql -u koala33 -h 192.168.XX.XX -p
+`mysql -u koala33 -h 192.168.XX.XX -p`
 
 ---
 
 Use a virtualenv (on client side)
 ---------------------------------
-> virtualenv myvirtualenv
+`virtualenv myvirtualenv`
 
-> source myvirtualenv/bin/activate
+`source myvirtualenv/bin/activate`
 
 ---
 
@@ -327,25 +327,25 @@ You could install it on server too for solving problem.
 
 Install python3-pymysql (out of virutalenv !):
 
-> sudo apt install python3-pymysql
+`sudo apt install python3-pymysql`
 
 ---
 
 ## Install PyMySQL and MySQL (in virtualenv !)
 
-> pip3 install pymysql (or PyMySQL)
+`pip3 install pymysql (or PyMySQL)`
 
-> sudo apt-get build-dep python-mysqldb
+`sudo apt-get build-dep python-mysqldb`
 
-> pip install mysql-python
+`pip install mysql-python`
 
-> pip install mysql-connector-python
+`pip install mysql-connector-python`
 
 ---
 
 ## Compatibility with pymysql and mariadb (on client side - out of virtualenv !)
 
-> sudo apt-get install mariadb-client-10.1
+`sudo apt-get install mariadb-client-10.1`
 
 ---
 
@@ -356,17 +356,17 @@ the port 3306 with the following command (on server side) :
 
 * LAN 
 
-> sudo ufw allow from 192.168.XX.XX to any port 22\
-> sudo ufw allow from 192.168.XX.XX to any port 3306\
-> sudo ufw reload
+`sudo ufw allow from 192.168.XX.XX to any port 22\`
+`sudo ufw allow from 192.168.XX.XX to any port 3306\`
+`sudo ufw reload`
 
 ---
 
 * INTERNET
 
-> sudo ufw allow from 192.168.XX.XX to any port 22\
-> sudo ufw allow 3306/tcp\
-> sudo ufw reload
+`sudo ufw allow from 192.168.XX.XX to any port 22\`
+`sudo ufw allow 3306/tcp\`
+`sudo ufw reload`
 
 ---
 
@@ -393,17 +393,17 @@ the port 3306 with the following command (on server side) :
 
 ### PORT FOWARDING (on server) to access db from internet (WAN)
 
-> echo 1 > /proc/sys/net/ipv4/ip_forward
+`echo 1 > /proc/sys/net/ipv4/ip_forward`
 
 ---
 
 ### Launch app with :
 
-> $ python3 heal_track.py
+`$ python3 heal_track.py`
 
 or with :
 
-> python3 heal_track.py '(Application.__init__(self))'
+`python3 heal_track.py '(Application.__init__(self))`
 
 ---
 
@@ -411,7 +411,7 @@ or with :
 
 Use ssh to remote access to server and configure all what you wants.
 
-> ssh -i ~/.ssh/rsa_file server@192.168.XX.XX
+`ssh -i ~/.ssh/rsa_file server@192.168.XX.XX`
 
 ---
 
