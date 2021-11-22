@@ -354,7 +354,7 @@ Install python3-pymysql (out of virutalenv !):
 
 ---
 
-## UFW :
+## UFW : (Firewall)
 
 You can grant access to the remote system with IP 192.168.XX.XX to connect
 the port 3306 with the following command (on server side) :
