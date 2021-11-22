@@ -383,11 +383,11 @@ the port 3306 with the following command (on server side) :
 
 * SERVEUR :
 
-> |  To  |  Action  |     From      |
-> |------|----------|---------------|
-> |   22 | ALLOW IN | 192.168.XX.XX |
-> |------|----------|---------------|
-> | 3306 | ALLOW IN | 192.168.XX.XX |
+|  To  |  Action  |     From      |
+|------|----------|---------------|
+|   22 | ALLOW IN | 192.168.XX.XX |
+|------|----------|---------------|
+| 3306 | ALLOW IN | 192.168.XX.XX |
 
 ---
 
