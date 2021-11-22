@@ -256,7 +256,8 @@ exit;
 
 11) `SHOW TABLES;`
 
-12) ```
+12)
+    ```
     MariaDB [timetrackconn]> CREATE TABLE timetrackconn(
         -> stdid INT UNSIGNED NOT NULL AUTO_INCREMENT,
         -> firstname VARCHAR(45) NULL,
