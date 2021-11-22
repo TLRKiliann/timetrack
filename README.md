@@ -292,7 +292,7 @@ exit;
 
 `sudo systemctl restart mariadb.service`
 
-16) Configure firewall to open port 3306 for clients on LAN :
+16) Configure firewall to open port 3306 for clients on LAN (for example) :
 
 `sudo ufw allow from 192.168.XX.100 to any port 3306\`\
 
@@ -320,6 +320,7 @@ exit;
 
 Use a virtualenv (on client side)
 ---------------------------------
+
 `$ virtualenv myvirtualenv`
 
 `$ source myvirtualenv/bin/activate`
@@ -379,7 +380,7 @@ the port 3306 with the following command (on server side) :
 
 ---
 
-## Configuration UFW :
+## Configuration of UFW :
 
 * SERVEUR :
 
