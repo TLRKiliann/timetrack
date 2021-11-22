@@ -1,6 +1,6 @@
 # TIME-TRACK (python3 + tkinter8.6)
 
-![Anurag's GitHub stats]
+![ANURAG'S GitHub stats]
 (https://github-readme-stats.vercel.app/api?username=TLRKiliann&show_icons=true)
 
 A medical application (time-track - future version) to connect PyMySQL with MySQL (MariaDB) on raspberry. Below, I explain how to use this application with the MariaDB table in localhost, LAN and WAN connection).
