@@ -276,6 +276,8 @@ or
 
 `sudo nano /etc/mysql/mariadb.d.conf/50-server.cnf`
 
+---
+
 ### Active/Change the following lines :
 
 |Port|Address|
