@@ -19,8 +19,6 @@ import platform
 import subprocess
 import time
 import datetime
-import json
-import threading
 from playsound import playsound
 
 #import starter.intro
