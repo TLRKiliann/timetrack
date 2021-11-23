@@ -2129,7 +2129,6 @@ class Application(tk.Frame):
             it's correspond to alarm item in GUI app.
         """
         self.set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
-
         self.current_time = datetime.datetime.now().strftime("%H:%M:%S")
         print(self.current_time, self.set_alarm_time)
 
@@ -2138,12 +2137,11 @@ class Application(tk.Frame):
             playsound("./beep_sounds/metroid_alarm.wav")
             tk.messagebox.showwarning("Alarm", "Remind : "\
                 + self.comment.get())
-
         elif self.current_time > self.set_alarm_time:
             print("Alarm reset ! - (current_time is bigger than alarm_time)")
             tk.messagebox.showerror("Error", "Look at time! Time has past.")
         else:
-            self._jobalarm = root.after(1000, self.alarm)
+            self._jobalarm = self.master.after(1000, self.alarm)
 
     def upDateAll(self):
         """

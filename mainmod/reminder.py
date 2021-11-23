@@ -26,9 +26,6 @@ def alarmThread(self):
     self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
-
-
-
     self.x10, self.y10 = 625, 120
     self.textLab = tk.Label(self.can, text="Alarm Clock",
         font=('serif', 28, 'bold'), fg='white', bg='black')
