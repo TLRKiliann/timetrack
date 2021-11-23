@@ -18,7 +18,9 @@ import sys
 import platform
 import subprocess
 import time
+import datetime
 import json
+import threading
 from playsound import playsound
 
 #import starter.intro
@@ -1865,7 +1867,6 @@ class Application(tk.Frame):
                 self.master.destroy()
             else:
                 playsound('./beep_sounds/sound101.wav')
-                #playsound('./beep_sounds/loop79.mp3')
         except OSError as err_quit:
             print("[!] Error 3 : time to quit !!!", err_quit)
 
@@ -2120,6 +2121,29 @@ class Application(tk.Frame):
         dataBackToSave(self)
         paramBackToSave(self)
         bmiBackToSave(self)
+
+    def alarm(self):
+        """
+            Alarm will sound at the scheduled time.
+            script concerned : mainmod/reminder.py
+            it's correspond to alarm item in GUI app.
+        """
+        self.set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
+
+        self.current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        print(self.current_time, self.set_alarm_time)
+
+        if self.set_alarm_time == self.current_time:
+            print("Alarm ring !")
+            playsound("./beep_sounds/metroid_alarm.wav")
+            tk.messagebox.showwarning("Alarm", "Remind : "\
+                + self.comment.get())
+
+        elif self.current_time > self.set_alarm_time:
+            print("Alarm reset ! - (current_time is bigger than alarm_time)")
+            tk.messagebox.showerror("Error", "Look at time! Time has past.")
+        else:
+            self._jobalarm = root.after(1000, self.alarm)
 
     def upDateAll(self):
         """

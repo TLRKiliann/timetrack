@@ -11,9 +11,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import sys
-import datetime
 import time
-import threading
 from playsound import playsound
 
 
@@ -28,36 +26,8 @@ def alarmThread(self):
     self.photo = tk.PhotoImage(file='./syno_gif/2bf.png')
     self.item = self.can.create_image((0,0), image=self.photo, anchor=tk.NW)
 
-    def action(self):
-        """
-            To start app with thread !
-        """
-        self.treat = threading.Thread(target=alarm, args=(self, 1,))
-        self.treat.setDaemon(True)
-        self.treat.start()
 
-    def alarm(self, n):
-        """
-            Alarm will sound at the scheduled time.
-        """
-        n = 1
-        while n == 1 :
-            self.set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
-            time.sleep(1)
 
-            current_time = datetime.datetime.now().strftime("%H:%M:%S")
-            print(current_time, self.set_alarm_time)
-
-            if current_time == self.set_alarm_time:
-                print("Alarm ring !")
-                playsound("./beep_sounds/metroid_alarm.wav")
-                tk.messagebox.showwarning("Alarm", "Remind : "\
-                    + self.comment.get())
-                n -= 1
-            elif current_time > self.set_alarm_time:
-                print("Alarm reset ! - (current_time is bigger than alarm_time)")
-                tk.messagebox.showerror("Error", "Look at time! Time has past.")
-                n -= 1
 
     self.x10, self.y10 = 625, 120
     self.textLab = tk.Label(self.can, text="Alarm Clock",
@@ -114,7 +84,7 @@ def alarmThread(self):
     self.x60, self.y60 = 625, 550
     self.buttsave = tk.Button(self.can, text="Save", fg='white',
         bg='RoyalBlue3', bd=3, width=10, highlightbackground='black',
-        activebackground='pale turquoise', command =lambda: action(self))
+        activebackground='pale turquoise', command =lambda: self.alarm())
     self.wbuttsave_window = self.can.create_window(self.x60, self.y60,
         window=self.buttsave)
 
