@@ -10,7 +10,7 @@
 
 import tkinter as tk
 from tkinter import messagebox
-import sys
+#import sys
 import time
 from playsound import playsound
 
