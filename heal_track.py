@@ -2141,7 +2141,7 @@ class Application(tk.Frame):
             print("Alarm reset ! - (current_time is bigger than alarm_time)")
             tk.messagebox.showerror("Error", "Look at time! Time has past.")
         else:
-            self._jobalarm = self.master.after(1000, self.alarm)
+            self._jobalarm = root.after(1000, self.alarm)
 
     def upDateAll(self):
         """
