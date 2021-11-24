@@ -1,0 +1,22 @@
+Date : 02/02/2021
+Hour : 17:24:41
+Name and Surname : 2 B
+TA : 119/87mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.4°C
+Glycemie : 4.5 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 04/03/2021
+Hour : 17:24:41
+Name and Surname : 2 B
+TA : 135/84mmHg
+Puls : 83/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.2°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+

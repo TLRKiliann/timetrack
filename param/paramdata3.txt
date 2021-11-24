@@ -20,3 +20,14 @@ Temperature : 36.4°C
 Glycemie : 5.2 mmol/l
 Douleurs (Pain) : 7/10
 
+Date : 24/11/2021
+Hour : 17:30:32
+Name and Surname : Kayney Nier
+TA : 189/67mmHg
+Puls : 88/min
+SaO2 : 91%
+FR : 18/min
+Temperature : 36.9°C
+Glycemie : 3.2 mmol/l
+Douleurs (Pain) : 9/10
+

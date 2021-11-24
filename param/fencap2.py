@@ -763,7 +763,7 @@ buttonDel.grid(row=1, column=4)
 
 buttonWrite = tk.Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
-    fg='white', bg='RoyalBlue3',
+    fg='cyan', bg='RoyalBlue3',
     highlightbackground='DodgerBlue2',
     activeforeground='gray40',
     activebackground='pale turquoise',

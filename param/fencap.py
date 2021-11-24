@@ -638,9 +638,8 @@ gui.geometry('650x600')
 gui.resizable(False, False)
 
 labelTitle = tk.Label(gui, text="Vital Parameters",
-    font=('Times 22 bold'), bg='DodgerBlue2', fg='white',
-    anchor=tk.CENTER)
-labelTitle.grid(row=0, column=2, columnspan=2, pady=10)
+    font=('Times 22 bold'), bg='DodgerBlue2', fg='white')
+labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
 label = tk.Label(gui, text='Date : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor=tk.E)
@@ -740,7 +739,7 @@ textDlrs.grid(row=10, column=2)
 
 button2Write = tk.Button(gui)
 button2Write.config(text='Quit', width=15,
-    fg='cyan', bg='RoyalBlue3',
+    fg='white', bg='RoyalBlue3',
     highlightbackground='DodgerBlue2',
     activebackground='pale turquoise',
     activeforeground='gray40',
@@ -757,7 +756,7 @@ buttonDel.grid(row=1, column=4)
 
 buttonWrite = tk.Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
-    fg='white', bg='RoyalBlue3',
+    fg='cyan', bg='RoyalBlue3',
     highlightbackground='DodgerBlue2',
     activeforeground='gray40',
     activebackground='pale turquoise',
