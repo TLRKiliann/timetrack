@@ -37,7 +37,7 @@ with open('./allergy/allergyfile15.txt', 'r') as allerfile:
 
 text_all = StringVar()
 Entryall = Entry(fen, textvariable=text_all, width=60)
-text_all.set(line_a)
+text_all.set(line_a[:-1])
 Entryall.pack(padx=10, pady=5)
 
 textBox = Text(fen, height=15, width=60, font=18)
