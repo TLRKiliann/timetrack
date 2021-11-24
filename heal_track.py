@@ -2126,16 +2126,16 @@ class Application(tk.Frame):
             script concerned : mainmod/reminder.py
             it's correspond to alarm item in GUI app.
         """
-        self.set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
-        self.current_time = datetime.datetime.now().strftime("%H:%M:%S")
-        print(self.current_time, self.set_alarm_time)
+        set_alarm_time = f"{self.hour.get()}:{self.minute.get()}:{self.second.get()}"
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        print(current_time, set_alarm_time)
 
-        if self.set_alarm_time == self.current_time:
+        if set_alarm_time == current_time:
             print("Alarm ring !")
             playsound("./beep_sounds/metroid_alarm.wav")
             tk.messagebox.showwarning("Alarm", "Remind : "\
                 + self.comment.get())
-        elif self.current_time > self.set_alarm_time:
+        elif current_time > set_alarm_time:
             print("Alarm reset ! - (current_time is bigger than alarm_time)")
             tk.messagebox.showerror("Error", "Look at time! Time has past.")
         else:
