@@ -829,7 +829,7 @@ button9Write.grid(row=10, column=3)
 
 button1Del = tk.Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
-    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    bg='coral', fg='yellow',
     activeforeground='white',
     highlightbackground='DodgerBlue2',
     activebackground='red', command = delSystolDia)
