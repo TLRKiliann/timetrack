@@ -17,7 +17,7 @@ def valFunc13(self):
     self.forgetVsb()
 
     self.photo = tk.PhotoImage(file='./syno_gif/tt_fontcolor.png')
-    self.itemfirst = self.can.create_image((0,0), image=self.photo,
+    self.itemsec = self.can.create_image((0,0), image=self.photo,
         anchor=tk.NW)
 
     def awayOut():
