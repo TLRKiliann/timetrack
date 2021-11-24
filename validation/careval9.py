@@ -124,7 +124,7 @@ def valFunc9(self):
 
     # number of times per day label
     self.x6, self.y6 = 120, 220
-    self.lblperday = tk.Label(self.can, text="Per day - Per week :",
+    self.lblperday = tk.Label(self.can, text="Per day - per... :",
         font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
     self.wlblperday_window = self.can.create_window(self.x6, self.y6,
         window = self.lblperday)
@@ -132,26 +132,29 @@ def valFunc9(self):
     # number of times per day combobox
     def nbreperday():
         self.comboBoxpd['values']=['', '1x/d', '2x/d', '3x/d', '4x/d',
-        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week']
+        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week',
+        '1x/month', '2x/month', '3x/month', '4x/month', '1x/2months', '1x/3months',
+        '1x/4months', '1x/5months', '1x/6mois', '1x/year']
 
     self.daystring = tk.StringVar()
-    self.comboBoxpd = ttk.Combobox(self.can, width=8, textvariable=self.daystring,
+    self.comboBoxpd = ttk.Combobox(self.can, width=10, textvariable=self.daystring,
         values=['', '1x/d', '2x/d', '3x/d', '4x/d',
-        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week'],
-        postcommand=nbreperday)
+        '5x/d', '6x/d', '1x/week', '2x/week', '3x/week', '4x/week', '5x/week',
+        '1x/month', '2x/month', '3x/month', '4x/month', '1x/2months', '1x/3months',
+        '1x/4months', '1x/5months', '1x/6mois', '1x/year'], postcommand=nbreperday)
 
     self.comboBoxpd.bind("<<ComboboxSelected>>", callbackDay)
     self.comboBoxpd.current(0)
-    self.fcomboBoxpd_window = self.can.create_window(277, 220, window=self.comboBoxpd)
+    self.fcomboBoxpd_window = self.can.create_window(287, 220, window=self.comboBoxpd)
 
     # until date entry
     self.x7, self.y7 = 120, 270
-    self.lbluntil = tk.Label(self.can, text="Until (date) :",
-        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='white')
+    self.lbluntil = tk.Label(self.can, text="End date ! :",
+        font=('MS Serif', 14, 'bold'), bg='DodgerBlue2', fg='black')
     self.wlbluntil_window = self.can.create_window(self.x7, self.y7,
         window = self.lbluntil)
 
-    self.x8, self.y8 = 275, 270
+    self.x8, self.y8 = 285, 270
     self.datenter = tk.StringVar()
     self.labentdate = tk.Entry(self.can, width=10, textvariable=self.datenter,
         highlightbackground='grey', bd=2)
@@ -223,7 +226,7 @@ def valFunc9(self):
             with open('./validation/valfiles1/validate_9.txt', 'a+') as oneval:
                 oneval.write('\n' + self.datetov.get() + '\n')
                 oneval.write(self.tttovalid.get())
-                oneval.write(" [+] validated")
+                oneval.write(" [+] validated by : ")
                 oneval.write(self.signval.get() + '\n')
         else:
             print("[---] Nothing validated.")

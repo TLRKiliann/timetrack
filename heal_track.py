@@ -394,510 +394,510 @@ class MenuBar(tk.Frame):
 
         fileMenu.pack(side=tk.LEFT, padx=3)
         # Menubar
-        me1 = Menu(fileMenu, tearoff=0)
-        me1.add_command(label='Alarm', font=("Times 14 bold"),
-            background='black', activebackground='aquamarine',
-            foreground='coral', activeforeground='black',
-            command=boss.alarmProg)
-        me1.add_command(label='Start Page', underline=0, font=("Times 14 bold"),
+        menu1 = Menu(fileMenu, tearoff=0)
+        menu1.add_command(label='Start Page', underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.startPage)
-        me1.add_command(label="EventBox", underline=0, font=("Times 14 bold"),
+        menu1.add_command(label="EventBox", underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.showSynopsis)
-        me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
+        menu1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
-        me1.add_command(label='DataBase', font=("Times 14 bold"),
+        menu1.add_command(label='DataBase', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='white', activeforeground='black',
             command=boss.funcPyCon)
-        me1.add_command(label='Tutorial', font=("Times 14 bold"),
+        menu1.add_command(label='Tutorial', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.mapApp)
-        me1.add_command(label='Quit', font=("Times 14 bold"),
+        menu1.add_command(label='Alarm', font=("Times 14 bold"),
+            background='black', activebackground='aquamarine',
+            foreground='orange', activeforeground='black',
+            command=boss.alarmProg)
+        menu1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
             foreground='coral', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
-            menu=me1)
+            menu=menu1)
 
         # Agenda menu
         cmd_agenda = tk.Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=tk.GROOVE)
         cmd_agenda.pack(side=tk.LEFT, padx=3)
-        me3 = Menu(cmd_agenda)
+        ag3 = Menu(cmd_agenda)
         # Wrapped menu agenda
-        me3.add_command(label=new_text, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=1))
-        me3.add_command(label=new_text2, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=2))
-        me3.add_command(label=new_text3, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=3))
-        me3.add_command(label=new_text4, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=4))
-        me3.add_command(label=new_text5, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=5))
-        me3.add_command(label=new_text6, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=6))
-        me3.add_command(label=new_text7, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=7))
-        me3.add_command(label=new_text8, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=8))
-        me3.add_command(label=new_text9, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=9))
-        me3.add_command(label=new_text10, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=10))
-        me3.add_command(label=new_text11, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=11))
-        me3.add_command(label=new_text12, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=12))
-        me3.add_command(label=new_text13, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=13))
-        me3.add_command(label=new_text14, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=14))
-        me3.add_command(label=new_text15, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=15))
-        me3.add_command(label=new_text16, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=16))
-        me3.add_command(label=new_text17, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=17))
-        me3.add_command(label=new_text18, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=18))
-        me3.add_command(label=new_text19, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=19))
-        me3.add_command(label=new_text20, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=20))
-        me3.add_command(label=new_text21, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=21))
-        me3.add_command(label=new_text22, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=22))
-        me3.add_command(label=new_text23, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=23))
-        me3.add_command(label=new_text24, font=('Times 14'), background='black',
+        ag3.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.patientAgenda(a=24))
         # Integration of agenda menu
         cmd_agenda.configure(activeforeground='black', activebackground='cyan',
-            menu=me3)
+            menu=ag3)
 
         # Contact menu
         contact = tk.Menubutton(self, text='Contact', font=("Times 14"),
             fg='cyan', bg='grey30', relief=tk.GROOVE)
         contact.pack(side=tk.LEFT, padx=3)
         contchck = Menu(contact)
-        me1 = Menu(contchck)
-        me1.add_command(label='Patient Data', font=('Times 14'), background='black',
+        cont1 = Menu(contchck)
+        cont1.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=1))
-        me1.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        cont1.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=1))
-        me1.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        cont1.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=1))
-        me1.add_command(label='Home care system', font=('Times 14'), background='black',
+        cont1.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=1))
         contchck.add_cascade(label=new_text, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me1)
-        me2 = Menu(contchck)
-        me2.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=cont1)
+        co2 = Menu(contchck)
+        co2.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=2))
-        me2.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co2.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=2))
-        me2.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co2.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=2))
-        me2.add_command(label='Home care system', font=('Times 14'), background='black',
+        co2.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=2))
         contchck.add_cascade(label=new_text2, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me2)
-        me3 = Menu(contchck)
-        me3.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co2)
+        co3 = Menu(contchck)
+        co3.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=3))
-        me3.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co3.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=3))
-        me3.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co3.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=3))
-        me3.add_command(label='Home care system', font=('Times 14'), background='black',
+        co3.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=3))
         contchck.add_cascade(label=new_text3, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me3)
-        me4 = Menu(contchck)
-        me4.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co3)
+        co4 = Menu(contchck)
+        co4.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=4))
-        me4.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co4.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=4))
-        me4.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co4.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=4))
-        me4.add_command(label='Home care system', font=('Times 14'), background='black',
+        co4.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=4))
         contchck.add_cascade(label=new_text4, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me4)
-        me5 = Menu(contchck)
-        me5.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co4)
+        co5 = Menu(contchck)
+        co5.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=5))
-        me5.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co5.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=5))
-        me5.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co5.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=5))
-        me5.add_command(label='Home care system', font=('Times 14'), background='black',
+        co5.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=5))
         contchck.add_cascade(label=new_text5, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me5)
-        me6 = Menu(contchck)
-        me6.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co5)
+        co6 = Menu(contchck)
+        co6.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=6))
-        me6.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co6.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=6))
-        me6.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co6.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=6))
-        me6.add_command(label='Home care system', font=('Times 14'), background='black',
+        co6.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=6))
         contchck.add_cascade(label=new_text6, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me6)
-        me7 = Menu(contchck)
-        me7.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co6)
+        co7 = Menu(contchck)
+        co7.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=7))
-        me7.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co7.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=7))
-        me7.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co7.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=7))
-        me7.add_command(label='Home care system', font=('Times 14'), background='black',
+        co7.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=7))
         contchck.add_cascade(label=new_text7, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me7)
-        me8 = Menu(contchck)
-        me8.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co7)
+        co8 = Menu(contchck)
+        co8.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=8))
-        me8.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co8.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=8))
-        me8.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co8.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=8))
-        me8.add_command(label='Home care system', font=('Times 14'), background='black',
+        co8.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=8))
         contchck.add_cascade(label=new_text8, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me8)
-        me9 = Menu(contchck)
-        me9.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co8)
+        co9 = Menu(contchck)
+        co9.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=9))
-        me9.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co9.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=9))
-        me9.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co9.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=9))
-        me9.add_command(label='Home care system', font=('Times 14'), background='black',
+        co9.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=9))
         contchck.add_cascade(label=new_text9, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me9)
-        me10 = Menu(contchck)
-        me10.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co9)
+        co10 = Menu(contchck)
+        co10.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=10))
-        me10.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co10.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=10))
-        me10.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co10.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=10))
-        me10.add_command(label='Home care system', font=('Times 14'), background='black',
+        co10.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=10))
         contchck.add_cascade(label=new_text10, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me10)
-        me11 = Menu(contchck)
-        me11.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co10)
+        co11 = Menu(contchck)
+        co11.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=11))
-        me11.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co11.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=11))
-        me11.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co11.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=11))
-        me11.add_command(label='Home care system', font=('Times 14'), background='black',
+        co11.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=11))
         contchck.add_cascade(label=new_text11, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me11)
-        me12 = Menu(contchck)
-        me12.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co11)
+        co12 = Menu(contchck)
+        co12.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=12))
-        me12.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co12.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=12))
-        me12.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co12.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=12))
-        me12.add_command(label='Home care system', font=('Times 14'), background='black',
+        co12.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=12))
         contchck.add_cascade(label=new_text12, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me12)
-        me13 = Menu(contchck)
-        me13.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co12)
+        co13 = Menu(contchck)
+        co13.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=13))
-        me13.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co13.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=13))
-        me13.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co13.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=13))
-        me13.add_command(label='Home care system', font=('Times 14'), background='black',
+        co13.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=13))
         contchck.add_cascade(label=new_text13, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me13)
-        me14 = Menu(contchck)
-        me14.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co13)
+        co14 = Menu(contchck)
+        co14.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=14))
-        me14.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co14.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=14))
-        me14.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co14.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=14))
-        me14.add_command(label='Home care system', font=('Times 14'), background='black',
+        co14.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=14))
         contchck.add_cascade(label=new_text14, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me14)
-        me15 = Menu(contchck)
-        me15.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co14)
+        co15 = Menu(contchck)
+        co15.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=15))
-        me15.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co15.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=15))
-        me15.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co15.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=15))
-        me15.add_command(label='Home care system', font=('Times 14'), background='black',
+        co15.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=15))
         contchck.add_cascade(label=new_text15, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me15)
-        me16 = Menu(contchck)
-        me16.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co15)
+        co16 = Menu(contchck)
+        co16.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=16))
-        me16.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co16.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=16))
-        me16.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co16.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=16))
-        me16.add_command(label='Home care system', font=('Times 14'), background='black',
+        co16.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=16))
         contchck.add_cascade(label=new_text16, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me16)
-        me17 = Menu(contchck)
-        me17.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co16)
+        co17 = Menu(contchck)
+        co17.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=17))
-        me17.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co17.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=17))
-        me17.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co17.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=17))
-        me17.add_command(label='Home care system', font=('Times 14'), background='black',
+        co17.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=17))
         contchck.add_cascade(label=new_text17, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me17)
-        me18 = Menu(contchck)
-        me18.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co17)
+        co18 = Menu(contchck)
+        co18.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=18))
-        me18.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co18.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=18))
-        me18.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co18.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=18))
-        me18.add_command(label='Home care system', font=('Times 14'), background='black',
+        co18.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=18))
         contchck.add_cascade(label=new_text18, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me18)
-        me19 = Menu(contchck)
-        me19.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co18)
+        co19 = Menu(contchck)
+        co19.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=19))
-        me19.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co19.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=19))
-        me19.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co19.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=19))
-        me19.add_command(label='Home care system', font=('Times 14'), background='black',
+        co19.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=19))
         contchck.add_cascade(label=new_text19, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me19)
-        me20 = Menu(contchck)
-        me20.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co19)
+        co20 = Menu(contchck)
+        co20.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=20))
-        me20.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co20.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=20))
-        me20.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co20.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=20))
-        me20.add_command(label='Home care system', font=('Times 14'), background='black',
+        co20.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=20))
         contchck.add_cascade(label=new_text20, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me20)
-        me21 = Menu(contchck)
-        me21.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co20)
+        co21 = Menu(contchck)
+        co21.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=21))
-        me21.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co21.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=21))
-        me21.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co21.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=21))
-        me21.add_command(label='Home care system', font=('Times 14'), background='black',
+        co21.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=21))
         contchck.add_cascade(label=new_text21, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me21)
-        me22 = Menu(contchck)
-        me22.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co21)
+        co22 = Menu(contchck)
+        co22.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=22))
-        me22.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co22.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=22))
-        me22.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co22.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=22))
-        me22.add_command(label='Home care system', font=('Times 14'), background='black',
+        co22.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=22))
         contchck.add_cascade(label=new_text22, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me22)
-        me23 = Menu(contchck)
-        me23.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co22)
+        co23 = Menu(contchck)
+        co23.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=23))
-        me23.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co23.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=23))
-        me23.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co23.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=23))
-        me23.add_command(label='Home care system', font=('Times 14'), background='black',
+        co23.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=23))
         contchck.add_cascade(label=new_text23, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me23)
-        me24 = Menu(contchck)
-        me24.add_command(label='Patient Data', font=('Times 14'), background='black',
+            activeforeground='black', activebackground='cyan', menu=co23)
+        co24 = Menu(contchck)
+        co24.add_command(label='Patient Data', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contact_num(h=24))
-        me24.add_command(label='Relation - Family', font=('Times 14'), background='black',
+        co24.add_command(label='Relation - Family', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactfamily(j=24))
-        me24.add_command(label="Doctors' Data", font=('Times 14'), background='black',
+        co24.add_command(label="Doctors' Data", font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contactdoctor(k=24))
-        me24.add_command(label='Home care system', font=('Times 14'), background='black',
+        co24.add_command(label='Home care system', font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.contacthcsystem(l=24))
         contchck.add_cascade(label=new_text24, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me24)
+            activeforeground='black', activebackground='cyan', menu=co24)
         contact.configure(activeforeground='black', activebackground='cyan', menu=contchck)
 
         # 14 besoins menu
@@ -905,105 +905,105 @@ class MenuBar(tk.Frame):
             fg='cyan', bg='grey30', relief=tk.GROOVE)
         cmd_Besoins.pack(side=tk.LEFT, padx=3)
         # Partie déroulante du menu 14b
-        me4 = Menu(cmd_Besoins)
-        me4.add_command(label=new_text, font=('Times 14'), background='black',
+        needcare4 = Menu(cmd_Besoins)
+        needcare4.add_command(label=new_text, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=1))
-        #me4.add_separator()
-        me4.add_command(label=new_text2, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text2, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=2))
-        #me4.add_separator()
-        me4.add_command(label=new_text3, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text3, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=3))
-        #me4.add_separator()
-        me4.add_command(label=new_text4, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text4, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=4))
-        #me4.add_separator()
-        me4.add_command(label=new_text5, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text5, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=5))
-        #me4.add_separator()
-        me4.add_command(label=new_text6, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text6, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=6))
-        #me4.add_separator()
-        me4.add_command(label=new_text7, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text7, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=7))
-        #me4.add_separator()
-        me4.add_command(label=new_text8, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text8, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=8))
-        #me4.add_separator()
-        me4.add_command(label=new_text9, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text9, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=9))
-        #me4.add_separator()
-        me4.add_command(label=new_text10, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text10, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=10))
-        #me4.add_separator()
-        me4.add_command(label=new_text11, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text11, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=11))
-        #me4.add_separator()
-        me4.add_command(label=new_text12, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text12, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=12))
-        #me4.add_separator()
-        me4.add_command(label=new_text13, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text13, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=13))
-        #me4.add_separator()
-        me4.add_command(label=new_text14, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text14, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=14))
-        #me4.add_separator()
-        me4.add_command(label=new_text15, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text15, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=15))
-        #me4.add_separator()
-        me4.add_command(label=new_text16, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text16, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=16))
-        #me4.add_separator()
-        me4.add_command(label=new_text17, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text17, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=17))
-        #me4.add_separator()
-        me4.add_command(label=new_text18, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text18, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=18))
-        #me4.add_separator()
-        me4.add_command(label=new_text19, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text19, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=19))
-        #me4.add_separator()
-        me4.add_command(label=new_text20, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text20, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=20))
-        #me4.add_separator()
-        me4.add_command(label=new_text21, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text21, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=21))
-        #me4.add_separator()
-        me4.add_command(label=new_text22, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text22, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=22))
-        #me4.add_separator()
-        me4.add_command(label=new_text23, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text23, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=23))
-        #me4.add_separator()
-        me4.add_command(label=new_text24, font=('Times 14'), background='black',
+        #needcare4.add_separator()
+        needcare4.add_command(label=new_text24, font=('Times 14'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=lambda: boss.besoinsCoche(b=24))
         # Integration of 14b menu
         cmd_Besoins.configure(activeforeground='black', activebackground='cyan',
-            menu=me4)
+            menu=needcare4)
 
         # Helth and care menu
         cmd_Soins = tk.Menubutton(self, text='Care and monitoring', font=("Times 14"),
@@ -1479,201 +1479,201 @@ class MenuBar(tk.Frame):
             bg='grey30', relief=tk.GROOVE)
         cmd_backup.pack(side=tk.LEFT, padx=3)
         # drop-down portion of menu
-        me1 = Menu(cmd_backup)
-        me2 = Menu(me1)
-        me2.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+        sv1 = Menu(cmd_backup)
+        sv2 = Menu(sv1)
+        sv2.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=1))
-        me1.add_cascade(label=new_text, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me2)
-        me3=Menu(me1)
-        me3.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv2)
+        sv3=Menu(sv1)
+        sv3.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=2))
-        me1.add_cascade(label=new_text2, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text2, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me3)
-        me4=Menu(me1)
-        me4.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv3)
+        sv4=Menu(sv1)
+        sv4.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=3))
-        me1.add_cascade(label=new_text3, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text3, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me4)
-        me5=Menu(me1)
-        me5.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv4)
+        sv5=Menu(sv1)
+        sv5.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=4))
-        me1.add_cascade(label=new_text4, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text4, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me5)
-        me6=Menu(me1)
-        me6.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv5)
+        sv6=Menu(sv1)
+        sv6.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=5))
-        me1.add_cascade(label=new_text5, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text5, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me6)
-        me7=Menu(me1)
-        me7.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv6)
+        sv7=Menu(sv1)
+        sv7.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=6))
-        me1.add_cascade(label=new_text6, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text6, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me7)
-        me8=Menu(me1)
-        me8.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv7)
+        sv8=Menu(sv1)
+        sv8.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=7))
-        me1.add_cascade(label=new_text7, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text7, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me8)
-        me9=Menu(me1)
-        me9.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv8)
+        sv9=Menu(sv1)
+        sv9.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=8))
-        me1.add_cascade(label=new_text8, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text8, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me9)
-        me10=Menu(me1)
-        me10.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv9)
+        sv10=Menu(sv1)
+        sv10.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=9))
-        me1.add_cascade(label=new_text9, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text9, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me10)
-        me11=Menu(me1)
-        me11.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv10)
+        sv11=Menu(sv1)
+        sv11.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=10))
-        me1.add_cascade(label=new_text10, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text10, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me11)
-        me12=Menu(me1)
-        me12.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv11)
+        sv12=Menu(sv1)
+        sv12.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=11))
-        me1.add_cascade(label=new_text11, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text11, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me12)
-        me13=Menu(me1)
-        me13.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv12)
+        sv13=Menu(sv1)
+        sv13.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=12))
-        me1.add_cascade(label=new_text12, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text12, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me13)
-        me14=Menu(me1)
-        me14.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv13)
+        sv14=Menu(sv1)
+        sv14.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=13))
-        me1.add_cascade(label=new_text13, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text13, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me14)
-        me15=Menu(me1)
-        me15.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv14)
+        sv15=Menu(sv1)
+        sv15.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=14))
-        me1.add_cascade(label=new_text14, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text14, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me15)
-        me16=Menu(me1)
-        me16.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv15)
+        sv16=Menu(sv1)
+        sv16.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=15))
-        me1.add_cascade(label=new_text15, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text15, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me16)
-        me17=Menu(me1)
-        me17.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv16)
+        sv17=Menu(sv1)
+        sv17.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=16))
-        me1.add_cascade(label=new_text16, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text16, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me17)
-        me18=Menu(me1)
-        me18.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv17)
+        sv18=Menu(sv1)
+        sv18.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=17))
-        me1.add_cascade(label=new_text17, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text17, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me18)
-        me19=Menu(me1)
-        me19.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv18)
+        sv19=Menu(sv1)
+        sv19.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=18))
-        me1.add_cascade(label=new_text18, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text18, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me19)
-        me20=Menu(me1)
-        me20.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv19)
+        sv20=Menu(sv1)
+        sv20.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=19))
-        me1.add_cascade(label=new_text19, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text19, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me20)
-        me21=Menu(me1)
-        me21.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv20)
+        sv21=Menu(sv1)
+        sv21.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=20))
-        me1.add_cascade(label=new_text20, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text20, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me21)
-        me22=Menu(me1)
-        me22.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv21)
+        sv22=Menu(sv1)
+        sv22.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=21))
-        me1.add_cascade(label=new_text21, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text21, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me22)
-        me23=Menu(me1)
-        me23.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv22)
+        sv23=Menu(sv1)
+        sv23.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=22))
-        me1.add_cascade(label=new_text22, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text22, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me23)
-        me24=Menu(me1)
-        me24.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv23)
+        sv24=Menu(sv1)
+        sv24.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=23))
-        me1.add_cascade(label=new_text23, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text23, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me24)
-        me25=Menu(me1)
-        me25.add_command(label='All Files.txt', underline=0, font=('Times 14'),
+            activeforeground='black', activebackground='cyan', menu=sv24)
+        sv25=Menu(sv1)
+        sv25.add_command(label='All Files.txt', underline=0, font=('Times 14'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black',
             command=lambda: boss.allFilesBackup(f=24))
-        me1.add_cascade(label=new_text24, underline=0, font=('Times 14'),
+        sv1.add_cascade(label=new_text24, underline=0, font=('Times 14'),
             background='black', foreground='cyan',
-            activeforeground='black', activebackground='cyan', menu=me25)
+            activeforeground='black', activebackground='cyan', menu=sv25)
         # Integration of Graph menu
-        cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=me1)
+        cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=sv1)
 
 class Application(tk.Frame):
     """
@@ -1682,7 +1682,7 @@ class Application(tk.Frame):
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=0, bg='RoyalBlue4', padx=20, pady=20, relief=tk.GROOVE)
         self.master.tk.call('wm', 'iconphoto', self.master._w, tk.PhotoImage(file='./syno_gif/yorhabest.gif'))
-        self.master.title('Time-Track Developed by ko@l@tr33')
+        self.master.title('Time-Track Developed by |<°@l@3')
         self.master.withdraw()
         # Update "requested size" from geometry manager
         self.master.update_idletasks()
@@ -1920,7 +1920,7 @@ class Application(tk.Frame):
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
 
         # Insert text
-        self.can.create_text(1240, 670, anchor=tk.NE, text="ko@l@tr33",
+        self.can.create_text(1240, 670, anchor=tk.NE, text="|<°@l@3",
             font=('Times', 12), fill='turquoise')
 
         # 3 buttons at first.
