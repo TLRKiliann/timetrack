@@ -746,115 +746,141 @@ textDlrs.grid(row=10, column=2)
 
 button2Write = tk.Button(gui)
 button2Write.config(text='Quit', width=15,
-    fg='navy', bg='lightblue',
+    fg='white', bg='RoyalBlue3',
+    highlightbackground='DodgerBlue2',
     activebackground='pale turquoise',
     activeforeground='gray40',
     command=quit)
 button2Write.grid(row=1, column=3)
 
 buttonDel = tk.Button(gui)
-buttonDel.config(text='Cancel ALL LAST', width=15,
-    bg='coral', fg='yellow', activebackground='red',
+buttonDel.config(text='Erase Last Values', width=15,
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = tk.Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
-    fg='navy', bg='lightblue',
+    fg='cyan', bg='RoyalBlue3',
+    highlightbackground='DodgerBlue2',
     activeforeground='gray40',
     activebackground='pale turquoise',
-    command = lambda : writeData(textDate, textHour, textName, textTa, textDia, textPuls,
-        textSa, textFr, textTemp, textHgt, textDlrs))
+    command = lambda : writeData(textDate, textHour, textName,
+        textTa, textDia, textPuls, textSa, textFr, textTemp,
+        textHgt, textDlrs))
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = tk.Button(gui)
 buttonMainlec.config(text='Read All Data', width=33,
-    bg='lightblue', fg='navy', activebackground='pale turquoise',
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
 buttonMainlec.grid(row=3, column=3, columnspan=4)
 
 button3Write = tk.Button(gui)
 button3Write.config(text='Graph TA', width=15,
-    bg='lightblue', fg='navy', activebackground='pale turquoise',
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
     activeforeground='gray40',
     command = lambda : appelTens(textDate, textName, textTa, textDia))
 button3Write.grid(row=4, column=3)
 
 button4Write = tk.Button(gui)
 button4Write.config(text='Graph Puls', width=15,
-    bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelPuls(textDate, textName, textPuls))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelPuls(textDate, textName, textPuls))
 button4Write.grid(row=5, column=3)
 
 button5Write = tk.Button(gui)
 button5Write.config(text='Graph SaO2', width=15,
-    bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelSat(textDate, textName, textSa))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelSat(textDate, textName, textSa))
 button5Write.grid(row=6, column=3)
 
 button6Write = tk.Button(gui)
 button6Write.config(text='Graph FR', width=15,
-    bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelFreq(textDate, textName, textFr))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelFreq(textDate, textName, textFr))
 button6Write.grid(row=7, column=3)
 
 button7Write = tk.Button(gui)
 button7Write.config(text='Graph T°C', width=15,
-    bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelTemp(textDate, textName, textTemp))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelTemp(textDate, textName, textTemp))
 button7Write.grid(row=8, column=3)
 
 button8Write = tk.Button(gui)
 button8Write.config(text='Graph Hgt', width=15,
-    bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelGly(textDate, textName, textHgt))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelGly(textDate, textName, textHgt))
 button8Write.grid(row=9, column=3)
 
 button9Write = tk.Button(gui)
 button9Write.config(text='Graph Dlrs', width=15,
-    bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command = lambda : appelDlr(textDate, textName, textDlrs))
+    bg='RoyalBlue3', fg='white', highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
+    command = lambda : appelDlr(textDate, textName, textDlrs))
 button9Write.grid(row=10, column=3)
 
 button1Del = tk.Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
+    highlightbackground='DodgerBlue2',
     activebackground='red', command = delSystolDia)
 button1Del.grid(row=4, column=4)
 
 button2Del = tk.Button(gui)
 button2Del.config(text='Cancel last Puls', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delPuls)
 button2Del.grid(row=5, column=4)
 
 button3Del = tk.Button(gui)
 button3Del.config(text='Cancel last SaO2', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delSat)
 button3Del.grid(row=6, column=4)
 
 button4Del = tk.Button(gui)
 button4Del.config(text='Cancel last FR', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delFreq)
 button4Del.grid(row=7, column=4)
 
 button5Del = tk.Button(gui)
 button5Del.config(text='Cancel last T°C', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delTemp)
 button5Del.grid(row=8, column=4)
 
 button6Del = tk.Button(gui)
 button6Del.config(text='Cancel last Hgt', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delGly)
 button6Del.grid(row=9, column=4)
 
 button7Del = tk.Button(gui)
 button7Del.config(text='Cancel last Dlrs', width=15,
-    bg='coral', fg='yellow', activeforeground='white',
+    bg='coral', fg='yellow', highlightbackground='DodgerBlue2',
+    activeforeground='white',
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
 
