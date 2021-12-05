@@ -1,5 +1,5 @@
 2 B
 00/00/0000
-None
+aucune
 None
 Diagnostic (main)

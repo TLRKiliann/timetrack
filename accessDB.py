@@ -15,8 +15,8 @@
 
 
 import tkinter as tk
-from tkinter import messagebox
 from tkinter import ttk
+from tkinter import messagebox
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -80,8 +80,8 @@ class TrackDB(tk.Frame):
 
         def searchDB():
             """
-                To connect and search data from mysql
-                and build a Treeview() with var and val.
+                To connect and search data from mysql and build a
+                Treeview() with var and val.
                 Configuration for mysql on your own machine:
                 sqlCon = pymysql.connect(host='127.0.0.1', user='koala33',
                 password='Ko@l@tr3379', database='timetrackconn')
