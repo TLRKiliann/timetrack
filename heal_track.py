@@ -21,7 +21,7 @@ import time
 import datetime
 from playsound import playsound
 
-import starter.intro
+#import starter.intro
 from mainmod.boxapp import callBox
 from mainmod.reminder import alarmThread
 from mainmod.manualapp import instalpy
