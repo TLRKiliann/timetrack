@@ -1,0 +1,26 @@
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 19/12/2021 at 12:08:12 :
+Patient name : Julian Assange
+[+] Postural and/or movement monitoring - required
+Aid required to exit from prison.
+[+] Accompany or help the person to realize himself
+Let him free !
+---
+
+Implemented as : 18/12/2021 at 12:09:38 :
+---####-|--- Display of the patient's needs to be monitored ---|-####---
+
+Fixed on : 18/12/2021 at 12:10:50 :
+Patient name : Julian Assange
+[+] Postural and/or movement monitoring - required
+Aid required for going out of prison.
+[+] Accompany or help the person to recreate - required
+Let him free !
+---
+
+
+Implemented as : 18/12/2021 at 12:12:34 :
+Wound dressing protocol :
+Desinfection done. Wound is fine !
+

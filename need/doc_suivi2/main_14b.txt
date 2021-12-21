@@ -23,3 +23,7 @@ Patient name : Njin Nier
 ---
 
 
+En date du : 01/10/2021 à 23:06:35 :
+Wound dressing protocol :
+Desinfection done, the wound is fine
+
