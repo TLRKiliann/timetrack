@@ -1,6 +1,6 @@
 # TIME-TRACK 
 
-* python3 :snake: -https://img.shields.io/badge/python-v3.6-brightgreen-
+* python3 :snake: - https://img.shields.io/badge/python-v3.6-brightgreen -
 
 * tkinter8.6
 
