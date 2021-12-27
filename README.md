@@ -2,6 +2,8 @@
 
 (https://img.shields.io/badge/python-v3.6-brightgreen)
 
+[![Build Status](https://travis-ci.com/TLRKiliann/timetrack.svg?branch=master)](https://travis-ci.com/TLRKiliann/timetrack)
+
 * python3 :snake: 
 
 * tkinter8.6
