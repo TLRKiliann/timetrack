@@ -362,9 +362,9 @@ the port 3306 with the following command (on server side) :
 
 * LAN 
 
-`sudo ufw allow from 192.168.XX.XX to any port 22\`
+`sudo ufw allow from 192.168.XX.XX to any port 22`
 
-`sudo ufw allow from 192.168.XX.XX to any port 3306\`
+`sudo ufw allow from 192.168.XX.XX to any port 3306`
 
 `sudo ufw reload`
 
@@ -372,9 +372,9 @@ the port 3306 with the following command (on server side) :
 
 * INTERNET
 
-`sudo ufw allow from 192.168.XX.XX to any port 22\`
+`sudo ufw allow from 192.168.XX.XX to any port 22`
 
-`sudo ufw allow 3306/tcp\`
+`sudo ufw allow 3306/tcp`
 
 `sudo ufw reload`
 
@@ -394,9 +394,9 @@ the port 3306 with the following command (on server side) :
 
 * CLIENT :
 
-> Status: active\
-> Logging: on (low)\
-> Default: deny (incoming), allow (outgoing), disabled (routed)\
+> Status: active
+> Logging: on (low)
+> Default: deny (incoming), allow (outgoing), disabled (routed)
 > New profiles: skip
 
 ---
