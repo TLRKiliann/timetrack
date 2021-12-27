@@ -2,8 +2,6 @@
 
 <img alt="GitHub forks" src="https://img.shields.io/github/forks/TLRKiliann/timetrack?style=social">
 
-[![Build Status](https://travis-ci.com/TLRKiliann/timetrack.svg?branch=master)](https://travis-ci.com/TLRKiliann/timetrack)
-
 * python3 :snake: 
 
 * tkinter8.6
