@@ -1,6 +1,6 @@
 # TIME-TRACK 
 
-![https://img.shields.io/badge/python-v3.6-brightgreen]
+(https://img.shields.io/badge/python-v3.6-brightgreen)
 
 * python3 :snake: 
 
