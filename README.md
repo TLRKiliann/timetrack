@@ -1,6 +1,6 @@
 # TIME-TRACK 
 
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/TLRKiliann/timetrack?style=social">
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/TLRKiliann?style=social">
 
 * python3 :snake: 
 
