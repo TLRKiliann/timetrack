@@ -1,12 +1,18 @@
-# Thanks for your help !
+## List of contributions
 
-## Translation
+---
+
+### Translation
 
 I need that somebody translate the file `README.md` in french.
 
-## Security
+---
+
+### Security
 
 I need some test around the connection with ssh and tcp packets. It seems good,
 but I would like to be sure.
 
+---
 
+## Thanks for your help !
