@@ -1,6 +1,7 @@
 ## List of contributions
-
 ---
+
+This list is not exhaustive. It is simply intended to improve the application to make it optimal and especially helpful for the caregivers who will use it.
 
 ### Translation
 
