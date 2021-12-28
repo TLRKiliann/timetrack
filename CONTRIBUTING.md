@@ -4,15 +4,20 @@
 
 ### Translation
 
-I need that somebody translate the file `README.md` in french.
+* I need that somebody translate the file `README.md` in french.
+* Why not make a copy of this application in French.
 
 ---
 
-### Security
+### UX & UI
 
-I need some test around the connection with ssh and tcp packets. It seems good,
-but I would like to be sure.
+* I want to know if the user experience is intuitive and convenient.
+* 
 
 ---
 
-## Thanks for your help !
+_I remain open to all proposals_
+
+Thanks for your help !
+
+ko@l@tr33 🐨
