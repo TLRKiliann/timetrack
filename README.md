@@ -1,6 +1,8 @@
 # TIME-TRACK 
 
-* python3 :snake:
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/TLRKiliann?style=social">
+
+* python3 :snake: 
 
 * tkinter8.6
 
