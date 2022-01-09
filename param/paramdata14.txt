@@ -9,3 +9,245 @@ Temperature : 36.5°C
 Glycemie : 5.3 mmol/l
 Douleurs (Pain) : 0/10
 
+Date : 09/01/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.2°C
+Glycemie : 5.2 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 20/01/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 134/85mmHg
+Puls : 86/min
+SaO2 : 98%
+FR : 18/min
+Temperature : 36.0°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 3/10
+
+Date : 29/01/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 118/79mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.4°C
+Glycemie : 6.1 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 10/02/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 125/77mmHg
+Puls : 81/min
+SaO2 : 92%
+FR : 20/min
+Temperature : 37.5°C
+Glycemie : 7.4 mmol/l
+Douleurs (Pain) : 7/10
+
+Date : 11/02/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 140/74mmHg
+Puls : 84/min
+SaO2 : 97%
+FR : 17/min
+Temperature : 36.9°C
+Glycemie : 7.4 mmol/l
+Douleurs (Pain) : 5/10
+
+Date : 19/02/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 142/91mmHg
+Puls : 79/min
+SaO2 : 99%
+FR : 18/min
+Temperature : 36°C
+Glycemie : 5 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 26/02/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 133/78mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.3°C
+Glycemie : 5.5 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 07/03/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 121/83mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.1°C
+Glycemie : 5.7 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 16/03/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 118/77mmHg
+Puls : 79/min
+SaO2 : 98%
+FR : 18/min
+Temperature : 36.4°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 23/03/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 121/79mmHg
+Puls : 77/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.1°C
+Glycemie : 5.1 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 04/04/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 115/75mmHg
+Puls : 82/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.8°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 14/04/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 125/90mmHg
+Puls : 83/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.3 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 21/04/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 142/92mmHg
+Puls : 78/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.1°C
+Glycemie : 5.5 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 02/05/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 133/87mmHg
+Puls : 83/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.3°C
+Glycemie : 5.7 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 11/05/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 121/79mmHg
+Puls : 77/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.5 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 17/05/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 123/80mmHg
+Puls : 79/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 5.2 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 26/05/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 121/81mmHg
+Puls : 77/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.1°C
+Glycemie : 5.7 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 03/06/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 119/78mmHg
+Puls : 82/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 12/06/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 124/82mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.2 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 22/06/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 132/91mmHg
+Puls : 82/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 5.8 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 05/07/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 129/93mmHg
+Puls : 85/min
+SaO2 : 98%
+FR : 18/min
+Temperature : 36.2°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 15/07/2021
+Hour : 16:43:01
+Name and Surname : Sophia Lorren
+TA : 122/89mmHg
+Puls : 84/min
+SaO2 : 97%
+FR : 15/min
+Temperature : 36.1°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 2/10
+
