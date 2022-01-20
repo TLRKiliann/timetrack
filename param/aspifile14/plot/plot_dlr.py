@@ -91,7 +91,7 @@ try:
 
         reo_x, reo_y = zip(*sorted(zip(x_axis, y_axis)))
         plt.plot(reo_x, reo_y, 'o', color='purple')
-        plt.plot(reo_x, reo_y, '-', color='purple')
+        plt.plot(reo_x, reo_y, '--', color='purple')
 
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Dlrs', fontsize=14)
