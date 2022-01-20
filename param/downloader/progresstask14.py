@@ -38,12 +38,15 @@ def task(root):
     root.resizable(False, False)
     root.mainloop()
 
+
 def process_of_unknown_duration(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
         done, add root.quit() at the end.
     """
+    print("Not connected to server !!!")
+    '''
     #time.sleep(1)
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/paramdata14.txt",
         "./param/"], stderr=subprocess.PIPE)
@@ -138,6 +141,7 @@ def process_of_unknown_duration(root):
     # linux, mac
     print('[PID] My pid is', os.getpid())
     print("\n[ - Download complete - ]")
+    '''
     root.quit() # To destroy threading
 
 def downloadata():
@@ -150,4 +154,4 @@ def downloadata():
     print("\n[ Downloading vital parameters... ]\n")
     task(root)
     t1.join()
-    root.destroy()
+    #root.destroy()
