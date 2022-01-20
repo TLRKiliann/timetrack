@@ -14,7 +14,7 @@ fen.configure(background='DodgerBlue2')
 top = tk.Frame(fen, bg='DodgerBlue2')
 bottom = tk.Frame(fen, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
-bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+bottom.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=tk.YES)
 
 labelo = tk.Label(fen, text="Vital parameters : ", width=20,
     font='Times 18 bold', fg='cyan', bg='DodgerBlue2')
@@ -50,8 +50,11 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(tk.END, li)
 
-buttonClose = tk.Button(fen, text="Quit", width=10, fg='white',
-    bg='RoyalBlue3', activebackground='pale turquoise',
+buttonClose = tk.Button(fen, text="Quit",
+    width=10, bd=3, 
+    fg='white', bg='RoyalBlue3',
+    highlightbackground='DodgerBlue2',
+    activebackground='pale turquoise',
     activeforeground='navy', command=quit)
 buttonClose.pack(side=tk.RIGHT, padx=10, pady=10)
 
