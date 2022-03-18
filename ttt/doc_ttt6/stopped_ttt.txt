@@ -1,1 +1,2 @@
 > TREATMENT stopped by date :
+Name of ttt : NameOfDrug 20 mg - stopped on : 18/03/2022

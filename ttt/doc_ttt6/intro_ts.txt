@@ -1,0 +1,12 @@
+Stopped ttt :{
+    "Date": "18/03/2022",
+    "Date of introduction": "03 May 2003",
+    "Date of end": "18/03/2022",
+    "Treatment": "NameOfDrug",
+    "Dosage": "20 mg",
+    "Morning": "1",
+    "Midday": "---",
+    "Evening": "2",
+    "Night": "---",
+    "Signature": "etc"
+}

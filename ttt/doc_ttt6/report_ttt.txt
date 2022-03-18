@@ -1,0 +1,14 @@
+Treatments :[
+    {
+        "Date": "18/03/2022",
+        "Date of introduction": "03 May 2003",
+        "Date of end": "24/10/2033",
+        "Treatment": "NameOfDrug",
+        "Dosage": "20 mg",
+        "Morning": "1",
+        "Midday": "---",
+        "Evening": "2",
+        "Night": "---",
+        "Signature": "etc"
+    }
+]
