@@ -23,7 +23,7 @@ pygame==2.0.1
 PyGObject==3.42.0
 pylint==2.6.0
 PyMySQL==1.1.1
-requests==2.31.0
+requests==2.32.2
 six==1.15.0
 toml==0.10.2
 typed-ast==1.4.1
